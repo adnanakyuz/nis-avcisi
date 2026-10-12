@@ -1,0 +1,90 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Niş Avcısı</title>
+<meta name="theme-color" content="#d4361c"><link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icon-192.png"><link rel="apple-touch-icon" href="../icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Niş Avcısı">
+<style>
+:root{--bg:#f6f5f2;--kart:#fff;--yazi:#1c1b19;--soluk:#6d6a63;--cizgi:#e4e1da;--vurgu:#d4361c;--iyi:#1f7a4d;--uyari:#9a6700;--zemin2:#f0eee9}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--kart:#1e1d1b;--yazi:#efede8;--soluk:#a19d94;--cizgi:#33312d;--vurgu:#ff6a4d;--iyi:#4cc38a;--uyari:#e3b341;--zemin2:#272522}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+main{max-width:720px;margin:auto;padding:max(16px,env(safe-area-inset-top)) 16px 40px}
+header{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h1{font-size:24px;margin:0;flex:1}
+.btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:10px 16px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn.ana{background:var(--vurgu);color:#fff} .btn.ikinci{background:var(--zemin2);color:var(--yazi)}
+.meta{color:var(--soluk);font-size:13px;margin:6px 0 0}
+.geri{display:inline-block;color:var(--soluk);font-size:15px;font-weight:600;padding:4px 0 10px}
+.ipucu,.uyari{border-radius:12px;padding:10px 14px;font-size:14px;margin:14px 0 0}
+.ipucu{background:var(--zemin2);color:var(--soluk)} .uyari{border:1px solid var(--uyari);color:var(--uyari);font-weight:600}
+[hidden]{display:none!important}
+h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14px;margin:0 0 12px}
+.kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.kanal,.arama{display:flex;align-items:center;gap:12px;padding:14px}
+.kanal:active,.video:active,.cip:active,.arama:active{opacity:.6}
+.av{width:52px;height:52px;border-radius:50%;flex:none;object-fit:cover;background:var(--zemin2)}
+.av.bos{display:grid;place-items:center;font-weight:700;color:var(--vurgu)}
+.ic{flex:1;min-width:0;display:flex;flex-direction:column}
+.ad{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.buyuk{font-size:15px} .buyuk b{color:var(--vurgu)}
+.kucuk{display:block;color:var(--soluk);font-size:13px}
+.ok{font-size:28px;color:var(--soluk);line-height:1}
+.rzs{padding:0 14px;display:flex;flex-wrap:wrap;gap:6px} .rzs:empty{display:none}
+.rz{font-size:12px;font-weight:600;background:var(--zemin2);border-radius:999px;padding:3px 10px}
+.rz.hiz{color:var(--vurgu)} .rz.yeni{color:var(--iyi)}
+.video{display:flex;gap:10px;align-items:center;padding:12px 14px;border-top:1px solid var(--cizgi);margin-top:12px}
+.video img{width:96px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;flex:none;background:var(--zemin2)}
+.vb{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500}
+.aramalar .arama{border-top:1px solid var(--cizgi)} .aramalar .arama:first-child{border-top:0}
+.nis{padding:14px} .nis-ad{font-size:18px;font-weight:700;color:var(--vurgu);text-transform:capitalize}
+.cipler{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.cip{background:var(--zemin2);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:500}
+.cip::after{content:" ›";color:var(--soluk)}
+.nis-ust{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.durum{font-size:12px;font-weight:700;background:var(--zemin2);border-radius:999px;padding:4px 10px;color:var(--soluk)}
+.durum.sicak{color:var(--vurgu)} .durum.yeni{color:var(--iyi)}
+.bilgi{margin:10px 0 0;font-size:14px} .bilgi dt{color:var(--soluk);font-size:12px;margin-top:8px}
+.bilgi dd{margin:0} .bilgi a{text-decoration:underline;text-underline-offset:2px}
+.bos-not{color:var(--soluk)}
+footer{color:var(--soluk);font-size:12px;margin-top:28px}
+</style></head><body data-kok="../"><main>
+<a class="geri" href="../index.html">← Ana sayfa</a><header><h1>📌 borsa</h1>
+<a class="btn ana" href="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml" target="_blank" rel="noopener" id="tara">Şimdi tara</a>
+<button class="btn ikinci" onclick="location.reload()" aria-label="Yenile">↻</button></header>
+<p class="meta">Arama: 12.10.2026 13:23 · Türkçe · son 14 gün</p>
+<p class="uyari" id="uyari" hidden></p>
+<p class="ipucu" id="ipucu" hidden>GitHub'da <b>Run workflow</b>'a bas. Konu aramak istersen <b>Konu</b> kutusuna yaz
+(ör. <i>tarih, borsa</i>), boş bırakırsan genel tarama yapar. Yeşil <b>Run workflow</b>'a bas, 2 dakika sonra ↻ ile yenile.</p>
+
+<h2>📌 borsa</h2><p class="alt-baslik">1 yeni ve patlayan kanal. Karta dokun, kanal açılsın.</p><article class="kart"><a class="kanal" href="https://www.youtube.com/channel/UCrxV68ZpN24R0zqjDGC3fGA" target="_blank" rel="noopener"><img class="av" src="https://yt3.ggpht.com/BCuEUZpnjJCbe9tTnOIxFHtILJTCumyS9rBXJSPn4pJsvVU4loU95aNFGjQSd7Ux1RvFvRXy=s88-c-k-c0x00ffffff-no-rj" alt="" loading="lazy"><span class="ic"><span class="ad">Karanlık Tarih</span><span class="buyuk"><b>10</b> video → <b>12.1K</b> izlenme</span><span class="kucuk">Video başına 1.2K · 23 abone · 1 gün önce açıldı</span></span><span class="ok">›</span></a><div class="rzs"><span class="rz yeni">Yeni bulundu</span><span class="rz">Çok yeni kanal</span><span class="rz">Kısa video</span></div><a class="video" href="https://www.youtube.com/watch?v=CT5_zvGJjSY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/CT5_zvGJjSY/mqdefault.jpg" alt="" loading="lazy"><span><span class="vb">BORSA MANİPÜLASYONU NASIL YAPILIR? FON KRİZİNİN ARKA PLANINDA NE VAR? #borsa #fonvurgunu #fonkrizi</span><span class="kucuk">▶ 30.8K izlenme · 2026-10-11</span></span></a></article>
+
+<h2>📊 Trend raporu</h2>
+<p class="alt-baslik">Birden fazla yeni kanalda aynı anda patlayan konular: nereden çıktı, kaç kanal yapıyor, ne kadar hızlı.</p>
+<p class="bos-not">Henüz birden fazla kanalda ortak konu çıkmadı.</p>
+
+<footer>Sadece son 365 günde açılmış kanallar · ≤100K abone · ≤40 video ·
+≥20K izlenme · reklamla şişmiş videolar elendi · 305 kota birimi.
+Otomatik genel tarama günde 2 kez (07:17 ve 19:17).</footer>
+</main>
+<script>
+var KOK = document.body.dataset.kok;
+document.getElementById("tara").addEventListener("click", function () { document.getElementById("ipucu").hidden = false; });
+fetch(KOK + "durum.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
+  if (d.uyari) { var u = document.getElementById("uyari"); u.textContent = d.uyari; u.hidden = false; }
+}).catch(function () {});
+var liste = document.getElementById("aramalar");
+if (liste) fetch("aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
+  l.slice(0, 10).forEach(function (x) {
+    var a = document.createElement("a"); a.className = "arama"; a.href = x.dosya;
+    var ic = document.createElement("span"); ic.className = "ic";
+    var ad = document.createElement("span"); ad.className = "ad"; ad.textContent = "📌 " + x.baslik;
+    var alt = document.createElement("span"); alt.className = "kucuk";
+    alt.textContent = x.tarih + " · " + x.dil + " · " + x.kanal + " kanal bulundu";
+    var ok = document.createElement("span"); ok.className = "ok"; ok.textContent = "›";
+    ic.append(ad, alt); a.append(ic, ok); liste.append(a);
+  });
+  if (l.length) document.getElementById("aramalar-kutu").hidden = false;
+}).catch(function () {});
+</script>
+</body></html>
