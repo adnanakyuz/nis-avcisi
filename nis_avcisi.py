@@ -539,8 +539,8 @@ CSS = """
 body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
 a{color:inherit;text-decoration:none}
 main{max-width:720px;margin:auto;padding:max(16px,env(safe-area-inset-top)) 16px 40px}
-header{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-h1{font-size:24px;margin:0;flex:1}
+header{display:flex;align-items:center;gap:8px}
+h1{font-size:22px;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:10px 16px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit}
 .btn.ana{background:var(--vurgu);color:#fff} .btn.ikinci{background:var(--zemin2);color:var(--yazi)}
 .meta{color:var(--soluk);font-size:13px;margin:6px 0 0}
@@ -584,6 +584,12 @@ h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14
 .konusu{font-size:14px;margin-top:4px} .konusu b{color:var(--yazi)}
 .gir{display:block;text-align:center;margin:12px 14px 14px;padding:11px;border-radius:12px;background:var(--vurgu);color:#fff;font-weight:700}
 .gir:active{opacity:.7}
+article.kart{position:relative} .kanal{padding-right:44px}
+.yildiz{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;font-size:26px;line-height:1;color:var(--soluk);cursor:pointer;z-index:1}
+.yildiz.on{color:#f5b301} .yildiz:active{transform:scale(.85)}
+.fav-oge{position:relative;border-top:1px solid var(--cizgi)} .fav-oge:first-child{border-top:0}
+.fav-oge .arama{padding-right:56px} .fav-oge .yildiz{top:50%;margin-top:-22px}
+.btn.ikon{padding:10px 12px} header .btn{flex:none}
 footer{color:var(--soluk);font-size:12px;margin-top:28px}
 """
 
@@ -607,6 +613,48 @@ if (liste) fetch("aramalar.json", {cache: "no-store"}).then(function (r) { retur
   });
   if (l.length) document.getElementById("aramalar-kutu").hidden = false;
 }).catch(function () {});
+
+// Beğendiklerim: telefonun kendi hafızasında (localStorage) tutulur; her gün yeni tarama gelse de kaybolmaz.
+var FAV = "nis-begendiklerim";
+function favOku() { try { return JSON.parse(localStorage.getItem(FAV)) || []; } catch (e) { return []; } }
+function favYaz(l) { try { localStorage.setItem(FAV, JSON.stringify(l)); } catch (e) {} }
+function el(etiket, sinif, metin) { var x = document.createElement(etiket); if (sinif) x.className = sinif; if (metin) x.textContent = metin; return x; }
+function favCiz() {
+  var l = favOku(), ids = {};
+  l.forEach(function (x) { ids[x.id] = 1; });
+  document.querySelectorAll(".yildiz").forEach(function (b) {
+    var on = !!ids[b.dataset.id];
+    b.textContent = on ? "★" : "☆"; b.classList.toggle("on", on);
+    b.setAttribute("aria-label", on ? "Beğendiklerimden çıkar" : "Beğendiklerime ekle");
+  });
+  var sayac = document.getElementById("fav-sayi");
+  if (sayac) sayac.textContent = l.length ? "⭐ " + l.length : "⭐";
+  var kutu = document.getElementById("fav-kutu"), liste = document.getElementById("fav-liste");
+  if (!kutu) return;
+  liste.textContent = "";
+  l.forEach(function (x) {
+    var oge = el("div", "fav-oge");
+    var a = el("a", "arama"); a.href = "https://www.youtube.com/channel/" + x.id; a.target = "_blank"; a.rel = "noopener";
+    var ic = el("span", "ic");
+    ic.append(el("span", "ad", x.ulke + " " + x.ad), el("span", "kucuk", "Konusu: " + x.konu + " · " + x.ozet),
+              el("span", "kucuk", "Eklendi: " + x.tarih));
+    a.append(ic);
+    var b = el("button", "yildiz on", "★"); b.type = "button"; b.dataset.id = x.id; b.setAttribute("aria-label", "Beğendiklerimden çıkar");
+    oge.append(a, b); liste.append(oge);
+  });
+  kutu.hidden = !l.length;
+}
+document.addEventListener("click", function (e) {
+  var b = e.target.closest(".yildiz");
+  if (!b) return;
+  e.preventDefault();
+  var l = favOku(), i = l.findIndex(function (x) { return x.id === b.dataset.id; });
+  if (i >= 0) l.splice(i, 1);
+  else l.unshift({id: b.dataset.id, ad: b.dataset.ad, konu: b.dataset.konu, ozet: b.dataset.ozet, ulke: b.dataset.ulke,
+                  tarih: new Date().toLocaleDateString("tr-TR")});
+  favYaz(l); favCiz();
+});
+favCiz();
 """
 
 
@@ -639,12 +687,16 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         av = (f'<img class="av" src="{e(k["kapak"])}" alt="" loading="lazy">' if k["kapak"]
               else f'<span class="av bos">{e(k["kanal"][:1].upper())}</span>')
         v = k["en_iyi"]
-        return (f'<article class="kart">'
+        konusu = kanal_konusu(k, terim_haritasi)
+        ozet = f'{sure_metni(k["kanal_yasi"])} {k["video_sayisi"]} videoyla {kisa(k["kanal_izlenme"])} izlenme'
+        yildiz = (f'<button class="yildiz" type="button" aria-label="Beğendiklerime ekle" data-id="{e(k["kanal_id"])}" '
+                  f'data-ad="{e(k["kanal"])}" data-konu="{e(konusu)}" data-ozet="{e(ozet)}" data-ulke="{bayrak(k["ulke"])}">☆</button>')
+        return (f'<article class="kart">{yildiz}'
                 f'<a class="kanal" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">{av}'
                 f'<span class="ic"><span class="ad">{bayrak(k["ulke"])} {e(k["kanal"])}</span>'
                 f'<span class="patlama">🔥 Patlamış: <b>{sure_metni(k["kanal_yasi"])} {k["video_sayisi"]} videoyla '
                 f'{kisa(k["kanal_izlenme"])}</b> izlenme</span>'
-                f'<span class="kucuk konusu">Konusu: <b>{e(kanal_konusu(k, terim_haritasi))}</b> · {e(k["kategori"])}</span>'
+                f'<span class="kucuk konusu">Konusu: <b>{e(konusu)}</b> · {e(k["kategori"])}</span>'
                 f'<span class="kucuk">Video başına {kisa(k["video_basi"])} · {abone}</span></span>'
                 f'<span class="ok">›</span></a>'
                 f'<div class="rzs">{rozetler(k)}</div>'
@@ -722,7 +774,10 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                  + ("".join(kanal_kart(k) for k in genis_sirala(kanallara_grupla(sonuc))[:40]) or
                     '<p class="bos-not">Bu taramada uygun kanal çıkmadı. Bir sonraki taramayı bekle.</p>'))
         ust = ""
-        aramalar = ('<div id="aramalar-kutu" hidden><h2>Aramalarım</h2>'
+        aramalar = ('<div id="fav-kutu" hidden><h2 id="begendiklerim">⭐ Beğendiklerim</h2>'
+                    '<p class="alt-baslik">Yıldızladığın kanallar. Dokun, kanala gir; yıldıza basarsan listeden çıkar.</p>'
+                    '<div class="kart" id="fav-liste"></div></div>'
+                    '<div id="aramalar-kutu" hidden><h2>Aramalarım</h2>'
                     '<p class="alt-baslik">Konu aramaların burada saklanır. Dokun, sonuçları aç.</p>'
                     '<div class="kart aramalar" id="aramalar"></div></div>')
     trend = "".join(trend_kart(n) for n in nisler) or '<p class="bos-not">Henüz birden fazla kanalda ortak konu çıkmadı.</p>'
@@ -736,8 +791,9 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Niş Avcısı">
 <style>{CSS}</style></head><body data-kok="{kok}"><main>
 {ust}<header><h1>{baslik}</h1>
-<a class="btn ana" href="{TARA_LINKI}" target="_blank" rel="noopener" id="tara">Şimdi tara</a>
-<button class="btn ikinci" onclick="location.reload()" aria-label="Yenile">↻</button></header>
+<a class="btn ana" href="{TARA_LINKI}" target="_blank" rel="noopener" id="tara">Tara</a>
+<a class="btn ikinci ikon" href="{kok}index.html#begendiklerim" id="fav-sayi" aria-label="Beğendiklerim">⭐</a>
+<button class="btn ikinci ikon" onclick="location.reload()" aria-label="Yenile">↻</button></header>
 <p class="meta">{"Arama" if a.konular else "Son tarama"}: {tarih} · {kapsam} · son {a.gun} gün</p>
 <p class="uyari" id="uyari" hidden></p>{yarim}
 <p class="ipucu" id="ipucu" hidden>GitHub'da <b>Run workflow</b>'a bas. Konu aramak istersen <b>Konu</b> kutusuna yaz
