@@ -194,8 +194,8 @@ def tara(yt, a):
             continue
         if v["snippet"].get("liveBroadcastContent", "none") != "none":
             continue  # canlı / yaklaşan yayınlar niş sinyali değil
-        if c["snippet"]["title"].endswith(" - Topic"):
-            continue  # YouTube'un otomatik müzik kanalları; gerçek içerik üreticisi değil
+        if c["snippet"]["title"].endswith((" - Topic", "VEVO")):
+            continue  # otomatik müzik / resmi şarkıcı kanalları; gerçek niş sinyali değil
         saat = max((simdi - zaman(v["snippet"]["publishedAt"])).total_seconds() / 3600, 1)
         kanal_yasi = (simdi - zaman(c["snippet"]["publishedAt"])).days
         # Gizli aboneli kanalda oran bilinmez; 100 abone varsaymak puanı yapay şişiriyordu.
