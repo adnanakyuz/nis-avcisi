@@ -450,8 +450,8 @@ FIRSAT_SIRA = {"bos": 0, "orta": 1, "dusuk": 2, "doymus": 3}
 def firsat_metni(f):
     if f["seviye"] == "dusuk":
         return f'Son 30 günde bu konudaki en popüler videolar bile toplam {kisa(f["toplam"])} izlenmede kalmış: ilgi henüz az.'
-    return (f'Son 30 günün en çok izlenen {f["video"]} videosunda izlenmelerin <b>%{round(f["pay"] * 100)}</b>\'i '
-            f'yeni ve küçük kanallara gidiyor · {f["buyuk"]} büyük kanal (500K+ abone) var · toplam {kisa(f["toplam"])} izlenme')
+    return (f'Son 30 günün en çok izlenen {f["video"]} videosunda yeni ve küçük kanalların izlenme payı: '
+            f'<b>%{round(f["pay"] * 100)}</b> · {f["buyuk"]} büyük kanal (500K+ abone) · toplam {kisa(f["toplam"])} izlenme')
 
 
 def kanallara_grupla(sonuc):
