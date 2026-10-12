@@ -9,9 +9,10 @@ Elle çalıştırmak için (Python 3.8+, ek paket gerekmez; YT_API_KEY ortam de�
   python nis_avcisi.py --konu "tarih, kripto"   # konulu tarama → site/konu/<konu>.html
   python nis_avcisi.py --bolge TR --dil tr      # sadece Türkiye / Türkçe içerik
 
-Kota: günlük 10.000 birim. Genel tarama ~2.950 birim (12 kategori × 2 zaman dilimi × 100
-+ 5 konunun fırsat ölçümü × 100 + detaylar). Konulu tarama 1 konu için ~1.200 birim
-(150 video + ana konu ve 8 alt konunun fırsat ölçümü); alt konu önerileri kota harcamaz.
+Kota: günlük 10.000 birim. Genel tarama ~4.150 birim (12 kategori × 2 zaman dilimi global
++ 12 kategori Türkiye, her biri 100; + 5 konunun fırsat ölçümü × 100 + detaylar).
+Global konulu tarama 1 konu için ~1.600 birim (Türkçe + İngilizce 150'şer video + ana konu,
+İngilizcesi ve 8 alt konunun fırsat ölçümü); alt konu önerileri ve çeviri kota harcamaz.
 """
 import argparse, collections, concurrent.futures, datetime as dt, html, json, math, os, re, sqlite3, sys, time
 import urllib.error, urllib.parse, urllib.request
@@ -42,6 +43,7 @@ komik aşk bebek oyun aile çocuk eğlenceli hikaye hayat dünya kedi köpek tep
 """.split())
 TARA_LINKI = "https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"
 ONERI_API = "https://suggestqueries.google.com/complete/search"
+CEVIRI_API = "https://translate.googleapis.com/translate_a/single"
 TR_SAAT = dt.timezone(dt.timedelta(hours=3))  # Türkiye'de yaz saati yok
 KOTA_NOTU = "Kota her gün sabah 10–11 arası yenilenir."
 
@@ -114,6 +116,23 @@ def kelimeler(metin):
     return [w for w in re.findall(r"[a-zçğıöşüâîû0-9]+", metin) if len(w) > 2 and w not in STOP and not w.isdigit()]
 
 
+def ingilizce(metin):
+    """Türkçe konuyu İngilizceye çevir; global aramada dünya genelindeki videolar da gelsin.
+    Ücretsiz çeviri servisi; ulaşılamazsa boş döner ve sadece Türkçe aranır."""
+    url = CEVIRI_API + "?" + urllib.parse.urlencode(dict(client="gtx", sl="tr", tl="en", dt="t", q=metin))
+    try:
+        with urllib.request.urlopen(url, timeout=10) as r:
+            return "".join(p[0] for p in json.load(r)[0]).strip().lower()
+    except Exception:
+        return ""
+
+
+def bayrak(ulke):
+    if not ulke or len(ulke) != 2 or not ulke.isalpha():
+        return "🌐"
+    return "".join(chr(0x1F1E6 + ord(h) - 65) for h in ulke.upper())
+
+
 def slug(metin):
     metin = metin.translate(str.maketrans("çğıöşüÇĞİÖŞÜâîû", "cgiosucgiosuaiu")).lower()
     return re.sub(r"[^a-z0-9]+", "-", metin).strip("-")[:60] or "konu"
@@ -157,11 +176,11 @@ def tara(yt, a):
     orta = tarih_str(simdi - dt.timedelta(days=a.gun / 2))
     video_ids, kaynak = [], {}
 
-    def ara(etiket, sayfa=1, bas=once, bit=None, **p):
+    def ara(etiket, sayfa=1, bas=once, bit=None, bolge=a.bolge, dil=a.dil, **p):
         token = None
         for _ in range(sayfa):
             r = yt.get("search", 100, part="id", type="video", order="viewCount", publishedAfter=bas,
-                       publishedBefore=bit, regionCode=a.bolge or None, relevanceLanguage=a.dil or None,
+                       publishedBefore=bit, regionCode=bolge or None, relevanceLanguage=dil or None,
                        maxResults=50, pageToken=token, **p)
             for i in r.get("items", []):
                 v = i.get("id", {}).get("videoId")
@@ -178,10 +197,16 @@ def tara(yt, a):
     # çıkan (henüz en üstte olmayan) konuların gözden kaçmasını azaltır.
     # Kota arama sırasında biterse elde edilenle devam et (detay sorguları sadece 1 birim).
     if a.konular:
+        # Global aramada konu İngilizcesiyle de aranır; sonuçlar yine aynı konu başlığı altında toplanır.
         aramalar = [(k, k, dict(q=k, sayfa=3)) for k in a.konular]
+        aramalar += [(k, f"{k} → {en}", dict(q=en, sayfa=3)) for k, en in a.ceviriler.items()]
     else:
         aramalar = [(ad, f"{ad} ({'son' if bas == orta else 'ilk'} yarı)", dict(videoCategoryId=kid, bas=bas, bit=bit))
                     for kid, ad in KATEGORILER.items() for bas, bit in ((orta, None), (once, orta))]
+        if not a.bolge:
+            # Global sonuçlar İngilizce ağırlıklı; Türkiye ayrıca taranır ki Türk kanalları da yakalansın.
+            aramalar += [(ad, f"{ad} (Türkiye)", dict(videoCategoryId=kid, bolge="TR", dil="tr"))
+                         for kid, ad in KATEGORILER.items()]
     for etiket, gorunen, p in aramalar:
         try:
             ara(etiket, **p)
@@ -242,6 +267,7 @@ def tara(yt, a):
         sonuc.append(dict(
             id=vid, baslik=v["snippet"]["title"], kanal=c["snippet"]["title"], kanal_id=c["id"],
             kanal_kapak=c["snippet"].get("thumbnails", {}).get("default", {}).get("url", ""),
+            ulke=c["snippet"].get("country", ""),
             kapak=v["snippet"]["thumbnails"].get("medium", {}).get("url", ""),
             izlenme=izl, abone=abone, video_sayisi=vsay, kanal_izlenme=k_izl,
             video_basi=video_basi, saatlik=izl / saat, kanal_yasi=kanal_yasi,
@@ -463,9 +489,11 @@ def kanallara_grupla(sonuc):
     for kid, vids in gruplar.items():
         ilk = vids[0]
         kanallar.append(dict(
-            kanal_id=kid, kanal=ilk["kanal"], kapak=ilk.get("kanal_kapak", ""),
+            kanal_id=kid, kanal=ilk["kanal"], kapak=ilk.get("kanal_kapak", ""), ulke=ilk.get("ulke", ""),
             video_sayisi=ilk["video_sayisi"], kanal_izlenme=ilk["kanal_izlenme"], abone=ilk["abone"],
             video_basi=ilk["video_basi"], kanal_yasi=ilk["kanal_yasi"],
+            kategori=collections.Counter(v["kaynak"] for v in vids).most_common(1)[0][0],
+            basliklar=[v["baslik"] + " " + " ".join(v["etiketler"]) for v in vids],
             puan=max(v["puan"] for v in vids),
             en_iyi=max(vids, key=lambda v: v["izlenme"]),
             yeni=all(v.get("yeni") for v in vids),
@@ -473,6 +501,35 @@ def kanallara_grupla(sonuc):
             kisa=sum(0 < v["sure"] <= 180 for v in vids) / len(vids) > .6,
         ))
     return sorted(kanallar, key=lambda k: -k["puan"])
+
+
+def genis_sirala(kanallar):
+    """Listeyi tek bir alan doldurmasın: kategoriler arasında sırayla dağıt (her turda her
+    kategorinin en iyisi), böylece oyun, eğitim, hayvanlar, bilim... hepsi üstte görünür."""
+    gruplar = collections.OrderedDict()
+    for k in kanallar:  # kanallar zaten puana göre sıralı
+        gruplar.setdefault(k["kategori"], []).append(k)
+    sirali = []
+    while any(gruplar.values()):
+        tur = [g.pop(0) for g in gruplar.values() if g]
+        sirali += sorted(tur, key=lambda k: -k["puan"])
+    return sirali
+
+
+def kanal_konusu(k, terim_haritasi):
+    """Kanalın konusu: önce trend raporundaki ortak konu, yoksa videolarında en sık geçen ifade."""
+    if k["kanal_id"] in terim_haritasi:
+        return terim_haritasi[k["kanal_id"]]
+    sayac = collections.Counter()
+    for metin in k["basliklar"]:
+        ws = [w for w in kelimeler(metin) if w not in GENEL]
+        sayac.update({f"{a} {b}" for a, b in zip(ws, ws[1:])})
+        sayac.update({w: 0.5 for w in ws})
+    return sayac.most_common(1)[0][0] if sayac else k["kategori"]
+
+
+def sure_metni(gun):
+    return f"{max(gun, 1)} günde" if gun < 45 else f"{round(gun / 30)} ayda"
 
 
 CSS = """
@@ -523,6 +580,10 @@ h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14
 .nis.ana{border-width:2px} .aciklama{margin:8px 0 0;font-size:14px;color:var(--yazi)}
 .ara{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;color:var(--vurgu)}
 .bos-not{color:var(--soluk)}
+.patlama{font-size:15px;margin-top:2px} .patlama b{color:var(--vurgu)}
+.konusu{font-size:14px;margin-top:4px} .konusu b{color:var(--yazi)}
+.gir{display:block;text-align:center;margin:12px 14px 14px;padding:11px;border-radius:12px;background:var(--vurgu);color:#fff;font-weight:700}
+.gir:active{opacity:.7}
 footer{color:var(--soluk);font-size:12px;margin-top:28px}
 """
 
@@ -567,6 +628,12 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
             r += '<span class="rz">Kısa video</span>'
         return r
 
+    # Her kanalın konusu: trend raporunda yer aldığı ortak konu (varsa).
+    terim_haritasi = {}
+    for n in nisler:
+        for v in n["kanallar"]:
+            terim_haritasi.setdefault(v["kanal_id"], n["terim"])
+
     def kanal_kart(k):
         abone = "abone gizli" if k["abone"] is None else f'{kisa(k["abone"])} abone'
         av = (f'<img class="av" src="{e(k["kapak"])}" alt="" loading="lazy">' if k["kapak"]
@@ -574,14 +641,17 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         v = k["en_iyi"]
         return (f'<article class="kart">'
                 f'<a class="kanal" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">{av}'
-                f'<span class="ic"><span class="ad">{e(k["kanal"])}</span>'
-                f'<span class="buyuk"><b>{k["video_sayisi"]}</b> video → <b>{kisa(k["kanal_izlenme"])}</b> izlenme</span>'
-                f'<span class="kucuk">Video başına {kisa(k["video_basi"])} · {abone} · {yas_metni(k["kanal_yasi"])}</span></span>'
+                f'<span class="ic"><span class="ad">{bayrak(k["ulke"])} {e(k["kanal"])}</span>'
+                f'<span class="patlama">🔥 Patlamış: <b>{sure_metni(k["kanal_yasi"])} {k["video_sayisi"]} videoyla '
+                f'{kisa(k["kanal_izlenme"])}</b> izlenme</span>'
+                f'<span class="kucuk konusu">Konusu: <b>{e(kanal_konusu(k, terim_haritasi))}</b> · {e(k["kategori"])}</span>'
+                f'<span class="kucuk">Video başına {kisa(k["video_basi"])} · {abone}</span></span>'
                 f'<span class="ok">›</span></a>'
                 f'<div class="rzs">{rozetler(k)}</div>'
                 f'<a class="video" href="{video_link(v["id"])}" target="_blank" rel="noopener">'
                 f'<img src="{e(v["kapak"])}" alt="" loading="lazy"><span><span class="vb">{e(v["baslik"])}</span>'
-                f'<span class="kucuk">▶ {kisa(v["izlenme"])} izlenme · {v["yayin"]}</span></span></a>'
+                f'<span class="kucuk">▶ En çok izlenen: {kisa(v["izlenme"])} · {v["yayin"]}</span></span></a>'
+                f'<a class="gir" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">Kanala gir, bak ›</a>'
                 f'</article>')
 
     def gun_once(iso):
@@ -647,9 +717,9 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         aramalar = ""
     else:
         baslik = "🎯 Niş Avcısı"
-        govde = ('<h2>Keşfedilen kanallar</h2><p class="alt-baslik">Son 1 yılda açılmış, az videoyla çok izlenen kanallar. '
-                 'Karta dokun, kanal YouTube\'da açılsın.</p>'
-                 + ("".join(kanal_kart(k) for k in kanallara_grupla(sonuc)[:40]) or
+        govde = ('<h2>🔥 Patlayan kanallar</h2><p class="alt-baslik">Dünya genelinde ve Türkiye\'de son 1 yılda açılıp '
+                 'az videoyla patlayan kanallar. Her alandan karışık: konusuna bak, beğendiğine gir.</p>'
+                 + ("".join(kanal_kart(k) for k in genis_sirala(kanallara_grupla(sonuc))[:40]) or
                     '<p class="bos-not">Bu taramada uygun kanal çıkmadı. Bir sonraki taramayı bekle.</p>'))
         ust = ""
         aramalar = ('<div id="aramalar-kutu" hidden><h2>Aramalarım</h2>'
@@ -696,6 +766,12 @@ def calistir(a):
         sys.exit("API anahtarı yok. YT_API_KEY ortam değişkenini ayarla.")
     durum_yol = os.path.join(a.site, "durum.json")
     yt = YT(key)
+    a.ceviriler = {}
+    if a.konular and not a.bolge:
+        for k in a.konular:
+            en = ingilizce(k)
+            if en and en != k.lower():
+                a.ceviriler[k] = en
     konu = f", konu: {', '.join(a.konular)}" if a.konular else ""
     print(f"Taranıyor ({a.bolge or 'global'}, son {a.gun} gün{konu})...")
     try:
@@ -705,14 +781,20 @@ def calistir(a):
         json_yaz(durum_yol, dict(uyari=f"⚠️ Bugünün YouTube kotası bitti, son tarama yapılamadı. {KOTA_NOTU}",
                                  ts=dt.datetime.now(TR_SAAT).isoformat(timespec="minutes")))
         return
-    nisler = nis_cikar(sonuc, haric=a.konular)
+    nisler = nis_cikar(sonuc, haric=a.konular + list(a.ceviriler.values()))
     if a.konular:
         # Alt konu keşfi: her konu için arama önerileri + hepsinin doygunluk ölçümü.
         # Kotayı korumak için konu sayısı arttıkça konu başına alt konu azalır (1 konu → 8, 2 → 4, 3+ → 3).
+        # Global aramada alt konuların yarısı Türkçe, yarısı İngilizce önerilerden gelir (geniş yelpaze).
         alt_adet = max(3, 8 // len(a.konular))
         a.harita = {}
         for k in a.konular:
-            altlar = oneriler(k, a.dil, alt_adet)
+            en = a.ceviriler.get(k)
+            if en:
+                yari = (alt_adet + 1) // 2
+                altlar = [en] + oneriler(k, "tr", alt_adet - yari) + oneriler(en, "en", yari)
+            else:
+                altlar = oneriler(k, a.dil, alt_adet)
             print(f"  {k}: {len(altlar)} alt konu → {', '.join(altlar) or 'öneri alınamadı'}")
             olcum = firsat_olc(yt, a, [k] + altlar)
             a.harita[k] = (olcum.get(k), [(t, olcum[t]) for t in altlar if t in olcum])
