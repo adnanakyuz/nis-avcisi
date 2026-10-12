@@ -818,7 +818,14 @@ def kanal_onerileri(k, kazanc, pazar, trend_f):
         olcum = f'Ölçüm: 🌍 İngilizce {pazar_metni(en)} · 🇹🇷 Türkiye {pazar_metni(trp)}.'
         if kazanc in ("dusuk", "cok_dusuk") and k["ulke"] != "TR":
             olcum = f'Fikir {e(yer)} pazarında patlamış ama orada kazanç düşük; taşımaya değer. ' + olcum
-        if en_iyi and (not tr_iyi or FIRSAT_SIRA[en["seviye"]] <= FIRSAT_SIRA[trp["seviye"]]):
+        kaynak_en = (k["dil"] or "").startswith("en") or k["ulke"] in ("US", "GB", "CA", "AU", "NZ", "IE")
+        if kaynak_en and tr_iyi and (not en_iyi or FIRSAT_SIRA[trp["seviye"]] <= FIRSAT_SIRA[en["seviye"]]):
+            m.append(f'🇹🇷 <b>Türkçesini yap</b>: fikir İngilizcede kanıtlanmış; Türkçe versiyonla Türkiye\'de '
+                     f'öne çıkabilirsin. {olcum}')
+        elif kaynak_en and en_iyi:
+            m.append(f'🌍 <b>İngilizcede yer var ama</b> bu kanalla aynı pazarda yarışırsın: aynı konuyu farklı bir '
+                     f'açıyla yap. {olcum}')
+        elif en_iyi and (not tr_iyi or FIRSAT_SIRA[en["seviye"]] <= FIRSAT_SIRA[trp["seviye"]]):
             m.append(f'🌍 <b>İngilizce yap</b>: İngilizce pazarda yer var ve kazanç en yüksek orada. {olcum}')
         elif tr_iyi:
             m.append(f'🇹🇷 <b>Türkçe yap</b>: Türkiye\'de rakip az, ilk olma şansın var; İngilizce daha kalabalık. {olcum}')
