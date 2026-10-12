@@ -4,7 +4,7 @@ name: Niş taraması
 
 on:
   schedule:
-    - cron: "17 4 * * *"   # her gün Türkiye saatiyle 07:17 → ~4.150 birim; kalan ~5.800 elle konu aramalarına (~3 konu)
+    - cron: "17 4 * * *"   # her gün Türkiye saatiyle 07:17 → ~4.750 birim; kalan ~5.200 elle konu aramalarına (~3 konu)
   workflow_dispatch:
     inputs:
       konu:
