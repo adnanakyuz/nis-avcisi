@@ -1,10 +1,10 @@
-# Günde 2 kez (ve istendiğinde) YouTube'u tarar, raporu GitHub Pages'te yayınlar.
+# Günde 1 kez (ve istendiğinde) YouTube'u tarar, raporu GitHub Pages'te yayınlar.
 # Elle çalıştırmak için: GitHub → Actions → "Niş taraması" → Run workflow.
 name: Niş taraması
 
 on:
   schedule:
-    - cron: "17 4,16 * * *"   # Türkiye saatiyle 07:17 ve 19:17 → günde ~2.500 birim; kalanı elle taramalara
+    - cron: "17 4 * * *"   # her gün Türkiye saatiyle 07:17 → ~2.950 birim; kalan ~7.000 elle konu aramalarına (~5 konu)
   workflow_dispatch:
     inputs:
       konu:
