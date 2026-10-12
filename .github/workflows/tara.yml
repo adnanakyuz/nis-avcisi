@@ -1,0 +1,55 @@
+# Her 4 saatte bir YouTube'u tarar, raporu GitHub Pages'te yayınlar.
+# Elle çalıştırmak için: GitHub → Actions → "Niş taraması" → Run workflow.
+name: Niş taraması
+
+on:
+  schedule:
+    - cron: "17 */4 * * *"   # günde 6 tarama ≈ 8.500 kota birimi (sınır 10.000)
+  workflow_dispatch:
+
+permissions:
+  contents: write   # geçmiş veritabanını depoya geri kaydetmek için
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tarama
+  cancel-in-progress: false
+
+jobs:
+  tara:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.yayin.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tara
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        # Bölge/dil/kelime değiştirmek için bu satırı düzenle, ör: --bolge US --dil en --kelime "yapay zeka"
+        run: python -u nis_avcisi.py --bolge TR --dil tr --cikti site/index.html --db nis_gecmis.db
+
+      - name: İlk çalıştırmada kota biterse boş sayfa koy
+        run: |
+          [ -f site/index.html ] || echo '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><p style="font:16px system-ui;padding:20px">Henüz rapor yok, ilk tarama bekleniyor.</p>' > site/index.html
+
+      - name: Geçmişi ve raporu kaydet
+        run: |
+          git config user.name "nis-avcisi-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nis_gecmis.db site/index.html
+          git diff --cached --quiet || git commit -m "Tarama $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: yayin
+        uses: actions/deploy-pages@v4
