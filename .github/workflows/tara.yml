@@ -11,6 +11,10 @@ on:
         description: "Konu (virgülle ayır, ör: tarih, borsa, kripto). Boş = genel tarama"
         required: false
         default: ""
+      kanal:
+        description: "Kanal incele: kanalın linkini yapıştır (doluysa sadece o kanal incelenir)"
+        required: false
+        default: ""
       dil:
         description: "Dil"
         type: choice
@@ -43,12 +47,13 @@ jobs:
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
           KONU: ${{ inputs.konu }}   # komut satırına doğrudan yazılmaz; ortam değişkeniyle güvenli aktarılır
+          KANAL: ${{ inputs.kanal }}
           DIL: ${{ inputs.dil }}
         # Konu boşsa genel tarama (site/index.html), doluysa konu sayfası (site/konu/...).
         run: |
           EK=""
           if [ "$DIL" = "Türkçe" ]; then EK="--bolge TR --dil tr"; fi
-          python -u nis_avcisi.py --konu "$KONU" $EK --site site --db nis_gecmis.db
+          python -u nis_avcisi.py --konu "$KONU" --kanal "$KANAL" $EK --site site --db nis_gecmis.db
 
       - name: Geçmişi ve sayfaları kaydet
         run: |

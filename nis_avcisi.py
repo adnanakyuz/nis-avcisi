@@ -8,6 +8,7 @@ Elle çalıştırmak için (Python 3.8+, ek paket gerekmez; YT_API_KEY ortam de�
   python nis_avcisi.py                          # genel tarama: global, son 14 gün → site/index.html
   python nis_avcisi.py --konu "tarih, kripto"   # konulu tarama → site/konu/<konu>.html
   python nis_avcisi.py --bolge TR --dil tr      # sadece Türkiye / Türkçe içerik
+  python nis_avcisi.py --kanal "https://youtube.com/@kanal"   # tek kanal incelemesi → site/kanal/<id>.html (~210 birim)
 
 Kota: günlük 10.000 birim. Genel tarama ~4.750 birim (12 kategori × 2 zaman dilimi global
 + 12 kategori Türkiye, her biri 100; + 5 konunun fırsat ölçümü + en güçlü 3 kanalın İngilizce
@@ -176,6 +177,29 @@ def bayrak(ulke):
     if not ulke or len(ulke) != 2 or not ulke.isalpha():
         return "🌐"
     return "".join(chr(0x1F1E6 + ord(h) - 65) for h in ulke.upper())
+
+
+def ifadeler(parcalar, haric=(), tekli=True):
+    """Başlık ve etiketlerin her biri ayrı ele alınır: "...decor idea" başlığı ile "home decor" etiketi
+    yan yana gelip "idea home" gibi sahte ifadeler üretmesin. 1, 2 ve 3 kelimelik terimleri döndürür."""
+    terimler = set()
+    for parca in parcalar:
+        ws = [w for w in kelimeler(parca) if not any(w == h or (len(h) >= 4 and w.startswith(h)) for h in haric)]
+        if tekli:
+            terimler |= {w for w in ws if w not in GENEL}
+        terimler |= {f"{a} {b}" for a, b in zip(ws, ws[1:])}
+        terimler |= {f"{a} {b} {c}" for a, b, c in zip(ws, ws[1:], ws[2:])}
+    return terimler
+
+
+DIL_AD = {"en": "İngilizce", "tr": "Türkçe", "ur": "Urduca", "hi": "Hintçe", "bn": "Bengalce", "es": "İspanyolca",
+          "pt": "Portekizce", "ar": "Arapça", "de": "Almanca", "fr": "Fransızca", "ru": "Rusça", "id": "Endonezce",
+          "it": "İtalyanca", "ja": "Japonca", "ko": "Korece", "ta": "Tamilce", "te": "Telugu dili", "vi": "Vietnamca",
+          "th": "Tayca", "fil": "Filipince", "pl": "Lehçe", "nl": "Felemenkçe"}
+
+
+def dil_adi(kod):
+    return DIL_AD.get((kod or "").split("-")[0].lower(), kod or "belirtilmemiş")
 
 
 def slug(metin):
@@ -348,12 +372,8 @@ def nis_cikar(sonuc, adet=12, haric=()):
     terim_video = collections.defaultdict(list)
     for s in sonuc:
         # Türkçe ekler için kök eşleşmesi: "tarih" aranınca "tarihi", "tarihte" de konu sayılmaz.
-        ws = [w for w in kelimeler(s["baslik"] + " " + " ".join(s["etiketler"]))
-              if not any(w == h or (len(h) >= 4 and w.startswith(h)) for h in haric)]
         # Tek kelimeler genel kalıyor ("funny", "love"); 2-3 kelimelik ifadeler asıl nişi verir.
-        terimler = ({w for w in ws if w not in GENEL} | {f"{a} {b}" for a, b in zip(ws, ws[1:])}
-                    | {f"{a} {b} {c}" for a, b, c in zip(ws, ws[1:], ws[2:])})
-        for t in terimler:
+        for t in ifadeler([s["baslik"]] + s["etiketler"], haric):
             terim_kanal[t].add(s["kanal_id"])
             terim_puan[t] += s["puan"] * {1: 1, 2: 2, 3: 2.4}[t.count(" ") + 1]
             terim_video[t].append(s)
@@ -513,6 +533,177 @@ def pazar_olc(yt, a, kanallar, terim_haritasi, adet=3):
     return {kid: dict(en=olc_en.get(en[kid]), tr=olc_tr.get(tr[kid])) for kid, _ in secilen}
 
 
+# ---------- kanal incelemesi ----------
+# 1.000 izlenme başına içerik üreticisine kalan tahmini kazanç (USD), (düşük, yüksek). Kaba tahmin.
+RPM_UZUN = {"yuksek": (3, 10), "orta": (1.5, 4), "dusuk": (0.5, 2), "cok_dusuk": (0.1, 0.8)}
+RPM_SHORTS = {"yuksek": (0.05, 0.15), "orta": (0.03, 0.08), "dusuk": (0.01, 0.05), "cok_dusuk": (0.01, 0.03)}
+GUNLER = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
+EMOJI = re.compile("[\U0001F300-\U0001FAFF☀-➿]")
+
+
+def kanal_bul(yt, girdi):
+    """Kanal linki, @kullanıcıadı, UC... kimliği ya da kanal adından kanalı bul."""
+    g = urllib.parse.unquote(girdi.strip())
+    parca = dict(part="snippet,statistics,contentDetails,topicDetails")
+    m = re.search(r"(UC[\w-]{22})", g)
+    if m:
+        r = yt.get("channels", 1, id=m.group(1), **parca)
+    elif re.search(r"@([\w.\-]+)", g):
+        r = yt.get("channels", 1, forHandle="@" + re.search(r"@([\w.\-]+)", g).group(1), **parca)
+    else:
+        m = re.search(r"youtube\.com/(?:c|user)/([^/?#]+)", g)
+        r = yt.get("channels", 1, forUsername=m.group(1), **parca) if m else {}
+        if not r.get("items"):  # son çare: kanal adıyla ara (100 birim)
+            ara = yt.get("search", 100, part="snippet", type="channel", q=m.group(1) if m else g, maxResults=1)
+            ids = [i.get("id", {}).get("channelId") for i in ara.get("items", []) if i.get("id", {}).get("channelId")]
+            r = yt.get("channels", 1, id=ids[0], **parca) if ids else {}
+    items = r.get("items") or []
+    return items[0] if items else None
+
+
+def kanal_videolari(yt, kanal, en_fazla=200):
+    """Kanalın son yüklediği videoları (en fazla 200) ayrıntılarıyla getir. 200 video ≈ 8 kota birimi."""
+    yuklenen = kanal.get("contentDetails", {}).get("relatedPlaylists", {}).get("uploads")
+    ids, token = [], None
+    while yuklenen and len(ids) < en_fazla:
+        try:
+            r = yt.get("playlistItems", 1, part="contentDetails", playlistId=yuklenen, maxResults=50, pageToken=token)
+        except ApiHatasi:
+            break
+        ids += [i["contentDetails"]["videoId"] for i in r.get("items", [])]
+        token = r.get("nextPageToken")
+        if not token:
+            break
+    vids = []
+    for i in range(0, len(ids), 50):
+        for v in yt.get("videos", 1, part="snippet,statistics,contentDetails", id=",".join(ids[i:i + 50])).get("items", []):
+            sn, st = v["snippet"], v.get("statistics", {})
+            if sn.get("liveBroadcastContent", "none") != "none":
+                continue
+            vids.append(dict(id=v["id"], baslik=sn["title"], kapak=sn.get("thumbnails", {}).get("medium", {}).get("url", ""),
+                             izl=int(st.get("viewCount", 0)), begeni=int(st.get("likeCount", 0)),
+                             yorum=int(st.get("commentCount", 0)), sure=sure_sn(v.get("contentDetails", {}).get("duration")),
+                             ts=zaman(sn["publishedAt"]), etiketler=sn.get("tags", [])[:15],
+                             dil=sn.get("defaultAudioLanguage") or sn.get("defaultLanguage") or ""))
+    return sorted(vids, key=lambda v: v["ts"])  # eskiden yeniye
+
+
+def orta_deger(liste):
+    liste = sorted(liste)
+    if not liste:
+        return 0
+    n = len(liste)
+    return liste[n // 2] if n % 2 else (liste[n // 2 - 1] + liste[n // 2]) / 2
+
+
+def en_sik_ifade(videolar, en_az=2):
+    """videolar: her video için [başlık, etiket1, etiket2...]. En çok videoda geçen 2 kelimelik ifade
+    (en az `en_az` videoda), yoksa en sık kelime."""
+    ikili, tekli = collections.Counter(), collections.Counter()
+    for parcalar in videolar:
+        terimler = ifadeler(parcalar)
+        ikili.update(t for t in terimler if t.count(" ") == 1)
+        tekli.update(t for t in terimler if " " not in t)
+    if ikili and ikili.most_common(1)[0][1] >= en_az:
+        return ikili.most_common(1)[0][0]
+    return tekli.most_common(1)[0][0] if tekli else ""
+
+
+def kanal_analiz(c, vids):
+    """Kanalın ve videolarının tüm ölçümleri (kota harcamaz)."""
+    simdi = dt.datetime.now(dt.timezone.utc)
+    sn, cs = c["snippet"], c.get("statistics", {})
+    abone = None if cs.get("hiddenSubscriberCount") else int(cs.get("subscriberCount", 0))
+    toplam, vsay = int(cs.get("viewCount", 0)), max(int(cs.get("videoCount", 0)), 1)
+    yas = max((simdi - zaman(sn["publishedAt"])).days, 1)
+    ulke = sn.get("country", "")
+    dil = collections.Counter(v["dil"] for v in vids if v["dil"]).most_common(1)
+    dil = dil[0][0] if dil else sn.get("defaultLanguage", "")
+    seviye = kazanc_seviyesi(ulke, dil)
+    izl = [v["izl"] for v in vids]
+    kisalar = [v for v in vids if 0 < v["sure"] <= 180]
+    uzunlar = [v for v in vids if v["sure"] > 180]
+    top_izl = sum(izl) or 1
+    pay_kisa = sum(v["izl"] for v in kisalar) / top_izl
+    son, onceki = izl[-10:], izl[-20:-10]
+    gidisat = (orta_deger(son) / orta_deger(onceki) - 1) if len(onceki) >= 3 and orta_deger(onceki) > 0 else None
+    aralik = (vids[-1]["ts"] - vids[0]["ts"]).days / (len(vids) - 1) if len(vids) >= 2 else None
+    basliklar = [v["baslik"] for v in vids]
+    metinler = [[v["baslik"]] + v["etiketler"] for v in vids]
+    en_iyiler = sorted(vids, key=lambda v: -v["izl"])[:5]
+    sik = collections.Counter(w for m in metinler for w in ifadeler(m) if " " not in w)
+    konular = [re.sub(r"_", " ", u.rsplit("/", 1)[-1]) for u in c.get("topicDetails", {}).get("topicCategories", [])]
+    # Tahmini kazanç: aylık izlenme ≈ toplam izlenme / kanal yaşı (ay); Shorts payı ayrı fiyatlanır.
+    s = seviye or "orta"
+    aylik = toplam / max(yas / 30, 1)
+
+    def gelir(izlenme, i):
+        return izlenme * (1 - pay_kisa) / 1000 * RPM_UZUN[s][i] + izlenme * pay_kisa / 1000 * RPM_SHORTS[s][i]
+
+    return dict(
+        id=c["id"], ad=sn["title"], handle=sn.get("customUrl", ""), ulke=ulke, dil=dil, seviye=seviye,
+        kapak=sn.get("thumbnails", {}).get("medium", {}).get("url", ""), aciklama=sn.get("description", "")[:400],
+        abone=abone, toplam=toplam, video_sayisi=vsay, yas=yas, video_basi=toplam / vsay, analiz_edilen=len(vids),
+        ort=sum(izl) / len(izl) if izl else 0, medyan=orta_deger(izl), gidisat=gidisat,
+        son10=vids[-10:], kisa_oran=len(kisalar) / len(vids) if vids else 0, pay_kisa=pay_kisa,
+        ort_kisa=sum(v["izl"] for v in kisalar) / len(kisalar) if kisalar else 0,
+        ort_uzun=sum(v["izl"] for v in uzunlar) / len(uzunlar) if uzunlar else 0,
+        ort_sure=sum(v["sure"] for v in uzunlar) / len(uzunlar) if uzunlar else 0,
+        kisa_sayi=len(kisalar), uzun_sayi=len(uzunlar),
+        aralik=aralik, son30=sum((simdi - v["ts"]).days <= 30 for v in vids),
+        son_yukleme=(simdi - vids[-1]["ts"]).days if vids else None,
+        etkilesim=sum(v["begeni"] + v["yorum"] for v in vids) / top_izl,
+        gunler=collections.Counter(GUNLER[v["ts"].astimezone(TR_SAAT).weekday()] for v in vids).most_common(2),
+        saatler=collections.Counter(v["ts"].astimezone(TR_SAAT).hour for v in vids).most_common(1),
+        en_iyiler=en_iyiler, konusu=en_sik_ifade(metinler) or (konular[0] if konular else ""),
+        en_iyi_tema=en_sik_ifade([[v["baslik"]] + v["etiketler"] for v in en_iyiler]),
+        youtube_konulari=konular, sik_kelimeler=[w for w, _ in sik.most_common(8)],
+        baslik_uzunluk=sum(len(b) for b in basliklar) / len(basliklar) if basliklar else 0,
+        sayi_oran=sum(bool(re.search(r"\d", b)) for b in basliklar) / max(len(basliklar), 1),
+        soru_oran=sum("?" in b for b in basliklar) / max(len(basliklar), 1),
+        emoji_oran=sum(bool(EMOJI.search(b)) for b in basliklar) / max(len(basliklar), 1),
+        buyuk_oran=sum(bool(re.search(r"\b[A-ZÇĞİÖŞÜ]{3,}\b", b)) for b in basliklar) / max(len(basliklar), 1),
+        aylik_gelir=(gelir(aylik, 0), gelir(aylik, 1)), toplam_gelir=(gelir(toplam, 0), gelir(toplam, 1)),
+        seviye_tahmini=seviye is None,
+    )
+
+
+def kanal_ozel_oneriler(x):
+    """İnceleme sayfasına özel, kanalın kendi verisinden çıkan dersler."""
+    m = []
+    if x["gidisat"] is not None:
+        y = round(abs(x["gidisat"]) * 100)
+        if x["gidisat"] > .3:
+            m.append(f'📈 <b>Yükselişte</b>: son 10 video önceki 10\'dan %{y} daha çok izleniyor. Konu ısınıyor, tam zamanı.')
+        elif x["gidisat"] < -.3:
+            m.append(f'📉 <b>Düşüşte</b>: son 10 video önceki 10\'dan %{y} daha az izleniyor. Konu soğuyor olabilir, '
+                     f'girersen farklı bir açı bul.')
+    if x["kisa_sayi"] >= 3 and x["uzun_sayi"] >= 3 and x["ort_kisa"] and x["ort_uzun"]:
+        if x["ort_uzun"] > x["ort_kisa"]:
+            m.append(f'🎬 Uzun videoları Shorts\'tan <b>{x["ort_uzun"] / x["ort_kisa"]:.1f} kat</b> daha çok izleniyor: '
+                     f'bu konuda uzun video daha iyi çalışıyor.')
+        else:
+            m.append(f'📱 Shorts\'ları uzun videolardan <b>{x["ort_kisa"] / x["ort_uzun"]:.1f} kat</b> daha çok izleniyor: '
+                     f'büyümek için Shorts, kazanç için uzun video.')
+    if x["en_iyi_tema"]:
+        m.append(f'🏆 En çok izlenen videolarının ortak teması: <b>{html.escape(x["en_iyi_tema"])}</b>. İşe yarayan bu.')
+    if x["aralik"]:
+        m.append(f'🗓️ Ortalama <b>{x["aralik"]:.0f} günde bir</b> video yüklüyor (son 30 günde {x["son30"]}). '
+                 f'Rekabet edeceksen en az bu tempoyu hedefle.')
+    ipucu = []
+    if x["sayi_oran"] > .5:
+        ipucu.append("sayı kullanıyor")
+    if x["soru_oran"] > .3:
+        ipucu.append("soru soruyor")
+    if x["emoji_oran"] > .4:
+        ipucu.append("emoji kullanıyor")
+    if x["buyuk_oran"] > .4:
+        ipucu.append("BÜYÜK HARF vurgusu yapıyor")
+    if ipucu:
+        m.append(f'✍️ Başlıklarının çoğu {", ".join(ipucu)}; ortalama {x["baslik_uzunluk"]:.0f} karakter.')
+    return m
+
+
 # ---------- rapor ----------
 def yas_metni(gun):
     if gun < 31:
@@ -560,7 +751,7 @@ def kanallara_grupla(sonuc):
             video_sayisi=ilk["video_sayisi"], kanal_izlenme=ilk["kanal_izlenme"], abone=ilk["abone"],
             video_basi=ilk["video_basi"], kanal_yasi=ilk["kanal_yasi"],
             kategori=collections.Counter(v["kaynak"] for v in vids).most_common(1)[0][0],
-            basliklar=[v["baslik"] + " " + " ".join(v["etiketler"]) for v in vids],
+            basliklar=[[v["baslik"]] + v["etiketler"] for v in vids],
             puan=max(v["puan"] for v in vids),
             en_iyi=max(vids, key=lambda v: v["izlenme"]),
             yeni=all(v.get("yeni") for v in vids),
@@ -587,16 +778,17 @@ def kanal_konusu(k, terim_haritasi):
     """Kanalın konusu: önce trend raporundaki ortak konu, yoksa videolarında en sık geçen ifade."""
     if k["kanal_id"] in terim_haritasi:
         return terim_haritasi[k["kanal_id"]]
-    sayac = collections.Counter()
-    for metin in k["basliklar"]:
-        ws = [w for w in kelimeler(metin) if w not in GENEL]
-        sayac.update({f"{a} {b}" for a, b in zip(ws, ws[1:])})
-        sayac.update({w: 0.5 for w in ws})
-    return sayac.most_common(1)[0][0] if sayac else k["kategori"]
+    return en_sik_ifade(k["basliklar"], en_az=1) or k["kategori"]
 
 
 def sure_metni(gun):
     return f"{max(gun, 1)} günde" if gun < 45 else f"{round(gun / 30)} ayda"
+
+
+def incele_dugmesi(kanal_id):
+    """Kanal daha önce incelendiyse sayfa açılınca JS bunu "İncelemeyi aç" bağlantısına çevirir."""
+    return (f'<a class="incele" data-id="{html.escape(kanal_id)}" href="{TARA_LINKI}" target="_blank" '
+            f'rel="noopener">🔍 İncele</a>')
 
 
 def terim_haritasi_kur(nisler):
@@ -702,7 +894,7 @@ h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14
 .nis{padding:14px} .nis-ad{font-size:18px;font-weight:700;color:var(--vurgu)}
 .cipler{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .cip{background:var(--zemin2);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:500}
-.cip::after{content:" ›";color:var(--soluk)}
+.cip::after{content:" ›";color:var(--soluk)} .cip.duz::after{content:none}
 .nis-ust{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .durum{font-size:12px;font-weight:700;background:var(--zemin2);border-radius:999px;padding:4px 10px;color:var(--soluk)}
 .durum.sicak{color:var(--vurgu)} .durum.yeni{color:var(--iyi)}
@@ -715,8 +907,20 @@ h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14
 .bos-not{color:var(--soluk)}
 .patlama{font-size:15px;margin-top:2px} .patlama b{color:var(--vurgu)}
 .konusu{font-size:14px;margin-top:4px} .konusu b{color:var(--yazi)}
-.gir{display:block;text-align:center;margin:12px 14px 14px;padding:11px;border-radius:12px;background:var(--vurgu);color:#fff;font-weight:700}
-.gir:active{opacity:.7}
+.eylem{display:flex;gap:8px;margin:12px 14px 14px}
+.gir,.incele{flex:1;display:block;text-align:center;padding:11px;border-radius:12px;font-weight:700}
+.gir{background:var(--vurgu);color:#fff} .incele{background:var(--zemin2);color:var(--yazi)}
+.incele.hazir{color:var(--iyi)} .gir:active,.incele:active{opacity:.7}
+.fav-oge .incele{display:inline-block;flex:none;padding:6px 12px;margin:0 0 12px 14px;font-size:14px}
+.istat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px 14px}
+.istat div{background:var(--zemin2);border-radius:10px;padding:8px 6px;text-align:center}
+.istat b{display:block;font-size:17px} .istat span{font-size:12px;color:var(--soluk)}
+.bolum{padding:14px} .bolum h3{margin:0 0 8px;font-size:16px}
+.satirlar{margin:0;padding:0;list-style:none;font-size:14px} .satirlar li{margin:6px 0}
+.cubuk-satir{display:flex;align-items:center;gap:8px;font-size:13px;margin:6px 0}
+.cubuk-satir .ad{flex:1;font-size:13px;font-weight:500} .cubuk-dis{width:90px;flex:none;height:8px;background:var(--zemin2);border-radius:4px}
+.cubuk{height:8px;background:var(--vurgu);border-radius:4px} .cubuk-satir .sayi{width:46px;flex:none;text-align:right;color:var(--soluk)}
+.av.buyuk-av{width:72px;height:72px}
 article.kart{position:relative} .kanal{padding-right:44px}
 .yildiz{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;font-size:26px;line-height:1;color:var(--soluk);cursor:pointer;z-index:1}
 .yildiz.on{color:#f5b301} .yildiz:active{transform:scale(.85)}
@@ -748,9 +952,10 @@ if (liste) fetch("aramalar.json", {cache: "no-store"}).then(function (r) { retur
   l.slice(0, 10).forEach(function (x) {
     var a = document.createElement("a"); a.className = "arama"; a.href = x.dosya;
     var ic = document.createElement("span"); ic.className = "ic";
-    var ad = document.createElement("span"); ad.className = "ad"; ad.textContent = "📌 " + x.baslik;
+    var ad = document.createElement("span"); ad.className = "ad"; ad.textContent = (x.tip === "kanal" ? "🔍 " : "📌 ") + x.baslik;
     var alt = document.createElement("span"); alt.className = "kucuk";
-    alt.textContent = x.tarih + " · " + x.dil + " · " + x.kanal + " kanal" + (x.bos ? " · 🟢 " + x.bos + " boş alan" : "");
+    alt.textContent = x.tip === "kanal" ? x.tarih + " · kanal incelemesi · " + x.ozet
+      : x.tarih + " · " + x.dil + " · " + x.kanal + " kanal" + (x.bos ? " · 🟢 " + x.bos + " boş alan" : "");
     var ok = document.createElement("span"); ok.className = "ok"; ok.textContent = "›";
     ic.append(ad, alt); a.append(ic, ok); liste.append(a);
   });
@@ -783,11 +988,35 @@ function favCiz() {
               el("span", "kucuk", "Eklendi: " + x.tarih));
     a.append(ic);
     var b = el("button", "yildiz on", "★"); b.type = "button"; b.dataset.id = x.id; b.setAttribute("aria-label", "Beğendiklerimden çıkar");
-    oge.append(a, b); liste.append(oge);
+    var inc = el("a", "incele", "🔍 İncele"); inc.dataset.id = x.id; inc.href = document.body.dataset.tara;
+    inc.target = "_blank"; inc.rel = "noopener";
+    oge.append(a, b, inc); liste.append(oge);
   });
   kutu.hidden = !l.length;
+  inceleIsaretle();
 }
+
+// İncele: daha önce incelenen kanallarda düğme doğrudan inceleme sayfasını açar;
+// incelenmemişse kanal linkini panoya kopyalar ve GitHub'daki tarama sayfasını açar.
+var INCELENEN = {};
+function inceleIsaretle() {
+  document.querySelectorAll(".incele").forEach(function (b) {
+    var dosya = INCELENEN[b.dataset.id];
+    if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); }
+  });
+}
+fetch(KOK + "aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
+  l.forEach(function (x) { if (x.tip === "kanal" && x.kanal_id) INCELENEN[x.kanal_id] = x.dosya; });
+  inceleIsaretle();
+}).catch(function () {});
 document.addEventListener("click", function (e) {
+  var inc = e.target.closest(".incele");
+  if (inc && !inc.classList.contains("hazir")) {
+    var link = "https://www.youtube.com/channel/" + inc.dataset.id;
+    try { navigator.clipboard.writeText(link); } catch (h) {}
+    document.getElementById("ipucu-incele").hidden = false;
+    return;  // bağlantı yeni sekmede GitHub'ı açar
+  }
   var b = e.target.closest(".yildiz");
   if (!b) return;
   e.preventDefault();
@@ -857,7 +1086,8 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                 f'<img src="{e(v["kapak"])}" alt="" loading="lazy"><span><span class="vb">{e(v["baslik"])}</span>'
                 + (f'<span class="kucuk ceviri">{e(baslik_tr)}</span>' if baslik_tr else "")
                 + f'<span class="kucuk">▶ En çok izlenen: {kisa(v["izlenme"])} · {v["yayin"]}</span></span></a>'
-                f'<a class="gir" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">Kanala gir, bak ›</a>'
+                f'<div class="eylem"><a class="gir" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">Kanala gir ›</a>'
+                f'{incele_dugmesi(k["kanal_id"])}</div>'
                 f'</article>')
 
     def gun_once(iso):
@@ -938,32 +1168,46 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
     yarim = (f'<p class="uyari">⚠️ Kota tarama sırasında bitti, sonuçlar eksik olabilir. {KOTA_NOTU}</p>'
              if getattr(a, "kota_yarim", False) else "")
 
-    sayfa = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Niş Avcısı</title>
-<meta name="theme-color" content="#d4361c"><link rel="manifest" href="{kok}manifest.json">
-<link rel="icon" href="{kok}icon-192.png"><link rel="apple-touch-icon" href="{kok}icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Niş Avcısı">
-<style>{CSS}</style></head><body data-kok="{kok}" data-uret="{simdi.isoformat(timespec='seconds')}" data-genel="{0 if a.konular else 1}"><main>
-{ust}<header><h1>{baslik}</h1>
-<a class="btn ana" href="{TARA_LINKI}" target="_blank" rel="noopener" id="tara">Tara</a>
-<a class="btn ikinci ikon" href="{kok}index.html#begendiklerim" id="fav-sayi" aria-label="Beğendiklerim">⭐</a>
-<button class="btn ikinci ikon" onclick="location.reload()" aria-label="Yenile">↻</button></header>
-<p class="meta">{"Arama" if a.konular else "Son tarama"}: {tarih} · {kapsam} · son {a.gun} gün</p>
-<p class="uyari" id="uyari" hidden></p>{yarim}
-<p class="ipucu" id="ipucu" hidden>GitHub'da <b>Run workflow</b>'a bas. Konu aramak istersen <b>Konu</b> kutusuna yaz
-(ör. <i>tarih, borsa</i>), boş bırakırsan genel tarama yapar. Yeşil <b>Run workflow</b>'a bas, 2 dakika sonra ↻ ile yenile.</p>
+    sayfa_yaz(yol, kok=kok, baslik=baslik, ust=ust, genel=not a.konular,
+              meta=f'{"Arama" if a.konular else "Son tarama"}: {tarih} · {kapsam} · son {a.gun} gün',
+              govde=f"""{yarim}
 {aramalar}
 {govde}
 
 <h2>📊 Trend raporu</h2>
 <p class="alt-baslik">Birden fazla yeni kanalda aynı anda patlayan konular: nereden çıktı, kaç kanal yapıyor, ne kadar hızlı.</p>
-{trend}
-
-<footer>Sadece son {a.max_kanal_yasi} günde açılmış kanallar · ≤{kisa(a.max_abone)} abone · ≤{a.max_video} video ·
+{trend}""",
+              footer=f"""Sadece son {a.max_kanal_yasi} günde açılmış kanallar · ≤{kisa(a.max_abone)} abone · ≤{a.max_video} video ·
 ≥{kisa(a.min_izlenme)} izlenme · reklamla şişmiş videolar elendi · {harcanan} kota birimi.
 Otomatik genel tarama her gün 07:17'de.<br>
 💰 Kazanç etiketleri kanalın ülkesine/diline göre kaba bir tahmindir; gerçek kazanç konuya ve izleyiciye göre değişir.
-Öneriler kurallara dayalı otomatik yorumlardır, son karar senin.</footer>
+Öneriler kurallara dayalı otomatik yorumlardır, son karar senin.""")
+
+
+def sayfa_yaz(yol, *, kok, baslik, meta, govde, footer, ust="", genel=False):
+    """Tüm sayfaların ortak iskeleti: başlık, Tara / ⭐ / ↻ düğmeleri, uyarılar, içerik, alt not."""
+    uret = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    sayfa = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Niş Avcısı</title>
+<meta name="theme-color" content="#d4361c"><link rel="manifest" href="{kok}manifest.json">
+<link rel="icon" href="{kok}icon-192.png"><link rel="apple-touch-icon" href="{kok}icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Niş Avcısı">
+<style>{CSS}</style></head><body data-kok="{kok}" data-uret="{uret}" data-genel="{1 if genel else 0}"
+data-tara="{TARA_LINKI}"><main>
+{ust}<header><h1>{baslik}</h1>
+<a class="btn ana" href="{TARA_LINKI}" target="_blank" rel="noopener" id="tara">Tara</a>
+<a class="btn ikinci ikon" href="{kok}index.html#begendiklerim" id="fav-sayi" aria-label="Beğendiklerim">⭐</a>
+<button class="btn ikinci ikon" onclick="location.reload()" aria-label="Yenile">↻</button></header>
+<p class="meta">{meta}</p>
+<p class="uyari" id="uyari" hidden></p>
+<p class="ipucu" id="ipucu" hidden>GitHub'da <b>Run workflow</b>'a bas. Konu aramak için <b>Konu</b> kutusuna yaz
+(ör. <i>tarih, borsa</i>); bir kanalı incelemek için <b>Kanal</b> kutusuna linkini yapıştır; ikisi de boşsa genel
+tarama yapar. Yeşil <b>Run workflow</b>'a bas, 2 dakika sonra ↻ ile yenile.</p>
+<p class="ipucu" id="ipucu-incele" hidden>📋 <b>Kanal linki kopyalandı.</b> Açılan GitHub sayfasında <b>Run workflow</b>'a bas,
+<b>Kanal</b> kutusuna yapıştır, yeşil <b>Run workflow</b>'a bas. 1–2 dakika sonra inceleme <b>Aramalarım</b>'da çıkar.</p>
+{govde}
+
+<footer>{footer}</footer>
 </main>
 <script>{JS}</script>
 </body></html>"""
@@ -972,12 +1216,177 @@ Otomatik genel tarama her gün 07:17'de.<br>
         f.write(sayfa)
 
 
+def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
+    """Tek bir kanalın inceleme sayfası."""
+    e = html.escape
+    tarih = dt.datetime.now(TR_SAAT).strftime("%d.%m.%Y %H:%M")
+
+    def cevirili(metin):
+        t = tr.get(metin)
+        return f'{e(metin)} <span class="ceviri">({e(t)})</span>' if t else e(metin)
+
+    def dolar(ab):
+        lo, hi = ab
+        f = lambda d: f"${kisa(d)}" if d >= 1000 else f"${d:,.0f}"
+        return f"{f(lo)} – {f(hi)}"
+
+    abone = "gizli" if x["abone"] is None else kisa(x["abone"])
+    av = (f'<img class="av buyuk-av" src="{e(x["kapak"])}" alt="" loading="lazy">' if x["kapak"]
+          else f'<span class="av buyuk-av bos">{e(x["ad"][:1].upper())}</span>')
+    ulke = ULKE_AD.get(x["ulke"], x["ulke"] or "belirtilmemiş")
+    seviye = KAZANC_ETIKET.get(x["seviye"], "💰 Bilinmiyor")
+    ozet = f'{sure_metni(x["yas"])} {x["video_sayisi"]} videoyla {kisa(x["toplam"])} izlenme'
+    yildiz = (f'<button class="yildiz" type="button" aria-label="Beğendiklerime ekle" data-id="{e(x["id"])}" '
+              f'data-ad="{e(x["ad"])}" data-konu="{e(x["konusu"])}" data-ozet="{e(ozet)}" data-ulke="{bayrak(x["ulke"])}">☆</button>')
+
+    ust_kart = (f'<article class="kart">{yildiz}<a class="kanal" href="{kanal_link(x["id"])}" target="_blank" rel="noopener">{av}'
+                f'<span class="ic"><span class="ad">{bayrak(x["ulke"])} {e(x["ad"])}</span>'
+                f'<span class="kucuk">{e(x["handle"])} · {e(ulke)} · {yas_metni(x["yas"])}</span>'
+                f'<span class="patlama">🔥 <b>{ozet}</b></span></span></a>'
+                f'<div class="istat">'
+                f'<div><b>{abone}</b><span>abone</span></div>'
+                f'<div><b>{kisa(x["toplam"])}</b><span>toplam izlenme</span></div>'
+                f'<div><b>{x["video_sayisi"]}</b><span>video</span></div>'
+                f'<div><b>{kisa(x["video_basi"])}</b><span>video başına</span></div>'
+                f'<div><b>{kisa(x["medyan"])}</b><span>tipik video*</span></div>'
+                f'<div><b>%{x["etkilesim"] * 100:.1f}</b><span>etkileşim</span></div></div>'
+                f'<div class="eylem"><a class="gir" href="{kanal_link(x["id"])}" target="_blank" rel="noopener">Kanala gir ›</a></div>'
+                f'</article>')
+
+    ypp = ("" if x["abone"] is None or x["abone"] >= 1000 else
+           '<li>⚠️ 1.000 abonenin altında: büyük ihtimalle henüz YouTube para kazanma programında değil, şu an reklam geliri yok.</li>')
+    kazanc = (f'<article class="kart bolum"><h3>💰 Tahmini kazanç</h3><ul class="satirlar">'
+              f'<li>Pazar: <b>{seviye}</b>{" (dilden tahmin)" if x["seviye_tahmini"] else ""} · {e(ulke)}</li>'
+              f'<li>Aylık ortalama: <b>{dolar(x["aylik_gelir"])}</b></li>'
+              f'<li>Kanal açıldığından beri toplam: <b>{dolar(x["toplam_gelir"])}</b></li>'
+              f'<li>İzlenmelerde Shorts payı: %{round(x["pay_kisa"] * 100)} (Shorts çok daha az kazandırır).</li>{ypp}'
+              f'</ul><p class="kucuk">Sadece YouTube reklam geliri, kaba tahmin. Sponsorluk ve bağış dahil değil.</p></article>')
+
+    youtube = ", ".join(cevirili(k) for k in x["youtube_konulari"]) or "—"
+    cipler = "".join(f'<span class="cip duz">{e(w)}</span>' for w in x["sik_kelimeler"])
+    aciklama = (f'<p class="kucuk">Açıklama: {e(x["aciklama"])}'
+                + (f'<br><span class="ceviri">{e(tr[x["aciklama"]])}</span>' if tr.get(x["aciklama"]) else "")
+                + '</p>') if x["aciklama"] else ""
+    konu = (f'<article class="kart bolum"><h3>🎯 Konusu</h3><ul class="satirlar">'
+            f'<li>Ana konu: <b>{cevirili(x["konusu"])}</b></li>'
+            f'<li>YouTube\'un kategorileri: {youtube}</li>'
+            f'<li>Dil: {e(dil_adi(x["dil"]))}</li></ul>'
+            f'<p class="kucuk">Başlıklarında en sık geçenler:</p><div class="cipler">{cipler}</div>{aciklama}</article>')
+
+    enb = max([v["izl"] for v in x["son10"]] or [1]) or 1
+    cubuklar = "".join(
+        f'<a class="cubuk-satir" href="{video_link(v["id"])}" target="_blank" rel="noopener"><span class="ad">{e(v["baslik"])}</span>'
+        f'<span class="cubuk-dis"><span class="cubuk" style="display:block;width:{max(v["izl"] / enb * 100, 2):.0f}%"></span></span>'
+        f'<span class="sayi">{kisa(v["izl"])}</span></a>' for v in reversed(x["son10"]))
+    if x["gidisat"] is None:
+        gidis = "Karşılaştırma için yeterli video yok."
+    else:
+        gidis = (f'{"📈 Yükselişte" if x["gidisat"] > .1 else ("📉 Düşüşte" if x["gidisat"] < -.1 else "➡️ Yatay")}: '
+                 f'son 10 video önceki 10\'a göre %{x["gidisat"] * 100:+.0f}')
+    performans = (f'<article class="kart bolum"><h3>📈 Performans</h3><ul class="satirlar">'
+                  f'<li>Ortalama izlenme: <b>{kisa(x["ort"])}</b> · tipik video (medyan): <b>{kisa(x["medyan"])}</b></li>'
+                  f'<li>{gidis}</li></ul><p class="kucuk">Son 10 video (en yeni üstte):</p>{cubuklar}</article>')
+
+    if x["kisa_sayi"] and x["uzun_sayi"]:
+        kim = "uzun videolar" if x["ort_uzun"] >= x["ort_kisa"] else "Shorts"
+        karsi = f'<li>Daha çok izlenen: <b>{kim}</b> (Shorts ort. {kisa(x["ort_kisa"])} · uzun ort. {kisa(x["ort_uzun"])})</li>'
+    else:
+        karsi = ""
+    format_ = (f'<article class="kart bolum"><h3>🎬 Format</h3><ul class="satirlar">'
+               f'<li>Shorts oranı: %{round(x["kisa_oran"] * 100)} ({x["kisa_sayi"]} Shorts, {x["uzun_sayi"]} uzun video)</li>'
+               + (f'<li>Uzun videoların ortalama süresi: <b>{x["ort_sure"] / 60:.0f} dakika</b></li>' if x["ort_sure"] else "")
+               + f'{karsi}</ul></article>')
+
+    gunler = " ve ".join(g for g, _ in x["gunler"]) or "—"
+    saat = f'{x["saatler"][0][0]:02d}:00 civarı' if x["saatler"] else "—"
+    duzen = (f'<article class="kart bolum"><h3>🗓️ Yükleme düzeni</h3><ul class="satirlar">'
+             + (f'<li>Ortalama <b>{x["aralik"]:.0f} günde bir</b> video</li>' if x["aralik"] else "")
+             + f'<li>Son 30 günde <b>{x["son30"]}</b> video · son yükleme {x["son_yukleme"]} gün önce</li>'
+             f'<li>En çok <b>{gunler}</b> günleri, saat <b>{saat}</b> (Türkiye saati) yüklüyor</li></ul></article>'
+             if x["son_yukleme"] is not None else "")
+
+    basliklar = (f'<article class="kart bolum"><h3>✍️ Başlık kalıpları</h3><ul class="satirlar">'
+                 f'<li>Ortalama uzunluk: <b>{x["baslik_uzunluk"]:.0f} karakter</b></li>'
+                 f'<li>Sayı içeren: %{round(x["sayi_oran"] * 100)} · soru soran: %{round(x["soru_oran"] * 100)} · '
+                 f'emoji: %{round(x["emoji_oran"] * 100)} · BÜYÜK HARF: %{round(x["buyuk_oran"] * 100)}</li></ul></article>')
+
+    en_iyiler = "".join(
+        f'<a class="video" href="{video_link(v["id"])}" target="_blank" rel="noopener">'
+        f'<img src="{e(v["kapak"])}" alt="" loading="lazy"><span><span class="vb">{e(v["baslik"])}</span>'
+        + (f'<span class="kucuk ceviri">{e(tr[v["baslik"]])}</span>' if tr.get(v["baslik"]) else "")
+        + f'<span class="kucuk">▶ {kisa(v["izl"])} izlenme · {v["ts"].astimezone(TR_SAAT):%d.%m.%Y}</span></span></a>'
+        for v in x["en_iyiler"])
+    en_iyi = f'<article class="kart"><div class="bolum" style="padding-bottom:0"><h3>🏆 En çok izlenen videoları</h3></div>{en_iyiler}</article>'
+
+    if pazar and (pazar.get("en") or pazar.get("tr")):
+        pz = "".join(f'<li>{ad}: <span class="fr {FIRSAT_ETIKET[f["seviye"]][0]}">{FIRSAT_ETIKET[f["seviye"]][1]}</span> '
+                     f'{firsat_metni(f)}</li>' for ad, f in (("🌍 İngilizce", pazar.get("en")), ("🇹🇷 Türkiye", pazar.get("tr"))) if f)
+        pazar_html = (f'<article class="kart bolum"><h3>🌍 Bu konu başka pazarlarda ne durumda?</h3>'
+                      f'<p class="kucuk">"{e(x["konusu"])}" son 30 günde:</p><ul class="satirlar">{pz}</ul></article>')
+    else:
+        pazar_html = ""
+
+    kd = dict(ulke=x["ulke"], dil=x["dil"], kisa=x["kisa_oran"] > .6, kanal_yasi=x["yas"],
+              hizli=bool(x["gidisat"] and x["gidisat"] > .3), video_sayisi=x["video_sayisi"], video_basi=x["video_basi"])
+    maddeler = kanal_onerileri(kd, x["seviye"], pazar, None) + kanal_ozel_oneriler(x)
+    oneri = ('<article class="kart"><div class="oneri" style="margin:14px"><b>💡 Öneriler</b><ul>'
+             + "".join(f"<li>{m}</li>" for m in maddeler) + "</ul></div></article>")
+
+    sayfa_yaz(yol, kok=kok, baslik="🔍 " + e(x["ad"]), ust=f'<a class="geri" href="{kok}index.html">← Ana sayfa</a>',
+              meta=f'Kanal incelemesi: {tarih} · son {x["analiz_edilen"]} video incelendi',
+              govde=ust_kart + oneri + kazanc + konu + pazar_html + performans + format_ + duzen + basliklar + en_iyi,
+              footer=f'* Tipik video: videoların ortanca (medyan) izlenmesi; birkaç viral video ortalamayı şişirmesin diye. '
+                     f'Kazanç rakamları ülke ve Shorts oranına göre kaba tahmindir. {harcanan} kota birimi.')
+
+
+def calistir_kanal(a, yt, durum_yol):
+    """--kanal verildiyse: sadece o kanalı incele, sayfasını yaz ve Aramalarım'a ekle."""
+    simdi_tr = lambda: dt.datetime.now(TR_SAAT)
+    print(f"Kanal inceleniyor: {a.kanal}")
+    try:
+        c = kanal_bul(yt, a.kanal)
+        if not c:
+            print("! Kanal bulunamadı.")
+            json_yaz(durum_yol, dict(uyari=f"⚠️ Kanal bulunamadı: {a.kanal[:80]}. Linki kontrol edip tekrar dene.",
+                                     ts=simdi_tr().isoformat(timespec="minutes")))
+            return
+        vids = kanal_videolari(yt, c)
+    except KotaBitti:
+        json_yaz(durum_yol, dict(uyari=f"⚠️ Bugünün YouTube kotası bitti, kanal incelenemedi. {KOTA_NOTU}",
+                                 ts=simdi_tr().isoformat(timespec="minutes")))
+        return
+    x = kanal_analiz(c, vids)
+    # Konunun İngilizce ve Türkiye pazarındaki durumu (200 birim).
+    pazar = None
+    if x["konusu"]:
+        en = (cevir(x["konusu"], "en") or x["konusu"]).lower()
+        trc = (cevir(x["konusu"], "tr") or x["konusu"]).lower()
+        pazar = dict(en=firsat_olc(yt, a, [en], bolge="", dil="en").get(en),
+                     tr=firsat_olc(yt, a, [trc], bolge="TR", dil="tr").get(trc))
+    tr = turkceye([x["konusu"], x["aciklama"]] + x["youtube_konulari"] + [v["baslik"] for v in x["en_iyiler"]])
+    dosya = f"kanal/{x['id']}.html"
+    kanal_rapor(x, pazar, tr, os.path.join(a.site, dosya), yt.harcanan)
+    aramalar_yol = os.path.join(a.site, "aramalar.json")
+    liste = [y for y in json_oku(aramalar_yol, []) if y.get("dosya") != dosya]
+    liste.insert(0, dict(baslik=x["ad"], dosya=dosya, tip="kanal", kanal_id=x["id"],
+                         tarih=simdi_tr().strftime("%d.%m %H:%M"),
+                         ozet=f'{"gizli" if x["abone"] is None else kisa(x["abone"])} abone · {kisa(x["toplam"])} izlenme'))
+    json_yaz(aramalar_yol, liste[:30])
+    json_yaz(durum_yol, dict(uyari="⚠️ Son taramada kota yarıda bitti, sonuçlar eksik olabilir. " + KOTA_NOTU
+                             if getattr(a, "kota_yarim", False) else None, ts=simdi_tr().isoformat(timespec="minutes")))
+    print(f"{x['ad']}: {x['analiz_edilen']} video incelendi, konusu: {x['konusu']}, {yt.harcanan} kota birimi.")
+    print(f"Rapor: {os.path.join(a.site, dosya)}")
+
+
 def calistir(a):
     key = os.environ.get("YT_API_KEY")
     if not key:
         sys.exit("API anahtarı yok. YT_API_KEY ortam değişkenini ayarla.")
     durum_yol = os.path.join(a.site, "durum.json")
     yt = YT(key)
+    if a.kanal:
+        calistir_kanal(a, yt, durum_yol)
+        return
     a.ceviriler = {}
     if a.konular and not a.bolge:
         for k in a.konular:
@@ -1061,6 +1470,7 @@ def main():
     klasor = os.path.dirname(os.path.abspath(__file__))
     p = argparse.ArgumentParser(description="YouTube niş bulucu")
     p.add_argument("--konu", default="", help='Virgülle ayrılmış konular, ör. "tarih, borsa, kripto" (boş = genel tarama)')
+    p.add_argument("--kanal", default="", help="İncelenecek kanalın linki, @adı ya da UC... kimliği (verilirse sadece o incelenir)")
     p.add_argument("--bolge", default="", help="Ülke kodu: TR, US, DE... (boş = global)")
     p.add_argument("--dil", default="", help="İçerik dili: tr, en, de... (boş = hepsi)")
     p.add_argument("--gun", type=int, default=14, help="Son kaç günde yayınlanan videolar")
