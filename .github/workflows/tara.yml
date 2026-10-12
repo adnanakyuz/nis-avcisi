@@ -6,6 +6,16 @@ on:
   schedule:
     - cron: "17 4,16 * * *"   # Türkiye saatiyle 07:17 ve 19:17 → günde ~2.900 birim; kalan kota elle taramalara (günde ~4)
   workflow_dispatch:
+    inputs:
+      konu:
+        description: "Konu (virgülle ayır, ör: tarih, borsa, kripto). Boş = genel tarama"
+        required: false
+        default: ""
+      dil:
+        description: "Dil"
+        type: choice
+        options: [Global, Türkçe]
+        default: Global
 
 permissions:
   contents: write   # geçmiş veritabanını depoya geri kaydetmek için
@@ -32,8 +42,13 @@ jobs:
       - name: Tara
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
-        # Varsayılan: global, son 14 gün. Değiştirmek için ekle, ör: --gun 7 --bolge TR --dil tr --kelime "yapay zeka"
-        run: python -u nis_avcisi.py --cikti site/index.html --db nis_gecmis.db
+          KONU: ${{ inputs.konu }}   # komut satırına doğrudan yazılmaz; ortam değişkeniyle güvenli aktarılır
+          DIL: ${{ inputs.dil }}
+        # Varsayılan: global, son 14 gün, sadece 1 yaşından genç kanallar.
+        run: |
+          EK=""
+          if [ "$DIL" = "Türkçe" ]; then EK="--bolge TR --dil tr"; fi
+          python -u nis_avcisi.py --konu "$KONU" $EK --cikti site/index.html --db nis_gecmis.db
 
       - name: İlk çalıştırmada kota biterse boş sayfa koy
         run: |
