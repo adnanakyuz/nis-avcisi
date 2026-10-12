@@ -40,6 +40,9 @@ var yok değil ya yani artık hiç tüm bütün bunu şunu onu bunlar şey olara
 the a an and or of to in on for with at by from is are was be this that it its my your
 you i we how why what when who vs part full video videos official new shorts short
 episode ep day days best top 2024 2025 2026 live amp quot feat ft lyrics music hd 4k
+into out get got can will just about after like our their they them his her not all
+have has had one two from more most very really only this these those than then there
+beni bana sana seni bize size gibi bile çünkü şimdi bugün yarın dün
 """.split())
 
 
