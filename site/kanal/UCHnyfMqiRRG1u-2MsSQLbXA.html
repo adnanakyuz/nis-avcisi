@@ -1,0 +1,191 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Niş Avcısı</title>
+<meta name="theme-color" content="#d4361c"><link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../icon-192.png"><link rel="apple-touch-icon" href="../icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Niş Avcısı">
+<style>
+:root{--bg:#f6f5f2;--kart:#fff;--yazi:#1c1b19;--soluk:#6d6a63;--cizgi:#e4e1da;--vurgu:#d4361c;--iyi:#1f7a4d;--uyari:#9a6700;--zemin2:#f0eee9}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--kart:#1e1d1b;--yazi:#efede8;--soluk:#a19d94;--cizgi:#33312d;--vurgu:#ff6a4d;--iyi:#4cc38a;--uyari:#e3b341;--zemin2:#272522}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+main{max-width:720px;margin:auto;padding:max(16px,env(safe-area-inset-top)) 16px 40px}
+header{display:flex;align-items:center;gap:8px}
+h1{font-size:22px;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:10px 16px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn.ana{background:var(--vurgu);color:#fff} .btn.ikinci{background:var(--zemin2);color:var(--yazi)}
+.meta{color:var(--soluk);font-size:13px;margin:6px 0 0}
+.geri{display:inline-block;color:var(--soluk);font-size:15px;font-weight:600;padding:4px 0 10px}
+.ipucu,.uyari{border-radius:12px;padding:10px 14px;font-size:14px;margin:14px 0 0}
+.ipucu{background:var(--zemin2);color:var(--soluk)} .uyari{border:1px solid var(--uyari);color:var(--uyari);font-weight:600}
+[hidden]{display:none!important}
+h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14px;margin:0 0 12px}
+.kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.kanal,.arama{display:flex;align-items:center;gap:12px;padding:14px}
+.kanal:active,.video:active,.cip:active,.arama:active{opacity:.6}
+.av{width:52px;height:52px;border-radius:50%;flex:none;object-fit:cover;background:var(--zemin2)}
+.av.bos{display:grid;place-items:center;font-weight:700;color:var(--vurgu)}
+.ic{flex:1;min-width:0;display:flex;flex-direction:column}
+.ad{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.buyuk{font-size:15px} .buyuk b{color:var(--vurgu)}
+.kucuk{display:block;color:var(--soluk);font-size:13px}
+.ok{font-size:28px;color:var(--soluk);line-height:1}
+.rzs{padding:0 14px;display:flex;flex-wrap:wrap;gap:6px} .rzs:empty{display:none}
+.rz{font-size:12px;font-weight:600;background:var(--zemin2);border-radius:999px;padding:3px 10px}
+.rz.hiz{color:var(--vurgu)} .rz.yeni{color:var(--iyi)}
+.video{display:flex;gap:10px;align-items:center;padding:12px 14px;border-top:1px solid var(--cizgi);margin-top:12px}
+.video img{width:96px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;flex:none;background:var(--zemin2)}
+.vb{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500}
+.aramalar .arama{border-top:1px solid var(--cizgi)} .aramalar .arama:first-child{border-top:0}
+.nis{padding:14px} .nis-ad{font-size:18px;font-weight:700;color:var(--vurgu)}
+.cipler{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.cip{background:var(--zemin2);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:500}
+.cip::after{content:" ›";color:var(--soluk)} .cip.duz::after{content:none}
+.nis-ust{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.durum{font-size:12px;font-weight:700;background:var(--zemin2);border-radius:999px;padding:4px 10px;color:var(--soluk)}
+.durum.sicak{color:var(--vurgu)} .durum.yeni{color:var(--iyi)}
+.bilgi{margin:10px 0 0;font-size:14px} .bilgi dt{color:var(--soluk);font-size:12px;margin-top:8px}
+.bilgi dd{margin:0} .bilgi a{text-decoration:underline;text-underline-offset:2px}
+.fr{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:var(--zemin2);white-space:nowrap}
+.fr.bos{color:var(--iyi)} .fr.orta{color:var(--uyari)} .fr.doymus{color:var(--vurgu)} .fr.dusuk{color:var(--soluk)}
+.nis.ana{border-width:2px} .aciklama{margin:8px 0 0;font-size:14px;color:var(--yazi)}
+.ara{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;color:var(--vurgu)}
+.bos-not{color:var(--soluk)}
+.patlama{font-size:15px;margin-top:2px} .patlama b{color:var(--vurgu)}
+.konusu{font-size:14px;margin-top:4px} .konusu b{color:var(--yazi)}
+.eylem{display:flex;gap:8px;margin:12px 14px 14px}
+.gir,.incele{flex:1;display:block;text-align:center;padding:11px;border-radius:12px;font-weight:700}
+.gir{background:var(--vurgu);color:#fff} .incele{background:var(--zemin2);color:var(--yazi)}
+.incele.hazir{color:var(--iyi)} .gir:active,.incele:active{opacity:.7}
+.fav-oge .incele{display:inline-block;flex:none;padding:6px 12px;margin:0 0 12px 14px;font-size:14px}
+.istat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px 14px}
+.istat div{background:var(--zemin2);border-radius:10px;padding:8px 6px;text-align:center}
+.istat b{display:block;font-size:17px} .istat span{font-size:12px;color:var(--soluk)}
+.bolum{padding:14px} .bolum h3{margin:0 0 8px;font-size:16px}
+.satirlar{margin:0;padding:0;list-style:none;font-size:14px} .satirlar li{margin:6px 0}
+.cubuk-satir{display:flex;align-items:center;gap:8px;font-size:13px;margin:6px 0}
+.cubuk-satir .ad{flex:1;font-size:13px;font-weight:500} .cubuk-dis{width:90px;flex:none;height:8px;background:var(--zemin2);border-radius:4px}
+.cubuk{height:8px;background:var(--vurgu);border-radius:4px} .cubuk-satir .sayi{width:46px;flex:none;text-align:right;color:var(--soluk)}
+.av.buyuk-av{width:72px;height:72px}
+article.kart{position:relative} .kanal{padding-right:44px}
+.yildiz{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;font-size:26px;line-height:1;color:var(--soluk);cursor:pointer;z-index:1}
+.yildiz.on{color:#f5b301} .yildiz:active{transform:scale(.85)}
+.fav-oge{position:relative;border-top:1px solid var(--cizgi)} .fav-oge:first-child{border-top:0}
+.fav-oge .arama{padding-right:56px} .fav-oge .yildiz{top:50%;margin-top:-22px}
+.btn.ikon{padding:10px 12px} header .btn{flex:none}
+.ceviri{color:var(--soluk);font-weight:400}
+.rz.kz.yuksek{color:var(--iyi)} .rz.kz.orta{color:var(--uyari)} .rz.kz.dusuk,.rz.kz.cok_dusuk{color:var(--soluk)}
+.oneri{margin:12px 14px 0;padding:10px 12px;border-radius:12px;background:var(--zemin2);font-size:14px}
+.oneri ul{margin:6px 0 0;padding-left:0;list-style:none} .oneri li{margin-top:6px}
+footer{color:var(--soluk);font-size:12px;margin-top:28px}
+</style></head><body data-kok="../" data-uret="2026-10-12T11:57:32+00:00" data-genel="0"
+data-tara="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"><main>
+<a class="geri" href="../index.html">← Ana sayfa</a><header><h1>🔍 Veritasium</h1>
+<a class="btn ana" href="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml" target="_blank" rel="noopener" id="tara">Tara</a>
+<a class="btn ikinci ikon" href="../index.html#begendiklerim" id="fav-sayi" aria-label="Beğendiklerim">⭐</a>
+<button class="btn ikinci ikon" onclick="location.reload()" aria-label="Yenile">↻</button></header>
+<p class="meta">Kanal incelemesi: 12.10.2026 14:57 · son 200 video incelendi</p>
+<p class="uyari" id="uyari" hidden></p>
+<p class="ipucu" id="ipucu" hidden>GitHub'da <b>Run workflow</b>'a bas. Konu aramak için <b>Konu</b> kutusuna yaz
+(ör. <i>tarih, borsa</i>); bir kanalı incelemek için <b>Kanal</b> kutusuna linkini yapıştır; ikisi de boşsa genel
+tarama yapar. Yeşil <b>Run workflow</b>'a bas, 2 dakika sonra ↻ ile yenile.</p>
+<p class="ipucu" id="ipucu-incele" hidden>📋 <b>Kanal linki kopyalandı.</b> Açılan GitHub sayfasında <b>Run workflow</b>'a bas,
+<b>Kanal</b> kutusuna yapıştır, yeşil <b>Run workflow</b>'a bas. 1–2 dakika sonra inceleme <b>Aramalarım</b>'da çıkar.</p>
+<article class="kart"><button class="yildiz" type="button" aria-label="Beğendiklerime ekle" data-id="UCHnyfMqiRRG1u-2MsSQLbXA" data-ad="Veritasium" data-konu="quantum mechanics" data-ozet="198 ayda 539 videoyla 4.7B izlenme" data-ulke="🇺🇸">☆</button><a class="kanal" href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA" target="_blank" rel="noopener"><img class="av buyuk-av" src="https://yt3.ggpht.com/7vCbvtCqtjQ3YLgsJt7Y952MQV1sBvhllSCSxHP8_sVZdcPCBrITfhkN2RdyCuwPnsByq-1GoA=s240-c-k-c0x00ffffff-no-rj" alt="" loading="lazy"><span class="ic"><span class="ad">🇺🇸 Veritasium</span><span class="kucuk">@veritasium · ABD · 16 yıl önce açıldı</span><span class="patlama">🔥 <b>198 ayda 539 videoyla 4.7B izlenme</b></span></span></a><div class="istat"><div><b>21.4M</b><span>abone</span></div><div><b>4.7B</b><span>toplam izlenme</span></div><div><b>539</b><span>video</span></div><div><b>8.6M</b><span>video başına</span></div><div><b>9.5M</b><span>tipik video*</span></div><div><b>%2.5</b><span>etkileşim</span></div></div><div class="eylem"><a class="gir" href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA" target="_blank" rel="noopener">Kanala gir ›</a></div></article><article class="kart"><div class="oneri" style="margin:14px"><b>💡 Öneriler</b><ul><li>🌍 <b>İngilizce yap</b>: İngilizce pazarda yer var ve kazanç en yüksek orada. Ölçüm: 🌍 İngilizce 🟡 Rekabet orta · 🇹🇷 Türkiye 🟡 Rekabet orta.</li><li>🎬 <b>Uzun video</b>: bu konu uzun formatta tutuyor; izlenme başına kazancı Shorts'tan çok daha yüksek.</li><li>📉 <b>Düşüşte</b>: son 10 video önceki 10'dan %37 daha az izleniyor. Konu soğuyor olabilir, girersen farklı bir açı bul.</li><li>🎬 Uzun videoları Shorts'tan <b>1.3 kat</b> daha çok izleniyor: bu konuda uzun video daha iyi çalışıyor.</li><li>🏆 En çok izlenen videolarının ortak teması: <b>physics</b>. İşe yarayan bu.</li><li>🗓️ Ortalama <b>7 günde bir</b> video yüklüyor (son 30 günde 6). Rekabet edeceksen en az bu tempoyu hedefle.</li></ul></div></article><article class="kart bolum"><h3>💰 Tahmini kazanç</h3><ul class="satirlar"><li>Pazar: <b>💰💰💰 Yüksek kazanç</b> · ABD</li><li>Aylık ortalama: <b>$45.2K – $150.6K</b></li><li>Kanal açıldığından beri toplam: <b>$8.9M – $29.8M</b></li><li>İzlenmelerde Shorts payı: %37 (Shorts çok daha az kazandırır).</li></ul><p class="kucuk">Sadece YouTube reklam geliri, kaba tahmin. Sponsorluk ve bağış dahil değil.</p></article><article class="kart bolum"><h3>🎯 Konusu</h3><ul class="satirlar"><li>Ana konu: <b>quantum mechanics</b></li><li>YouTube'un kategorileri: Knowledge</li><li>Dil: İngilizce</li></ul><p class="kucuk">Başlıklarında en sık geçenler:</p><div class="cipler"><span class="cip duz">veritasium</span><span class="cip duz">science</span><span class="cip duz">physics</span><span class="cip duz">engineering</span><span class="cip duz">math</span><span class="cip duz">experiment</span><span class="cip duz">problem</span><span class="cip duz">mechanics</span></div><p class="kucuk">Açıklama: An element of truth - videos about science, education, and anything else we find interesting.</p></article><article class="kart bolum"><h3>🌍 Bu konu başka pazarlarda ne durumda?</h3><p class="kucuk">"quantum mechanics" son 30 günde:</p><ul class="satirlar"><li>🌍 İngilizce: <span class="fr orta">🟡 Rekabet orta</span> Son 30 günün en çok izlenen 25 videosunda yeni ve küçük kanalların izlenme payı: <b>%32</b> · 9 büyük kanal (500K+ abone) · toplam 21.7M izlenme</li><li>🇹🇷 Türkiye: <span class="fr orta">🟡 Rekabet orta</span> Son 30 günün en çok izlenen 25 videosunda yeni ve küçük kanalların izlenme payı: <b>%31</b> · 7 büyük kanal (500K+ abone) · toplam 17.7M izlenme</li></ul></article><article class="kart bolum"><h3>📈 Performans</h3><ul class="satirlar"><li>Ortalama izlenme: <b>11.8M</b> · tipik video (medyan): <b>9.5M</b></li><li>📉 Düşüşte: son 10 video önceki 10'a göre %-37</li></ul><p class="kucuk">Son 10 video (en yeni üstte):</p><a class="cubuk-satir" href="https://www.youtube.com/watch?v=j9p3Sn8ROL4" target="_blank" rel="noopener"><span class="ad">What is edge dislocation?</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:14%"></span></span><span class="sayi">2.5M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=IHkp5Kq72ro" target="_blank" rel="noopener"><span class="ad">How Dangerous Are Non-Stick Pans?</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:8%"></span></span><span class="sayi">1.6M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=ONAuUyml0yI" target="_blank" rel="noopener"><span class="ad">We&#x27;re trying something new...</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:7%"></span></span><span class="sayi">1.3M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=VKlulHwMxgU" target="_blank" rel="noopener"><span class="ad">What happens to these balloons when you open the valve?</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:8%"></span></span><span class="sayi">1.5M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=JsBZOcqZerk" target="_blank" rel="noopener"><span class="ad">The Insane Real Engineering of the Nazi Enigma Machine</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:100%"></span></span><span class="sayi">18.7M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=hPoJWjJ9Ao8" target="_blank" rel="noopener"><span class="ad">Heating A Ball Just By Squeezing It</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:5%"></span></span><span class="sayi">909.3K</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=O3a99HNskNk" target="_blank" rel="noopener"><span class="ad">The Scariest Chart In Engineering</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:8%"></span></span><span class="sayi">1.5M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=oR94cicO7xM" target="_blank" rel="noopener"><span class="ad">The Most Dangerous Escalator In Europe</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:36%"></span></span><span class="sayi">6.8M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=F5_G0AHfYhI" target="_blank" rel="noopener"><span class="ad">A Physics Professor Bet Me $10,000 I&#x27;m Wrong...</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:16%"></span></span><span class="sayi">3M</span></a><a class="cubuk-satir" href="https://www.youtube.com/watch?v=b3KpFdb1pW8" target="_blank" rel="noopener"><span class="ad">We Took $10,000 From @mkbhd&#x27;s Locked iPhone</span><span class="cubuk-dis"><span class="cubuk" style="display:block;width:30%"></span></span><span class="sayi">5.6M</span></a></article><article class="kart bolum"><h3>🎬 Format</h3><ul class="satirlar"><li>Shorts oranı: %44 (87 Shorts, 113 uzun video)</li><li>Uzun videoların ortalama süresi: <b>29 dakika</b></li><li>Daha çok izlenen: <b>uzun videolar</b> (Shorts ort. 9.9M · uzun ort. 13.2M)</li></ul></article><article class="kart bolum"><h3>🗓️ Yükleme düzeni</h3><ul class="satirlar"><li>Ortalama <b>7 günde bir</b> video</li><li>Son 30 günde <b>6</b> video · son yükleme 2 gün önce</li><li>En çok <b>Perşembe ve Çarşamba</b> günleri, saat <b>16:00 civarı</b> (Türkiye saati) yüklüyor</li></ul></article><article class="kart bolum"><h3>✍️ Başlık kalıpları</h3><ul class="satirlar"><li>Ortalama uzunluk: <b>41 karakter</b></li><li>Sayı içeren: %8 · soru soran: %25 · emoji: %0 · BÜYÜK HARF: %6</li></ul></article><article class="kart"><div class="bolum" style="padding-bottom:0"><h3>🏆 En çok izlenen videoları</h3></div><a class="video" href="https://www.youtube.com/watch?v=zQ2ZJuUJeyo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/zQ2ZJuUJeyo/mqdefault.jpg" alt="" loading="lazy"><span><span class="vb">Can you swim in shade balls?</span><span class="kucuk">▶ 64.6M izlenme · 19.08.2025</span></span></a><a class="video" href="https://www.youtube.com/watch?v=QAWnEVa9vmw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QAWnEVa9vmw/mqdefault.jpg" alt="" loading="lazy"><span><span class="vb">I waterproofed myself with aerogel!</span><span class="kucuk">▶ 63.1M izlenme · 01.02.2024</span></span></a><a class="video" href="https://www.youtube.com/watch?v=MiUHjLxm3V0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MiUHjLxm3V0/mqdefault.jpg" alt="" loading="lazy"><span><span class="vb">The Closest Thing We Have to Alien Technology</span><span class="kucuk">▶ 62.7M izlenme · 31.12.2025</span></span></a><a class="video" href="https://www.youtube.com/watch?v=AF8d72mA41M" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/AF8d72mA41M/mqdefault.jpg" alt="" loading="lazy"><span><span class="vb">Why It Was Almost Impossible to Make the Blue LED</span><span class="kucuk">▶ 56.3M izlenme · 08.02.2024</span></span></a><a class="video" href="https://www.youtube.com/watch?v=n8WxkqMRgS4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/n8WxkqMRgS4/mqdefault.jpg" alt="" loading="lazy"><span><span class="vb">Falling ladders - why does this happen?</span><span class="kucuk">▶ 53.1M izlenme · 12.01.2023</span></span></a></article>
+
+<footer>* Tipik video: videoların ortanca (medyan) izlenmesi; birkaç viral video ortalamayı şişirmesin diye. Kazanç rakamları ülke ve Shorts oranına göre kaba tahmindir. 213 kota birimi.</footer>
+</main>
+<script>
+var KOK = document.body.dataset.kok;
+document.getElementById("tara").addEventListener("click", function () { document.getElementById("ipucu").hidden = false; });
+function uyar(metin) { var u = document.getElementById("uyari"); if (u.hidden) { u.textContent = metin; u.hidden = false; } }
+fetch(KOK + "durum.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
+  if (d.uyari) uyar(d.uyari);
+}).catch(function () {});
+// Genel tarama her sabah yenilenir; 30 saatten eskiyse bir şeyler ters gitmiştir.
+var saat = (Date.now() - Date.parse(document.body.dataset.uret)) / 36e5;
+if (document.body.dataset.genel === "1" && saat > 30)
+  uyar("⚠️ Son genel tarama " + Math.floor(saat / 24) + " gün önce yapıldı, yeni tarama gelmedi. "
+       + "GitHub'da Actions sekmesine bak ya da Claude'a söyle.");
+var liste = document.getElementById("aramalar");
+if (liste) fetch("aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
+  l.slice(0, 10).forEach(function (x) {
+    var a = document.createElement("a"); a.className = "arama"; a.href = x.dosya;
+    var ic = document.createElement("span"); ic.className = "ic";
+    var ad = document.createElement("span"); ad.className = "ad"; ad.textContent = (x.tip === "kanal" ? "🔍 " : "📌 ") + x.baslik;
+    var alt = document.createElement("span"); alt.className = "kucuk";
+    alt.textContent = x.tip === "kanal" ? x.tarih + " · kanal incelemesi · " + x.ozet
+      : x.tarih + " · " + x.dil + " · " + x.kanal + " kanal" + (x.bos ? " · 🟢 " + x.bos + " boş alan" : "");
+    var ok = document.createElement("span"); ok.className = "ok"; ok.textContent = "›";
+    ic.append(ad, alt); a.append(ic, ok); liste.append(a);
+  });
+  if (l.length) document.getElementById("aramalar-kutu").hidden = false;
+}).catch(function () {});
+
+// Beğendiklerim: telefonun kendi hafızasında (localStorage) tutulur; her gün yeni tarama gelse de kaybolmaz.
+var FAV = "nis-begendiklerim";
+function favOku() { try { return JSON.parse(localStorage.getItem(FAV)) || []; } catch (e) { return []; } }
+function favYaz(l) { try { localStorage.setItem(FAV, JSON.stringify(l)); } catch (e) {} }
+function el(etiket, sinif, metin) { var x = document.createElement(etiket); if (sinif) x.className = sinif; if (metin) x.textContent = metin; return x; }
+function favCiz() {
+  var l = favOku(), ids = {};
+  l.forEach(function (x) { ids[x.id] = 1; });
+  document.querySelectorAll(".yildiz").forEach(function (b) {
+    var on = !!ids[b.dataset.id];
+    b.textContent = on ? "★" : "☆"; b.classList.toggle("on", on);
+    b.setAttribute("aria-label", on ? "Beğendiklerimden çıkar" : "Beğendiklerime ekle");
+  });
+  var sayac = document.getElementById("fav-sayi");
+  if (sayac) sayac.textContent = l.length ? "⭐ " + l.length : "⭐";
+  var kutu = document.getElementById("fav-kutu"), liste = document.getElementById("fav-liste");
+  if (!kutu) return;
+  liste.textContent = "";
+  l.forEach(function (x) {
+    var oge = el("div", "fav-oge");
+    var a = el("a", "arama"); a.href = "https://www.youtube.com/channel/" + x.id; a.target = "_blank"; a.rel = "noopener";
+    var ic = el("span", "ic");
+    ic.append(el("span", "ad", x.ulke + " " + x.ad), el("span", "kucuk", "Konusu: " + x.konu + " · " + x.ozet),
+              el("span", "kucuk", "Eklendi: " + x.tarih));
+    a.append(ic);
+    var b = el("button", "yildiz on", "★"); b.type = "button"; b.dataset.id = x.id; b.setAttribute("aria-label", "Beğendiklerimden çıkar");
+    var inc = el("a", "incele", "🔍 İncele"); inc.dataset.id = x.id; inc.href = document.body.dataset.tara;
+    inc.target = "_blank"; inc.rel = "noopener";
+    oge.append(a, b, inc); liste.append(oge);
+  });
+  kutu.hidden = !l.length;
+  inceleIsaretle();
+}
+
+// İncele: daha önce incelenen kanallarda düğme doğrudan inceleme sayfasını açar;
+// incelenmemişse kanal linkini panoya kopyalar ve GitHub'daki tarama sayfasını açar.
+var INCELENEN = {};
+function inceleIsaretle() {
+  document.querySelectorAll(".incele").forEach(function (b) {
+    var dosya = INCELENEN[b.dataset.id];
+    if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); }
+  });
+}
+fetch(KOK + "aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
+  l.forEach(function (x) { if (x.tip === "kanal" && x.kanal_id) INCELENEN[x.kanal_id] = x.dosya; });
+  inceleIsaretle();
+}).catch(function () {});
+document.addEventListener("click", function (e) {
+  var inc = e.target.closest(".incele");
+  if (inc && !inc.classList.contains("hazir")) {
+    var link = "https://www.youtube.com/channel/" + inc.dataset.id;
+    try { navigator.clipboard.writeText(link); } catch (h) {}
+    document.getElementById("ipucu-incele").hidden = false;
+    return;  // bağlantı yeni sekmede GitHub'ı açar
+  }
+  var b = e.target.closest(".yildiz");
+  if (!b) return;
+  e.preventDefault();
+  var l = favOku(), i = l.findIndex(function (x) { return x.id === b.dataset.id; });
+  if (i >= 0) l.splice(i, 1);
+  else l.unshift({id: b.dataset.id, ad: b.dataset.ad, konu: b.dataset.konu, ozet: b.dataset.ozet, ulke: b.dataset.ulke,
+                  tarih: new Date().toLocaleDateString("tr-TR")});
+  favYaz(l); favCiz();
+});
+favCiz();
+</script>
+</body></html>
