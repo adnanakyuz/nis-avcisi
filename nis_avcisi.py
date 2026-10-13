@@ -298,7 +298,7 @@ def tara(yt, a):
     kanal_ids = list({v["snippet"]["channelId"] for v in videolar.values()})
     kanallar = {}
     for i in range(0, len(kanal_ids), 50):
-        r = yt.get("channels", 1, part="snippet,statistics", id=",".join(kanal_ids[i:i + 50]))
+        r = yt.get("channels", 1, part="snippet,statistics,topicDetails", id=",".join(kanal_ids[i:i + 50]))
         for c in r.get("items", []):
             kanallar[c["id"]] = c
 
@@ -337,6 +337,7 @@ def tara(yt, a):
             id=vid, baslik=v["snippet"]["title"], kanal=c["snippet"]["title"], kanal_id=c["id"],
             kanal_kapak=c["snippet"].get("thumbnails", {}).get("default", {}).get("url", ""),
             ulke=c["snippet"].get("country", ""),
+            yt_konular=[u.rsplit("/", 1)[-1].replace("_", " ") for u in c.get("topicDetails", {}).get("topicCategories", [])],
             kapak=v["snippet"]["thumbnails"].get("medium", {}).get("url", ""),
             izlenme=izl, abone=abone, video_sayisi=vsay, kanal_izlenme=k_izl,
             video_basi=video_basi, saatlik=izl / saat, kanal_yasi=kanal_yasi,
@@ -748,6 +749,7 @@ def kanallara_grupla(sonuc):
         kanallar.append(dict(
             kanal_id=kid, kanal=ilk["kanal"], kapak=ilk.get("kanal_kapak", ""), ulke=ilk.get("ulke", ""),
             dil=collections.Counter(v.get("dil", "") for v in vids).most_common(1)[0][0],
+            yt_konular=ilk.get("yt_konular", []),
             video_sayisi=ilk["video_sayisi"], kanal_izlenme=ilk["kanal_izlenme"], abone=ilk["abone"],
             video_basi=ilk["video_basi"], kanal_yasi=ilk["kanal_yasi"],
             kategori=collections.Counter(v["kaynak"] for v in vids).most_common(1)[0][0],
@@ -832,10 +834,27 @@ def genis_sirala(kanallar):
 
 
 def kanal_konusu(k, terim_haritasi):
-    """Kanalın konusu: önce trend raporundaki ortak konu, yoksa videolarında en sık geçen ifade."""
+    """Kanalın konusu, en güvenilirden başlayarak:
+    1) trend raporundaki ortak konu, 2) kanalın en az 2 videosunda geçen ifade,
+    3) videolarının etiketleri (kanal sahibinin kendi seçtiği konu), 4) YouTube'un kanal kategorisi,
+    5) tarandığı kategori. Tek başlıktan rastgele iki kelime seçmek "found right" gibi saçma sonuç veriyordu."""
     if k["kanal_id"] in terim_haritasi:
         return terim_haritasi[k["kanal_id"]]
-    return en_sik_ifade(k["basliklar"], en_az=1) or k["kategori"]
+    if len(k["basliklar"]) >= 2:
+        ifade = en_sik_ifade(k["basliklar"], en_az=2)
+        if " " in ifade:
+            return ifade
+    etiketler = collections.Counter()
+    for parcalar in k["basliklar"]:
+        for et in parcalar[1:]:
+            et = re.sub(r"\s+", " ", et.lower()).strip("# ")
+            if 3 <= len(et) <= 40 and not any(w in GENEL for w in et.split()) and kelimeler(et):
+                etiketler[et] += 1
+    if etiketler:
+        return etiketler.most_common(1)[0][0]
+    if k.get("yt_konular"):
+        return k["yt_konular"][0].lower()
+    return k["kategori"]
 
 
 def sure_metni(gun):
@@ -1013,7 +1032,7 @@ function uyar(metin) { var u = document.getElementById("uyari"); if (u.hidden) {
 fetch(KOK + "durum.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
   if (d.uyari) uyar(d.uyari);
 }).catch(function () {});
-// Genel tarama her sabah yenilenir; 30 saatten eskiyse bir şeyler ters gitmiştir.
+// Genel tarama her gün yenilenir; 30 saatten eskiyse bir şeyler ters gitmiştir.
 var saat = (Date.now() - Date.parse(document.body.dataset.uret)) / 36e5;
 if (document.body.dataset.genel === "1" && saat > 30)
   uyar("⚠️ Son genel tarama " + Math.floor(saat / 24) + " gün önce yapıldı, yeni tarama gelmedi. "
@@ -1279,7 +1298,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
 {trend}""",
               footer=f"""Sadece son {a.max_kanal_yasi} günde açılmış kanallar · ≤{kisa(a.max_abone)} abone · ≤{a.max_video} video ·
 ≥{kisa(a.min_izlenme)} izlenme · reklamla şişmiş videolar elendi · {harcanan} kota birimi.
-Otomatik genel tarama her gün 07:17'de.<br>
+Otomatik genel tarama her gün 11:17'de (kota yenilendikten sonra).<br>
 💰 Kazanç etiketleri kanalın ülkesine/diline göre kaba bir tahmindir; gerçek kazanç konuya ve izleyiciye göre değişir.
 Öneriler kurallara dayalı otomatik yorumlardır, son karar senin.""")
 
@@ -1577,7 +1596,7 @@ def main():
     p.add_argument("--max-kanal-yasi", type=int, default=365, help="Bundan eski kanallar elenir (gün)")
     p.add_argument("--max-abone", type=int, default=100_000)
     p.add_argument("--max-video", type=int, default=40, help="Kanalın en fazla video sayısı")
-    p.add_argument("--min-izlenme", type=int, help="Varsayılan: genel taramada 100K, konulu taramada 20K")
+    p.add_argument("--min-izlenme", type=int, help="Varsayılan: genel taramada 50K, konulu taramada 20K")
     p.add_argument("--site", default=os.path.join(klasor, "site"), help="Sayfaların yazılacağı klasör")
     p.add_argument("--db", default=os.path.join(klasor, "nis_gecmis.db"))
     a = p.parse_args()
@@ -1585,7 +1604,7 @@ def main():
     a.konular = list(dict.fromkeys(k.strip() for k in a.konu.split(",") if k.strip()))[:5]
     if a.min_izlenme is None:
         # Konulu aramada daha erken aşamadaki kanallar da yakalansın.
-        a.min_izlenme = 20_000 if a.konular else 100_000
+        a.min_izlenme = 20_000 if a.konular else 50_000
     try:
         calistir(a)
     except ApiHatasi as h:
