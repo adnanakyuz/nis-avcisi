@@ -756,9 +756,66 @@ def kanallara_grupla(sonuc):
             en_iyi=max(vids, key=lambda v: v["izlenme"]),
             yeni=all(v.get("yeni") for v in vids),
             hizli=any(v.get("hizlanma") and v["hizlanma"] > v["saatlik"] * 1.2 for v in vids),
+            hizlanma=max((v.get("hizlanma") or 0) for v in vids),
             kisa=sum(0 < v["sure"] <= 180 for v in vids) / len(vids) > .6,
         ))
     return sorted(kanallar, key=lambda k: -k["puan"])
+
+
+def one_cikanlar(kanallar, nisler):
+    """Ana sayfanın en üstündeki "Bugün öne çıkanlar" kartları (kota harcamaz).
+    Her kart farklı bir kanal gösterir; uygun aday yoksa o kart hiç çıkmaz."""
+    kullanilan, kartlar = set(), []
+
+    def sec(adaylar, anahtar):
+        for k in sorted(adaylar, key=anahtar):
+            if k["kanal_id"] not in kullanilan:
+                kullanilan.add(k["kanal_id"])
+                return k
+
+    def kazanc(k):
+        return kazanc_seviyesi(k["ulke"], k["dil"])
+
+    def yer(k):
+        return ULKE_AD.get(k["ulke"]) or k["ulke"] or "yabancı"
+
+    k = sec([k for k in kanallar if k["video_sayisi"] <= 10] or kanallar, lambda k: -k["video_basi"])
+    if k:
+        kartlar.append(dict(tip="kanal", ikon="⭐", baslik="Günün yıldızı", k=k,
+                            neden=f'Sadece <b>{k["video_sayisi"]} videoyla {kisa(k["kanal_izlenme"])}</b> izlenme · '
+                                  f'video başına {kisa(k["video_basi"])}'))
+    # Konu: önce 🟢 boş alanlar, sonra en çok kanalın aynı anda tutturduğu.
+    if nisler:
+        n = min(nisler, key=lambda n: (FIRSAT_SIRA[n["firsat"]["seviye"]] if n.get("firsat") else 1.5, -n["kanal_sayisi"]))
+        f = n.get("firsat")
+        kartlar.append(dict(tip="konu", ikon="🎯", baslik="Günün konusu", n=n,
+                            neden=f'<b>{n["kanal_sayisi"]} yeni kanal</b> aynı anda tutturdu · toplam {kisa(n["toplam"])} izlenme'
+                                  + (f' · {FIRSAT_ETIKET[f["seviye"]][1]}' if f else "")))
+    k = sec([k for k in kanallar if k["hizlanma"] > 0], lambda k: -k["hizlanma"])
+    if k:
+        kartlar.append(dict(tip="kanal", ikon="🚀", baslik="En hızlı yükselen", k=k,
+                            neden=f'Son taramadan beri <b>saatte {kisa(k["hizlanma"])}</b> izlenme alıyor'))
+    k = sec([k for k in kanallar if k["kanal_izlenme"] >= 1_000_000] or
+            [k for k in kanallar if k["kanal_izlenme"] >= 300_000], lambda k: k["kanal_yasi"])
+    if k:
+        kartlar.append(dict(tip="kanal", ikon="🌱", baslik="En taze patlama", k=k,
+                            neden=f'<b>{k["kanal_yasi"]} günlük</b> kanal, şimdiden {kisa(k["kanal_izlenme"])} izlenme'))
+    k = sec([k for k in kanallar if kazanc(k) == "yuksek"], lambda k: -k["puan"])
+    if k:
+        kartlar.append(dict(tip="kanal", ikon="💰", baslik="Para kokan fırsat", k=k,
+                            neden=f'Yüksek kazançlı <b>{html.escape(yer(k))}</b> pazarında {k["video_sayisi"]} videoyla '
+                                  f'{kisa(k["kanal_izlenme"])} izlenme'))
+    k = sec([k for k in kanallar if k["ulke"] == "TR" or (k["dil"] or "").startswith("tr")], lambda k: -k["puan"])
+    if k:
+        kartlar.append(dict(tip="kanal", ikon="🇹🇷", baslik="Türkiye'nin yıldızı", k=k,
+                            neden=f'{k["video_sayisi"]} videoyla <b>{kisa(k["kanal_izlenme"])}</b> izlenme'))
+    k = sec([k for k in kanallar if kazanc(k) in ("dusuk", "cok_dusuk") and k["ulke"] != "TR"],
+            lambda k: -k["video_basi"])
+    if k:
+        kartlar.append(dict(tip="kanal", ikon="🔁", baslik="Taşınacak fikir", k=k,
+                            neden=f'<b>{html.escape(yer(k))}</b> pazarında patladı ama orada kazanç düşük: '
+                                  f'İngilizce ya da Türkçeye taşı'))
+    return kartlar
 
 
 def genis_sirala(kanallar):
@@ -928,6 +985,13 @@ h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14
 .cubuk-satir .ad{flex:1;font-size:13px;font-weight:500} .cubuk-dis{width:90px;flex:none;height:8px;background:var(--zemin2);border-radius:4px}
 .cubuk{height:8px;background:var(--vurgu);border-radius:4px} .cubuk-satir .sayi{width:46px;flex:none;text-align:right;color:var(--soluk)}
 .av.buyuk-av{width:72px;height:72px}
+.one-cikanlar{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch} .one-cikanlar::-webkit-scrollbar{display:none}
+.kart.one{flex:0 0 84%;max-width:340px;scroll-snap-align:start;margin-bottom:0;display:flex;flex-direction:column}
+.kart.one .eylem{margin-top:auto}
+.one-etiket{padding:12px 56px 0 14px;font-weight:800;font-size:15px;color:var(--vurgu)}
+.kart.one .nis-ad{padding:8px 14px 0} .kart.one .cipler{padding:0 14px 14px}
+.one-neden{margin:4px 14px 0;font-size:14px} .kart.one .kanal{padding-bottom:4px}
 article.kart{position:relative} .kanal{padding-right:44px}
 .yildiz{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;font-size:26px;line-height:1;color:var(--soluk);cursor:pointer;z-index:1}
 .yildiz.on{color:#f5b301} .yildiz:active{transform:scale(.85)}
@@ -1160,12 +1224,41 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         aramalar = ""
     else:
         baslik = "🎯 Niş Avcısı"
+        tum_kanallar = kanallara_grupla(sonuc)
         govde = ('<h2>🔥 Patlayan kanallar</h2><p class="alt-baslik">Dünya genelinde ve Türkiye\'de son 1 yılda açılıp '
                  'az videoyla patlayan kanallar. Her alandan karışık: konusuna bak, beğendiğine gir.</p>'
-                 + ("".join(kanal_kart(k) for k in genis_sirala(kanallara_grupla(sonuc))[:40]) or
+                 + ("".join(kanal_kart(k) for k in genis_sirala(tum_kanallar)[:40]) or
                     '<p class="bos-not">Bu taramada uygun kanal çıkmadı. Bir sonraki taramayı bekle.</p>'))
         ust = ""
-        aramalar = ('<div id="fav-kutu" hidden><h2 id="begendiklerim">⭐ Beğendiklerim</h2>'
+
+        def one_kart(c):
+            ust_satir = f'<div class="one-etiket">{c["ikon"]} {c["baslik"]}</div>'
+            if c["tip"] == "konu":
+                n = c["n"]
+                cipler = "".join(f'<a class="cip" href="{kanal_link(v["kanal_id"])}" target="_blank" rel="noopener">'
+                                 f'{e(v["kanal"])}</a>' for v in n["kanallar"][:4])
+                return (f'<article class="kart one">{ust_satir}<div class="nis-ad">{cevirili(n["terim"])}</div>'
+                        f'<p class="one-neden">{c["neden"]}</p><div class="cipler">{cipler}</div></article>')
+            k = c["k"]
+            konusu = kanal_konusu(k, terim_haritasi)
+            ozet = f'{sure_metni(k["kanal_yasi"])} {k["video_sayisi"]} videoyla {kisa(k["kanal_izlenme"])} izlenme'
+            av = (f'<img class="av" src="{e(k["kapak"])}" alt="" loading="lazy">' if k["kapak"]
+                  else f'<span class="av bos">{e(k["kanal"][:1].upper())}</span>')
+            return (f'<article class="kart one">'
+                    f'<button class="yildiz" type="button" aria-label="Beğendiklerime ekle" data-id="{e(k["kanal_id"])}" '
+                    f'data-ad="{e(k["kanal"])}" data-konu="{e(konusu)}" data-ozet="{e(ozet)}" '
+                    f'data-ulke="{bayrak(k["ulke"])}">☆</button>{ust_satir}'
+                    f'<a class="kanal" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">{av}'
+                    f'<span class="ic"><span class="ad">{bayrak(k["ulke"])} {e(k["kanal"])}</span>'
+                    f'<span class="kucuk">Konusu: <b>{cevirili(konusu)}</b></span></span></a>'
+                    f'<p class="one-neden">{c["neden"]}</p>'
+                    f'<div class="eylem"><a class="gir" href="{kanal_link(k["kanal_id"])}" target="_blank" '
+                    f'rel="noopener">Kanala gir ›</a>{incele_dugmesi(k["kanal_id"])}</div></article>')
+
+        kartlar = one_cikanlar(tum_kanallar, nisler)
+        one = ('<h2>✨ Bugün öne çıkanlar</h2><p class="alt-baslik">Taramanın en dikkat çekenleri. Yana kaydır.</p>'
+               '<div class="one-cikanlar">' + "".join(one_kart(c) for c in kartlar) + '</div>') if kartlar else ""
+        aramalar = (one + '<div id="fav-kutu" hidden><h2 id="begendiklerim">⭐ Beğendiklerim</h2>'
                     '<p class="alt-baslik">Yıldızladığın kanallar. Dokun, kanala gir; yıldıza basarsan listeden çıkar.</p>'
                     '<div class="kart" id="fav-liste"></div></div>'
                     '<div id="aramalar-kutu" hidden><h2>Aramalarım</h2>'
