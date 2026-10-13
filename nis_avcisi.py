@@ -1100,7 +1100,9 @@ def kanal_onerileri(k, kazanc, pazar, trend_f):
 
 CSS = """
 :root{--bg:#f6f5f2;--kart:#fff;--yazi:#1c1b19;--soluk:#6d6a63;--cizgi:#e4e1da;--vurgu:#d4361c;--iyi:#1f7a4d;--uyari:#9a6700;--zemin2:#f0eee9}
-@media (prefers-color-scheme:dark){:root{--bg:#141413;--kart:#1e1d1b;--yazi:#efede8;--soluk:#a19d94;--cizgi:#33312d;--vurgu:#ff6a4d;--iyi:#4cc38a;--uyari:#e3b341;--zemin2:#272522}}
+/* Görünüm: varsayılan telefonun ayarı (otomatik); Profil'den Açık/Koyu seçilirse html[data-tema] onu zorlar. */
+@media (prefers-color-scheme:dark){:root:not([data-tema=acik]){--bg:#141413;--kart:#1e1d1b;--yazi:#efede8;--soluk:#a19d94;--cizgi:#33312d;--vurgu:#ff6a4d;--iyi:#4cc38a;--uyari:#e3b341;--zemin2:#272522}}
+:root[data-tema=koyu]{--bg:#141413;--kart:#1e1d1b;--yazi:#efede8;--soluk:#a19d94;--cizgi:#33312d;--vurgu:#ff6a4d;--iyi:#4cc38a;--uyari:#e3b341;--zemin2:#272522}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
 a{color:inherit;text-decoration:none}
@@ -1420,6 +1422,16 @@ if (form) {
       document.querySelectorAll(".avatar-sec").forEach(function (x) { x.classList.toggle("secili", x === b); });
     });
   });
+  // Görünüm seçimi anında uygulanır ve kaydedilir (Kaydet'e basmaya gerek yok).
+  var tema = oku("nis-tema", "oto");
+  document.querySelectorAll(".tema-sec").forEach(function (b) {
+    b.classList.toggle("secili", b.dataset.tema === tema);
+    b.addEventListener("click", function () {
+      tema = b.dataset.tema; yaz("nis-tema", tema);
+      if (tema === "oto") delete document.documentElement.dataset.tema; else document.documentElement.dataset.tema = tema;
+      document.querySelectorAll(".tema-sec").forEach(function (x) { x.classList.toggle("secili", x === b); });
+    });
+  });
   document.querySelectorAll(".ilgi-sec").forEach(function (b) {
     b.classList.toggle("secili", PROFIL.ilgi.indexOf(b.dataset.kat) >= 0);
     b.addEventListener("click", function () { b.classList.toggle("secili"); });
@@ -1435,7 +1447,7 @@ if (form) {
   });
   document.getElementById("p-sil").addEventListener("click", function () {
     if (!confirm("Profilin, beğendiklerin ve ayarların bu cihazdan silinsin mi?")) return;
-    ["nis-profil", "nis-sahip", "nis-begendiklerim", "nis-son-ziyaret", "nis-tanitim"].forEach(function (k) {
+    ["nis-profil", "nis-sahip", "nis-begendiklerim", "nis-son-ziyaret", "nis-tanitim", "nis-tema"].forEach(function (k) {
       try { localStorage.removeItem(k); } catch (h) {}
     });
     bildir("Silindi"); setTimeout(function () { location.reload(); }, 800);
@@ -1732,6 +1744,7 @@ def sayfa_yaz(yol, *, kok, baslik, meta, govde, footer, ust="", genel=False):
 <meta name="theme-color" content="#d4361c"><link rel="manifest" href="{kok}manifest.json">
 <link rel="icon" href="{kok}icon-192.png"><link rel="apple-touch-icon" href="{kok}icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Niş Avcısı">
+<script>try{{var t=JSON.parse(localStorage.getItem("nis-tema"));if(t==="acik"||t==="koyu")document.documentElement.dataset.tema=t}}catch(e){{}}</script>
 <style>{CSS}</style></head><body data-kok="{kok}" data-uret="{uret}" data-genel="{1 if genel else 0}"
 data-tara="{TARA_LINKI}"><main>
 {ust}<header><h1>{baslik}</h1>
@@ -1782,6 +1795,10 @@ def yardimci_sayfalar(site):
 <div class="filtreler sarili">{kategoriler}</div>
 <label>Kendi kelimelerin <span class="kucuk">(virgülle ayır)</span>
 <input id="p-kelime" placeholder="Örn. yapay zeka, kripto, minecraft"></label>
+<p class="etiket">🎨 Görünüm</p>
+<div class="filtreler sarili"><button type="button" class="filtre tema-sec" data-tema="oto">📱 Otomatik (telefona göre)</button>
+<button type="button" class="filtre tema-sec" data-tema="acik">☀️ Açık</button>
+<button type="button" class="filtre tema-sec" data-tema="koyu">🌙 Koyu</button></div>
 <p class="etiket">⚙️ Ayarlar</p>
 <label class="anahtar"><input type="checkbox" id="p-sahip"> Tarama ve İncele düğmelerini göster
 <span class="kucuk">(sadece uygulamanın sahibi için; diğer kullanıcılar tarama yapamaz)</span></label>
