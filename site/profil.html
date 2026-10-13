@@ -1,0 +1,405 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Niş Avcısı</title>
+<meta name="theme-color" content="#d4361c"><link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Niş Avcısı">
+<script>try{var t=JSON.parse(localStorage.getItem("nis-tema"));if(t==="acik"||t==="koyu")document.documentElement.dataset.tema=t}catch(e){}</script>
+<style>
+:root{--bg:#f6f5f2;--kart:#fff;--yazi:#1c1b19;--soluk:#6d6a63;--cizgi:#e4e1da;--vurgu:#d4361c;--iyi:#1f7a4d;--uyari:#9a6700;--zemin2:#f0eee9}
+/* Görünüm: varsayılan telefonun ayarı (otomatik); Profil'den Açık/Koyu seçilirse html[data-tema] onu zorlar. */
+@media (prefers-color-scheme:dark){:root:not([data-tema=acik]){--bg:#141413;--kart:#1e1d1b;--yazi:#efede8;--soluk:#a19d94;--cizgi:#33312d;--vurgu:#ff6a4d;--iyi:#4cc38a;--uyari:#e3b341;--zemin2:#272522}}
+:root[data-tema=koyu]{--bg:#141413;--kart:#1e1d1b;--yazi:#efede8;--soluk:#a19d94;--cizgi:#33312d;--vurgu:#ff6a4d;--iyi:#4cc38a;--uyari:#e3b341;--zemin2:#272522}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+main{max-width:720px;margin:auto;padding:max(16px,env(safe-area-inset-top)) 16px 40px}
+header{display:flex;align-items:center;gap:8px}
+h1{font-size:22px;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:10px 16px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn.ana{background:var(--vurgu);color:#fff} .btn.ikinci{background:var(--zemin2);color:var(--yazi)}
+.meta{color:var(--soluk);font-size:13px;margin:6px 0 0}
+.geri{display:inline-block;color:var(--soluk);font-size:15px;font-weight:600;padding:4px 0 10px}
+.ipucu,.uyari{border-radius:12px;padding:10px 14px;font-size:14px;margin:14px 0 0}
+.ipucu{background:var(--zemin2);color:var(--soluk)} .uyari{border:1px solid var(--uyari);color:var(--uyari);font-weight:600}
+[hidden]{display:none!important}
+h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14px;margin:0 0 12px}
+.kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.kanal,.arama{display:flex;align-items:center;gap:12px;padding:14px}
+.kanal:active,.video:active,.cip:active,.arama:active{opacity:.6}
+.av{width:52px;height:52px;border-radius:50%;flex:none;object-fit:cover;background:var(--zemin2)}
+.av.bos{display:grid;place-items:center;font-weight:700;color:var(--vurgu)}
+.ic{flex:1;min-width:0;display:flex;flex-direction:column}
+.ad{font-weight:700;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.buyuk{font-size:15px} .buyuk b{color:var(--vurgu)}
+.kucuk{display:block;color:var(--soluk);font-size:13px}
+.ok{font-size:28px;color:var(--soluk);line-height:1}
+.rzs{padding:0 14px;display:flex;flex-wrap:wrap;gap:6px} .rzs:empty{display:none}
+.rz{font-size:12px;font-weight:600;background:var(--zemin2);border-radius:999px;padding:3px 10px}
+.rz.hiz{color:var(--vurgu)} .rz.yeni{color:var(--iyi)}
+.video{display:flex;gap:10px;align-items:center;padding:12px 14px;border-top:1px solid var(--cizgi);margin-top:12px}
+.video img{width:96px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;flex:none;background:var(--zemin2)}
+.vb{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500}
+.aramalar .arama{border-top:1px solid var(--cizgi)} .aramalar .arama:first-child{border-top:0}
+.nis{padding:14px} .nis-ad{font-size:18px;font-weight:700;color:var(--vurgu)}
+.cipler{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.cip{background:var(--zemin2);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:500}
+.cip::after{content:" ›";color:var(--soluk)} .cip.duz::after{content:none}
+.nis-ust{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.durum{font-size:12px;font-weight:700;background:var(--zemin2);border-radius:999px;padding:4px 10px;color:var(--soluk)}
+.durum.sicak{color:var(--vurgu)} .durum.yeni{color:var(--iyi)}
+.bilgi{margin:10px 0 0;font-size:14px} .bilgi dt{color:var(--soluk);font-size:12px;margin-top:8px}
+.bilgi dd{margin:0} .bilgi a{text-decoration:underline;text-underline-offset:2px}
+.fr{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:var(--zemin2);white-space:nowrap}
+.fr.bos{color:var(--iyi)} .fr.orta{color:var(--uyari)} .fr.doymus{color:var(--vurgu)} .fr.dusuk{color:var(--soluk)}
+.nis.ana{border-width:2px} .aciklama{margin:8px 0 0;font-size:14px;color:var(--yazi)}
+.ara{display:inline-block;margin-top:12px;font-size:14px;font-weight:600;color:var(--vurgu)}
+.bos-not{color:var(--soluk)}
+.patlama{font-size:15px;margin-top:2px} .patlama b{color:var(--vurgu)}
+.konusu{font-size:14px;margin-top:4px} .konusu b{color:var(--yazi)}
+.eylem{display:flex;gap:8px;margin:12px 14px 14px}
+.gir,.incele{flex:1;display:block;text-align:center;padding:11px;border-radius:12px;font-weight:700}
+.gir{background:var(--vurgu);color:#fff} .incele{background:var(--zemin2);color:var(--yazi)}
+.incele.hazir{color:var(--iyi)} .gir:active,.incele:active{opacity:.7}
+.fav-oge .incele{display:inline-block;flex:none;padding:6px 12px;margin:0 0 12px 14px;font-size:14px}
+.istat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px 14px}
+.istat div{background:var(--zemin2);border-radius:10px;padding:8px 6px;text-align:center}
+.istat b{display:block;font-size:17px} .istat span{font-size:12px;color:var(--soluk)}
+.bolum{padding:14px} .bolum h3{margin:0 0 8px;font-size:16px}
+.satirlar{margin:0;padding:0;list-style:none;font-size:14px} .satirlar li{margin:6px 0}
+.cubuk-satir{display:flex;align-items:center;gap:8px;font-size:13px;margin:6px 0}
+.cubuk-satir .ad{flex:1;font-size:13px;font-weight:500} .cubuk-dis{width:90px;flex:none;height:8px;background:var(--zemin2);border-radius:4px}
+.cubuk{height:8px;background:var(--vurgu);border-radius:4px} .cubuk-satir .sayi{width:46px;flex:none;text-align:right;color:var(--soluk)}
+.av.buyuk-av{width:72px;height:72px}
+.one-cikanlar{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch} .one-cikanlar::-webkit-scrollbar{display:none}
+.kart.one{flex:0 0 84%;max-width:340px;scroll-snap-align:start;margin-bottom:0;display:flex;flex-direction:column}
+.kart.one .eylem{margin-top:auto}
+.one-etiket{padding:12px 56px 0 14px;font-weight:800;font-size:15px;color:var(--vurgu)}
+.kart.one .nis-ad{padding:8px 14px 0} .kart.one .cipler{padding:0 14px 14px}
+.one-neden{margin:4px 14px 0;font-size:14px} .kart.one .kanal{padding-bottom:4px}
+/* sahip modu: Tara / İncele sadece uygulama sahibine */
+.sahip{display:none!important} body.sahip-modu .sahip{display:inline-flex!important}
+body.sahip-modu .incele.sahip,.incele.hazir{display:block!important}
+main{padding-bottom:90px}
+.alt-menu{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--kart);border-top:1px solid var(--cizgi);
+  padding:4px 4px max(4px,env(safe-area-inset-bottom));z-index:10}
+.alt-menu a{flex:1;display:flex;flex-direction:column;align-items:center;font-size:11px;color:var(--soluk);padding:4px 0;gap:1px}
+.alt-menu a span{font-size:20px;line-height:1.2} .alt-menu a.aktif{color:var(--vurgu);font-weight:700}
+section{scroll-margin-top:12px}
+.filtreler{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 10px;padding:0 16px;scrollbar-width:none}
+.filtreler::-webkit-scrollbar{display:none} .filtreler.sarili{flex-wrap:wrap;overflow:visible;margin:0 0 10px;padding:0}
+.filtre{flex:none;border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);border-radius:999px;padding:7px 13px;
+  font:inherit;font-size:14px;cursor:pointer} .filtre.secili{background:var(--vurgu);border-color:var(--vurgu);color:#fff}
+.ara-kutu{width:100%;padding:11px 14px;border:1px solid var(--cizgi);border-radius:12px;background:var(--kart);color:var(--yazi);
+  font:inherit;margin-bottom:12px}
+.kanal-kart[hidden]{display:none}
+.paylas{flex:none;width:46px;border:0;border-radius:12px;background:var(--zemin2);color:var(--yazi);font-size:18px;cursor:pointer}
+details.oneri,details.fikir{margin:12px 14px 0;padding:10px 12px;border-radius:12px;background:var(--zemin2);font-size:14px}
+details.fikir{margin:12px 0 0} details summary{cursor:pointer;font-weight:700;list-style-position:inside}
+details.fikir ul{margin:6px 0 0;padding-left:18px} details.fikir li{margin:5px 0} details.fikir a{text-decoration:underline}
+.galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.galeri a{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--zemin2)}
+.galeri img{width:100%;height:100%;object-fit:cover}
+.galeri span{position:absolute;left:4px;bottom:4px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;padding:1px 5px;border-radius:4px}
+.video.sd{margin-top:0} .kat{color:var(--vurgu)} .artis{color:var(--iyi);font-weight:600}
+.selam{font-size:18px;font-weight:700;margin:18px 0 0}
+.karsilama{padding:14px;margin-top:14px;border-width:2px} .karsilama ul{padding-left:0;list-style:none} .karsilama li{margin:8px 0}
+.rz.yeni-ziyaret{background:var(--iyi);color:#fff} .rz.ilgi{color:var(--vurgu)}
+.profil-link{display:flex;justify-content:space-between;align-items:center;padding:16px;font-weight:600;margin-top:20px}
+.profil label{display:block;font-weight:600;margin:10px 0}
+.profil input:not([type=checkbox]){display:block;width:100%;margin-top:6px;padding:11px 12px;border:1px solid var(--cizgi);
+  border-radius:10px;background:var(--bg);color:var(--yazi);font:inherit}
+.profil .etiket{font-weight:600;margin:16px 0 8px} .profil .anahtar{font-weight:400}
+.avatarlar{display:flex;flex-wrap:wrap;gap:8px}
+.avatar-sec{width:46px;height:46px;font-size:24px;border-radius:50%;border:2px solid var(--cizgi);background:var(--zemin2);cursor:pointer}
+.avatar-sec.secili{border-color:var(--vurgu)} .profil .eylem{margin:18px 0 0}
+.metin p{font-size:15px} .metin a{text-decoration:underline}
+footer a{text-decoration:underline}
+.bildirim{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--yazi);color:var(--bg);
+  padding:10px 16px;border-radius:999px;font-size:14px;z-index:20;max-width:90%}
+article.kart{position:relative} .kanal{padding-right:44px}
+.yildiz{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;font-size:26px;line-height:1;color:var(--soluk);cursor:pointer;z-index:1}
+.yildiz.on{color:#f5b301} .yildiz:active{transform:scale(.85)}
+.fav-oge{position:relative;border-top:1px solid var(--cizgi)} .fav-oge:first-child{border-top:0}
+.fav-oge .arama{padding-right:56px} .fav-oge .yildiz{top:50%;margin-top:-22px}
+.btn.ikon{padding:10px 12px} header .btn{flex:none}
+.ceviri{color:var(--soluk);font-weight:400}
+.rz.kz.yuksek{color:var(--iyi)} .rz.kz.orta{color:var(--uyari)} .rz.kz.dusuk,.rz.kz.cok_dusuk{color:var(--soluk)}
+.oneri{margin:12px 14px 0;padding:10px 12px;border-radius:12px;background:var(--zemin2);font-size:14px}
+.oneri ul{margin:6px 0 0;padding-left:0;list-style:none} .oneri li{margin-top:6px}
+footer{color:var(--soluk);font-size:12px;margin-top:28px}
+</style></head><body data-kok="" data-uret="2026-10-13T08:37:14+00:00" data-genel="0"
+data-tara="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"><main>
+<a class="geri" href="index.html">← Ana sayfa</a><header><h1>👤 Profilim</h1>
+<a class="btn ana sahip" href="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml" target="_blank" rel="noopener" id="tara">Tara</a>
+<a class="btn ikinci ikon" href="index.html#begendiklerim" id="fav-sayi" aria-label="Beğendiklerim">⭐</a>
+<a class="btn ikinci ikon" href="profil.html" id="profil-dugme" aria-label="Profil">👤</a>
+<button class="btn ikinci ikon" onclick="location.reload()" aria-label="Yenile">↻</button></header>
+<p class="meta">Profilin sadece bu telefonda saklanır.</p>
+<p class="uyari" id="uyari" hidden></p>
+<p class="ipucu" id="ipucu" hidden>GitHub'da <b>Run workflow</b>'a bas. Konu aramak için <b>Konu</b> kutusuna yaz
+(ör. <i>tarih, borsa</i>); bir kanalı incelemek için <b>Kanal</b> kutusuna linkini yapıştır; ikisi de boşsa genel
+tarama yapar. Yeşil <b>Run workflow</b>'a bas, 2 dakika sonra ↻ ile yenile.</p>
+<p class="ipucu" id="ipucu-incele" hidden>📋 <b>Kanal linki kopyalandı.</b> Açılan GitHub sayfasında <b>Run workflow</b>'a bas,
+<b>Kanal</b> kutusuna yapıştır, yeşil <b>Run workflow</b>'a bas. 1–2 dakika sonra inceleme <b>Aramalarım</b>'da çıkar.</p>
+<section class="kart bolum profil" id="profil-form">
+<label>Adın<input id="p-ad" maxlength="30" placeholder="Örn. Adnan" autocomplete="nickname"></label>
+<p class="etiket">Avatarın</p><div class="avatarlar"><button type="button" class="avatar-sec" data-a="😎">😎</button><button type="button" class="avatar-sec" data-a="🦊">🦊</button><button type="button" class="avatar-sec" data-a="🐯">🐯</button><button type="button" class="avatar-sec" data-a="🚀">🚀</button><button type="button" class="avatar-sec" data-a="🎬">🎬</button><button type="button" class="avatar-sec" data-a="🎮">🎮</button><button type="button" class="avatar-sec" data-a="🎨">🎨</button><button type="button" class="avatar-sec" data-a="📚">📚</button><button type="button" class="avatar-sec" data-a="🔥">🔥</button><button type="button" class="avatar-sec" data-a="🌍">🌍</button><button type="button" class="avatar-sec" data-a="💡">💡</button><button type="button" class="avatar-sec" data-a="🎧">🎧</button></div>
+<p class="etiket">🎯 İlgi alanların <span class="kucuk">(Senin için filtresi bunlara göre çalışır)</span></p>
+<div class="filtreler sarili"><button type="button" class="filtre ilgi-sec" data-kat="Film &amp; Animasyon">Film &amp; Animasyon</button><button type="button" class="filtre ilgi-sec" data-kat="Otomobil">Otomobil</button><button type="button" class="filtre ilgi-sec" data-kat="Hayvanlar">Hayvanlar</button><button type="button" class="filtre ilgi-sec" data-kat="Spor">Spor</button><button type="button" class="filtre ilgi-sec" data-kat="Seyahat">Seyahat</button><button type="button" class="filtre ilgi-sec" data-kat="Oyun">Oyun</button><button type="button" class="filtre ilgi-sec" data-kat="Kişiler &amp; Bloglar">Kişiler &amp; Bloglar</button><button type="button" class="filtre ilgi-sec" data-kat="Komedi">Komedi</button><button type="button" class="filtre ilgi-sec" data-kat="Eğlence">Eğlence</button><button type="button" class="filtre ilgi-sec" data-kat="Nasıl Yapılır &amp; Stil">Nasıl Yapılır &amp; Stil</button><button type="button" class="filtre ilgi-sec" data-kat="Eğitim">Eğitim</button><button type="button" class="filtre ilgi-sec" data-kat="Bilim &amp; Teknoloji">Bilim &amp; Teknoloji</button></div>
+<label>Kendi kelimelerin <span class="kucuk">(virgülle ayır)</span>
+<input id="p-kelime" placeholder="Örn. yapay zeka, kripto, minecraft"></label>
+<p class="etiket">🎨 Görünüm</p>
+<div class="filtreler sarili"><button type="button" class="filtre tema-sec" data-tema="oto">📱 Otomatik (telefona göre)</button>
+<button type="button" class="filtre tema-sec" data-tema="acik">☀️ Açık</button>
+<button type="button" class="filtre tema-sec" data-tema="koyu">🌙 Koyu</button></div>
+<p class="etiket">⚙️ Ayarlar</p>
+<label class="anahtar"><input type="checkbox" id="p-sahip"> Tarama ve İncele düğmelerini göster
+<span class="kucuk">(sadece uygulamanın sahibi için; diğer kullanıcılar tarama yapamaz)</span></label>
+<div class="eylem"><button class="gir" type="button" id="p-kaydet">Kaydet</button>
+<button class="incele" type="button" id="p-sil">Verilerimi sil</button></div>
+</section>
+
+<footer>Profil, beğendiklerin ve ayarların hiçbir sunucuya gönderilmez; sadece bu cihazın tarayıcı hafızasında durur.<br><a href="gizlilik.html">Gizlilik ve kullanım</a> · YouTube verileri
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube API Hizmetleri</a> ile alınır.</footer>
+</main>
+<nav class="alt-menu" aria-label="Bölümler">
+<a href="index.html#bugun" data-b="bugun"><span>🏠</span>Bugün</a>
+<a href="index.html#kanallar" data-b="kanallar"><span>🔥</span>Kanallar</a>
+<a href="index.html#sira-disi" data-b="sira-disi"><span>🎯</span>Sıra dışı</a>
+<a href="index.html#trendler" data-b="trendler"><span>📊</span>Trendler</a>
+<a href="index.html#benim" data-b="benim"><span>⭐</span>Benim</a></nav>
+<div class="bildirim" id="bildirim" hidden></div>
+<script>
+var KOK = document.body.dataset.kok;
+document.getElementById("tara").addEventListener("click", function () { document.getElementById("ipucu").hidden = false; });
+function uyar(metin) { var u = document.getElementById("uyari"); if (u.hidden) { u.textContent = metin; u.hidden = false; } }
+fetch(KOK + "durum.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
+  if (d.uyari) uyar(d.uyari);
+}).catch(function () {});
+// Genel tarama her gün yenilenir; 30 saatten eskiyse bir şeyler ters gitmiştir.
+var saat = (Date.now() - Date.parse(document.body.dataset.uret)) / 36e5;
+if (document.body.dataset.genel === "1" && saat > 30)
+  uyar("⚠️ Son genel tarama " + Math.floor(saat / 24) + " gün önce yapıldı, yeni tarama gelmedi. "
+       + "GitHub'da Actions sekmesine bak ya da Claude'a söyle.");
+var liste = document.getElementById("aramalar");
+if (liste) fetch("aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
+  l.slice(0, 10).forEach(function (x) {
+    var a = document.createElement("a"); a.className = "arama"; a.href = x.dosya;
+    var ic = document.createElement("span"); ic.className = "ic";
+    var ad = document.createElement("span"); ad.className = "ad"; ad.textContent = (x.tip === "kanal" ? "🔍 " : "📌 ") + x.baslik;
+    var alt = document.createElement("span"); alt.className = "kucuk";
+    alt.textContent = x.tip === "kanal" ? x.tarih + " · kanal incelemesi · " + x.ozet
+      : x.tarih + " · " + x.dil + " · " + x.kanal + " kanal" + (x.bos ? " · 🟢 " + x.bos + " boş alan" : "");
+    var ok = document.createElement("span"); ok.className = "ok"; ok.textContent = "›";
+    ic.append(ad, alt); a.append(ic, ok); liste.append(a);
+  });
+  if (l.length) document.getElementById("aramalar-kutu").hidden = false;
+}).catch(function () {});
+
+// Beğendiklerim: telefonun kendi hafızasında (localStorage) tutulur; her gün yeni tarama gelse de kaybolmaz.
+var FAV = "nis-begendiklerim";
+function favOku() { try { return JSON.parse(localStorage.getItem(FAV)) || []; } catch (e) { return []; } }
+function favYaz(l) { try { localStorage.setItem(FAV, JSON.stringify(l)); } catch (e) {} }
+function el(etiket, sinif, metin) { var x = document.createElement(etiket); if (sinif) x.className = sinif; if (metin) x.textContent = metin; return x; }
+function favCiz() {
+  var l = favOku(), ids = {};
+  l.forEach(function (x) { ids[x.id] = 1; });
+  document.querySelectorAll(".yildiz").forEach(function (b) {
+    var on = !!ids[b.dataset.id];
+    b.textContent = on ? "★" : "☆"; b.classList.toggle("on", on);
+    b.setAttribute("aria-label", on ? "Beğendiklerimden çıkar" : "Beğendiklerime ekle");
+  });
+  var sayac = document.getElementById("fav-sayi");
+  if (sayac) sayac.textContent = l.length ? "⭐ " + l.length : "⭐";
+  var kutu = document.getElementById("fav-kutu"), liste = document.getElementById("fav-liste");
+  if (!kutu) return;
+  liste.textContent = "";
+  l.forEach(function (x) {
+    var oge = el("div", "fav-oge");
+    var a = el("a", "arama"); a.href = "https://www.youtube.com/channel/" + x.id; a.target = "_blank"; a.rel = "noopener";
+    var ic = el("span", "ic");
+    ic.append(el("span", "ad", x.ulke + " " + x.ad), el("span", "kucuk", "Konusu: " + x.konu + " · " + x.ozet),
+              el("span", "kucuk", "Eklendi: " + x.tarih));
+    a.append(ic);
+    var b = el("button", "yildiz on", "★"); b.type = "button"; b.dataset.id = x.id; b.setAttribute("aria-label", "Beğendiklerimden çıkar");
+    var inc = el("a", "incele sahip", "🔍 İncele"); inc.dataset.id = x.id; inc.href = document.body.dataset.tara;
+    inc.target = "_blank"; inc.rel = "noopener";
+    oge.append(a, b, inc); liste.append(oge);
+  });
+  var bos = document.getElementById("fav-bos"); if (bos) bos.hidden = !!l.length;
+  liste.hidden = !l.length; kutu.hidden = false;
+  inceleIsaretle();
+}
+
+// İncele: daha önce incelenen kanallarda düğme doğrudan inceleme sayfasını açar;
+// incelenmemişse kanal linkini panoya kopyalar ve GitHub'daki tarama sayfasını açar.
+var INCELENEN = {};
+function inceleIsaretle() {
+  document.querySelectorAll(".incele").forEach(function (b) {
+    var dosya = INCELENEN[b.dataset.id];
+    if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); b.classList.remove("sahip"); }
+  });
+}
+fetch(KOK + "aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
+  l.forEach(function (x) { if (x.tip === "kanal" && x.kanal_id) INCELENEN[x.kanal_id] = x.dosya; });
+  inceleIsaretle();
+}).catch(function () {});
+document.addEventListener("click", function (e) {
+  var inc = e.target.closest(".incele");
+  if (inc && !inc.classList.contains("hazir")) {
+    var link = "https://www.youtube.com/channel/" + inc.dataset.id;
+    try { navigator.clipboard.writeText(link); } catch (h) {}
+    document.getElementById("ipucu-incele").hidden = false;
+    return;  // bağlantı yeni sekmede GitHub'ı açar
+  }
+  var b = e.target.closest(".yildiz");
+  if (!b) return;
+  e.preventDefault();
+  var l = favOku(), i = l.findIndex(function (x) { return x.id === b.dataset.id; });
+  if (i >= 0) l.splice(i, 1);
+  else l.unshift({id: b.dataset.id, ad: b.dataset.ad, konu: b.dataset.konu, ozet: b.dataset.ozet, ulke: b.dataset.ulke,
+                  tarih: new Date().toLocaleDateString("tr-TR")});
+  favYaz(l); favCiz();
+});
+favCiz();
+
+// ---- Yardımcılar
+function oku(k, v) { try { var x = localStorage.getItem(k); return x === null ? v : JSON.parse(x); } catch (e) { return v; } }
+function yaz(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function bildir(metin) {
+  var b = document.getElementById("bildirim"); b.textContent = metin; b.hidden = false;
+  clearTimeout(bildir.t); bildir.t = setTimeout(function () { b.hidden = true; }, 2500);
+}
+
+// ---- Sahip modu: Tara / İncele düğmeleri sadece uygulama sahibine görünür (misafirler tarama yapamaz).
+if (/[?&]sahip=1/.test(location.search)) yaz("nis-sahip", true);
+if (oku("nis-sahip", false)) document.body.classList.add("sahip-modu");
+
+// ---- Profil (sadece bu cihazda)
+var PROFIL = oku("nis-profil", {ad: "", avatar: "", ilgi: [], kelimeler: []});
+if (PROFIL.avatar) document.getElementById("profil-dugme").textContent = PROFIL.avatar;
+var selam = document.getElementById("selam");
+if (selam && PROFIL.ad) { selam.textContent = "Merhaba " + PROFIL.ad + " 👋"; selam.hidden = false; }
+
+// ---- İlk açılışta kısa tanıtım
+var karsilama = document.getElementById("karsilama");
+if (karsilama && !oku("nis-tanitim", false)) {
+  karsilama.hidden = false;
+  document.getElementById("karsilama-kapat").addEventListener("click", function () {
+    yaz("nis-tanitim", true); karsilama.hidden = true;
+  });
+}
+
+// ---- Kartlar: son ziyaretten beri yeni olanlar ve ilgi alanına uyanlar işaretlenir.
+var oncekiZiyaret = oku("nis-son-ziyaret", "");
+var kartlar = Array.prototype.slice.call(document.querySelectorAll(".kanal-kart"));
+var yeniSayi = 0;
+function ilgiliMi(k) {
+  var metin = k.dataset.metin || "";
+  return PROFIL.ilgi.indexOf(k.dataset.kat) >= 0 ||
+         PROFIL.kelimeler.some(function (w) { return w && metin.indexOf(w.toLowerCase()) >= 0; });
+}
+kartlar.forEach(function (k) {
+  var rzs = k.querySelector(".rzs");
+  k.dataset.yeni = oncekiZiyaret && k.dataset.ilk && k.dataset.ilk > oncekiZiyaret ? "1" : "0";
+  if (k.dataset.yeni === "1") { yeniSayi++; rzs.prepend(el("span", "rz yeni-ziyaret", "🆕 Son ziyaretinden beri yeni")); }
+  k.dataset.ilgi = ilgiliMi(k) ? "1" : "0";
+  if (k.dataset.ilgi === "1") rzs.prepend(el("span", "rz ilgi", "🙋 İlgi alanın"));
+});
+if (selam && yeniSayi) { selam.textContent = (PROFIL.ad ? "Merhaba " + PROFIL.ad + " 👋 " : "") + "Son ziyaretinden beri "
+                         + yeniSayi + " yeni kanal var."; selam.hidden = false; }
+if (document.body.dataset.genel === "1") yaz("nis-son-ziyaret", new Date().toISOString());
+
+// ---- Filtreler ve arama
+var aktifFiltre = "hepsi";
+function filtrele() {
+  var q = ((document.getElementById("ara-kutu") || {}).value || "").toLocaleLowerCase("tr").trim(), gorunen = 0;
+  kartlar.forEach(function (k) {
+    var d = k.dataset, uy = {hepsi: true, ilgi: d.ilgi === "1", yeni: d.yeni === "1" || (!oncekiZiyaret && d.ilk >= document.body.dataset.uret.slice(0, 10)),
+      yuksek: d.kazanc === "yuksek", tr: d.tr === "1", kisa: d.kisa === "1"}[aktifFiltre];
+    var goster = uy && (!q || (d.metin || "").indexOf(q) >= 0);
+    k.hidden = !goster; if (goster) gorunen++;
+  });
+  var bos = document.getElementById("filtre-bos"); if (bos) bos.hidden = gorunen > 0;
+}
+document.querySelectorAll("#filtreler .filtre").forEach(function (b) {
+  b.addEventListener("click", function () {
+    if (b.dataset.f === "ilgi" && !PROFIL.ilgi.length && !PROFIL.kelimeler.length) {
+      bildir("Önce Profil'den ilgi alanlarını seç 👤"); setTimeout(function () { location.href = KOK + "profil.html"; }, 900); return;
+    }
+    document.querySelectorAll("#filtreler .filtre").forEach(function (x) { x.classList.remove("secili"); });
+    b.classList.add("secili"); aktifFiltre = b.dataset.f; filtrele();
+  });
+});
+var araKutu = document.getElementById("ara-kutu");
+if (araKutu) araKutu.addEventListener("input", filtrele);
+
+// ---- Paylaş
+document.addEventListener("click", function (e) {
+  var p = e.target.closest(".paylas");
+  if (!p) return;
+  var veri = {title: "Niş Avcısı", text: p.dataset.baslik, url: p.dataset.url};
+  if (navigator.share) navigator.share(veri).catch(function () {});
+  else { try { navigator.clipboard.writeText(p.dataset.baslik + " " + p.dataset.url); bildir("Link kopyalandı 📋"); } catch (h) {} }
+});
+
+// ---- Alt menü: görünen bölümü işaretle
+var menu = document.querySelectorAll(".alt-menu a");
+function menuIsaretle(id) { menu.forEach(function (a) { a.classList.toggle("aktif", a.dataset.b === id); }); }
+if ("IntersectionObserver" in window && document.body.dataset.genel === "1") {
+  var gozcu = new IntersectionObserver(function (l) {
+    l.forEach(function (g) { if (g.isIntersecting) menuIsaretle(g.target.id); });
+  }, {rootMargin: "-40% 0px -55% 0px"});
+  document.querySelectorAll("section[id]").forEach(function (s) { gozcu.observe(s); });
+}
+
+// ---- Profil sayfası
+var form = document.getElementById("profil-form");
+if (form) {
+  var ad = document.getElementById("p-ad"), kelime = document.getElementById("p-kelime"), sahip = document.getElementById("p-sahip");
+  ad.value = PROFIL.ad; kelime.value = PROFIL.kelimeler.join(", "); sahip.checked = !!oku("nis-sahip", false);
+  var secAvatar = PROFIL.avatar;
+  document.querySelectorAll(".avatar-sec").forEach(function (b) {
+    b.classList.toggle("secili", b.dataset.a === secAvatar);
+    b.addEventListener("click", function () {
+      secAvatar = b.dataset.a;
+      document.querySelectorAll(".avatar-sec").forEach(function (x) { x.classList.toggle("secili", x === b); });
+    });
+  });
+  // Görünüm seçimi anında uygulanır ve kaydedilir (Kaydet'e basmaya gerek yok).
+  var tema = oku("nis-tema", "oto");
+  document.querySelectorAll(".tema-sec").forEach(function (b) {
+    b.classList.toggle("secili", b.dataset.tema === tema);
+    b.addEventListener("click", function () {
+      tema = b.dataset.tema; yaz("nis-tema", tema);
+      if (tema === "oto") delete document.documentElement.dataset.tema; else document.documentElement.dataset.tema = tema;
+      document.querySelectorAll(".tema-sec").forEach(function (x) { x.classList.toggle("secili", x === b); });
+    });
+  });
+  document.querySelectorAll(".ilgi-sec").forEach(function (b) {
+    b.classList.toggle("secili", PROFIL.ilgi.indexOf(b.dataset.kat) >= 0);
+    b.addEventListener("click", function () { b.classList.toggle("secili"); });
+  });
+  document.getElementById("p-kaydet").addEventListener("click", function () {
+    PROFIL = {ad: ad.value.trim(), avatar: secAvatar || "",
+              ilgi: Array.prototype.map.call(document.querySelectorAll(".ilgi-sec.secili"), function (b) { return b.dataset.kat; }),
+              kelimeler: kelime.value.split(",").map(function (w) { return w.trim(); }).filter(Boolean)};
+    yaz("nis-profil", PROFIL); yaz("nis-sahip", sahip.checked);
+    document.body.classList.toggle("sahip-modu", sahip.checked);
+    if (PROFIL.avatar) document.getElementById("profil-dugme").textContent = PROFIL.avatar;
+    bildir("Kaydedildi ✅");
+  });
+  document.getElementById("p-sil").addEventListener("click", function () {
+    if (!confirm("Profilin, beğendiklerin ve ayarların bu cihazdan silinsin mi?")) return;
+    ["nis-profil", "nis-sahip", "nis-begendiklerim", "nis-son-ziyaret", "nis-tanitim", "nis-tema"].forEach(function (k) {
+      try { localStorage.removeItem(k); } catch (h) {}
+    });
+    bildir("Silindi"); setTimeout(function () { location.reload(); }, 800);
+  });
+}
+
+// ---- Çevrimdışı açılabilsin (uygulama mağazası için de gerekli)
+if ("serviceWorker" in navigator) navigator.serviceWorker.register(KOK + "sw.js").catch(function () {});
+</script>
+</body></html>
