@@ -230,8 +230,139 @@ def db_ac(yol):
     CREATE INDEX IF NOT EXISTS ix_anlik ON anlik(video_id, ts);
     CREATE TABLE IF NOT EXISTS terim(ts TEXT, terim TEXT, kanal_sayisi INTEGER, video_sayisi INTEGER, toplam INTEGER);
     CREATE INDEX IF NOT EXISTS ix_terim ON terim(terim, ts);
+    CREATE TABLE IF NOT EXISTS kanal_kayit(ts TEXT, kanal_id TEXT, kanal TEXT, izlenme INTEGER, abone INTEGER,
+                                           video_sayisi INTEGER);
+    CREATE INDEX IF NOT EXISTS ix_kanal ON kanal_kayit(kanal_id, ts);
+    CREATE TABLE IF NOT EXISTS firsat_kayit(ts TEXT, terim TEXT, seviye TEXT, pay REAL);
+    CREATE INDEX IF NOT EXISTS ix_firsat ON firsat_kayit(terim, ts);
     """)
     return db
+
+
+def eski_sil(db, gun=30):
+    """YouTube API kuralları: API'den gelen veri 30 günden uzun saklanmaz."""
+    sinir = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=gun)).isoformat()
+    for tablo in ("anlik", "terim", "kanal_kayit", "firsat_kayit"):
+        db.execute(f"DELETE FROM {tablo} WHERE ts < ?", (sinir,))
+    db.commit()
+
+
+def kanal_kaydet(db, kanallar, firsatlar=()):
+    """Bu taramada görülen kanalların ve ölçülen konu fırsatlarının anlık kaydı (karne için)."""
+    ts = dt.datetime.now(dt.timezone.utc).isoformat()
+    db.executemany("INSERT INTO kanal_kayit VALUES(?,?,?,?,?,?)",
+                   [(ts, k["kanal_id"], k["kanal"], k["kanal_izlenme"], k["abone"], k["video_sayisi"]) for k in kanallar])
+    db.executemany("INSERT INTO firsat_kayit VALUES(?,?,?,?)",
+                   [(ts, t, f["seviye"], f["pay"]) for t, f in firsatlar if f])
+    db.commit()
+
+
+def ilk_gorulme(db):
+    """kanal_id → ilk görüldüğü zaman (ISO)."""
+    return dict(db.execute("SELECT kanal_id, MIN(ts) FROM kanal_kayit GROUP BY kanal_id"))
+
+
+def karne_hesapla(db, yt):
+    """Geçmiş karnesi: 3–30 gün önce bulduğumuz kanallar ve 🟢/🟡 dediğimiz konular bugün ne durumda?
+    Kanalların güncel izlenmesi için 50 kanal başına 1 kota birimi harcanır (en fazla 100 kanal = 2 birim)."""
+    simdi = dt.datetime.now(dt.timezone.utc)
+    ust = (simdi - dt.timedelta(days=3)).isoformat()
+    ilkler = db.execute("""SELECT k.kanal_id, k.kanal, k.izlenme, k.ts FROM kanal_kayit k
+                           JOIN (SELECT kanal_id, MIN(ts) ilk FROM kanal_kayit GROUP BY kanal_id) m
+                             ON m.kanal_id = k.kanal_id AND m.ilk = k.ts
+                           WHERE k.ts < ? ORDER BY k.ts LIMIT 100""", (ust,)).fetchall()
+    kanallar = []
+    if ilkler:
+        guncel = {}
+        try:
+            ids = [r[0] for r in ilkler]
+            for i in range(0, len(ids), 50):
+                for c in yt.get("channels", 1, part="statistics", id=",".join(ids[i:i + 50])).get("items", []):
+                    guncel[c["id"]] = int(c.get("statistics", {}).get("viewCount", 0))
+        except (KotaBitti, ApiHatasi):
+            pass
+        for kid, ad, ilk_izl, ts in ilkler:
+            if kid in guncel and ilk_izl:
+                kanallar.append(dict(kanal_id=kid, kanal=ad, ilk=ilk_izl, simdi=guncel[kid],
+                                     buyume=guncel[kid] / ilk_izl - 1, gun=(simdi - zaman(ts)).days))
+    kanallar.sort(key=lambda k: -k["buyume"])
+    konular = []
+    for terim, ts, seviye in db.execute("""SELECT f.terim, f.ts, f.seviye FROM firsat_kayit f
+                                           JOIN (SELECT terim, MIN(ts) ilk FROM firsat_kayit GROUP BY terim) m
+                                             ON m.terim = f.terim AND m.ilk = f.ts
+                                           WHERE f.ts < ? AND f.seviye IN ('bos', 'orta')""", (ust,)):
+        ilk = db.execute("SELECT kanal_sayisi FROM terim WHERE terim=? ORDER BY ts LIMIT 1", (terim,)).fetchone()
+        son = db.execute("SELECT kanal_sayisi, ts FROM terim WHERE terim=? ORDER BY ts DESC LIMIT 1", (terim,)).fetchone()
+        if ilk and son:
+            konular.append(dict(terim=terim, seviye=seviye, gun=(simdi - zaman(ts)).days,
+                                ilk=ilk[0], son=son[0], son_gun=(simdi - zaman(son[1])).days))
+    if not kanallar and not konular:
+        en_eski = db.execute("SELECT MIN(ts) FROM kanal_kayit").fetchone()[0]
+        return dict(bos=True, gun=(simdi - zaman(en_eski)).days if en_eski else 0)
+    iki_kat = sum(k["buyume"] >= 1 for k in kanallar)
+    return dict(bos=False, kanallar=kanallar, konular=konular,
+                orta_buyume=orta_deger([k["buyume"] for k in kanallar]) if kanallar else 0,
+                iki_kat_oran=iki_kat / len(kanallar) if kanallar else 0)
+
+
+def hafta_ozeti(db):
+    """Son 7 günde kanal sayısı en çok artan konular (kota harcamaz)."""
+    sinir = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=7)).isoformat()
+    satirlar = collections.defaultdict(list)
+    for terim, ts, ks, top in db.execute("SELECT terim, ts, kanal_sayisi, toplam FROM terim WHERE ts >= ? ORDER BY ts",
+                                         (sinir,)):
+        satirlar[terim].append((ks, top))
+    sonuc = []
+    for terim, l in satirlar.items():
+        sonuc.append(dict(terim=terim, gorulme=len(l), artis=l[-1][0] - l[0][0], kanal=l[-1][0], toplam=l[-1][1]))
+    sonuc.sort(key=lambda x: (-x["artis"], -x["gorulme"], -x["toplam"]))
+    return [x for x in sonuc if x["artis"] > 0 or x["gorulme"] >= 2][:5]
+
+
+def sira_disi(sonuc, esik=3, adet=10):
+    """Kanalının normalinin `esik` katından fazla izlenen videolar (kota harcamaz).
+    Normal = videonun kendisi hariç, kanalın video başına ortalama izlenmesi."""
+    l = []
+    for s in sonuc:
+        if s["video_sayisi"] < 3:
+            continue
+        normal = (s["kanal_izlenme"] - s["izlenme"]) / (s["video_sayisi"] - 1)
+        if normal > 0 and s["izlenme"] / normal >= esik:
+            l.append(dict(s, oran=s["izlenme"] / normal, normal=normal))
+    l.sort(key=lambda x: -x["oran"])
+    tekil, gorulen = [], set()
+    for x in l:  # kanal başına en fazla 1 video
+        if x["kanal_id"] not in gorulen:
+            gorulen.add(x["kanal_id"])
+            tekil.append(x)
+    return tekil[:adet]
+
+
+SORU_ON_EK = {"tr": ["nasıl", "neden", "en iyi", "nedir"], "en": ["how to", "why", "what is", "best"]}
+
+
+def video_fikirleri(terimler, adet=6):
+    """Her konu için insanların YouTube'da gerçekten aradığı sorular → video fikri (YouTube kotası harcamaz)."""
+    def getir(terim):
+        dil = "tr" if re.search(r"[çğıöşü]", terim) else "en"
+        sorgular = [f"{on} {terim}" for on in SORU_ON_EK[dil]] + [f"{terim} "]
+        puan = collections.Counter()
+        ilk_kelime = terim.split()[0]
+        for q in sorgular:
+            url = ONERI_API + "?" + urllib.parse.urlencode(dict(client="firefox", ds="yt", hl=dil, q=q))
+            try:
+                with urllib.request.urlopen(url, timeout=10) as r:
+                    veri = json.loads(r.read().decode(r.headers.get_content_charset() or "utf-8", "replace"))
+            except Exception:
+                continue
+            for sira, o in enumerate(veri[1] if len(veri) > 1 else []):
+                o = re.sub(r"\s+", " ", o.lower()).strip()
+                if ilk_kelime in o and o != terim and len(o.split()) >= 3:
+                    puan[o] += 10 - min(sira, 9) + (5 if q.strip() != terim else 0)
+        return terim, [o for o, _ in puan.most_common(adet)]
+    terimler = list(dict.fromkeys(t for t in terimler if t))
+    with concurrent.futures.ThreadPoolExecutor(6) as havuz:
+        return {t: l for t, l in havuz.map(getir, terimler) if l}
 
 
 # ---------- tarama ----------
@@ -657,6 +788,8 @@ def kanal_analiz(c, vids):
         gunler=collections.Counter(GUNLER[v["ts"].astimezone(TR_SAAT).weekday()] for v in vids).most_common(2),
         saatler=collections.Counter(v["ts"].astimezone(TR_SAAT).hour for v in vids).most_common(1),
         en_iyiler=en_iyiler, konusu=en_sik_ifade(metinler) or (konular[0] if konular else ""),
+        sira_disi=sorted([dict(v, oran=v["izl"] / orta_deger(izl)) for v in vids
+                          if orta_deger(izl) and v["izl"] >= 3 * orta_deger(izl)], key=lambda v: -v["oran"])[:5],
         en_iyi_tema=en_sik_ifade([[v["baslik"]] + v["etiketler"] for v in en_iyiler]),
         youtube_konulari=konular, sik_kelimeler=[w for w, _ in sik.most_common(8)],
         baslik_uzunluk=sum(len(b) for b in basliklar) / len(basliklar) if basliklar else 0,
@@ -862,9 +995,34 @@ def sure_metni(gun):
 
 
 def incele_dugmesi(kanal_id):
-    """Kanal daha önce incelendiyse sayfa açılınca JS bunu "İncelemeyi aç" bağlantısına çevirir."""
-    return (f'<a class="incele" data-id="{html.escape(kanal_id)}" href="{TARA_LINKI}" target="_blank" '
+    """Sadece uygulama sahibine görünür (sahip modu). Kanal daha önce incelendiyse JS bunu herkese açık
+    "İncelemeyi aç" bağlantısına çevirir."""
+    return (f'<a class="incele sahip" data-id="{html.escape(kanal_id)}" href="{TARA_LINKI}" target="_blank" '
             f'rel="noopener">🔍 İncele</a>')
+
+
+def fikir_kutusu(fikirler, tr):
+    """İnsanların gerçekten aradığı sorular, dokununca açılan kutu; her biri YouTube aramasına gider."""
+    if not fikirler:
+        return ""
+    e = html.escape
+    satirlar = "".join(
+        f'<li><a href="{arama_link(f)}" target="_blank" rel="noopener">{e(f)}</a>'
+        + (f' <span class="ceviri">({e(tr[f])})</span>' if tr.get(f) else "") + "</li>" for f in fikirler)
+    return (f'<details class="fikir"><summary>💡 Video fikirleri <span class="kucuk">({len(fikirler)} gerçek arama)</span>'
+            f'</summary><p class="kucuk">İnsanların YouTube\'da bu konuda aradığı şeyler. Her biri bir video fikri:</p>'
+            f'<ul>{satirlar}</ul></details>')
+
+
+def kapak_galerisi(videolar, adet=12):
+    """En çok izlenen videoların kapakları yan yana: görsel ilham."""
+    e = html.escape
+    l = sorted([v for v in videolar if v.get("kapak")], key=lambda v: -v["izlenme"])[:adet]
+    if not l:
+        return ""
+    return ('<div class="galeri">' + "".join(
+        f'<a href="{video_link(v["id"])}" target="_blank" rel="noopener"><img src="{e(v["kapak"])}" alt="{e(v["baslik"])}" '
+        f'loading="lazy"><span>▶ {kisa(v["izlenme"])}</span></a>' for v in l) + "</div>")
 
 
 def terim_haritasi_kur(nisler):
@@ -1011,6 +1169,46 @@ h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14
 .one-etiket{padding:12px 56px 0 14px;font-weight:800;font-size:15px;color:var(--vurgu)}
 .kart.one .nis-ad{padding:8px 14px 0} .kart.one .cipler{padding:0 14px 14px}
 .one-neden{margin:4px 14px 0;font-size:14px} .kart.one .kanal{padding-bottom:4px}
+/* sahip modu: Tara / İncele sadece uygulama sahibine */
+.sahip{display:none!important} body.sahip-modu .sahip{display:inline-flex!important}
+body.sahip-modu .incele.sahip,.incele.hazir{display:block!important}
+main{padding-bottom:90px}
+.alt-menu{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--kart);border-top:1px solid var(--cizgi);
+  padding:4px 4px max(4px,env(safe-area-inset-bottom));z-index:10}
+.alt-menu a{flex:1;display:flex;flex-direction:column;align-items:center;font-size:11px;color:var(--soluk);padding:4px 0;gap:1px}
+.alt-menu a span{font-size:20px;line-height:1.2} .alt-menu a.aktif{color:var(--vurgu);font-weight:700}
+section{scroll-margin-top:12px}
+.filtreler{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 10px;padding:0 16px;scrollbar-width:none}
+.filtreler::-webkit-scrollbar{display:none} .filtreler.sarili{flex-wrap:wrap;overflow:visible;margin:0 0 10px;padding:0}
+.filtre{flex:none;border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);border-radius:999px;padding:7px 13px;
+  font:inherit;font-size:14px;cursor:pointer} .filtre.secili{background:var(--vurgu);border-color:var(--vurgu);color:#fff}
+.ara-kutu{width:100%;padding:11px 14px;border:1px solid var(--cizgi);border-radius:12px;background:var(--kart);color:var(--yazi);
+  font:inherit;margin-bottom:12px}
+.kanal-kart[hidden]{display:none}
+.paylas{flex:none;width:46px;border:0;border-radius:12px;background:var(--zemin2);color:var(--yazi);font-size:18px;cursor:pointer}
+details.oneri,details.fikir{margin:12px 14px 0;padding:10px 12px;border-radius:12px;background:var(--zemin2);font-size:14px}
+details.fikir{margin:12px 0 0} details summary{cursor:pointer;font-weight:700;list-style-position:inside}
+details.fikir ul{margin:6px 0 0;padding-left:18px} details.fikir li{margin:5px 0} details.fikir a{text-decoration:underline}
+.galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.galeri a{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--zemin2)}
+.galeri img{width:100%;height:100%;object-fit:cover}
+.galeri span{position:absolute;left:4px;bottom:4px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;padding:1px 5px;border-radius:4px}
+.video.sd{margin-top:0} .kat{color:var(--vurgu)} .artis{color:var(--iyi);font-weight:600}
+.selam{font-size:18px;font-weight:700;margin:18px 0 0}
+.karsilama{padding:14px;margin-top:14px;border-width:2px} .karsilama ul{padding-left:0;list-style:none} .karsilama li{margin:8px 0}
+.rz.yeni-ziyaret{background:var(--iyi);color:#fff} .rz.ilgi{color:var(--vurgu)}
+.profil-link{display:flex;justify-content:space-between;align-items:center;padding:16px;font-weight:600;margin-top:20px}
+.profil label{display:block;font-weight:600;margin:10px 0}
+.profil input:not([type=checkbox]){display:block;width:100%;margin-top:6px;padding:11px 12px;border:1px solid var(--cizgi);
+  border-radius:10px;background:var(--bg);color:var(--yazi);font:inherit}
+.profil .etiket{font-weight:600;margin:16px 0 8px} .profil .anahtar{font-weight:400}
+.avatarlar{display:flex;flex-wrap:wrap;gap:8px}
+.avatar-sec{width:46px;height:46px;font-size:24px;border-radius:50%;border:2px solid var(--cizgi);background:var(--zemin2);cursor:pointer}
+.avatar-sec.secili{border-color:var(--vurgu)} .profil .eylem{margin:18px 0 0}
+.metin p{font-size:15px} .metin a{text-decoration:underline}
+footer a{text-decoration:underline}
+.bildirim{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--yazi);color:var(--bg);
+  padding:10px 16px;border-radius:999px;font-size:14px;z-index:20;max-width:90%}
 article.kart{position:relative} .kanal{padding-right:44px}
 .yildiz{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;font-size:26px;line-height:1;color:var(--soluk);cursor:pointer;z-index:1}
 .yildiz.on{color:#f5b301} .yildiz:active{transform:scale(.85)}
@@ -1078,11 +1276,12 @@ function favCiz() {
               el("span", "kucuk", "Eklendi: " + x.tarih));
     a.append(ic);
     var b = el("button", "yildiz on", "★"); b.type = "button"; b.dataset.id = x.id; b.setAttribute("aria-label", "Beğendiklerimden çıkar");
-    var inc = el("a", "incele", "🔍 İncele"); inc.dataset.id = x.id; inc.href = document.body.dataset.tara;
+    var inc = el("a", "incele sahip", "🔍 İncele"); inc.dataset.id = x.id; inc.href = document.body.dataset.tara;
     inc.target = "_blank"; inc.rel = "noopener";
     oge.append(a, b, inc); liste.append(oge);
   });
-  kutu.hidden = !l.length;
+  var bos = document.getElementById("fav-bos"); if (bos) bos.hidden = !!l.length;
+  liste.hidden = !l.length; kutu.hidden = false;
   inceleIsaretle();
 }
 
@@ -1092,7 +1291,7 @@ var INCELENEN = {};
 function inceleIsaretle() {
   document.querySelectorAll(".incele").forEach(function (b) {
     var dosya = INCELENEN[b.dataset.id];
-    if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); }
+    if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); b.classList.remove("sahip"); }
   });
 }
 fetch(KOK + "aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
@@ -1117,6 +1316,134 @@ document.addEventListener("click", function (e) {
   favYaz(l); favCiz();
 });
 favCiz();
+
+// ---- Yardımcılar
+function oku(k, v) { try { var x = localStorage.getItem(k); return x === null ? v : JSON.parse(x); } catch (e) { return v; } }
+function yaz(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function bildir(metin) {
+  var b = document.getElementById("bildirim"); b.textContent = metin; b.hidden = false;
+  clearTimeout(bildir.t); bildir.t = setTimeout(function () { b.hidden = true; }, 2500);
+}
+
+// ---- Sahip modu: Tara / İncele düğmeleri sadece uygulama sahibine görünür (misafirler tarama yapamaz).
+if (/[?&]sahip=1/.test(location.search)) yaz("nis-sahip", true);
+if (oku("nis-sahip", false)) document.body.classList.add("sahip-modu");
+
+// ---- Profil (sadece bu cihazda)
+var PROFIL = oku("nis-profil", {ad: "", avatar: "", ilgi: [], kelimeler: []});
+if (PROFIL.avatar) document.getElementById("profil-dugme").textContent = PROFIL.avatar;
+var selam = document.getElementById("selam");
+if (selam && PROFIL.ad) { selam.textContent = "Merhaba " + PROFIL.ad + " 👋"; selam.hidden = false; }
+
+// ---- İlk açılışta kısa tanıtım
+var karsilama = document.getElementById("karsilama");
+if (karsilama && !oku("nis-tanitim", false)) {
+  karsilama.hidden = false;
+  document.getElementById("karsilama-kapat").addEventListener("click", function () {
+    yaz("nis-tanitim", true); karsilama.hidden = true;
+  });
+}
+
+// ---- Kartlar: son ziyaretten beri yeni olanlar ve ilgi alanına uyanlar işaretlenir.
+var oncekiZiyaret = oku("nis-son-ziyaret", "");
+var kartlar = Array.prototype.slice.call(document.querySelectorAll(".kanal-kart"));
+var yeniSayi = 0;
+function ilgiliMi(k) {
+  var metin = k.dataset.metin || "";
+  return PROFIL.ilgi.indexOf(k.dataset.kat) >= 0 ||
+         PROFIL.kelimeler.some(function (w) { return w && metin.indexOf(w.toLowerCase()) >= 0; });
+}
+kartlar.forEach(function (k) {
+  var rzs = k.querySelector(".rzs");
+  k.dataset.yeni = oncekiZiyaret && k.dataset.ilk && k.dataset.ilk > oncekiZiyaret ? "1" : "0";
+  if (k.dataset.yeni === "1") { yeniSayi++; rzs.prepend(el("span", "rz yeni-ziyaret", "🆕 Son ziyaretinden beri yeni")); }
+  k.dataset.ilgi = ilgiliMi(k) ? "1" : "0";
+  if (k.dataset.ilgi === "1") rzs.prepend(el("span", "rz ilgi", "🙋 İlgi alanın"));
+});
+if (selam && yeniSayi) { selam.textContent = (PROFIL.ad ? "Merhaba " + PROFIL.ad + " 👋 " : "") + "Son ziyaretinden beri "
+                         + yeniSayi + " yeni kanal var."; selam.hidden = false; }
+if (document.body.dataset.genel === "1") yaz("nis-son-ziyaret", new Date().toISOString());
+
+// ---- Filtreler ve arama
+var aktifFiltre = "hepsi";
+function filtrele() {
+  var q = ((document.getElementById("ara-kutu") || {}).value || "").toLocaleLowerCase("tr").trim(), gorunen = 0;
+  kartlar.forEach(function (k) {
+    var d = k.dataset, uy = {hepsi: true, ilgi: d.ilgi === "1", yeni: d.yeni === "1" || (!oncekiZiyaret && d.ilk >= document.body.dataset.uret.slice(0, 10)),
+      yuksek: d.kazanc === "yuksek", tr: d.tr === "1", kisa: d.kisa === "1"}[aktifFiltre];
+    var goster = uy && (!q || (d.metin || "").indexOf(q) >= 0);
+    k.hidden = !goster; if (goster) gorunen++;
+  });
+  var bos = document.getElementById("filtre-bos"); if (bos) bos.hidden = gorunen > 0;
+}
+document.querySelectorAll("#filtreler .filtre").forEach(function (b) {
+  b.addEventListener("click", function () {
+    if (b.dataset.f === "ilgi" && !PROFIL.ilgi.length && !PROFIL.kelimeler.length) {
+      bildir("Önce Profil'den ilgi alanlarını seç 👤"); setTimeout(function () { location.href = KOK + "profil.html"; }, 900); return;
+    }
+    document.querySelectorAll("#filtreler .filtre").forEach(function (x) { x.classList.remove("secili"); });
+    b.classList.add("secili"); aktifFiltre = b.dataset.f; filtrele();
+  });
+});
+var araKutu = document.getElementById("ara-kutu");
+if (araKutu) araKutu.addEventListener("input", filtrele);
+
+// ---- Paylaş
+document.addEventListener("click", function (e) {
+  var p = e.target.closest(".paylas");
+  if (!p) return;
+  var veri = {title: "Niş Avcısı", text: p.dataset.baslik, url: p.dataset.url};
+  if (navigator.share) navigator.share(veri).catch(function () {});
+  else { try { navigator.clipboard.writeText(p.dataset.baslik + " " + p.dataset.url); bildir("Link kopyalandı 📋"); } catch (h) {} }
+});
+
+// ---- Alt menü: görünen bölümü işaretle
+var menu = document.querySelectorAll(".alt-menu a");
+function menuIsaretle(id) { menu.forEach(function (a) { a.classList.toggle("aktif", a.dataset.b === id); }); }
+if ("IntersectionObserver" in window && document.body.dataset.genel === "1") {
+  var gozcu = new IntersectionObserver(function (l) {
+    l.forEach(function (g) { if (g.isIntersecting) menuIsaretle(g.target.id); });
+  }, {rootMargin: "-40% 0px -55% 0px"});
+  document.querySelectorAll("section[id]").forEach(function (s) { gozcu.observe(s); });
+}
+
+// ---- Profil sayfası
+var form = document.getElementById("profil-form");
+if (form) {
+  var ad = document.getElementById("p-ad"), kelime = document.getElementById("p-kelime"), sahip = document.getElementById("p-sahip");
+  ad.value = PROFIL.ad; kelime.value = PROFIL.kelimeler.join(", "); sahip.checked = !!oku("nis-sahip", false);
+  var secAvatar = PROFIL.avatar;
+  document.querySelectorAll(".avatar-sec").forEach(function (b) {
+    b.classList.toggle("secili", b.dataset.a === secAvatar);
+    b.addEventListener("click", function () {
+      secAvatar = b.dataset.a;
+      document.querySelectorAll(".avatar-sec").forEach(function (x) { x.classList.toggle("secili", x === b); });
+    });
+  });
+  document.querySelectorAll(".ilgi-sec").forEach(function (b) {
+    b.classList.toggle("secili", PROFIL.ilgi.indexOf(b.dataset.kat) >= 0);
+    b.addEventListener("click", function () { b.classList.toggle("secili"); });
+  });
+  document.getElementById("p-kaydet").addEventListener("click", function () {
+    PROFIL = {ad: ad.value.trim(), avatar: secAvatar || "",
+              ilgi: Array.prototype.map.call(document.querySelectorAll(".ilgi-sec.secili"), function (b) { return b.dataset.kat; }),
+              kelimeler: kelime.value.split(",").map(function (w) { return w.trim(); }).filter(Boolean)};
+    yaz("nis-profil", PROFIL); yaz("nis-sahip", sahip.checked);
+    document.body.classList.toggle("sahip-modu", sahip.checked);
+    if (PROFIL.avatar) document.getElementById("profil-dugme").textContent = PROFIL.avatar;
+    bildir("Kaydedildi ✅");
+  });
+  document.getElementById("p-sil").addEventListener("click", function () {
+    if (!confirm("Profilin, beğendiklerin ve ayarların bu cihazdan silinsin mi?")) return;
+    ["nis-profil", "nis-sahip", "nis-begendiklerim", "nis-son-ziyaret", "nis-tanitim"].forEach(function (k) {
+      try { localStorage.removeItem(k); } catch (h) {}
+    });
+    bildir("Silindi"); setTimeout(function () { location.reload(); }, 800);
+  });
+}
+
+// ---- Çevrimdışı açılabilsin (uygulama mağazası için de gerekli)
+if ("serviceWorker" in navigator) navigator.serviceWorker.register(KOK + "sw.js").catch(function () {});
 """
 
 
@@ -1147,6 +1474,50 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         t = tr.get(metin)
         return f'{e(metin)} <span class="ceviri">({e(t)})</span>' if t else e(metin)
 
+    def fikir_html(terim):
+        return fikir_kutusu(getattr(a, "fikirler", {}).get(terim, []), tr)
+
+    def hafta_html():
+        l = getattr(a, "hafta", [])
+        if not l:
+            return ""
+        satirlar = "".join(
+            f'<li><b>{cevirili(x["terim"])}</b> · {x["kanal"]} kanal'
+            + (f' · <span class="artis">+{x["artis"]} kanal bu hafta</span>' if x["artis"] > 0
+               else f' · {x["gorulme"]} taramada görüldü')
+            + f' · {kisa(x["toplam"])} izlenme</li>' for x in l)
+        return ('<h2>📅 Bu hafta</h2><p class="alt-baslik">Son 7 günde en çok yükselen konular.</p>'
+                f'<div class="kart bolum"><ul class="satirlar">{satirlar}</ul></div>')
+
+    def karne_html():
+        k = getattr(a, "karne", None)
+        if not k:
+            return ""
+        bas = ('<h2>📋 Geçmiş karnesi</h2><p class="alt-baslik">Önceden bulduklarımız sonradan ne oldu? '
+               'Uygulamanın isabetini buradan takip et.</p>')
+        if k["bos"]:
+            return (bas + f'<div class="kart bolum"><p>⏳ Karne birikiyor. Bulduğumuz kanalları ve konuları en az 3 gün '
+                          f'takip ettikten sonra sonuçlarını burada göstereceğim. ({k["gun"]} gündür veri toplanıyor.)</p></div>')
+        govde = ""
+        if k["kanallar"]:
+            ozet = (f'<p>Önceden bulduğumuz <b>{len(k["kanallar"])} kanal</b> o günden beri ortalama '
+                    f'<b>%{k["orta_buyume"] * 100:.0f}</b> büyüdü. İzlenmesini en az ikiye katlayanların oranı: '
+                    f'<b>%{k["iki_kat_oran"] * 100:.0f}</b>.</p>')
+            satirlar = "".join(
+                f'<li><a href="{kanal_link(x["kanal_id"])}" target="_blank" rel="noopener"><b>{e(x["kanal"])}</b></a> · '
+                f'{x["gun"]} gün önce bulundu · {kisa(x["ilk"])} → <b>{kisa(x["simdi"])}</b> '
+                f'<span class="artis">(%{x["buyume"] * 100:+.0f})</span></li>' for x in k["kanallar"][:5])
+            govde += f'<div class="kart bolum"><h3>📺 Bulduğumuz kanallar</h3>{ozet}<ul class="satirlar">{satirlar}</ul></div>'
+        if k["konular"]:
+            buyuyen = sum(x["son"] > x["ilk"] for x in k["konular"])
+            satirlar = "".join(
+                f'<li>{"✅" if x["son"] > x["ilk"] else "➖"} <b>{cevirili(x["terim"])}</b> · {x["gun"]} gün önce '
+                f'{FIRSAT_ETIKET[x["seviye"]][1]} dedik · {x["ilk"]} → <b>{x["son"]}</b> kanal</li>'
+                for x in k["konular"][:8])
+            govde += (f'<div class="kart bolum"><h3>🎯 Fırsat dediğimiz konular</h3><p>{len(k["konular"])} konudan '
+                      f'<b>{buyuyen}</b> tanesinde o günden beri daha çok yeni kanal tuttu.</p><ul class="satirlar">{satirlar}</ul></div>')
+        return bas + govde
+
     def kanal_kart(k):
         abone = "abone gizli" if k["abone"] is None else f'{kisa(k["abone"])} abone'
         av = (f'<img class="av" src="{e(k["kapak"])}" alt="" loading="lazy">' if k["kapak"]
@@ -1155,14 +1526,22 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         konusu = kanal_konusu(k, terim_haritasi)
         kazanc = kazanc_seviyesi(k["ulke"], k["dil"])
         maddeler = kanal_onerileri(k, kazanc, pazarlar.get(k["kanal_id"]), trend_firsati.get(konusu))
-        oneri = ('<div class="oneri"><b>💡 Öneri</b><ul>' + "".join(f"<li>{m}</li>" for m in maddeler) + "</ul></div>"
-                 if maddeler else "")
+        # Öneriler kapalı gelir, dokununca açılır: kart sade kalsın.
+        oneri = (f'<details class="oneri"><summary>💡 Ne yapmalıyım? <span class="kucuk">({len(maddeler)} öneri)</span></summary><ul>'
+                 + "".join(f"<li>{m}</li>" for m in maddeler) + "</ul></details>" if maddeler else "")
         kz = f'<span class="rz kz {kazanc}">{KAZANC_ETIKET[kazanc]}</span>' if kazanc else ""
         baslik_tr = tr.get(v["baslik"])
         ozet = f'{sure_metni(k["kanal_yasi"])} {k["video_sayisi"]} videoyla {kisa(k["kanal_izlenme"])} izlenme'
         yildiz = (f'<button class="yildiz" type="button" aria-label="Beğendiklerime ekle" data-id="{e(k["kanal_id"])}" '
                   f'data-ad="{e(k["kanal"])}" data-konu="{e(konusu)}" data-ozet="{e(ozet)}" data-ulke="{bayrak(k["ulke"])}">☆</button>')
-        return (f'<article class="kart">{yildiz}'
+        # Filtreler (Senin için, Yüksek kazanç, Türkiye, Shorts, Yeni) için kart bilgileri.
+        veri = (f'data-kazanc="{kazanc or ""}" data-tr="{1 if k["ulke"] == "TR" or (k["dil"] or "").startswith("tr") else 0}" '
+                f'data-kisa="{1 if k["kisa"] else 0}" data-kat="{e(k["kategori"])}" '
+                f'data-ilk="{e(getattr(a, "ilk_gorulme", {}).get(k["kanal_id"], ""))}" '
+                f'data-metin="{e((k["kanal"] + " " + konusu + " " + tr.get(konusu, "") + " " + k["kategori"]).lower())}"')
+        paylas = (f'<button class="paylas" type="button" aria-label="Paylaş" data-url="{kanal_link(k["kanal_id"])}" '
+                  f'data-baslik="{e(k["kanal"])}: {e(ozet)}">↗</button>')
+        return (f'<article class="kart kanal-kart" {veri}>{yildiz}'
                 f'<a class="kanal" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">{av}'
                 f'<span class="ic"><span class="ad">{bayrak(k["ulke"])} {e(k["kanal"])}</span>'
                 f'<span class="patlama">🔥 Patlamış: <b>{sure_metni(k["kanal_yasi"])} {k["video_sayisi"]} videoyla '
@@ -1177,7 +1556,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                 + (f'<span class="kucuk ceviri">{e(baslik_tr)}</span>' if baslik_tr else "")
                 + f'<span class="kucuk">▶ En çok izlenen: {kisa(v["izlenme"])} · {v["yayin"]}</span></span></a>'
                 f'<div class="eylem"><a class="gir" href="{kanal_link(k["kanal_id"])}" target="_blank" rel="noopener">Kanala gir ›</a>'
-                f'{incele_dugmesi(k["kanal_id"])}</div>'
+                f'{incele_dugmesi(k["kanal_id"])}{paylas}</div>'
                 f'</article>')
 
     def gun_once(iso):
@@ -1210,7 +1589,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                 f'<dt>Kaç kanal yapıyor</dt><dd><b>{n["kanal_sayisi"]} küçük kanal</b> · {n["video_sayisi"]} video · toplam {kisa(n["toplam"])} izlenme</dd>'
                 f'<dt>En hızlısı</dt><dd>{e(hizli["kanal"])} · saatte {kisa(hizli["saatlik"])} izlenme</dd>'
                 f'<dt>Tür</dt><dd>{tur} · {e(n["kategori"])}</dd>'
-                f'</dl><div class="cipler">{cipler}</div></article>')
+                f'</dl><div class="cipler">{cipler}</div>{fikir_html(n["terim"])}</article>')
 
     def harita_kart(terim, f, ana=False):
         cls, etiket = FIRSAT_ETIKET[f["seviye"]]
@@ -1220,6 +1599,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                 f'<span class="fr {cls}">{etiket}</span></div>'
                 f'<p class="kucuk aciklama">{"Ana konu · " if ana else ""}{firsat_metni(f)}</p>'
                 + (f'<p class="kucuk">Bu konuda tutan yeni kanallar:</p><div class="cipler">{cipler}</div>' if cipler else "")
+                + fikir_html(terim)
                 + f'<a class="ara" href="{arama_link(terim)}" target="_blank" rel="noopener">YouTube\'da ara ›</a></article>')
 
     if a.konular:  # konulu tarama: önce fırsat haritası, sonra her konu kendi bölümünde
@@ -1239,15 +1619,46 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                       + ("".join(kanal_kart(x) for x in ks[:20]) or
                          '<p class="bos-not">Bu konuda son günlerde patlayan yeni küçük kanal bulunamadı. '
                          'Konu ya çok doymuş ya da henüz boş.</p>'))
+        galeri = kapak_galerisi(sonuc, 9)
+        if galeri:
+            govde += ('<h2>🖼️ Kapak ilhamı</h2><p class="alt-baslik">Bu konularda en çok izlenen videoların kapakları. '
+                      'Dokun, videoyu aç.</p>' + galeri)
         ust = f'<a class="geri" href="{kok}index.html">← Ana sayfa</a>'
         aramalar = ""
     else:
         baslik = "🎯 Niş Avcısı"
         tum_kanallar = kanallara_grupla(sonuc)
-        govde = ('<h2>🔥 Patlayan kanallar</h2><p class="alt-baslik">Dünya genelinde ve Türkiye\'de son 1 yılda açılıp '
-                 'az videoyla patlayan kanallar. Her alandan karışık: konusuna bak, beğendiğine gir.</p>'
+        filtreler = ('<div class="filtreler" id="filtreler">'
+                     '<button class="filtre secili" data-f="hepsi">Hepsi</button>'
+                     '<button class="filtre" data-f="ilgi">🙋 Senin için</button>'
+                     '<button class="filtre" data-f="yeni">🆕 Yeni</button>'
+                     '<button class="filtre" data-f="yuksek">💰 Yüksek kazanç</button>'
+                     '<button class="filtre" data-f="tr">🇹🇷 Türkiye</button>'
+                     '<button class="filtre" data-f="kisa">📱 Shorts</button></div>'
+                     '<input class="ara-kutu" id="ara-kutu" type="search" placeholder="Kanal ya da konu ara…" '
+                     'aria-label="Kanal ya da konu ara">'
+                     '<p class="bos-not" id="filtre-bos" hidden>Bu filtreye uyan kanal yok.</p>')
+        govde = ('<section id="kanallar"><h2>🔥 Patlayan kanallar</h2><p class="alt-baslik">Dünya genelinde ve Türkiye\'de '
+                 'son 1 yılda açılıp az videoyla patlayan kanallar. Her alandan karışık: konusuna bak, beğendiğine gir.</p>'
+                 + filtreler
                  + ("".join(kanal_kart(k) for k in genis_sirala(tum_kanallar)[:40]) or
-                    '<p class="bos-not">Bu taramada uygun kanal çıkmadı. Bir sonraki taramayı bekle.</p>'))
+                    '<p class="bos-not">Bu taramada uygun kanal çıkmadı. Bir sonraki taramayı bekle.</p>')
+                 + "</section>")
+        # Sıra dışı videolar + kapak ilhamı
+        sd = sira_disi(sonuc)
+        sd_html = "".join(
+            f'<a class="video sd" href="{video_link(v["id"])}" target="_blank" rel="noopener">'
+            f'<img src="{e(v["kapak"])}" alt="" loading="lazy"><span><span class="vb">{e(v["baslik"])}</span>'
+            + (f'<span class="kucuk ceviri">{e(tr[v["baslik"]])}</span>' if tr.get(v["baslik"]) else "")
+            + f'<span class="kucuk"><b class="kat">{v["oran"]:.0f}× normal</b> · {kisa(v["izlenme"])} izlenme · '
+              f'kanalın normali {kisa(v["normal"])} · {bayrak(v["ulke"])} {e(v["kanal"])}</span></span></a>'
+            for v in sd)
+        govde += ('<section id="sira-disi"><h2>🎯 Sıra dışı videolar</h2><p class="alt-baslik">Kanalının normalinin '
+                  'kat kat üstünde izlenen videolar. Bir konunun tuttuğunun en net işareti.</p>'
+                  + (f'<div class="kart">{sd_html}</div>' if sd_html else
+                     '<p class="bos-not">Bu taramada sıra dışı video çıkmadı.</p>')
+                  + '<h2>🖼️ Kapak ilhamı</h2><p class="alt-baslik">En çok izlenen videoların kapakları. Dokun, videoyu aç.</p>'
+                  + kapak_galerisi(sonuc) + "</section>")
         ust = ""
 
         def one_kart(c):
@@ -1277,25 +1688,35 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         kartlar = one_cikanlar(tum_kanallar, nisler)
         one = ('<h2>✨ Bugün öne çıkanlar</h2><p class="alt-baslik">Taramanın en dikkat çekenleri. Yana kaydır.</p>'
                '<div class="one-cikanlar">' + "".join(one_kart(c) for c in kartlar) + '</div>') if kartlar else ""
-        aramalar = (one + '<div id="fav-kutu" hidden><h2 id="begendiklerim">⭐ Beğendiklerim</h2>'
-                    '<p class="alt-baslik">Yıldızladığın kanallar. Dokun, kanala gir; yıldıza basarsan listeden çıkar.</p>'
-                    '<div class="kart" id="fav-liste"></div></div>'
-                    '<div id="aramalar-kutu" hidden><h2>Aramalarım</h2>'
-                    '<p class="alt-baslik">Konu aramaların burada saklanır. Dokun, sonuçları aç.</p>'
-                    '<div class="kart aramalar" id="aramalar"></div></div>')
-    trend = "".join(trend_kart(n) for n in nisler) or '<p class="bos-not">Henüz birden fazla kanalda ortak konu çıkmadı.</p>'
+        karsilama = ('<div class="kart karsilama" id="karsilama" hidden><b>👋 Niş Avcısı\'na hoş geldin!</b><ul>'
+                     '<li>🔥 Her gün dünyada ve Türkiye\'de <b>az videoyla patlayan yeni kanalları</b> bulur.</li>'
+                     '<li>🟢 Bir konunun <b>boş mu doymuş mu</b> olduğunu ölçer, hangi dilde yapman gerektiğini söyler.</li>'
+                     '<li>⭐ Beğendiğin kanalı yıldızla; <b>👤 Profil</b>\'den ilgi alanlarını seç, sana özel filtrelensin.</li>'
+                     '</ul><button class="btn ana" type="button" id="karsilama-kapat">Başlayalım</button></div>')
+        aramalar = (f'<section id="bugun">{karsilama}<p class="selam" id="selam" hidden></p>{one}{hafta_html()}</section>')
+        benim = ('<section id="benim"><div id="fav-kutu"><h2 id="begendiklerim">⭐ Beğendiklerim</h2>'
+                 '<p class="alt-baslik">Yıldızladığın kanallar. Dokun, kanala gir; yıldıza basarsan listeden çıkar.</p>'
+                 '<div class="kart" id="fav-liste"></div><p class="bos-not" id="fav-bos">Henüz yıldızladığın kanal yok. '
+                 'Beğendiğin kanalın köşesindeki ☆\'a bas.</p></div>'
+                 '<div id="aramalar-kutu" hidden><h2>🔍 Aramalar ve incelemeler</h2>'
+                 '<p class="alt-baslik">Konu aramaları ve kanal incelemeleri burada saklanır. Dokun, sonuçları aç.</p>'
+                 '<div class="kart aramalar" id="aramalar"></div></div>'
+                 f'<a class="kart profil-link" href="{kok}profil.html"><span>👤 Profilim ve ilgi alanlarım</span>'
+                 '<span class="ok">›</span></a></section>')
+    trend = "".join(trend_kart(n) for n in nisler)
+    trend_bolum = ('<h2>📊 Trend raporu</h2><p class="alt-baslik">Birden fazla yeni kanalda aynı anda patlayan konular: '
+                   'nereden çıktı, kaç kanal yapıyor, ne kadar hızlı.</p>' + trend) if trend else ""
     yarim = (f'<p class="uyari">⚠️ Kota tarama sırasında bitti, sonuçlar eksik olabilir. {KOTA_NOTU}</p>'
              if getattr(a, "kota_yarim", False) else "")
+    if not a.konular:
+        trend_bolum = f'<section id="trendler">{trend_bolum or ""}{karne_html()}</section>{benim}'
 
     sayfa_yaz(yol, kok=kok, baslik=baslik, ust=ust, genel=not a.konular,
               meta=f'{"Arama" if a.konular else "Son tarama"}: {tarih} · {kapsam} · son {a.gun} gün',
               govde=f"""{yarim}
 {aramalar}
 {govde}
-
-<h2>📊 Trend raporu</h2>
-<p class="alt-baslik">Birden fazla yeni kanalda aynı anda patlayan konular: nereden çıktı, kaç kanal yapıyor, ne kadar hızlı.</p>
-{trend}""",
+{trend_bolum}""",
               footer=f"""Sadece son {a.max_kanal_yasi} günde açılmış kanallar · ≤{kisa(a.max_abone)} abone · ≤{a.max_video} video ·
 ≥{kisa(a.min_izlenme)} izlenme · reklamla şişmiş videolar elendi · {harcanan} kota birimi.
 Otomatik genel tarama her gün 11:17'de (kota yenilendikten sonra).<br>
@@ -1314,8 +1735,9 @@ def sayfa_yaz(yol, *, kok, baslik, meta, govde, footer, ust="", genel=False):
 <style>{CSS}</style></head><body data-kok="{kok}" data-uret="{uret}" data-genel="{1 if genel else 0}"
 data-tara="{TARA_LINKI}"><main>
 {ust}<header><h1>{baslik}</h1>
-<a class="btn ana" href="{TARA_LINKI}" target="_blank" rel="noopener" id="tara">Tara</a>
+<a class="btn ana sahip" href="{TARA_LINKI}" target="_blank" rel="noopener" id="tara">Tara</a>
 <a class="btn ikinci ikon" href="{kok}index.html#begendiklerim" id="fav-sayi" aria-label="Beğendiklerim">⭐</a>
+<a class="btn ikinci ikon" href="{kok}profil.html" id="profil-dugme" aria-label="Profil">👤</a>
 <button class="btn ikinci ikon" onclick="location.reload()" aria-label="Yenile">↻</button></header>
 <p class="meta">{meta}</p>
 <p class="uyari" id="uyari" hidden></p>
@@ -1326,13 +1748,70 @@ tarama yapar. Yeşil <b>Run workflow</b>'a bas, 2 dakika sonra ↻ ile yenile.</
 <b>Kanal</b> kutusuna yapıştır, yeşil <b>Run workflow</b>'a bas. 1–2 dakika sonra inceleme <b>Aramalarım</b>'da çıkar.</p>
 {govde}
 
-<footer>{footer}</footer>
+<footer>{footer}<br><a href="{kok}gizlilik.html">Gizlilik ve kullanım</a> · YouTube verileri
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube API Hizmetleri</a> ile alınır.</footer>
 </main>
+<nav class="alt-menu" aria-label="Bölümler">
+<a href="{kok}index.html#bugun" data-b="bugun"><span>🏠</span>Bugün</a>
+<a href="{kok}index.html#kanallar" data-b="kanallar"><span>🔥</span>Kanallar</a>
+<a href="{kok}index.html#sira-disi" data-b="sira-disi"><span>🎯</span>Sıra dışı</a>
+<a href="{kok}index.html#trendler" data-b="trendler"><span>📊</span>Trendler</a>
+<a href="{kok}index.html#benim" data-b="benim"><span>⭐</span>Benim</a></nav>
+<div class="bildirim" id="bildirim" hidden></div>
 <script>{JS}</script>
 </body></html>"""
     os.makedirs(os.path.dirname(yol), exist_ok=True)
     with open(yol, "w", encoding="utf-8") as f:
         f.write(sayfa)
+
+
+AVATARLAR = "😎 🦊 🐯 🚀 🎬 🎮 🎨 📚 🔥 🌍 💡 🎧".split()
+
+
+def yardimci_sayfalar(site):
+    """Profil ve gizlilik sayfaları (her taramada yeniden yazılır, kota harcamaz)."""
+    kategoriler = "".join(f'<button type="button" class="filtre ilgi-sec" data-kat="{html.escape(k)}">{html.escape(k)}</button>'
+                          for k in KATEGORILER.values())
+    avatarlar = "".join(f'<button type="button" class="avatar-sec" data-a="{a}">{a}</button>' for a in AVATARLAR)
+    sayfa_yaz(os.path.join(site, "profil.html"), kok="", baslik="👤 Profilim",
+              ust='<a class="geri" href="index.html">← Ana sayfa</a>', meta="Profilin sadece bu telefonda saklanır.",
+              govde=f"""<section class="kart bolum profil" id="profil-form">
+<label>Adın<input id="p-ad" maxlength="30" placeholder="Örn. Adnan" autocomplete="nickname"></label>
+<p class="etiket">Avatarın</p><div class="avatarlar">{avatarlar}</div>
+<p class="etiket">🎯 İlgi alanların <span class="kucuk">(Senin için filtresi bunlara göre çalışır)</span></p>
+<div class="filtreler sarili">{kategoriler}</div>
+<label>Kendi kelimelerin <span class="kucuk">(virgülle ayır)</span>
+<input id="p-kelime" placeholder="Örn. yapay zeka, kripto, minecraft"></label>
+<p class="etiket">⚙️ Ayarlar</p>
+<label class="anahtar"><input type="checkbox" id="p-sahip"> Tarama ve İncele düğmelerini göster
+<span class="kucuk">(sadece uygulamanın sahibi için; diğer kullanıcılar tarama yapamaz)</span></label>
+<div class="eylem"><button class="gir" type="button" id="p-kaydet">Kaydet</button>
+<button class="incele" type="button" id="p-sil">Verilerimi sil</button></div>
+</section>""",
+              footer="Profil, beğendiklerin ve ayarların hiçbir sunucuya gönderilmez; sadece bu cihazın tarayıcı hafızasında durur.")
+    sayfa_yaz(os.path.join(site, "gizlilik.html"), kok="", baslik="🔒 Gizlilik",
+              ust='<a class="geri" href="index.html">← Ana sayfa</a>', meta="Gizlilik politikası ve kullanım koşulları",
+              govde="""<section class="kart bolum metin">
+<h3>Hangi verileri topluyoruz?</h3>
+<p><b>Hiçbirini.</b> Niş Avcısı'nda hesap yoktur. Profilin (adın, avatarın, ilgi alanların), beğendiğin kanallar ve
+ayarların yalnızca kendi cihazının tarayıcı hafızasında (localStorage) saklanır; hiçbir sunucuya gönderilmez.
+Ayarlar sayfasındaki "Verilerimi sil" düğmesiyle hepsini istediğin an silebilirsin.</p>
+<h3>YouTube verileri</h3>
+<p>Uygulamadaki kanal, video ve izlenme bilgileri <a href="https://developers.google.com/youtube" target="_blank"
+rel="noopener">YouTube API Hizmetleri</a> kullanılarak herkese açık YouTube verilerinden alınır. Uygulamayı kullanarak
+<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Hizmet Şartları</a>'nı kabul etmiş
+olursun. Google'ın verileri nasıl işlediği için:
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.
+YouTube'dan alınan veriler en fazla 30 gün saklanır, sonra silinir.</p>
+<h3>Tahminler hakkında</h3>
+<p>Kazanç seviyeleri, fırsat puanları ve öneriler herkese açık verilere dayanan otomatik ve kaba tahminlerdir;
+yatırım ya da finansal tavsiye değildir. Son karar her zaman senindir.</p>
+<h3>Çerezler ve reklam</h3>
+<p>Uygulama çerez, reklam ya da takip aracı kullanmaz.</p>
+<h3>İletişim</h3>
+<p>Sorular ve veri talepleri için iletişim adresi yakında eklenecek.</p>
+</section>""",
+              footer="Son güncelleme: " + dt.datetime.now(TR_SAAT).strftime("%d.%m.%Y"))
 
 
 def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
@@ -1345,9 +1824,13 @@ def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
         return f'{e(metin)} <span class="ceviri">({e(t)})</span>' if t else e(metin)
 
     def dolar(ab):
-        lo, hi = ab
-        f = lambda d: f"${kisa(d)}" if d >= 1000 else f"${d:,.0f}"
-        return f"{f(lo)} – {f(hi)}"
+        """Kesin rakam yerine büyüklük: tahmin kaba olduğu için "$213–$1.7K" yanıltıcı derecede kesin görünüyordu."""
+        orta = (max(ab[0], 0.01) * max(ab[1], 0.01)) ** .5
+        for sinir, metin in ((100, "100 doların altı"), (1_000, "yüzlerce dolar"), (10_000, "binlerce dolar"),
+                             (100_000, "on binlerce dolar"), (1_000_000, "yüz binlerce dolar")):
+            if orta < sinir:
+                return metin
+        return "milyonlarca dolar"
 
     abone = "gizli" if x["abone"] is None else kisa(x["abone"])
     av = (f'<img class="av buyuk-av" src="{e(x["kapak"])}" alt="" loading="lazy">' if x["kapak"]
@@ -1369,15 +1852,17 @@ def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
                 f'<div><b>{kisa(x["video_basi"])}</b><span>video başına</span></div>'
                 f'<div><b>{kisa(x["medyan"])}</b><span>tipik video*</span></div>'
                 f'<div><b>%{x["etkilesim"] * 100:.1f}</b><span>etkileşim</span></div></div>'
-                f'<div class="eylem"><a class="gir" href="{kanal_link(x["id"])}" target="_blank" rel="noopener">Kanala gir ›</a></div>'
+                f'<div class="eylem"><a class="gir" href="{kanal_link(x["id"])}" target="_blank" rel="noopener">Kanala gir ›</a>'
+                f'<button class="paylas" type="button" aria-label="Paylaş" data-url="{kanal_link(x["id"])}" '
+                f'data-baslik="{e(x["ad"])}: {e(ozet)}">↗</button></div>'
                 f'</article>')
 
     ypp = ("" if x["abone"] is None or x["abone"] >= 1000 else
            '<li>⚠️ 1.000 abonenin altında: büyük ihtimalle henüz YouTube para kazanma programında değil, şu an reklam geliri yok.</li>')
     kazanc = (f'<article class="kart bolum"><h3>💰 Tahmini kazanç</h3><ul class="satirlar">'
               f'<li>Pazar: <b>{seviye}</b>{" (dilden tahmin)" if x["seviye_tahmini"] else ""} · {e(ulke)}</li>'
-              f'<li>Aylık ortalama: <b>{dolar(x["aylik_gelir"])}</b></li>'
-              f'<li>Kanal açıldığından beri toplam: <b>{dolar(x["toplam_gelir"])}</b></li>'
+              f'<li>Aylık ortalama: <b>{dolar(x["aylik_gelir"])}</b> seviyesi</li>'
+              f'<li>Kanal açıldığından beri toplam: <b>{dolar(x["toplam_gelir"])}</b> seviyesi</li>'
               f'<li>İzlenmelerde Shorts payı: %{round(x["pay_kisa"] * 100)} (Shorts çok daha az kazandırır).</li>{ypp}'
               f'</ul><p class="kucuk">Sadece YouTube reklam geliri, kaba tahmin. Sponsorluk ve bağış dahil değil.</p></article>')
 
@@ -1436,6 +1921,17 @@ def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
         + f'<span class="kucuk">▶ {kisa(v["izl"])} izlenme · {v["ts"].astimezone(TR_SAAT):%d.%m.%Y}</span></span></a>'
         for v in x["en_iyiler"])
     en_iyi = f'<article class="kart"><div class="bolum" style="padding-bottom:0"><h3>🏆 En çok izlenen videoları</h3></div>{en_iyiler}</article>'
+    sd = "".join(
+        f'<a class="video" href="{video_link(v["id"])}" target="_blank" rel="noopener">'
+        f'<img src="{e(v["kapak"])}" alt="" loading="lazy"><span><span class="vb">{e(v["baslik"])}</span>'
+        + (f'<span class="kucuk ceviri">{e(tr[v["baslik"]])}</span>' if tr.get(v["baslik"]) else "")
+        + f'<span class="kucuk"><b class="kat">{v["oran"]:.0f}× normal</b> · {kisa(v["izl"])} izlenme</span></span></a>'
+        for v in x["sira_disi"])
+    sira_disi_html = (f'<article class="kart"><div class="bolum" style="padding-bottom:0"><h3>🎯 Sıra dışı videoları</h3>'
+                      f'<p class="kucuk">Kanalın tipik videosunun ({kisa(x["medyan"])}) en az 3 katı izlenenler: '
+                      f'izleyicinin asıl istediği bunlar.</p></div>{sd}</article>') if sd else ""
+    fikir = (f'<article class="kart bolum">{fikir_kutusu(x.get("fikirler", []), tr)}</article>'
+             if x.get("fikirler") else "")
 
     if pazar and (pazar.get("en") or pazar.get("tr")):
         pz = "".join(f'<li>{ad}: <span class="fr {FIRSAT_ETIKET[f["seviye"]][0]}">{FIRSAT_ETIKET[f["seviye"]][1]}</span> '
@@ -1453,7 +1949,8 @@ def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
 
     sayfa_yaz(yol, kok=kok, baslik="🔍 " + e(x["ad"]), ust=f'<a class="geri" href="{kok}index.html">← Ana sayfa</a>',
               meta=f'Kanal incelemesi: {tarih} · son {x["analiz_edilen"]} video incelendi',
-              govde=ust_kart + oneri + kazanc + konu + pazar_html + performans + format_ + duzen + basliklar + en_iyi,
+              govde=(ust_kart + oneri + fikir + sira_disi_html + kazanc + konu + pazar_html + performans + format_ + duzen
+                     + basliklar + en_iyi),
               footer=f'* Tipik video: videoların ortanca (medyan) izlenmesi; birkaç viral video ortalamayı şişirmesin diye. '
                      f'Kazanç rakamları ülke ve Shorts oranına göre kaba tahmindir. {harcanan} kota birimi.')
 
@@ -1475,6 +1972,8 @@ def calistir_kanal(a, yt, durum_yol):
                                  ts=simdi_tr().isoformat(timespec="minutes")))
         return
     x = kanal_analiz(c, vids)
+    x["fikirler"] = video_fikirleri([x["konusu"]]).get(x["konusu"], []) if x["konusu"] else []
+    yardimci_sayfalar(a.site)
     # Konunun İngilizce ve Türkiye pazarındaki durumu (200 birim).
     pazar = None
     if x["konusu"]:
@@ -1482,7 +1981,8 @@ def calistir_kanal(a, yt, durum_yol):
         trc = (cevir(x["konusu"], "tr") or x["konusu"]).lower()
         pazar = dict(en=firsat_olc(yt, a, [en], bolge="", dil="en").get(en),
                      tr=firsat_olc(yt, a, [trc], bolge="TR", dil="tr").get(trc))
-    tr = turkceye([x["konusu"], x["aciklama"]] + x["youtube_konulari"] + [v["baslik"] for v in x["en_iyiler"]])
+    tr = turkceye([x["konusu"], x["aciklama"]] + x["youtube_konulari"] + [v["baslik"] for v in x["en_iyiler"]]
+                  + [v["baslik"] for v in x["sira_disi"]] + x["fikirler"])
     dosya = f"kanal/{x['id']}.html"
     kanal_rapor(x, pazar, tr, os.path.join(a.site, dosya), yt.harcanan)
     aramalar_yol = os.path.join(a.site, "aramalar.json")
@@ -1552,12 +2052,28 @@ def calistir(a):
     metinler += [n["terim"] for n in nisler]
     metinler += [t for ana, altlar in getattr(a, "harita", {}).values() for t, _ in altlar]
     a.ceviri_tr = turkceye(metinler)
+    # Video fikirleri: en güçlü trend konuları (genel) ya da boş/orta alt konular (konulu) için gerçek aramalar.
+    if a.konular:
+        fikir_terimleri = [t for _, altlar in a.harita.values() for t, f in altlar if f["seviye"] in ("bos", "orta")][:6]
+    else:
+        fikir_terimleri = [n["terim"] for n in nisler[:5]]
+    a.fikirler = video_fikirleri(fikir_terimleri)
+    a.ceviri_tr.update(turkceye([s for l in a.fikirler.values() for s in l]))
     db = db_ac(a.db)
     try:
         gecmisle_karsilastir(db, sonuc)
         trend_gecmisi(db, nisler)
+        firsatlar = [(n["terim"], n.get("firsat")) for n in nisler]
+        firsatlar += [(t, f) for _, altlar in getattr(a, "harita", {}).values() for t, f in altlar]
+        kanal_kaydet(db, kanallar, firsatlar)
+        a.ilk_gorulme = ilk_gorulme(db)
+        if not a.konular:
+            a.karne = karne_hesapla(db, yt)
+            a.hafta = hafta_ozeti(db)
+        eski_sil(db)
     finally:
         db.close()
+    yardimci_sayfalar(a.site)
 
     if a.konular:
         dosya = f"konu/{slug(','.join(a.konular))}{'-tr' if a.bolge == 'TR' else ''}.html"

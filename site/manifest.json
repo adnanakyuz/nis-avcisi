@@ -1,15 +1,24 @@
 {
+  "id": "./",
   "name": "Niş Avcısı",
   "short_name": "Niş Avcısı",
-  "description": "YouTube'da yükselen nişleri ve az videoyla patlayan kanalları gösterir.",
+  "description": "YouTube'da az videoyla patlayan yeni kanalları ve henüz doymamış nişleri her gün bulur.",
   "lang": "tr",
-  "start_url": "./",
+  "dir": "ltr",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#f6f5f2",
   "theme_color": "#d4361c",
+  "categories": ["productivity", "business", "entertainment"],
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Patlayan kanallar", "url": "./index.html#kanallar" },
+    { "name": "Beğendiklerim", "url": "./index.html#benim" }
   ]
 }
