@@ -4,7 +4,7 @@ name: Niş taraması
 
 on:
   schedule:
-    - cron: "17 8 * * *"   # her gün Türkiye saatiyle 11:17: kota (10–11 arası) yenilendikten hemen sonra, ~4.750 birim
+    - cron: "17 8 * * *"   # her gün Türkiye saatiyle 11:17: kota (10–11 arası) yenilendikten hemen sonra, ~4.750 birim (haftada bir evergreen ile ~6.000)
   workflow_dispatch:
     inputs:
       konu:

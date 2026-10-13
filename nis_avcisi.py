@@ -13,6 +13,8 @@ Elle çalıştırmak için (Python 3.8+, ek paket gerekmez; YT_API_KEY ortam de�
 Kota: günlük 10.000 birim. Genel tarama ~4.750 birim (12 kategori × 2 zaman dilimi global
 + 12 kategori Türkiye, her biri 100; + 5 konunun fırsat ölçümü + en güçlü 3 kanalın İngilizce
 ve Türkiye pazar ölçümü, her biri 100; + detaylar). Çeviriler kota harcamaz.
+Haftada bir genel taramaya evergreen taraması eklenir (~1.250 birim); diğer günler evergreen
+videolarının takibi ~1 birim. Konulu aramada konunun kalıcılık ölçümü +100 birim.
 Global konulu tarama 1 konu için ~1.600 birim (Türkçe + İngilizce 150'şer video + ana konu,
 İngilizcesi ve 8 alt konunun fırsat ölçümü); alt konu önerileri ve çeviri kota harcamaz.
 """
@@ -198,6 +200,12 @@ DIL_AD = {"en": "İngilizce", "tr": "Türkçe", "ur": "Urduca", "hi": "Hintçe",
           "th": "Tayca", "fil": "Filipince", "pl": "Lehçe", "nl": "Felemenkçe"}
 
 
+def yt_kategorileri(kanal):
+    """YouTube'un kanala verdiği konu kategorileri, okunur halde: "Lifestyle_(sociology)" → "lifestyle"."""
+    return [re.sub(r"\s*\(.*?\)", "", u.rsplit("/", 1)[-1].replace("_", " ")).strip().lower()
+            for u in kanal.get("topicDetails", {}).get("topicCategories", [])]
+
+
 def dil_adi(kod):
     return DIL_AD.get((kod or "").split("-")[0].lower(), kod or "belirtilmemiş")
 
@@ -338,6 +346,144 @@ def sira_disi(sonuc, esik=3, adet=10):
     return tekil[:adet]
 
 
+# ---------- evergreen (kalıcı içerik) ----------
+def evergreen_tara(yt, a, adet=30):
+    """Haftada bir: 6 ay – 2 yıl önce yüklenmiş ama hâlâ çok izlenen, küçük kanallara ait videolar.
+    12 kategori × 100 birim ≈ 1.250 birim. Kanal yaşı sınırı yok (video eski, kanal da eski olabilir)."""
+    simdi = dt.datetime.now(dt.timezone.utc)
+    bas, bit = tarih_str(simdi - dt.timedelta(days=730)), tarih_str(simdi - dt.timedelta(days=180))
+    kaynak = {}
+    for kid, ad in KATEGORILER.items():
+        try:
+            r = yt.get("search", 100, part="id", type="video", order="viewCount", publishedAfter=bas,
+                       publishedBefore=bit, videoCategoryId=kid, maxResults=50)
+        except ApiHatasi:
+            continue
+        except KotaBitti:
+            a.kota_yarim = True
+            break
+        for i in r.get("items", []):
+            v = i.get("id", {}).get("videoId")
+            if v and v not in kaynak:
+                kaynak[v] = ad
+        print(f"  🌲 {ad}")
+    ids = list(kaynak)
+    videolar, kanallar = {}, {}
+    try:
+        for i in range(0, len(ids), 50):
+            for v in yt.get("videos", 1, part="snippet,statistics,contentDetails", id=",".join(ids[i:i + 50])).get("items", []):
+                videolar[v["id"]] = v
+        kids = list({v["snippet"]["channelId"] for v in videolar.values()})
+        for i in range(0, len(kids), 50):
+            for c in yt.get("channels", 1, part="snippet,statistics,topicDetails", id=",".join(kids[i:i + 50])).get("items", []):
+                kanallar[c["id"]] = c
+    except (KotaBitti, ApiHatasi):
+        a.kota_yarim = True
+    liste = []
+    for vid, v in videolar.items():
+        c = kanallar.get(v["snippet"]["channelId"])
+        if not c or v["snippet"].get("liveBroadcastContent", "none") != "none":
+            continue
+        st, cs = v.get("statistics", {}), c.get("statistics", {})
+        izl = int(st.get("viewCount", 0))
+        abone = None if cs.get("hiddenSubscriberCount") else int(cs.get("subscriberCount", 0))
+        if izl < 200_000 or (abone is not None and abone > 250_000) or c["snippet"]["title"].endswith((" - Topic", "VEVO")):
+            continue
+        if "likeCount" in st and (int(st["likeCount"]) + int(st.get("commentCount", 0))) / izl < 0.0015:
+            continue  # reklamla şişmiş
+        yas = max((simdi - zaman(v["snippet"]["publishedAt"])).days, 1)
+        gunluk = izl / yas
+        liste.append(dict(
+            id=vid, baslik=v["snippet"]["title"], kapak=v["snippet"]["thumbnails"].get("medium", {}).get("url", ""),
+            kanal=c["snippet"]["title"], kanal_id=c["id"], ulke=c["snippet"].get("country", ""),
+            dil=v["snippet"].get("defaultAudioLanguage") or v["snippet"].get("defaultLanguage") or "",
+            izlenme=izl, abone=abone, video_sayisi=int(cs.get("videoCount", 0)), kanal_izlenme=int(cs.get("viewCount", 0)),
+            yayin_ts=v["snippet"]["publishedAt"], yas_gun=yas, gunluk_ort=gunluk, kaynak=kaynak[vid],
+            etiketler=v["snippet"].get("tags", [])[:15], yt_konular=yt_kategorileri(c),
+            sure=sure_sn(v.get("contentDetails", {}).get("duration")),
+            puan=math.log10(gunluk + 1) + .5 * math.log10(izl / max(abone or 0, 100) + 1)))
+    liste.sort(key=lambda x: -x["puan"])
+    tekil, gorulen = [], set()
+    for x in liste:  # kanal başına 1 video
+        if x["kanal_id"] not in gorulen:
+            gorulen.add(x["kanal_id"])
+            tekil.append(x)
+    return tekil[:adet]
+
+
+def evergreen_guncelle(yt, db, liste):
+    """Her gün: evergreen videoların güncel izlenmesi (50 video = 1 birim) ve son ölçümden beri günlük kazanç.
+    "1,5 yıllık video hâlâ günde 12 bin izlenme alıyor" = kalıcı olduğunun gerçek kanıtı."""
+    if not liste:
+        return
+    simdi = dt.datetime.now(dt.timezone.utc)
+    guncel = {}
+    try:
+        ids = [x["id"] for x in liste]
+        for i in range(0, len(ids), 50):
+            for v in yt.get("videos", 1, part="statistics", id=",".join(ids[i:i + 50])).get("items", []):
+                guncel[v["id"]] = int(v.get("statistics", {}).get("viewCount", 0))
+    except (KotaBitti, ApiHatasi):
+        return
+    ts = simdi.isoformat()
+    for x in liste:
+        if x["id"] not in guncel:
+            continue
+        onceki = db.execute("SELECT ts, izlenme FROM anlik WHERE video_id=? ORDER BY ts DESC LIMIT 1", (x["id"],)).fetchone()
+        x["izlenme"] = guncel[x["id"]]
+        x["yas_gun"] = max((simdi - zaman(x["yayin_ts"])).days, 1)
+        x["gunluk_ort"] = x["izlenme"] / x["yas_gun"]
+        if onceki:
+            gun = (simdi - zaman(onceki[0])).total_seconds() / 86400
+            if gun >= .5:
+                x["gunluk_son"] = max(guncel[x["id"]] - onceki[1], 0) / gun
+                x["olcum_gun"] = round(gun)
+        db.execute("INSERT INTO anlik VALUES(?,?,?)", (x["id"], ts, guncel[x["id"]]))
+    db.commit()
+
+
+def evergreen_konular(liste, adet=6):
+    """Evergreen videolarda birden fazla kanalın ortak işlediği konular (kota harcamaz)."""
+    kanal, toplam = collections.defaultdict(set), collections.Counter()
+    for x in liste:
+        for t in ifadeler([x["baslik"]] + x["etiketler"]):
+            if " " in t:
+                kanal[t].add(x["kanal_id"])
+                toplam[t] += x["izlenme"]
+    adaylar = sorted((t for t in kanal if len(kanal[t]) >= 2), key=lambda t: (-len(kanal[t]), -toplam[t]))
+    secilen = []
+    for t in adaylar:
+        if not any(set(t.split()) & set(s.split()) for s, _, _ in secilen):
+            secilen.append((t, len(kanal[t]), toplam[t]))
+        if len(secilen) >= adet:
+            break
+    return secilen
+
+
+def kalicilik_olc(yt, a, terim):
+    """Konulu arama için: 6 ay – 2 yıl önceki videolar hâlâ çok izleniyor mu? (100 birim)
+    Eski videoların tipik izlenmesi yüksekse konu kalıcıdır (evergreen), düşükse geçici bir trenddir."""
+    simdi = dt.datetime.now(dt.timezone.utc)
+    try:
+        r = yt.get("search", 100, part="id", type="video", order="viewCount", q=terim,
+                   publishedAfter=tarih_str(simdi - dt.timedelta(days=730)),
+                   publishedBefore=tarih_str(simdi - dt.timedelta(days=180)),
+                   regionCode=a.bolge or None, relevanceLanguage=a.dil or None, maxResults=25)
+        ids = [i["id"]["videoId"] for i in r.get("items", []) if i.get("id", {}).get("videoId")]
+        izl = [int(v.get("statistics", {}).get("viewCount", 0))
+               for v in yt.get("videos", 1, part="statistics", id=",".join(ids)).get("items", [])] if ids else []
+    except (KotaBitti, ApiHatasi):
+        return None
+    medyan = orta_deger(izl)
+    if len(izl) >= 5 and medyan >= 100_000:
+        seviye, etiket = "kalici", "🌲 Kalıcı konu"
+    elif len(izl) >= 5 and medyan >= 20_000:
+        seviye, etiket = "yari", "🌗 Yarı kalıcı"
+    else:
+        seviye, etiket = "gecici", "⚡ Daha çok geçici trend"
+    return dict(seviye=seviye, etiket=etiket, medyan=medyan, adet=len(izl))
+
+
 SORU_ON_EK = {"tr": ["nasıl", "neden", "en iyi", "nedir"], "en": ["how to", "why", "what is", "best"]}
 
 
@@ -468,7 +614,7 @@ def tara(yt, a):
             id=vid, baslik=v["snippet"]["title"], kanal=c["snippet"]["title"], kanal_id=c["id"],
             kanal_kapak=c["snippet"].get("thumbnails", {}).get("default", {}).get("url", ""),
             ulke=c["snippet"].get("country", ""),
-            yt_konular=[u.rsplit("/", 1)[-1].replace("_", " ") for u in c.get("topicDetails", {}).get("topicCategories", [])],
+            yt_konular=yt_kategorileri(c),
             kapak=v["snippet"]["thumbnails"].get("medium", {}).get("url", ""),
             izlenme=izl, abone=abone, video_sayisi=vsay, kanal_izlenme=k_izl,
             video_basi=video_basi, saatlik=izl / saat, kanal_yasi=kanal_yasi,
@@ -510,7 +656,8 @@ def nis_cikar(sonuc, adet=12, haric=()):
             terim_puan[t] += s["puan"] * {1: 1, 2: 2, 3: 2.4}[t.count(" ") + 1]
             terim_video[t].append(s)
     # Tek kelime en az 3 farklı kanalda, ifade en az 2 kanalda geçmeli.
-    adaylar = [(t, p) for t, p in terim_puan.items() if len(terim_kanal[t]) >= (2 if " " in t else 3)]
+    # Tek kelime ("car", "dad") çok genel kalıyor: en az 4 farklı kanalda geçmeli; 2-3 kelimelik ifade 2 kanal yeter.
+    adaylar = [(t, p) for t, p in terim_puan.items() if len(terim_kanal[t]) >= (2 if " " in t else 4)]
     adaylar.sort(key=lambda x: -x[1] * len(terim_kanal[x[0]]))
     secilen, kullanilan = [], set()
     for t, p in adaylar:
@@ -764,7 +911,7 @@ def kanal_analiz(c, vids):
     metinler = [[v["baslik"]] + v["etiketler"] for v in vids]
     en_iyiler = sorted(vids, key=lambda v: -v["izl"])[:5]
     sik = collections.Counter(w for m in metinler for w in ifadeler(m) if " " not in w)
-    konular = [re.sub(r"_", " ", u.rsplit("/", 1)[-1]) for u in c.get("topicDetails", {}).get("topicCategories", [])]
+    konular = yt_kategorileri(c)
     # Tahmini kazanç: aylık izlenme ≈ toplam izlenme / kanal yaşı (ay); Shorts payı ayrı fiyatlanır.
     s = seviye or "orta"
     aylik = toplam / max(yas / 30, 1)
@@ -921,7 +1068,9 @@ def one_cikanlar(kanallar, nisler):
                                   f'video başına {kisa(k["video_basi"])}'))
     # Konu: önce 🟢 boş alanlar, sonra en çok kanalın aynı anda tutturduğu.
     if nisler:
-        n = min(nisler, key=lambda n: (FIRSAT_SIRA[n["firsat"]["seviye"]] if n.get("firsat") else 1.5, -n["kanal_sayisi"]))
+        # Önce 2-3 kelimelik konular ("parenting humor"), çünkü tek kelime ("car") niş değil kategori gibi kalıyor.
+        n = min(nisler, key=lambda n: (" " not in n["terim"],
+                                       FIRSAT_SIRA[n["firsat"]["seviye"]] if n.get("firsat") else 1.5, -n["kanal_sayisi"]))
         f = n.get("firsat")
         kartlar.append(dict(tip="konu", ikon="🎯", baslik="Günün konusu", n=n,
                             neden=f'<b>{n["kanal_sayisi"]} yeni kanal</b> aynı anda tutturdu · toplam {kisa(n["toplam"])} izlenme'
@@ -1209,6 +1358,9 @@ details.fikir ul{margin:6px 0 0;padding-left:18px} details.fikir li{margin:5px 0
 .avatar-sec.secili{border-color:var(--vurgu)} .profil .eylem{margin:18px 0 0}
 .metin p{font-size:15px} .metin a{text-decoration:underline}
 footer a{text-decoration:underline}
+.kalicilik{margin:6px 0 10px;padding:10px 12px;border-radius:12px;background:var(--zemin2);font-size:14px}
+.kalicilik.kalici b{color:var(--iyi)} .kalicilik.yari b{color:var(--uyari)} .kalicilik.gecici b{color:var(--vurgu)}
+.eg-kart .video{padding-right:52px} .eg-kart .one-neden{margin-top:0}
 .bildirim{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--yazi);color:var(--bg);
   padding:10px 16px;border-radius:999px;font-size:14px;z-index:20;max-width:90%}
 article.kart{position:relative} .kanal{padding-right:44px}
@@ -1489,6 +1641,49 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
     def fikir_html(terim):
         return fikir_kutusu(getattr(a, "fikirler", {}).get(terim, []), tr)
 
+    def evergreen_html():
+        veri = getattr(a, "evergreen_veri", None) or {}
+        liste = veri.get("liste", [])
+        bas = ('<section id="evergreen"><h2>🌲 Kalıcı içerik (evergreen)</h2><p class="alt-baslik">6 ay – 2 yıl önce '
+               'yüklenmiş ama hâlâ izlenen, küçük kanallara ait videolar. Trend gibi sönmez; yıllarca izlenip '
+               'kazandırmaya devam eder.</p>')
+        if not liste:
+            return bas + '<p class="bos-not">İlk evergreen taraması bir sonraki genel taramada yapılacak.</p></section>'
+        konular = evergreen_konular(liste)
+        cipler = "".join(f'<a class="cip" href="{arama_link(t)}" target="_blank" rel="noopener">{cevirili(t)} · '
+                         f'{n} kanal</a>' for t, n, _ in konular)
+        kartlar = ""
+        for x in liste[:20]:
+            konusu = kanal_konusu(dict(kanal_id=x["kanal_id"], basliklar=[[x["baslik"]] + x["etiketler"]],
+                                       kategori=x["kaynak"], yt_konular=x.get("yt_konular", [])), {})
+            kazanc = kazanc_seviyesi(x["ulke"], x["dil"])
+            ay = round(x["yas_gun"] / 30)
+            abone = "abone gizli" if x["abone"] is None else f'{kisa(x["abone"])} abone'
+            ozet = f'{ay} ay önce yüklenen videosu {kisa(x["izlenme"])} izlenmede, hâlâ izleniyor'
+            canli = (f'<span class="kucuk"><b class="artis">✅ Hâlâ canlı: son {x["olcum_gun"]} günde günde '
+                     f'{kisa(x["gunluk_son"])} izlenme</b></span>' if x.get("gunluk_son") else "")
+            kartlar += (
+                f'<article class="kart eg-kart">'
+                f'<button class="yildiz" type="button" aria-label="Beğendiklerime ekle" data-id="{e(x["kanal_id"])}" '
+                f'data-ad="{e(x["kanal"])}" data-konu="{e(konusu)}" data-ozet="{e(ozet)}" data-ulke="{bayrak(x["ulke"])}">☆</button>'
+                f'<a class="video" href="{video_link(x["id"])}" target="_blank" rel="noopener" style="margin-top:0;border-top:0">'
+                f'<img src="{e(x["kapak"])}" alt="" loading="lazy"><span><span class="vb">{e(x["baslik"])}</span>'
+                + (f'<span class="kucuk ceviri">{e(tr[x["baslik"]])}</span>' if tr.get(x["baslik"]) else "")
+                + f'<span class="kucuk">🌲 <b>{ay} ay önce</b> yüklendi · {kisa(x["izlenme"])} izlenme · '
+                  f'ortalama günde {kisa(x["gunluk_ort"])}</span>{canli}</span></a>'
+                f'<p class="one-neden">{bayrak(x["ulke"])} <b>{e(x["kanal"])}</b> · {abone} · '
+                f'Konusu: <b>{cevirili(konusu)}</b>'
+                + (f' · <span class="rz kz {kazanc}">{KAZANC_ETIKET[kazanc]}</span>' if kazanc else "") + '</p>'
+                f'<div class="eylem"><a class="gir" href="{kanal_link(x["kanal_id"])}" target="_blank" rel="noopener">'
+                f'Kanala gir ›</a>{incele_dugmesi(x["kanal_id"])}'
+                f'<button class="paylas" type="button" aria-label="Paylaş" data-url="{video_link(x["id"])}" '
+                f'data-baslik="{e(x["kanal"])}: {e(ozet)}">↗</button></div></article>')
+        tarih = zaman(veri["ts"]).astimezone(TR_SAAT).strftime("%d.%m")
+        return (bas + (f'<p class="kucuk">Kalıcı konular (dokun, YouTube\'da ara):</p><div class="cipler" '
+                       f'style="margin-bottom:12px">{cipler}</div>' if cipler else "")
+                + kartlar + f'<p class="kucuk">Evergreen listesi {tarih} tarihinde tarandı, haftada bir yenilenir; '
+                            f'"hâlâ canlı" ölçümü her gün güncellenir.</p></section>')
+
     def hafta_html():
         l = getattr(a, "hafta", [])
         if not l:
@@ -1620,7 +1815,13 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
         for k, (ana, altlar) in getattr(a, "harita", {}).items():
             altlar = sorted(altlar, key=lambda x: (FIRSAT_SIRA[x[1]["seviye"]], -x[1]["pay"]))
             bos = sum(f["seviye"] == "bos" for _, f in altlar)
-            govde += (f'<h2>🧭 Fırsat haritası: {e(k)}</h2><p class="alt-baslik">İnsanların YouTube\'da aradığı alt konular, '
+            kl = getattr(a, "kalicilik", {}).get(k)
+            kalici = (f'<p class="kalicilik {kl["seviye"]}"><b>{kl["etiket"]}</b> · 6 ay – 2 yıl önceki videoların tipik '
+                      f'izlenmesi {kisa(kl["medyan"])}'
+                      + (": eski videolar hâlâ izleniyor, yıllarca kazandırabilir." if kl["seviye"] == "kalici" else
+                         ": eski videolar orta düzeyde izleniyor." if kl["seviye"] == "yari" else
+                         ": eski videolar pek izlenmiyor, ilgi geçici olabilir.") + "</p>") if kl else ""
+            govde += (f'<h2>🧭 Fırsat haritası: {e(k)}</h2>{kalici}<p class="alt-baslik">İnsanların YouTube\'da aradığı alt konular, '
                       f'en boştan en doyguna. {bos} boş alan bulundu.</p>'
                       + (harita_kart(k, ana, ana=True) if ana else "")
                       + ("".join(harita_kart(t, f) for t, f in altlar) or
@@ -1672,6 +1873,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                   + '<h2>🖼️ Kapak ilhamı</h2><p class="alt-baslik">En çok izlenen videoların kapakları. Dokun, videoyu aç.</p>'
                   + kapak_galerisi(sonuc) + "</section>")
         ust = ""
+        govde += evergreen_html()
 
         def one_kart(c):
             ust_satir = f'<div class="one-etiket">{c["ikon"]} {c["baslik"]}</div>'
@@ -1768,6 +1970,7 @@ tarama yapar. Yeşil <b>Run workflow</b>'a bas, 2 dakika sonra ↻ ile yenile.</
 <a href="{kok}index.html#bugun" data-b="bugun"><span>🏠</span>Bugün</a>
 <a href="{kok}index.html#kanallar" data-b="kanallar"><span>🔥</span>Kanallar</a>
 <a href="{kok}index.html#sira-disi" data-b="sira-disi"><span>🎯</span>Sıra dışı</a>
+<a href="{kok}index.html#evergreen" data-b="evergreen"><span>🌲</span>Kalıcı</a>
 <a href="{kok}index.html#trendler" data-b="trendler"><span>📊</span>Trendler</a>
 <a href="{kok}index.html#benim" data-b="benim"><span>⭐</span>Benim</a></nav>
 <div class="bildirim" id="bildirim" hidden></div>
@@ -2076,6 +2279,18 @@ def calistir(a):
         fikir_terimleri = [n["terim"] for n in nisler[:5]]
     a.fikirler = video_fikirleri(fikir_terimleri)
     a.ceviri_tr.update(turkceye([s for l in a.fikirler.values() for s in l]))
+    # Evergreen: konulu aramada konunun kalıcılığı (konu başına 100 birim);
+    # genel taramada haftada bir evergreen taraması (~1.250 birim), aradaki günler sadece takip (~1 birim).
+    a.kalicilik = {k: kalicilik_olc(yt, a, k) for k in a.konular}
+    eg_yol = os.path.join(a.site, "evergreen.json")
+    eg = {} if a.konular else json_oku(eg_yol, {})
+    if not a.konular:
+        eski = not eg.get("ts") or (dt.datetime.now(dt.timezone.utc) - zaman(eg["ts"])).days >= 6
+        if eski or a.evergreen:
+            print("Evergreen taraması (haftalık)...")
+            eg = dict(ts=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), liste=evergreen_tara(yt, a))
+        a.ceviri_tr.update(turkceye([x["baslik"] for x in eg.get("liste", [])]
+                                    + [t for t, _, _ in evergreen_konular(eg.get("liste", []))]))
     db = db_ac(a.db)
     try:
         gecmisle_karsilastir(db, sonuc)
@@ -2087,9 +2302,13 @@ def calistir(a):
         if not a.konular:
             a.karne = karne_hesapla(db, yt)
             a.hafta = hafta_ozeti(db)
+            evergreen_guncelle(yt, db, eg.get("liste", []))
         eski_sil(db)
     finally:
         db.close()
+    if not a.konular and eg:
+        json_yaz(eg_yol, eg)
+        a.evergreen_veri = eg
     yardimci_sayfalar(a.site)
 
     if a.konular:
@@ -2127,6 +2346,7 @@ def main():
     p.add_argument("--dil", default="", help="İçerik dili: tr, en, de... (boş = hepsi)")
     p.add_argument("--gun", type=int, default=14, help="Son kaç günde yayınlanan videolar")
     p.add_argument("--max-kanal-yasi", type=int, default=365, help="Bundan eski kanallar elenir (gün)")
+    p.add_argument("--evergreen", action="store_true", help="Haftalık evergreen taramasını şimdi yap (normalde 6 günde bir otomatik)")
     p.add_argument("--max-abone", type=int, default=100_000)
     p.add_argument("--max-video", type=int, default=40, help="Kanalın en fazla video sayısı")
     p.add_argument("--min-izlenme", type=int, help="Varsayılan: genel taramada 50K, konulu taramada 20K")
