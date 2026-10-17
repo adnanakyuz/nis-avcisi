@@ -435,12 +435,28 @@ def adaylari_dbden_kur(ist, nis_klasoru):
 
 # ---------- kart üretimi ----------
 def konu_bul(video, konu_haritasi):
-    """Videonun konusu: Niş Avcısı'nın trend konusu varsa o; yoksa etiketler / YouTube kategorisi."""
+    """Videonun konusu (gruplama ve "nis" alanı için): Niş Avcısı'nın trend konusu varsa o; yoksa etiketler /
+    YouTube kategorisi. Kanalın kendi adı olan etiketler (çok yaygın) konu sayılmaz."""
     if video["kanal_id"] in konu_haritasi:
         return konu_haritasi[video["kanal_id"]]
-    k = dict(kanal_id=video["kanal_id"], basliklar=[[video["baslik"]] + (video.get("etiketler") or [])],
+    kanal_adi = re.sub(r"\W", "", (video.get("kanal") or "").lower())
+    etiketler = [e for e in (video.get("etiketler") or [])
+                 if not kanal_adi or re.sub(r"\W", "", e.lower()) not in kanal_adi]
+    k = dict(kanal_id=video["kanal_id"], basliklar=[[video["baslik"]] + etiketler],
              kategori=video.get("kaynak") or "", yt_konular=video.get("yt_konular") or [])
     return na.kanal_konusu(k, {})
+
+
+def baslik_konusu(baslik, sinir=90):
+    """Kartın "konu" alanı: kaynak başlığın hashtag/emoji temizlenmiş Türkçesi (kısa ve net)."""
+    temiz = re.sub(r"#\S+|https?://\S+", " ", baslik)
+    temiz = na.EMOJI.sub(" ", temiz)
+    temiz = re.sub(r"\s*[|｜]\s*.*$", "", temiz)          # "Konu | Kanal adı" → "Konu"
+    temiz = re.sub(r"\s+", " ", temiz).strip(" -–—:") or baslik.strip()
+    tr = (na.cevir(temiz, "tr") or temiz).strip()
+    if len(tr) > sinir:
+        tr = tr[:sinir].rsplit(" ", 1)[0] + "…"
+    return tr[:1].upper() + tr[1:]
 
 
 def baslik_kaliplari(basliklar):
@@ -607,12 +623,10 @@ def kart_olustur(ist, db, f, profil, ayar, an, uyum):
         ozet += f" Bu konuda son 30 günde izlenmelerin %{(rk or f['nis_firsat'])['pay'] * 100:.0f}'si yeni/küçük kanallara gidiyor."
     kaynaklar = [v] + f["ayni_konu"]
     kid = kart_id_al(db, an)
-    tr_konu = na.cevir(f["konu"], "tr") if f["konu"] else ""
-    konu_metni = (tr_konu or f["konu"] or v["baslik"]).strip()
     kart = {
         "surum": SURUM, "id": kid, "kanal_id": profil["id"], "olusturma": iso(an), "guncelleme": iso(an),
         "durum": "yeni",
-        "konu": konu_metni[:1].upper() + konu_metni[1:],
+        "konu": baslik_konusu(v["baslik"]),
         "ozet": ozet,
         "nis": f"{v.get('kaynak') or ''}/{f['konu'] or ''}".strip("/") or None,
         "format": format_,
