@@ -1,0 +1,75 @@
+{
+  "_aciklama": "Her kanal için bir profil. Sayısı sınırsız: yeni kanal için bir bloğu kopyalayıp id'sini değiştir (kanal6, kanal7...). Boş bırakılan alanlar sorun çıkarmaz; ama 'nisler' ve 'anahtar_kelimeler' doldurulmadıkça fikirler kanallara sırayla dağıtılır ve 'kanal_uyumu' puanı hesaplanamaz.",
+  "kanallar": [
+    {
+      "id": "kanal1",
+      "ad": "Kanal 1 (adını yaz)",
+      "aktif": true,
+      "nisler": [],
+      "anahtar_kelimeler": [],
+      "takip_edilen_kanallar": [],
+      "dil": "tr",
+      "ton": "",
+      "hedef_kitle": "",
+      "formatlar": ["shorts", "uzun"],
+      "kacinilacak": [],
+      "gunluk_fikir_limiti": 5
+    },
+    {
+      "id": "kanal2",
+      "ad": "Kanal 2 (adını yaz)",
+      "aktif": true,
+      "nisler": [],
+      "anahtar_kelimeler": [],
+      "takip_edilen_kanallar": [],
+      "dil": "tr",
+      "ton": "",
+      "hedef_kitle": "",
+      "formatlar": ["shorts", "uzun"],
+      "kacinilacak": [],
+      "gunluk_fikir_limiti": 5
+    },
+    {
+      "id": "kanal3",
+      "ad": "Kanal 3 (adını yaz)",
+      "aktif": true,
+      "nisler": [],
+      "anahtar_kelimeler": [],
+      "takip_edilen_kanallar": [],
+      "dil": "tr",
+      "ton": "",
+      "hedef_kitle": "",
+      "formatlar": ["shorts", "uzun"],
+      "kacinilacak": [],
+      "gunluk_fikir_limiti": 5
+    },
+    {
+      "id": "kanal4",
+      "ad": "Kanal 4 (adını yaz)",
+      "aktif": true,
+      "nisler": [],
+      "anahtar_kelimeler": [],
+      "takip_edilen_kanallar": [],
+      "dil": "tr",
+      "ton": "",
+      "hedef_kitle": "",
+      "formatlar": ["shorts", "uzun"],
+      "kacinilacak": [],
+      "gunluk_fikir_limiti": 5
+    },
+    {
+      "id": "kanal5",
+      "ad": "Kanal 5 (adını yaz)",
+      "aktif": true,
+      "nisler": [],
+      "anahtar_kelimeler": [],
+      "takip_edilen_kanallar": [],
+      "dil": "tr",
+      "ton": "",
+      "hedef_kitle": "",
+      "formatlar": ["shorts", "uzun"],
+      "kacinilacak": [],
+      "gunluk_fikir_limiti": 5
+    }
+  ]
+}

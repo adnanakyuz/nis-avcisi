@@ -2175,6 +2175,18 @@ def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
                      f'Kazanç rakamları ülke ve Shorts oranına göre kaba tahmindir. {harcanan} kota birimi.')
 
 
+def adaylari_yaz(yol, sonuc, nisler):
+    """Fikir Kutusu (fikir_kutusu.py) için: bu taramanın aday videoları ve trend konuları, makine okunur halde.
+    Sayfada zaten herkese açık gösterilen bilgilerdir; mevcut hiçbir davranışı değiştirmez."""
+    alanlar = ("id", "baslik", "kanal", "kanal_id", "ulke", "dil", "izlenme", "abone", "video_sayisi", "kanal_izlenme",
+               "yayin_ts", "sure", "etiketler", "kaynak", "puan", "kapak", "kanal_yasi", "yt_konular")
+    json_yaz(yol, dict(
+        surum=1, ts=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        videolar=[{k: s.get(k) for k in alanlar} for s in sonuc],
+        konular=[dict(terim=n["terim"], kanal_sayisi=n["kanal_sayisi"], toplam=n["toplam"],
+                      kanal_idler=[v["kanal_id"] for v in n["kanallar"]], firsat=n.get("firsat")) for n in nisler]))
+
+
 def calistir_kanal(a, yt, durum_yol):
     """--kanal verildiyse: sadece o kanalı incele, sayfasını yaz ve Aramalarım'a ekle."""
     simdi_tr = lambda: dt.datetime.now(TR_SAAT)
@@ -2325,6 +2337,7 @@ def calistir(a):
     else:
         dosya = "index.html"
         rapor(sonuc, nisler, a, os.path.join(a.site, dosya), yt.harcanan)
+        adaylari_yaz(os.path.join(a.site, "adaylar.json"), sonuc, nisler)
     uyari = (f"⚠️ Son taramada kota yarıda bitti, sonuçlar eksik olabilir. {KOTA_NOTU}"
              if getattr(a, "kota_yarim", False) else None)
     json_yaz(durum_yol, dict(uyari=uyari, ts=dt.datetime.now(TR_SAAT).isoformat(timespec="minutes")))
