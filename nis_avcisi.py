@@ -10,13 +10,11 @@ Elle çalıştırmak için (Python 3.8+, ek paket gerekmez; YT_API_KEY ortam de�
   python nis_avcisi.py --bolge TR --dil tr      # sadece Türkiye / Türkçe içerik
   python nis_avcisi.py --kanal "https://youtube.com/@kanal"   # tek kanal incelemesi → site/kanal/<id>.html (~210 birim)
 
-Kota: günlük 10.000 birim. Genel tarama ~4.750 birim (12 kategori × 2 zaman dilimi global
-+ 12 kategori Türkiye, her biri 100; + 5 konunun fırsat ölçümü + en güçlü 3 kanalın İngilizce
-ve Türkiye pazar ölçümü, her biri 100; + detaylar). Çeviriler kota harcamaz.
-Haftada bir genel taramaya evergreen taraması eklenir (~1.250 birim); diğer günler evergreen
-videolarının takibi ~1 birim. Konulu aramada konunun kalıcılık ölçümü +100 birim.
-Global konulu tarama 1 konu için ~1.600 birim (Türkçe + İngilizce 150'şer video + ana konu,
-İngilizcesi ve 8 alt konunun fırsat ölçümü); alt konu önerileri ve çeviri kota harcamaz.
+Kota (15 Ekim 2026'dan beri): arama (search.list) ayrı kotada, günde 100 çağrı; diğer istekler 10.000 birim.
+Genel tarama ~50 arama (12 kategori × 2 zaman dilimi global + 12 kategori Türkiye + Finans 3 + 5 konunun fırsat
+ölçümü + en güçlü 3 kanalın İngilizce ve Türkiye pazar ölçümü). Haftada bir +12 (evergreen). Global konulu
+tarama konu başına ~17 arama; kanal incelemesi 2. Fikir Kutusu en fazla 20. Çeviriler kota harcamaz.
+(Sayfadaki "kota birimi" sayısı eski kurala göre hesaplanır: arama başına 100 sayar.)
 """
 import argparse, collections, concurrent.futures, datetime as dt, html, json, math, os, re, sqlite3, sys, time
 import urllib.error, urllib.parse, urllib.request
@@ -45,6 +43,11 @@ funny love baby viral challenge prank trending comedy song game games family kid
 reaction vlog story life world first time real cat dog asmr satisfying edit trend meme
 komik aşk bebek oyun aile çocuk eğlenceli hikaye hayat dünya kedi köpek tepki
 """.split())
+# YouTube kategorisi olmayan ama genel taramada her gün aranan konular: ad → (global sorgu, Türkçe sorgu).
+# "|" YouTube aramasında "veya" demektir (resmi doküman). Her konu günde 3 arama harcar.
+SABIT_KONULAR = {
+    "Finans": ("personal finance|investing|stock market|money tips|crypto", "finans|borsa|yatırım|ekonomi|kripto"),
+}
 TARA_LINKI = "https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"
 ONERI_API = "https://suggestqueries.google.com/complete/search"
 CEVIRI_API = "https://translate.googleapis.com/translate_a/single"
@@ -553,6 +556,11 @@ def tara(yt, a):
             # Global sonuçlar İngilizce ağırlıklı; Türkiye ayrıca taranır ki Türk kanalları da yakalansın.
             aramalar += [(ad, f"{ad} (Türkiye)", dict(videoCategoryId=kid, bolge="TR", dil="tr"))
                          for kid, ad in KATEGORILER.items()]
+            # YouTube'da kategorisi olmayan ama değerli konular: konu aramasıyla eklenir (konu başına 3 arama).
+            for ad, (q_en, q_tr) in SABIT_KONULAR.items():
+                aramalar += [(ad, f"{ad} (son yarı)", dict(q=q_en, bas=orta, bit=None)),
+                             (ad, f"{ad} (ilk yarı)", dict(q=q_en, bas=once, bit=orta)),
+                             (ad, f"{ad} (Türkiye)", dict(q=q_tr, bolge="TR", dil="tr"))]
     for etiket, gorunen, p in aramalar:
         try:
             ara(etiket, **p)
@@ -1987,7 +1995,7 @@ AVATARLAR = "😎 🦊 🐯 🚀 🎬 🎮 🎨 📚 🔥 🌍 💡 🎧".split(
 def yardimci_sayfalar(site):
     """Profil ve gizlilik sayfaları (her taramada yeniden yazılır, kota harcamaz)."""
     kategoriler = "".join(f'<button type="button" class="filtre ilgi-sec" data-kat="{html.escape(k)}">{html.escape(k)}</button>'
-                          for k in KATEGORILER.values())
+                          for k in list(KATEGORILER.values()) + list(SABIT_KONULAR))
     avatarlar = "".join(f'<button type="button" class="avatar-sec" data-a="{a}">{a}</button>' for a in AVATARLAR)
     sayfa_yaz(os.path.join(site, "profil.html"), kok="", baslik="👤 Profilim",
               ust='<a class="geri" href="index.html">← Ana sayfa</a>', meta="Profilin sadece bu telefonda saklanır.",
