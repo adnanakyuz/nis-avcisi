@@ -188,4 +188,86 @@ Tüm kartları şemaya göre denetler; hata varsa çıkış kodu 1.
 
 ## 10. Örnek gerçek kart
 <!-- ORNEK_KART -->
-(İlk gerçek çalıştırmadan sonra buraya eklenecek.)
+İlk gerçek çalıştırmadan (18 Ekim 2026) alınmış bir kart, olduğu gibi. Profiller henüz boş olduğu için `kanal_uyumu` null; 7 günlük ölçüm henüz olmadığı için `omur` null.
+
+```json
+{
+  "surum": 1,
+  "id": "fk_20261017_0011",
+  "kanal_id": "kanal1",
+  "olusturma": "2026-10-17T22:32:42Z",
+  "guncelleme": "2026-10-17T22:36:25Z",
+  "durum": "yeni",
+  "konu": "Polis arabayı kurtardığının farkına varmadı!",
+  "ozet": "\"GymTP\" kanalının bu videosu 9 günde 12.3M izlendi; bu, kanalın normalinin 341.0 katı.",
+  "nis": "Kişiler & Bloglar/camera",
+  "format": "shorts",
+  "hedef_dil": "tr",
+  "onerilen_aci": null,
+  "kanca_onerileri": null,
+  "baslik_kaliplari": [
+    "Tek kelimeyi BÜYÜK HARFLE vurguluyor",
+    "Emoji kullanıyor",
+    "Ortalama uzunluk 55 karakter"
+  ],
+  "kapak_gozlemleri": null,
+  "izleyici_sorulari": [
+    "“DONT DRIVE ON THE HARD SHOULDER” “okay what i want you to do is stay on the hard shoulder”",
+    "Traffic is stopped for a broken-down car. A recovery truck arrives. \"Why are you on the hard shoulder?\"",
+    "How do you recover a car if you're stuck in the teaffic",
+    "That's what the hard shoulder is for breakdown emergency or emergency services in gridlock traffic",
+    "What a terrible attitude the so called traffic officer has."
+  ],
+  "puanlar": {
+    "toplam": 73,
+    "patlama": 100,
+    "hiz": 35,
+    "etkilesim": 79,
+    "rekabet_boslugu": null,
+    "turkce_boslugu": null,
+    "omur": null,
+    "kazanc_potansiyeli": "dusuk",
+    "uretilebilirlik": 60,
+    "kanal_uyumu": null
+  },
+  "puan_aciklamasi": "Toplam 73: ağırlıklı ortalama (null olanlar hariç). Patlama 100: video kanalın son videolarının tipik izlenmesinin 341.0 katı izlendi. Hız 35: 224. saatte saatte 55K izlenme alıyor; aynı yaştaki nişteki videoların tipik hızı 84.4K. Etkileşim 79: (beğeni + 2×yorum) / izlenme = %2.2; nişin ortalaması %1.0. Rekabet boşluğu: bu konu için arama yapılmadı (günlük arama bütçesi). Türkçe boşluğu: Türkçe arama yapılmadı (günlük arama bütçesi). Ömür: henüz belirlenemedi (7 günlük izlenme eğrisi bekleniyor). Kazanç potansiyeli: düşük (eğlence/oyun/çocuk alanında reklam gelirleri düşüktür). Üretilebilirlik 60: belirgin bir işaret yok. Kanal uyumu: 'Kanal 1 (adını yaz)' profilinde niş/anahtar kelime yok. Profil boş olduğu için fikir bu kanala sırayla atandı.",
+  "uretim": {
+    "tahmini_yontem": "karma",
+    "gerekli_gorseller": null,
+    "yapay_zeka_icerik_beyani_gerekli": false
+  },
+  "riskler": [
+    "telif"
+  ],
+  "risk_aciklamasi": "telif: başkasına ait film, müzik, maç ya da dizi görüntüsü kullanılırsa telif ihlali olur; kendi görüntünü üret",
+  "platformlar": {
+    "youtube": {
+      "uygun": true
+    },
+    "tiktok": {
+      "uygun": null
+    },
+    "instagram_reels": {
+      "uygun": null
+    },
+    "facebook_reels": {
+      "uygun": null
+    }
+  },
+  "kaynak_videolar": [
+    {
+      "platform": "youtube",
+      "id": "fxz5rkOdbKg",
+      "baslik": "The police DIDN'T REALISE she was recovering the car! 😯",
+      "kanal": "GymTP",
+      "abone": 3230,
+      "izlenme": 12328069,
+      "kanal_medyan_izlenme": 36156.0,
+      "yayin": "2026-10-08T14:14:35Z",
+      "sure_sn": 33,
+      "dil": "en",
+      "patlama_orani": 340.97
+    }
+  ]
+}
+```

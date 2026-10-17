@@ -450,7 +450,7 @@ def konu_bul(video, konu_haritasi):
 def baslik_konusu(baslik, sinir=90):
     """Kartın "konu" alanı: kaynak başlığın hashtag/emoji temizlenmiş Türkçesi (kısa ve net)."""
     temiz = re.sub(r"#\S+|https?://\S+", " ", baslik)
-    temiz = na.EMOJI.sub(" ", temiz)
+    temiz = re.sub("[️‍⃣]", "", na.EMOJI.sub(" ", temiz))  # emoji ve kalıntı birleştirici karakterler
     temiz = re.sub(r"\s*[|｜]\s*.*$", "", temiz)          # "Konu | Kanal adı" → "Konu"
     temiz = re.sub(r"\s+", " ", temiz).strip(" -–—:") or baslik.strip()
     tr = (na.cevir(temiz, "tr") or temiz).strip()
