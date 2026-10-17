@@ -564,7 +564,7 @@ def firsatlari_hazirla(ist, db, adaylar, evergreen, ayar):
                 ids = [i["id"]["videoId"] for i in r.get("items", []) if i.get("id", {}).get("videoId")]
                 izl = [int(x.get("statistics", {}).get("viewCount", 0)) for x in videolar_getir(ist, ids, "statistics").values()]
                 f["turkce"] = dict(konu=tr_konu, sayi=len(ids), medyan=P._orta(izl) or 0)
-        except ButceDoldu:
+        except (ButceDoldu, na.KotaBitti):  # arama kotası bitti: pahalı ölçümler durur, kartlar yine yazılır (null ile)
             break
         except na.ApiHatasi:
             continue
