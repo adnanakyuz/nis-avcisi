@@ -29,6 +29,9 @@ fikir_kutusu/
   _yayin_saatleri/
     kanal1.json                # bölüm 5
   _geri_bildirim/              # STÜDYO yazar, Niş Avcısı sadece okur (bölüm 6)
+oneriler/                      # deponun kökünde, fikir_kutusu/ dışında (bölüm 8)
+  kanal1_takip_onerisi.json
+  kanal1_takip_onerisi.md
 ```
 
 - Dosyalar **UTF-8** JSON'dur. Yazım güvenlidir: önce `*.json.tmp`'ye yazılır, sonra yeniden adlandırılır.
@@ -80,9 +83,13 @@ fikir_kutusu/
     {"platform": "youtube", "id": "...", "baslik": "...", "kanal": "...", "abone": 0,
      "izlenme": 0, "kanal_medyan_izlenme": 0, "yayin": "ISO8601", "sure_sn": 0,
      "dil": "en", "patlama_orani": 0.0}
-  ]
+  ],
+  "basari_nedeni": null
 }
 ```
+
+`basari_nedeni` **isteğe bağlıdır** (18 Ekim 2026'dan önceki kartlarda hiç yoktur; yeni kartlarda çoğunlukla
+`null`'dur). Alan yoksa `null` gibi ele al. Yapısı bölüm 9'da.
 
 ### Alanların anlamı
 - **`null` = veri yok / ölçülmedi.** Değer asla uydurulmaz. Stüdyo `null`'u "bilinmiyor" diye ele almalı.
@@ -96,14 +103,18 @@ fikir_kutusu/
   - `etkilesim`: (beğeni + 2×yorum) ÷ izlenme; nişin ortalamasına göre.
   - `rekabet_boslugu`: son 30 günde konudaki en çok izlenen 25 videonun izlenmelerinin ne kadarı yeni/küçük kanallara gidiyor (arz zayıflığı) × toplam izlenme (talep).
   - `turkce_boslugu`: konu başka dilde tutuyorsa Türkçe aramada (TR bölgesi, Türkçe) az/zayıf içerik varsa yüksek. Kaynak zaten Türkçeyse null.
+    **Kartın kanalı Türkçe değilse de null** (`puan_aciklamasi`'nda "kanal İngilizce, Türkçe boşluğu hesaba katılmadı").
   - `uretilebilirlik`: stok görüntü + seslendirmeyle ucuza yapılabiliyorsa yüksek.
   - `kanal_uyumu`: kanal profiline (niş, anahtar kelimeler, format, kaçınılacaklar) uygunluk. Profil boşsa null.
+    Kelimeler **tam kelime** olarak eşleşir: "kumar" "Suryakumar"ı, "earn" "learn"ü, "tax" "taxi"yi yakalamaz;
+    gerçek ekler sayılır ("maaş" → "maaşı, maaşla"; "invest" → "investing"). Çok kelimeli ifadeler ("credit card") ve `$` de çalışır.
 - **`puan_aciklamasi`**: her puanın nedenini anlatan sade Türkçe metin (her zaman dolu).
 - **Yaratıcı alanlar Niş Avcısı tarafından `null` bırakılır, stüdyo doldurur** (kendi verisinde):
   `onerilen_aci`, `kanca_onerileri`, `kapak_gozlemleri`, `uretim.gerekli_gorseller`.
   Veriye dayalı alanlar doludur: `ozet` (ölçümlerden kurulan cümleler), `baslik_kaliplari`, `izleyici_sorulari`
   (kaynak videonun yorumlarından; yorumlar kapalıysa null), puanlar, riskler, kaynak videolar.
 - **`riskler`**: sadece tespit edilenler listelenir (boş liste = belirgin risk yok). Açıklaması `risk_aciklamasi`'nda.
+  Risk kelimeleri de kelime başından eşleşir ("war" "software"i, "cover" "recovering"i yakalamaz).
 - **`uretim.yapay_zeka_icerik_beyani_gerekli`**: yöntem `yapay_zeka_video` ya da `avatar` ise true
   (YouTube'un gerçekçi yapay içerik beyanı).
 - **`kaynak_videolar`**: ilk eleman ana kaynak; aynı konudaki en fazla 2 video daha. Videolar **sadece fikir ve
@@ -159,7 +170,46 @@ Gönderim: `senkronla.bat` `_geri_bildirim/` klasörünü depoya gönderir.
 }
 ```
 
-## 8. Sözleşmeden sapmalar (ve nedenleri)
+## 8. Takip edilecek kanal önerisi (`oneriler/<kanal_id>_takip_onerisi.json`)
+Elle başlatılır: GitHub → fikir-kutusu → Actions → Fikir Kutusu → Run workflow → `takip_onerisi` kutusuna `kanal1`.
+Profilin nişleri ve anahtar kelimeleriyle, kanalın dilinde en fazla 3 arama yapılır; adaylar ucuz isteklerle ölçülür.
+```json
+{
+  "surum": 1, "kanal_id": "kanal1", "kanal_adi": "...", "olusturma": "ISO8601", "dil": "en",
+  "sorgular": ["personal finance|salary|budget|..."], "kota": {"arama": 3, "birim": 64},
+  "oneriler": [{"ad": "...", "kanal_id": "UC...", "link": "https://www.youtube.com/channel/UC...",
+                "abone": 0, "son30_video_sayisi": 0, "son30_medyan_izlenme": 0,
+                "izlenme_abone_orani": 0.0, "dil": "en", "neden": "son 30 günde 18 video; ..."}],
+  "nasil_eklenir": "...", "not_": "..."
+}
+```
+- 10-15 kanal; son 30 günde en az 2 video atmış ve dili kanalla aynı olanlar. Aynı bilgiler `.md` dosyasında tablo olarak da var.
+- **`kanallar.json`'a otomatik eklenmez.** Kullanıcı seçer, `takip_edilen_kanallar`'a kendisi (ya da birlikte) ekler.
+- 30 günden eski öneri dosyaları silinir (YouTube 30 gün kuralı). Stüdyonun bu dosyaları okuması gerekmez.
+
+## 9. Konu mu, format mı? (`basari_nedeni`)
+Günün en yüksek puanlı **3 konusunun** kartlarında doldurulur (aynı kaynak video birden fazla kanala gittiyse
+hepsine aynı sonuç yazılır); diğer kartlarda `null`. Elle de başlatılabilir: Run workflow → `basari_analizi` → `kanal1`
+(son 3 günün analiz edilmemiş en iyi kartları).
+```json
+"basari_nedeni": {
+  "etiket": "konu_tutuyor | format_tutuyor | ikisi_de | null",
+  "aciklama": "Sade Türkçe açıklama (her zaman dolu)",
+  "benzer_kanal_sayisi": 7, "benzer_medyan_oran": 1.8, "kaynak_oran": 12.4, "olcum": "ISO8601",
+  "benzer_kanallar": [{"ad": "...", "kanal_id": "UC...", "abone": 0, "medyan_izlenme": 0,
+                       "konu_videosu_izlenme": 0, "oran": 0.0, "benzerlik_nedeni": "aynı konuda Shorts video, İngilizce, 12 gün önce: \"...\""}]
+}
+```
+- Yöntem: aynı konuda, aynı dilde, aynı formatta (Shorts/uzun) son 90 günde video yapmış **5-10 başka kanal**
+  bulunur (alaka sırasıyla; izlenme sırası kullanılmaz, yoksa hep tutan videolar gelirdi). Her birinin konu videosu,
+  kendi kanalının normaline (son 30 videonun medyan izlenmesi) bölünür → `oran`. Bu oranların medyanı `benzer_medyan_oran`.
+- Karar: `benzer_medyan_oran` ≥ 1,5 → **konu_tutuyor**; ayrıca kaynak video (`kaynak_oran`) bunun ≥ 3 katıysa
+  **ikisi_de**. `benzer_medyan_oran` ≤ 1,2 ve kaynak ≥ 1,5 → **format_tutuyor** (konu başkalarında normal kalıyor,
+  başarı sunuştan). 5'ten az benzer kanal ya da arada kalan oranlar → **null** (açıklamada nedeni yazar). Uydurma yok.
+- Arama: niş konusu başlıkta geçiyorsa o; geçmiyorsa (ör. konu bir kanal adıysa) başlığın ilk anlamlı kelimeleri.
+- 30 gün sonra `benzer_kanallar` içindeki `abone`, `medyan_izlenme`, `konu_videosu_izlenme`, `oran` null yapılır.
+
+## 10. Sözleşmeden sapmalar (ve nedenleri)
 1. **Konum:** Klasör Niş Avcısı'nın açık deposunda değil, **özel depoda**. Kanal profilleri ve fikirler gizli
    kalsın diye. Yerel kopya `senkronla.bat` ile güncellenir.
 2. **Anahtarlar** ayar dosyasında değil, GitHub'ın gizli kasasında (`YT_API_KEY`). Hiçbir dosyaya ya da log'a yazılmaz.
@@ -179,14 +229,28 @@ Gönderim: `senkronla.bat` `_geri_bildirim/` klasörünü depoya gönderir.
 10. **vidIQ** bağlantısı yok (kullanıcının hesabı yok); sadece resmi YouTube Data API.
 11. Adaylar Niş Avcısı'nın günlük taramasından (`site/adaylar.json`) gelir; bu dosya yoksa son taramanın
     veritabanı kaydından kurulur (arama harcamadan).
+12. **Tam kelime eşleşmesi (18 Ekim 2026):** `kanal_uyumu`, kaçınılacaklar, yayın saatleri, riskler, kazanç ve
+    üretilebilirlik kuralları artık kelimeleri tam kelime olarak arar (önceden metin içinde parça olarak arıyordu:
+    "kumar" "Suryakumar"da, "cover" "recovering"de bulunuyordu). Alanlar ve tipleri aynı; sadece değerler daha doğru.
+    Eski kartlar yeniden hesaplanmaz.
+13. **`turkce_boslugu` Türkçe olmayan kanalda null (18 Ekim 2026):** önceden İngilizce kanalın kartında da
+    hesaplanıyordu ve toplamı düşürüyordu. Alan ve tipi aynı (zaten null olabiliyordu). Ayrıca aktif Türkçe kanal
+    yoksa Türkçe boşluğu araması hiç yapılmaz (arama kotası boşa gitmesin). Kart başlıklarındaki görünmez
+    karakterler (sıfır genişlikli boşluk vb.) temizlenir.
+14. **Yeni isteğe bağlı alan `basari_nedeni` (18 Ekim 2026)**, bölüm 9. Mevcut alanlar değişmedi; eski kartlarda
+    alan yoktur ve doğrulayıcı onları da geçerli sayar.
+15. **Yeni dosyalar `oneriler/` (18 Ekim 2026)**, bölüm 8. `fikir_kutusu/` klasörünün dışında; kartları etkilemez.
+16. **Kota paylaşımı (18 Ekim 2026):** günde 20 arama / 3.000 birim / %80'de durma aynı. İçinden: rekabet ve
+    Türkçe boşluğu ölçümleri 13. aramada durur, 3 arama "konu mu format mı"ya kalır (16'ya kadar). Kalan %20 (4 arama)
+    sadece elle başlatılan takip önerisi ve elle analiz içindir; 20 asla aşılmaz.
 
-## 9. Doğrulama
+## 11. Doğrulama
 ```
 python fikir_kutusu_dogrula.py <fikir_kutusu klasörü>
 ```
 Tüm kartları şemaya göre denetler; hata varsa çıkış kodu 1.
 
-## 10. Örnek gerçek kart
+## 12. Örnek gerçek kart
 <!-- ORNEK_KART -->
 İlk gerçek çalıştırmadan (18 Ekim 2026) alınmış bir kart, olduğu gibi. Profiller henüz boş olduğu için `kanal_uyumu` null; 7 günlük ölçüm henüz olmadığı için `omur` null.
 
