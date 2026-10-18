@@ -10,6 +10,76 @@ import re
 KAZANC_SAYI = {"dusuk": 30, "orta": 60, "yuksek": 90}
 
 
+# ---------- kelime eşleşmesi ----------
+# Kelimeler metnin İÇİNDE parça olarak değil, TAM KELİME olarak eşleşir: kelime başında başlamalı, sonuna sadece
+# gerçek bir ek gelebilir. Böylece "kumar" → "Suryakumar", "earn" → "learn", "tax" → "taxi", "rent" → "parent"
+# eşleşmez; "maaş" → "maaşı/maaşla", "borç" → "borcu", "earn" → "earnings", "politic" → "politics" eşleşir.
+_EN_EK = r"(?:s|es|'s|’s|ed|d|ing|ings|er|ers|al|ally|ian|ians|ism|ist|ists|ment|ments|ly)"
+_E_DUSEN_EK = r"(?:ing|ings|ed|er|ers|al|ation|ations)"  # "price" → "pricing", "retire" → "retiring"
+# Türkçe ekler ünlü uyumuna göre: kelimenin son ünlüsü kalınsa (a ı o u) kalın, inceyse (e i ö ü) ince ekler.
+# Bu sayede "tax" (kalın a) + "i" (ince) = "taxi" eşleşmez, ama "faiz" (ince i) + "i" = "faizi" eşleşir.
+_TR_KALIN = (r"(?:ı|u|a|ın|un|nın|nun|da|ta|dan|tan|la|yla|ya|lar|ları|ların|sı|su|ım|um|ımız|umuz|dı|du|tı|tu|"
+             r"cı|cu|çı|çu|lı|lu|sız|suz|lık|luk|daki|taki|ki|nı|nu|na|nda|ndan|yı|yu)")  # kartı-nı, araba-yı
+_TR_INCE = (r"(?:i|ü|e|in|ün|nin|nün|de|te|den|ten|le|yle|ye|ler|leri|lerin|si|sü|im|üm|imiz|ümüz|di|dü|ti|tü|"
+            r"ci|cü|çi|çü|li|lü|siz|süz|lik|lük|deki|teki|ki|ni|nü|ne|nde|nden|yi|yü)")
+_YUMUSAMA = {"p": "b", "ç": "c", "t": "d", "k": "ğ"}  # "borç" → "borcu", "kitap" → "kitabı"
+_desen_onbellegi = {}
+
+
+_TR_HARF = re.compile("[çğıöşüÇĞİÖŞÜ]")
+
+
+def normallestir(metin):
+    """Küçük harf; Türkçe "İ" doğru küçülsün (yoksa "i̇" olup kelimeyi böler). Metinde Türkçe harf varsa büyük "I"
+    Türkçedeki gibi "ı" olur ("MAAŞLARIN" → "maaşların"); İngilizce "TAXI" ise "taxi" kalır."""
+    metin = metin or ""
+    if _TR_HARF.search(metin):
+        metin = metin.replace("I", "ı")
+    return metin.replace("İ", "i").lower().replace("̇", "")
+
+
+def kelime_deseni(kelime):
+    """Bir anahtar kelime/ifade için tam kelime deseni (önbellekli)."""
+    if kelime in _desen_onbellegi:
+        return _desen_onbellegi[kelime]
+    k = normallestir(kelime).strip()
+    if not re.search(r"\w", k):  # "$" gibi işaretler: olduğu gibi aranır ("$5,000" içinde de bulunur)
+        desen = re.compile(re.escape(k))
+    else:
+        parcalar = k.split()
+        son = parcalar[-1]
+        once = "".join(re.escape(p) + r"\s+" for p in parcalar[:-1])
+        unluler = [c for c in son if c in "aıoueiöü"]
+        tr = _TR_KALIN if (unluler and unluler[-1] in "aıou") else _TR_INCE
+        tr_ek = rf"(?:['’]?{tr}{{1,3}})"
+        secenekler = [rf"{re.escape(son)}(?:{_EN_EK}|{tr_ek})?"]
+        if len(son) > 2 and son.endswith("y") and son[-2] not in "aeiou":
+            secenekler.append(re.escape(son[:-1]) + r"ies")                      # salary → salaries
+        if len(son) > 3 and son.endswith("e"):
+            secenekler.append(re.escape(son[:-1]) + _E_DUSEN_EK)                # price → pricing
+        if son[-1] in _YUMUSAMA and unluler:
+            secenekler.append(re.escape(son[:-1] + _YUMUSAMA[son[-1]]) + rf"['’]?{tr}{{1,3}}")  # borç → borcu
+        desen = re.compile(rf"(?<!\w){once}(?:{'|'.join(secenekler)})(?!\w)")
+    _desen_onbellegi[kelime] = desen
+    return desen
+
+
+def eslesir(kelime, metin):
+    """Kelime/ifade metinde tam kelime olarak geçiyor mu? (metin normalleştirilmiş olmalı ya da ham verilebilir)"""
+    return bool(kelime and kelime.strip()) and bool(kelime_deseni(kelime).search(normallestir(metin)))
+
+
+def eslesenler(kelimeler, metin):
+    m = normallestir(metin)
+    return [k for k in kelimeler if k and k.strip() and kelime_deseni(k).search(m)]
+
+
+def _kelime_basi(desen):
+    """Mevcut kural listelerini (risk, kazanç, üretilebilirlik) kelime başına bağlar: "war" artık "software"
+    içinde, "para" artık "kampara" içinde eşleşmez. Kelimenin sonuna ek gelebilir ("wars", "paralar")."""
+    return re.compile(rf"(?<!\w)(?:{desen})", re.I)
+
+
 def _sinirla(x):
     return max(0, min(100, round(x)))
 
@@ -149,11 +219,12 @@ def omur(olcumler, metin, evergreen_mi=False):
 
 
 # ---------- kazanç potansiyeli ----------
-KAZANC_YUKSEK = re.compile(r"finans|borsa|hisse|kripto|bitcoin|yatırım|invest|stock|crypto|money|para|sigorta|"
-                           r"insurance|emlak|real estate|kredi|loan|vergi|tax|yazılım|software|programming|"
-                           r"\bai\b|yapay zeka|business|iş kurma|girişim|marketing|pazarlama", re.I)
-KAZANC_DUSUK = re.compile(r"funny|komik|prank|meme|oyun|game|gaming|minecraft|roblox|çocuk|kids|cartoon|"
-                          r"music|müzik|song|dans|dance|challenge|asmr|satisfying", re.I)
+KAZANC_YUKSEK = _kelime_basi(r"finans|borsa|hisse|kripto|bitcoin|yatırım|invest|stock|crypto|money|para\b|paralar|parası|"
+                           r"sigorta|insurance|emlak|real estate|kredi|loan|vergi|tax(?:es|ed|ing)?\b|yazılım|software|"
+                           r"programming|salary|budget|debt|mortgage|wealth|income|maaş|bütçe|borç|faiz|enflasyon|"
+                           r"\bai\b|yapay zeka|business|iş kurma|girişim|marketing|pazarlama")
+KAZANC_DUSUK = _kelime_basi(r"funny|komik|prank|meme|oyun|game|gaming|minecraft|roblox|çocuk|kids|cartoon|"
+                          r"music|müzik|song|dans|dance|challenge|asmr|satisfying")
 
 
 def kazanc_potansiyeli(nis_metni):
@@ -167,12 +238,13 @@ def kazanc_potansiyeli(nis_metni):
 
 
 # ---------- üretilebilirlik ----------
-URETIM_KOLAY = re.compile(r"facts|gerçek|bilgi|list|top \d|en iyi|tarih|history|belgesel|documentary|explained|"
+URETIM_KOLAY = _kelime_basi(r"facts|gerçek|bilgi|lists?\b|listed|top \d|en iyi|tarih|history|belgesel|documentary|explained|"
                           r"açıklam|nedir|why|neden|how|nasıl|finans|haber|news|teknoloji|tech|space|uzay|bilim|"
-                          r"science|psikoloji|psychology|mystery|gizem|ranking|sıralama|tips|ipucu", re.I)
-URETIM_ZOR = re.compile(r"vlog|\bben\b|\bmy\b|\bi\b|challenge|prank|react|tepki|yüz|face|cooking|tarif|recipe|"
-                        r"rescue|kurtar|puppy|yavru|unboxing|kutu açılış|travel|seyahat|gezi|workout|antrenman|"
-                        r"dance|dans|interview|röportaj|sokak|street|family|aile|baby|bebek", re.I)
+                          r"science|psikoloji|psychology|mystery|gizem|ranking|sıralama|tips|ipucu")
+URETIM_ZOR = _kelime_basi(r"vlog|\bben\b|\bmy\b|\bi\b|challenge|prank|react|tepki|yüz\b|yüzü\b|yüzün\b|faces?\b|cooking|"
+                        r"tarif|recipe|rescue|kurtar|puppy|yavru|unboxing|kutu açılış|travel|seyahat|gezi\b|gezisi|gezimiz|"
+                        r"workout|antrenman|"
+                        r"dance|dans|interview|röportaj|sokak|street|family|aile|baby|bebek")
 
 
 def uretilebilirlik(metin, format_):
@@ -202,16 +274,15 @@ def kanal_uyumu(profil, metin, format_, dil):
     kelimeler = [k.lower() for k in profil.get("anahtar_kelimeler", []) if k.strip()]
     if not nisler and not kelimeler:
         return None, f"Kanal uyumu: '{profil.get('ad', profil.get('id'))}' profilinde niş/anahtar kelime yok."
-    m = (metin or "").lower()
-    for k in profil.get("kacinilacak", []):
-        if k.strip() and k.lower() in m:
-            return 0, f"Kanal uyumu 0: kanalın kaçındığı '{k}' konusu geçiyor."
+    m = normallestir(metin)
+    for k in eslesenler(profil.get("kacinilacak", []), m):  # tam kelime: "kumar" → "Suryakumar" eşleşmez
+        return 0, f"Kanal uyumu 0: kanalın kaçındığı '{k}' konusu geçiyor."
     puan, nedenler = 0, []
-    nis_eslesen = [n for n in nisler if n in m]
+    nis_eslesen = eslesenler(nisler, m)
     if nis_eslesen:
         puan += 50
         nedenler.append("niş: " + ", ".join(nis_eslesen))
-    kel_eslesen = [k for k in kelimeler if k in m]
+    kel_eslesen = eslesenler(kelimeler, m)
     if kel_eslesen:  # tek bir anahtar kelime de güçlü bir işarettir (ör. finans kanalı için "altın")
         puan += min(55, 35 + 10 * (len(kel_eslesen) - 1))
         nedenler.append("anahtar kelime: " + ", ".join(kel_eslesen))

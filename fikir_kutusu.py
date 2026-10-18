@@ -22,15 +22,17 @@ SURUM = 1
 KOD_KLASORU = os.path.dirname(os.path.abspath(__file__))
 TR = na.TR_SAAT
 RISK_KURALLARI = [
-    ("telif", r"music video|official video|full movie|film izle|dizi|episode|bölüm|highlights|maç özeti|clip|trailer|"
-              r"fragman|lyrics|şarkı sözleri|cover"),
-    ("yeniden_kullanilmis_icerik", r"compilation|derleme|best moments|en iyi anlar|reaction|react|tepki|tiktok|"
-                                   r"reupload|fails|funny moments"),
-    ("yatirim_tavsiyesi", r"borsa|hisse|kripto|crypto|bitcoin|coin|stock|invest|yatırım|al sat|altın fiyat|forex|"
+    # Desenler kelime başına bağlıdır (fk_puanlar._kelime_basi): "war" → "software", "kaza" → "kazan" eşleşmez.
+    ("telif", r"music video|official video|full movie|film izle|dizi\b|dizisi|episode|bölüm|highlights|maç özeti|"
+              r"clips?\b|trailer|fragman|lyrics|şarkı sözleri|cover\b|covers\b"),
+    ("yeniden_kullanilmis_icerik", r"compilation|derleme|best moments|en iyi anlar|reaction|react\b|tepki|tiktok|"
+                                   r"reupload|fails\b|funny moments"),
+    ("yatirim_tavsiyesi", r"borsa|hisse|kripto|crypto|bitcoin|coins?\b|stock|invest|yatırım|al sat|altın fiyat|forex|"
                           r"trading"),
-    ("saglik", r"sağlık|hastalık|tedavi|ilaç|diyet|kilo ver|health|cure|disease|diet|weight loss|doktor|doctor"),
-    ("marka_guvenligi", r"savaş|war|ölüm|death|kaza|accident|şiddet|violence|silah|gun|prank|siyaset|politic|"
-                        r"skandal|scandal|kan\b|blood"),
+    ("saglik", r"sağlık|hastalık|tedavi|ilaç|diyet|kilo ver|health|cure\b|cures\b|disease|diet\b|diets\b|weight loss|"
+               r"doktor|doctor"),
+    ("marka_guvenligi", r"savaş|wars?\b|warfare|ölüm|death|kaza\b|kazası|kazada|kazalar|accident|şiddet|violence|"
+                        r"silah|guns?\b|gunfire|prank|siyaset|politic|skandal|scandal|kan\b|blood"),
 ]
 RISK_ACIKLAMA = {
     "telif": "başkasına ait film, müzik, maç ya da dizi görüntüsü kullanılırsa telif ihlali olur; kendi görüntünü üret",
@@ -504,7 +506,8 @@ def izleyici_sorulari(ist, video_id, adet=5):
 
 def riskleri_bul(metin):
     m = metin or ""
-    riskler = [ad for ad, desen in RISK_KURALLARI if re.search(desen, m, re.I)]
+    m = P.normallestir(m)
+    riskler = [ad for ad, desen in RISK_KURALLARI if P._kelime_basi(desen).search(m)]
     aciklama = "; ".join(f"{r}: {RISK_ACIKLAMA[r]}" for r in riskler) or "Belirgin bir risk işareti bulunmadı."
     return riskler, aciklama
 
@@ -750,7 +753,7 @@ def yayin_saatleri(db, kanallar, ayar, klasor):
         satirlar = collections.defaultdict(lambda: collections.defaultdict(list))
         for vid, yayin, fmt, baslik, nis in db.execute("SELECT video_id, yayin_ts, format, baslik, nis FROM takip"):
             metin = f"{baslik} {nis}".lower()
-            if nisler and not any(n in metin for n in nisler):
+            if nisler and not P.eslesenler(nisler, metin):  # tam kelime ("earn" ≠ "learn")
                 continue
             seri = dict((round(y), i) for y, i in olcum_serisi(db, vid))
             hizlar = {}

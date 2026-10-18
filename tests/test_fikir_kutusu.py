@@ -111,6 +111,66 @@ class PuanTestleri(unittest.TestCase):
         self.assertEqual(P.toplam({"patlama": 100, "kazanc_potansiyeli": "dusuk"}, {"patlama": .5, "kazanc_potansiyeli": .5}), 65)
 
 
+class EslesmeTestleri(unittest.TestCase):
+    """İyileştirme 1: kelimeler metin içinde parça olarak değil, tam kelime olarak eşleşir."""
+
+    def test_parca_eslesmez(self):
+        self.assertFalse(P.eslesir("kumar", "Suryakumar Yadav defends two balls"))
+        self.assertFalse(P.eslesir("earn", "Learn English fast"))
+        self.assertFalse(P.eslesir("tax", "Taxi driver story"))
+        self.assertFalse(P.eslesir("rent", "Every parent knows this"))
+        self.assertFalse(P.eslesir("war", "Best software for beginners"))
+
+    def test_ekler_eslesir(self):
+        self.assertTrue(P.eslesir("earn", "How much do pilots earn?"))
+        self.assertTrue(P.eslesir("earn", "His earnings in 2026"))
+        self.assertTrue(P.eslesir("tax", "Taxes explained"))
+        self.assertTrue(P.eslesir("rent", "Rent vs buy"))
+        self.assertTrue(P.eslesir("politic", "Politics and money"))
+        self.assertTrue(P.eslesir("politic", "a political scandal"))
+        self.assertTrue(P.eslesir("salary", "Salaries of NBA players"))
+        self.assertTrue(P.eslesir("price", "Pricing secrets"))
+        self.assertTrue(P.eslesir("retire", "Retiring at 40"))
+
+    def test_turkce_ekler(self):
+        self.assertTrue(P.eslesir("maaş", "Asgari maaşı ne kadar?"))
+        self.assertTrue(P.eslesir("maaş", "Bu maaşla geçinilir mi"))
+        self.assertTrue(P.eslesir("maaş", "MAAŞLARIN gerçek değeri"))
+        self.assertTrue(P.eslesir("faiz", "Faizi kim belirliyor"))
+        self.assertTrue(P.eslesir("borç", "Kredi kartı borcu nasıl kapanır"))     # ç → c yumuşaması
+        self.assertTrue(P.eslesir("dolar", "Doların yükselişi"))
+        self.assertTrue(P.eslesir("kumar", "Kumar bağımlılığı"))
+        self.assertFalse(P.eslesir("kumar", "Suryakumar'ın vuruşu"))
+        self.assertTrue(P.eslesir("İstanbul", "istanbul'da kira"))                # büyük İ doğru küçülür
+
+    def test_cok_kelimeli_ve_isaret(self):
+        self.assertTrue(P.eslesir("credit card", "Best Credit Cards of 2026"))
+        self.assertTrue(P.eslesir("credit card", "credit  card debt"))
+        self.assertFalse(P.eslesir("credit card", "credit scores and cards"))
+        self.assertTrue(P.eslesir("how much does", "How much does a tow truck driver make?"))
+        self.assertTrue(P.eslesir("kredi kartı", "Kredi kartını kapatmalı mıyım"))
+        self.assertTrue(P.eslesir("$", "I saved $5,000 in a year"))
+        self.assertFalse(P.eslesir("$", "I saved 5000 dollars"))
+        self.assertFalse(P.eslesir("", "her şey"))
+
+    def test_kanal_uyumu_kacinilacak_tam_kelime(self):
+        profil = dict(id="k", nisler=["finance"], anahtar_kelimeler=["earn", "tax"], kacinilacak=["kumar", "politic"])
+        self.assertNotEqual(P.kanal_uyumu(profil, "Suryakumar finance tips", "uzun", "en")[0], 0)  # eskiden 0'dı
+        self.assertEqual(P.kanal_uyumu(profil, "Political finance", "uzun", "en")[0], 0)
+        self.assertIsNone(P.kanal_uyumu(dict(id="b"), "x", "uzun", "en")[0])
+        p, a = P.kanal_uyumu(profil, "Learn about taxi apps", "uzun", "en")
+        self.assertEqual(p, 10)                                   # "earn"/"tax" artık eşleşmiyor: sadece format
+        self.assertIn("eşleşme yok", a)
+
+    def test_kural_listeleri_kelime_basinda(self):
+        self.assertEqual(fk.riskleri_bul("Best software deals")[0], [])           # "war" yok
+        self.assertEqual(fk.riskleri_bul("Kazan kazan stratejisi")[0], [])        # "kaza" yok
+        self.assertIn("marka_guvenligi", fk.riskleri_bul("The war in 1914")[0])
+        self.assertIn("marka_guvenligi", fk.riskleri_bul("Trafik kazası")[0])
+        self.assertNotEqual(P.kazanc_potansiyeli("Taxi driver day in life")[0], "yuksek")
+        self.assertEqual(P.kazanc_potansiyeli("Taxes for freelancers")[0], "yuksek")
+
+
 class AltyapiTestleri(unittest.TestCase):
     def setUp(self):
         self.klasor = tempfile.mkdtemp()
