@@ -70,9 +70,18 @@ h2{font-size:19px;margin:32px 0 4px} .alt-baslik{color:var(--soluk);font-size:14
 .cubuk-satir .ad{flex:1;font-size:13px;font-weight:500} .cubuk-dis{width:90px;flex:none;height:8px;background:var(--zemin2);border-radius:4px}
 .cubuk{height:8px;background:var(--vurgu);border-radius:4px} .cubuk-satir .sayi{width:46px;flex:none;text-align:right;color:var(--soluk)}
 .av.buyuk-av{width:72px;height:72px}
-.one-cikanlar{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;
-  scrollbar-width:none;-webkit-overflow-scrolling:touch} .one-cikanlar::-webkit-scrollbar{display:none}
+/* Öne çıkanlar: telefonda parmakla yana kaydırılır (yumuşak durma) ve ‹ › oklarıyla da geçilebilir */
+.kaydir{position:relative}
+.one-cikanlar{display:flex;gap:10px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;margin:0 -16px;
+  padding:0 16px 6px;scroll-padding:0 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;touch-action:pan-x pan-y;scroll-behavior:smooth}
+.one-cikanlar::-webkit-scrollbar{display:none}
 .kart.one{flex:0 0 84%;max-width:340px;scroll-snap-align:start;margin-bottom:0;display:flex;flex-direction:column}
+.ok-dugme{position:absolute;top:42%;z-index:3;width:38px;height:38px;border-radius:50%;border:1px solid var(--cizgi);
+  background:var(--kart);color:var(--yazi);font-size:24px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.ok-dugme.sol{left:-6px} .ok-dugme.sag{right:-6px} .ok-dugme[disabled]{opacity:0;pointer-events:none}
+.noktalar{display:flex;justify-content:center;gap:6px;margin-top:8px}
+.noktalar span{width:7px;height:7px;border-radius:50%;background:var(--cizgi)} .noktalar span.aktif{background:var(--vurgu)}
 .kart.one .eylem{margin-top:auto}
 .one-etiket{padding:12px 56px 0 14px;font-weight:800;font-size:15px;color:var(--vurgu)}
 .kart.one .nis-ad{padding:8px 14px 0} .kart.one .cipler{padding:0 14px 14px}
@@ -98,6 +107,27 @@ details.oneri,details.fikir{margin:12px 14px 0;padding:10px 12px;border-radius:1
 details.fikir{margin:12px 0 0} details summary{cursor:pointer;font-weight:700;list-style-position:inside}
 details.fikir ul{margin:6px 0 0;padding-left:18px} details.fikir li{margin:5px 0} details.fikir a{text-decoration:underline}
 .galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+/* Bilgisayar / geniş ekran: sayfa ekranı doldurur, kartlar sütunlara dizilir (telefon görünümü değişmez) */
+@media (min-width:900px){
+  body[data-genel="1"] main{max-width:1320px;padding-left:32px;padding-right:32px}
+  body[data-genel="0"] main{max-width:960px}
+  h1{font-size:26px}
+  #kanallar,#evergreen,#trendler{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:14px;
+    align-items:start}
+  #kanallar>:not(article),#evergreen>:not(article),#trendler>:not(article){grid-column:1/-1}
+  #kanallar>article,#evergreen>article,#trendler>article{margin-bottom:0}
+  #kanallar>.filtreler{margin:0;padding:0;flex-wrap:wrap;overflow:visible}
+  #sira-disi>.kart{display:grid;grid-template-columns:repeat(2,1fr)} #sira-disi>.kart>.video{margin-top:0}
+  .galeri{grid-template-columns:repeat(6,1fr);gap:10px}
+  .kaydir .one-cikanlar{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;overflow:visible;
+    margin:0;padding:0}
+  .kaydir .kart.one{max-width:none}
+  .kaydir .ok-dugme,.kaydir+.noktalar,.mobil-ipucu{display:none}
+  #benim{max-width:760px}
+  .alt-menu{left:50%;right:auto;transform:translateX(-50%);width:640px;border:1px solid var(--cizgi);border-bottom:0;
+    border-radius:16px 16px 0 0}
+  .bildirim{bottom:96px}
+}
 .galeri a{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:var(--zemin2)}
 .galeri img{width:100%;height:100%;object-fit:cover}
 .galeri span{position:absolute;left:4px;bottom:4px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;padding:1px 5px;border-radius:4px}
@@ -131,7 +161,7 @@ article.kart{position:relative} .kanal{padding-right:44px}
 .oneri{margin:12px 14px 0;padding:10px 12px;border-radius:12px;background:var(--zemin2);font-size:14px}
 .oneri ul{margin:6px 0 0;padding-left:0;list-style:none} .oneri li{margin-top:6px}
 footer{color:var(--soluk);font-size:12px;margin-top:28px}
-</style></head><body data-kok="" data-uret="2026-10-17T08:42:23+00:00" data-genel="0"
+</style></head><body data-kok="" data-uret="2026-10-18T06:22:37+00:00" data-genel="0"
 data-tara="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"><main>
 <a class="geri" href="index.html">← Ana sayfa</a><header><h1>🔒 Gizlilik</h1>
 <a class="btn ana sahip" href="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml" target="_blank" rel="noopener" id="tara">Tara</a>
@@ -166,7 +196,7 @@ yatırım ya da finansal tavsiye değildir. Son karar her zaman senindir.</p>
 <p>Sorular ve veri talepleri için iletişim adresi yakında eklenecek.</p>
 </section>
 
-<footer>Son güncelleme: 17.10.2026<br><a href="gizlilik.html">Gizlilik ve kullanım</a> · YouTube verileri
+<footer>Son güncelleme: 18.10.2026<br><a href="gizlilik.html">Gizlilik ve kullanım</a> · YouTube verileri
 <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube API Hizmetleri</a> ile alınır.</footer>
 </main>
 <nav class="alt-menu" aria-label="Bölümler">
@@ -404,6 +434,32 @@ if (form) {
     });
     bildir("Silindi"); setTimeout(function () { location.reload(); }, 800);
   });
+}
+
+// ---- Öne çıkanlar: ‹ › okları ve hangi kartta olduğunu gösteren noktalar
+var serit = document.getElementById("one-cikanlar");
+if (serit) {
+  var sol = document.querySelector(".ok-dugme.sol"), sag = document.querySelector(".ok-dugme.sag");
+  var noktalar = document.querySelectorAll("#noktalar span");
+  var adim = function () { var k = serit.querySelector(".kart"); return k ? k.getBoundingClientRect().width + 10 : 300; };
+  var kartlarS = serit.querySelectorAll(".kart");
+  var git = function (yon) {  // bir sonraki/önceki kartı tam başa hizala
+    var i = Math.max(0, Math.min(kartlarS.length - 1, Math.round(serit.scrollLeft / adim()) + yon));
+    var fark = kartlarS[i].getBoundingClientRect().left - serit.getBoundingClientRect().left - 16;
+    serit.scrollTo({left: serit.scrollLeft + fark, behavior: "smooth"});
+  };
+  sol.addEventListener("click", function () { git(-1); });
+  sag.addEventListener("click", function () { git(1); });
+  var guncelle = function () {
+    var en = serit.scrollWidth - serit.clientWidth;
+    sol.disabled = serit.scrollLeft <= 4;
+    sag.disabled = serit.scrollLeft >= en - 4;
+    var i = Math.round(serit.scrollLeft / adim());
+    noktalar.forEach(function (n, j) { n.classList.toggle("aktif", j === Math.min(i, noktalar.length - 1)); });
+  };
+  serit.addEventListener("scroll", guncelle, {passive: true});
+  window.addEventListener("resize", guncelle);
+  guncelle();
 }
 
 // ---- Çevrimdışı açılabilsin (uygulama mağazası için de gerekli)
