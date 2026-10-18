@@ -324,6 +324,12 @@ class BasariKarariTestleri(unittest.TestCase):
         for oranlar in ([2, 2, 2, 2, 2], [1, 1, 1, 1, 1], [3]):
             self.assertTrue(k(self._benzer(oranlar), None, "x")["aciklama"])
 
+    def test_basari_sorgusu(self):
+        self.assertEqual(fk.basari_sorgusu("gold price", "Why the Gold Price Keeps Rising"), "gold price")
+        s = fk.basari_sorgusu("factomato", "Dog Spent 12 Hours On A Mission 🐶 #shorts #dog")
+        self.assertEqual(s, "Dog Spent Hours On Mission")         # konu başlıkta yok: başlık kelimeleri
+        self.assertEqual(fk.basari_sorgusu(None, "Altın neden yükseliyor?"), "Altın neden yükseliyor")
+
     def test_arama_ayirma(self):
         db = fk.db_ac(":memory:")
         kota = fk.Kota(db, {"kota": {"gunluk_arama_butcesi": 20, "gunluk_birim_butcesi": 3000, "onemli_mod_esigi": 0.8}})

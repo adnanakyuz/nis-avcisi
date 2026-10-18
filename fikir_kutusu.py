@@ -858,12 +858,21 @@ BASARI_EN_AZ_KANAL = 5
 BASARI_EN_COK_KANAL = 10
 
 
+def basari_sorgusu(konu, baslik, en_cok=8):
+    """Arama sorgusu: niş konusu videonun başlığında geçiyorsa o; geçmiyorsa (ör. konu bir kanal adıysa)
+    başlığın ilk anlamlı kelimeleri (etiketler ve tek harfler atılır)."""
+    if konu and P.eslesir(konu, P.normallestir(baslik)):
+        return konu
+    kelimeler = [k for k in re.findall(r"\w+", re.sub(r"#\w+", " ", baslik)) if len(k) > 1 and not k.isdigit()]
+    return " ".join(kelimeler[:en_cok]) or konu or baslik_konusu(baslik)
+
+
 def basari_nedeni(ist, db, f, format_):
     """Kaynak video konusu yüzünden mi, kanalın sunuşu (format) yüzünden mi tuttu? Aynı konuda, aynı dilde ve
     aynı formatta son 90 günde video yapmış 5-10 başka kanala bakılır: o videolar kendi kanallarının normalini
     (son 30 videonun medyanı) aşıyorsa konu tutuyordur. 1 arama + birkaç ucuz istek. Veri yetmezse etiket null."""
     v = f["video"]
-    konu = f["konu"] or baslik_konusu(v["baslik"])
+    konu = basari_sorgusu(f["konu"], v["baslik"])
     dil = (v.get("dil") or "").lower()[:2]
     p = dict(part="snippet", type="video", q=konu[:100], order="relevance", maxResults=50,
              publishedAfter=na.tarih_str(simdi() - dt.timedelta(days=90)))
