@@ -285,6 +285,58 @@ class SahteYT:
         return {}
 
 
+class BenzerYT(SahteYT):
+    """"Konu mu format mı" aramasına 8 benzer kanal döndüren sahte YouTube."""
+
+    def get(self, uc, maliyet=1, **p):
+        if uc == "search" and p.get("order") == "relevance":
+            self.cagrilar.append(uc)
+            self.aramalar = getattr(self, "aramalar", []) + [p]
+            self.sure = "PT50S" if p.get("videoDuration") == "short" else "PT10M"
+            return {"items": [{"id": {"videoId": f"b{i}"}, "snippet": {"channelId": f"UCbenzer{i:014d}"}}
+                              for i in range(8)]}
+        if uc == "videos" and p["id"].startswith("b"):
+            self.cagrilar.append(uc)
+            return {"items": [{"id": i, "snippet": {"channelId": "x", "title": "Benzer konu videosu",
+                                                     "publishedAt": _iso(24 * 10)},
+                               "statistics": {"viewCount": "900000"}, "contentDetails": {"duration": self.sure}}
+                              for i in p["id"].split(",")]}
+        return super().get(uc, maliyet, **p)
+
+
+class BasariKarariTestleri(unittest.TestCase):
+    @staticmethod
+    def _benzer(oranlar):
+        return [{"ad": f"K{i}", "kanal_id": f"UC{i}", "abone": 1000, "medyan_izlenme": 1000,
+                 "konu_videosu_izlenme": int(1000 * o), "oran": o, "benzerlik_nedeni": "aynı konu"}
+                for i, o in enumerate(oranlar)]
+
+    def test_etiketler(self):
+        k = fk.basari_karari
+        self.assertEqual(k(self._benzer([2, 1.8, 2.5, 1.6, 3]), 3.0, "x")["etiket"], "konu_tutuyor")
+        self.assertEqual(k(self._benzer([2, 1.8, 2.5, 1.6, 3]), 9.0, "x")["etiket"], "ikisi_de")
+        self.assertEqual(k(self._benzer([1, 0.8, 1.1, 0.6, 0.9]), 4.0, "x")["etiket"], "format_tutuyor")
+        self.assertIsNone(k(self._benzer([1, 0.8, 1.1, 0.6, 0.9]), 1.1, "x")["etiket"])   # kimse öne çıkmıyor
+        self.assertIsNone(k(self._benzer([1.3, 1.4, 1.3, 1.2, 1.4]), 5.0, "x")["etiket"])  # arada: karar yok
+        az = k(self._benzer([3, 3, 3]), 5.0, "altın")
+        self.assertIsNone(az["etiket"])                                                    # 5'ten az kanal: uydurma yok
+        self.assertIn("yalnızca 3", az["aciklama"])
+        for oranlar in ([2, 2, 2, 2, 2], [1, 1, 1, 1, 1], [3]):
+            self.assertTrue(k(self._benzer(oranlar), None, "x")["aciklama"])
+
+    def test_arama_ayirma(self):
+        db = fk.db_ac(":memory:")
+        kota = fk.Kota(db, {"kota": {"gunluk_arama_butcesi": 20, "gunluk_birim_butcesi": 3000, "onemli_mod_esigi": 0.8}})
+        kota.arama = 12
+        self.assertTrue(kota.izin("arama", ayir=3))     # 13. arama: 3 arama analize kalır (16'ya kadar)
+        kota.arama = 13
+        self.assertFalse(kota.izin("arama", ayir=3))    # pahalı ölçümler burada durur
+        self.assertTrue(kota.izin("arama"))             # analiz aramaları 14-16 serbest
+        kota.arama = 16
+        self.assertFalse(kota.izin("arama"))            # %80 sınırı aynen geçerli
+        db.close()
+
+
 class UctanUcaTest(unittest.TestCase):
     def setUp(self):
         self.veri, self.nis = tempfile.mkdtemp(), tempfile.mkdtemp()
@@ -382,6 +434,66 @@ class UctanUcaTest(unittest.TestCase):
         yt = SahteYT()
         fk.calistir(self.veri, self.nis, yt=yt)
         self.assertFalse([a for a in getattr(yt, "aramalar", []) if a.get("relevanceLanguage") == "tr"])
+
+    # ---------- İyileştirme 4: konu mu, format mı? ----------
+    def test_basari_nedeni_en_iyi_kartlarda(self):
+        yt = BenzerYT()
+        fk.calistir(self.veri, self.nis, yt=yt)
+        klasor = os.path.join(self.veri, "fikir_kutusu")
+        kartlar = [_oku(y) for y in glob.glob(os.path.join(klasor, "*", "fk_*.json"))]
+        dolu = [k for k in kartlar if k["basari_nedeni"]]
+        self.assertTrue(all("basari_nedeni" in k for k in kartlar))
+        self.assertTrue(dolu)
+        self.assertLessEqual(len({k["kaynak_videolar"][0]["id"] for k in dolu}), 3)   # günde en çok 3 konu
+        en_iyi = max(kartlar, key=lambda k: k["puanlar"]["toplam"] or 0)
+        self.assertIsNotNone(en_iyi["basari_nedeni"])
+        for k in dolu:
+            b = k["basari_nedeni"]
+            self.assertIn(b["etiket"], ("konu_tutuyor", "format_tutuyor", "ikisi_de", None))
+            self.assertTrue(b["aciklama"])
+            self.assertGreaterEqual(len(b["benzer_kanallar"]), 5)
+            self.assertLessEqual(len(b["benzer_kanallar"]), 10)
+            for x in b["benzer_kanallar"]:
+                self.assertTrue(x["benzerlik_nedeni"] and x["medyan_izlenme"] and x["kanal_id"].startswith("UC"))
+        self.assertEqual(dg.klasoru_dogrula(klasor)[1], {})
+        self.assertLessEqual(yt.cagrilar.count("search"), 16)
+        self.assertGreaterEqual(sum(1 for p in yt.aramalar if p.get("order") == "relevance"), 1)
+
+    def test_basari_analizi_elle(self):
+        fk.calistir(self.veri, self.nis, yt=SahteYT())                      # analizsiz kartlar (benzer kanal yok)
+        yt = BenzerYT()
+        fk.calistir(self.veri, self.nis, yt=yt, basari_analizi_icin="kanal1")
+        kartlar = [_oku(y) for y in glob.glob(os.path.join(self.veri, "fikir_kutusu", "kanal1", "fk_*.json"))]
+        self.assertTrue(any(k["basari_nedeni"] and k["basari_nedeni"]["benzer_kanallar"] for k in kartlar))
+        self.assertLessEqual(yt.cagrilar.count("search"), 3)
+
+    def test_dogrulayici_eski_ve_yeni_kart(self):
+        fk.calistir(self.veri, self.nis, yt=SahteYT())
+        kart = _oku(glob.glob(os.path.join(self.veri, "fikir_kutusu", "kanal1", "fk_*.json"))[0])
+        kart.pop("basari_nedeni", None)
+        self.assertEqual(dg.dogrula(kart), [])                      # eski kart (alan yok) geçerli
+        kart["basari_nedeni"] = None
+        self.assertEqual(dg.dogrula(kart), [])
+        kart["basari_nedeni"] = fk.basari_karari(BasariKarariTestleri._benzer([2, 2, 2, 2, 2]), 3.0, "x")
+        self.assertEqual(dg.dogrula(kart), [])
+        kart["basari_nedeni"]["etiket"] = "belki"
+        self.assertTrue(dg.dogrula(kart))
+
+    def test_basari_nedeni_30_gun_sonra_silinir(self):
+        fk.calistir(self.veri, self.nis, yt=BenzerYT())
+        db = sqlite3.connect(os.path.join(self.veri, "fk_veri.db"))
+        db.execute("UPDATE kart SET olusturma=?", (fk.iso(fk.simdi() - dt.timedelta(days=31)),))
+        db.commit()
+        db.close()
+        db = fk.db_ac(os.path.join(self.veri, "fk_veri.db"))
+        fk.kartlari_guncelle(fk.Istemci(SahteYT(), fk.Kota(db, fk.ayar_yukle(self.veri)[1])), db,
+                             os.path.join(self.veri, "fikir_kutusu"))
+        db.close()
+        for y in glob.glob(os.path.join(self.veri, "fikir_kutusu", "*", "fk_*.json")):
+            b = _oku(y)["basari_nedeni"]
+            for x in (b or {}).get("benzer_kanallar", []):
+                self.assertIsNone(x["abone"])
+                self.assertIsNone(x["konu_videosu_izlenme"])
 
     # ---------- İyileştirme 3: takip önerisi ----------
     def test_sorgu_gruplari(self):

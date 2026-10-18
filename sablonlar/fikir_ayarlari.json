@@ -21,6 +21,7 @@
   "olcum_saatleri": [1, 3, 6, 12, 24, 48, 168],
   "takip_kontrol_araligi_saat": 3,
   "pahali_olcum_konu_sayisi": 10,
+  "basari_analizi_kart_sayisi": 3,
   "kanal_uyumu_esigi": 40,
   "agirlik_ogrenme": {"adim": 0.02, "en_az": 0.02, "en_cok": 0.40, "en_az_ornek": 5}
 }

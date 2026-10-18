@@ -16,6 +16,11 @@ KAYNAK_ALANLARI = {"platform": str, "id": str, "baslik": str, "kanal": str, "abo
 ALANLAR = ["surum", "id", "kanal_id", "olusturma", "guncelleme", "durum", "konu", "ozet", "nis", "format", "hedef_dil",
            "onerilen_aci", "kanca_onerileri", "baslik_kaliplari", "kapak_gozlemleri", "izleyici_sorulari", "puanlar",
            "puan_aciklamasi", "uretim", "riskler", "risk_aciklamasi", "platformlar", "kaynak_videolar"]
+# Sonradan eklenen, isteğe bağlı alanlar: eski kartlarda hiç olmayabilir, yeni kartlarda null olabilir.
+ISTEGE_BAGLI = ["basari_nedeni"]
+BASARI_ETIKETLERI = {"konu_tutuyor", "format_tutuyor", "ikisi_de", None}
+BENZER_ALANLARI = {"ad": str, "kanal_id": str, "abone": int, "medyan_izlenme": (int, float),
+                   "konu_videosu_izlenme": int, "oran": (int, float), "benzerlik_nedeni": str}
 
 
 def _tip(deger, tip, bos_olabilir=True):
@@ -31,7 +36,7 @@ def dogrula(k, dosya_adi=None):
     eksik = [a for a in ALANLAR if a not in k]
     if eksik:
         h.append("eksik alanlar: " + ", ".join(eksik))
-    fazla = [a for a in k if a not in ALANLAR]
+    fazla = [a for a in k if a not in ALANLAR and a not in ISTEGE_BAGLI]
     if fazla:
         h.append("şemada olmayan alanlar: " + ", ".join(fazla))
     if k.get("surum") != 1:
@@ -93,6 +98,25 @@ def dogrula(k, dosya_adi=None):
                     h.append(f"kaynak_videolar[{i}].{a} tipi yanlış")
             if x.get("yayin") and not ISO.match(x["yayin"]):
                 h.append(f"kaynak_videolar[{i}].yayin ISO 8601 olmalı")
+    b = k.get("basari_nedeni")
+    if b is not None:
+        if not isinstance(b, dict):
+            h.append("basari_nedeni nesne ya da null olmalı")
+        else:
+            if b.get("etiket") not in BASARI_ETIKETLERI:
+                h.append("basari_nedeni.etiket konu_tutuyor/format_tutuyor/ikisi_de ya da null olmalı")
+            if not isinstance(b.get("aciklama"), str) or not b.get("aciklama"):
+                h.append("basari_nedeni.aciklama dolu bir metin olmalı")
+            bk = b.get("benzer_kanallar")
+            if not isinstance(bk, list):
+                h.append("basari_nedeni.benzer_kanallar liste olmalı")
+            else:
+                for i, x in enumerate(bk):
+                    for a, tip in BENZER_ALANLARI.items():
+                        if a not in x:
+                            h.append(f"basari_nedeni.benzer_kanallar[{i}].{a} eksik")
+                        elif not _tip(x[a], tip, bos_olabilir=a not in ("ad", "kanal_id", "benzerlik_nedeni")):
+                            h.append(f"basari_nedeni.benzer_kanallar[{i}].{a} tipi yanlış")
     return h
 
 

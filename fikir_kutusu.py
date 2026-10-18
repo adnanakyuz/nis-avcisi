@@ -167,10 +167,13 @@ class Kota:
     def onemli_mod(self):
         return self.oran() >= self.ayar["onemli_mod_esigi"]
 
-    def izin(self, tur, rezerv=False):
+    def izin(self, tur, rezerv=False, ayir=0):
         """rezerv=True: elle başlatılan küçük işler (takip önerisi) %80 eşiğinden sonraki %20'lik payı kullanabilir;
-        günlük arama bütçesi (20) yine de asla aşılmaz."""
+        günlük arama bütçesi (20) yine de asla aşılmaz. ayir=n: %80 eşiğinin altında n arama sonraki işe
+        (konu mu format mı analizi) bırakılır."""
         if tur == "arama":
+            if ayir and self.arama + 1 + ayir > int(self.ayar["gunluk_arama_butcesi"] * self.ayar["onemli_mod_esigi"]):
+                return False
             return (rezerv or not self.onemli_mod()) and self.arama + 1 <= self.ayar["gunluk_arama_butcesi"]
         return self.birim + 1 <= self.ayar["gunluk_birim_butcesi"]
 
@@ -699,17 +702,18 @@ def firsatlari_hazirla(ist, db, adaylar, evergreen, ayar, turkce_kanal_var=True)
     firsatlar.sort(key=lambda f: -(f["oran"] or 0))
     # Pahalı ölçümler (arama kotası): sadece en iyi konular, bütçe izin verdikçe.
     a = argparse.Namespace(bolge="", dil="", max_kanal_yasi=365, max_abone=100_000, kota_yarim=False)
+    ayir = ayar.get("basari_analizi_kart_sayisi", 0)  # bu kadar arama "konu mu format mı" analizine kalır
     for f in firsatlar[:ayar["pahali_olcum_konu_sayisi"]]:
         if not f["konu"]:
             continue
         try:
             if f["nis_firsat"]:  # Niş Avcısı bu konuyu zaten ölçmüş: arama harcama
                 f["rekabet"] = f["nis_firsat"]
-            elif ist.kota.izin("arama"):
+            elif ist.kota.izin("arama", ayir=ayir):
                 f["rekabet"] = na.firsat_olc(ist, a, [f["konu"]]).get(f["konu"])
             dil = (f["video"].get("dil") or "").lower()
             # Türkçe dilinde aktif kanal yoksa Türkçe arama yapılmaz (arama kotası boşa gitmesin).
-            if turkce_kanal_var and not dil.startswith("tr") and ist.kota.izin("arama"):
+            if turkce_kanal_var and not dil.startswith("tr") and ist.kota.izin("arama", ayir=ayir):
                 tr_konu = (na.cevir(f["konu"], "tr") or f["konu"]).lower()
                 r = ist.get("search", part="id", type="video", q=tr_konu, regionCode="TR", relevanceLanguage="tr",
                             order="viewCount", maxResults=25,
@@ -790,6 +794,7 @@ def kart_olustur(ist, db, f, profil, ayar, an, uyum):
         "platformlar": {"youtube": {"uygun": True}, "tiktok": {"uygun": None},
                         "instagram_reels": {"uygun": None}, "facebook_reels": {"uygun": None}},
         "kaynak_videolar": [kaynak_video(k, f["kanal"] if k is v else {}, k is v and f["oran"]) for k in kaynaklar],
+        "basari_nedeni": None,         # isteğe bağlı: günün en iyi kartlarında "konu mu format mı" analizi doldurur
     }
     return kart
 
@@ -801,9 +806,10 @@ def kaynak_video(v, ki, oran):
             "dil": (v.get("dil") or None), "patlama_orani": round(oran, 2) if oran else None}
 
 
-def kartlari_uret(ist, db, kanallar, ayar, klasor, firsatlar):
+def kartlari_uret(ist, db, kanallar, ayar, klasor, firsatlar, yazilanlar=None):
     """Fırsatları kanallara atar ve kart dosyalarını yazar. Her kanal günlük limitine kadar kart alır.
-    Profiller boşsa (niş/anahtar kelime yok) fırsatlar aktif kanallara sırayla dağıtılır."""
+    Profiller boşsa (niş/anahtar kelime yok) fırsatlar aktif kanallara sırayla dağıtılır.
+    yazilanlar listesi verilirse yazılan her kart (yol, kart, fırsat, profil) olarak eklenir."""
     an = simdi()
     aktif = [p for p in kanallar if p.get("aktif")]
     bugun = an.strftime("%Y%m%d")
@@ -842,7 +848,146 @@ def kartlari_uret(ist, db, kanallar, ayar, klasor, firsatlar):
             db.commit()
             sayac[p["id"]] += 1
             yazilan += 1
+            if yazilanlar is not None:
+                yazilanlar.append((yol, kart, f, p))
     return yazilan
+
+
+# ---------- İyileştirme 4: konu mu, format mı? ----------
+BASARI_EN_AZ_KANAL = 5
+BASARI_EN_COK_KANAL = 10
+
+
+def basari_nedeni(ist, db, f, format_):
+    """Kaynak video konusu yüzünden mi, kanalın sunuşu (format) yüzünden mi tuttu? Aynı konuda, aynı dilde ve
+    aynı formatta son 90 günde video yapmış 5-10 başka kanala bakılır: o videolar kendi kanallarının normalini
+    (son 30 videonun medyanı) aşıyorsa konu tutuyordur. 1 arama + birkaç ucuz istek. Veri yetmezse etiket null."""
+    v = f["video"]
+    konu = f["konu"] or baslik_konusu(v["baslik"])
+    dil = (v.get("dil") or "").lower()[:2]
+    p = dict(part="snippet", type="video", q=konu[:100], order="relevance", maxResults=50,
+             publishedAfter=na.tarih_str(simdi() - dt.timedelta(days=90)))
+    if dil:
+        p["relevanceLanguage"] = dil
+    if format_ == "shorts":
+        p["videoDuration"] = "short"
+    r = ist.get("search", **p)
+    adaylar = {}
+    for it in r.get("items", []):  # alaka sırası (izlenme sırası değil: yoksa hep tutan videolar gelir)
+        vid, kid = it.get("id", {}).get("videoId"), it.get("snippet", {}).get("channelId")
+        if vid and kid and kid != v.get("kanal_id") and kid not in adaylar:
+            adaylar[kid] = vid
+    detay = videolar_getir(ist, list(adaylar.values())[:25], "snippet,statistics,contentDetails")
+    an, secilen = simdi(), []
+    for kid, vid in adaylar.items():
+        d = detay.get(vid)
+        if not d:
+            continue
+        sn = d.get("snippet", {})
+        vdil = (sn.get("defaultAudioLanguage") or sn.get("defaultLanguage") or "").lower()[:2]
+        yas_gun = (an - na.zaman(sn["publishedAt"])).days if sn.get("publishedAt") else 0
+        if (dil and vdil and vdil != dil) or yas_gun < 3:
+            continue  # başka dil ya da henüz izlenmesi oturmamış video
+        sure = na.sure_sn(d.get("contentDetails", {}).get("duration", ""))
+        if not sure or format_bul(sure) != format_:
+            continue  # süre bilinmiyor ya da başka format
+        secilen.append((kid, d, vdil, yas_gun))
+        if len(secilen) >= BASARI_EN_COK_KANAL:
+            break
+    ki = kanal_istatistigi(ist, db, [k for k, *_ in secilen]) if secilen else {}
+    benzer = []
+    for kid, d, vdil, yas_gun in secilen:
+        k = ki.get(kid) or {}
+        izl = int(d.get("statistics", {}).get("viewCount", 0))
+        if not k.get("medyan"):
+            continue
+        benzer.append({"ad": k.get("ad") or d["snippet"].get("channelTitle"), "kanal_id": kid, "abone": k.get("abone"),
+                       "medyan_izlenme": round(k["medyan"]), "konu_videosu_izlenme": izl,
+                       "oran": round(izl / k["medyan"], 2),
+                       "benzerlik_nedeni": f"aynı konuda {'Shorts' if format_ == 'shorts' else 'uzun'} video, "
+                                           f"{na.dil_adi(vdil or dil)}, {yas_gun} gün önce: "
+                                           f"\"{baslik_konusu(d['snippet'].get('title', ''), 70)}\""})
+    return basari_karari(benzer, f.get("oran"), konu)
+
+
+def basari_karari(benzer, kaynak_oran, konu):
+    """Benzer kanalların oranlarından etiket: uydurma yok, veri yetmezse etiket null ve neden yazılır."""
+    n = len(benzer)
+    m = P._orta([b["oran"] for b in benzer])
+    sonuc = {"etiket": None, "aciklama": "", "benzer_kanal_sayisi": n,
+             "benzer_medyan_oran": round(m, 2) if m is not None else None,
+             "kaynak_oran": round(kaynak_oran, 2) if kaynak_oran else None,
+             "olcum": iso(simdi()), "benzer_kanallar": benzer}
+    ks = f"Kaynak video kanalının normalinin {kaynak_oran:.1f} katı izlendi" if kaynak_oran else \
+        "Kaynak videonun kanal normali bilinmiyor"
+    if n < BASARI_EN_AZ_KANAL:
+        sonuc["aciklama"] = (f"Karar verilmedi: \"{konu}\" konusunda aynı dil ve formatta yalnızca {n} benzer kanal "
+                             f"bulunabildi, en az {BASARI_EN_AZ_KANAL} gerekiyor.")
+        return sonuc
+    bs = f"aynı konuyu işleyen {n} benzer kanalın videoları ise kendi normallerinin ortalama {m:.1f} katı izlendi"
+    if m >= 1.5:
+        if kaynak_oran and kaynak_oran >= 3 * m:
+            sonuc["etiket"] = "ikisi_de"
+            sonuc["aciklama"] = (f"İkisi de: {ks}; {bs}. Konu genel olarak tutuyor, ama kaynak kanal bunun da çok "
+                                 f"üstüne çıkmış; sunuş biçimi (başlık, kapak, anlatım) da işe yarıyor.")
+        else:
+            sonuc["etiket"] = "konu_tutuyor"
+            sonuc["aciklama"] = (f"Konu tutuyor: {ks}; {bs}. Bu konuyu kim işlese normalinden fazla izleniyor; "
+                                 f"başarı büyük ölçüde konudan geliyor.")
+    elif m <= 1.2:
+        if kaynak_oran and kaynak_oran >= 1.5:
+            sonuc["etiket"] = "format_tutuyor"
+            sonuc["aciklama"] = (f"Format tutuyor: {ks}; {bs}. Aynı konu başka kanallarda normal seviyede kalıyor; "
+                                 f"başarı daha çok kaynak kanalın sunuşundan geliyor. Konuyu alırken sunuşu da incele.")
+        else:
+            sonuc["aciklama"] = (f"Karar verilmedi: {ks}; {bs}. Ne konu ne kaynak video belirgin şekilde öne çıkıyor.")
+    else:
+        sonuc["aciklama"] = (f"Karar verilmedi: {ks}; {bs}. Bu oran (1,2 ile 1,5 kat arası) net bir sonuç için "
+                             f"yeterli değil.")
+    return sonuc
+
+
+def basari_analizleri(ist, db, yazilanlar, ayar):
+    """Bugün yazılan en yüksek puanlı birkaç kart için (aynı kaynak video bir kez) analiz yapılır, kart güncellenir."""
+    sinir = ayar.get("basari_analizi_kart_sayisi", 0)
+    sirali = sorted(yazilanlar, key=lambda x: -(x[1]["puanlar"]["toplam"] or 0))
+    sonuclar, yapilan = {}, 0
+    for yol, kart, f, p in sirali:
+        vid = f["video"]["id"]
+        if vid not in sonuclar:
+            if yapilan >= sinir:
+                continue
+            try:
+                sonuclar[vid] = basari_nedeni(ist, db, f, kart["format"])
+            except ButceDoldu:
+                break
+            except na.ApiHatasi:
+                sonuclar[vid] = None
+            yapilan += 1
+        if sonuclar[vid]:
+            kart["basari_nedeni"] = sonuclar[vid]
+            guvenli_yaz(yol, kart)
+    return yapilan
+
+
+def kartlardan_analiz(ist, db, klasor, kanal_id, ayar):
+    """Elle başlatma: bu kanalın son 3 günde yazılmış, henüz analiz edilmemiş en iyi kartlarını inceler."""
+    sinir = iso(simdi() - dt.timedelta(days=3))
+    yazilanlar = []
+    for dosya, ana_video in db.execute("SELECT dosya, ana_video FROM kart WHERE kanal_id=? AND olusturma>=?",
+                                       (kanal_id, sinir)).fetchall():
+        yol = os.path.join(klasor, dosya)
+        k = json_oku(yol)
+        b = (k or {}).get("basari_nedeni")
+        if not k or not k.get("kaynak_videolar") or (b and b.get("benzer_kanal_sayisi", 0) >= BASARI_EN_AZ_KANAL):
+            continue  # zaten yeterli veriyle analiz edilmiş (az kanal bulunmuşsa yeniden denenir)
+        x = k["kaynak_videolar"][0]
+        r = db.execute("SELECT kanal_id FROM takip WHERE video_id=?", (ana_video,)).fetchone()
+        nis = k.get("nis") or ""
+        f = dict(video=dict(id=x["id"], baslik=x["baslik"], dil=x.get("dil") or "", kanal_id=r[0] if r else None),
+                 konu=nis.split("/", 1)[1] if "/" in nis else None, oran=x.get("patlama_orani"))
+        yazilanlar.append((yol, k, f, None))
+    return basari_analizleri(ist, db, yazilanlar, ayar)
 
 
 def kartlari_guncelle(ist, db, klasor):
@@ -854,10 +999,15 @@ def kartlari_guncelle(ist, db, klasor):
         (yeni_ler if (an - na.zaman(olusturma)).days < 30 else eski_ler).append(os.path.join(klasor, dosya))
     for yol in eski_ler:
         k = json_oku(yol)
-        if k and any(x.get("izlenme") is not None for x in k.get("kaynak_videolar", [])):
+        benzer = (k.get("basari_nedeni") or {}).get("benzer_kanallar") or [] if k else []
+        if k and (any(x.get("izlenme") is not None for x in k.get("kaynak_videolar", []))
+                  or any(b.get("abone") is not None or b.get("konu_videosu_izlenme") is not None for b in benzer)):
             for x in k["kaynak_videolar"]:
                 for alan in ("abone", "izlenme", "kanal_medyan_izlenme", "patlama_orani"):
                     x[alan] = None
+            for b in benzer:
+                for alan in ("abone", "medyan_izlenme", "konu_videosu_izlenme", "oran"):
+                    b[alan] = None
             k["guncelleme"] = iso(an)
             guvenli_yaz(yol, k)
     kartlar = [(y, json_oku(y)) for y in yeni_ler]
@@ -1012,7 +1162,8 @@ def bilgi_yaz(db, kanallar, ayar, klasor, kota, uyarilar, sinyal_ozeti):
 
 
 # ---------- ana akış ----------
-def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None, takip_onerisi_icin=None):
+def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None, takip_onerisi_icin=None,
+             basari_analizi_icin=None):
     kanallar, ayar = ayar_yukle(veri)
     klasor = os.path.join(veri, ayar["klasor"])
     for p in kanallar:
@@ -1044,6 +1195,20 @@ def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None, takip_one
             bilgi_yaz(db, kanallar, ayar, klasor, kota, uyarilar, None)
             db.close()
         return
+    if basari_analizi_icin:  # elle: "konu mu format mı" analizi (günlük çalışmada zaten yapılır)
+        ist.rezerv = True  # takip önerisi gibi: %20'lik payı kullanabilir, günlük 20 arama asla aşılmaz
+        try:
+            n = kartlardan_analiz(ist, db, klasor, basari_analizi_icin, ayar)
+            mesaj = f"{n} konu incelendi ({kota.arama} arama, {kota.birim} birim bugün toplam)."
+        except (ButceDoldu, na.KotaBitti):
+            mesaj = "Bugünün kotası doldu; yarın tekrar başlat."
+        finally:
+            ist.rezerv = False
+        print("Konu mu format mı:", mesaj)
+        uyarilar.append("Konu mu format mı: " + mesaj)
+        bilgi_yaz(db, kanallar, ayar, klasor, kota, uyarilar, None)
+        db.close()
+        return
     eski_onerileri_sil(veri)
     try:
         gb = geri_bildirim_oku(db, klasor)
@@ -1057,7 +1222,11 @@ def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None, takip_one
             print("Günlük fikir üretimi...")
             turkce_kanal_var = any(p.get("aktif") and (p.get("dil") or "tr").lower().startswith("tr") for p in kanallar)
             firsatlar = firsatlari_hazirla(ist, db, adaylar, evergreen, ayar, turkce_kanal_var)
-            yazilan = kartlari_uret(ist, db, kanallar, ayar, klasor, firsatlar)
+            yazilanlar = []
+            yazilan = kartlari_uret(ist, db, kanallar, ayar, klasor, firsatlar, yazilanlar)
+            analiz = basari_analizleri(ist, db, yazilanlar, ayar)
+            if analiz:
+                print(f"Konu mu format mı: {analiz} kart incelendi")
             kartlari_guncelle(ist, db, klasor)
             yayin_saatleri(db, kanallar, ayar, klasor)
             islem_yaz(db, "gunluk", adaylar["ts"])
@@ -1086,12 +1255,14 @@ def main():
     p.add_argument("--gunluk", action="store_true", help="Fikir üretimini şimdi zorla yap")
     p.add_argument("--haftalik", action="store_true", help="Geri bildirim değerlendirmesini şimdi zorla yap")
     p.add_argument("--takip-onerisi", default="", help="Bu kanal profili için takip edilecek kanal öner (ör. kanal1)")
+    p.add_argument("--basari-analizi", default="", help="Bu kanalın son kartlarına konu mu format mı analizi (ör. kanal1)")
     a = p.parse_args()
     try:
         sys.stdout.reconfigure(errors="replace")
     except Exception:
         pass
-    calistir(a.veri, a.nis, a.gunluk, a.haftalik, takip_onerisi_icin=a.takip_onerisi.strip() or None)
+    calistir(a.veri, a.nis, a.gunluk, a.haftalik, takip_onerisi_icin=a.takip_onerisi.strip() or None,
+             basari_analizi_icin=a.basari_analizi.strip() or None)
 
 
 if __name__ == "__main__":
