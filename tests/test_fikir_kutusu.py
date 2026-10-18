@@ -184,6 +184,11 @@ class AltyapiTestleri(unittest.TestCase):
         self.assertEqual(_oku(yol), {"ç": "ğüşıöÇ"})
         self.assertFalse(os.path.exists(yol + ".tmp"))
 
+    def test_baslik_konusu_temizler(self):
+        with mock.patch.object(na, "cevir", lambda m, h, k="auto": m):
+            self.assertEqual(fk.baslik_konusu("​\"Rent-free\"​ 😂 #shorts"), "\"Rent-free\"")
+            self.assertEqual(fk.baslik_konusu("Bir Efsane ❤️ | Kanal"), "Bir Efsane")
+
     def test_pt_gunu(self):
         # Yazın PDT (UTC-7): 18 Ekim 06:59 UTC → 17 Ekim; 07:00 UTC → 18 Ekim
         self.assertEqual(fk.pt_gunu(dt.datetime(2026, 10, 18, 6, 59, tzinfo=dt.timezone.utc)), "2026-10-17")
