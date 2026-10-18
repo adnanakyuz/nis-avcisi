@@ -167,9 +167,11 @@ class Kota:
     def onemli_mod(self):
         return self.oran() >= self.ayar["onemli_mod_esigi"]
 
-    def izin(self, tur):
+    def izin(self, tur, rezerv=False):
+        """rezerv=True: elle başlatılan küçük işler (takip önerisi) %80 eşiğinden sonraki %20'lik payı kullanabilir;
+        günlük arama bütçesi (20) yine de asla aşılmaz."""
         if tur == "arama":
-            return not self.onemli_mod() and self.arama + 1 <= self.ayar["gunluk_arama_butcesi"]
+            return (rezerv or not self.onemli_mod()) and self.arama + 1 <= self.ayar["gunluk_arama_butcesi"]
         return self.birim + 1 <= self.ayar["gunluk_birim_butcesi"]
 
     def say(self, tur):
@@ -194,9 +196,11 @@ class Istemci:
     def __init__(self, yt, kota):
         self.yt, self.kota = yt, kota
 
+    rezerv = False  # takip önerisi sırasında True
+
     def get(self, uc, maliyet=1, **p):
         tur = "arama" if uc == "search" else "birim"
-        if not self.kota.izin(tur):
+        if not self.kota.izin(tur, self.rezerv):
             raise ButceDoldu(tur)
         self.kota.say(tur)  # geçersiz istekler de kotadan düşer: önce say
         return self.yt.get(uc, 1, **p)
@@ -433,6 +437,134 @@ def adaylari_dbden_kur(ist, nis_klasoru):
             kapak=sn.get("thumbnails", {}).get("medium", {}).get("url", ""), kanal_yasi=None,
             yt_konular=na.yt_kategorileri(c)))
     return dict(surum=1, ts=son, videolar=videolar, konular=[], kaynak="nis_gecmis.db (yedek yol)")
+
+
+# ---------- takip edilecek kanal önerisi (iyileştirme 3) ----------
+ONERI_ARAMA_SAYISI = 3
+
+
+def _sorgu_gruplari(profil, en_fazla=ONERI_ARAMA_SAYISI, grup=8):
+    """Profilin nişleri + anahtar kelimeleri "|" (veya) ile birleştirilmiş en fazla 3 arama sorgusu.
+    İşaretler ("$") atlanır; İngilizce kanalda Türkçe harfli kelimeler atlanır."""
+    dil = (profil.get("dil") or "tr").lower()
+    terimler = []
+    for t in list(profil.get("nisler", [])) + list(profil.get("anahtar_kelimeler", [])):
+        t = (t or "").strip()
+        if not re.search(r"\w", t) or t.lower() in (x.lower() for x in terimler):
+            continue
+        if not dil.startswith("tr") and P._TR_HARF.search(t):
+            continue
+        terimler.append(t)
+    return ["|".join(terimler[i:i + grup]) for i in range(0, len(terimler), grup)][:en_fazla]
+
+
+def takip_onerisi(ist, db, profil, veri, adet=15):
+    """Profilin nişinde, kanalın dilinde, son 30 günde aktif ve iyi izlenen 10-15 kanal önerir.
+    En fazla 3 arama (rezerv paydan) + ~60 birim. Sonuç oneriler/<kanal_id>_takip_onerisi.json ve .md;
+    kanallar.json'a DOKUNMAZ (kullanıcı seçip ekler)."""
+    an = simdi()
+    dil = (profil.get("dil") or "tr").lower()
+    sorgular = _sorgu_gruplari(profil)
+    if not sorgular:
+        return None, "Profilde niş ya da anahtar kelime yok; önce profili doldur."
+    ist.rezerv = True
+    baslangic = (ist.kota.arama, ist.kota.birim)
+    gorulme, eslesen = collections.Counter(), collections.defaultdict(set)
+    try:
+        video_idler = []
+        for q in sorgular:
+            r = ist.get("search", part="id", type="video", q=q, order="viewCount", maxResults=50,
+                        publishedAfter=na.tarih_str(an - dt.timedelta(days=30)), relevanceLanguage=dil[:2],
+                        regionCode="TR" if dil.startswith("tr") else None)
+            video_idler += [i["id"]["videoId"] for i in r.get("items", []) if i.get("id", {}).get("videoId")]
+        terimler = [t for q in sorgular for t in q.split("|")]
+        for v in videolar_getir(ist, video_idler, "snippet").values():
+            kid = v["snippet"]["channelId"]
+            gorulme[kid] += 1
+            eslesen[kid].update(P.eslesenler(terimler, v["snippet"]["title"] + " " + " ".join(v["snippet"].get("tags", []))))
+        mevcut = set(profil.get("takip_edilen_kanallar", []))
+        adaylar = [k for k, _ in gorulme.most_common() if k not in mevcut][:30]
+        kanallar = {}
+        for i in range(0, len(adaylar), 50):
+            for c in ist.get("channels", part="snippet,statistics,contentDetails", id=",".join(adaylar[i:i + 50])).get("items", []):
+                kanallar[c["id"]] = c
+        sonuc = []
+        for kid in adaylar:
+            c = kanallar.get(kid)
+            uploads = c and c.get("contentDetails", {}).get("relatedPlaylists", {}).get("uploads")
+            if not uploads:
+                continue
+            pl = ist.get("playlistItems", part="contentDetails", playlistId=uploads, maxResults=50)
+            son30 = [x["contentDetails"]["videoId"] for x in pl.get("items", [])
+                     if x.get("contentDetails", {}).get("videoPublishedAt")
+                     and (an - na.zaman(x["contentDetails"]["videoPublishedAt"])).days <= 30]
+            if len(son30) < 2:
+                continue  # son 30 günde aktif değil
+            detay = videolar_getir(ist, son30, "snippet,statistics")
+            izl = [int(v.get("statistics", {}).get("viewCount", 0)) for v in detay.values()]
+            diller = [(v["snippet"].get("defaultAudioLanguage") or v["snippet"].get("defaultLanguage") or "").lower()[:2]
+                      for v in detay.values()]
+            bilinen = [d for d in diller if d]
+            if bilinen and sum(d == dil[:2] for d in bilinen) / len(bilinen) < .5:
+                continue  # kanal başka dilde
+            cs = c.get("statistics", {})
+            abone = None if cs.get("hiddenSubscriberCount") else int(cs.get("subscriberCount", 0))
+            medyan = P._orta(izl) or 0
+            oran = medyan / abone if abone else None
+            puan = (math.log10(medyan + 1) + (.7 * math.log10(oran + 1) if oran else 0)
+                    + .5 * min(len(son30), 12) / 12 + .3 * min(gorulme[kid], 5))
+            neden = [f"son 30 günde {len(son30)} video", f"tipik izlenme {P._kisa(medyan)}"]
+            if oran and oran >= 1:
+                neden.append(f"abonesinin {oran:.1f} katı izleniyor")
+            neden.append(f"aramada {gorulme[kid]} popüler videosu çıktı")
+            if eslesen[kid]:
+                neden.append("eşleşen kelimeler: " + ", ".join(sorted(eslesen[kid])[:5]))
+            if not bilinen:
+                neden.append("video dili belirtilmemiş (aramada dil filtresiyle bulundu)")
+            sonuc.append(dict(ad=c["snippet"]["title"], kanal_id=kid, link=f"https://www.youtube.com/channel/{kid}",
+                              abone=abone, son30_video_sayisi=len(son30), son30_medyan_izlenme=medyan,
+                              izlenme_abone_orani=round(oran, 2) if oran else None,
+                              dil=bilinen and max(set(bilinen), key=bilinen.count) or None,
+                              neden="; ".join(neden), _puan=puan))
+    except ButceDoldu:
+        ist.rezerv = False
+        return None, "Bugünün arama bütçesi doldu; takip önerisini yarın tekrar başlat."
+    finally:
+        ist.rezerv = False
+    sonuc.sort(key=lambda x: -x.pop("_puan"))
+    sonuc = sonuc[:adet]
+    harcanan = dict(arama=ist.kota.arama - baslangic[0], birim=ist.kota.birim - baslangic[1])
+    veri_json = dict(surum=1, kanal_id=profil["id"], kanal_adi=profil.get("ad"), olusturma=iso(an), dil=dil,
+                     sorgular=sorgular, kota=harcanan, oneriler=sonuc,
+                     nasil_eklenir="Beğendiğin kanalların kanal_id değerlerini kanallar.json → bu profilin "
+                                   "takip_edilen_kanallar listesine ekle (ya da Claude'a 'şunları ekle' de).",
+                     not_="YouTube kuralı gereği bu dosya 30 gün sonra otomatik silinir.")
+    temel = os.path.join(veri, "oneriler", f"{profil['id']}_takip_onerisi")
+    guvenli_yaz(temel + ".json", veri_json)
+    satirlar = [f"# {profil.get('ad') or profil['id']} için takip önerisi",
+                f"{an.astimezone(TR):%d.%m.%Y %H:%M} · dil: {dil} · {len(sonuc)} kanal · "
+                f"{harcanan['arama']} arama, {harcanan['birim']} birim\n",
+                "| # | Kanal | Abone | Son 30 gün video | Tipik izlenme | Neden | Kimlik |", "|---|---|---|---|---|---|---|"]
+    for i, s in enumerate(sonuc, 1):
+        satirlar.append(f"| {i} | [{s['ad']}]({s['link']}) | {P._kisa(s['abone']) if s['abone'] is not None else 'gizli'} | "
+                        f"{s['son30_video_sayisi']} | {P._kisa(s['son30_medyan_izlenme'])} | {s['neden']} | `{s['kanal_id']}` |")
+    satirlar.append("\nBeğendiklerinin kimliklerini (UC...) `kanallar.json` → `takip_edilen_kanallar`'a ekle "
+                    "ya da Claude'a hangilerini istediğini söyle. Bu dosya 30 gün sonra silinir.")
+    os.makedirs(os.path.dirname(temel), exist_ok=True)
+    with open(temel + ".md.tmp", "w", encoding="utf-8") as f:
+        f.write("\n".join(satirlar) + "\n")
+    os.replace(temel + ".md.tmp", temel + ".md")
+    return veri_json, f"{len(sonuc)} kanal önerildi ({harcanan['arama']} arama, {harcanan['birim']} birim)."
+
+
+def eski_onerileri_sil(veri, gun=30):
+    """YouTube 30 gün kuralı: öneri dosyalarındaki API verisi 30 günden uzun saklanmaz."""
+    for yol in glob.glob(os.path.join(veri, "oneriler", "*_takip_onerisi.json")):
+        o = json_oku(yol, {}) or {}
+        if o.get("olusturma") and (simdi() - na.zaman(o["olusturma"])).days >= gun:
+            for y in (yol, yol[:-5] + ".md"):
+                if os.path.exists(y):
+                    os.remove(y)
 
 
 # ---------- kart üretimi ----------
@@ -880,7 +1012,7 @@ def bilgi_yaz(db, kanallar, ayar, klasor, kota, uyarilar, sinyal_ozeti):
 
 
 # ---------- ana akış ----------
-def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None):
+def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None, takip_onerisi_icin=None):
     kanallar, ayar = ayar_yukle(veri)
     klasor = os.path.join(veri, ayar["klasor"])
     for p in kanallar:
@@ -897,6 +1029,22 @@ def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None):
     ist = Istemci(yt, kota)
     _, uyarilar = fk_platformlar.etkin_adaptorler(ayar["platformlar"])  # kapalıyken hiçbir istek atılmaz
     sinyal_ozeti = None
+    if takip_onerisi_icin:  # elle başlatılan takip önerisi: sadece bu iş yapılır, saatlik işler bir sonraki saatte
+        try:
+            profil = next((p for p in kanallar if p["id"] == takip_onerisi_icin), None)
+            if not profil:
+                mesaj = f"'{takip_onerisi_icin}' adında kanal profili yok (kanallar.json'daki id'yi yaz, ör. kanal1)."
+            else:
+                _, mesaj = takip_onerisi(ist, db, profil, veri)
+            print("Takip önerisi:", mesaj)
+            uyarilar.append("Takip önerisi: " + mesaj)
+        except na.KotaBitti:
+            uyarilar.append("YouTube günlük kotası doldu; takip önerisini yarın tekrar başlat.")
+        finally:
+            bilgi_yaz(db, kanallar, ayar, klasor, kota, uyarilar, None)
+            db.close()
+        return
+    eski_onerileri_sil(veri)
     try:
         gb = geri_bildirim_oku(db, klasor)
         yeni = takip_kanallarini_tara(ist, db, kanallar, ayar)
@@ -937,12 +1085,13 @@ def main():
     p.add_argument("--nis", default=KOD_KLASORU, help="Niş Avcısı klasörü (site/adaylar.json için)")
     p.add_argument("--gunluk", action="store_true", help="Fikir üretimini şimdi zorla yap")
     p.add_argument("--haftalik", action="store_true", help="Geri bildirim değerlendirmesini şimdi zorla yap")
+    p.add_argument("--takip-onerisi", default="", help="Bu kanal profili için takip edilecek kanal öner (ör. kanal1)")
     a = p.parse_args()
     try:
         sys.stdout.reconfigure(errors="replace")
     except Exception:
         pass
-    calistir(a.veri, a.nis, a.gunluk, a.haftalik)
+    calistir(a.veri, a.nis, a.gunluk, a.haftalik, takip_onerisi_icin=a.takip_onerisi.strip() or None)
 
 
 if __name__ == "__main__":

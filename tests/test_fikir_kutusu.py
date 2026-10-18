@@ -383,6 +383,61 @@ class UctanUcaTest(unittest.TestCase):
         fk.calistir(self.veri, self.nis, yt=yt)
         self.assertFalse([a for a in getattr(yt, "aramalar", []) if a.get("relevanceLanguage") == "tr"])
 
+    # ---------- İyileştirme 3: takip önerisi ----------
+    def test_sorgu_gruplari(self):
+        profil = dict(id="k", dil="en", nisler=["personal finance"], anahtar_kelimeler=["$", "maaş", "salary", "budget"]
+                      + [f"kelime{i}" for i in range(30)])
+        gruplar = fk._sorgu_gruplari(profil)
+        self.assertLessEqual(len(gruplar), 3)
+        self.assertTrue(gruplar[0].startswith("personal finance|salary|budget"))
+        self.assertNotIn("$", "|".join(gruplar))
+        self.assertNotIn("maaş", "|".join(gruplar))          # İngilizce kanalda Türkçe harfli kelime yok
+        self.assertIn("maaş", fk._sorgu_gruplari(dict(profil, dil="tr"))[0])
+
+    def test_takip_onerisi(self):
+        self._kanallari_degistir(lambda p: p.update(dil="en") if p["id"] == "kanal1" else None)
+        kanallar_once = _metin(os.path.join(self.veri, "kanallar.json"))
+        yt = SahteYT()
+        fk.calistir(self.veri, self.nis, yt=yt, takip_onerisi_icin="kanal1")
+        o = _oku(os.path.join(self.veri, "oneriler", "kanal1_takip_onerisi.json"))
+        self.assertTrue(os.path.exists(os.path.join(self.veri, "oneriler", "kanal1_takip_onerisi.md")))
+        self.assertGreaterEqual(len(o["oneriler"]), 1)
+        for s in o["oneriler"]:
+            for alan in ("ad", "kanal_id", "abone", "son30_video_sayisi", "son30_medyan_izlenme", "neden"):
+                self.assertIn(alan, s)
+            self.assertTrue(s["kanal_id"].startswith("UC") and s["neden"])
+            self.assertGreaterEqual(s["son30_video_sayisi"], 2)
+        self.assertLessEqual(yt.cagrilar.count("search"), 3)
+        self.assertEqual(o["kota"]["arama"], yt.cagrilar.count("search"))
+        self.assertEqual(_metin(os.path.join(self.veri, "kanallar.json")), kanallar_once)   # kanallar.json'a dokunmaz
+        self.assertNotIn("playlistItems", [c for c in yt.cagrilar[:1]])                      # önce arama
+
+    def test_takip_onerisi_rezerv_ve_sinir(self):
+        fk.ayar_yukle(self.veri)
+        db = fk.db_ac(os.path.join(self.veri, "fk_veri.db"))
+        db.execute("INSERT OR REPLACE INTO kota VALUES(?,?,?)", (fk.pt_gunu(fk.simdi()), 0, 16))  # %80: önemli mod
+        db.commit()
+        db.close()
+        yt = SahteYT()
+        fk.calistir(self.veri, self.nis, yt=yt, takip_onerisi_icin="kanal1")
+        self.assertTrue(os.path.exists(os.path.join(self.veri, "oneriler", "kanal1_takip_onerisi.json")))
+        db = sqlite3.connect(os.path.join(self.veri, "fk_veri.db"))
+        self.assertLessEqual(db.execute("SELECT arama FROM kota").fetchone()[0], 20)
+        db.execute("UPDATE kota SET arama=20")
+        db.commit()
+        db.close()
+        os.remove(os.path.join(self.veri, "oneriler", "kanal1_takip_onerisi.json"))
+        yt2 = SahteYT()
+        fk.calistir(self.veri, self.nis, yt=yt2, takip_onerisi_icin="kanal1")   # bütçe dolu: arama yok
+        self.assertEqual(yt2.cagrilar.count("search"), 0)
+        self.assertIn("yarın", _oku(os.path.join(self.veri, "fikir_kutusu", "_bilgi.json"))["uyarilar"][0])
+
+    def test_eski_oneriler_silinir(self):
+        yol = os.path.join(self.veri, "oneriler", "kanal1_takip_onerisi.json")
+        fk.guvenli_yaz(yol, {"olusturma": fk.iso(fk.simdi() - dt.timedelta(days=31)), "oneriler": []})
+        fk.eski_onerileri_sil(self.veri)
+        self.assertFalse(os.path.exists(yol))
+
     def test_geri_bildirim_sadece_okunur(self):
         gb = os.path.join(self.veri, "fikir_kutusu", "_geri_bildirim")
         os.makedirs(gb)
