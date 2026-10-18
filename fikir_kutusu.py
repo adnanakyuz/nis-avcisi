@@ -452,7 +452,8 @@ def konu_bul(video, konu_haritasi):
 def baslik_konusu(baslik, sinir=90):
     """Kartın "konu" alanı: kaynak başlığın hashtag/emoji temizlenmiş Türkçesi (kısa ve net)."""
     temiz = re.sub(r"#\S+|https?://\S+", " ", baslik)
-    temiz = re.sub("[️‍⃣]", "", na.EMOJI.sub(" ", temiz))  # emoji ve kalıntı birleştirici karakterler
+    # emoji ve görünmez kalıntı karakterler (birleştiriciler, sıfır genişlikli boşluk)
+    temiz = re.sub("[\\uFE0F\\u200B\\u200C\\u200D\\u2060\\u20E3]", "", na.EMOJI.sub(" ", temiz))
     temiz = re.sub(r"\s*[|｜]\s*.*$", "", temiz)          # "Konu | Kanal adı" → "Konu"
     temiz = re.sub(r"\s+", " ", temiz).strip(" -–—:") or baslik.strip()
     tr = (na.cevir(temiz, "tr") or temiz).strip()
@@ -520,7 +521,7 @@ def kart_id_al(db, an):
     return f"fk_{gun}_{son:04d}"
 
 
-def firsatlari_hazirla(ist, db, adaylar, evergreen, ayar):
+def firsatlari_hazirla(ist, db, adaylar, evergreen, ayar, turkce_kanal_var=True):
     """Niş Avcısı adaylarından fırsat listesi: patlamaya göre sıralı, konu başına tek fırsat.
     En iyi `pahali_olcum_konu_sayisi` konu için rekabet ve Türkçe boşluğu aramaları yapılır (günlük arama bütçesi)."""
     videolar = adaylar.get("videolar", [])
@@ -575,7 +576,8 @@ def firsatlari_hazirla(ist, db, adaylar, evergreen, ayar):
             elif ist.kota.izin("arama"):
                 f["rekabet"] = na.firsat_olc(ist, a, [f["konu"]]).get(f["konu"])
             dil = (f["video"].get("dil") or "").lower()
-            if not dil.startswith("tr") and ist.kota.izin("arama"):
+            # Türkçe dilinde aktif kanal yoksa Türkçe arama yapılmaz (arama kotası boşa gitmesin).
+            if turkce_kanal_var and not dil.startswith("tr") and ist.kota.izin("arama"):
                 tr_konu = (na.cevir(f["konu"], "tr") or f["konu"]).lower()
                 r = ist.get("search", part="id", type="video", q=tr_konu, regionCode="TR", relevanceLanguage="tr",
                             order="viewCount", maxResults=25,
@@ -607,8 +609,13 @@ def kart_olustur(ist, db, f, profil, ayar, an, uyum):
     pt["rekabet_boslugu"], a4 = P.rekabet_boslugu(rk["pay"] if rk else None, rk["toplam"] if rk else None,
                                                    rk["video"] if rk else None)
     tc = f.get("turkce")
-    pt["turkce_boslugu"], a5 = P.turkce_boslugu(v.get("dil") or "", tc["sayi"] if tc else None,
-                                                tc["medyan"] if tc else None)
+    kanal_dili = (profil.get("dil") or "tr").lower()
+    if kanal_dili.startswith("tr"):
+        pt["turkce_boslugu"], a5 = P.turkce_boslugu(v.get("dil") or "", tc["sayi"] if tc else None,
+                                                    tc["medyan"] if tc else None)
+    else:  # İyileştirme 2: Türkçe olmayan kanalda Türkçe boşluğunun anlamı yok; null olunca toplama girmez
+        pt["turkce_boslugu"] = None
+        a5 = f"Türkçe boşluğu: kanal {na.dil_adi(kanal_dili)}, Türkçe boşluğu hesaba katılmadı."
     pt["omur"], a6 = P.omur(seri, v["baslik"], f["evergreen"])
     pt["kazanc_potansiyeli"], a7 = P.kazanc_potansiyeli(metin)
     pt["uretilebilirlik"], a8, yontem = P.uretilebilirlik(metin, format_)
@@ -900,7 +907,8 @@ def calistir(veri, nis_klasoru, gunluk=False, haftalik=False, yt=None):
             adaylar = adaylari_dbden_kur(ist, nis_klasoru)
         if adaylar.get("ts") and (gunluk or (islem_son(db, "gunluk") or "") < adaylar["ts"]):
             print("Günlük fikir üretimi...")
-            firsatlar = firsatlari_hazirla(ist, db, adaylar, evergreen, ayar)
+            turkce_kanal_var = any(p.get("aktif") and (p.get("dil") or "tr").lower().startswith("tr") for p in kanallar)
+            firsatlar = firsatlari_hazirla(ist, db, adaylar, evergreen, ayar, turkce_kanal_var)
             yazilan = kartlari_uret(ist, db, kanallar, ayar, klasor, firsatlar)
             kartlari_guncelle(ist, db, klasor)
             yayin_saatleri(db, kanallar, ayar, klasor)

@@ -258,6 +258,8 @@ class SahteYT:
     def get(self, uc, maliyet=1, **p):
         self.cagrilar.append(uc)
         if uc == "search":
+            self.aramalar = getattr(self, "aramalar", []) + [p]
+        if uc == "search":
             return {"items": [{"id": {"videoId": f"v{i}"}} for i in range(3)]}
         if uc == "videos":
             ids = p["id"].split(",")
@@ -350,6 +352,31 @@ class UctanUcaTest(unittest.TestCase):
         self.assertTrue(bilgi["kota"]["onemli_mod"])
         # Bütçe dolu olsa da ucuz işler (ölçüm, kart yazımı) devam eder
         self.assertTrue(glob.glob(os.path.join(self.veri, "fikir_kutusu", "*", "fk_*.json")))
+
+    def _kanallari_degistir(self, degisiklik):
+        yol = os.path.join(self.veri, "kanallar.json")
+        k = _oku(yol)
+        for p in k["kanallar"]:
+            degisiklik(p)
+        fk.guvenli_yaz(yol, k)
+
+    def test_ingilizce_kanalda_turkce_boslugu_null(self):
+        """İyileştirme 2: kanalın dili Türkçe değilse turkce_boslugu null ve nedeni açıklamada."""
+        self._kanallari_degistir(lambda p: p.update(dil="en") if p["id"] == "kanal1" else None)
+        fk.calistir(self.veri, self.nis, yt=SahteYT())
+        klasor = os.path.join(self.veri, "fikir_kutusu")
+        k1 = [_oku(y) for y in glob.glob(os.path.join(klasor, "kanal1", "fk_*.json"))]
+        self.assertGreaterEqual(len(k1), 5)
+        for k in k1:
+            self.assertIsNone(k["puanlar"]["turkce_boslugu"])
+            self.assertIn("kanal İngilizce, Türkçe boşluğu hesaba katılmadı", k["puan_aciklamasi"])
+        self.assertEqual(dg.klasoru_dogrula(klasor)[1], {})
+
+    def test_turkce_kanal_yoksa_turkce_arama_yapilmaz(self):
+        self._kanallari_degistir(lambda p: p.update(dil="en"))
+        yt = SahteYT()
+        fk.calistir(self.veri, self.nis, yt=yt)
+        self.assertFalse([a for a in getattr(yt, "aramalar", []) if a.get("relevanceLanguage") == "tr"])
 
     def test_geri_bildirim_sadece_okunur(self):
         gb = os.path.join(self.veri, "fikir_kutusu", "_geri_bildirim")
