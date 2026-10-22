@@ -1,0 +1,57 @@
+# vidIQ sonuçlarını yayınlar. vidIQ'ya GitHub Actions bağlanamaz; çağrıları claude.ai'de her gün çalışan bulut görevi
+# ("Niş Avcısı × vidIQ") yapar, site/vidiq.json'ı claude/vidiq-veri dalına gönderir. Bu iş akışı dosyayı main'e alır
+# ve siteyi yeniden yayınlar. YouTube kotası harcamaz, tarama yapmaz.
+name: vidIQ yayını
+
+on:
+  push:
+    branches: ["claude/vidiq-veri"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write    # main'den yayın için kendini workflow_dispatch ile tetikler
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tarama     # günlük taramayla aynı anda depoya yazmasın
+  cancel-in-progress: false
+
+jobs:
+  al:
+    # Pages yalnızca main'den yayın kabul eder; bu yüzden önce dosya main'e alınır, sonra main'den yayın tetiklenir.
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - name: vidiq.json'ı main'e al
+        run: |
+          git fetch origin claude/vidiq-veri
+          git checkout FETCH_HEAD -- site/vidiq.json
+          python -c "import json; d=json.load(open('site/vidiq.json', encoding='utf-8')); assert isinstance(d.get('kanallar'), list)"
+          git config user.name "nis-avcisi-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/vidiq.json
+          git diff --cached --quiet || git commit -m "vidIQ $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push origin HEAD:main
+      - name: Yayını tetikle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run vidiq.yml --ref main --repo "$GITHUB_REPOSITORY"
+
+  yayinla:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.yayin.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - id: yayin
+        uses: actions/deploy-pages@v5

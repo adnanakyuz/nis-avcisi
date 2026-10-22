@@ -1486,6 +1486,25 @@ function inceleIsaretle() {
     if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); b.classList.remove("sahip"); }
   });
 }
+// vidiq.json'ı bulutta çalışan günlük görev yazar (vidiq_isle.py): vidIQ'nun bulduğu, Türkçe olmayan, büyüyen kanallar.
+var VK = document.getElementById("vidiq-kutu");
+if (VK) fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
+  var l = (d.kanallar || []).slice(0, 15);
+  if (!l.length) return;
+  function k(n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n || 0); }
+  function esc(t) { var e = document.createElement("span"); e.textContent = t || ""; return e.innerHTML; }
+  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu kanallar</h2><p class="alt-baslik">Niş Avcısı&#39;nın adaylarına benzeyen ve hızla '
+    + 'büyüyen kanallar. ✅ olanları iki sistem de buldu.</p><div class="kart bolum"><ul class="satirlar">'
+    + l.map(function (x) {
+        return '<li>' + (x.ortak ? '✅ ' : '') + '<a href="https://www.youtube.com/channel/' + encodeURIComponent(x.id)
+          + '" target="_blank" rel="noopener"><b>' + esc(x.ad) + '</b></a> · ' + k(x.abone) + ' abone'
+          + (x.buyume30 ? ' · <span class="artis">30 günde +%' + Math.round(x.buyume30) + '</span>' : '')
+          + (x.ort_izlenme ? ' · video başı ' + k(x.ort_izlenme) : '')
+          + (x.nis ? '<br><span class="ceviri">' + esc(x.nis.split(",").slice(0, 2).join(", ")) + ' · ' + esc(x.kaynak) + '</span>' : '')
+          + '</li>';
+      }).join("") + '</ul></div>';
+  VK.hidden = false;
+}).catch(function () {});
 fetch(KOK + "aramalar.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (l) {
   l.forEach(function (x) { if (x.tip === "kanal" && x.kanal_id) INCELENEN[x.kanal_id] = x.dosya; });
   inceleIsaretle();
@@ -1975,7 +1994,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                      '<li>🟢 Bir konunun <b>boş mu doymuş mu</b> olduğunu ölçer, hangi dilde yapman gerektiğini söyler.</li>'
                      '<li>⭐ Beğendiğin kanalı yıldızla; <b>👤 Profil</b>\'den ilgi alanlarını seç, sana özel filtrelensin.</li>'
                      '</ul><button class="btn ana" type="button" id="karsilama-kapat">Başlayalım</button></div>')
-        aramalar = (f'<section id="bugun">{karsilama}<p class="selam" id="selam" hidden></p>{one}{hafta_html()}</section>')
+        aramalar = (f'<section id="bugun">{karsilama}<p class="selam" id="selam" hidden></p>{one}{hafta_html()}<div id="vidiq-kutu" hidden></div></section>')
         benim = ('<section id="benim"><div id="fav-kutu"><h2 id="begendiklerim">⭐ Beğendiklerim</h2>'
                  '<p class="alt-baslik">Yıldızladığın kanallar. Dokun, kanala gir; yıldıza basarsan listeden çıkar.</p>'
                  '<div class="kart" id="fav-liste"></div><p class="bos-not" id="fav-bos">Henüz yıldızladığın kanal yok. '
