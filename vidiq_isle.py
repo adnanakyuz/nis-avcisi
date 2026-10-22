@@ -22,7 +22,10 @@ ARAMA_BEKLEME = 14        # aynı niş 14 gün içinde tekrar aranmaz
 SAKLAMA_GUN = 30          # vidiq.json'da son 30 günde görülen kanallar tutulur
 EN_FAZLA_KANAL = 200
 EN_AZ_ABONE, EN_FAZLA_ABONE = 1_000, 300_000
-EN_AZ_BUYUME = 10         # benzer kanallarda 30 günlük abone artışı en az %10 (duran kanal işe yaramaz)
+EN_AZ_BUYUME = 10         # 30 günlük abone artışı en az %10 (duran kanal işe yaramaz)
+# vidIQ çok yeni kanalları henüz tanımıyor (6 günlük, 1 videolu kanal için boş yanıt döndü, 5 kredi boşa gitti);
+# "benzer kanallar" yalnızca bu kadar oturmuş adaylar için sorulur.
+BENZER_EN_AZ_YAS, BENZER_EN_AZ_VIDEO = 14, 5
 # İzleyici kitlesi değil içerik türü; Niş Avcısı'nın aradığı "yeni, tekrarlanabilir niş" ile ilgisi olmayanlar.
 ISTENMEYEN = ("islam", "religio", "quran", "bible", "christian", "prayer", "quote", "motivational", "spiritual",
               "astrolog", "tarot")
@@ -103,7 +106,8 @@ def plan_yap(bakiye, sifirlanma, site, simdi=None):
     for v in sorted(json_oku(os.path.join(site, "adaylar.json"), {}).get("videolar", []),
                     key=lambda v: -(v.get("puan") or 0)):
         kid = v.get("kanal_id")
-        if not kid or kid in gorulen or turkce_mi(v.get("dil"), v.get("ulke")) or yakin("benzer", kid, BENZER_BEKLEME):
+        if (not kid or kid in gorulen or turkce_mi(v.get("dil"), v.get("ulke")) or yakin("benzer", kid, BENZER_BEKLEME)
+                or (v.get("kanal_yasi") or 0) < BENZER_EN_AZ_YAS or (v.get("video_sayisi") or 0) < BENZER_EN_AZ_VIDEO):
             continue
         gorulen.add(kid)
         adaylar.append((kid, v.get("kanal") or kid))
@@ -156,7 +160,7 @@ def kanal_al(ham, kaynak, simdi):
                 kaynak=kaynak, ilk=simdi, son=simdi)
 
 
-def ise_yarar(k, tip):
+def ise_yarar(k):
     """Niş Avcısı'nın işine yarayacak mı: Türkçe değil, makul büyüklükte, büyüyor, konu dışı değil."""
     if not k["id"] or turkce_mi(k["dil"], k["ulke"]):
         return False
@@ -165,9 +169,7 @@ def ise_yarar(k, tip):
         return False
     if any(s in (k["nis"] or "").lower() for s in ISTENMEYEN):
         return False
-    if tip == "benzer" and (k["buyume30"] or 0) < EN_AZ_BUYUME:
-        return False
-    return True
+    return (k["buyume30"] or 0) >= EN_AZ_BUYUME
 
 
 def yanit_kanallari(yanit):
@@ -200,7 +202,7 @@ def isle(klasor, site, db_yol, simdi=None):
         alinan = 0
         for h in ham:
             k = kanal_al(h, kaynak, simdi)
-            if k["id"] == c["hedef"] or not ise_yarar(k, c["tip"]):
+            if k["id"] == c["hedef"] or not ise_yarar(k):
                 continue
             eski = kanallar.get(k["id"])
             if eski:  # istatistikleri tazele, ilk bulunma ve ilk kaynağı koru

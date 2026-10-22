@@ -57,15 +57,16 @@ class UctanUcaTestler(unittest.TestCase):
         db.execute("insert into kanal_kayit values ('2026-10-20', 'UCortak', 'Ortak', 1, 1, 1)")
         db.commit(), db.close()
         yaz(os.path.join(self.site, "adaylar.json"), dict(videolar=[
-            dict(kanal_id="UCtr", kanal="Türk", dil="tr", ulke="TR", puan=30),
-            dict(kanal_id="UCen1", kanal="Bir", dil="en", ulke="US", puan=20),
-            dict(kanal_id="UCen1", kanal="Bir", dil="en", ulke="US", puan=19),
-            dict(kanal_id="UCen2", kanal="İki", dil="en", ulke="GB", puan=10)]))
+            dict(kanal_id="UCtr", kanal="Türk", dil="tr", ulke="TR", puan=30, kanal_yasi=40, video_sayisi=10),
+            dict(kanal_id="UCbebek", kanal="Bebek", dil="en", ulke="US", puan=25, kanal_yasi=6, video_sayisi=1),
+            dict(kanal_id="UCen1", kanal="Bir", dil="en", ulke="US", puan=20, kanal_yasi=20, video_sayisi=8),
+            dict(kanal_id="UCen1", kanal="Bir", dil="en", ulke="US", puan=19, kanal_yasi=20, video_sayisi=8),
+            dict(kanal_id="UCen2", kanal="İki", dil="en", ulke="GB", puan=10, kanal_yasi=30, video_sayisi=6)]))
 
     def tearDown(self):
         shutil.rmtree(self.d)
 
-    def test_plan_turkce_adayi_atlar_ve_turleri_karistirir(self):
+    def test_plan_turkce_ve_cok_yeni_adayi_atlar_turleri_karistirir(self):
         p = V.plan_yap(30, "2026-10-24T00:00:00Z", self.site, SIMDI)   # 6 çağrı, 2 gün → 3
         self.assertEqual(p["cagri_sayisi"], 3)
         self.assertEqual([c["tip"] for c in p["cagrilar"]], ["benzer", "yukselen", "benzer"])
@@ -84,8 +85,9 @@ class UctanUcaTestler(unittest.TestCase):
                  niches="Islamic Religious Content"),
             dict(channelId="UCen1", channelTitle="Kendisi", subscriberCount=20000, subsGrowth30d=50, languages="en")]})
         yaz(os.path.join(self.k, y["dosya"]), {"channels": [
-            dict(channelId="UCortak", channelTitle="Ortak", subscriberCount=3000, subsGrowth30d=5, languages="en",
-                 niche="Space", subNiches=["Rockets"], breakoutChannel=True)]})
+            dict(channelId="UCortak", channelTitle="Ortak", subscriberCount=3000, subsGrowth30d=15, languages="en",
+                 niche="Space", subNiches=["Rockets"], breakoutChannel=True),
+            dict(channelId="UCduran", channelTitle="Duran", subscriberCount=3000, subsGrowth30d=3, languages="en")]})
         ozet, liste = V.isle(self.k, self.site, self.db, SIMDI)
         veri = oku(os.path.join(self.site, "vidiq.json"))
         self.assertEqual([k["id"] for k in veri["kanallar"]], ["UCiyi", "UCortak"])
