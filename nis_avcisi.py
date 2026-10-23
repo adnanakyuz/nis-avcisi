@@ -14,7 +14,7 @@ Kota (15 Ekim 2026'dan beri): arama (search.list) ayrı kotada, günde 100 çağ
 Genel tarama ~50 arama (12 kategori × 2 zaman dilimi global + 12 kategori Türkiye + Finans 3 + 5 konunun fırsat
 ölçümü + en güçlü 3 kanalın İngilizce ve Türkiye pazar ölçümü). Haftada bir +12 (evergreen). Global konulu
 tarama konu başına ~17 arama; kanal incelemesi 2. Fikir Kutusu en fazla 20. Çeviriler kota harcamaz.
-(Sayfadaki "kota birimi" sayısı eski kurala göre hesaplanır: arama başına 100 sayar.)
+Sayfa altında ikisi ayrı gösterilir: "48/100 arama · 210 birim".
 """
 import argparse, collections, concurrent.futures, datetime as dt, html, json, math, os, re, sqlite3, sys, time
 import urllib.error, urllib.parse, urllib.request
@@ -65,7 +65,19 @@ class ApiHatasi(Exception):
 
 class YT:
     def __init__(self, key):
-        self.key, self.harcanan = key, 0
+        self.key, self.arama, self.birim = key, 0, 0
+
+    def say(self, ucnokta, maliyet):
+        # Ekim 2026'dan beri search.list ayrı kovada: günde 100 arama, her biri 1 sayılır.
+        # Diğer uç noktalar 10.000 birimlik ortak kotadan düşer. Eski "arama = 100 birim" hesabı yanıltıyordu.
+        if ucnokta == "search":
+            self.arama += 1
+        else:
+            self.birim += maliyet
+
+    @property
+    def harcanan(self):
+        return f"{self.arama}/100 arama · {self.birim} birim"
 
     def get(self, ucnokta, maliyet=1, **p):
         p["key"] = self.key
@@ -73,10 +85,10 @@ class YT:
         for deneme in range(3):
             try:
                 with urllib.request.urlopen(url, timeout=30) as r:
-                    self.harcanan += maliyet
+                    self.say(ucnokta, maliyet)
                     return json.load(r)
             except urllib.error.HTTPError as e:
-                self.harcanan += maliyet  # hatalı istekler de kotadan düşer
+                self.say(ucnokta, maliyet)  # hatalı istekler de kotadan düşer
                 govde = e.read().decode("utf-8", "ignore").lower()
                 if "quotaexceeded" in govde or "dailylimitexceeded" in govde:
                     raise KotaBitti("Günlük API kotası doldu.")
@@ -667,10 +679,15 @@ def nis_cikar(sonuc, adet=12, haric=()):
     # Tek kelime ("car", "dad") çok genel kalıyor: en az 4 farklı kanalda geçmeli; 2-3 kelimelik ifade 2 kanal yeter.
     adaylar = [(t, p) for t, p in terim_puan.items() if len(terim_kanal[t]) >= (2 if " " in t else 4)]
     adaylar.sort(key=lambda x: -x[1] * len(terim_kanal[x[0]]))
-    secilen, kullanilan = [], set()
+    secilen, kullanilan, video_kumeleri = [], set(), []
     for t, p in adaylar:
         # Kelime bazında çakışma: "oyun" ile "oyun haritası" aynı niş; ama "art" ile "party" değil.
         if any(set(t.split()) & k for k in kullanilan):
+            continue
+        # Aynı videolardan çıkan terimler aynı konudur: birkaç kanal aynı haberi neredeyse aynı başlıkla
+        # yükleyince "star closer jhoan", "ahead mlb trade", "phillies land" ayrı konu gibi listeleniyordu.
+        idler = {v["id"] for v in terim_video[t]}
+        if any(len(idler & k) * 2 >= len(idler) for k in video_kumeleri):
             continue
         vids = sorted({v["id"]: v for v in terim_video[t]}.values(), key=lambda x: -x["puan"])
         secilen.append(dict(terim=t, kanal_sayisi=len(terim_kanal[t]), video_sayisi=len(vids),
@@ -681,6 +698,7 @@ def nis_cikar(sonuc, adet=12, haric=()):
                             kategori=collections.Counter(v["kaynak"] for v in vids).most_common(1)[0][0],
                             kisa_oran=sum(0 < v["sure"] <= 180 for v in vids) / len(vids)))
         kullanilan.add(frozenset(t.split()))
+        video_kumeleri.append(idler)
         if len(secilen) >= adet:
             break
     return secilen
@@ -737,7 +755,7 @@ def oneriler(konu, dil, adet=8):
 
 def firsat_olc(yt, a, terimler, bolge=None, dil=None):
     """Her terim için son 30 günün en çok izlenen 25 videosuna bak: izlenmeler yeni/küçük kanallara mı,
-    yoksa büyük ve eski kanallara mı gidiyor? Terim başına 100 kota birimi.
+    yoksa büyük ve eski kanallara mı gidiyor? Terim başına 1 arama.
     bolge/dil verilirse o pazar ölçülür (ör. İngilizce ya da Türkiye); verilmezse taramanın ayarı."""
     bolge = a.bolge if bolge is None else bolge
     dil = a.dil if dil is None else dil
@@ -1494,11 +1512,12 @@ if (VK) fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { retur
   function k(n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n || 0); }
   function esc(t) { var e = document.createElement("span"); e.textContent = t || ""; return e.innerHTML; }
   VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Hızla büyüyen kanalların konuları; birden çok '
-    + 'kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. ✅ = Niş Avcısı da buldu.</p>'
+    + 'kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. ✅ = Niş Avcısı da bu konuyu gördü, iki sistem aynı yerde buluştu.</p>'
     + '<div class="kart bolum"><ul class="satirlar">'
     + l.map(function (n) {
         return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + esc(n.nis) + '</b>'
           + (n.alt && n.alt.length ? ' <span class="ceviri">(' + esc(n.alt.join(", ")) + ')</span>' : '')
+          + (n.ortak_konu ? ' <span class="artis">· Niş Avcısı: ' + esc(n.ortak_konu) + '</span>' : '')
           + '<br>' + n.kanal_sayisi + ' kanal'
           + (n.ort_buyume30 ? ' · <span class="artis">30 günde ort. +%' + Math.round(n.ort_buyume30) + '</span>' : '')
           + (n.ort_izlenme ? ' · video başı ~' + k(n.ort_izlenme) : '')
@@ -2023,7 +2042,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
 {govde}
 {trend_bolum}""",
               footer=f"""Sadece son {a.max_kanal_yasi} günde açılmış kanallar · ≤{kisa(a.max_abone)} abone · ≤{a.max_video} video ·
-≥{kisa(a.min_izlenme)} izlenme · reklamla şişmiş videolar elendi · {harcanan} kota birimi.
+≥{kisa(a.min_izlenme)} izlenme · reklamla şişmiş videolar elendi · kota: {harcanan}.
 Otomatik genel tarama her gün 11:17'de (kota yenilendikten sonra).<br>
 💰 Kazanç etiketleri kanalın ülkesine/diline göre kaba bir tahmindir; gerçek kazanç konuya ve izleyiciye göre değişir.
 Öneriler kurallara dayalı otomatik yorumlardır, son karar senin.""")
@@ -2263,7 +2282,7 @@ def kanal_rapor(x, pazar, tr, yol, harcanan, kok="../"):
               govde=(ust_kart + oneri + fikir + sira_disi_html + kazanc + konu + pazar_html + performans + format_ + duzen
                      + basliklar + en_iyi),
               footer=f'* Tipik video: videoların ortanca (medyan) izlenmesi; birkaç viral video ortalamayı şişirmesin diye. '
-                     f'Kazanç rakamları ülke ve Shorts oranına göre kaba tahmindir. {harcanan} kota birimi.')
+                     f'Kazanç rakamları ülke ve Shorts oranına göre kaba tahmindir. Kota: {harcanan}.')
 
 
 def adaylari_yaz(yol, sonuc, nisler):
@@ -2316,7 +2335,7 @@ def calistir_kanal(a, yt, durum_yol):
     json_yaz(aramalar_yol, liste[:30])
     json_yaz(durum_yol, dict(uyari="⚠️ Son taramada kota yarıda bitti, sonuçlar eksik olabilir. " + KOTA_NOTU
                              if getattr(a, "kota_yarim", False) else None, ts=simdi_tr().isoformat(timespec="minutes")))
-    print(f"{x['ad']}: {x['analiz_edilen']} video incelendi, konusu: {x['konusu']}, {yt.harcanan} kota birimi.")
+    print(f"{x['ad']}: {x['analiz_edilen']} video incelendi, konusu: {x['konusu']}, kota: {yt.harcanan}.")
     print(f"Rapor: {os.path.join(a.site, dosya)}")
 
 
@@ -2433,7 +2452,7 @@ def calistir(a):
              if getattr(a, "kota_yarim", False) else None)
     json_yaz(durum_yol, dict(uyari=uyari, ts=dt.datetime.now(TR_SAAT).isoformat(timespec="minutes")))
 
-    print(f"\n{len(sonuc)} aday bulundu, {yt.harcanan} kota birimi harcandı.")
+    print(f"\n{len(sonuc)} aday bulundu, kota: {yt.harcanan}.")
     for s in sorted({x["kanal_id"]: x for x in sonuc}.values(), key=lambda x: -x["video_basi"])[:5]:
         print(f"  • {s['kanal']}: {s['video_sayisi']} video → {kisa(s['kanal_izlenme'])} izlenme")
     if nisler:

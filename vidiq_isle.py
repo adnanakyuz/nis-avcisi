@@ -12,7 +12,7 @@ makine gibi tutarlı yapar:
 
 Ek paket gerekmez.
 """
-import argparse, datetime as dt, json, math, os, sqlite3, sys
+import argparse, datetime as dt, json, math, os, re, sqlite3, sys
 
 KLASOR = os.path.dirname(os.path.abspath(__file__))
 KREDI = 5                 # vidIQ'da her veri çağrısı 5 kredi
@@ -181,7 +181,31 @@ def yanit_kanallari(yanit):
     return []
 
 
-def nis_ozeti(kanallar, adet=40):
+def nis_avcisi_konulari(site):
+    """Niş Avcısı'nın bugünkü yükselen konuları ve aday başlıkları/etiketleri (kanal → metin)."""
+    d = json_oku(os.path.join(site, "adaylar.json"), {})
+    metinler = {}
+    for v in d.get("videolar", []):
+        metinler[v.get("kanal_id")] = metinler.get(v.get("kanal_id"), "") + " " + " ".join(
+            [v.get("baslik") or ""] + (v.get("etiketler") or []))
+    return [k.get("terim") or "" for k in d.get("konular", [])], metinler
+
+
+def ortak_konu(etiketler, konular, metinler):
+    """vidIQ nişinin etiketlerinden biri Niş Avcısı'nın yükselen konularında ya da en az 2 aday kanalın
+    başlığında geçiyorsa iki sistem aynı konuyu görmüş demektir; eşleşen etiketi döndürür."""
+    for e in etiketler:
+        if len(e) < 3:
+            continue
+        kalip = re.compile(r"(?<![\w])" + re.escape(e.lower()) + r"(?![\w])")
+        if any(kalip.search(k.lower()) for k in konular):
+            return e
+        if sum(bool(kalip.search(m.lower())) for m in metinler.values()) >= 2:
+            return e
+    return None
+
+
+def nis_ozeti(kanallar, adet=40, konular=(), metinler=None):
     """Kanalları vidIQ niş etiketine göre toplar: amaç kanal değil, tutan konuyu bulmak.
     Adı anlamsız ya da kopya içerikli kanallar da konunun tuttuğunu gösterdiği için elenmez, örnek olarak durur."""
     gruplar = {}
@@ -203,10 +227,12 @@ def nis_ozeti(kanallar, adet=40):
                     sayac[parca] = sayac.get(parca, 0) + 1
         alt = [p for p, _ in sorted(sayac.items(), key=lambda x: -x[1])[:3]]
         izlenme = [k["ort_izlenme"] for k in l if k.get("ort_izlenme")]
+        eslesen = ortak_konu([g["nis"]] + alt, konular, metinler or {})
         sonuc.append(dict(nis=g["nis"], alt=alt, kanal_sayisi=len(l),
                           ort_buyume30=round(sum(buyume) / len(buyume), 1) if buyume else None,
                           ort_izlenme=round(sum(izlenme) / len(izlenme)) if izlenme else None,
-                          ortak=any(k.get("ortak") for k in l),
+                          # ✅: Niş Avcısı aynı kanalı ya da aynı konuyu bulmuş
+                          ortak_konu=eslesen, ortak=bool(eslesen) or any(k.get("ortak") for k in l),
                           ornekler=[dict(id=k["id"], ad=k.get("ad"), abone=k.get("abone"), buyume30=k.get("buyume30"))
                                     for k in l[:4]]))
     # Birden fazla kanalda birlikte tutan konu, tek kanalın patlamasından daha güçlü işarettir.
@@ -252,7 +278,8 @@ def isle(klasor, site, db_yol, simdi=None):
     liste.sort(key=lambda k: (-(k.get("buyume30") or 0), -(k.get("ort_izlenme") or 0)))
     sorgu_sinir = tarih(simdi) - dt.timedelta(days=max(BENZER_BEKLEME, SAKLAMA_GUN))
     json_yaz(yol, dict(surum=1, guncelleme=simdi, bakiye=plan.get("bakiye"), sifirlanma=plan.get("sifirlanma"),
-                       nisler=nis_ozeti(liste[:EN_FAZLA_KANAL]), kanallar=liste[:EN_FAZLA_KANAL],
+                       nisler=nis_ozeti(liste[:EN_FAZLA_KANAL], 40, *nis_avcisi_konulari(site)),
+                       kanallar=liste[:EN_FAZLA_KANAL],
                        sorgular=[s for s in sorgular if (tarih(s.get("tarih")) or sorgu_sinir) >= sorgu_sinir]))
     return ozet, liste
 

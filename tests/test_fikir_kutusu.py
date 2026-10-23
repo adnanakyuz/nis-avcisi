@@ -570,3 +570,23 @@ class UctanUcaTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NisAvcisiDuzeltmeTestleri(unittest.TestCase):
+    def test_kota_arama_ve_birim_ayri_sayilir(self):
+        yt = na.YT("x")
+        yt.say("search", 100)
+        yt.say("videos", 1)
+        yt.say("channels", 1)
+        self.assertEqual(yt.harcanan, "1/100 arama · 2 birim")
+
+    def test_ayni_videolardan_cikan_terimler_tek_konu_sayilir(self):
+        def v(i, kanal, baslik):
+            return dict(id=i, kanal_id=kanal, baslik=baslik, etiketler=[], puan=10, izlenme=1000, yayin_ts="2026-10-20T00:00:00Z",
+                        saatlik=10, kaynak="Spor", sure=30)
+        sonuc = [v("1", "A", "Phillies land star closer Jhoan Duran ahead of MLB trade deadline"),
+                 v("2", "B", "Phillies land star closer Jhoan Duran ahead of MLB trade deadline!"),
+                 v("3", "C", "Cute food animation for kids"), v("4", "D", "Funny food animation")]
+        terimler = [n["terim"] for n in na.nis_cikar(sonuc)]
+        self.assertEqual(len(terimler), 2)           # haber tek konu, yemek animasyonu ayrı konu
+        self.assertIn("food animation", terimler)

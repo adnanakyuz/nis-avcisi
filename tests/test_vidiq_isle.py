@@ -60,6 +60,20 @@ class NisOzetiTestleri(unittest.TestCase):
         self.assertEqual([o["id"] for o in spor["ornekler"]], ["a", "b"])   # anlamsız adlı kanal da örnek olarak kalır
 
 
+class OrtakKonuTestleri(unittest.TestCase):
+    def test_nis_avcisi_konusu_ya_da_iki_aday_basligi_eslesir(self):
+        konular = ["mlb trade deadline", "food animation"]
+        self.assertEqual(V.ortak_konu(["Sports News", "MLB"], konular, {}), "MLB")
+        metinler = {"a": "Giant crane lift fail", "b": "Crane lift gone wrong", "c": "cat video"}
+        self.assertEqual(V.ortak_konu(["Heavy Machinery", "Crane"], [], metinler), "Crane")
+        self.assertIsNone(V.ortak_konu(["Crane"], [], {"a": "crane", "b": "cranes and more"}))  # tek kanal yetmez
+        self.assertIsNone(V.ortak_konu(["Food"], ["seafood boil"], {}))   # kelime içinde geçmesi sayılmaz
+
+    def test_ozet_ortak_konuyu_isaretler(self):
+        n = V.nis_ozeti([dict(id="a", ad="x", nis="Sports News, MLB", buyume30=50)], 40, ["mlb trade deadline"], {})
+        self.assertEqual((n[0]["ortak"], n[0]["ortak_konu"]), (True, "MLB"))
+
+
 class UctanUcaTestler(unittest.TestCase):
     def setUp(self):
         self.d = tempfile.mkdtemp()

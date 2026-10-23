@@ -274,11 +274,12 @@ if (VK) fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { retur
   function k(n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n || 0); }
   function esc(t) { var e = document.createElement("span"); e.textContent = t || ""; return e.innerHTML; }
   VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Hızla büyüyen kanalların konuları; birden çok '
-    + 'kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. ✅ = Niş Avcısı da buldu.</p>'
+    + 'kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. ✅ = Niş Avcısı da bu konuyu gördü, iki sistem aynı yerde buluştu.</p>'
     + '<div class="kart bolum"><ul class="satirlar">'
     + l.map(function (n) {
         return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + esc(n.nis) + '</b>'
           + (n.alt && n.alt.length ? ' <span class="ceviri">(' + esc(n.alt.join(", ")) + ')</span>' : '')
+          + (n.ortak_konu ? ' <span class="artis">· Niş Avcısı: ' + esc(n.ortak_konu) + '</span>' : '')
           + '<br>' + n.kanal_sayisi + ' kanal'
           + (n.ort_buyume30 ? ' · <span class="artis">30 günde ort. +%' + Math.round(n.ort_buyume30) + '</span>' : '')
           + (n.ort_izlenme ? ' · video başı ~' + k(n.ort_izlenme) : '')

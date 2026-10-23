@@ -14,7 +14,8 @@
    "kanal_sayisi": 11,
    "ort_buyume30": 65.0,
    "ort_izlenme": 2245875,
-   "ortak": false,
+   "ortak_konu": "MLB",
+   "ortak": true,
    "ornekler": [
     {
      "id": "UCXIRoXy9jx1nptTqjrHqjxA",
@@ -52,6 +53,7 @@
    "kanal_sayisi": 9,
    "ort_buyume30": 42.5,
    "ort_izlenme": 310184,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -90,6 +92,7 @@
    "kanal_sayisi": 6,
    "ort_buyume30": 21.6,
    "ort_izlenme": 386898,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -128,6 +131,7 @@
    "kanal_sayisi": 3,
    "ort_buyume30": 78.1,
    "ort_izlenme": 14960,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -159,6 +163,7 @@
    "kanal_sayisi": 2,
    "ort_buyume30": 26.4,
    "ort_izlenme": 1861724,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -185,6 +190,7 @@
    "kanal_sayisi": 2,
    "ort_buyume30": 16.7,
    "ort_izlenme": 161968,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -211,6 +217,7 @@
    "kanal_sayisi": 2,
    "ort_buyume30": 15.1,
    "ort_izlenme": 18880,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -237,6 +244,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 191.1,
    "ort_izlenme": 9814300,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -256,6 +264,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 147.9,
    "ort_izlenme": 40463,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -275,6 +284,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 124.3,
    "ort_izlenme": 24207,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -294,6 +304,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 111.4,
    "ort_izlenme": 1879983,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -314,6 +325,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 108.8,
    "ort_izlenme": 1440617,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -333,6 +345,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 96.4,
    "ort_izlenme": 449488,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -352,6 +365,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 95.6,
    "ort_izlenme": 22706,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -371,6 +385,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 94.7,
    "ort_izlenme": 816443,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -390,6 +405,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 76.7,
    "ort_izlenme": 24351,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -409,6 +425,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 51.0,
    "ort_izlenme": 28522,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -428,6 +445,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 50.5,
    "ort_izlenme": 11974,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -447,6 +465,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 43.9,
    "ort_izlenme": 2467096,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -466,6 +485,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 41.9,
    "ort_izlenme": 977890,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -485,6 +505,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 33.0,
    "ort_izlenme": 39890,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -504,6 +525,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 32.7,
    "ort_izlenme": 65353,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -523,6 +545,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 30.2,
    "ort_izlenme": 1972,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -543,6 +566,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 30.0,
    "ort_izlenme": 870588,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -562,6 +586,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 29.4,
    "ort_izlenme": 176905,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -581,6 +606,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 27.0,
    "ort_izlenme": 271040,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -601,6 +627,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 24.3,
    "ort_izlenme": 821361,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -620,6 +647,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 23.7,
    "ort_izlenme": 1823812,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -639,6 +667,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 23.0,
    "ort_izlenme": 1451820,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -658,6 +687,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 20.7,
    "ort_izlenme": 2590,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -677,6 +707,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 19.8,
    "ort_izlenme": 817033,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -697,7 +728,8 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 15.1,
    "ort_izlenme": 3081103,
-   "ortak": false,
+   "ortak_konu": "MLB",
+   "ortak": true,
    "ornekler": [
     {
      "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
@@ -716,6 +748,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 14.8,
    "ort_izlenme": 14552956,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -736,6 +769,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 14.2,
    "ort_izlenme": 1900461,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -755,6 +789,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 14.1,
    "ort_izlenme": 11695,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -774,6 +809,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 13.2,
    "ort_izlenme": 11239,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -794,6 +830,7 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 11.9,
    "ort_izlenme": 2199428,
+   "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
@@ -813,7 +850,8 @@
    "kanal_sayisi": 1,
    "ort_buyume30": 10.0,
    "ort_izlenme": 1562899,
-   "ortak": false,
+   "ortak_konu": "MLB Trade Deadline",
+   "ortak": true,
    "ornekler": [
     {
      "id": "UCCVQNJemaiZml5pxn5ze-TA",
