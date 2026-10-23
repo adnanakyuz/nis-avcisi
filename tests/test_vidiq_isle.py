@@ -45,6 +45,21 @@ class TurkceTestleri(unittest.TestCase):
         self.assertFalse(V.turkce_mi(None, None))
 
 
+class NisOzetiTestleri(unittest.TestCase):
+    def test_kanallar_nise_gore_gruplanir_cok_kanalli_nis_ustte(self):
+        l = [dict(id="a", ad="0989xx", nis="Sports News, MLB, Phillies", buyume30=170, ort_izlenme=2_000_000, abone=60000),
+             dict(id="b", ad="yugal", nis="sports news, MLB", buyume30=120, ort_izlenme=1_000_000, abone=60000, ortak=True),
+             dict(id="c", ad="Tek", nis="Celebrity News", buyume30=190, abone=4000),
+             dict(id="d", ad="Etiketsiz", nis="", buyume30=50)]
+        n = V.nis_ozeti(l)
+        self.assertEqual([x["nis"] for x in n], ["Sports News", "Celebrity News"])
+        spor = n[0]
+        self.assertEqual((spor["kanal_sayisi"], spor["ort_buyume30"], spor["ort_izlenme"], spor["ortak"]),
+                         (2, 145.0, 1_500_000, True))
+        self.assertEqual(spor["alt"][0], "MLB")
+        self.assertEqual([o["id"] for o in spor["ornekler"]], ["a", "b"])   # anlamsız adlı kanal da örnek olarak kalır
+
+
 class UctanUcaTestler(unittest.TestCase):
     def setUp(self):
         self.d = tempfile.mkdtemp()

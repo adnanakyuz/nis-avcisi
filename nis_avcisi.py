@@ -1486,22 +1486,26 @@ function inceleIsaretle() {
     if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); b.classList.remove("sahip"); }
   });
 }
-// vidiq.json'ı bulutta çalışan günlük görev yazar (vidiq_isle.py): vidIQ'nun bulduğu, Türkçe olmayan, büyüyen kanallar.
+// vidiq.json'ı bulutta çalışan günlük görev yazar (vidiq_isle.py): vidIQ'nun bulduğu kanallar, tutan konulara (nişlere) göre gruplu.
 var VK = document.getElementById("vidiq-kutu");
 if (VK) fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
-  var l = (d.kanallar || []).slice(0, 15);
+  var l = (d.nisler || []).slice(0, 12);
   if (!l.length) return;
   function k(n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n || 0); }
   function esc(t) { var e = document.createElement("span"); e.textContent = t || ""; return e.innerHTML; }
-  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu kanallar</h2><p class="alt-baslik">Niş Avcısı&#39;nın adaylarına benzeyen ve hızla '
-    + 'büyüyen kanallar. ✅ olanları iki sistem de buldu.</p><div class="kart bolum"><ul class="satirlar">'
-    + l.map(function (x) {
-        return '<li>' + (x.ortak ? '✅ ' : '') + '<a href="https://www.youtube.com/channel/' + encodeURIComponent(x.id)
-          + '" target="_blank" rel="noopener"><b>' + esc(x.ad) + '</b></a> · ' + k(x.abone) + ' abone'
-          + (x.buyume30 ? ' · <span class="artis">30 günde +%' + Math.round(x.buyume30) + '</span>' : '')
-          + (x.ort_izlenme ? ' · video başı ' + k(x.ort_izlenme) : '')
-          + (x.nis ? '<br><span class="ceviri">' + esc(x.nis.split(",").slice(0, 2).join(", ")) + ' · ' + esc(x.kaynak) + '</span>' : '')
-          + '</li>';
+  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Hızla büyüyen kanalların konuları; birden çok '
+    + 'kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. ✅ = Niş Avcısı da buldu.</p>'
+    + '<div class="kart bolum"><ul class="satirlar">'
+    + l.map(function (n) {
+        return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + esc(n.nis) + '</b>'
+          + (n.alt && n.alt.length ? ' <span class="ceviri">(' + esc(n.alt.join(", ")) + ')</span>' : '')
+          + '<br>' + n.kanal_sayisi + ' kanal'
+          + (n.ort_buyume30 ? ' · <span class="artis">30 günde ort. +%' + Math.round(n.ort_buyume30) + '</span>' : '')
+          + (n.ort_izlenme ? ' · video başı ~' + k(n.ort_izlenme) : '')
+          + '<br><span class="ceviri">Örnek: ' + n.ornekler.map(function (o) {
+              return '<a href="https://www.youtube.com/channel/' + encodeURIComponent(o.id) + '" target="_blank" rel="noopener">'
+                + esc(o.ad) + '</a> (' + k(o.abone) + ')';
+            }).join(", ") + '</span></li>';
       }).join("") + '</ul></div>';
   VK.hidden = false;
 }).catch(function () {});

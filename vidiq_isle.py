@@ -181,6 +181,39 @@ def yanit_kanallari(yanit):
     return []
 
 
+def nis_ozeti(kanallar, adet=40):
+    """Kanalları vidIQ niş etiketine göre toplar: amaç kanal değil, tutan konuyu bulmak.
+    Adı anlamsız ya da kopya içerikli kanallar da konunun tuttuğunu gösterdiği için elenmez, örnek olarak durur."""
+    gruplar = {}
+    for k in kanallar:
+        ad = (k.get("nis") or "").split(",")[0].strip()
+        if not ad:
+            continue
+        gruplar.setdefault(ad.lower(), dict(nis=ad, kanallar=[]))["kanallar"].append(k)
+    sonuc = []
+    for g in gruplar.values():
+        l = sorted(g["kanallar"], key=lambda k: -(k.get("buyume30") or 0))
+        buyume = [k["buyume30"] for k in l if k.get("buyume30") is not None]
+        # İlk etiket genel kalabiliyor ("Sports News"); asıl konu alt etiketlerde ("MLB, Philadelphia Phillies").
+        sayac = {}
+        for k in l:
+            for parca in (k.get("nis") or "").split(",")[1:]:
+                parca = parca.strip()
+                if parca and parca.lower() != g["nis"].lower():
+                    sayac[parca] = sayac.get(parca, 0) + 1
+        alt = [p for p, _ in sorted(sayac.items(), key=lambda x: -x[1])[:3]]
+        izlenme = [k["ort_izlenme"] for k in l if k.get("ort_izlenme")]
+        sonuc.append(dict(nis=g["nis"], alt=alt, kanal_sayisi=len(l),
+                          ort_buyume30=round(sum(buyume) / len(buyume), 1) if buyume else None,
+                          ort_izlenme=round(sum(izlenme) / len(izlenme)) if izlenme else None,
+                          ortak=any(k.get("ortak") for k in l),
+                          ornekler=[dict(id=k["id"], ad=k.get("ad"), abone=k.get("abone"), buyume30=k.get("buyume30"))
+                                    for k in l[:4]]))
+    # Birden fazla kanalda birlikte tutan konu, tek kanalın patlamasından daha güçlü işarettir.
+    sonuc.sort(key=lambda n: (-n["kanal_sayisi"], -(n["ort_buyume30"] or 0)))
+    return sonuc[:adet]
+
+
 def isle(klasor, site, db_yol, simdi=None):
     simdi = (simdi or dt.datetime.now(dt.timezone.utc)).isoformat(timespec="seconds")
     plan = json_oku(os.path.join(klasor, "plan.json"), None)
@@ -219,7 +252,7 @@ def isle(klasor, site, db_yol, simdi=None):
     liste.sort(key=lambda k: (-(k.get("buyume30") or 0), -(k.get("ort_izlenme") or 0)))
     sorgu_sinir = tarih(simdi) - dt.timedelta(days=max(BENZER_BEKLEME, SAKLAMA_GUN))
     json_yaz(yol, dict(surum=1, guncelleme=simdi, bakiye=plan.get("bakiye"), sifirlanma=plan.get("sifirlanma"),
-                       kanallar=liste[:EN_FAZLA_KANAL],
+                       nisler=nis_ozeti(liste[:EN_FAZLA_KANAL]), kanallar=liste[:EN_FAZLA_KANAL],
                        sorgular=[s for s in sorgular if (tarih(s.get("tarih")) or sorgu_sinir) >= sorgu_sinir]))
     return ozet, liste
 

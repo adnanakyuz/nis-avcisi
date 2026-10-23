@@ -3,6 +3,827 @@
  "guncelleme": "2026-10-23T22:57:44+00:00",
  "bakiye": 145,
  "sifirlanma": "2026-11-12T00:27:18.559803Z",
+ "nisler": [
+  {
+   "nis": "Sports News",
+   "alt": [
+    "MLB",
+    "Philadelphia Phillies",
+    "Baseball"
+   ],
+   "kanal_sayisi": 11,
+   "ort_buyume30": 65.0,
+   "ort_izlenme": 2245875,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCXIRoXy9jx1nptTqjrHqjxA",
+     "ad": "09890ن5حد6ن8هي مواقع رائع سلطان",
+     "abone": 63100,
+     "buyume30": 169.66
+    },
+    {
+     "id": "UC3SEkDq8S6dB47eG_PE1SeA",
+     "ad": "yugalseditz",
+     "abone": 60900,
+     "buyume30": 120.65
+    },
+    {
+     "id": "UCHBwAXxDyL8rKjkEliDiolg",
+     "ad": "RingQueenFly",
+     "abone": 17300,
+     "buyume30": 110.72
+    },
+    {
+     "id": "UCMSiV6DQgIbpaW97hfvjXFA",
+     "ad": "احمد محمد",
+     "abone": 83600,
+     "buyume30": 100.48
+    }
+   ]
+  },
+  {
+   "nis": "Mechanical Engineering",
+   "alt": [
+    "Heavy Machinery",
+    "Aviation Technology",
+    "Machining"
+   ],
+   "kanal_sayisi": 9,
+   "ort_buyume30": 42.5,
+   "ort_izlenme": 310184,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCnWQRJh3WfocunOqE6dEzmQ",
+     "ad": "Deep signal",
+     "abone": 5530,
+     "buyume30": 113.51
+    },
+    {
+     "id": "UCxwlBH9Y-pNXxq8mfwoh5lg",
+     "ad": "Alfa Groups Shorts",
+     "abone": 2960,
+     "buyume30": 71.1
+    },
+    {
+     "id": "UCve7NwAvcJP3vu6yku-sXKA",
+     "ad": "MechanicalLabs",
+     "abone": 9770,
+     "buyume30": 63.93
+    },
+    {
+     "id": "UCx52EZrPHER03BbNbYwoTdg",
+     "ad": "CAD COMPANY",
+     "abone": 58100,
+     "buyume30": 38
+    }
+   ]
+  },
+  {
+   "nis": "Engineering Education",
+   "alt": [
+    "Mechanical Engineering",
+    "Heavy Machinery",
+    "Construction Engineering"
+   ],
+   "kanal_sayisi": 6,
+   "ort_buyume30": 21.6,
+   "ort_izlenme": 386898,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC00iFBtXh2VkEP4sXGCj-yA",
+     "ad": "Forge of Facts",
+     "abone": 6210,
+     "buyume30": 39.55
+    },
+    {
+     "id": "UCqT6NBFBsEpJlzMzV-CjcZw",
+     "ad": "bluprint labs",
+     "abone": 29100,
+     "buyume30": 22.78
+    },
+    {
+     "id": "UCL3X3z8-qR8BCJHRecKN5VA",
+     "ad": "TrueTech Academy",
+     "abone": 3680,
+     "buyume30": 21.05
+    },
+    {
+     "id": "UChWMTjgRTx4plb2IIfECiUQ",
+     "ad": "Projekt Morski Przekrój",
+     "abone": 3380,
+     "buyume30": 18.18
+    }
+   ]
+  },
+  {
+   "nis": "Engineering",
+   "alt": [
+    "Physics",
+    "Mechanical Engineering",
+    "Structural Engineering"
+   ],
+   "kanal_sayisi": 3,
+   "ort_buyume30": 78.1,
+   "ort_izlenme": 14960,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCPA7Ua1WosnBHBq3NKlDvwA",
+     "ad": "Extreme Mechanics",
+     "abone": 1060,
+     "buyume30": 118.11
+    },
+    {
+     "id": "UCNcBjlaxddAVmS4zywNi8Sw",
+     "ad": "こういうことか",
+     "abone": 2300,
+     "buyume30": 96.58
+    },
+    {
+     "id": "UCDAzSxjnxj9Jw2cOW0ZMaow",
+     "ad": "ディープ・インサイト",
+     "abone": 2140,
+     "buyume30": 19.55
+    }
+   ]
+  },
+  {
+   "nis": "Sports",
+   "alt": [
+    "Major League Baseball",
+    "Philadelphia Phillies"
+   ],
+   "kanal_sayisi": 2,
+   "ort_buyume30": 26.4,
+   "ort_izlenme": 1861724,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCd6iuGex6auD5dWM8PwJvUw",
+     "ad": "Rueben Geise",
+     "abone": 31300,
+     "buyume30": 32.07
+    },
+    {
+     "id": "UCCs5fUaBNshhe0CWaImTs4A",
+     "ad": "Macgure Laknws",
+     "abone": 44700,
+     "buyume30": 20.81
+    }
+   ]
+  },
+  {
+   "nis": "Industrial Engineering",
+   "alt": [
+    "Mechanical Engineering",
+    "Machining",
+    "Manufacturing Processes"
+   ],
+   "kanal_sayisi": 2,
+   "ort_buyume30": 16.7,
+   "ort_izlenme": 161968,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC_ZFjHOqTnSLg_uxLSNF4tA",
+     "ad": "Thomas Anderson",
+     "abone": 13000,
+     "buyume30": 20.37
+    },
+    {
+     "id": "UCYJDu2MqzWBqeOo9twYpr7w",
+     "ad": "子育て悩み相談室",
+     "abone": 19000,
+     "buyume30": 13.1
+    }
+   ]
+  },
+  {
+   "nis": "DIY Engineering",
+   "alt": [
+    "Mechanical Engineering",
+    "Physics Experiments",
+    "Science Projects"
+   ],
+   "kanal_sayisi": 2,
+   "ort_buyume30": 15.1,
+   "ort_izlenme": 18880,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCSv2qxZJsm2eDFFVISdGiNA",
+     "ad": "Tom Stanton bằng tiếng Việt",
+     "abone": 5380,
+     "buyume30": 16.2
+    },
+    {
+     "id": "UC3mQB0Vs5TUMH0JsV0obhIQ",
+     "ad": "Official Creative Think",
+     "abone": 1380,
+     "buyume30": 14.05
+    }
+   ]
+  },
+  {
+   "nis": "Celebrity News",
+   "alt": [
+    "Pop Culture",
+    "Entertainment Trivia",
+    "Luxury Lifestyle"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 191.1,
+   "ort_izlenme": 9814300,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCZ4AY9cbwuVn7DLnSd3wXdA",
+     "ad": "Stuff Boss",
+     "abone": 4600,
+     "buyume30": 191.14
+    }
+   ]
+  },
+  {
+   "nis": "Science and Engineering",
+   "alt": [
+    "Mechanical Engineering",
+    "Aviation"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 147.9,
+   "ort_izlenme": 40463,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCEQpu8IpQNYczstTg5ECAeQ",
+     "ad": "Vì Sao Nhỉ - Why is that?",
+     "abone": 7040,
+     "buyume30": 147.89
+    }
+   ]
+  },
+  {
+   "nis": "Engineering & Technology Explainer",
+   "alt": [
+    "Mechanical Engineering",
+    "Industrial Processes"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 124.3,
+   "ort_izlenme": 24207,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC86p8w_VipxatMHwH3RtAxw",
+     "ad": "Behind the Why",
+     "abone": 2490,
+     "buyume30": 124.32
+    }
+   ]
+  },
+  {
+   "nis": "Financial News",
+   "alt": [
+    "Relationship Dramas",
+    "Storytelling"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 111.4,
+   "ort_izlenme": 1879983,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCek_aDZfE2sxFVtJ6uRJ5jA",
+     "ad": "ANTELO",
+     "abone": 46300,
+     "buyume30": 111.42
+    }
+   ]
+  },
+  {
+   "nis": "Mechanical Engineering Animation",
+   "alt": [
+    "3D Animation",
+    "Mechanical Design",
+    "Mechanism Design"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 108.8,
+   "ort_izlenme": 1440617,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCyGYiDIp7NIrwTfZ20Ex7AA",
+     "ad": "KnowFrame",
+     "abone": 8980,
+     "buyume30": 108.84
+    }
+   ]
+  },
+  {
+   "nis": "Historical Engineering & Architecture",
+   "alt": [
+    "Ancient History",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 96.4,
+   "ort_izlenme": 449488,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCIkUB2P1EysxV5F5egmAolA",
+     "ad": "3D_Spectra_YT",
+     "abone": 55000,
+     "buyume30": 96.43
+    }
+   ]
+  },
+  {
+   "nis": "Automotive Engineering Tutorials",
+   "alt": [
+    "Internal Combustion Engines",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 95.6,
+   "ort_izlenme": 22706,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCJfSVViMifMoJw-80gYDltQ",
+     "ad": "Ai Mashine Explained",
+     "abone": 2210,
+     "buyume30": 95.58
+    }
+   ]
+  },
+  {
+   "nis": "Educational Engineering Animation",
+   "alt": [
+    "Construction Technology",
+    "Science Explainer"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 94.7,
+   "ort_izlenme": 816443,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCFbPsPjAKiEgTbl11fDSiKQ",
+     "ad": "CoreMine 3D",
+     "abone": 47500,
+     "buyume30": 94.67
+    }
+   ]
+  },
+  {
+   "nis": "Automotive Engineering Education",
+   "alt": [
+    "Car Maintenance",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 76.7,
+   "ort_izlenme": 24351,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCHmPiloJ10Xyy2_j1sDAhHA",
+     "ad": "Engine Explained",
+     "abone": 28100,
+     "buyume30": 76.73
+    }
+   ]
+  },
+  {
+   "nis": "Engineering & Infrastructure Documentary",
+   "alt": [
+    "Civil Engineering",
+    "Architecture"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 51.0,
+   "ort_izlenme": 28522,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCgjJehxUD2tpwvYT9q-X5Yg",
+     "ad": "知識の断面図",
+     "abone": 2190,
+     "buyume30": 51.03
+    }
+   ]
+  },
+  {
+   "nis": "Mechanical Engineering Tutorials",
+   "alt": [
+    "Manufacturing Technology",
+    "Machine Design"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 50.5,
+   "ort_izlenme": 11974,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCIdVv366Bn5XL1oMm6HJaEQ",
+     "ad": "Kumar Mech Academy",
+     "abone": 1670,
+     "buyume30": 50.45
+    }
+   ]
+  },
+  {
+   "nis": "General Entertainment",
+   "alt": [
+    "MLB News",
+    "Digital Art"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 43.9,
+   "ort_izlenme": 2467096,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCOXIDY9Vl3fEddDZMZm9WKA",
+     "ad": "Liuliu Theatre",
+     "abone": 80600,
+     "buyume30": 43.93
+    }
+   ]
+  },
+  {
+   "nis": "Science & Engineering Explanations",
+   "alt": [
+    "Mechanical Engineering",
+    "Applied Science"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 41.9,
+   "ort_izlenme": 977890,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCycbQZ8NbC9JbIhUcjH72lA",
+     "ad": "NITROWAR",
+     "abone": 38300,
+     "buyume30": 41.85
+    }
+   ]
+  },
+  {
+   "nis": "Automotive Engineering",
+   "alt": [
+    "Motorcycle History",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 33.0,
+   "ort_izlenme": 39890,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCQh4wN6Tc40KrDYuvx0shDQ",
+     "ad": "60秒バイク図鑑",
+     "abone": 1370,
+     "buyume30": 33.01
+    }
+   ]
+  },
+  {
+   "nis": "Structural Engineering",
+   "alt": [
+    "Civil Engineering",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 32.7,
+   "ort_izlenme": 65353,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCuM9Wk-_C0G0-72NnF_KdBA",
+     "ad": "なるほど構造",
+     "abone": 4910,
+     "buyume30": 32.7
+    }
+   ]
+  },
+  {
+   "nis": "Educational Science & Technology",
+   "alt": [
+    "3D Animation",
+    "How It Works"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 30.2,
+   "ort_izlenme": 1972,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCpn5OQbQnlq4GE-lpcyHc4Q",
+     "ad": "learn.with.cartoon",
+     "abone": 3280,
+     "buyume30": 30.16
+    }
+   ]
+  },
+  {
+   "nis": "Ancient History",
+   "alt": [
+    "Ancient Engineering",
+    "Roman History",
+    "Ancient Military History"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 30.0,
+   "ort_izlenme": 870588,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCZMXnFWl30pVv4qelzQFRyQ",
+     "ad": "Ancient Engineering",
+     "abone": 11300,
+     "buyume30": 30.03
+    }
+   ]
+  },
+  {
+   "nis": "Science & Engineering Education",
+   "alt": [
+    "Physics Experiments",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 29.4,
+   "ort_izlenme": 176905,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCqVvMQMpUqkhCkJawOKuuDw",
+     "ad": "Professor Decoded",
+     "abone": 8460,
+     "buyume30": 29.36
+    }
+   ]
+  },
+  {
+   "nis": "Heavy Machinery",
+   "alt": [
+    "Agricultural Engineering",
+    "Construction Equipment"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 27.0,
+   "ort_izlenme": 271040,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCjM5YwinrA_yW0aZZM-20cQ",
+     "ad": "TerraDrive Industries",
+     "abone": 33900,
+     "buyume30": 26.97
+    }
+   ]
+  },
+  {
+   "nis": "Engineering Explainers",
+   "alt": [
+    "Mechanical Engineering",
+    "Applied Physics",
+    "3D Animation"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 24.3,
+   "ort_izlenme": 821361,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCHeT7mGXT7kUuuxtCukVEiw",
+     "ad": "Rotor Studios",
+     "abone": 12800,
+     "buyume30": 24.27
+    }
+   ]
+  },
+  {
+   "nis": "Hip-Hop Music",
+   "alt": [
+    "Human Interest Stories",
+    "MLB Highlights"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 23.7,
+   "ort_izlenme": 1823812,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCoFYy05BYTncMuzJZpJyrvg",
+     "ad": "Little Kindness",
+     "abone": 86200,
+     "buyume30": 23.67
+    }
+   ]
+  },
+  {
+   "nis": "Art and Sports Commentary",
+   "alt": [
+    "Digital Art",
+    "MLB News"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 23.0,
+   "ort_izlenme": 1451820,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCKBnL3qZ0ZESQkdpZx2L3UQ",
+     "ad": "WEFUYGIU",
+     "abone": 31000,
+     "buyume30": 23.02
+    }
+   ]
+  },
+  {
+   "nis": "HVAC Engineering",
+   "alt": [
+    "Building Systems",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 20.7,
+   "ort_izlenme": 2590,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCCBmTrGcX65GRxqSOG_t0ww",
+     "ad": "Building Systems Academy",
+     "abone": 2270,
+     "buyume30": 20.74
+    }
+   ]
+  },
+  {
+   "nis": "Automotive Engineering & History",
+   "alt": [
+    "Automotive Technology",
+    "Vehicle Design & History"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 19.8,
+   "ort_izlenme": 817033,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC8No9haiCtOEfikdvjTwqSw",
+     "ad": "Vexor",
+     "abone": 27800,
+     "buyume30": 19.83
+    }
+   ]
+  },
+  {
+   "nis": "Celebrity Meme Content",
+   "alt": [
+    "Memes",
+    "MLB",
+    "Celebrity Humor"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 15.1,
+   "ort_izlenme": 3081103,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
+     "ad": "n n nbekhg",
+     "abone": 38100,
+     "buyume30": 15.11
+    }
+   ]
+  },
+  {
+   "nis": "Prediction Markets",
+   "alt": [
+    "Sports Betting",
+    "Golf"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 14.8,
+   "ort_izlenme": 14552956,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCUMPemO46nJTp-0iX9JXedQ",
+     "ad": "Kalshi",
+     "abone": 11200,
+     "buyume30": 14.75
+    }
+   ]
+  },
+  {
+   "nis": "General Construction",
+   "alt": [
+    "Construction",
+    "Demolition",
+    "Trade Skills"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 14.2,
+   "ort_izlenme": 1900461,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC99pTVCPdZ-KdjTN7GGD1rQ",
+     "ad": "Mega Demolition",
+     "abone": 121000,
+     "buyume30": 14.15
+    }
+   ]
+  },
+  {
+   "nis": "Mechanical Engineering Education",
+   "alt": [
+    "Automotive Mechanics",
+    "Heavy Machinery"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 14.1,
+   "ort_izlenme": 11695,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UChPkbWNXiJv_kZM4dD4XaiQ",
+     "ad": "Global Dub Hub ⭐",
+     "abone": 1460,
+     "buyume30": 14.06
+    }
+   ]
+  },
+  {
+   "nis": "Educational Animation",
+   "alt": [
+    "Science Education",
+    "Mechanical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 13.2,
+   "ort_izlenme": 11239,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCXdPhuzyYC_SNbWLcuojP5g",
+     "ad": "video crazy",
+     "abone": 3350,
+     "buyume30": 13.18
+    }
+   ]
+  },
+  {
+   "nis": "Digital Art",
+   "alt": [
+    "Procreate",
+    "Illustration",
+    "MLB News"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 11.9,
+   "ort_izlenme": 2199428,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCIQOoUR97EcgZVliALAYxrQ",
+     "ad": "shsbe",
+     "abone": 54700,
+     "buyume30": 11.86
+    }
+   ]
+  },
+  {
+   "nis": "MLB News",
+   "alt": [
+    "Philadelphia Phillies",
+    "MLB Trade Deadline"
+   ],
+   "kanal_sayisi": 1,
+   "ort_buyume30": 10.0,
+   "ort_izlenme": 1562899,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCCVQNJemaiZml5pxn5ze-TA",
+     "ad": "sddfvdf4515",
+     "abone": 36200,
+     "buyume30": 10.03
+    }
+   ]
+  }
+ ],
  "kanallar": [
   {
    "id": "UCZ4AY9cbwuVn7DLnSd3wXdA",
