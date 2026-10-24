@@ -93,6 +93,7 @@ main{padding-bottom:90px}
 .alt-menu{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--kart);border-top:1px solid var(--cizgi);
   padding:4px 4px max(4px,env(safe-area-inset-bottom));z-index:10}
 .alt-menu a{flex:1;display:flex;flex-direction:column;align-items:center;font-size:11px;color:var(--soluk);padding:4px 0;gap:1px}
+section[hidden]{display:none!important}
 .alt-menu a span{font-size:20px;line-height:1.2} .alt-menu a.aktif{color:var(--vurgu);font-weight:700}
 section{scroll-margin-top:12px}
 .filtreler{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 10px;padding:0 16px;scrollbar-width:none}
@@ -161,7 +162,7 @@ article.kart{position:relative} .kanal{padding-right:44px}
 .oneri{margin:12px 14px 0;padding:10px 12px;border-radius:12px;background:var(--zemin2);font-size:14px}
 .oneri ul{margin:6px 0 0;padding-left:0;list-style:none} .oneri li{margin-top:6px}
 footer{color:var(--soluk);font-size:12px;margin-top:28px}
-</style></head><body data-kok="" data-uret="2026-10-23T08:47:05+00:00" data-genel="0"
+</style></head><body data-kok="" data-uret="2026-10-24T08:44:08+00:00" data-genel="0"
 data-tara="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"><main>
 <a class="geri" href="index.html">← Ana sayfa</a><header><h1>🔒 Gizlilik</h1>
 <a class="btn ana sahip" href="https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml" target="_blank" rel="noopener" id="tara">Tara</a>
@@ -196,7 +197,7 @@ yatırım ya da finansal tavsiye değildir. Son karar her zaman senindir.</p>
 <p>Sorular ve veri talepleri için: <a href="mailto:adnannakyuzzz@gmail.com">adnannakyuzzz@gmail.com</a></p>
 </section>
 
-<footer>Son güncelleme: 23.10.2026<br><a href="gizlilik.html">Gizlilik ve kullanım</a> · YouTube verileri
+<footer>Son güncelleme: 24.10.2026<br><a href="gizlilik.html">Gizlilik ve kullanım</a> · YouTube verileri
 <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube API Hizmetleri</a> ile alınır.</footer>
 </main>
 <nav class="alt-menu" aria-label="Bölümler">
@@ -278,22 +279,44 @@ function inceleIsaretle() {
     if (dosya) { b.href = KOK + dosya; b.target = "_self"; b.textContent = "🔍 İncelemeyi aç"; b.classList.add("hazir"); b.classList.remove("sahip"); }
   });
 }
-// vidiq.json'ı bulutta çalışan günlük görev yazar (vidiq_isle.py): vidIQ'nun bulduğu, Türkçe olmayan, büyüyen kanallar.
+// vidiq.json'ı bulutta çalışan günlük görev yazar (vidiq_isle.py): vidIQ'nun bulduğu kanallar, tutan konulara (nişlere) göre gruplu.
+// vidiq_ek.json'ı sabah taraması yazar: nişlerin Türkçesi ve fırsat ölçümü (boş mu, doymuş mu).
 var VK = document.getElementById("vidiq-kutu");
-if (VK) fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
-  var l = (d.kanallar || []).slice(0, 15);
+if (VK) Promise.all([
+  fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }),
+  fetch(KOK + "vidiq_ek.json", {cache: "no-store"}).then(function (r) { return r.json(); }).catch(function () { return {}; })
+]).then(function (s) {
+  var d = s[0], ek = s[1] || {}, tr = ek.ceviri || {}, fr = ek.firsat || {};
+  var l = (d.nisler || []).slice(0, 12);
   if (!l.length) return;
+  var FR = {bos: ["bos", "🟢 Boş alan"], orta: ["orta", "🟡 Rekabet orta"], dusuk: ["dusuk", "⚪ Talep az"], doymus: ["doymus", "🔴 Doymuş"]};
+  var DIL = {en: "İngilizce", de: "Almanca", ja: "Japonca", fr: "Fransızca", nl: "Felemenkçe", sv: "İsveççe", no: "Norveççe",
+             da: "Danca", fi: "Fince", it: "İtalyanca", ko: "Korece", pl: "Lehçe"};
   function k(n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n || 0); }
   function esc(t) { var e = document.createElement("span"); e.textContent = t || ""; return e.innerHTML; }
-  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu kanallar</h2><p class="alt-baslik">Niş Avcısı&#39;nın adaylarına benzeyen ve hızla '
-    + 'büyüyen kanallar. ✅ olanları iki sistem de buldu.</p><div class="kart bolum"><ul class="satirlar">'
-    + l.map(function (x) {
-        return '<li>' + (x.ortak ? '✅ ' : '') + '<a href="https://www.youtube.com/channel/' + encodeURIComponent(x.id)
-          + '" target="_blank" rel="noopener"><b>' + esc(x.ad) + '</b></a> · ' + k(x.abone) + ' abone'
-          + (x.buyume30 ? ' · <span class="artis">30 günde +%' + Math.round(x.buyume30) + '</span>' : '')
-          + (x.ort_izlenme ? ' · video başı ' + k(x.ort_izlenme) : '')
-          + (x.nis ? '<br><span class="ceviri">' + esc(x.nis.split(",").slice(0, 2).join(", ")) + ' · ' + esc(x.kaynak) + '</span>' : '')
-          + '</li>';
+  function ad(t) { return tr[t] ? esc(tr[t]) + ' <span class="ceviri">(' + esc(t) + ')</span>' : esc(t); }
+  function gun(iso) { return iso ? Math.floor((Date.now() - new Date(iso)) / 864e5) : null; }
+  var yas = gun(d.guncelleme);
+  var uyari = yas !== null && yas >= 2 ? '<p class="uyari">⚠️ vidIQ verisi ' + yas + ' gündür güncellenmedi; günlük görev çalışmamış olabilir.</p>' : '';
+  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Yüksek gelirli dillerde hızla büyüyen kanalların '
+    + 'konuları; birden çok kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. '
+    + '✅ = Niş Avcısı da bu konuyu gördü. Son güncelleme: ' + (yas === null ? '?' : yas === 0 ? 'bugün' : yas + ' gün önce') + '.</p>'
+    + uyari + '<div class="kart bolum"><ul class="satirlar">'
+    + l.map(function (n) {
+        var f = fr[n.nis], ilk = gun(n.ilk);
+        return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + ad(n.nis) + '</b>'
+          + (f && FR[f.seviye] ? ' <span class="fr ' + FR[f.seviye][0] + '">' + FR[f.seviye][1] + '</span>' : '')
+          + (n.alt && n.alt.length ? '<br><span class="ceviri">' + n.alt.map(function (a) { return esc(tr[a] || a); }).join(", ") + '</span>' : '')
+          + (n.ortak_konu ? ' <span class="artis">· Niş Avcısı: ' + esc(n.ortak_konu) + '</span>' : '')
+          + '<br>' + (n.dil && DIL[n.dil] ? DIL[n.dil] + ' · ' : '') + n.kanal_sayisi + ' kanal'
+          + (n.ort_buyume30 ? ' · <span class="artis">30 günde ort. +%' + Math.round(n.ort_buyume30) + '</span>' : '')
+          + (n.ort_izlenme ? ' · video başı ~' + k(n.ort_izlenme) : '')
+          + (ilk !== null ? ' · ' + (ilk === 0 ? 'bugün bulundu' : ilk + ' gündür takipte') : '')
+          + (n.yeni7 && ilk > 0 ? ' · <span class="artis">bu hafta +' + n.yeni7 + ' kanal</span>' : '')
+          + '<br><span class="ceviri">Örnek: ' + n.ornekler.map(function (o) {
+              return '<a href="https://www.youtube.com/channel/' + encodeURIComponent(o.id) + '" target="_blank" rel="noopener">'
+                + esc(o.ad) + '</a> (' + k(o.abone) + ')';
+            }).join(", ") + '</span></li>';
       }).join("") + '</ul></div>';
   VK.hidden = false;
 }).catch(function () {});
@@ -400,14 +423,30 @@ document.addEventListener("click", function (e) {
   else { try { navigator.clipboard.writeText(p.dataset.baslik + " " + p.dataset.url); bildir("Link kopyalandı 📋"); } catch (h) {} }
 });
 
-// ---- Alt menü: görünen bölümü işaretle
+// ---- Alt menü: ana sayfada gerçek sekmeler (aynı anda tek bölüm görünür, hiçbir bölüm silinmez)
 var menu = document.querySelectorAll(".alt-menu a");
 function menuIsaretle(id) { menu.forEach(function (a) { a.classList.toggle("aktif", a.dataset.b === id); }); }
-if ("IntersectionObserver" in window && document.body.dataset.genel === "1") {
-  var gozcu = new IntersectionObserver(function (l) {
-    l.forEach(function (g) { if (g.isIntersecting) menuIsaretle(g.target.id); });
-  }, {rootMargin: "-40% 0px -55% 0px"});
-  document.querySelectorAll("section[id]").forEach(function (s) { gozcu.observe(s); });
+if (document.body.dataset.genel === "1") {
+  var SEKMELER = Array.prototype.map.call(menu, function (a) { return a.dataset.b; });
+  var bolumler = document.querySelectorAll("main > section[id]");
+  function sekmeAc(hedef, kaydir) {
+    // #begendiklerim gibi bölüm içi bağlantılar: içinde bulunduğu sekme açılır, sonra o yere kaydırılır.
+    var el = hedef && document.getElementById(hedef);
+    var bolum = el && (el.matches("main > section[id]") ? el : el.closest("main > section[id]"));
+    var id = bolum && SEKMELER.indexOf(bolum.id) >= 0 ? bolum.id : "bugun";
+    bolumler.forEach(function (s) { s.hidden = SEKMELER.indexOf(s.id) >= 0 && s.id !== id; });
+    menuIsaretle(id);
+    if (kaydir && el && el !== bolum) el.scrollIntoView(); else window.scrollTo(0, 0);
+  }
+  menu.forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      history.replaceState(null, "", "#" + a.dataset.b);
+      sekmeAc(a.dataset.b, false);
+    });
+  });
+  window.addEventListener("hashchange", function () { sekmeAc(location.hash.slice(1), true); });
+  sekmeAc(location.hash.slice(1), true);
 }
 
 // ---- Profil sayfası

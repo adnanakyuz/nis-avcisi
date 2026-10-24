@@ -1,6 +1,95 @@
 {
- "ts": "2026-10-24T00:00:36+00:00",
- "firsat": {},
+ "ts": "2026-10-24T08:43:58+00:00",
+ "firsat": {
+  "Sports News": {
+   "seviye": "bos",
+   "pay": 0.5831352719466707,
+   "toplam": 116193774,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCJEnJQdETg2RHQ0pgmHM6Pw",
+     "kanal": "Alessandro",
+     "izl": 20500861
+    },
+    {
+     "kanal_id": "UCOXTM8rM8V8LbcBpsp-h1nA",
+     "kanal": "hmdbbmt1",
+     "izl": 16865764
+    },
+    {
+     "kanal_id": "UC8CNdNFNGM9iDroEednGl-A",
+     "kanal": "hmdbbwd",
+     "izl": 6023707
+    },
+    {
+     "kanal_id": "UCPbo6JtmBIuix4IcoxsgGYQ",
+     "kanal": "LOL Vision",
+     "izl": 4371125
+    }
+   ],
+   "sorgu": "MLB",
+   "tarih": "2026-10-24T08:43:58+00:00"
+  },
+  "Mechanical Engineering": {
+   "seviye": "orta",
+   "pay": 0.29482819132524396,
+   "toplam": 79477186,
+   "video": 25,
+   "buyuk": 8,
+   "yeniler": [
+    {
+     "kanal_id": "UCBuerVH_NyX0Eq6nwHKWaSw",
+     "kanal": "Explorer Hub",
+     "izl": 6218811
+    },
+    {
+     "kanal_id": "UCaAbspghgmebrJKTwIlFUTA",
+     "kanal": "Genius Works",
+     "izl": 5691248
+    },
+    {
+     "kanal_id": "UCbcPx0hhzXnC2aDPc6_9LNg",
+     "kanal": "Beast Build",
+     "izl": 3195655
+    },
+    {
+     "kanal_id": "UCgi51M2_xwUUd4CFMACPoiw",
+     "kanal": "Shred Yard",
+     "izl": 2603979
+    }
+   ],
+   "sorgu": "Heavy Machinery",
+   "tarih": "2026-10-24T08:43:58+00:00"
+  },
+  "Engineering Education": {
+   "seviye": "doymus",
+   "pay": 0.05566959786469502,
+   "toplam": 194016688,
+   "video": 25,
+   "buyuk": 5,
+   "yeniler": [
+    {
+     "kanal_id": "UCHFEn-AVrsGIIXS8SoLOxlQ",
+     "kanal": "Multicrafthub",
+     "izl": 6492152
+    },
+    {
+     "kanal_id": "UCQtEPkZ-1EcCbIic-SoVaDQ",
+     "kanal": "Adrian mechine",
+     "izl": 2891900
+    },
+    {
+     "kanal_id": "UCZuOo2HYGc_1fXBzLpAMlaA",
+     "kanal": "zona aman",
+     "izl": 1416779
+    }
+   ],
+   "sorgu": "Mechanical Engineering",
+   "tarih": "2026-10-24T08:43:58+00:00"
+  }
+ },
  "ceviri": {
   "Sports News": "Spor Haberleri",
   "Mechanical Engineering": "Makine Mühendisliği",
