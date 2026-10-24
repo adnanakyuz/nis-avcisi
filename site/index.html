@@ -267,22 +267,39 @@ function inceleIsaretle() {
   });
 }
 // vidiq.json'ı bulutta çalışan günlük görev yazar (vidiq_isle.py): vidIQ'nun bulduğu kanallar, tutan konulara (nişlere) göre gruplu.
+// vidiq_ek.json'ı sabah taraması yazar: nişlerin Türkçesi ve fırsat ölçümü (boş mu, doymuş mu).
 var VK = document.getElementById("vidiq-kutu");
-if (VK) fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
+if (VK) Promise.all([
+  fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }),
+  fetch(KOK + "vidiq_ek.json", {cache: "no-store"}).then(function (r) { return r.json(); }).catch(function () { return {}; })
+]).then(function (s) {
+  var d = s[0], ek = s[1] || {}, tr = ek.ceviri || {}, fr = ek.firsat || {};
   var l = (d.nisler || []).slice(0, 12);
   if (!l.length) return;
+  var FR = {bos: ["bos", "🟢 Boş alan"], orta: ["orta", "🟡 Rekabet orta"], dusuk: ["dusuk", "⚪ Talep az"], doymus: ["doymus", "🔴 Doymuş"]};
+  var DIL = {en: "İngilizce", de: "Almanca", ja: "Japonca", fr: "Fransızca", nl: "Felemenkçe", sv: "İsveççe", no: "Norveççe",
+             da: "Danca", fi: "Fince", it: "İtalyanca", ko: "Korece", pl: "Lehçe"};
   function k(n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n || 0); }
   function esc(t) { var e = document.createElement("span"); e.textContent = t || ""; return e.innerHTML; }
-  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Hızla büyüyen kanalların konuları; birden çok '
-    + 'kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. ✅ = Niş Avcısı da bu konuyu gördü, iki sistem aynı yerde buluştu.</p>'
-    + '<div class="kart bolum"><ul class="satirlar">'
+  function ad(t) { return tr[t] ? esc(tr[t]) + ' <span class="ceviri">(' + esc(t) + ')</span>' : esc(t); }
+  function gun(iso) { return iso ? Math.floor((Date.now() - new Date(iso)) / 864e5) : null; }
+  var yas = gun(d.guncelleme);
+  var uyari = yas !== null && yas >= 2 ? '<p class="uyari">⚠️ vidIQ verisi ' + yas + ' gündür güncellenmedi; günlük görev çalışmamış olabilir.</p>' : '';
+  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Yüksek gelirli dillerde hızla büyüyen kanalların '
+    + 'konuları; birden çok kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. '
+    + '✅ = Niş Avcısı da bu konuyu gördü. Son güncelleme: ' + (yas === null ? '?' : yas === 0 ? 'bugün' : yas + ' gün önce') + '.</p>'
+    + uyari + '<div class="kart bolum"><ul class="satirlar">'
     + l.map(function (n) {
-        return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + esc(n.nis) + '</b>'
-          + (n.alt && n.alt.length ? ' <span class="ceviri">(' + esc(n.alt.join(", ")) + ')</span>' : '')
+        var f = fr[n.nis], ilk = gun(n.ilk);
+        return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + ad(n.nis) + '</b>'
+          + (f && FR[f.seviye] ? ' <span class="fr ' + FR[f.seviye][0] + '">' + FR[f.seviye][1] + '</span>' : '')
+          + (n.alt && n.alt.length ? '<br><span class="ceviri">' + n.alt.map(function (a) { return esc(tr[a] || a); }).join(", ") + '</span>' : '')
           + (n.ortak_konu ? ' <span class="artis">· Niş Avcısı: ' + esc(n.ortak_konu) + '</span>' : '')
-          + '<br>' + n.kanal_sayisi + ' kanal'
+          + '<br>' + (n.dil && DIL[n.dil] ? DIL[n.dil] + ' · ' : '') + n.kanal_sayisi + ' kanal'
           + (n.ort_buyume30 ? ' · <span class="artis">30 günde ort. +%' + Math.round(n.ort_buyume30) + '</span>' : '')
           + (n.ort_izlenme ? ' · video başı ~' + k(n.ort_izlenme) : '')
+          + (ilk !== null ? ' · ' + (ilk === 0 ? 'bugün bulundu' : ilk + ' gündür takipte') : '')
+          + (n.yeni7 && ilk > 0 ? ' · <span class="artis">bu hafta +' + n.yeni7 + ' kanal</span>' : '')
           + '<br><span class="ceviri">Örnek: ' + n.ornekler.map(function (o) {
               return '<a href="https://www.youtube.com/channel/' + encodeURIComponent(o.id) + '" target="_blank" rel="noopener">'
                 + esc(o.ad) + '</a> (' + k(o.abone) + ')';

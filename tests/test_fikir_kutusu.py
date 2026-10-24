@@ -590,3 +590,38 @@ class NisAvcisiDuzeltmeTestleri(unittest.TestCase):
         terimler = [n["terim"] for n in na.nis_cikar(sonuc)]
         self.assertEqual(len(terimler), 2)           # haber tek konu, yemek animasyonu ayrı konu
         self.assertIn("food animation", terimler)
+
+
+class YuksekGelirTaramaTestleri(unittest.TestCase):
+    def _aramalar(self, gun):
+        class Sahte:
+            def __init__(self):
+                self.cagrilar = []
+
+            def get(self, uc, maliyet=1, **p):
+                self.cagrilar.append(p)
+                return {"items": []}
+        import argparse
+        yt = Sahte()
+        a = argparse.Namespace(gun=14, bolge="", dil="", konular=[], ceviriler={})
+        sabit = dt.datetime(2026, 10, 24, 9, tzinfo=dt.timezone.utc) + dt.timedelta(days=gun)
+        with mock.patch.object(na.dt, "datetime", wraps=dt.datetime) as m:
+            m.now.return_value = sabit
+            na.tara(yt, a)
+        return yt.cagrilar
+
+    def test_turkiye_gunde_3_kategori_ve_bir_yuksek_gelirli_pazar(self):
+        c = self._aramalar(0)
+        tr = [p for p in c if p.get("regionCode") == "TR"]
+        self.assertEqual(len(tr), na.TR_GUNLUK_KATEGORI + 1)     # 3 kategori + Finans
+        pazar = [p for p in c if p.get("regionCode") not in (None, "TR")]
+        self.assertEqual(len(pazar), len(na.KATEGORILER))
+        self.assertEqual(len({p["regionCode"] for p in pazar}), 1)
+        # 4 günde Türkiye'nin 12 kategorisinin hepsi döner
+        kat = set()
+        for g in range(4):
+            kat |= {p.get("videoCategoryId") for p in self._aramalar(g) if p.get("regionCode") == "TR"}
+        self.assertTrue(set(na.KATEGORILER) <= kat)
+
+    def test_cagri_listesinde_cop_terim_yok(self):
+        self.assertFalse({"por", "favor", "comparte", "amigos", "hindi"} - na.STOP)

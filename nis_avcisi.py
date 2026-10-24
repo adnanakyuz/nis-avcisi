@@ -11,9 +11,10 @@ Elle çalıştırmak için (Python 3.8+, ek paket gerekmez; YT_API_KEY ortam de�
   python nis_avcisi.py --kanal "https://youtube.com/@kanal"   # tek kanal incelemesi → site/kanal/<id>.html (~210 birim)
 
 Kota (15 Ekim 2026'dan beri): arama (search.list) ayrı kotada, günde 100 çağrı; diğer istekler 10.000 birim.
-Genel tarama ~50 arama (12 kategori × 2 zaman dilimi global + 12 kategori Türkiye + Finans 3 + 5 konunun fırsat
-ölçümü + en güçlü 3 kanalın İngilizce ve Türkiye pazar ölçümü). Haftada bir +12 (evergreen). Global konulu
-tarama konu başına ~17 arama; kanal incelemesi 2. Fikir Kutusu en fazla 20. Çeviriler kota harcamaz.
+Genel tarama ~55 arama (12 kategori × 2 zaman dilimi global + 12 kategori × günün yüksek gelirli pazarı
++ 3 kategori Türkiye (sırayla) + Finans 3 + 5 konunun fırsat ölçümü + en güçlü 3 kanalın İngilizce ve Türkiye
+pazar ölçümü + vidIQ nişlerinden en fazla 3'ünün fırsat ölçümü). Haftada bir +12 (evergreen). Global konulu
+tarama konu başına ~17 arama; kanal incelemesi 2. (Fikir Kutusu 24 Ekim'de durduruldu.) Çeviriler kota harcamaz.
 Sayfa altında ikisi ayrı gösterilir: "48/100 arama · 210 birim".
 """
 import argparse, collections, concurrent.futures, datetime as dt, html, json, math, os, re, sqlite3, sys, time
@@ -36,6 +37,9 @@ episode ep day days best top 2024 2025 2026 live amp quot feat ft lyrics music h
 into out get got can will just about after like our their they them his her not all
 have has had one two more most very really only these those than then there
 beni bana sana seni bize size bile çünkü şimdi bugün yarın dün
+por favor comparte compartir con tus amigos para que los las del una uno sus muy pero como esta este
+share subscribe follow comment comments please watch wait till
+hindi english urdu bangla bengali tamil telugu spanish español arabic hinglish indonesia
 """.split())
 # Tek başına niş olamayacak kadar genel kelimeler: sadece ikili ifadelerin parçası olabilirler.
 GENEL = set("""
@@ -48,6 +52,13 @@ komik aşk bebek oyun aile çocuk eğlenceli hikaye hayat dünya kedi köpek tep
 SABIT_KONULAR = {
     "Finans": ("personal finance|investing|stock market|money tips|crypto", "finans|borsa|yatırım|ekonomi|kripto"),
 }
+# Amaç yüksek gelirli dillerde niş bulmak: genel taramaya her gün sırayla bir yüksek gelirli pazar eklenir
+# (12 kategori × 1 pazar = 12 arama). Türkiye her gün 12 yerine sırayla 3 kategoriyle taranır (4 günde tur).
+YUKSEK_PAZARLAR = [("US", "en"), ("GB", "en"), ("DE", "de"), ("CA", "en"), ("AU", "en"), ("JP", "ja"),
+                   ("NL", "nl"), ("SE", "sv")]
+TR_GUNLUK_KATEGORI = 3
+# Gelire göre puan eki: aynı güçteki iki adaydan yüksek gelirli dildeki öne geçer.
+KAZANC_PUAN = {"yuksek": 0.6, "orta": 0.3, "dusuk": 0, "cok_dusuk": -0.3}
 TARA_LINKI = "https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"
 ONERI_API = "https://suggestqueries.google.com/complete/search"
 CEVIRI_API = "https://translate.googleapis.com/translate_a/single"
@@ -181,7 +192,7 @@ ULKE_AD = {"US": "ABD", "GB": "İngiltere", "CA": "Kanada", "AU": "Avustralya", 
            "IN": "Hindistan", "PK": "Pakistan", "BD": "Bangladeş", "ID": "Endonezya", "PH": "Filipinler",
            "BR": "Brezilya", "MX": "Meksika", "ES": "İspanya", "FR": "Fransa", "IT": "İtalya", "RU": "Rusya",
            "VN": "Vietnam", "NG": "Nijerya", "EG": "Mısır", "JP": "Japonya", "KR": "Güney Kore", "SA": "S. Arabistan",
-           "AE": "BAE", "AR": "Arjantin", "CO": "Kolombiya", "TH": "Tayland", "MY": "Malezya", "NL": "Hollanda"}
+           "AE": "BAE", "AR": "Arjantin", "CO": "Kolombiya", "TH": "Tayland", "MY": "Malezya", "NL": "Hollanda", "SE": "İsveç"}
 
 
 def kazanc_seviyesi(ulke, dil):
@@ -337,6 +348,8 @@ def hafta_ozeti(db):
         satirlar[terim].append((ks, top))
     sonuc = []
     for terim, l in satirlar.items():
+        if set(terim.split()) & STOP:
+            continue  # geçmişte kaydedilmiş çöp terimler ("por favor comparte", "hindi") listeye girmesin
         sonuc.append(dict(terim=terim, gorulme=len(l), artis=l[-1][0] - l[0][0], kanal=l[-1][0], toplam=l[-1][1]))
     sonuc.sort(key=lambda x: (-x["artis"], -x["gorulme"], -x["toplam"]))
     return [x for x in sonuc if x["artis"] > 0 or x["gorulme"] >= 2][:5]
@@ -565,9 +578,16 @@ def tara(yt, a):
         aramalar = [(ad, f"{ad} ({'son' if bas == orta else 'ilk'} yarı)", dict(videoCategoryId=kid, bas=bas, bit=bit))
                     for kid, ad in KATEGORILER.items() for bas, bit in ((orta, None), (once, orta))]
         if not a.bolge:
-            # Global sonuçlar İngilizce ağırlıklı; Türkiye ayrıca taranır ki Türk kanalları da yakalansın.
-            aramalar += [(ad, f"{ad} (Türkiye)", dict(videoCategoryId=kid, bolge="TR", dil="tr"))
+            gun = simdi.date().toordinal()
+            # Günün yüksek gelirli pazarı: global sonuçların göremediği yerel (ör. Almanca, Japonca) nişler.
+            ulke, pdil = YUKSEK_PAZARLAR[gun % len(YUKSEK_PAZARLAR)]
+            aramalar += [(ad, f"{ad} ({ULKE_AD.get(ulke, ulke)})", dict(videoCategoryId=kid, bolge=ulke, dil=pdil))
                          for kid, ad in KATEGORILER.items()]
+            # Türkiye: her gün sırayla 3 kategori (4 günde tüm kategoriler döner).
+            kats = list(KATEGORILER.items())
+            aramalar += [(ad, f"{ad} (Türkiye)", dict(videoCategoryId=kid, bolge="TR", dil="tr"))
+                         for kid, ad in (kats[(gun * TR_GUNLUK_KATEGORI + i) % len(kats)]
+                                         for i in range(TR_GUNLUK_KATEGORI))]
             # YouTube'da kategorisi olmayan ama değerli konular: konu aramasıyla eklenir (konu başına 3 arama).
             for ad, (q_en, q_tr) in SABIT_KONULAR.items():
                 aramalar += [(ad, f"{ad} (son yarı)", dict(q=q_en, bas=orta, bit=None)),
@@ -630,6 +650,8 @@ def tara(yt, a):
         video_basi = k_izl / vsay
         puan = (math.log10(video_basi + 1) * 1.2 + (math.log10(oran + 1) * 1.5 if oran is not None else 0)
                 + math.log10(izl / saat + 1) + max(0, 1 - kanal_yasi / 365) - vsay / 60)
+        dil = v["snippet"].get("defaultAudioLanguage") or v["snippet"].get("defaultLanguage") or ""
+        puan += KAZANC_PUAN.get(kazanc_seviyesi(c["snippet"].get("country", ""), dil), 0)
         sonuc.append(dict(
             id=vid, baslik=v["snippet"]["title"], kanal=c["snippet"]["title"], kanal_id=c["id"],
             kanal_kapak=c["snippet"].get("thumbnails", {}).get("default", {}).get("url", ""),
@@ -640,8 +662,7 @@ def tara(yt, a):
             video_basi=video_basi, saatlik=izl / saat, kanal_yasi=kanal_yasi,
             sure=sure_sn(v.get("contentDetails", {}).get("duration")),
             yayin=v["snippet"]["publishedAt"][:10], yayin_ts=v["snippet"]["publishedAt"], kaynak=kaynak[vid],
-            etiketler=v["snippet"].get("tags", [])[:15], puan=puan,
-            dil=v["snippet"].get("defaultAudioLanguage") or v["snippet"].get("defaultLanguage") or "",
+            etiketler=v["snippet"].get("tags", [])[:15], puan=puan, dil=dil,
         ))
     if reklam:
         print(f"  {reklam} reklamla şişmiş video elendi.")
@@ -1505,22 +1526,39 @@ function inceleIsaretle() {
   });
 }
 // vidiq.json'ı bulutta çalışan günlük görev yazar (vidiq_isle.py): vidIQ'nun bulduğu kanallar, tutan konulara (nişlere) göre gruplu.
+// vidiq_ek.json'ı sabah taraması yazar: nişlerin Türkçesi ve fırsat ölçümü (boş mu, doymuş mu).
 var VK = document.getElementById("vidiq-kutu");
-if (VK) fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }).then(function (d) {
+if (VK) Promise.all([
+  fetch(KOK + "vidiq.json", {cache: "no-store"}).then(function (r) { return r.json(); }),
+  fetch(KOK + "vidiq_ek.json", {cache: "no-store"}).then(function (r) { return r.json(); }).catch(function () { return {}; })
+]).then(function (s) {
+  var d = s[0], ek = s[1] || {}, tr = ek.ceviri || {}, fr = ek.firsat || {};
   var l = (d.nisler || []).slice(0, 12);
   if (!l.length) return;
+  var FR = {bos: ["bos", "🟢 Boş alan"], orta: ["orta", "🟡 Rekabet orta"], dusuk: ["dusuk", "⚪ Talep az"], doymus: ["doymus", "🔴 Doymuş"]};
+  var DIL = {en: "İngilizce", de: "Almanca", ja: "Japonca", fr: "Fransızca", nl: "Felemenkçe", sv: "İsveççe", no: "Norveççe",
+             da: "Danca", fi: "Fince", it: "İtalyanca", ko: "Korece", pl: "Lehçe"};
   function k(n) { return n >= 1e6 ? (n / 1e6).toFixed(1).replace(".0", "") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n || 0); }
   function esc(t) { var e = document.createElement("span"); e.textContent = t || ""; return e.innerHTML; }
-  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Hızla büyüyen kanalların konuları; birden çok '
-    + 'kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. ✅ = Niş Avcısı da bu konuyu gördü, iki sistem aynı yerde buluştu.</p>'
-    + '<div class="kart bolum"><ul class="satirlar">'
+  function ad(t) { return tr[t] ? esc(tr[t]) + ' <span class="ceviri">(' + esc(t) + ')</span>' : esc(t); }
+  function gun(iso) { return iso ? Math.floor((Date.now() - new Date(iso)) / 864e5) : null; }
+  var yas = gun(d.guncelleme);
+  var uyari = yas !== null && yas >= 2 ? '<p class="uyari">⚠️ vidIQ verisi ' + yas + ' gündür güncellenmedi; günlük görev çalışmamış olabilir.</p>' : '';
+  VK.innerHTML = '<h2>🔎 vidIQ&#39;nun bulduğu nişler</h2><p class="alt-baslik">Yüksek gelirli dillerde hızla büyüyen kanalların '
+    + 'konuları; birden çok kanalda birlikte tutan konu üstte. Kanallar sadece örnek: konuyu al, özgün yap. '
+    + '✅ = Niş Avcısı da bu konuyu gördü. Son güncelleme: ' + (yas === null ? '?' : yas === 0 ? 'bugün' : yas + ' gün önce') + '.</p>'
+    + uyari + '<div class="kart bolum"><ul class="satirlar">'
     + l.map(function (n) {
-        return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + esc(n.nis) + '</b>'
-          + (n.alt && n.alt.length ? ' <span class="ceviri">(' + esc(n.alt.join(", ")) + ')</span>' : '')
+        var f = fr[n.nis], ilk = gun(n.ilk);
+        return '<li>' + (n.ortak ? '✅ ' : '') + '<b>' + ad(n.nis) + '</b>'
+          + (f && FR[f.seviye] ? ' <span class="fr ' + FR[f.seviye][0] + '">' + FR[f.seviye][1] + '</span>' : '')
+          + (n.alt && n.alt.length ? '<br><span class="ceviri">' + n.alt.map(function (a) { return esc(tr[a] || a); }).join(", ") + '</span>' : '')
           + (n.ortak_konu ? ' <span class="artis">· Niş Avcısı: ' + esc(n.ortak_konu) + '</span>' : '')
-          + '<br>' + n.kanal_sayisi + ' kanal'
+          + '<br>' + (n.dil && DIL[n.dil] ? DIL[n.dil] + ' · ' : '') + n.kanal_sayisi + ' kanal'
           + (n.ort_buyume30 ? ' · <span class="artis">30 günde ort. +%' + Math.round(n.ort_buyume30) + '</span>' : '')
           + (n.ort_izlenme ? ' · video başı ~' + k(n.ort_izlenme) : '')
+          + (ilk !== null ? ' · ' + (ilk === 0 ? 'bugün bulundu' : ilk + ' gündür takipte') : '')
+          + (n.yeni7 && ilk > 0 ? ' · <span class="artis">bu hafta +' + n.yeni7 + ' kanal</span>' : '')
           + '<br><span class="ceviri">Örnek: ' + n.ornekler.map(function (o) {
               return '<a href="https://www.youtube.com/channel/' + encodeURIComponent(o.id) + '" target="_blank" rel="noopener">'
                 + esc(o.ad) + '</a> (' + k(o.abone) + ')';
@@ -2297,6 +2335,35 @@ def adaylari_yaz(yol, sonuc, nisler):
                       kanal_idler=[v["kanal_id"] for v in n["kanallar"]], firsat=n.get("firsat")) for n in nisler]))
 
 
+def vidiq_ek_guncelle(yt, a, site, adet=3):
+    """vidIQ nişleri için Türkçe çeviri ve fırsat (boş mu, doymuş mu) ölçümü → site/vidiq_ek.json.
+    vidiq.json'ı bulut görevi yazar (vidiq_isle.py); YouTube'a ancak bu tarama bağlanabildiği için ek bilgi burada
+    üretilir ve ayrı dosyada tutulur. Ölçüm 7 gün geçerli; her gün en fazla 3 yeni niş ölçülür (3 arama)."""
+    nisler = json_oku(os.path.join(site, "vidiq.json"), {}).get("nisler", [])
+    if not nisler:
+        return
+    yol = os.path.join(site, "vidiq_ek.json")
+    ek = json_oku(yol, {})
+    simdi = dt.datetime.now(dt.timezone.utc)
+    firsat = {k: v for k, v in ek.get("firsat", {}).items() if (simdi - zaman(v["tarih"])).days < 7}
+    for n in [n for n in nisler if n["nis"] not in firsat][:adet]:
+        # Genel etiket ("Sports News") yerine en sık alt konu ("MLB") aranır: daha gerçekçi rekabet ölçümü.
+        sorgu = n["alt"][0] if n.get("alt") else n["nis"]
+        f = firsat_olc(yt, a, [sorgu], bolge="", dil=n.get("dil") or "en").get(sorgu)
+        if f:
+            firsat[n["nis"]] = dict(f, sorgu=sorgu, tarih=simdi.isoformat(timespec="seconds"))
+        if getattr(a, "kota_yarim", False):
+            break
+    etiketler = list(dict.fromkeys([n["nis"] for n in nisler] + [x for n in nisler for x in n.get("alt", [])]))
+    ceviri = {e: t for e, t in ek.get("ceviri", {}).items() if e in etiketler}
+    yeni = [e for e in etiketler if e not in ceviri]
+    if yeni:
+        tr = turkceye(yeni)
+        ceviri.update({e: tr.get(e, "") for e in yeni})  # çevrilmeyen de yazılır ki her gün yeniden sorulmasın
+    json_yaz(yol, dict(ts=simdi.isoformat(timespec="seconds"), firsat=firsat, ceviri=ceviri))
+    print(f"vidIQ nişleri: {len(firsat)} ölçüm geçerli, {len(ceviri)} etiket çevrildi.")
+
+
 def calistir_kanal(a, yt, durum_yol):
     """--kanal verildiyse: sadece o kanalı incele, sayfasını yaz ve Aramalarım'a ekle."""
     simdi_tr = lambda: dt.datetime.now(TR_SAAT)
@@ -2389,6 +2456,11 @@ def calistir(a):
     th = terim_haritasi_kur(nisler)
     # En güçlü 3 kanalın fikri İngilizce ve Türkiye pazarında ayrı ayrı ölçülür → "hangi dilde yap" önerisi.
     a.pazarlar = {} if a.konular else pazar_olc(yt, a, kanallar, th, adet=3)
+    if not a.konular:
+        try:
+            vidiq_ek_guncelle(yt, a, a.site)
+        except Exception as h:  # vidIQ eki taramayı asla durdurmasın
+            print(f"vidIQ eki atlandı: {h}")
     # Yabancı konu isimleri ve video başlıkları Türkçeye çevrilir (kota harcamaz).
     metinler = [kanal_konusu(k, th) for k in kanallar] + [k["en_iyi"]["baslik"] for k in kanallar]
     metinler += [n["terim"] for n in nisler]

@@ -12,6 +12,9 @@
     "Baseball"
    ],
    "kanal_sayisi": 11,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 11,
    "ort_buyume30": 65.0,
    "ort_izlenme": 2245875,
    "ortak_konu": "MLB",
@@ -50,9 +53,12 @@
     "Aviation Technology",
     "Machining"
    ],
-   "kanal_sayisi": 9,
-   "ort_buyume30": 42.5,
-   "ort_izlenme": 310184,
+   "kanal_sayisi": 8,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 8,
+   "ort_buyume30": 44.8,
+   "ort_izlenme": 347847,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -89,9 +95,12 @@
     "Heavy Machinery",
     "Construction Engineering"
    ],
-   "kanal_sayisi": 6,
-   "ort_buyume30": 21.6,
-   "ort_izlenme": 386898,
+   "kanal_sayisi": 4,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 4,
+   "ort_buyume30": 25.4,
+   "ort_izlenme": 465630,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -129,6 +138,9 @@
     "Structural Engineering"
    ],
    "kanal_sayisi": 3,
+   "dil": "ja",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 3,
    "ort_buyume30": 78.1,
    "ort_izlenme": 14960,
    "ortak_konu": null,
@@ -161,6 +173,9 @@
     "Philadelphia Phillies"
    ],
    "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 2,
    "ort_buyume30": 26.4,
    "ort_izlenme": 1861724,
    "ortak_konu": null,
@@ -188,6 +203,9 @@
     "Manufacturing Processes"
    ],
    "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 2,
    "ort_buyume30": 16.7,
    "ort_izlenme": 161968,
    "ortak_konu": null,
@@ -208,33 +226,6 @@
    ]
   },
   {
-   "nis": "DIY Engineering",
-   "alt": [
-    "Mechanical Engineering",
-    "Physics Experiments",
-    "Science Projects"
-   ],
-   "kanal_sayisi": 2,
-   "ort_buyume30": 15.1,
-   "ort_izlenme": 18880,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCSv2qxZJsm2eDFFVISdGiNA",
-     "ad": "Tom Stanton bằng tiếng Việt",
-     "abone": 5380,
-     "buyume30": 16.2
-    },
-    {
-     "id": "UC3mQB0Vs5TUMH0JsV0obhIQ",
-     "ad": "Official Creative Think",
-     "abone": 1380,
-     "buyume30": 14.05
-    }
-   ]
-  },
-  {
    "nis": "Celebrity News",
    "alt": [
     "Pop Culture",
@@ -242,6 +233,9 @@
     "Luxury Lifestyle"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 191.1,
    "ort_izlenme": 9814300,
    "ortak_konu": null,
@@ -256,32 +250,15 @@
    ]
   },
   {
-   "nis": "Science and Engineering",
-   "alt": [
-    "Mechanical Engineering",
-    "Aviation"
-   ],
-   "kanal_sayisi": 1,
-   "ort_buyume30": 147.9,
-   "ort_izlenme": 40463,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCEQpu8IpQNYczstTg5ECAeQ",
-     "ad": "Vì Sao Nhỉ - Why is that?",
-     "abone": 7040,
-     "buyume30": 147.89
-    }
-   ]
-  },
-  {
    "nis": "Engineering & Technology Explainer",
    "alt": [
     "Mechanical Engineering",
     "Industrial Processes"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 124.3,
    "ort_izlenme": 24207,
    "ortak_konu": null,
@@ -302,6 +279,9 @@
     "Storytelling"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 111.4,
    "ort_izlenme": 1879983,
    "ortak_konu": null,
@@ -323,6 +303,9 @@
     "Mechanism Design"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 1,
    "ort_buyume30": 108.8,
    "ort_izlenme": 1440617,
    "ortak_konu": null,
@@ -343,6 +326,9 @@
     "Mechanical Engineering"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 96.4,
    "ort_izlenme": 449488,
    "ortak_konu": null,
@@ -363,6 +349,9 @@
     "Mechanical Engineering"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 95.6,
    "ort_izlenme": 22706,
    "ortak_konu": null,
@@ -383,6 +372,9 @@
     "Science Explainer"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 1,
    "ort_buyume30": 94.7,
    "ort_izlenme": 816443,
    "ortak_konu": null,
@@ -403,6 +395,9 @@
     "Mechanical Engineering"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 76.7,
    "ort_izlenme": 24351,
    "ortak_konu": null,
@@ -423,6 +418,9 @@
     "Architecture"
    ],
    "kanal_sayisi": 1,
+   "dil": "ja",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 51.0,
    "ort_izlenme": 28522,
    "ortak_konu": null,
@@ -437,32 +435,15 @@
    ]
   },
   {
-   "nis": "Mechanical Engineering Tutorials",
-   "alt": [
-    "Manufacturing Technology",
-    "Machine Design"
-   ],
-   "kanal_sayisi": 1,
-   "ort_buyume30": 50.5,
-   "ort_izlenme": 11974,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCIdVv366Bn5XL1oMm6HJaEQ",
-     "ad": "Kumar Mech Academy",
-     "abone": 1670,
-     "buyume30": 50.45
-    }
-   ]
-  },
-  {
    "nis": "General Entertainment",
    "alt": [
     "MLB News",
     "Digital Art"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 43.9,
    "ort_izlenme": 2467096,
    "ortak_konu": null,
@@ -483,6 +464,9 @@
     "Applied Science"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 1,
    "ort_buyume30": 41.9,
    "ort_izlenme": 977890,
    "ortak_konu": null,
@@ -503,6 +487,9 @@
     "Mechanical Engineering"
    ],
    "kanal_sayisi": 1,
+   "dil": "ja",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 33.0,
    "ort_izlenme": 39890,
    "ortak_konu": null,
@@ -523,6 +510,9 @@
     "Mechanical Engineering"
    ],
    "kanal_sayisi": 1,
+   "dil": "ja",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 32.7,
    "ort_izlenme": 65353,
    "ortak_konu": null,
@@ -537,26 +527,6 @@
    ]
   },
   {
-   "nis": "Educational Science & Technology",
-   "alt": [
-    "3D Animation",
-    "How It Works"
-   ],
-   "kanal_sayisi": 1,
-   "ort_buyume30": 30.2,
-   "ort_izlenme": 1972,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCpn5OQbQnlq4GE-lpcyHc4Q",
-     "ad": "learn.with.cartoon",
-     "abone": 3280,
-     "buyume30": 30.16
-    }
-   ]
-  },
-  {
    "nis": "Ancient History",
    "alt": [
     "Ancient Engineering",
@@ -564,6 +534,9 @@
     "Ancient Military History"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 1,
    "ort_buyume30": 30.0,
    "ort_izlenme": 870588,
    "ortak_konu": null,
@@ -584,6 +557,9 @@
     "Mechanical Engineering"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 29.4,
    "ort_izlenme": 176905,
    "ortak_konu": null,
@@ -604,6 +580,9 @@
     "Construction Equipment"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 27.0,
    "ort_izlenme": 271040,
    "ortak_konu": null,
@@ -625,6 +604,9 @@
     "3D Animation"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 1,
    "ort_buyume30": 24.3,
    "ort_izlenme": 821361,
    "ortak_konu": null,
@@ -645,6 +627,9 @@
     "MLB Highlights"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 23.7,
    "ort_izlenme": 1823812,
    "ortak_konu": null,
@@ -665,6 +650,9 @@
     "MLB News"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 23.0,
    "ort_izlenme": 1451820,
    "ortak_konu": null,
@@ -685,6 +673,9 @@
     "Mechanical Engineering"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 20.7,
    "ort_izlenme": 2590,
    "ortak_konu": null,
@@ -705,6 +696,9 @@
     "Vehicle Design & History"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 1,
    "ort_buyume30": 19.8,
    "ort_izlenme": 817033,
    "ortak_konu": null,
@@ -726,6 +720,9 @@
     "Celebrity Humor"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 15.1,
    "ort_izlenme": 3081103,
    "ortak_konu": "MLB",
@@ -746,6 +743,9 @@
     "Golf"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 14.8,
    "ort_izlenme": 14552956,
    "ortak_konu": null,
@@ -767,6 +767,9 @@
     "Trade Skills"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 14.2,
    "ort_izlenme": 1900461,
    "ortak_konu": null,
@@ -787,6 +790,9 @@
     "Heavy Machinery"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 14.1,
    "ort_izlenme": 11695,
    "ortak_konu": null,
@@ -801,22 +807,25 @@
    ]
   },
   {
-   "nis": "Educational Animation",
+   "nis": "DIY Engineering",
    "alt": [
-    "Science Education",
-    "Mechanical Engineering"
+    "Science Projects",
+    "Electronics"
    ],
    "kanal_sayisi": 1,
-   "ort_buyume30": 13.2,
-   "ort_izlenme": 11239,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 14.1,
+   "ort_izlenme": 10954,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCXdPhuzyYC_SNbWLcuojP5g",
-     "ad": "video crazy",
-     "abone": 3350,
-     "buyume30": 13.18
+     "id": "UC3mQB0Vs5TUMH0JsV0obhIQ",
+     "ad": "Official Creative Think",
+     "abone": 1380,
+     "buyume30": 14.05
     }
    ]
   },
@@ -828,6 +837,9 @@
     "MLB News"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 11.9,
    "ort_izlenme": 2199428,
    "ortak_konu": null,
@@ -848,6 +860,9 @@
     "MLB Trade Deadline"
    ],
    "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 1,
    "ort_buyume30": 10.0,
    "ort_izlenme": 1562899,
    "ortak_konu": "MLB Trade Deadline",
@@ -903,28 +918,6 @@
    "tur": null,
    "yuzsuz": null,
    "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCEQpu8IpQNYczstTg5ECAeQ",
-   "ad": "Vì Sao Nhỉ - Why is that?",
-   "handle": "@visaonhi1",
-   "abone": 7040,
-   "ort_izlenme": 40463.43062200957,
-   "buyume30": 147.89,
-   "izlenme_buyume30": 93.14,
-   "nis": "Science and Engineering, Mechanical Engineering, Aviation",
-   "dil": "vi, en",
-   "ulke": "VN",
-   "kazanc": 35.91,
-   "acilis": "2026-05-03T19:19:36Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 209,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
    "ortak": false
@@ -1304,28 +1297,6 @@
    "ortak": false
   },
   {
-   "id": "UCIdVv366Bn5XL1oMm6HJaEQ",
-   "ad": "Kumar Mech Academy",
-   "handle": "@kumarmechacademy",
-   "abone": 1670,
-   "ort_izlenme": 11974.353383458647,
-   "buyume30": 50.45,
-   "izlenme_buyume30": 75.87,
-   "nis": "Mechanical Engineering Tutorials, Manufacturing Technology, Machine Design",
-   "dil": "ta",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": "2026-06-26T09:52:16Z",
-   "son_video": "2026-10-19T00:00:00.000Z",
-   "video_sayisi": 133,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
    "id": "UCOXIDY9Vl3fEddDZMZm9WKA",
    "ad": "Liuliu Theatre",
    "handle": null,
@@ -1546,28 +1517,6 @@
    "ortak": false
   },
   {
-   "id": "UCpn5OQbQnlq4GE-lpcyHc4Q",
-   "ad": "learn.with.cartoon",
-   "handle": "@learn.with.cartoon.1",
-   "abone": 3280,
-   "ort_izlenme": 1972.0119047619048,
-   "buyume30": 30.16,
-   "izlenme_buyume30": 19.03,
-   "nis": "Educational Science & Technology, 3D Animation, How It Works",
-   "dil": "hi, en",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": "2026-01-24T16:49:25Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 84,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
    "id": "UCZMXnFWl30pVv4qelzQFRyQ",
    "ad": "Ancient Engineering",
    "handle": null,
@@ -1675,28 +1624,6 @@
    "kaynak": "Trial & Eureka kanalına benzer",
    "ilk": "2026-10-22T08:01:01+00:00",
    "son": "2026-10-22T08:01:01+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC65gTiTHybAk6eQvWCvTWkQ",
-   "ad": "Mexanik Muxandis",
-   "handle": "@muxandis-62-858",
-   "abone": 1040,
-   "ort_izlenme": 8879.826190476191,
-   "buyume30": 24.11,
-   "izlenme_buyume30": 14.43,
-   "nis": "Mechanical Engineering, Mechanical Design, Engineering Projects",
-   "dil": "uz, ru",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": "2026-02-23T17:20:02Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 420,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
    "ortak": false
   },
   {
@@ -1986,50 +1913,6 @@
    "ortak": false
   },
   {
-   "id": "UCSv2qxZJsm2eDFFVISdGiNA",
-   "ad": "Tom Stanton bằng tiếng Việt",
-   "handle": "@tomstantonengineering_vi",
-   "abone": 5380,
-   "ort_izlenme": 26807.102564102563,
-   "buyume30": 16.2,
-   "izlenme_buyume30": 36.95,
-   "nis": "DIY Engineering, Mechanical Engineering, Physics Experiments",
-   "dil": "vi",
-   "ulke": "VN",
-   "kazanc": 143.3,
-   "acilis": "2026-04-12T22:20:05Z",
-   "son_video": "2026-10-17T00:00:00.000Z",
-   "video_sayisi": 39,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCyIYKGH0xWHnHXxtra6LHQg",
-   "ad": "Como Funciona",
-   "handle": "@comofunciona-17",
-   "abone": 50600,
-   "ort_izlenme": 174714.08520179373,
-   "buyume30": 15.26,
-   "izlenme_buyume30": 13.21,
-   "nis": "Engineering Education, Mechanical Engineering, Military Technology",
-   "dil": "es",
-   "ulke": null,
-   "kazanc": 268.68,
-   "acilis": "2026-01-17T15:49:23Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 446,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
    "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
    "ad": "n n nbekhg",
    "handle": null,
@@ -2184,28 +2067,6 @@
    "ortak": false
   },
   {
-   "id": "UCXdPhuzyYC_SNbWLcuojP5g",
-   "ad": "video crazy",
-   "handle": "@videocrazy1-p7j",
-   "abone": 3350,
-   "ort_izlenme": 11239.18085106383,
-   "buyume30": 13.18,
-   "izlenme_buyume30": 12.49,
-   "nis": "Educational Animation, Science Education, Mechanical Engineering",
-   "dil": "hi",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": "2026-08-07T09:32:59Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 94,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
    "id": "UCYJDu2MqzWBqeOo9twYpr7w",
    "ad": "子育て悩み相談室",
    "handle": "@stoklasabaranoski",
@@ -2245,28 +2106,6 @@
    "tur": null,
    "yuzsuz": null,
    "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCNWf__Q2DX0ggol9UodMRwg",
-   "ad": "UnikBro",
-   "handle": "@unikbro-cie",
-   "abone": 20900,
-   "ort_izlenme": 284150.4285714286,
-   "buyume30": 12.97,
-   "izlenme_buyume30": 16.87,
-   "nis": "Engineering Education, Mechanical Engineering, Heavy Machinery",
-   "dil": "id",
-   "ulke": null,
-   "kazanc": 240.88,
-   "acilis": "2025-10-25T07:41:44Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 175,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
    "ortak": false

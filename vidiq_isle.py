@@ -29,9 +29,25 @@ BENZER_EN_AZ_YAS, BENZER_EN_AZ_VIDEO = 14, 5
 # İzleyici kitlesi değil içerik türü; Niş Avcısı'nın aradığı "yeni, tekrarlanabilir niş" ile ilgisi olmayanlar.
 ISTENMEYEN = ("islam", "religio", "quran", "bible", "christian", "prayer", "quote", "motivational", "spiritual",
               "astrolog", "tarot")
-YEDEK_NISLER = ("engineering explainers", "science explainers", "history documentary", "space and astronomy",
-                "wildlife and animals", "restoration", "how it's made", "geography what if", "finance explainers",
-                "true crime stories", "military history", "ocean and deep sea")
+# Amaç yüksek gelirli dillerde niş bulmak. Kazanç seviyesi nis_avcisi.KAZANC_DIL/KAZANC_ULKE'deki "yuksek" ve
+# "orta" gruplarıyla aynı; düşük gelirli dillerdeki (hi, ar, vi, id...) kanallar alınmaz.
+YUKSEK_DILLER = {"en", "de", "ja", "nl", "sv", "no", "da", "fi", "fr", "it", "ko", "pl"}
+YUKSEK_ULKELER = set("US GB CA AU NZ DE CH AT NO SE DK FI NL BE IE LU IS SG JP AE QA IL "
+                     "FR IT KR PL".split())
+# Yükselen kanal araması: geniş alanlar sırayla ve dönüşümlü dillerle aranır. Önceki vidIQ sonuçlarından konu
+# türetmek aramaları tek alana kilitliyordu (4 günde hep mühendislik).
+ARAMA_NISLERI = ("personal finance", "true crime stories", "history documentary", "science explainers",
+                 "space and astronomy", "wildlife and animals", "restoration", "how it's made", "geography what if",
+                 "health and fitness", "cooking and recipes", "home improvement and diy", "cars and automotive",
+                 "travel stories", "ai and technology", "business case studies", "psychology explained",
+                 "military history", "gaming", "pets")
+ARAMA_DILLERI = ("en", "de", "en", "ja", "en", "fr", "en", "nl")
+
+
+def yuksek_gelirli(dil, ulke):
+    """Dil biliniyorsa dile, bilinmiyorsa ülkeye bakar."""
+    d = (dil or "").replace(";", ",").split(",")[0].strip().lower().split("-")[0]
+    return d in YUKSEK_DILLER if d else (ulke or "").upper() in YUKSEK_ULKELER
 
 
 def json_oku(yol, varsayilan):
@@ -106,23 +122,21 @@ def plan_yap(bakiye, sifirlanma, site, simdi=None):
     for v in sorted(json_oku(os.path.join(site, "adaylar.json"), {}).get("videolar", []),
                     key=lambda v: -(v.get("puan") or 0)):
         kid = v.get("kanal_id")
-        if (not kid or kid in gorulen or turkce_mi(v.get("dil"), v.get("ulke")) or yakin("benzer", kid, BENZER_BEKLEME)
+        if (not kid or kid in gorulen or not yuksek_gelirli(v.get("dil"), v.get("ulke"))
+                or turkce_mi(v.get("dil"), v.get("ulke")) or yakin("benzer", kid, BENZER_BEKLEME)
                 or (v.get("kanal_yasi") or 0) < BENZER_EN_AZ_YAS or (v.get("video_sayisi") or 0) < BENZER_EN_AZ_VIDEO):
             continue
         gorulen.add(kid)
         adaylar.append((kid, v.get("kanal") or kid))
 
-    # Yükselen kanal araması için nişler: vidIQ'nun daha önce bulduğu en hızlı büyüyen kanalların nişleri ile
-    # yedek liste dönüşümlü sıralanır; böylece aramalar tek bir alana (ör. hep mühendislik) kaymaz.
-    ogrenilen = []
-    for k in sorted(veri.get("kanallar", []), key=lambda k: -(k.get("buyume30") or 0)):
-        n = (k.get("nis") or "").split(",")[0].strip().lower()
-        if n and n not in ogrenilen:
-            ogrenilen.append(n)
+    # Yükselen kanal araması: alan listesi her gün farklı yerden başlar, dil de dönüşümlü seçilir.
+    gun = simdi.date().toordinal()
+    sirali = ARAMA_NISLERI[gun % len(ARAMA_NISLERI):] + ARAMA_NISLERI[:gun % len(ARAMA_NISLERI)]
     nisler = []
-    for cift in zip(ogrenilen + [None] * len(YEDEK_NISLER), list(YEDEK_NISLER) + [None] * len(ogrenilen)):
-        nisler += [n for n in cift if n and n not in nisler]
-    nisler = [n for n in nisler if not yakin("yukselen", n, ARAMA_BEKLEME)]
+    for i, n in enumerate(sirali):
+        dil = ARAMA_DILLERI[(gun + i) % len(ARAMA_DILLERI)]
+        if not yakin("yukselen", f"{n} [{dil}]", ARAMA_BEKLEME):
+            nisler.append((n, dil))
 
     cagrilar, b, y = [], 0, 0
     while len(cagrilar) < adet and (b < len(adaylar) or y < len(nisler)):
@@ -133,12 +147,13 @@ def plan_yap(bakiye, sifirlanma, site, simdi=None):
             cagrilar.append(dict(tip="benzer", hedef=kid, ad=ad, dosya=f"benzer_{kid}.json",
                                  arac="vidiq_similar_channels", parametreler=dict(channelId=kid, size=50)))
         else:
-            n = nisler[y]
+            n, dil = nisler[y]
             y += 1
             cagrilar.append(dict(
-                tip="yukselen", hedef=n, ad=n, dosya=f"yukselen_{len(cagrilar) + 1}.json",
+                tip="yukselen", hedef=f"{n} [{dil}]", ad=f"{n} ({dil})", dosya=f"yukselen_{len(cagrilar) + 1}.json",
                 arac="vidiq_channel_search",
-                parametreler=dict(query=n, breakoutChannel=True, limit=50, subscriberCountMin=EN_AZ_ABONE,
+                parametreler=dict(query=n, languages=[dil], breakoutChannel=True, limit=50,
+                                  subscriberCountMin=EN_AZ_ABONE,
                                   publishedAfter=(simdi - dt.timedelta(days=365)).date().isoformat(),
                                   lastVideoPublishedAfter=(simdi - dt.timedelta(days=14)).date().isoformat())))
     return dict(tarih=simdi.isoformat(timespec="seconds"), bakiye=int(bakiye), sifirlanma=sifirlanma,
@@ -162,7 +177,7 @@ def kanal_al(ham, kaynak, simdi):
 
 def ise_yarar(k):
     """Niş Avcısı'nın işine yarayacak mı: Türkçe değil, makul büyüklükte, büyüyor, konu dışı değil."""
-    if not k["id"] or turkce_mi(k["dil"], k["ulke"]):
+    if not k["id"] or turkce_mi(k["dil"], k["ulke"]) or not yuksek_gelirli(k["dil"], k["ulke"]):
         return False
     abone = k["abone"] or 0
     if not EN_AZ_ABONE <= abone <= EN_FAZLA_ABONE:
@@ -205,9 +220,10 @@ def ortak_konu(etiketler, konular, metinler):
     return None
 
 
-def nis_ozeti(kanallar, adet=40, konular=(), metinler=None):
+def nis_ozeti(kanallar, adet=40, konular=(), metinler=None, simdi=None):
     """Kanalları vidIQ niş etiketine göre toplar: amaç kanal değil, tutan konuyu bulmak.
     Adı anlamsız ya da kopya içerikli kanallar da konunun tuttuğunu gösterdiği için elenmez, örnek olarak durur."""
+    simdi = simdi or dt.datetime.now(dt.timezone.utc)
     gruplar = {}
     for k in kanallar:
         ad = (k.get("nis") or "").split(",")[0].strip()
@@ -228,7 +244,17 @@ def nis_ozeti(kanallar, adet=40, konular=(), metinler=None):
         alt = [p for p, _ in sorted(sayac.items(), key=lambda x: -x[1])[:3]]
         izlenme = [k["ort_izlenme"] for k in l if k.get("ort_izlenme")]
         eslesen = ortak_konu([g["nis"]] + alt, konular, metinler or {})
+        diller = {}
+        for k in l:
+            d = (k.get("dil") or "").split(",")[0].strip().lower()
+            if d:
+                diller[d] = diller.get(d, 0) + 1
+        ilkler = [t for t in (tarih(k.get("ilk")) for k in l) if t]
         sonuc.append(dict(nis=g["nis"], alt=alt, kanal_sayisi=len(l),
+                          dil=max(diller, key=diller.get) if diller else None,
+                          # Geçmiş: niş ne zamandır görülüyor, son 7 günde kaç yeni kanal eklendi.
+                          ilk=min(ilkler).isoformat(timespec="seconds") if ilkler else None,
+                          yeni7=sum(1 for t in ilkler if (simdi - t).days < 7),
                           ort_buyume30=round(sum(buyume) / len(buyume), 1) if buyume else None,
                           ort_izlenme=round(sum(izlenme) / len(izlenme)) if izlenme else None,
                           # ✅: Niş Avcısı aynı kanalı ya da aynı konuyu bulmuş
@@ -272,13 +298,14 @@ def isle(klasor, site, db_yol, simdi=None):
         ozet.append(f"{c['dosya']}: {len(ham)} kanal geldi, {alinan} tanesi işe yarar")
 
     sinir = tarih(simdi) - dt.timedelta(days=SAKLAMA_GUN)
-    liste = [k for k in kanallar.values() if (tarih(k.get("son")) or sinir) >= sinir]
+    liste = [k for k in kanallar.values()
+             if (tarih(k.get("son")) or sinir) >= sinir and yuksek_gelirli(k.get("dil"), k.get("ulke"))]
     for k in liste:
         k["ortak"] = k["id"] in nis_avcisi   # iki sistem de bulduysa doğrulanmış sayılır
     liste.sort(key=lambda k: (-(k.get("buyume30") or 0), -(k.get("ort_izlenme") or 0)))
     sorgu_sinir = tarih(simdi) - dt.timedelta(days=max(BENZER_BEKLEME, SAKLAMA_GUN))
     json_yaz(yol, dict(surum=1, guncelleme=simdi, bakiye=plan.get("bakiye"), sifirlanma=plan.get("sifirlanma"),
-                       nisler=nis_ozeti(liste[:EN_FAZLA_KANAL], 40, *nis_avcisi_konulari(site)),
+                       nisler=nis_ozeti(liste[:EN_FAZLA_KANAL], 40, *nis_avcisi_konulari(site), simdi=tarih(simdi)),
                        kanallar=liste[:EN_FAZLA_KANAL],
                        sorgular=[s for s in sorgular if (tarih(s.get("tarih")) or sorgu_sinir) >= sorgu_sinir]))
     return ozet, liste

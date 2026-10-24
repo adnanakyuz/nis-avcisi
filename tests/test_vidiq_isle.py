@@ -74,6 +74,35 @@ class OrtakKonuTestleri(unittest.TestCase):
         self.assertEqual((n[0]["ortak"], n[0]["ortak_konu"]), (True, "MLB"))
 
 
+class YuksekGelirTestleri(unittest.TestCase):
+    def test_dusuk_gelirli_diller_alinmaz(self):
+        self.assertTrue(V.yuksek_gelirli("en", "IN"))       # dil belirleyici: İngilizce içerik
+        self.assertTrue(V.yuksek_gelirli("de-DE", None))
+        self.assertFalse(V.yuksek_gelirli("hi", "IN"))
+        self.assertFalse(V.yuksek_gelirli("ar, en", None))
+        self.assertTrue(V.yuksek_gelirli(None, "US"))        # dil yoksa ülkeye bakılır
+        self.assertFalse(V.yuksek_gelirli(None, None))
+        k = V.kanal_al(dict(channelId="UCx", subscriberCount=5000, subsGrowth30d=50, languages="vi"), "x", "t")
+        self.assertFalse(V.ise_yarar(k))
+
+    def test_yukselen_arama_dil_doner_ve_onceki_sonuctan_konu_turetmez(self):
+        d = tempfile.mkdtemp()
+        try:
+            yaz(os.path.join(d, "vidiq.json"), dict(kanallar=[dict(id="UCm", nis="Mechanical Engineering", buyume30=500)]))
+            hedefler = set()
+            for gun in range(4):
+                p = V.plan_yap(10, "2026-10-23T00:00:00Z", d, SIMDI + dt.timedelta(days=gun))
+                for c in p["cagrilar"]:
+                    self.assertEqual(c["tip"], "yukselen")       # aday yok → hepsi yükselen arama
+                    self.assertIn(c["parametreler"]["query"], V.ARAMA_NISLERI)
+                    self.assertEqual(len(c["parametreler"]["languages"]), 1)
+                    hedefler.add(c["hedef"])
+            self.assertFalse(any("mechanical" in h for h in hedefler))
+            self.assertGreater(len({h.split(" [")[0] for h in hedefler}), 1)   # farklı alanlar
+        finally:
+            shutil.rmtree(d)
+
+
 class UctanUcaTestler(unittest.TestCase):
     def setUp(self):
         self.d = tempfile.mkdtemp()
@@ -90,7 +119,8 @@ class UctanUcaTestler(unittest.TestCase):
             dict(kanal_id="UCbebek", kanal="Bebek", dil="en", ulke="US", puan=25, kanal_yasi=6, video_sayisi=1),
             dict(kanal_id="UCen1", kanal="Bir", dil="en", ulke="US", puan=20, kanal_yasi=20, video_sayisi=8),
             dict(kanal_id="UCen1", kanal="Bir", dil="en", ulke="US", puan=19, kanal_yasi=20, video_sayisi=8),
-            dict(kanal_id="UCen2", kanal="İki", dil="en", ulke="GB", puan=10, kanal_yasi=30, video_sayisi=6)]))
+            dict(kanal_id="UCen2", kanal="İki", dil="en", ulke="GB", puan=10, kanal_yasi=30, video_sayisi=6),
+            dict(kanal_id="UChi", kanal="Hint", dil="hi", ulke="IN", puan=40, kanal_yasi=30, video_sayisi=9)]))
 
     def tearDown(self):
         shutil.rmtree(self.d)
