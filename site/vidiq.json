@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-10-23T22:57:44+00:00",
- "bakiye": 145,
+ "guncelleme": "2026-10-24T09:45:17+00:00",
+ "bakiye": 135,
  "sifirlanma": "2026-11-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -17,8 +17,8 @@
    "yeni7": 11,
    "ort_buyume30": 65.0,
    "ort_izlenme": 2245875,
-   "ortak_konu": "MLB",
-   "ortak": true,
+   "ortak_konu": null,
+   "ortak": false,
    "ornekler": [
     {
      "id": "UCXIRoXy9jx1nptTqjrHqjxA",
@@ -89,6 +89,174 @@
    ]
   },
   {
+   "nis": "Travel Vlogging",
+   "alt": [
+    "Travel",
+    "Backpacking",
+    "Street Food"
+   ],
+   "kanal_sayisi": 6,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 6,
+   "ort_buyume30": 22.2,
+   "ort_izlenme": 7087,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
+     "ad": "TravelWithRuff",
+     "abone": 1690,
+     "buyume30": 57.94
+    },
+    {
+     "id": "UCsH6FraA_HaIC-cBhnMR7gA",
+     "ad": "I guess I'm walking",
+     "abone": 2350,
+     "buyume30": 16.92
+    },
+    {
+     "id": "UC9NZArbVX6bVa6oFy9bXN3g",
+     "ad": "Bulgarischer Nachbar",
+     "abone": 4750,
+     "buyume30": 15.85
+    },
+    {
+     "id": "UCO6YzwGrjAOKxA7247cIpgg",
+     "ad": "leoni.g.369",
+     "abone": 2490,
+     "buyume30": 15.81
+    }
+   ]
+  },
+  {
+   "nis": "Engineering",
+   "alt": [
+    "Structural Engineering",
+    "Civil Engineering",
+    "Physics"
+   ],
+   "kanal_sayisi": 5,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 5,
+   "ort_buyume30": 53.1,
+   "ort_izlenme": 244341,
+   "ortak_konu": "Engineering",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCPA7Ua1WosnBHBq3NKlDvwA",
+     "ad": "Extreme Mechanics",
+     "abone": 1060,
+     "buyume30": 118.11
+    },
+    {
+     "id": "UCNcBjlaxddAVmS4zywNi8Sw",
+     "ad": "こういうことか",
+     "abone": 2300,
+     "buyume30": 96.58
+    },
+    {
+     "id": "UCsilmM7_rXt6OuoBlOSKjzg",
+     "ad": "Fact Mine 3D",
+     "abone": 44300,
+     "buyume30": 20.05
+    },
+    {
+     "id": "UCDAzSxjnxj9Jw2cOW0ZMaow",
+     "ad": "ディープ・インサイト",
+     "abone": 2140,
+     "buyume30": 19.55
+    }
+   ]
+  },
+  {
+   "nis": "Industrial Engineering",
+   "alt": [
+    "Manufacturing Processes",
+    "Mechanical Engineering",
+    "Civil Engineering"
+   ],
+   "kanal_sayisi": 4,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 4,
+   "ort_buyume30": 44.0,
+   "ort_izlenme": 306863,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCR7j6Oyp3M6cikoPK1tp6rw",
+     "ad": "Emperor Insights – Science & Curiosity",
+     "abone": 218000,
+     "buyume30": 107.62
+    },
+    {
+     "id": "UCHy7wiQpW5HgPdAP8ZFkQjg",
+     "ad": "Machine Verse",
+     "abone": 10700,
+     "buyume30": 35.1
+    },
+    {
+     "id": "UC_ZFjHOqTnSLg_uxLSNF4tA",
+     "ad": "Thomas Anderson",
+     "abone": 13000,
+     "buyume30": 20.37
+    },
+    {
+     "id": "UCYJDu2MqzWBqeOo9twYpr7w",
+     "ad": "子育て悩み相談室",
+     "abone": 19000,
+     "buyume30": 13.1
+    }
+   ]
+  },
+  {
+   "nis": "Construction Engineering",
+   "alt": [
+    "Civil Engineering",
+    "Heavy Machinery",
+    "DIY"
+   ],
+   "kanal_sayisi": 4,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 4,
+   "ort_buyume30": 33.7,
+   "ort_izlenme": 543580,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC_LqdJFCudT1HSzYA7SE83Q",
+     "ad": "Smart Work HQ",
+     "abone": 6600,
+     "buyume30": 49.32
+    },
+    {
+     "id": "UCKBteshQgFo22tDRGxMPqMg",
+     "ad": "Kharya Developers",
+     "abone": 18900,
+     "buyume30": 47.66
+    },
+    {
+     "id": "UCkrSAPXStfq4VpCzNc9_YTA",
+     "ad": "Top Smart Engineer",
+     "abone": 66900,
+     "buyume30": 25.99
+    },
+    {
+     "id": "UChJa8i2vaLbTJitQ07hO17A",
+     "ad": "Orvion",
+     "abone": 61000,
+     "buyume30": 11.72
+    }
+   ]
+  },
+  {
    "nis": "Engineering Education",
    "alt": [
     "Mechanical Engineering",
@@ -131,38 +299,164 @@
    ]
   },
   {
-   "nis": "Engineering",
+   "nis": "Storytelling",
    "alt": [
-    "Physics",
-    "Mechanical Engineering",
-    "Structural Engineering"
+    "Human Interest Stories",
+    "Animal Rescue Stories",
+    "Moral Stories"
    ],
    "kanal_sayisi": 3,
-   "dil": "ja",
-   "ilk": "2026-10-23T22:57:44+00:00",
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
    "yeni7": 3,
-   "ort_buyume30": 78.1,
-   "ort_izlenme": 14960,
+   "ort_buyume30": 29.5,
+   "ort_izlenme": 24644,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCPA7Ua1WosnBHBq3NKlDvwA",
-     "ad": "Extreme Mechanics",
+     "id": "UC4lc5C4F61ZBRfqMb5wa8Pw",
+     "ad": "Untold Moments",
+     "abone": 2780,
+     "buyume30": 43.3
+    },
+    {
+     "id": "UC9vNI4SdjtwO0wElJv3FDhg",
+     "ad": "Story Nova",
+     "abone": 1260,
+     "buyume30": 32.77
+    },
+    {
+     "id": "UCs1bJj0jKmjw0QD59XiGzfg",
+     "ad": "Schwarze Akte",
      "abone": 1060,
-     "buyume30": 118.11
+     "buyume30": 12.29
+    }
+   ]
+  },
+  {
+   "nis": "Human Interest Stories",
+   "alt": [
+    "Inspirational Stories",
+    "Acts of Kindness & Heroism",
+    "True Crime"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 3,
+   "ort_buyume30": 25.6,
+   "ort_izlenme": 52038,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCF9k3jbxw4-vvM-m6OLBsPQ",
+     "ad": "Gutes geschieht",
+     "abone": 5280,
+     "buyume30": 34.69
     },
     {
-     "id": "UCNcBjlaxddAVmS4zywNi8Sw",
-     "ad": "こういうことか",
-     "abone": 2300,
-     "buyume30": 96.58
+     "id": "UC5r0HZLUsWrBCnYkVx5GlHw",
+     "ad": "ROTES DREIECK",
+     "abone": 1670,
+     "buyume30": 23.7
     },
     {
-     "id": "UCDAzSxjnxj9Jw2cOW0ZMaow",
-     "ad": "ディープ・インサイト",
-     "abone": 2140,
-     "buyume30": 19.55
+     "id": "UCY2IsFiRTs_lvYgLDqkKVug",
+     "ad": "SagaVerse128",
+     "abone": 1670,
+     "buyume30": 18.44
+    }
+   ]
+  },
+  {
+   "nis": "Travel",
+   "alt": [
+    "Road Trips",
+    "Van Life",
+    "Accessible Travel"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 98.2,
+   "ort_izlenme": 5047,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UClC3wP9w72j4gz1pZk-o2Mw",
+     "ad": "WollckenTour",
+     "abone": 2210,
+     "buyume30": 150
+    },
+    {
+     "id": "UCaHAkYFZ2x9NbfrmSt-uKIQ",
+     "ad": "TamiTrips",
+     "abone": 16700,
+     "buyume30": 46.49
+    }
+   ]
+  },
+  {
+   "nis": "Civil Engineering & Construction",
+   "alt": [
+    "Infrastructure Development",
+    "Heavy Equipment",
+    "Construction Techniques"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 49.9,
+   "ort_izlenme": 385093,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCZxacyYpWyXA9_PycbNaTqw",
+     "ad": "GLOBAL BUILD & DESIGN",
+     "abone": 28100,
+     "buyume30": 75.63
+    },
+    {
+     "id": "UCkUitC3L9-PdjqMAhpQXB1A",
+     "ad": "Yang Development & Design",
+     "abone": 25200,
+     "buyume30": 24.14
+    }
+   ]
+  },
+  {
+   "nis": "Digital Art",
+   "alt": [
+    "AI Art",
+    "Architecture Design",
+    "Creative Construction"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 28.1,
+   "ort_izlenme": 1287233,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCYj_Trj746XJg39CumGhAMw",
+     "ad": "Volcanic  Buildx",
+     "abone": 49800,
+     "buyume30": 44.35
+    },
+    {
+     "id": "UCIQOoUR97EcgZVliALAYxrQ",
+     "ad": "shsbe",
+     "abone": 54700,
+     "buyume30": 11.86
     }
    ]
   },
@@ -196,32 +490,103 @@
    ]
   },
   {
-   "nis": "Industrial Engineering",
+   "nis": "Construction",
    "alt": [
-    "Mechanical Engineering",
-    "Machining",
-    "Manufacturing Processes"
+    "Construction Fails",
+    "Construction Machinery",
+    "Heavy Equipment"
    ],
    "kanal_sayisi": 2,
    "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
+   "ilk": "2026-10-24T09:45:17+00:00",
    "yeni7": 2,
-   "ort_buyume30": 16.7,
-   "ort_izlenme": 161968,
+   "ort_buyume30": 14.1,
+   "ort_izlenme": 1477095,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UC_ZFjHOqTnSLg_uxLSNF4tA",
-     "ad": "Thomas Anderson",
-     "abone": 13000,
-     "buyume30": 20.37
+     "id": "UCWBDztOrqIeQ2su5IbCKTDA",
+     "ad": "Mr.Twister",
+     "abone": 64500,
+     "buyume30": 14.97
     },
     {
-     "id": "UCYJDu2MqzWBqeOo9twYpr7w",
-     "ad": "子育て悩み相談室",
-     "abone": 19000,
-     "buyume30": 13.1
+     "id": "UCR-puYkb4WVznXFVeujXkHA",
+     "ad": "Zelvora Frame",
+     "abone": 68400,
+     "buyume30": 13.25
+    }
+   ]
+  },
+  {
+   "nis": "Construction & DIY",
+   "alt": [
+    "Tool Hacks",
+    "Home Repair",
+    "Building Techniques"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 374.0,
+   "ort_izlenme": 982578,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCuOBnuQCMC9RmP5FpjZbvJg",
+     "ad": "Smart Hob",
+     "abone": 45500,
+     "buyume30": 373.96
+    }
+   ]
+  },
+  {
+   "nis": "Aviation Drama Storytelling",
+   "alt": [
+    "Air Travel Conflicts",
+    "Passenger Stories"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 327.3,
+   "ort_izlenme": 113310,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCkGo5kdUUbNkVbzmuC1wYpw",
+     "ad": "Unterschätzt",
+     "abone": 8290,
+     "buyume30": 327.32
+    }
+   ]
+  },
+  {
+   "nis": "Civil Engineering Documentary",
+   "alt": [
+    "Architectural History",
+    "Construction Technology",
+    "Infrastructure Analysis"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 326.7,
+   "ort_izlenme": 506927,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCZiSMSmcnClaGMUdwKNxFEg",
+     "ad": "MechDisk",
+     "abone": 41900,
+     "buyume30": 326.68
     }
    ]
   },
@@ -246,6 +611,52 @@
      "ad": "Stuff Boss",
      "abone": 4600,
      "buyume30": 191.14
+    }
+   ]
+  },
+  {
+   "nis": "Lifestyle Vlogging",
+   "alt": [
+    "Travel",
+    "Shopping"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 140.6,
+   "ort_izlenme": 17590,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCgrarthmf9T4A52p4Ij34Jg",
+     "ad": "Svandyboys Vlogs",
+     "abone": 1980,
+     "buyume30": 140.58
+    }
+   ]
+  },
+  {
+   "nis": "Switzerland Travel Guide",
+   "alt": [
+    "Travel Guides",
+    "Sightseeing"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 128.8,
+   "ort_izlenme": 16579,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCvIhpqYant2JzyPBwOW3Mpw",
+     "ad": "Wunderbare Orte",
+     "abone": 1190,
+     "buyume30": 128.85
     }
    ]
   },
@@ -320,6 +731,54 @@
    ]
   },
   {
+   "nis": "Well Drilling",
+   "alt": [
+    "Water Well Construction",
+    "Heavy Machinery",
+    "Civil Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 106.2,
+   "ort_izlenme": 243860,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC30rF7AoXbpotf_FgnaIA6g",
+     "ad": "Water Hunters",
+     "abone": 5030,
+     "buyume30": 106.15
+    }
+   ]
+  },
+  {
+   "nis": "Educational Engineering Animation",
+   "alt": [
+    "Construction Technology",
+    "Science Explainer",
+    "Historical Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 98.4,
+   "ort_izlenme": 832111,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCFbPsPjAKiEgTbl11fDSiKQ",
+     "ad": "CoreMine 3D",
+     "abone": 49000,
+     "buyume30": 98.38
+    }
+   ]
+  },
+  {
    "nis": "Historical Engineering & Architecture",
    "alt": [
     "Ancient History",
@@ -366,25 +825,26 @@
    ]
   },
   {
-   "nis": "Educational Engineering Animation",
+   "nis": "Miniature Construction Projects",
    "alt": [
-    "Construction Technology",
-    "Science Explainer"
+    "Miniature Diorama Building",
+    "Toy Construction Vehicles",
+    "Educational Science Projects"
    ],
    "kanal_sayisi": 1,
    "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
+   "ilk": "2026-10-24T09:45:17+00:00",
    "yeni7": 1,
-   "ort_buyume30": 94.7,
-   "ort_izlenme": 816443,
+   "ort_buyume30": 81.1,
+   "ort_izlenme": 383324,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCFbPsPjAKiEgTbl11fDSiKQ",
-     "ad": "CoreMine 3D",
-     "abone": 47500,
-     "buyume30": 94.67
+     "id": "UCKGDU89WySSspEkT5xG9lSA",
+     "ad": "Mini Build Depot",
+     "abone": 30600,
+     "buyume30": 81.07
     }
    ]
   },
@@ -412,6 +872,78 @@
    ]
   },
   {
+   "nis": "Educational Animation",
+   "alt": [
+    "Ancient Engineering",
+    "History",
+    "Invention"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 71.0,
+   "ort_izlenme": 342658,
+   "ortak_konu": "History",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCmj6PDhLSwQgJHCvple8jmA",
+     "ad": "Spark Feeder 3D",
+     "abone": 5180,
+     "buyume30": 70.96
+    }
+   ]
+  },
+  {
+   "nis": "Educational Content",
+   "alt": [
+    "Engineering",
+    "Science",
+    "Manufacturing Processes"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 63.3,
+   "ort_izlenme": 316772,
+   "ortak_konu": "Engineering",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCJ1SyAwup1k2uK-PR2iMH0Q",
+     "ad": "Factlime",
+     "abone": 25800,
+     "buyume30": 63.29
+    }
+   ]
+  },
+  {
+   "nis": "Construction Education",
+   "alt": [
+    "Heavy Machinery",
+    "Engineering",
+    "Worker Skills"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 56.2,
+   "ort_izlenme": 567899,
+   "ortak_konu": "Engineering",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UC_1KS-1OXJjPtIfpmyvHUag",
+     "ad": "Master Adam Works!",
+     "abone": 15500,
+     "buyume30": 56.25
+    }
+   ]
+  },
+  {
    "nis": "Engineering & Infrastructure Documentary",
    "alt": [
     "Civil Engineering",
@@ -431,6 +963,78 @@
      "ad": "知識の断面図",
      "abone": 2190,
      "buyume30": 51.03
+    }
+   ]
+  },
+  {
+   "nis": "Construction Machinery",
+   "alt": [
+    "Heavy Equipment",
+    "Earthmoving",
+    "Construction Projects"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 46.0,
+   "ort_izlenme": 207915,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCUOlHbF4FBRxfeNUnwRmPdg",
+     "ad": "99 workers",
+     "abone": 9140,
+     "buyume30": 46.01
+    }
+   ]
+  },
+  {
+   "nis": "Industrial Craftsmanship",
+   "alt": [
+    "Tool Demonstrations",
+    "Construction Techniques",
+    "Engineering"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 44.8,
+   "ort_izlenme": 240014,
+   "ortak_konu": "Engineering",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCstVFnYqM2MUYNVW5pdnuLg",
+     "ad": "ayyan handy",
+     "abone": 4850,
+     "buyume30": 44.78
+    }
+   ]
+  },
+  {
+   "nis": "Engineering & Mechanical History",
+   "alt": [
+    "Aviation History",
+    "Automotive History",
+    "Engineering Documentaries"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 44.0,
+   "ort_izlenme": 281030,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCs8CoucWxLJFQgHWiEvTnTg",
+     "ad": "Blizabay",
+     "abone": 12400,
+     "buyume30": 44.02
     }
    ]
   },
@@ -458,6 +1062,52 @@
    ]
   },
   {
+   "nis": "Reddit Stories",
+   "alt": [
+    "Reddit Readings",
+    "German Reddit Stories"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 43.8,
+   "ort_izlenme": 384950,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCLz_Hi_KXUMzOs17G6Zefuw",
+     "ad": "Dusch Gedanken",
+     "abone": 34500,
+     "buyume30": 43.75
+    }
+   ]
+  },
+  {
+   "nis": "Political Commentary",
+   "alt": [
+    "Human Interest Stories",
+    "Emotional Narratives"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 43.1,
+   "ort_izlenme": 154429,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCJCcXe3QG1yZ10KRnJ8qFEA",
+     "ad": "FREIE STIMME",
+     "abone": 14300,
+     "buyume30": 43.14
+    }
+   ]
+  },
+  {
    "nis": "Science & Engineering Explanations",
    "alt": [
     "Mechanical Engineering",
@@ -479,405 +1129,75 @@
      "buyume30": 41.85
     }
    ]
-  },
-  {
-   "nis": "Automotive Engineering",
-   "alt": [
-    "Motorcycle History",
-    "Mechanical Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "ja",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 33.0,
-   "ort_izlenme": 39890,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCQh4wN6Tc40KrDYuvx0shDQ",
-     "ad": "60秒バイク図鑑",
-     "abone": 1370,
-     "buyume30": 33.01
-    }
-   ]
-  },
-  {
-   "nis": "Structural Engineering",
-   "alt": [
-    "Civil Engineering",
-    "Mechanical Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "ja",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 32.7,
-   "ort_izlenme": 65353,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCuM9Wk-_C0G0-72NnF_KdBA",
-     "ad": "なるほど構造",
-     "abone": 4910,
-     "buyume30": 32.7
-    }
-   ]
-  },
-  {
-   "nis": "Ancient History",
-   "alt": [
-    "Ancient Engineering",
-    "Roman History",
-    "Ancient Military History"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 30.0,
-   "ort_izlenme": 870588,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCZMXnFWl30pVv4qelzQFRyQ",
-     "ad": "Ancient Engineering",
-     "abone": 11300,
-     "buyume30": 30.03
-    }
-   ]
-  },
-  {
-   "nis": "Science & Engineering Education",
-   "alt": [
-    "Physics Experiments",
-    "Mechanical Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 29.4,
-   "ort_izlenme": 176905,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCqVvMQMpUqkhCkJawOKuuDw",
-     "ad": "Professor Decoded",
-     "abone": 8460,
-     "buyume30": 29.36
-    }
-   ]
-  },
-  {
-   "nis": "Heavy Machinery",
-   "alt": [
-    "Agricultural Engineering",
-    "Construction Equipment"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 27.0,
-   "ort_izlenme": 271040,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCjM5YwinrA_yW0aZZM-20cQ",
-     "ad": "TerraDrive Industries",
-     "abone": 33900,
-     "buyume30": 26.97
-    }
-   ]
-  },
-  {
-   "nis": "Engineering Explainers",
-   "alt": [
-    "Mechanical Engineering",
-    "Applied Physics",
-    "3D Animation"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 24.3,
-   "ort_izlenme": 821361,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCHeT7mGXT7kUuuxtCukVEiw",
-     "ad": "Rotor Studios",
-     "abone": 12800,
-     "buyume30": 24.27
-    }
-   ]
-  },
-  {
-   "nis": "Hip-Hop Music",
-   "alt": [
-    "Human Interest Stories",
-    "MLB Highlights"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 23.7,
-   "ort_izlenme": 1823812,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCoFYy05BYTncMuzJZpJyrvg",
-     "ad": "Little Kindness",
-     "abone": 86200,
-     "buyume30": 23.67
-    }
-   ]
-  },
-  {
-   "nis": "Art and Sports Commentary",
-   "alt": [
-    "Digital Art",
-    "MLB News"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 23.0,
-   "ort_izlenme": 1451820,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCKBnL3qZ0ZESQkdpZx2L3UQ",
-     "ad": "WEFUYGIU",
-     "abone": 31000,
-     "buyume30": 23.02
-    }
-   ]
-  },
-  {
-   "nis": "HVAC Engineering",
-   "alt": [
-    "Building Systems",
-    "Mechanical Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 20.7,
-   "ort_izlenme": 2590,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCCBmTrGcX65GRxqSOG_t0ww",
-     "ad": "Building Systems Academy",
-     "abone": 2270,
-     "buyume30": 20.74
-    }
-   ]
-  },
-  {
-   "nis": "Automotive Engineering & History",
-   "alt": [
-    "Automotive Technology",
-    "Vehicle Design & History"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 19.8,
-   "ort_izlenme": 817033,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC8No9haiCtOEfikdvjTwqSw",
-     "ad": "Vexor",
-     "abone": 27800,
-     "buyume30": 19.83
-    }
-   ]
-  },
-  {
-   "nis": "Celebrity Meme Content",
-   "alt": [
-    "Memes",
-    "MLB",
-    "Celebrity Humor"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 15.1,
-   "ort_izlenme": 3081103,
-   "ortak_konu": "MLB",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
-     "ad": "n n nbekhg",
-     "abone": 38100,
-     "buyume30": 15.11
-    }
-   ]
-  },
-  {
-   "nis": "Prediction Markets",
-   "alt": [
-    "Sports Betting",
-    "Golf"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 14.8,
-   "ort_izlenme": 14552956,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCUMPemO46nJTp-0iX9JXedQ",
-     "ad": "Kalshi",
-     "abone": 11200,
-     "buyume30": 14.75
-    }
-   ]
-  },
-  {
-   "nis": "General Construction",
-   "alt": [
-    "Construction",
-    "Demolition",
-    "Trade Skills"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 14.2,
-   "ort_izlenme": 1900461,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC99pTVCPdZ-KdjTN7GGD1rQ",
-     "ad": "Mega Demolition",
-     "abone": 121000,
-     "buyume30": 14.15
-    }
-   ]
-  },
-  {
-   "nis": "Mechanical Engineering Education",
-   "alt": [
-    "Automotive Mechanics",
-    "Heavy Machinery"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 14.1,
-   "ort_izlenme": 11695,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UChPkbWNXiJv_kZM4dD4XaiQ",
-     "ad": "Global Dub Hub ⭐",
-     "abone": 1460,
-     "buyume30": 14.06
-    }
-   ]
-  },
-  {
-   "nis": "DIY Engineering",
-   "alt": [
-    "Science Projects",
-    "Electronics"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 14.1,
-   "ort_izlenme": 10954,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC3mQB0Vs5TUMH0JsV0obhIQ",
-     "ad": "Official Creative Think",
-     "abone": 1380,
-     "buyume30": 14.05
-    }
-   ]
-  },
-  {
-   "nis": "Digital Art",
-   "alt": [
-    "Procreate",
-    "Illustration",
-    "MLB News"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 11.9,
-   "ort_izlenme": 2199428,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCIQOoUR97EcgZVliALAYxrQ",
-     "ad": "shsbe",
-     "abone": 54700,
-     "buyume30": 11.86
-    }
-   ]
-  },
-  {
-   "nis": "MLB News",
-   "alt": [
-    "Philadelphia Phillies",
-    "MLB Trade Deadline"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 10.0,
-   "ort_izlenme": 1562899,
-   "ortak_konu": "MLB Trade Deadline",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCCVQNJemaiZml5pxn5ze-TA",
-     "ad": "sddfvdf4515",
-     "abone": 36200,
-     "buyume30": 10.03
-    }
-   ]
   }
  ],
  "kanallar": [
+  {
+   "id": "UCuOBnuQCMC9RmP5FpjZbvJg",
+   "ad": "Smart Hob",
+   "handle": null,
+   "abone": 45500,
+   "ort_izlenme": 982578.0471698113,
+   "buyume30": 373.96,
+   "izlenme_buyume30": 232.7,
+   "nis": "Construction & DIY, Tool Hacks, Home Repair, Building Techniques",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCkGo5kdUUbNkVbzmuC1wYpw",
+   "ad": "Unterschätzt",
+   "handle": "@unterschatztgeschichten",
+   "abone": 8290,
+   "ort_izlenme": 113309.67123287672,
+   "buyume30": 327.32,
+   "izlenme_buyume30": 304.36,
+   "nis": "Aviation Drama Storytelling, Air Travel Conflicts, Passenger Stories",
+   "dil": "de",
+   "ulke": null,
+   "kazanc": 72.16,
+   "acilis": "2026-08-28T13:37:11Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 73,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCZiSMSmcnClaGMUdwKNxFEg",
+   "ad": "MechDisk",
+   "handle": null,
+   "abone": 41900,
+   "ort_izlenme": 506927,
+   "buyume30": 326.68,
+   "izlenme_buyume30": 387.9,
+   "nis": "Civil Engineering Documentary, Architectural History, Construction Technology, Infrastructure Analysis, Historical Engineering",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
   {
    "id": "UCZ4AY9cbwuVn7DLnSd3wXdA",
    "ad": "Stuff Boss",
@@ -920,6 +1240,72 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UClC3wP9w72j4gz1pZk-o2Mw",
+   "ad": "WollckenTour",
+   "handle": "@wollckentour",
+   "abone": 2210,
+   "ort_izlenme": 2747.121495327103,
+   "buyume30": 150,
+   "izlenme_buyume30": 109.85,
+   "nis": "Travel, Road Trips, Van Life",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-02-13T17:24:24Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 107,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCgrarthmf9T4A52p4Ij34Jg",
+   "ad": "Svandyboys Vlogs",
+   "handle": "@svandyboysvlogs",
+   "abone": 1980,
+   "ort_izlenme": 17589.885714285716,
+   "buyume30": 140.58,
+   "izlenme_buyume30": 81.28,
+   "nis": "Lifestyle Vlogging, Travel, Shopping",
+   "dil": "de, en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2026-08-12T06:50:44Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 140,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCvIhpqYant2JzyPBwOW3Mpw",
+   "ad": "Wunderbare Orte",
+   "handle": "@wunderbareorte",
+   "abone": 1190,
+   "ort_izlenme": 16579.11489361702,
+   "buyume30": 128.85,
+   "izlenme_buyume30": 129.64,
+   "nis": "Switzerland Travel Guide, Travel Guides, Sightseeing",
+   "dil": "de",
+   "ulke": "CH",
+   "kazanc": null,
+   "acilis": "2026-09-03T20:13:42Z",
+   "son_video": "2026-10-21T00:00:00.000Z",
+   "video_sayisi": 235,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1077,6 +1463,50 @@
    "ortak": false
   },
   {
+   "id": "UCR7j6Oyp3M6cikoPK1tp6rw",
+   "ad": "Emperor Insights – Science & Curiosity",
+   "handle": null,
+   "abone": 218000,
+   "ort_izlenme": 498173.5132743363,
+   "buyume30": 107.62,
+   "izlenme_buyume30": 85.32,
+   "nis": "Industrial Engineering, Manufacturing Processes, Civil Engineering, Product Design",
+   "dil": "en",
+   "ulke": "MA",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC30rF7AoXbpotf_FgnaIA6g",
+   "ad": "Water Hunters",
+   "handle": null,
+   "abone": 5030,
+   "ort_izlenme": 243859.91304347827,
+   "buyume30": 106.15,
+   "izlenme_buyume30": 132.75,
+   "nis": "Well Drilling, Water Well Construction, Heavy Machinery, Civil Engineering, Groundwater Exploration",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCMSiV6DQgIbpaW97hfvjXFA",
    "ad": "احمد محمد",
    "handle": null,
@@ -1096,6 +1526,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCFbPsPjAKiEgTbl11fDSiKQ",
+   "ad": "CoreMine 3D",
+   "handle": null,
+   "abone": 49000,
+   "ort_izlenme": 832111.1842105263,
+   "buyume30": 98.38,
+   "izlenme_buyume30": 67.39,
+   "nis": "Educational Engineering Animation, Construction Technology, Science Explainer, Historical Engineering, Mechanical Engineering",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Trial & Eureka kanalına benzer",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1165,25 +1617,25 @@
    "ortak": false
   },
   {
-   "id": "UCFbPsPjAKiEgTbl11fDSiKQ",
-   "ad": "CoreMine 3D",
-   "handle": "@coremine3d",
-   "abone": 47500,
-   "ort_izlenme": 816442.7333333333,
-   "buyume30": 94.67,
-   "izlenme_buyume30": 64.86,
-   "nis": "Educational Engineering Animation, Construction Technology, Science Explainer",
+   "id": "UCKGDU89WySSspEkT5xG9lSA",
+   "ad": "Mini Build Depot",
+   "handle": null,
+   "abone": 30600,
+   "ort_izlenme": 383324.1666666667,
+   "buyume30": 81.07,
+   "izlenme_buyume30": 93.46,
+   "nis": "Miniature Construction Projects, Miniature Diorama Building, Toy Construction Vehicles, Educational Science Projects",
    "dil": "en",
-   "ulke": "PK",
-   "kazanc": 76.73,
-   "acilis": "2026-06-13T05:16:16Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 75,
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
    "tur": null,
    "yuzsuz": null,
-   "kaynak": "Trial & Eureka kanalına benzer",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1209,6 +1661,28 @@
    "ortak": false
   },
   {
+   "id": "UCZxacyYpWyXA9_PycbNaTqw",
+   "ad": "GLOBAL BUILD & DESIGN",
+   "handle": null,
+   "abone": 28100,
+   "ort_izlenme": 235207.0039370079,
+   "buyume30": 75.63,
+   "izlenme_buyume30": 22.05,
+   "nis": "Civil Engineering & Construction, Heavy Equipment, Infrastructure Development, Construction Techniques",
+   "dil": "en",
+   "ulke": "AE",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCxwlBH9Y-pNXxq8mfwoh5lg",
    "ad": "Alfa Groups Shorts",
    "handle": "@alfagroupshorts",
@@ -1228,6 +1702,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCmj6PDhLSwQgJHCvple8jmA",
+   "ad": "Spark Feeder 3D",
+   "handle": null,
+   "abone": 5180,
+   "ort_izlenme": 342658.2962962963,
+   "buyume30": 70.96,
+   "izlenme_buyume30": 89.56,
+   "nis": "Educational Animation, Ancient Engineering, History, Invention, 3D Animation",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1253,6 +1749,28 @@
    "ortak": false
   },
   {
+   "id": "UCJ1SyAwup1k2uK-PR2iMH0Q",
+   "ad": "Factlime",
+   "handle": null,
+   "abone": 25800,
+   "ort_izlenme": 316772.1341463415,
+   "buyume30": 63.29,
+   "izlenme_buyume30": 56.05,
+   "nis": "Educational Content, Engineering, Science, Manufacturing Processes, Nature Facts, Construction Techniques",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCA1wqROAPOjA2eZwDv783sg",
    "ad": "Grassham Tews",
    "handle": null,
@@ -1272,6 +1790,50 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
+   "ad": "TravelWithRuff",
+   "handle": "@travelwithruff",
+   "abone": 1690,
+   "ort_izlenme": 1591.0320855614973,
+   "buyume30": 57.94,
+   "izlenme_buyume30": 41.37,
+   "nis": "Travel Vlogging, Backpacking, Street Food",
+   "dil": "de",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2025-11-24T20:17:07Z",
+   "son_video": "2026-10-18T00:00:00.000Z",
+   "video_sayisi": 187,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC_1KS-1OXJjPtIfpmyvHUag",
+   "ad": "Master Adam Works!",
+   "handle": null,
+   "abone": 15500,
+   "ort_izlenme": 567898.7424242424,
+   "buyume30": 56.25,
+   "izlenme_buyume30": 60.16,
+   "nis": "Construction Education, Heavy Machinery, Engineering, Worker Skills",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1297,6 +1859,160 @@
    "ortak": false
   },
   {
+   "id": "UC_LqdJFCudT1HSzYA7SE83Q",
+   "ad": "Smart Work HQ",
+   "handle": null,
+   "abone": 6600,
+   "ort_izlenme": 214969.22916666666,
+   "buyume30": 49.32,
+   "izlenme_buyume30": 86.2,
+   "nis": "Construction Engineering, Heavy Machinery, DIY, Construction Techniques",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCKBteshQgFo22tDRGxMPqMg",
+   "ad": "Kharya Developers",
+   "handle": null,
+   "abone": 18900,
+   "ort_izlenme": 291396.89795918367,
+   "buyume30": 47.66,
+   "izlenme_buyume30": 73.41,
+   "nis": "Construction Engineering, Real Estate, Home Construction, Civil Engineering, Home Improvement",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCaHAkYFZ2x9NbfrmSt-uKIQ",
+   "ad": "TamiTrips",
+   "handle": "@tamitrips",
+   "abone": 16700,
+   "ort_izlenme": 7347.351063829788,
+   "buyume30": 46.49,
+   "izlenme_buyume30": 55.48,
+   "nis": "Travel, Accessible Travel, Travel Vlogs",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": 310.62,
+   "acilis": "2025-11-04T12:43:50Z",
+   "son_video": "2026-10-18T00:00:00.000Z",
+   "video_sayisi": 94,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCUOlHbF4FBRxfeNUnwRmPdg",
+   "ad": "99 workers",
+   "handle": null,
+   "abone": 9140,
+   "ort_izlenme": 207914.90697674418,
+   "buyume30": 46.01,
+   "izlenme_buyume30": 40.43,
+   "nis": "Construction Machinery, Heavy Equipment, Earthmoving, Construction Projects, Building Techniques, Demolition",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCstVFnYqM2MUYNVW5pdnuLg",
+   "ad": "ayyan handy",
+   "handle": null,
+   "abone": 4850,
+   "ort_izlenme": 240014.23684210525,
+   "buyume30": 44.78,
+   "izlenme_buyume30": 30.19,
+   "nis": "Industrial Craftsmanship, Tool Demonstrations, Construction Techniques, Engineering, DIY Repairs",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCYj_Trj746XJg39CumGhAMw",
+   "ad": "Volcanic  Buildx",
+   "handle": null,
+   "abone": 49800,
+   "ort_izlenme": 375039.34567901236,
+   "buyume30": 44.35,
+   "izlenme_buyume30": 36.51,
+   "nis": "Digital Art, AI Art, Architecture Design, Creative Construction, Fantasy Visualization",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCs8CoucWxLJFQgHWiEvTnTg",
+   "ad": "Blizabay",
+   "handle": null,
+   "abone": 12400,
+   "ort_izlenme": 281029.76666666666,
+   "buyume30": 44.02,
+   "izlenme_buyume30": 47.81,
+   "nis": "Engineering & Mechanical History, Aviation History, Automotive History, Engineering Documentaries",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCOXIDY9Vl3fEddDZMZm9WKA",
    "ad": "Liuliu Theatre",
    "handle": null,
@@ -1319,6 +2035,72 @@
    "ortak": false
   },
   {
+   "id": "UCLz_Hi_KXUMzOs17G6Zefuw",
+   "ad": "Dusch Gedanken",
+   "handle": "@duschdedanken",
+   "abone": 34500,
+   "ort_izlenme": 384950.1176470588,
+   "buyume30": 43.75,
+   "izlenme_buyume30": 43.81,
+   "nis": "Reddit Stories, Reddit Readings, German Reddit Stories",
+   "dil": "de, es",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2026-05-02T14:08:33Z",
+   "son_video": "2026-10-20T00:00:00.000Z",
+   "video_sayisi": 17,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC4lc5C4F61ZBRfqMb5wa8Pw",
+   "ad": "Untold Moments",
+   "handle": "@untoldmoments.m-yt",
+   "abone": 2780,
+   "ort_izlenme": 64271.586956521736,
+   "buyume30": 43.3,
+   "izlenme_buyume30": 52.19,
+   "nis": "Storytelling, Human Interest Stories, Animal Rescue Stories",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-08-19T07:11:29Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 184,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCJCcXe3QG1yZ10KRnJ8qFEA",
+   "ad": "FREIE STIMME",
+   "handle": "@freiestimme0",
+   "abone": 14300,
+   "ort_izlenme": 154428.54019292604,
+   "buyume30": 43.14,
+   "izlenme_buyume30": 47.32,
+   "nis": "Political Commentary, Human Interest Stories, Emotional Narratives",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": 1942.47,
+   "acilis": "2026-03-29T22:10:40Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 622,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCycbQZ8NbC9JbIhUcjH72lA",
    "ad": "NITROWAR",
    "handle": "@nitrowar",
@@ -1338,6 +2120,50 @@
    "kaynak": "Trial & Eureka kanalına benzer",
    "ilk": "2026-10-22T08:01:01+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCTJfsxi37ZndDGVx8xJAk2A",
+   "ad": "weroadtogether",
+   "handle": "@weroadtogether",
+   "abone": 2010,
+   "ort_izlenme": 5464.443298969072,
+   "buyume30": 41.55,
+   "izlenme_buyume30": 5.66,
+   "nis": "Vanlife, Travel Vlogging, Nomadic Lifestyle",
+   "dil": "de, en",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-02-14T15:17:16Z",
+   "son_video": "2026-10-18T00:00:00.000Z",
+   "video_sayisi": 97,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCFrNjgTsTtHNnicvWzarRig",
+   "ad": "Karma in Berlin",
+   "handle": "@karmainberlin",
+   "abone": 1540,
+   "ort_izlenme": 7254.353982300885,
+   "buyume30": 41.28,
+   "izlenme_buyume30": 126.92,
+   "nis": "Fictional Storytelling, Revenge Stories, Family Drama",
+   "dil": "de",
+   "ulke": "ZA",
+   "kazanc": null,
+   "acilis": "2026-06-15T18:01:26Z",
+   "son_video": "2026-10-18T00:00:00.000Z",
+   "video_sayisi": 226,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1407,6 +2233,72 @@
    "ortak": false
   },
   {
+   "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
+   "ad": "Rj Vireon",
+   "handle": "@rjvireon-m4c",
+   "abone": 122000,
+   "ort_izlenme": 70523.84332425069,
+   "buyume30": 36.31,
+   "izlenme_buyume30": 30.73,
+   "nis": "Animation, Animal Facts, Viral Stories",
+   "dil": "de",
+   "ulke": "RO",
+   "kazanc": 126.74,
+   "acilis": "2025-12-21T05:02:21Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 734,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCHy7wiQpW5HgPdAP8ZFkQjg",
+   "ad": "Machine Verse",
+   "handle": null,
+   "abone": 10700,
+   "ort_izlenme": 405343.31677018636,
+   "buyume30": 35.1,
+   "izlenme_buyume30": 38.9,
+   "nis": "Industrial Engineering, Heavy Machinery, Construction Techniques, Agricultural Innovation, DIY Tools",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCF9k3jbxw4-vvM-m6OLBsPQ",
+   "ad": "Gutes geschieht",
+   "handle": "@gutesgeschieht",
+   "abone": 5280,
+   "ort_izlenme": 79425.54761904762,
+   "buyume30": 34.69,
+   "izlenme_buyume30": -8.4,
+   "nis": "Human Interest Stories, Inspirational Stories, Acts of Kindness & Heroism",
+   "dil": "de",
+   "ulke": null,
+   "kazanc": 0,
+   "acilis": "2025-11-10T17:43:38Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 42,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC91S1rxZXZVbKkKBbME43-Q",
    "ad": "Plot Twist Theater",
    "handle": null,
@@ -1451,6 +2343,50 @@
    "ortak": false
   },
   {
+   "id": "UCVOeS6vyB-59_WpEoo8EUSQ",
+   "ad": "Mega Build-X",
+   "handle": null,
+   "abone": 20600,
+   "ort_izlenme": 436890.0569105691,
+   "buyume30": 32.9,
+   "izlenme_buyume30": 38.32,
+   "nis": "Construction & Engineering, Heavy Machinery in Action, Satisfying Industrial Processes, Construction Techniques",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC9vNI4SdjtwO0wElJv3FDhg",
+   "ad": "Story Nova",
+   "handle": "@storynova-u6p",
+   "abone": 1260,
+   "ort_izlenme": 6801.894736842105,
+   "buyume30": 32.77,
+   "izlenme_buyume30": -67.05,
+   "nis": "Storytelling, Moral Stories, Inspirational Stories",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-08-01T10:41:59Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 19,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCuM9Wk-_C0G0-72NnF_KdBA",
    "ad": "なるほど構造",
    "handle": "@なるほど構造",
@@ -1470,6 +2406,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCYYv5BuwGhrP7W6ZQ0quQCw",
+   "ad": "Beauty of Trans",
+   "handle": "@beautyoftrans-r3n",
+   "abone": 2760,
+   "ort_izlenme": 8605.515151515152,
+   "buyume30": 32.69,
+   "izlenme_buyume30": 48.85,
+   "nis": "Fashion Modeling, Latex Fashion, Swimwear",
+   "dil": "en, de",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2026-07-24T09:58:25Z",
+   "son_video": "2026-10-21T00:00:00.000Z",
+   "video_sayisi": 33,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1561,25 +2519,69 @@
    "ortak": false
   },
   {
-   "id": "UCjM5YwinrA_yW0aZZM-20cQ",
-   "ad": "TerraDrive Industries",
-   "handle": "@terradriveindustries",
-   "abone": 33900,
-   "ort_izlenme": 271040.2747663551,
-   "buyume30": 26.97,
-   "izlenme_buyume30": 21.51,
-   "nis": "Heavy Machinery, Agricultural Engineering, Construction Equipment",
+   "id": "UCcALafjeDq8QWMKl3SC_TQg",
+   "ad": "Construction Hub",
+   "handle": null,
+   "abone": 129000,
+   "ort_izlenme": 1145143,
+   "buyume30": 26.47,
+   "izlenme_buyume30": 31.56,
+   "nis": "DIY Construction, Underground House Building, Tiny Home Transformation, ASMR Construction, Structural Restoration, Time-Lapse Building",
    "dil": "en",
    "ulke": "US",
-   "kazanc": 917.22,
-   "acilis": "2026-04-16T06:31:24Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 535,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCkrSAPXStfq4VpCzNc9_YTA",
+   "ad": "Top Smart Engineer",
+   "handle": null,
+   "abone": 66900,
+   "ort_izlenme": 1393689.1282051282,
+   "buyume30": 25.99,
+   "izlenme_buyume30": 29.49,
+   "nis": "Construction Engineering, Construction Skills, Engineering Fails, Smart Machines, Automation",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCjM5YwinrA_yW0aZZM-20cQ",
+   "ad": "TerraDrive Industries",
+   "handle": null,
+   "abone": 34000,
+   "ort_izlenme": 281392.83172147,
+   "buyume30": 25.93,
+   "izlenme_buyume30": 20.61,
+   "nis": "Heavy Machinery, Agricultural Engineering, Construction Equipment, Mechanical Processes, Industrial Engineering",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
    "tur": null,
    "yuzsuz": null,
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1605,6 +2607,50 @@
    "ortak": false
   },
   {
+   "id": "UC0037HB4JmOjz--cFP9NK9w",
+   "ad": "Elena und Ben BUSLIFE",
+   "handle": "@elenaundbenbuslife",
+   "abone": 11500,
+   "ort_izlenme": 316078.24324324325,
+   "buyume30": 24.59,
+   "izlenme_buyume30": 62.65,
+   "nis": "Vehicle Conversion & Travel, School Bus Conversion, Van Life",
+   "dil": "de",
+   "ulke": null,
+   "kazanc": 152.79,
+   "acilis": "2026-06-17T07:57:48Z",
+   "son_video": "2026-10-20T00:00:00.000Z",
+   "video_sayisi": 37,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCJOdiOL14psCxZOEgYFDGpA",
+   "ad": "LachLernLand",
+   "handle": "@lachlernland",
+   "abone": 1480,
+   "ort_izlenme": 1126.4565217391305,
+   "buyume30": 24.37,
+   "izlenme_buyume30": 7.19,
+   "nis": "Children's Music & Educational Stories, Children's Songs, Educational Content",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-01-18T22:20:34Z",
+   "son_video": "2026-10-19T00:00:00.000Z",
+   "video_sayisi": 138,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCHeT7mGXT7kUuuxtCukVEiw",
    "ad": "Rotor Studios",
    "handle": null,
@@ -1624,6 +2670,50 @@
    "kaynak": "Trial & Eureka kanalına benzer",
    "ilk": "2026-10-22T08:01:01+00:00",
    "son": "2026-10-22T08:01:01+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCkUitC3L9-PdjqMAhpQXB1A",
+   "ad": "Yang Development & Design",
+   "handle": null,
+   "abone": 25200,
+   "ort_izlenme": 534979.6489361703,
+   "buyume30": 24.14,
+   "izlenme_buyume30": -9.71,
+   "nis": "Civil Engineering & Construction, Road Construction, Infrastructure Development, Civil Engineering, Transformation Projects",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": true,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC5r0HZLUsWrBCnYkVx5GlHw",
+   "ad": "ROTES DREIECK",
+   "handle": "@rotes_dreieck",
+   "abone": 1670,
+   "ort_izlenme": 44774.14552238806,
+   "buyume30": 23.7,
+   "izlenme_buyume30": 12.29,
+   "nis": "Human Interest Stories, True Crime, Biographies",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2025-11-08T11:28:50Z",
+   "son_video": "2026-10-20T00:00:00.000Z",
+   "video_sayisi": 268,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1781,6 +2871,50 @@
    "ortak": false
   },
   {
+   "id": "UCxcyKQZTZaMf9Zu3rqX0Wgw",
+   "ad": "Engineering Marvels",
+   "handle": null,
+   "abone": 56800,
+   "ort_izlenme": 230784.64393939395,
+   "buyume30": 20.34,
+   "izlenme_buyume30": 29.34,
+   "nis": "Civil Engineering, Construction Technology, Structural Engineering, Architectural History",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCsilmM7_rXt6OuoBlOSKjzg",
+   "ad": "Fact Mine 3D",
+   "handle": null,
+   "abone": 44300,
+   "ort_izlenme": 564929.421875,
+   "buyume30": 20.05,
+   "izlenme_buyume30": 17.35,
+   "nis": "Engineering, Civil Engineering, Structural Engineering, Bridge Engineering",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC8No9haiCtOEfikdvjTwqSw",
    "ad": "Vexor",
    "handle": null,
@@ -1825,6 +2959,28 @@
    "ortak": false
   },
   {
+   "id": "UCiwSvRQECP3YW1TCUu5MS6A",
+   "ad": "FixIt Master",
+   "handle": null,
+   "abone": 7780,
+   "ort_izlenme": 671497.3,
+   "buyume30": 19.14,
+   "izlenme_buyume30": 21.04,
+   "nis": "Construction & DIY Building, Masonry & Brickwork, Construction Formwork & Shuttering, Construction Hacks, Wall Repair Techniques",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UChOynEM0s5pU2PYVB6fxmZA",
    "ad": "Orgovan Loconte",
    "handle": null,
@@ -1844,6 +3000,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCY2IsFiRTs_lvYgLDqkKVug",
+   "ad": "SagaVerse128",
+   "handle": "@sagaverse128",
+   "abone": 1670,
+   "ort_izlenme": 31913.357868020306,
+   "buyume30": 18.44,
+   "izlenme_buyume30": 11.58,
+   "nis": "Human Interest Stories, Animal Rescue, Heartwarming Content",
+   "dil": "de",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2026-08-13T03:35:32Z",
+   "son_video": "2026-10-10T00:00:00.000Z",
+   "video_sayisi": 394,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1913,6 +3091,94 @@
    "ortak": false
   },
   {
+   "id": "UCsH6FraA_HaIC-cBhnMR7gA",
+   "ad": "I guess I'm walking",
+   "handle": "@iguessiamwalking",
+   "abone": 2350,
+   "ort_izlenme": 7074.565789473684,
+   "buyume30": 16.92,
+   "izlenme_buyume30": 99.82,
+   "nis": "Travel Vlogging, Nature Walks, Atmospheric Travel",
+   "dil": "en, de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-04-24T13:26:53Z",
+   "son_video": "2026-10-11T00:00:00.000Z",
+   "video_sayisi": 76,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCO3qox9W1id4O12STa8FS1g",
+   "ad": "MallorcaNorden",
+   "handle": "@mallorcanorden",
+   "abone": 2760,
+   "ort_izlenme": 3238.6216216216217,
+   "buyume30": 16.46,
+   "izlenme_buyume30": 33.19,
+   "nis": "Travel Vlogs, Mallorca Travel, Destination Guides",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-04-07T17:21:08Z",
+   "son_video": "2026-10-18T00:00:00.000Z",
+   "video_sayisi": 37,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC9NZArbVX6bVa6oFy9bXN3g",
+   "ad": "Bulgarischer Nachbar",
+   "handle": "@bulgarischernachbar",
+   "abone": 4750,
+   "ort_izlenme": 8498.870967741936,
+   "buyume30": 15.85,
+   "izlenme_buyume30": 23.79,
+   "nis": "Travel Vlogging, Solo Travel, Urban Exploration",
+   "dil": "de",
+   "ulke": "AT",
+   "kazanc": null,
+   "acilis": "2025-12-05T03:35:06Z",
+   "son_video": "2026-10-20T00:00:00.000Z",
+   "video_sayisi": 62,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCO6YzwGrjAOKxA7247cIpgg",
+   "ad": "leoni.g.369",
+   "handle": "@leoni.g.369",
+   "abone": 2490,
+   "ort_izlenme": 14491.148148148148,
+   "buyume30": 15.81,
+   "izlenme_buyume30": 13.14,
+   "nis": "Travel Vlogging, Travel, Couples",
+   "dil": "de, en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": "2026-05-10T18:51:40Z",
+   "son_video": "2026-10-16T00:00:00.000Z",
+   "video_sayisi": 243,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
    "ad": "n n nbekhg",
    "handle": null,
@@ -1932,6 +3198,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCWBDztOrqIeQ2su5IbCKTDA",
+   "ad": "Mr.Twister",
+   "handle": null,
+   "abone": 64500,
+   "ort_izlenme": 1454315.671875,
+   "buyume30": 14.97,
+   "izlenme_buyume30": 16.98,
+   "nis": "Construction, Construction Fails, Construction Machinery, Heavy Equipment, Construction Skills",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -1976,6 +3264,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCw-hH795UFH3DfkYnz4vvFQ",
+   "ad": "Einfach Ralle",
+   "handle": "@einfachralle",
+   "abone": 5040,
+   "ort_izlenme": 7852,
+   "buyume30": 14.55,
+   "izlenme_buyume30": 40.89,
+   "nis": "Travel Vlogging, Travel, Automotive",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": 15.34,
+   "acilis": "2026-05-10T04:13:29Z",
+   "son_video": "2026-10-17T00:00:00.000Z",
+   "video_sayisi": 18,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -2045,6 +3355,28 @@
    "ortak": false
   },
   {
+   "id": "UCWIS9j0a5jHvyf6eIVHugsw",
+   "ad": "Amazing Build Mini",
+   "handle": null,
+   "abone": 16600,
+   "ort_izlenme": 210271.27737226276,
+   "buyume30": 13.7,
+   "izlenme_buyume30": 22.67,
+   "nis": "Miniature Engineering & Construction, Miniature Vehicle Builds, Miniature Construction Projects, Creative DIY Engineering",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCqySyI28b3cjlDq7GbJy5Kg",
    "ad": "Engineering With Pritam",
    "handle": "@engineeringwithpritamnew",
@@ -2064,6 +3396,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCR-puYkb4WVznXFVeujXkHA",
+   "ad": "Zelvora Frame",
+   "handle": null,
+   "abone": 68400,
+   "ort_izlenme": 1499874.2857142857,
+   "buyume30": 13.25,
+   "izlenme_buyume30": 14.8,
+   "nis": "Construction, Primitive Building, Survival Shelters, Tiny House Construction, Architectural Timelapse",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -2111,6 +3465,50 @@
    "ortak": false
   },
   {
+   "id": "UCs1bJj0jKmjw0QD59XiGzfg",
+   "ad": "Schwarze Akte",
+   "handle": "@schwarzeakte-q3e",
+   "abone": 1060,
+   "ort_izlenme": 2857.866666666667,
+   "buyume30": 12.29,
+   "izlenme_buyume30": 103.23,
+   "nis": "Storytelling, Revenge Stories, Drama",
+   "dil": "de",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": "2026-05-21T03:58:13Z",
+   "son_video": "2026-10-10T00:00:00.000Z",
+   "video_sayisi": 45,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC69mrouQM2Fq8Uw7kYLHgJw",
+   "ad": "Nagi’s Log | Journeys Through Japan",
+   "handle": "@nagis-log",
+   "abone": 1500,
+   "ort_izlenme": 3011.625,
+   "buyume30": 11.94,
+   "izlenme_buyume30": 115.85,
+   "nis": "Travel Vlogging, Japan Travel, Nature Exploration",
+   "dil": "de",
+   "ulke": "JP",
+   "kazanc": null,
+   "acilis": "2026-07-11T13:47:06Z",
+   "son_video": "2026-10-17T00:00:00.000Z",
+   "video_sayisi": 16,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: travel stories (de)",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCIQOoUR97EcgZVliALAYxrQ",
    "ad": "shsbe",
    "handle": null,
@@ -2130,6 +3528,50 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UChJa8i2vaLbTJitQ07hO17A",
+   "ad": "Orvion",
+   "handle": null,
+   "abone": 61000,
+   "ort_izlenme": 274264.17711171665,
+   "buyume30": 11.72,
+   "izlenme_buyume30": 12.04,
+   "nis": "Construction Engineering, Home Renovation, Civil Engineering, Building Techniques",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": false,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCu1L8jb9PLM9_9WjJLBS6Ig",
+   "ad": "Smart Engineering🏗",
+   "handle": null,
+   "abone": 185000,
+   "ort_izlenme": 611892.7181996086,
+   "buyume30": 11.45,
+   "izlenme_buyume30": 12.25,
+   "nis": "Engineering",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -2179,6 +3621,22 @@
    "ad": "mechanical engineering animation",
    "gelen": 50,
    "alinan": 37
+  },
+  {
+   "tarih": "2026-10-24T09:45:17+00:00",
+   "tip": "benzer",
+   "hedef": "UCDYIAFJal4YtloFLYixLsVA",
+   "ad": "Giant Feats",
+   "gelen": 50,
+   "alinan": 30
+  },
+  {
+   "tarih": "2026-10-24T09:45:17+00:00",
+   "tip": "yukselen",
+   "hedef": "travel stories [de]",
+   "ad": "travel stories (de)",
+   "gelen": 50,
+   "alinan": 26
   }
  ]
 }
