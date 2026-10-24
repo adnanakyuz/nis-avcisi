@@ -1383,6 +1383,7 @@ main{padding-bottom:90px}
 .alt-menu{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--kart);border-top:1px solid var(--cizgi);
   padding:4px 4px max(4px,env(safe-area-inset-bottom));z-index:10}
 .alt-menu a{flex:1;display:flex;flex-direction:column;align-items:center;font-size:11px;color:var(--soluk);padding:4px 0;gap:1px}
+section[hidden]{display:none!important}
 .alt-menu a span{font-size:20px;line-height:1.2} .alt-menu a.aktif{color:var(--vurgu);font-weight:700}
 section{scroll-margin-top:12px}
 .filtreler{display:flex;gap:8px;overflow-x:auto;margin:0 -16px 10px;padding:0 16px;scrollbar-width:none}
@@ -1669,14 +1670,30 @@ document.addEventListener("click", function (e) {
   else { try { navigator.clipboard.writeText(p.dataset.baslik + " " + p.dataset.url); bildir("Link kopyalandı 📋"); } catch (h) {} }
 });
 
-// ---- Alt menü: görünen bölümü işaretle
+// ---- Alt menü: ana sayfada gerçek sekmeler (aynı anda tek bölüm görünür, hiçbir bölüm silinmez)
 var menu = document.querySelectorAll(".alt-menu a");
 function menuIsaretle(id) { menu.forEach(function (a) { a.classList.toggle("aktif", a.dataset.b === id); }); }
-if ("IntersectionObserver" in window && document.body.dataset.genel === "1") {
-  var gozcu = new IntersectionObserver(function (l) {
-    l.forEach(function (g) { if (g.isIntersecting) menuIsaretle(g.target.id); });
-  }, {rootMargin: "-40% 0px -55% 0px"});
-  document.querySelectorAll("section[id]").forEach(function (s) { gozcu.observe(s); });
+if (document.body.dataset.genel === "1") {
+  var SEKMELER = Array.prototype.map.call(menu, function (a) { return a.dataset.b; });
+  var bolumler = document.querySelectorAll("main > section[id]");
+  function sekmeAc(hedef, kaydir) {
+    // #begendiklerim gibi bölüm içi bağlantılar: içinde bulunduğu sekme açılır, sonra o yere kaydırılır.
+    var el = hedef && document.getElementById(hedef);
+    var bolum = el && (el.matches("main > section[id]") ? el : el.closest("main > section[id]"));
+    var id = bolum && SEKMELER.indexOf(bolum.id) >= 0 ? bolum.id : "bugun";
+    bolumler.forEach(function (s) { s.hidden = SEKMELER.indexOf(s.id) >= 0 && s.id !== id; });
+    menuIsaretle(id);
+    if (kaydir && el && el !== bolum) el.scrollIntoView(); else window.scrollTo(0, 0);
+  }
+  menu.forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      history.replaceState(null, "", "#" + a.dataset.b);
+      sekmeAc(a.dataset.b, false);
+    });
+  });
+  window.addEventListener("hashchange", function () { sekmeAc(location.hash.slice(1), true); });
+  sekmeAc(location.hash.slice(1), true);
 }
 
 // ---- Profil sayfası
@@ -2055,7 +2072,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
                      '<li>🟢 Bir konunun <b>boş mu doymuş mu</b> olduğunu ölçer, hangi dilde yapman gerektiğini söyler.</li>'
                      '<li>⭐ Beğendiğin kanalı yıldızla; <b>👤 Profil</b>\'den ilgi alanlarını seç, sana özel filtrelensin.</li>'
                      '</ul><button class="btn ana" type="button" id="karsilama-kapat">Başlayalım</button></div>')
-        aramalar = (f'<section id="bugun">{karsilama}<p class="selam" id="selam" hidden></p>{one}{hafta_html()}<div id="vidiq-kutu" hidden></div></section>')
+        aramalar = (f'<section id="bugun">{karsilama}<p class="selam" id="selam" hidden></p>{one}<div id="vidiq-kutu" hidden></div></section>')
         benim = ('<section id="benim"><div id="fav-kutu"><h2 id="begendiklerim">⭐ Beğendiklerim</h2>'
                  '<p class="alt-baslik">Yıldızladığın kanallar. Dokun, kanala gir; yıldıza basarsan listeden çıkar.</p>'
                  '<div class="kart" id="fav-liste"></div><p class="bos-not" id="fav-bos">Henüz yıldızladığın kanal yok. '
@@ -2071,7 +2088,7 @@ def rapor(sonuc, nisler, a, yol, harcanan, kok=""):
     yarim = (f'<p class="uyari">⚠️ Kota tarama sırasında bitti, sonuçlar eksik olabilir. {KOTA_NOTU}</p>'
              if getattr(a, "kota_yarim", False) else "")
     if not a.konular:
-        trend_bolum = f'<section id="trendler">{trend_bolum or ""}{karne_html()}</section>{benim}'
+        trend_bolum = f'<section id="trendler">{hafta_html()}{trend_bolum or ""}{karne_html()}</section>{benim}'
 
     sayfa_yaz(yol, kok=kok, baslik=baslik, ust=ust, genel=not a.konular,
               meta=f'{"Arama" if a.konular else "Son tarama"}: {tarih} · {kapsam} · son {a.gun} gün',
@@ -2177,7 +2194,7 @@ yatırım ya da finansal tavsiye değildir. Son karar her zaman senindir.</p>
 <h3>Çerezler ve reklam</h3>
 <p>Uygulama çerez, reklam ya da takip aracı kullanmaz.</p>
 <h3>İletişim</h3>
-<p>Sorular ve veri talepleri için iletişim adresi yakında eklenecek.</p>
+<p>Sorular ve veri talepleri için: <a href="mailto:adnannakyuzzz@gmail.com">adnannakyuzzz@gmail.com</a></p>
 </section>""",
               footer="Son güncelleme: " + dt.datetime.now(TR_SAAT).strftime("%d.%m.%Y"))
 
