@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-10-24T09:45:17+00:00",
- "bakiye": 135,
+ "guncelleme": "2026-10-25T09:45:23+00:00",
+ "bakiye": 125,
  "sifirlanma": "2026-11-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -173,6 +173,90 @@
    ]
   },
   {
+   "nis": "Technology",
+   "alt": [
+    "AI Tools",
+    "Gadgets",
+    "Smartphones & Gadgets"
+   ],
+   "kanal_sayisi": 5,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 5,
+   "ort_buyume30": 23.0,
+   "ort_izlenme": 177386,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
+     "ad": "Aigen Gadget",
+     "abone": 13500,
+     "buyume30": 46.26
+    },
+    {
+     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
+     "ad": "Tech Easy",
+     "abone": 46500,
+     "buyume30": 23.02
+    },
+    {
+     "id": "UCcTTK14g4fcyMtpXjowOnYg",
+     "ad": "New Frontier",
+     "abone": 20100,
+     "buyume30": 17.54
+    },
+    {
+     "id": "UCDGf0tG5kqoH4derBeXGWmg",
+     "ad": "InfoHubOfficially",
+     "abone": 2790,
+     "buyume30": 14.81
+    }
+   ]
+  },
+  {
+   "nis": "Artificial Intelligence",
+   "alt": [
+    "AI Tools",
+    "Future Technology",
+    "Technology News"
+   ],
+   "kanal_sayisi": 4,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 4,
+   "ort_buyume30": 69.0,
+   "ort_izlenme": 10099,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCT41p6cGch0U4NZgR2iYD6A",
+     "ad": "The AI Times",
+     "abone": 22700,
+     "buyume30": 198.68
+    },
+    {
+     "id": "UClSy4QiF4VA66XVx-lUWsUA",
+     "ad": "Pixel_Pulse_USA🎮",
+     "abone": 1640,
+     "buyume30": 41.38
+    },
+    {
+     "id": "UCmjZHs54VkHVW1Hi9dmelBw",
+     "ad": "Ignore All Previous Instructions",
+     "abone": 2210,
+     "buyume30": 24.16
+    },
+    {
+     "id": "UC9tpZnMLKv5vbZIGuIIPmNg",
+     "ad": "Practical AI",
+     "abone": 1630,
+     "buyume30": 11.64
+    }
+   ]
+  },
+  {
    "nis": "Industrial Engineering",
    "alt": [
     "Manufacturing Processes",
@@ -299,6 +383,42 @@
    ]
   },
   {
+   "nis": "Sports",
+   "alt": [
+    "Major League Baseball",
+    "Philadelphia Phillies",
+    "Football (Soccer)"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 3,
+   "ort_buyume30": 30.1,
+   "ort_izlenme": 1359751,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC_bCJyLD42BN1bd6_85v0dQ",
+     "ad": "Lilipopv",
+     "abone": 11300,
+     "buyume30": 37.3
+    },
+    {
+     "id": "UCd6iuGex6auD5dWM8PwJvUw",
+     "ad": "Rueben Geise",
+     "abone": 31300,
+     "buyume30": 32.07
+    },
+    {
+     "id": "UCCs5fUaBNshhe0CWaImTs4A",
+     "ad": "Macgure Laknws",
+     "abone": 44700,
+     "buyume30": 20.81
+    }
+   ]
+  },
+  {
    "nis": "Storytelling",
    "alt": [
     "Human Interest Stories",
@@ -371,6 +491,36 @@
    ]
   },
   {
+   "nis": "Football",
+   "alt": [
+    "Football Highlights",
+    "Football Rankings",
+    "Funny Football Moments"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 249.7,
+   "ort_izlenme": 758681,
+   "ortak_konu": "Football",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCUAo-xdNaLUpPHFS5GkMcBQ",
+     "ad": "FoStazz",
+     "abone": 38300,
+     "buyume30": 438.68
+    },
+    {
+     "id": "UCHwv-4Xyjq_aXieOMIvsloA",
+     "ad": "CR7IUM",
+     "abone": 61700,
+     "buyume30": 60.68
+    }
+   ]
+  },
+  {
    "nis": "Travel",
    "alt": [
     "Road Trips",
@@ -397,6 +547,66 @@
      "ad": "TamiTrips",
      "abone": 16700,
      "buyume30": 46.49
+    }
+   ]
+  },
+  {
+   "nis": "Football Entertainment",
+   "alt": [
+    "Football Comedy",
+    "Memorable Football Moments",
+    "Football Parody"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 90.6,
+   "ort_izlenme": 899290,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCXu7ilasTyUfJxAeANeoa4w",
+     "ad": "soccerFunnyMots",
+     "abone": 51800,
+     "buyume30": 162.94
+    },
+    {
+     "id": "UC24KHw9kMrnbd9qGuh24Zaw",
+     "ad": "Cappyedits",
+     "abone": 18700,
+     "buyume30": 18.35
+    }
+   ]
+  },
+  {
+   "nis": "Technology Analysis",
+   "alt": [
+    "Semiconductor Industry",
+    "AI Chips & Infrastructure",
+    "AI Industry Dynamics"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 63.0,
+   "ort_izlenme": 13859,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCIjlWscEzGTBgLza3FPH9NQ",
+     "ad": "AI Chip Insider",
+     "abone": 1720,
+     "buyume30": 112.35
+    },
+    {
+     "id": "UCTK0Dg98IH33S3GASAr_VrQ",
+     "ad": "The WNBA Reporter",
+     "abone": 5410,
+     "buyume30": 13.66
     }
    ]
   },
@@ -431,6 +641,66 @@
    ]
   },
   {
+   "nis": "Animation",
+   "alt": [
+    "Football",
+    "Parody",
+    "Comedy"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 47.2,
+   "ort_izlenme": 539469,
+   "ortak_konu": "Football",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCQ5qCffH2bDX7JajsdCmjAA",
+     "ad": "ZBNDUHUR",
+     "abone": 5710,
+     "buyume30": 58.17
+    },
+    {
+     "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
+     "ad": "Rj Vireon",
+     "abone": 122000,
+     "buyume30": 36.31
+    }
+   ]
+  },
+  {
+   "nis": "AI Technology",
+   "alt": [
+    "Generative AI",
+    "AI Models & Tools",
+    "AI Tools & Reviews"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 35.5,
+   "ort_izlenme": 33737,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCoE8zxPoW-rRUtuDcng2UBw",
+     "ad": "Prince does AI",
+     "abone": 1420,
+     "buyume30": 58.66
+    },
+    {
+     "id": "UCRvwyww8oiO199iMPpm4zsw",
+     "ad": "AI WORLDWIDE",
+     "abone": 229000,
+     "buyume30": 12.25
+    }
+   ]
+  },
+  {
    "nis": "Digital Art",
    "alt": [
     "AI Art",
@@ -457,35 +727,6 @@
      "ad": "shsbe",
      "abone": 54700,
      "buyume30": 11.86
-    }
-   ]
-  },
-  {
-   "nis": "Sports",
-   "alt": [
-    "Major League Baseball",
-    "Philadelphia Phillies"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 2,
-   "ort_buyume30": 26.4,
-   "ort_izlenme": 1861724,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCd6iuGex6auD5dWM8PwJvUw",
-     "ad": "Rueben Geise",
-     "abone": 31300,
-     "buyume30": 32.07
-    },
-    {
-     "id": "UCCs5fUaBNshhe0CWaImTs4A",
-     "ad": "Macgure Laknws",
-     "abone": 44700,
-     "buyume30": 20.81
     }
    ]
   },
@@ -591,6 +832,53 @@
    ]
   },
   {
+   "nis": "Football Puzzle Challenges",
+   "alt": [
+    "Visual Search Games",
+    "Football Trivia",
+    "Sports Entertainment"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 266.3,
+   "ort_izlenme": 385871,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCsFRU8e7kzpSTocU2edFKzA",
+     "ad": "Mexy.20k",
+     "abone": 9230,
+     "buyume30": 266.27
+    }
+   ]
+  },
+  {
+   "nis": "Artificial Intelligence Technology Reviews",
+   "alt": [
+    "AI Tools",
+    "Software Comparison"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 227.1,
+   "ort_izlenme": 40084,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCdqoW7Y47SWLFdl8gNO0Yzg",
+     "ad": "AI Ravixo",
+     "abone": 57900,
+     "buyume30": 227.12
+    }
+   ]
+  },
+  {
    "nis": "Celebrity News",
    "alt": [
     "Pop Culture",
@@ -680,6 +968,30 @@
      "ad": "Behind the Why",
      "abone": 2490,
      "buyume30": 124.32
+    }
+   ]
+  },
+  {
+   "nis": "Comedy",
+   "alt": [
+    "Parody",
+    "Sports Humor",
+    "K-Pop Parody"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 113.2,
+   "ort_izlenme": 685602,
+   "ortak_konu": "Parody",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
+     "ad": "AI-Mini656",
+     "abone": 9040,
+     "buyume30": 113.21
     }
    ]
   },
@@ -825,6 +1137,29 @@
    ]
   },
   {
+   "nis": "Sports Comedy",
+   "alt": [
+    "Football Parody",
+    "Short-Form Content"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 89.6,
+   "ort_izlenme": 4047808,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC3cdqAFdUX6ThSM_F1Sx8wA",
+     "ad": "dsfsdf",
+     "abone": 54800,
+     "buyume30": 89.62
+    }
+   ]
+  },
+  {
    "nis": "Miniature Construction Projects",
    "alt": [
     "Miniature Diorama Building",
@@ -849,289 +1184,52 @@
    ]
   },
   {
-   "nis": "Automotive Engineering Education",
+   "nis": "AI Video Art",
    "alt": [
-    "Car Maintenance",
-    "Mechanical Engineering"
+    "Retro Aesthetics",
+    "Celebrity Then and Now"
    ],
    "kanal_sayisi": 1,
    "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
+   "ilk": "2026-10-25T09:45:23+00:00",
    "yeni7": 1,
-   "ort_buyume30": 76.7,
-   "ort_izlenme": 24351,
+   "ort_buyume30": 79.1,
+   "ort_izlenme": 730614,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCHmPiloJ10Xyy2_j1sDAhHA",
-     "ad": "Engine Explained",
-     "abone": 28100,
-     "buyume30": 76.73
-    }
-   ]
-  },
-  {
-   "nis": "Educational Animation",
-   "alt": [
-    "Ancient Engineering",
-    "History",
-    "Invention"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 71.0,
-   "ort_izlenme": 342658,
-   "ortak_konu": "History",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCmj6PDhLSwQgJHCvple8jmA",
-     "ad": "Spark Feeder 3D",
-     "abone": 5180,
-     "buyume30": 70.96
-    }
-   ]
-  },
-  {
-   "nis": "Educational Content",
-   "alt": [
-    "Engineering",
-    "Science",
-    "Manufacturing Processes"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 63.3,
-   "ort_izlenme": 316772,
-   "ortak_konu": "Engineering",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCJ1SyAwup1k2uK-PR2iMH0Q",
-     "ad": "Factlime",
-     "abone": 25800,
-     "buyume30": 63.29
-    }
-   ]
-  },
-  {
-   "nis": "Construction Education",
-   "alt": [
-    "Heavy Machinery",
-    "Engineering",
-    "Worker Skills"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 56.2,
-   "ort_izlenme": 567899,
-   "ortak_konu": "Engineering",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UC_1KS-1OXJjPtIfpmyvHUag",
-     "ad": "Master Adam Works!",
-     "abone": 15500,
-     "buyume30": 56.25
-    }
-   ]
-  },
-  {
-   "nis": "Engineering & Infrastructure Documentary",
-   "alt": [
-    "Civil Engineering",
-    "Architecture"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "ja",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 51.0,
-   "ort_izlenme": 28522,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCgjJehxUD2tpwvYT9q-X5Yg",
-     "ad": "知識の断面図",
-     "abone": 2190,
-     "buyume30": 51.03
-    }
-   ]
-  },
-  {
-   "nis": "Construction Machinery",
-   "alt": [
-    "Heavy Equipment",
-    "Earthmoving",
-    "Construction Projects"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 46.0,
-   "ort_izlenme": 207915,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCUOlHbF4FBRxfeNUnwRmPdg",
-     "ad": "99 workers",
-     "abone": 9140,
-     "buyume30": 46.01
-    }
-   ]
-  },
-  {
-   "nis": "Industrial Craftsmanship",
-   "alt": [
-    "Tool Demonstrations",
-    "Construction Techniques",
-    "Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 44.8,
-   "ort_izlenme": 240014,
-   "ortak_konu": "Engineering",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCstVFnYqM2MUYNVW5pdnuLg",
-     "ad": "ayyan handy",
-     "abone": 4850,
-     "buyume30": 44.78
-    }
-   ]
-  },
-  {
-   "nis": "Engineering & Mechanical History",
-   "alt": [
-    "Aviation History",
-    "Automotive History",
-    "Engineering Documentaries"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 44.0,
-   "ort_izlenme": 281030,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCs8CoucWxLJFQgHWiEvTnTg",
-     "ad": "Blizabay",
-     "abone": 12400,
-     "buyume30": 44.02
-    }
-   ]
-  },
-  {
-   "nis": "General Entertainment",
-   "alt": [
-    "MLB News",
-    "Digital Art"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 43.9,
-   "ort_izlenme": 2467096,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCOXIDY9Vl3fEddDZMZm9WKA",
-     "ad": "Liuliu Theatre",
-     "abone": 80600,
-     "buyume30": 43.93
-    }
-   ]
-  },
-  {
-   "nis": "Reddit Stories",
-   "alt": [
-    "Reddit Readings",
-    "German Reddit Stories"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 43.8,
-   "ort_izlenme": 384950,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCLz_Hi_KXUMzOs17G6Zefuw",
-     "ad": "Dusch Gedanken",
-     "abone": 34500,
-     "buyume30": 43.75
-    }
-   ]
-  },
-  {
-   "nis": "Political Commentary",
-   "alt": [
-    "Human Interest Stories",
-    "Emotional Narratives"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 43.1,
-   "ort_izlenme": 154429,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCJCcXe3QG1yZ10KRnJ8qFEA",
-     "ad": "FREIE STIMME",
-     "abone": 14300,
-     "buyume30": 43.14
-    }
-   ]
-  },
-  {
-   "nis": "Science & Engineering Explanations",
-   "alt": [
-    "Mechanical Engineering",
-    "Applied Science"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 41.9,
-   "ort_izlenme": 977890,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCycbQZ8NbC9JbIhUcjH72lA",
-     "ad": "NITROWAR",
-     "abone": 38300,
-     "buyume30": 41.85
+     "id": "UCVoJETNbw6S5qyW08fPFrjA",
+     "ad": "Time Hotel",
+     "abone": 137000,
+     "buyume30": 79.08
     }
    ]
   }
  ],
  "kanallar": [
+  {
+   "id": "UCUAo-xdNaLUpPHFS5GkMcBQ",
+   "ad": "FoStazz",
+   "handle": null,
+   "abone": 38300,
+   "ort_izlenme": 758680.5,
+   "buyume30": 438.68,
+   "izlenme_buyume30": 213.72,
+   "nis": "Football, Football Highlights, Football Rankings, Funny Football Moments",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
   {
    "id": "UCuOBnuQCMC9RmP5FpjZbvJg",
    "ad": "Smart Hob",
@@ -1199,6 +1297,72 @@
    "ortak": false
   },
   {
+   "id": "UCsFRU8e7kzpSTocU2edFKzA",
+   "ad": "Mexy.20k",
+   "handle": null,
+   "abone": 9230,
+   "ort_izlenme": 385871.0243902439,
+   "buyume30": 266.27,
+   "izlenme_buyume30": 148.47,
+   "nis": "Football Puzzle Challenges, Visual Search Games, Football Trivia, Sports Entertainment",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCdqoW7Y47SWLFdl8gNO0Yzg",
+   "ad": "AI Ravixo",
+   "handle": "@airavixo1",
+   "abone": 57900,
+   "ort_izlenme": 40083.857142857145,
+   "buyume30": 227.12,
+   "izlenme_buyume30": 277.5,
+   "nis": "Artificial Intelligence Technology Reviews, AI Tools, Software Comparison",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": 923.39,
+   "acilis": "2026-09-03T18:00:21Z",
+   "son_video": "2026-10-18T00:00:00.000Z",
+   "video_sayisi": 7,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCT41p6cGch0U4NZgR2iYD6A",
+   "ad": "The AI Times",
+   "handle": "@theaitimes.official",
+   "abone": 22700,
+   "ort_izlenme": 24313.571428571428,
+   "buyume30": 198.68,
+   "izlenme_buyume30": 333.89,
+   "nis": "Artificial Intelligence, AI Tools, Future Technology",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": 348.93,
+   "acilis": "2026-09-01T13:45:20Z",
+   "son_video": "2026-10-18T00:00:00.000Z",
+   "video_sayisi": 7,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCZ4AY9cbwuVn7DLnSd3wXdA",
    "ad": "Stuff Boss",
    "handle": null,
@@ -1240,6 +1404,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCXu7ilasTyUfJxAeANeoa4w",
+   "ad": "soccerFunnyMots",
+   "handle": null,
+   "abone": 51800,
+   "ort_izlenme": 1270294.0454545454,
+   "buyume30": 162.94,
+   "izlenme_buyume30": 122.97,
+   "nis": "Football Entertainment, Football Comedy, Memorable Football Moments",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -1394,6 +1580,50 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
+   "ad": "AI-Mini656",
+   "handle": null,
+   "abone": 9040,
+   "ort_izlenme": 685602.04,
+   "buyume30": 113.21,
+   "izlenme_buyume30": 99.83,
+   "nis": "Comedy, Parody, Sports Humor, K-Pop Parody",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": true
+  },
+  {
+   "id": "UCIjlWscEzGTBgLza3FPH9NQ",
+   "ad": "AI Chip Insider",
+   "handle": "@aichipinsider",
+   "abone": 1720,
+   "ort_izlenme": 2626.9066666666668,
+   "buyume30": 112.35,
+   "izlenme_buyume30": 30.47,
+   "nis": "Technology Analysis, Semiconductor Industry, AI Chips & Infrastructure",
+   "dil": "en",
+   "ulke": "IE",
+   "kazanc": null,
+   "acilis": "2026-03-30T22:55:19Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 75,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -1617,6 +1847,28 @@
    "ortak": false
   },
   {
+   "id": "UC3cdqAFdUX6ThSM_F1Sx8wA",
+   "ad": "dsfsdf",
+   "handle": null,
+   "abone": 54800,
+   "ort_izlenme": 4047808.048780488,
+   "buyume30": 89.62,
+   "izlenme_buyume30": 79.64,
+   "nis": "Sports Comedy, Football Parody, Short-Form Content",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCKGDU89WySSspEkT5xG9lSA",
    "ad": "Mini Build Depot",
    "handle": null,
@@ -1636,6 +1888,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCVoJETNbw6S5qyW08fPFrjA",
+   "ad": "Time Hotel",
+   "handle": "@timehotel-tyx",
+   "abone": 137000,
+   "ort_izlenme": 730613.7314049586,
+   "buyume30": 79.08,
+   "izlenme_buyume30": 103.18,
+   "nis": "AI Video Art, Retro Aesthetics, Celebrity Then and Now",
+   "dil": "en",
+   "ulke": "HK",
+   "kazanc": 4026.11,
+   "acilis": "2026-05-26T07:42:47Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 242,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -1683,6 +1957,28 @@
    "ortak": false
   },
   {
+   "id": "UCQLWOlRJ9DG3BwA1YzLo0Sw",
+   "ad": "Voltfolk",
+   "handle": "@hello.voltfolk80",
+   "abone": 5090,
+   "ort_izlenme": 2357,
+   "buyume30": 71.96,
+   "izlenme_buyume30": 66.29,
+   "nis": "Documentary, Science and Technology, History",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": 27.39,
+   "acilis": "2026-07-18T18:46:19Z",
+   "son_video": "2026-10-19T00:00:00.000Z",
+   "video_sayisi": 16,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCxwlBH9Y-pNXxq8mfwoh5lg",
    "ad": "Alfa Groups Shorts",
    "handle": "@alfagroupshorts",
@@ -1724,6 +2020,94 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCtonhNYQrmgU-9JdqYE0SQQ",
+   "ad": "Richard Alferosa",
+   "handle": null,
+   "abone": 27900,
+   "ort_izlenme": 345770.60752688174,
+   "buyume30": 70.12,
+   "izlenme_buyume30": 73.42,
+   "nis": "Video Editing, VFX, Fan Edits, Visual Effects, Cinematic Edits",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCOYy6un9E7YpvczwRSeWOGQ",
+   "ad": "Boko",
+   "handle": null,
+   "abone": 8020,
+   "ort_izlenme": 1861860.3846153845,
+   "buyume30": 67.78,
+   "izlenme_buyume30": 78.93,
+   "nis": "Sports Animation Comedy, Football Humor, Athlete Parody, 2D Animation",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCzFv8Iw9RGGJ-BIRFI43rhQ",
+   "ad": "Only Kind",
+   "handle": null,
+   "abone": 35400,
+   "ort_izlenme": 491820.3461538461,
+   "buyume30": 67.77,
+   "izlenme_buyume30": 88.72,
+   "nis": "Football Comedy, Football Memes, Football Fails, Football Viral Videos",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCNzs3DFbJyrkPXU7rytp3kA",
+   "ad": "Ki-ke",
+   "handle": null,
+   "abone": 5060,
+   "ort_izlenme": 483879.2,
+   "buyume30": 65.36,
+   "izlenme_buyume30": 70.65,
+   "nis": "Sketch Comedy, Short Form Comedy, Pop Culture Parody",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -1793,6 +2177,72 @@
    "ortak": false
   },
   {
+   "id": "UCHwv-4Xyjq_aXieOMIvsloA",
+   "ad": "CR7IUM",
+   "handle": null,
+   "abone": 61700,
+   "ort_izlenme": 758681.7113402062,
+   "buyume30": 60.68,
+   "izlenme_buyume30": 100.15,
+   "nis": "Football, Football Player Edits, Sports Fandom, Lamine Yamal",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCoE8zxPoW-rRUtuDcng2UBw",
+   "ad": "Prince does AI",
+   "handle": "@princedoesai",
+   "abone": 1420,
+   "ort_izlenme": 1186.6517412935323,
+   "buyume30": 58.66,
+   "izlenme_buyume30": 89.82,
+   "nis": "AI Technology, Generative AI, AI Models & Tools",
+   "dil": "en",
+   "ulke": "AU",
+   "kazanc": null,
+   "acilis": "2026-02-05T09:59:02Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 201,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCQ5qCffH2bDX7JajsdCmjAA",
+   "ad": "ZBNDUHUR",
+   "handle": null,
+   "abone": 5710,
+   "ort_izlenme": 1008413.9545454546,
+   "buyume30": 58.17,
+   "izlenme_buyume30": 62.82,
+   "nis": "Animation, Football, Parody, Comedy",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
    "ad": "TravelWithRuff",
    "handle": "@travelwithruff",
@@ -1834,6 +2284,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCOv5jDYIEWB0ftJQhdj3buw",
+   "ad": "Only Meme YT",
+   "handle": null,
+   "abone": 18200,
+   "ort_izlenme": 701858.9545454546,
+   "buyume30": 51.67,
+   "izlenme_buyume30": 258.26,
+   "nis": "Comedy Meme Shorts, Internet Culture, Brand Humor, Relatable Memes",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -1881,6 +2353,28 @@
    "ortak": false
   },
   {
+   "id": "UCpB0Na_to3D00GgTmyPHw7w",
+   "ad": "Rumeftbl",
+   "handle": null,
+   "abone": 124000,
+   "ort_izlenme": 1069901.7205882352,
+   "buyume30": 49.22,
+   "izlenme_buyume30": 39.29,
+   "nis": "Football Media & Edits, Celebrity Athlete Profiles, Football Montage Content, Professional Sports Storytelling",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCKBteshQgFo22tDRGxMPqMg",
    "ad": "Kharya Developers",
    "handle": null,
@@ -1922,6 +2416,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCAdtNCdeFsIs-DcK71-rDLA",
+   "ad": "Aigen Gadget",
+   "handle": "@aigengadget",
+   "abone": 13500,
+   "ort_izlenme": 7700.46511627907,
+   "buyume30": 46.26,
+   "izlenme_buyume30": 32.77,
+   "nis": "Technology, AI Tools, Gadgets",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": 10.66,
+   "acilis": "2026-06-18T05:00:27Z",
+   "son_video": "2026-10-21T00:00:00.000Z",
+   "video_sayisi": 129,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -2035,6 +2551,28 @@
    "ortak": false
   },
   {
+   "id": "UC7p_UJz0Gn8icWnPqZ0L_iQ",
+   "ad": "Lucky Duck 🦆",
+   "handle": null,
+   "abone": 16400,
+   "ort_izlenme": 580985.8297872341,
+   "buyume30": 43.86,
+   "izlenme_buyume30": 34.15,
+   "nis": "Health & Fitness, Football, Sports History, Pop Culture Commentary",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": false,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCLz_Hi_KXUMzOs17G6Zefuw",
    "ad": "Dusch Gedanken",
    "handle": "@duschdedanken",
@@ -2145,6 +2683,28 @@
    "ortak": false
   },
   {
+   "id": "UClSy4QiF4VA66XVx-lUWsUA",
+   "ad": "Pixel_Pulse_USA🎮",
+   "handle": "@sd7877",
+   "abone": 1640,
+   "ort_izlenme": 6028.398809523809,
+   "buyume30": 41.38,
+   "izlenme_buyume30": -5.53,
+   "nis": "Artificial Intelligence, AI Tools, Technology News",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": "2026-07-09T07:19:05Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 168,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCFrNjgTsTtHNnicvWzarRig",
    "ad": "Karma in Berlin",
    "handle": "@karmainberlin",
@@ -2164,6 +2724,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCgDeGS47FdklCo9DwMAwb4g",
+   "ad": "Carol Yu | Inside China Tech",
+   "handle": "@yuying_carol",
+   "abone": 47800,
+   "ort_izlenme": 10193.51948051948,
+   "buyume30": 39.77,
+   "izlenme_buyume30": 15.37,
+   "nis": "Chinese Innovation & Technology, AI & Robotics, Startups & Entrepreneurship",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": 210.93,
+   "acilis": "2026-03-10T03:13:29Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 77,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -2233,6 +2815,50 @@
    "ortak": false
   },
   {
+   "id": "UC_bCJyLD42BN1bd6_85v0dQ",
+   "ad": "Lilipopv",
+   "handle": null,
+   "abone": 11300,
+   "ort_izlenme": 355804.7272727273,
+   "buyume30": 37.3,
+   "izlenme_buyume30": 181.04,
+   "nis": "Sports, Football (Soccer), Football Player Highlights, Sports Editing",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC5UtjnTTJZapj3dqde41GaA",
+   "ad": "Viral Horizon player",
+   "handle": null,
+   "abone": 19400,
+   "ort_izlenme": 439927.88095238095,
+   "buyume30": 36.62,
+   "izlenme_buyume30": 45.19,
+   "nis": "Football Animation, Football, Animation, Sports Edits",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
    "ad": "Rj Vireon",
    "handle": "@rjvireon-m4c",
@@ -2296,6 +2922,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC8GZ3uBCkL7yEQZ8qY9x-4w",
+   "ad": "NextAiVibe",
+   "handle": "@nextaivibe",
+   "abone": 76200,
+   "ort_izlenme": 298480.582278481,
+   "buyume30": 34.15,
+   "izlenme_buyume30": 41.36,
+   "nis": "Artificial Intelligence Tutorials, AI Tools, AI Video Creation",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2026-08-17T08:16:39Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 79,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -2453,6 +3101,50 @@
    "ortak": false
   },
   {
+   "id": "UCFPorsqbiyIlwooP9SO7BVw",
+   "ad": "Lunaftbl",
+   "handle": null,
+   "abone": 6200,
+   "ort_izlenme": 645568.4210526316,
+   "buyume30": 31.63,
+   "izlenme_buyume30": 33.61,
+   "nis": "Football Video Editing, Football Highlights, Player Skill Showcases, Sports Commentary, Creative Video Edits",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCpIkUYL4FDRQFak0j6sUqaQ",
+   "ad": "AI Proving Ground Podcast",
+   "handle": "@aiprovinggroundpodcast",
+   "abone": 27100,
+   "ort_izlenme": 332.65502183406113,
+   "buyume30": 30.92,
+   "izlenme_buyume30": 20.4,
+   "nis": "Enterprise AI, AI Strategy, AI Infrastructure",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": "2025-11-26T17:26:37Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 229,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCKctmYRYD8NsNoVuM8633Lw",
    "ad": "mmkjghvbn",
    "handle": null,
@@ -2472,6 +3164,72 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCKrrZFryk5gmIC59SOKRF9A",
+   "ad": "Top Hat Top Bins",
+   "handle": null,
+   "abone": 133000,
+   "ort_izlenme": 349862.35991531407,
+   "buyume30": 30.39,
+   "izlenme_buyume30": 32.54,
+   "nis": "Football Shorts, Football Player Highlights, Football Skills",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCyVsvKcodJYPMABzGC-lAcg",
+   "ad": "k-pop-dehunt'rs",
+   "handle": null,
+   "abone": 20700,
+   "ort_izlenme": 354025.4666666667,
+   "buyume30": 30.19,
+   "izlenme_buyume30": 53.23,
+   "nis": "AI Animation, K-Drama Parody, Fan Fiction, Digital Storytelling, K-Pop Culture",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCC1QIES5BHzeHU1pdVruALQ",
+   "ad": "3DPixel",
+   "handle": null,
+   "abone": 16000,
+   "ort_izlenme": 474944.02339181287,
+   "buyume30": 30.08,
+   "izlenme_buyume30": 37.25,
+   "nis": "Animation Comedy, Roblox Animation, Slapstick Comedy, Gaming Parody",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -2673,6 +3431,28 @@
    "ortak": false
   },
   {
+   "id": "UCmjZHs54VkHVW1Hi9dmelBw",
+   "ad": "Ignore All Previous Instructions",
+   "handle": "@ignoreallofficial",
+   "abone": 2210,
+   "ort_izlenme": 9805.57142857143,
+   "buyume30": 24.16,
+   "izlenme_buyume30": 216.56,
+   "nis": "Artificial Intelligence, AI Policy, AI Ethics",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": "2026-06-23T17:19:58Z",
+   "son_video": "2026-10-16T00:00:00.000Z",
+   "video_sayisi": 14,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCkUitC3L9-PdjqMAhpQXB1A",
    "ad": "Yang Development & Design",
    "handle": null,
@@ -2761,6 +3541,28 @@
    "ortak": false
   },
   {
+   "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
+   "ad": "Tech Easy",
+   "handle": "@techeasy.9",
+   "abone": 46500,
+   "ort_izlenme": 440720.91791044775,
+   "buyume30": 23.02,
+   "izlenme_buyume30": 26.82,
+   "nis": "Technology, Smartphones & Gadgets, AI & Digital Tools",
+   "dil": "en, hi",
+   "ulke": "IN",
+   "kazanc": 151.7,
+   "acilis": "2026-01-01T10:04:22Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 134,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCqT6NBFBsEpJlzMzV-CjcZw",
    "ad": "bluprint labs",
    "handle": null,
@@ -2780,6 +3582,50 @@
    "kaynak": "Trial & Eureka kanalına benzer",
    "ilk": "2026-10-22T08:01:01+00:00",
    "son": "2026-10-22T08:01:01+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCF1ISwPjmw1rPjECn1pfUKg",
+   "ad": "Gengu AI",
+   "handle": "@genguai",
+   "abone": 19100,
+   "ort_izlenme": 48050.29230769231,
+   "buyume30": 22.44,
+   "izlenme_buyume30": 43.3,
+   "nis": "AI Generated Media, AI Art, AI Films",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": 1442.04,
+   "acilis": "2026-04-13T03:41:12Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 65,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCA7QNQ3OU0AUC9QiDAMSAkA",
+   "ad": "AIOrbitX",
+   "handle": "@aiorbitxofficial",
+   "abone": 7760,
+   "ort_izlenme": 9962.696092619391,
+   "buyume30": 21.25,
+   "izlenme_buyume30": 33.77,
+   "nis": "Educational Technology, AI Tutorials, Content Creation",
+   "dil": "en, hi",
+   "ulke": "IN",
+   "kazanc": 8.92,
+   "acilis": "2026-03-28T03:33:18Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 691,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -2893,6 +3739,28 @@
    "ortak": false
   },
   {
+   "id": "UC5syKwTLNRTnDfZz1AGWMUA",
+   "ad": "IshowSpeed Daily Shorts",
+   "handle": null,
+   "abone": 84700,
+   "ort_izlenme": 1168831.9076923076,
+   "buyume30": 20.14,
+   "izlenme_buyume30": 31.54,
+   "nis": "Football Content, Football Highlights, Football Skills, Player Comparisons, Fan Reactions",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCsilmM7_rXt6OuoBlOSKjzg",
    "ad": "Fact Mine 3D",
    "handle": null,
@@ -2937,6 +3805,28 @@
    "ortak": false
   },
   {
+   "id": "UCTYhzNJRvym98F1SgaouGng",
+   "ad": "Accelerating AI",
+   "handle": "@acceleratingaiconference",
+   "abone": 1460,
+   "ort_izlenme": 400.427807486631,
+   "buyume30": 19.67,
+   "izlenme_buyume30": 39.66,
+   "nis": "Artificial Intelligence & Business Strategy Conference, AI Adoption, Business Operations",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": null,
+   "acilis": "2026-06-02T17:16:32Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 187,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCDAzSxjnxj9Jw2cOW0ZMaow",
    "ad": "ディープ・インサイト",
    "handle": "@deepinsightscience",
@@ -2956,6 +3846,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCffrX_6rER7v_krexkpbdNg",
+   "ad": "Andrey Synth",
+   "handle": "@andrey.future",
+   "abone": 3260,
+   "ort_izlenme": 12770.95145631068,
+   "buyume30": 19.41,
+   "izlenme_buyume30": 14.48,
+   "nis": "Technology News, Artificial Intelligence, AI Tools",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2026-06-28T00:57:15Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 206,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -3003,6 +3915,28 @@
    "ortak": false
   },
   {
+   "id": "UCGR2cKNfKLnmzik1I9zsPbw",
+   "ad": "SHO TAM MARIO",
+   "handle": null,
+   "abone": 8600,
+   "ort_izlenme": 1407575.2592592593,
+   "buyume30": 18.46,
+   "izlenme_buyume30": 23.51,
+   "nis": "Comedy Skits, Cosplay Comedy, Gaming Parody, Sibling Comedy",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCY2IsFiRTs_lvYgLDqkKVug",
    "ad": "SagaVerse128",
    "handle": "@sagaverse128",
@@ -3047,6 +3981,28 @@
    "ortak": false
   },
   {
+   "id": "UC24KHw9kMrnbd9qGuh24Zaw",
+   "ad": "Cappyedits",
+   "handle": null,
+   "abone": 18700,
+   "ort_izlenme": 528285.109375,
+   "buyume30": 18.35,
+   "izlenme_buyume30": 54.43,
+   "nis": "Football Entertainment, Football Parody, Football Memes, Short-form Content",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UChWMTjgRTx4plb2IIfECiUQ",
    "ad": "Projekt Morski Przekrój",
    "handle": "@jaktodzialaaaa",
@@ -3088,6 +4044,50 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCcTTK14g4fcyMtpXjowOnYg",
+   "ad": "New Frontier",
+   "handle": "@newfrontiershow",
+   "abone": 20100,
+   "ort_izlenme": 348298.14285714284,
+   "buyume30": 17.54,
+   "izlenme_buyume30": 25.84,
+   "nis": "Technology, AI, Robotics",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": 2740.78,
+   "acilis": "2026-05-11T23:28:18Z",
+   "son_video": "2026-10-16T00:00:00.000Z",
+   "video_sayisi": 7,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCIT-yvZzCbAPGtKH82xn6Ow",
+   "ad": "Aura AI",
+   "handle": "@auraainz",
+   "abone": 1890,
+   "ort_izlenme": 10665.788235294118,
+   "buyume30": 17.39,
+   "izlenme_buyume30": 47.86,
+   "nis": "Artificial Intelligence Commentary, Humanoid Robotics, Future Technology Trends",
+   "dil": "en",
+   "ulke": "NZ",
+   "kazanc": null,
+   "acilis": "2026-01-02T08:07:16Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 85,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -3179,6 +4179,50 @@
    "ortak": false
   },
   {
+   "id": "UCzDmjZ5IHLBaGgcsOWD5fWQ",
+   "ad": "VABE HD",
+   "handle": null,
+   "abone": 104000,
+   "ort_izlenme": 769985.2824427481,
+   "buyume30": 15.68,
+   "izlenme_buyume30": 11.27,
+   "nis": "Football Highlights & Moments, Football Player Moments, Football Viral Clips, Football Fan Reactions",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCXX5rhHi64oJt9-ZMdUTJfw",
+   "ad": "GoalTitan",
+   "handle": null,
+   "abone": 7610,
+   "ort_izlenme": 369648.8484848485,
+   "buyume30": 15.65,
+   "izlenme_buyume30": 25.84,
+   "nis": "AI Football Comedy, AI Animation, Football Parody, Short-Form Comedy",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
    "ad": "n n nbekhg",
    "handle": null,
@@ -3242,6 +4286,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCDGf0tG5kqoH4derBeXGWmg",
+   "ad": "InfoHubOfficially",
+   "handle": "@infohubofficially",
+   "abone": 2790,
+   "ort_izlenme": 44685.205882352944,
+   "buyume30": 14.81,
+   "izlenme_buyume30": 31.1,
+   "nis": "Technology, PC Hardware, Computer Components",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": null,
+   "acilis": "2026-07-10T11:12:28Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 136,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -3355,6 +4421,28 @@
    "ortak": false
   },
   {
+   "id": "UC6jNEBYt6KbYp4w_DcucWNQ",
+   "ad": "KuBap",
+   "handle": null,
+   "abone": 36600,
+   "ort_izlenme": 561233.9245283019,
+   "buyume30": 14.02,
+   "izlenme_buyume30": 21.07,
+   "nis": "Visual Effects Comedy, CGI Monsters, Prank Videos, Creative Storytelling",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "PROFOOTBALL kanalına benzer",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCWIS9j0a5jHvyf6eIVHugsw",
    "ad": "Amazing Build Mini",
    "handle": null,
@@ -3374,6 +4462,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCTK0Dg98IH33S3GASAr_VrQ",
+   "ad": "The WNBA Reporter",
+   "handle": "@the.wnba.reporter",
+   "abone": 5410,
+   "ort_izlenme": 25091.32786885246,
+   "buyume30": 13.66,
+   "izlenme_buyume30": 84.68,
+   "nis": "Technology Analysis, AI Industry Dynamics, Tech Business & Economics",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": 2881.41,
+   "acilis": "2026-01-09T13:57:30Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 61,
+   "tur": "long",
+   "yuzsuz": false,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -3418,6 +4528,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCiCDpw-viEx8sgl_xlPeJjA",
+   "ad": "Fantasy Switch",
+   "handle": "@fantasyswitch",
+   "abone": 6680,
+   "ort_izlenme": 45525.70202020202,
+   "buyume30": 13.22,
+   "izlenme_buyume30": 16.49,
+   "nis": "Technology, Future Technology, Automation",
+   "dil": "en, ta",
+   "ulke": "IN",
+   "kazanc": 12.41,
+   "acilis": "2025-12-15T13:26:15Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 198,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -3487,6 +4619,28 @@
    "ortak": false
   },
   {
+   "id": "UCRvwyww8oiO199iMPpm4zsw",
+   "ad": "AI WORLDWIDE",
+   "handle": "@aiworldwideme",
+   "abone": 229000,
+   "ort_izlenme": 66286.78048780488,
+   "buyume30": 12.25,
+   "izlenme_buyume30": 232.82,
+   "nis": "AI Technology, AI Tools & Reviews, AI for Productivity",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": 16262.14,
+   "acilis": "2026-04-09T20:21:09Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 82,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC69mrouQM2Fq8Uw7kYLHgJw",
    "ad": "Nagi’s Log | Journeys Through Japan",
    "handle": "@nagis-log",
@@ -3553,6 +4707,28 @@
    "ortak": false
   },
   {
+   "id": "UC9tpZnMLKv5vbZIGuIIPmNg",
+   "ad": "Practical AI",
+   "handle": "@practicalai_show",
+   "abone": 1630,
+   "ort_izlenme": 246.5,
+   "buyume30": 11.64,
+   "izlenme_buyume30": 17.2,
+   "nis": "Artificial Intelligence, AI Agents, Machine Learning",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": "2025-12-15T15:24:26Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 114,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCu1L8jb9PLM9_9WjJLBS6Ig",
    "ad": "Smart Engineering🏗",
    "handle": null,
@@ -3572,6 +4748,50 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCG37PGFcXIDirExEROPxOpA",
+   "ad": "Fiza Bibi",
+   "handle": "@fizabibi-r2l",
+   "abone": 5860,
+   "ort_izlenme": 30761.385869565216,
+   "buyume30": 10.57,
+   "izlenme_buyume30": 15.07,
+   "nis": "Agricultural Innovation, Smart Farming, Desi Jugaad",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": 24.85,
+   "acilis": "2026-07-14T04:55:28Z",
+   "son_video": "2026-10-23T00:00:00.000Z",
+   "video_sayisi": 368,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UClDz7Qxeg2NG4q3yoYoIxMQ",
+   "ad": "Sallu Explains",
+   "handle": "@salluexplains",
+   "abone": 1270,
+   "ort_izlenme": 6298.611111111111,
+   "buyume30": 10.43,
+   "izlenme_buyume30": 52.12,
+   "nis": "Tutorials, Government Schemes, AI Tools",
+   "dil": "en, ur",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": "2026-07-04T06:57:22Z",
+   "son_video": "2026-10-22T00:00:00.000Z",
+   "video_sayisi": 36,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Yükselen: ai and technology (en)",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
   },
   {
@@ -3635,6 +4855,22 @@
    "tip": "yukselen",
    "hedef": "travel stories [de]",
    "ad": "travel stories (de)",
+   "gelen": 50,
+   "alinan": 26
+  },
+  {
+   "tarih": "2026-10-25T09:45:23+00:00",
+   "tip": "benzer",
+   "hedef": "UCRbrOnzFusL_C85lG7Eugwg",
+   "ad": "PROFOOTBALL",
+   "gelen": 50,
+   "alinan": 26
+  },
+  {
+   "tarih": "2026-10-25T09:45:23+00:00",
+   "tip": "yukselen",
+   "hedef": "ai and technology [en]",
+   "ad": "ai and technology (en)",
    "gelen": 50,
    "alinan": 26
   }
