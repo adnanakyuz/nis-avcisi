@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-24T08:43:58+00:00",
+ "ts": "2026-10-25T08:43:32+00:00",
  "firsat": {
   "Sports News": {
    "seviye": "bos",
@@ -88,6 +88,99 @@
    ],
    "sorgu": "Mechanical Engineering",
    "tarih": "2026-10-24T08:43:58+00:00"
+  },
+  "Travel Vlogging": {
+   "seviye": "doymus",
+   "pay": 0.17196004229496414,
+   "toplam": 363227167,
+   "video": 25,
+   "buyuk": 9,
+   "yeniler": [
+    {
+     "kanal_id": "UCbnouOOJt-JHtrzuZBpxYOw",
+     "kanal": "SkyHug",
+     "izl": 19684790
+    },
+    {
+     "kanal_id": "UCQd1ri8GpVBHz0pm3oeuclw",
+     "kanal": "SkyVelle",
+     "izl": 15652173
+    },
+    {
+     "kanal_id": "UCSdefhQ_HVKH_DHN0-fDWAg",
+     "kanal": "RJ Manoj",
+     "izl": 8920046
+    },
+    {
+     "kanal_id": "UCSBu9tWFU22c7EeONmc4OJQ",
+     "kanal": "Kindred Notes",
+     "izl": 6856843
+    }
+   ],
+   "sorgu": "Travel",
+   "tarih": "2026-10-25T08:43:32+00:00"
+  },
+  "Engineering": {
+   "seviye": "doymus",
+   "pay": 0.21260614615315576,
+   "toplam": 27252754,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCHpufw25edFMhzPNjL6cPKw",
+     "kanal": "Smart Civil Engineer",
+     "izl": 2314936
+    },
+    {
+     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
+     "kanal": "NITROWAR ",
+     "izl": 1763758
+    },
+    {
+     "kanal_id": "UCcSvnusnyrk0d4GOTwG4MZA",
+     "kanal": "Alex Carter ",
+     "izl": 648077
+    },
+    {
+     "kanal_id": "UCjzUVlFGvMzKc40G5pROJ3g",
+     "kanal": "VK CIVIL ENGINEERING ",
+     "izl": 580259
+    }
+   ],
+   "sorgu": "Structural Engineering",
+   "tarih": "2026-10-25T08:43:32+00:00"
+  },
+  "Industrial Engineering": {
+   "seviye": "doymus",
+   "pay": 0.23189882088065392,
+   "toplam": 83684065,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCRXB8_Gjn9TuAIMJXNI6umg",
+     "kanal": "Shagun Factory ",
+     "izl": 4468409
+    },
+    {
+     "kanal_id": "UC_DUCwybmK7W9P8oujQaz_w",
+     "kanal": "Ai Factory",
+     "izl": 3924422
+    },
+    {
+     "kanal_id": "UCrFuWYgu5DKIilsftEDDHDQ",
+     "kanal": "Secret skills ",
+     "izl": 3152580
+    },
+    {
+     "kanal_id": "UCzSDzbx5w0dysGZmWhG7pkA",
+     "kanal": "Logic Decoded",
+     "izl": 2505240
+    }
+   ],
+   "sorgu": "Manufacturing Processes",
+   "tarih": "2026-10-25T08:43:32+00:00"
   }
  },
  "ceviri": {
@@ -108,21 +201,9 @@
   "Engineering & Infrastructure Documentary": "Mühendislik ve Altyapı Belgeseli",
   "General Entertainment": "Genel Eğlence",
   "Science & Engineering Explanations": "Bilim ve Mühendislik Açıklamaları",
-  "Automotive Engineering": "Otomotiv Mühendisliği",
   "Structural Engineering": "Yapı Mühendisliği",
   "Ancient History": "Antik Tarih",
-  "Science & Engineering Education": "Bilim ve Mühendislik Eğitimi",
   "Heavy Machinery": "Ağır Makinalar",
-  "Engineering Explainers": "Mühendislik Açıklayıcıları",
-  "Hip-Hop Music": "Hip-Hop Müziği",
-  "Art and Sports Commentary": "Sanat ve Spor Yorumları",
-  "HVAC Engineering": "HVAC Mühendisliği",
-  "Automotive Engineering & History": "Otomotiv Mühendisliği ve Tarihi",
-  "Celebrity Meme Content": "Ünlü Meme İçeriği",
-  "Prediction Markets": "Tahmin Piyasaları",
-  "General Construction": "Genel İnşaat",
-  "Mechanical Engineering Education": "Makine Mühendisliği Eğitimi",
-  "DIY Engineering": "Kendin Yap Mühendisliği",
   "Digital Art": "Dijital Sanat",
   "MLB News": "MLB Haberleri",
   "MLB": "",
@@ -150,31 +231,72 @@
   "Civil Engineering": "İnşaat mühendisliği",
   "Architecture": "Mimarlık",
   "Applied Science": "Uygulamalı Bilim",
-  "Motorcycle History": "Motosiklet Tarihi",
   "Ancient Engineering": "Antik Mühendislik",
-  "Roman History": "Roma Tarihi",
-  "Ancient Military History": "Eski Askeri Tarih",
-  "Physics Experiments": "Fizik Deneyleri",
-  "Agricultural Engineering": "Ziraat Mühendisliği",
-  "Construction Equipment": "İnşaat Ekipmanları",
-  "Applied Physics": "Uygulamalı Fizik",
   "Human Interest Stories": "İnsani İlgi Alan Hikayeler",
-  "MLB Highlights": "MLB'nin Öne Çıkanları",
-  "Building Systems": "Bina Sistemleri",
-  "Automotive Technology": "Otomotiv Teknolojisi",
-  "Vehicle Design & History": "Araç Tasarımı ve Tarihçesi",
-  "Memes": "Memler",
-  "Celebrity Humor": "Ünlü Mizahı",
-  "Sports Betting": "Spor Bahisleri",
-  "Golf": "",
   "Construction": "Yapı",
-  "Demolition": "Yıkım",
-  "Trade Skills": "Ticaret Becerileri",
-  "Automotive Mechanics": "Otomotiv Mekaniği",
-  "Science Projects": "Bilim Projeleri",
-  "Electronics": "Elektronik",
-  "Procreate": "doğurmak",
-  "Illustration": "İllüstrasyon",
-  "MLB Trade Deadline": "MLB Ticaret Son Tarihi"
+  "Travel Vlogging": "Seyahat Vlogu",
+  "Travel": "Seyahat",
+  "Civil Engineering & Construction": "İnşaat Mühendisliği ve İnşaat",
+  "Construction & DIY": "İnşaat ve Kendin Yap",
+  "Aviation Drama Storytelling": "Havacılık Draması Hikaye Anlatımı",
+  "Civil Engineering Documentary": "İnşaat Mühendisliği Belgeseli",
+  "Lifestyle Vlogging": "Yaşam Tarzı Vlogu",
+  "Switzerland Travel Guide": "İsviçre Gezi Rehberi",
+  "Well Drilling": "Kuyu Sondajı",
+  "Miniature Construction Projects": "Minyatür İnşaat Projeleri",
+  "Educational Animation": "Eğitici Animasyon",
+  "Educational Content": "Eğitim İçeriği",
+  "Construction Education": "İnşaat Eğitimi",
+  "Construction Machinery": "İnşaat Makinaları",
+  "Industrial Craftsmanship": "Endüstriyel İşçilik",
+  "Engineering & Mechanical History": "Mühendislik ve Makine Tarihi",
+  "Reddit Stories": "Reddit Hikayeleri",
+  "Political Commentary": "Siyasi Yorum",
+  "Backpacking": "Sırt çantasıyla seyahat",
+  "Street Food": "Sokak Yemekleri",
+  "DIY": "Kendin Yap",
+  "Animal Rescue Stories": "Hayvan Kurtarma Hikayeleri",
+  "Moral Stories": "Ahlaki Hikayeler",
+  "Inspirational Stories": "İlham Verici Hikayeler",
+  "Acts of Kindness & Heroism": "İyilik ve Kahramanlık Eylemleri",
+  "True Crime": "Gerçek Suç",
+  "Road Trips": "Yol Gezileri",
+  "Van Life": "Hayattan",
+  "Accessible Travel": "Erişilebilir Seyahat",
+  "Infrastructure Development": "Altyapı Geliştirme",
+  "Heavy Equipment": "Ağır Ekipman",
+  "Construction Techniques": "İnşaat Teknikleri",
+  "AI Art": "Yapay Zeka Sanatı",
+  "Architecture Design": "Mimari Tasarım",
+  "Creative Construction": "Yaratıcı İnşaat",
+  "Construction Fails": "İnşaat Başarısızları",
+  "Tool Hacks": "Araç Hack'leri",
+  "Home Repair": "Ev Onarımı",
+  "Building Techniques": "İnşaat Teknikleri",
+  "Air Travel Conflicts": "Hava Yolculuğu Çatışmaları",
+  "Passenger Stories": "Yolcu Hikayeleri",
+  "Architectural History": "Mimarlık Tarihi",
+  "Infrastructure Analysis": "Altyapı Analizi",
+  "Shopping": "Alışveriş",
+  "Travel Guides": "Seyahat Rehberleri",
+  "Sightseeing": "Manzara",
+  "Water Well Construction": "Su Kuyusu İnşaatı",
+  "Historical Engineering": "Tarihsel Mühendislik",
+  "Miniature Diorama Building": "Minyatür Diorama Binası",
+  "Toy Construction Vehicles": "Oyuncak İnşaat Araçları",
+  "Educational Science Projects": "Eğitim Bilimleri Projeleri",
+  "History": "Tarih",
+  "Invention": "Buluş",
+  "Science": "Bilim",
+  "Worker Skills": "İşçi Becerileri",
+  "Earthmoving": "Hafriyat",
+  "Construction Projects": "İnşaat Projeleri",
+  "Tool Demonstrations": "Araç Gösterimleri",
+  "Aviation History": "Havacılık Tarihi",
+  "Automotive History": "Otomotiv Tarihi",
+  "Engineering Documentaries": "Mühendislik Belgeselleri",
+  "Reddit Readings": "Reddit Okumaları",
+  "German Reddit Stories": "Almanca Reddit Hikayeleri",
+  "Emotional Narratives": "Duygusal Anlatılar"
  }
 }
