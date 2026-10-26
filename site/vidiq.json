@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-10-25T09:45:23+00:00",
- "bakiye": 125,
+ "guncelleme": "2026-10-26T09:45:53+00:00",
+ "bakiye": 85,
  "sifirlanma": "2026-11-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -89,6 +89,48 @@
    ]
   },
   {
+   "nis": "Comedy",
+   "alt": [
+    "Pranks",
+    "Parody",
+    "Sports Humor"
+   ],
+   "kanal_sayisi": 7,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 7,
+   "ort_buyume30": 46.7,
+   "ort_izlenme": 480224,
+   "ortak_konu": null,
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
+     "ad": "AI-Mini656",
+     "abone": 9040,
+     "buyume30": 113.21
+    },
+    {
+     "id": "UCjCLQiRqQptCG3PZI_nwANQ",
+     "ad": "Two Much Trouble",
+     "abone": 21600,
+     "buyume30": 60
+    },
+    {
+     "id": "UCGwGV-LXv2k7UwA7oOk_KTg",
+     "ad": "DadTokTV",
+     "abone": 13100,
+     "buyume30": 50.4
+    },
+    {
+     "id": "UCORz3pOLJRJfoiKfiWvrk_g",
+     "ad": "JulianGonzalez",
+     "abone": 21500,
+     "buyume30": 43.33
+    }
+   ]
+  },
+  {
    "nis": "Travel Vlogging",
    "alt": [
     "Travel",
@@ -127,6 +169,48 @@
      "ad": "leoni.g.369",
      "abone": 2490,
      "buyume30": 15.81
+    }
+   ]
+  },
+  {
+   "nis": "Family Vlogging",
+   "alt": [
+    "Parenting Moments",
+    "Child Development",
+    "Family Humor"
+   ],
+   "kanal_sayisi": 5,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 5,
+   "ort_buyume30": 129.1,
+   "ort_izlenme": 1822976,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC-lnfKzU3eTXSUu8BvANqMA",
+     "ad": "Sam Family",
+     "abone": 207000,
+     "buyume30": 289.83
+    },
+    {
+     "id": "UCPjqFWMiRHVaasHG8It5QZg",
+     "ad": "Ryan Kwak",
+     "abone": 11500,
+     "buyume30": 188.22
+    },
+    {
+     "id": "UCJO9bcdKNSwNlxLfjfLk3Lg",
+     "ad": "🥈 Tiny Patriot Heroes",
+     "abone": 8990,
+     "buyume30": 120.88
+    },
+    {
+     "id": "UCRSHodlHBtIkx57IWoPt1Jg",
+     "ad": "StoryWaves...🌊",
+     "abone": 51900,
+     "buyume30": 29.43
     }
    ]
   },
@@ -383,6 +467,78 @@
    ]
   },
   {
+   "nis": "Animation",
+   "alt": [
+    "Family Comedy",
+    "Parenting Humor",
+    "Toddler Life"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 3,
+   "ort_buyume30": 105.3,
+   "ort_izlenme": 1450811,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UClJs7RZ08Kzv415DAa_v_RQ",
+     "ad": "MiniBaby",
+     "abone": 37600,
+     "buyume30": 221.37
+    },
+    {
+     "id": "UCQ5qCffH2bDX7JajsdCmjAA",
+     "ad": "ZBNDUHUR",
+     "abone": 5710,
+     "buyume30": 58.17
+    },
+    {
+     "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
+     "ad": "Rj Vireon",
+     "abone": 122000,
+     "buyume30": 36.31
+    }
+   ]
+  },
+  {
+   "nis": "Parenting",
+   "alt": [
+    "Baby Humor",
+    "Parenting Lifestyle",
+    "Family Vlogging"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 3,
+   "ort_buyume30": 58.8,
+   "ort_izlenme": 1030687,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCMfuk2eumh7ka3WjLa4ekew",
+     "ad": "Little Giggle Club",
+     "abone": 66700,
+     "buyume30": 76.46
+    },
+    {
+     "id": "UC2y-7grSMpp08Cqy-ZJ9Efw",
+     "ad": "Julie B",
+     "abone": 9160,
+     "buyume30": 66.85
+    },
+    {
+     "id": "UC4zNmJcp0rLZgiFG0PXu6xg",
+     "ad": "sapyiyi Mia",
+     "abone": 13200,
+     "buyume30": 33.2
+    }
+   ]
+  },
+  {
    "nis": "Sports",
    "alt": [
     "Major League Baseball",
@@ -491,6 +647,42 @@
    ]
   },
   {
+   "nis": "Family Comedy",
+   "alt": [
+    "Parenting Humor",
+    "Baby & Toddler Content",
+    "Relatable Comedy"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 3,
+   "ort_buyume30": 16.9,
+   "ort_izlenme": 575982,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
+     "ad": "Ariel Ruiz",
+     "abone": 9950,
+     "buyume30": 19.45
+    },
+    {
+     "id": "UCHpb3QTxdK-rVHWsQQX4rBg",
+     "ad": "PetCollective66",
+     "abone": 13000,
+     "buyume30": 19.27
+    },
+    {
+     "id": "UCZqwxXQh82murAreiCs8eIw",
+     "ad": "Ai Baby World",
+     "abone": 5440,
+     "buyume30": 11.93
+    }
+   ]
+  },
+  {
    "nis": "Football",
    "alt": [
     "Football Highlights",
@@ -503,8 +695,8 @@
    "yeni7": 2,
    "ort_buyume30": 249.7,
    "ort_izlenme": 758681,
-   "ortak_konu": "Football",
-   "ortak": true,
+   "ortak_konu": null,
+   "ortak": false,
    "ornekler": [
     {
      "id": "UCUAo-xdNaLUpPHFS5GkMcBQ",
@@ -581,6 +773,36 @@
    ]
   },
   {
+   "nis": "Comedy Shorts",
+   "alt": [
+    "Family Dynamics",
+    "Relatable Humor",
+    "Student Life"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 89.9,
+   "ort_izlenme": 735163,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCdgTdg51Wejy4AowvhuhDPw",
+     "ad": "Liora",
+     "abone": 24900,
+     "buyume30": 122.32
+    },
+    {
+     "id": "UCJEddWtVMa12aOD3tzZhs1Q",
+     "ad": "RP",
+     "abone": 2440,
+     "buyume30": 57.42
+    }
+   ]
+  },
+  {
    "nis": "Technology Analysis",
    "alt": [
     "Semiconductor Industry",
@@ -641,36 +863,6 @@
    ]
   },
   {
-   "nis": "Animation",
-   "alt": [
-    "Football",
-    "Parody",
-    "Comedy"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 2,
-   "ort_buyume30": 47.2,
-   "ort_izlenme": 539469,
-   "ortak_konu": "Football",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCQ5qCffH2bDX7JajsdCmjAA",
-     "ad": "ZBNDUHUR",
-     "abone": 5710,
-     "buyume30": 58.17
-    },
-    {
-     "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
-     "ad": "Rj Vireon",
-     "abone": 122000,
-     "buyume30": 36.31
-    }
-   ]
-  },
-  {
    "nis": "AI Technology",
    "alt": [
     "Generative AI",
@@ -727,6 +919,66 @@
      "ad": "shsbe",
      "abone": 54700,
      "buyume30": 11.86
+    }
+   ]
+  },
+  {
+   "nis": "AI-Generated Family Comedy",
+   "alt": [
+    "Toddler Humor",
+    "Parenting Skits",
+    "Cozy Family Content"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 28.0,
+   "ort_izlenme": 1044879,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCW2cc9LgRhp9Whs9JV-1mvg",
+     "ad": "BabyBliss Family",
+     "abone": 107000,
+     "buyume30": 40.42
+    },
+    {
+     "id": "UCqzLWOhmVAh8jcXswNeagLg",
+     "ad": "HYDER",
+     "abone": 20000,
+     "buyume30": 15.61
+    }
+   ]
+  },
+  {
+   "nis": "Comedy Skits",
+   "alt": [
+    "Cosplay Comedy",
+    "Gaming Parody",
+    "Sibling Comedy"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 16.9,
+   "ort_izlenme": 921720,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCGR2cKNfKLnmzik1I9zsPbw",
+     "ad": "SHO TAM MARIO",
+     "abone": 8600,
+     "buyume30": 18.46
+    },
+    {
+     "id": "UCUsiWj7VST7KPk8pgkxQNgw",
+     "ad": "Rose alina",
+     "abone": 14300,
+     "buyume30": 15.32
     }
    ]
   },
@@ -903,6 +1155,30 @@
    ]
   },
   {
+   "nis": "Family-Friendly Comedy Shorts",
+   "alt": [
+    "Cute Kids",
+    "Wholesome Family Moments",
+    "Military Family Life"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 157.3,
+   "ort_izlenme": 5876529,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC7JDMWZgV9NAq0qxtXaJDpg",
+     "ad": "Tiny Heroes USA",
+     "abone": 9470,
+     "buyume30": 157.34
+    }
+   ]
+  },
+  {
    "nis": "Lifestyle Vlogging",
    "alt": [
     "Travel",
@@ -922,6 +1198,30 @@
      "ad": "Svandyboys Vlogs",
      "abone": 1980,
      "buyume30": 140.58
+    }
+   ]
+  },
+  {
+   "nis": "Family Comedy Shorts",
+   "alt": [
+    "Funny Baby Moments",
+    "Toddler Reactions",
+    "Parenting Humor"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 134.2,
+   "ort_izlenme": 615326,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC56K_5PlkMchNvVT5KfMhmg",
+     "ad": "Tiny Chaos",
+     "abone": 5270,
+     "buyume30": 134.22
     }
    ]
   },
@@ -972,30 +1272,6 @@
    ]
   },
   {
-   "nis": "Comedy",
-   "alt": [
-    "Parody",
-    "Sports Humor",
-    "K-Pop Parody"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 113.2,
-   "ort_izlenme": 685602,
-   "ortak_konu": "Parody",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
-     "ad": "AI-Mini656",
-     "abone": 9040,
-     "buyume30": 113.21
-    }
-   ]
-  },
-  {
    "nis": "Financial News",
    "alt": [
     "Relationship Dramas",
@@ -1015,194 +1291,6 @@
      "ad": "ANTELO",
      "abone": 46300,
      "buyume30": 111.42
-    }
-   ]
-  },
-  {
-   "nis": "Mechanical Engineering Animation",
-   "alt": [
-    "3D Animation",
-    "Mechanical Design",
-    "Mechanism Design"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 108.8,
-   "ort_izlenme": 1440617,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCyGYiDIp7NIrwTfZ20Ex7AA",
-     "ad": "KnowFrame",
-     "abone": 8980,
-     "buyume30": 108.84
-    }
-   ]
-  },
-  {
-   "nis": "Well Drilling",
-   "alt": [
-    "Water Well Construction",
-    "Heavy Machinery",
-    "Civil Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 106.2,
-   "ort_izlenme": 243860,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC30rF7AoXbpotf_FgnaIA6g",
-     "ad": "Water Hunters",
-     "abone": 5030,
-     "buyume30": 106.15
-    }
-   ]
-  },
-  {
-   "nis": "Educational Engineering Animation",
-   "alt": [
-    "Construction Technology",
-    "Science Explainer",
-    "Historical Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 98.4,
-   "ort_izlenme": 832111,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCFbPsPjAKiEgTbl11fDSiKQ",
-     "ad": "CoreMine 3D",
-     "abone": 49000,
-     "buyume30": 98.38
-    }
-   ]
-  },
-  {
-   "nis": "Historical Engineering & Architecture",
-   "alt": [
-    "Ancient History",
-    "Mechanical Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 96.4,
-   "ort_izlenme": 449488,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCIkUB2P1EysxV5F5egmAolA",
-     "ad": "3D_Spectra_YT",
-     "abone": 55000,
-     "buyume30": 96.43
-    }
-   ]
-  },
-  {
-   "nis": "Automotive Engineering Tutorials",
-   "alt": [
-    "Internal Combustion Engines",
-    "Mechanical Engineering"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 95.6,
-   "ort_izlenme": 22706,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCJfSVViMifMoJw-80gYDltQ",
-     "ad": "Ai Mashine Explained",
-     "abone": 2210,
-     "buyume30": 95.58
-    }
-   ]
-  },
-  {
-   "nis": "Sports Comedy",
-   "alt": [
-    "Football Parody",
-    "Short-Form Content"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 89.6,
-   "ort_izlenme": 4047808,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC3cdqAFdUX6ThSM_F1Sx8wA",
-     "ad": "dsfsdf",
-     "abone": 54800,
-     "buyume30": 89.62
-    }
-   ]
-  },
-  {
-   "nis": "Miniature Construction Projects",
-   "alt": [
-    "Miniature Diorama Building",
-    "Toy Construction Vehicles",
-    "Educational Science Projects"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 81.1,
-   "ort_izlenme": 383324,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCKGDU89WySSspEkT5xG9lSA",
-     "ad": "Mini Build Depot",
-     "abone": 30600,
-     "buyume30": 81.07
-    }
-   ]
-  },
-  {
-   "nis": "AI Video Art",
-   "alt": [
-    "Retro Aesthetics",
-    "Celebrity Then and Now"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 79.1,
-   "ort_izlenme": 730614,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCVoJETNbw6S5qyW08fPFrjA",
-     "ad": "Time Hotel",
-     "abone": 137000,
-     "buyume30": 79.08
     }
    ]
   }
@@ -1297,6 +1385,28 @@
    "ortak": false
   },
   {
+   "id": "UC-lnfKzU3eTXSUu8BvANqMA",
+   "ad": "Sam Family",
+   "handle": null,
+   "abone": 207000,
+   "ort_izlenme": 5135367.894736842,
+   "buyume30": 289.83,
+   "izlenme_buyume30": 479.11,
+   "nis": "Family Vlogging, Parenting Moments, Child Development, Family Humor",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCsFRU8e7kzpSTocU2edFKzA",
    "ad": "Mexy.20k",
    "handle": null,
@@ -1338,6 +1448,28 @@
    "kaynak": "Yükselen: ai and technology (en)",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UClJs7RZ08Kzv415DAa_v_RQ",
+   "ad": "MiniBaby",
+   "handle": null,
+   "abone": 37600,
+   "ort_izlenme": 3273494.4727272727,
+   "buyume30": 221.37,
+   "izlenme_buyume30": 277.74,
+   "nis": "Animation, Family Comedy, Parenting Humor, Toddler Life, AI Animation",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -1385,6 +1517,28 @@
    "ortak": false
   },
   {
+   "id": "UCPjqFWMiRHVaasHG8It5QZg",
+   "ad": "Ryan Kwak",
+   "handle": null,
+   "abone": 11500,
+   "ort_izlenme": 877152.7083333334,
+   "buyume30": 188.22,
+   "izlenme_buyume30": 173.21,
+   "nis": "Family Vlogging, Parenting, Family Life, Comedy Sketches",
+   "dil": "en",
+   "ulke": "SG",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCXIRoXy9jx1nptTqjrHqjxA",
    "ad": "09890ن5حد6ن8هي مواقع رائع سلطان",
    "handle": null,
@@ -1426,6 +1580,28 @@
    "kaynak": "PROFOOTBALL kanalına benzer",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC7JDMWZgV9NAq0qxtXaJDpg",
+   "ad": "Tiny Heroes USA",
+   "handle": null,
+   "abone": 9470,
+   "ort_izlenme": 5876529.142857143,
+   "buyume30": 157.34,
+   "izlenme_buyume30": 494.83,
+   "nis": "Family-Friendly Comedy Shorts, Cute Kids, Wholesome Family Moments, Military Family Life, Humorous Kid Reactions",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -1473,6 +1649,28 @@
    "ortak": false
   },
   {
+   "id": "UC56K_5PlkMchNvVT5KfMhmg",
+   "ad": "Tiny Chaos",
+   "handle": null,
+   "abone": 5270,
+   "ort_izlenme": 615325.625,
+   "buyume30": 134.22,
+   "izlenme_buyume30": 194.68,
+   "nis": "Family Comedy Shorts, Funny Baby Moments, Toddler Reactions, Parenting Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCvIhpqYant2JzyPBwOW3Mpw",
    "ad": "Wunderbare Orte",
    "handle": "@wunderbareorte",
@@ -1514,6 +1712,50 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCdgTdg51Wejy4AowvhuhDPw",
+   "ad": "Liora",
+   "handle": null,
+   "abone": 24900,
+   "ort_izlenme": 256554.0909090909,
+   "buyume30": 122.32,
+   "izlenme_buyume30": 101.74,
+   "nis": "Comedy Shorts, Family Dynamics, Relatable Humor, Student Life",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCJO9bcdKNSwNlxLfjfLk3Lg",
+   "ad": "🥈 Tiny Patriot Heroes",
+   "handle": null,
+   "abone": 8990,
+   "ort_izlenme": 2324052,
+   "buyume30": 120.88,
+   "izlenme_buyume30": 41.13,
+   "nis": "Family Vlogging, Patriotic Content, Toddler Humor, Military Family Life, Short-form Comedy",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -1737,6 +1979,28 @@
    "ortak": false
   },
   {
+   "id": "UCZAGmukWk0zlVDV63qWYuVA",
+   "ad": "SproutSquad",
+   "handle": null,
+   "abone": 9470,
+   "ort_izlenme": 272285.40789473685,
+   "buyume30": 103.66,
+   "izlenme_buyume30": 95.77,
+   "nis": "Family & Baby Comedy Shorts, Baby Reactions, Parenting Humor, Toddler Moments, Viral Comedy",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCMSiV6DQgIbpaW97hfvjXFA",
    "ad": "احمد محمد",
    "handle": null,
@@ -1847,6 +2111,50 @@
    "ortak": false
   },
   {
+   "id": "UCULgFpNcv4uA90p58ceKjFg",
+   "ad": "Novah Diary",
+   "handle": null,
+   "abone": 33200,
+   "ort_izlenme": 404352.02803738316,
+   "buyume30": 95.29,
+   "izlenme_buyume30": 63.42,
+   "nis": "Family Lifestyle Shorts, Family Pranks, Family Bonding Moments, Heartwarming Family Stories",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCDYLCNjekDL1dLDDZuWIy2Q",
+   "ad": "Funny Fella",
+   "handle": null,
+   "abone": 16500,
+   "ort_izlenme": 398403.9117647059,
+   "buyume30": 92.76,
+   "izlenme_buyume30": 179.75,
+   "nis": "Roblox Animation Comedy, Family Comedy, AI Animation, Gaming Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC3cdqAFdUX6ThSM_F1Sx8wA",
    "ad": "dsfsdf",
    "handle": null,
@@ -1913,6 +2221,28 @@
    "ortak": false
   },
   {
+   "id": "UCwU6At4swSGutjYn8dAq6eg",
+   "ad": "iamkarinaandron",
+   "handle": null,
+   "abone": 12300,
+   "ort_izlenme": 398131.652173913,
+   "buyume30": 78,
+   "izlenme_buyume30": 152.57,
+   "nis": "Youth Soccer Family Vlogging, Soccer Injury Recovery, Family Life, Travel, Parenting",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCHmPiloJ10Xyy2_j1sDAhHA",
    "ad": "Engine Explained",
    "handle": "@engineexplained1",
@@ -1932,6 +2262,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCMfuk2eumh7ka3WjLa4ekew",
+   "ad": "Little Giggle Club",
+   "handle": null,
+   "abone": 66700,
+   "ort_izlenme": 1010352.8947368421,
+   "buyume30": 76.46,
+   "izlenme_buyume30": 77.36,
+   "nis": "Parenting, Baby Humor, Parenting Lifestyle, Family Vlogging",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -2089,6 +2441,50 @@
    "ortak": false
   },
   {
+   "id": "UCCn2sIFzZe3T-mbJ4yhdYjA",
+   "ad": "Little Baby, Big Reactions",
+   "handle": null,
+   "abone": 25400,
+   "ort_izlenme": 833117.5576923077,
+   "buyume30": 67.11,
+   "izlenme_buyume30": 84.13,
+   "nis": "Family Entertainment Shorts, Toddler Reactions, Family Comedy, Toy Surprises, Wholesome Content",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC2y-7grSMpp08Cqy-ZJ9Efw",
+   "ad": "Julie B",
+   "handle": null,
+   "abone": 9160,
+   "ort_izlenme": 317629.2049180328,
+   "buyume30": 66.85,
+   "izlenme_buyume30": 100.41,
+   "nis": "Parenting, Toddler Parenting, Parenting Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": false,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCNzs3DFbJyrkPXU7rytp3kA",
    "ad": "Ki-ke",
    "handle": null,
@@ -2199,6 +2595,50 @@
    "ortak": false
   },
   {
+   "id": "UCjCLQiRqQptCG3PZI_nwANQ",
+   "ad": "Two Much Trouble",
+   "handle": null,
+   "abone": 21600,
+   "ort_izlenme": 406014.8241758242,
+   "buyume30": 60,
+   "izlenme_buyume30": 102.98,
+   "nis": "Comedy, Couple Comedy, Pranks, Relationship Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC6hzc8nkodpcuLAAo2AKEjQ",
+   "ad": "Tiny Laughs",
+   "handle": null,
+   "abone": 20700,
+   "ort_izlenme": 800745.24,
+   "buyume30": 59.23,
+   "izlenme_buyume30": 59.64,
+   "nis": "Parenting Humor, Funny Babies, Funny Kids, Parenting Struggles, Family Pranks",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCoE8zxPoW-rRUtuDcng2UBw",
    "ad": "Prince does AI",
    "handle": "@princedoesai",
@@ -2265,6 +2705,28 @@
    "ortak": false
   },
   {
+   "id": "UCJEddWtVMa12aOD3tzZhs1Q",
+   "ad": "RP",
+   "handle": null,
+   "abone": 2440,
+   "ort_izlenme": 1213772.5625,
+   "buyume30": 57.42,
+   "izlenme_buyume30": 51.34,
+   "nis": "Comedy Shorts, Pranks, Skits, Humor",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC_1KS-1OXJjPtIfpmyvHUag",
    "ad": "Master Adam Works!",
    "handle": null,
@@ -2328,6 +2790,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCGwGV-LXv2k7UwA7oOk_KTg",
+   "ad": "DadTokTV",
+   "handle": null,
+   "abone": 13100,
+   "ort_izlenme": 650317.362962963,
+   "buyume30": 50.4,
+   "izlenme_buyume30": 62.32,
+   "nis": "Comedy, Pranks, Family Vlogs, Challenges",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -2595,6 +3079,28 @@
    "ortak": false
   },
   {
+   "id": "UCORz3pOLJRJfoiKfiWvrk_g",
+   "ad": "JulianGonzalez",
+   "handle": null,
+   "abone": 21500,
+   "ort_izlenme": 380736.75675675675,
+   "buyume30": 43.33,
+   "izlenme_buyume30": 27.11,
+   "nis": "Comedy, Pranks, Family Comedy",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC4lc5C4F61ZBRfqMb5wa8Pw",
    "ad": "Untold Moments",
    "handle": "@untoldmoments.m-yt",
@@ -2724,6 +3230,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCW2cc9LgRhp9Whs9JV-1mvg",
+   "ad": "BabyBliss Family",
+   "handle": null,
+   "abone": 107000,
+   "ort_izlenme": 1212839.7217391303,
+   "buyume30": 40.42,
+   "izlenme_buyume30": 43.37,
+   "nis": "AI-Generated Family Comedy, Toddler Humor, Parenting Skits, Cozy Family Content",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -2969,6 +3497,28 @@
    "ortak": false
   },
   {
+   "id": "UC4zNmJcp0rLZgiFG0PXu6xg",
+   "ad": "sapyiyi Mia",
+   "handle": null,
+   "abone": 13200,
+   "ort_izlenme": 1764079.3076923077,
+   "buyume30": 33.2,
+   "izlenme_buyume30": 39.88,
+   "nis": "Parenting, Toddler Behavior, Family Vlogs, Child Development, Parenting Tips",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCQh4wN6Tc40KrDYuvx0shDQ",
    "ad": "60秒バイク図鑑",
    "handle": "@bike60s",
@@ -3076,6 +3626,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCtl77-OPSVeF6PpCDqjDXrQ",
+   "ad": "BN PRESENTS",
+   "handle": null,
+   "abone": 7840,
+   "ort_izlenme": 442657.7272727273,
+   "buyume30": 32.43,
+   "izlenme_buyume30": 34.95,
+   "nis": "Family Comedy & Moral Storytelling, Family Skits, Moral Lessons & Social Commentary, Pranks",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -3255,6 +3827,28 @@
    "ortak": false
   },
   {
+   "id": "UCRSHodlHBtIkx57IWoPt1Jg",
+   "ad": "StoryWaves...🌊",
+   "handle": null,
+   "abone": 51900,
+   "ort_izlenme": 437645.5724137931,
+   "buyume30": 29.43,
+   "izlenme_buyume30": 35.16,
+   "nis": "Family Vlogging, Baby Vlogs, Parenting Humor, Toddler Lifestyle",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCqVvMQMpUqkhCkJawOKuuDw",
    "ad": "Professor Decoded",
    "handle": "@professordecoded",
@@ -3296,6 +3890,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCT9N5N4O5C-9DZwf8AlCFRQ",
+   "ad": "Fur-bulous Chaos",
+   "handle": null,
+   "abone": 5420,
+   "ort_izlenme": 276591.7894736842,
+   "buyume30": 26.05,
+   "izlenme_buyume30": 37.54,
+   "nis": "Comedy, Pranks, Pet Humor, Family Skits, Social Experiments",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -3607,6 +4223,28 @@
    "ortak": false
   },
   {
+   "id": "UCgDJ_q3JiAR_Ug_45w6N9CQ",
+   "ad": "Orgest Agolli",
+   "handle": null,
+   "abone": 31300,
+   "ort_izlenme": 818552.8513513514,
+   "buyume30": 22.27,
+   "izlenme_buyume30": 27.94,
+   "nis": "Parenting Comedy, Toddler Life, Family Humor, Childhood Pranks",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCA7QNQ3OU0AUC9QiDAMSAkA",
    "ad": "AIOrbitX",
    "handle": "@aiorbitxofficial",
@@ -3670,6 +4308,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC-T4ewrJabQPiNCdi-dc9uQ",
+   "ad": "EarthObservationDiary",
+   "handle": null,
+   "abone": 8480,
+   "ort_izlenme": 605528.6811594203,
+   "buyume30": 20.8,
+   "izlenme_buyume30": 31.07,
+   "nis": "Comedy, Pranks, Viral Trends, Fail Compilation, Family Humor",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -3827,6 +4487,28 @@
    "ortak": false
   },
   {
+   "id": "UCxmQkfBALmEpLmkKiE4AOtg",
+   "ad": "Funny puppy time",
+   "handle": null,
+   "abone": 53800,
+   "ort_izlenme": 330506.26872246695,
+   "buyume30": 19.56,
+   "izlenme_buyume30": 33.96,
+   "nis": "Family & Parenting, Baby Humor, Parenting Humor, Toddler Life",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCDAzSxjnxj9Jw2cOW0ZMaow",
    "ad": "ディープ・インサイト",
    "handle": "@deepinsightscience",
@@ -3849,6 +4531,28 @@
    "ortak": false
   },
   {
+   "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
+   "ad": "Ariel Ruiz",
+   "handle": null,
+   "abone": 9950,
+   "ort_izlenme": 1191576.7222222222,
+   "buyume30": 19.45,
+   "izlenme_buyume30": 19.14,
+   "nis": "Family Comedy, Parenting Humor, Baby & Toddler Content, Relatable Comedy",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCffrX_6rER7v_krexkpbdNg",
    "ad": "Andrey Synth",
    "handle": "@andrey.future",
@@ -3868,6 +4572,28 @@
    "kaynak": "Yükselen: ai and technology (en)",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCHpb3QTxdK-rVHWsQQX4rBg",
+   "ad": "PetCollective66",
+   "handle": null,
+   "abone": 13000,
+   "ort_izlenme": 259903.92783505155,
+   "buyume30": 19.27,
+   "izlenme_buyume30": 16.18,
+   "nis": "Family Comedy, Parenting Humor, Viral Challenges, Reaction Videos",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -4091,6 +4817,28 @@
    "ortak": false
   },
   {
+   "id": "UCfxcO8GztN5zX69iPTysiAg",
+   "ad": "Arwenture",
+   "handle": null,
+   "abone": 13800,
+   "ort_izlenme": 340662.8304347826,
+   "buyume30": 16.95,
+   "izlenme_buyume30": 19.62,
+   "nis": "Family Vlogging, Toddler Vlogging, Childhood Milestones, Family Travel",
+   "dil": "en",
+   "ulke": "CA",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": false,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCsH6FraA_HaIC-cBhnMR7gA",
    "ad": "I guess I'm walking",
    "handle": "@iguessiamwalking",
@@ -4223,6 +4971,50 @@
    "ortak": false
   },
   {
+   "id": "UCqzLWOhmVAh8jcXswNeagLg",
+   "ad": "HYDER",
+   "handle": null,
+   "abone": 20000,
+   "ort_izlenme": 876917.5172413794,
+   "buyume30": 15.61,
+   "izlenme_buyume30": 21.74,
+   "nis": "AI-Generated Family Comedy, Wholesome Family Stories, Military-Themed Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCUsiWj7VST7KPk8pgkxQNgw",
+   "ad": "Rose alina",
+   "handle": null,
+   "abone": 14300,
+   "ort_izlenme": 435865.55263157893,
+   "buyume30": 15.32,
+   "izlenme_buyume30": 14.93,
+   "nis": "Comedy Skits, Couples Comedy, Family Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
    "ad": "n n nbekhg",
    "handle": null,
@@ -4333,6 +5125,28 @@
    "ortak": false
   },
   {
+   "id": "UC7HH3ShwIBGac-uxdJ88KvQ",
+   "ad": "Xi Ming",
+   "handle": null,
+   "abone": 18800,
+   "ort_izlenme": 1733863.6315789474,
+   "buyume30": 14.63,
+   "izlenme_buyume30": 17.97,
+   "nis": "Prank Comedy, Couple Pranks, Family Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCw-hH795UFH3DfkYnz4vvFQ",
    "ad": "Einfach Ralle",
    "handle": "@einfachralle",
@@ -4374,6 +5188,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC9i0BjjuAwlzLFEtu8R_iRg",
+   "ad": "PORSHE LIFE",
+   "handle": null,
+   "abone": 6950,
+   "ort_izlenme": 310966.76201372995,
+   "buyume30": 14.12,
+   "izlenme_buyume30": 13.87,
+   "nis": "Automotive, Family Vlogs, Pranks, Parenting",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -4597,6 +5433,72 @@
    "ortak": false
   },
   {
+   "id": "UCPF6PljiI_P0i6olaIYjn-g",
+   "ad": "Dad Thorin7",
+   "handle": null,
+   "abone": 13100,
+   "ort_izlenme": 1083141.625,
+   "buyume30": 12.93,
+   "izlenme_buyume30": 12.35,
+   "nis": "Family Entertainment, Pranks, Parenting, Family Vlogs, Comedy",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCESuTlm8ZHrf9wIDsyBgcGA",
+   "ad": "MysticStudio04",
+   "handle": null,
+   "abone": 14900,
+   "ort_izlenme": 1651488.049180328,
+   "buyume30": 12.88,
+   "izlenme_buyume30": 14.78,
+   "nis": "Entertainment, Skits, Parenting Humor, Family Comedy",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCCZcEjQ_uQPQs4MRpWMxCmQ",
+   "ad": "Schoel Hoseck",
+   "handle": null,
+   "abone": 13200,
+   "ort_izlenme": 356779.03571428574,
+   "buyume30": 12.82,
+   "izlenme_buyume30": 13.52,
+   "nis": "Comedy, Parenting Humor, Cute Animals, Pranks",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCs1bJj0jKmjw0QD59XiGzfg",
    "ad": "Schwarze Akte",
    "handle": "@schwarzeakte-q3e",
@@ -4660,6 +5562,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCZqwxXQh82murAreiCs8eIw",
+   "ad": "Ai Baby World",
+   "handle": null,
+   "abone": 5440,
+   "ort_izlenme": 276465.5051546392,
+   "buyume30": 11.93,
+   "izlenme_buyume30": 13.29,
+   "nis": "Family Comedy, Parenting Humor, Toddler Behavior, Family Vlogs",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   },
   {
@@ -4751,58 +5675,14 @@
    "ortak": false
   },
   {
-   "id": "UCG37PGFcXIDirExEROPxOpA",
-   "ad": "Fiza Bibi",
-   "handle": "@fizabibi-r2l",
-   "abone": 5860,
-   "ort_izlenme": 30761.385869565216,
-   "buyume30": 10.57,
-   "izlenme_buyume30": 15.07,
-   "nis": "Agricultural Innovation, Smart Farming, Desi Jugaad",
-   "dil": "en",
-   "ulke": "PK",
-   "kazanc": 24.85,
-   "acilis": "2026-07-14T04:55:28Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 368,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UClDz7Qxeg2NG4q3yoYoIxMQ",
-   "ad": "Sallu Explains",
-   "handle": "@salluexplains",
-   "abone": 1270,
-   "ort_izlenme": 6298.611111111111,
-   "buyume30": 10.43,
-   "izlenme_buyume30": 52.12,
-   "nis": "Tutorials, Government Schemes, AI Tools",
-   "dil": "en, ur",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": "2026-07-04T06:57:22Z",
-   "son_video": "2026-10-22T00:00:00.000Z",
-   "video_sayisi": 36,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCCVQNJemaiZml5pxn5ze-TA",
-   "ad": "sddfvdf4515",
+   "id": "UCR-zvQEfl2Qjnzmz7_uo4Ug",
+   "ad": "Beyond Moments",
    "handle": null,
-   "abone": 36200,
-   "ort_izlenme": 1562899.205882353,
-   "buyume30": 10.03,
-   "izlenme_buyume30": 11.7,
-   "nis": "MLB News, Philadelphia Phillies, MLB Trade Deadline",
+   "abone": 12700,
+   "ort_izlenme": 550212.0163934426,
+   "buyume30": 11.4,
+   "izlenme_buyume30": 15.74,
+   "nis": "Comedy Entertainment, Couple Humor, Relatable Comedy, Family Dynamics, Pranks",
    "dil": "en",
    "ulke": "US",
    "kazanc": null,
@@ -4811,9 +5691,9 @@
    "video_sayisi": null,
    "tur": null,
    "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   }
  ],
@@ -4873,6 +5753,14 @@
    "ad": "ai and technology (en)",
    "gelen": 50,
    "alinan": 26
+  },
+  {
+   "tarih": "2026-10-26T09:45:53+00:00",
+   "tip": "benzer",
+   "hedef": "UCmOVT5zXeUIQyBoU0jra1ng",
+   "ad": "le viet",
+   "gelen": 50,
+   "alinan": 40
   }
  ]
 }
