@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-25T08:43:32+00:00",
+ "ts": "2026-10-26T08:54:59+00:00",
  "firsat": {
   "Sports News": {
    "seviye": "bos",
@@ -181,6 +181,89 @@
    ],
    "sorgu": "Manufacturing Processes",
    "tarih": "2026-10-25T08:43:32+00:00"
+  },
+  "Technology": {
+   "seviye": "doymus",
+   "pay": 0.05519702376596348,
+   "toplam": 46500913,
+   "video": 25,
+   "buyuk": 11,
+   "yeniler": [
+    {
+     "kanal_id": "UC5nqU8r0fFuxEP9smx95r0A",
+     "kanal": "Rise Mind Tube",
+     "izl": 1099178
+    },
+    {
+     "kanal_id": "UCOMFfkjCYrZvBWRoRRV99hQ",
+     "kanal": "Sakshi Mutha ",
+     "izl": 766888
+    },
+    {
+     "kanal_id": "UChQkDHEDiqDDDHTRjnXJUew",
+     "kanal": "Devs.ai, an AppDirect Company",
+     "izl": 700646
+    }
+   ],
+   "sorgu": "AI Tools",
+   "tarih": "2026-10-26T08:54:59+00:00"
+  },
+  "Artificial Intelligence": {
+   "seviye": "doymus",
+   "pay": 0.055089383672013555,
+   "toplam": 46512410,
+   "video": 25,
+   "buyuk": 11,
+   "yeniler": [
+    {
+     "kanal_id": "UC5nqU8r0fFuxEP9smx95r0A",
+     "kanal": "Rise Mind Tube",
+     "izl": 1099178
+    },
+    {
+     "kanal_id": "UCOMFfkjCYrZvBWRoRRV99hQ",
+     "kanal": "Sakshi Mutha ",
+     "izl": 766888
+    },
+    {
+     "kanal_id": "UChQkDHEDiqDDDHTRjnXJUew",
+     "kanal": "Devs.ai, an AppDirect Company",
+     "izl": 696274
+    }
+   ],
+   "sorgu": "AI Tools",
+   "tarih": "2026-10-26T08:54:59+00:00"
+  },
+  "Construction Engineering": {
+   "seviye": "bos",
+   "pay": 0.5084058722604431,
+   "toplam": 61087890,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UChbvTzB66ByfIfqT31pONAg",
+     "kanal": "Mr. Gao | Civil & Power",
+     "izl": 7819885
+    },
+    {
+     "kanal_id": "UCxOzQ5ec1Sj6aD8n7b5JRcQ",
+     "kanal": "mega construction",
+     "izl": 6703586
+    },
+    {
+     "kanal_id": "UCyFypE_LjvQ3zd-KuXfoItg",
+     "kanal": "Civil_Engineering ",
+     "izl": 3340593
+    },
+    {
+     "kanal_id": "UCZiSMSmcnClaGMUdwKNxFEg",
+     "kanal": "MechDisk",
+     "izl": 2886653
+    }
+   ],
+   "sorgu": "Civil Engineering",
+   "tarih": "2026-10-26T08:54:59+00:00"
   }
  },
  "ceviri": {
@@ -197,15 +280,10 @@
   "Historical Engineering & Architecture": "Tarihi Mühendislik ve Mimarlık",
   "Automotive Engineering Tutorials": "Otomotiv Mühendisliği Dersleri",
   "Educational Engineering Animation": "Eğitim Mühendisliği Animasyonu",
-  "Automotive Engineering Education": "Otomotiv Mühendisliği Eğitimi",
-  "Engineering & Infrastructure Documentary": "Mühendislik ve Altyapı Belgeseli",
-  "General Entertainment": "Genel Eğlence",
-  "Science & Engineering Explanations": "Bilim ve Mühendislik Açıklamaları",
   "Structural Engineering": "Yapı Mühendisliği",
   "Ancient History": "Antik Tarih",
   "Heavy Machinery": "Ağır Makinalar",
   "Digital Art": "Dijital Sanat",
-  "MLB News": "MLB Haberleri",
   "MLB": "",
   "Philadelphia Phillies": "",
   "Baseball": "Beyzbol",
@@ -227,11 +305,7 @@
   "Internal Combustion Engines": "İçten Yanmalı Motorlar",
   "Construction Technology": "İnşaat Teknolojisi",
   "Science Explainer": "Bilim Açıklayıcı",
-  "Car Maintenance": "Araç Bakımı",
   "Civil Engineering": "İnşaat mühendisliği",
-  "Architecture": "Mimarlık",
-  "Applied Science": "Uygulamalı Bilim",
-  "Ancient Engineering": "Antik Mühendislik",
   "Human Interest Stories": "İnsani İlgi Alan Hikayeler",
   "Construction": "Yapı",
   "Travel Vlogging": "Seyahat Vlogu",
@@ -244,14 +318,7 @@
   "Switzerland Travel Guide": "İsviçre Gezi Rehberi",
   "Well Drilling": "Kuyu Sondajı",
   "Miniature Construction Projects": "Minyatür İnşaat Projeleri",
-  "Educational Animation": "Eğitici Animasyon",
-  "Educational Content": "Eğitim İçeriği",
-  "Construction Education": "İnşaat Eğitimi",
   "Construction Machinery": "İnşaat Makinaları",
-  "Industrial Craftsmanship": "Endüstriyel İşçilik",
-  "Engineering & Mechanical History": "Mühendislik ve Makine Tarihi",
-  "Reddit Stories": "Reddit Hikayeleri",
-  "Political Commentary": "Siyasi Yorum",
   "Backpacking": "Sırt çantasıyla seyahat",
   "Street Food": "Sokak Yemekleri",
   "DIY": "Kendin Yap",
@@ -285,18 +352,45 @@
   "Miniature Diorama Building": "Minyatür Diorama Binası",
   "Toy Construction Vehicles": "Oyuncak İnşaat Araçları",
   "Educational Science Projects": "Eğitim Bilimleri Projeleri",
-  "History": "Tarih",
-  "Invention": "Buluş",
-  "Science": "Bilim",
-  "Worker Skills": "İşçi Becerileri",
-  "Earthmoving": "Hafriyat",
-  "Construction Projects": "İnşaat Projeleri",
-  "Tool Demonstrations": "Araç Gösterimleri",
-  "Aviation History": "Havacılık Tarihi",
-  "Automotive History": "Otomotiv Tarihi",
-  "Engineering Documentaries": "Mühendislik Belgeselleri",
-  "Reddit Readings": "Reddit Okumaları",
-  "German Reddit Stories": "Almanca Reddit Hikayeleri",
-  "Emotional Narratives": "Duygusal Anlatılar"
+  "Technology": "Teknoloji",
+  "Artificial Intelligence": "Yapay Zeka",
+  "Football": "Futbol",
+  "Football Entertainment": "Futbol Eğlencesi",
+  "Technology Analysis": "Teknoloji Analizi",
+  "Animation": "Animasyon",
+  "AI Technology": "Yapay Zeka Teknolojisi",
+  "Football Puzzle Challenges": "Futbol Bulmaca Mücadeleleri",
+  "Artificial Intelligence Technology Reviews": "Yapay Zeka Teknolojisi İncelemeleri",
+  "Comedy": "Komedi",
+  "Sports Comedy": "Spor Komedisi",
+  "AI Video Art": "Yapay Zeka Video Sanatı",
+  "AI Tools": "Yapay Zeka Araçları",
+  "Gadgets": "Araçlar",
+  "Smartphones & Gadgets": "Akıllı Telefonlar ve Cihazlar",
+  "Future Technology": "Geleceğin Teknolojisi",
+  "Technology News": "Teknoloji Haberleri",
+  "Football (Soccer)": "Futbol (Futbol)",
+  "Football Highlights": "Futbolun Önemli Noktaları",
+  "Football Rankings": "Futbol Sıralaması",
+  "Funny Football Moments": "Komik Futbol Anları",
+  "Football Comedy": "Futbol Komedisi",
+  "Memorable Football Moments": "Unutulmaz Futbol Anları",
+  "Football Parody": "Futbol Parodisi",
+  "Semiconductor Industry": "Yarı İletken Endüstrisi",
+  "AI Chips & Infrastructure": "Yapay Zeka Çipleri ve Altyapısı",
+  "AI Industry Dynamics": "Yapay Zeka Sektörü Dinamikleri",
+  "Parody": "Parodi",
+  "Generative AI": "Üretken Yapay Zeka",
+  "AI Models & Tools": "Yapay Zeka Modelleri ve Araçları",
+  "AI Tools & Reviews": "Yapay Zeka Araçları ve İncelemeleri",
+  "Visual Search Games": "Görsel Arama Oyunları",
+  "Football Trivia": "Futbolla İlgili Bilgiler",
+  "Sports Entertainment": "Spor Eğlencesi",
+  "Software Comparison": "Yazılım Karşılaştırması",
+  "Sports Humor": "Spor Mizahı",
+  "K-Pop Parody": "K-Pop Parodisi",
+  "Short-Form Content": "Kısa Form İçeriği",
+  "Retro Aesthetics": "Retro Estetik",
+  "Celebrity Then and Now": "O Zaman ve Şimdiki Ünlü"
  }
 }
