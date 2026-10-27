@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-26T08:54:59+00:00",
+ "ts": "2026-10-27T08:53:09+00:00",
  "firsat": {
   "Sports News": {
    "seviye": "bos",
@@ -264,6 +264,84 @@
    ],
    "sorgu": "Civil Engineering",
    "tarih": "2026-10-26T08:54:59+00:00"
+  },
+  "Comedy": {
+   "seviye": "orta",
+   "pay": 0.2553005850967311,
+   "toplam": 362639353,
+   "video": 25,
+   "buyuk": 12,
+   "yeniler": [
+    {
+     "kanal_id": "UCoo5zZBf7lWwHY8U6jET5Sw",
+     "kanal": "Hibben Kusak",
+     "izl": 47038842
+    },
+    {
+     "kanal_id": "UCgT4YcfPQ5xKrYCIu82PrPw",
+     "kanal": "Shrek Team ",
+     "izl": 12664580
+    },
+    {
+     "kanal_id": "UC0YkjA9149czZA71okcTMCA",
+     "kanal": "Cozy Pod",
+     "izl": 12209573
+    },
+    {
+     "kanal_id": "UCGdUkh2VbqkqwTgd84UVvZQ",
+     "kanal": "CreepCrawler",
+     "izl": 11935906
+    }
+   ],
+   "sorgu": "Pranks",
+   "tarih": "2026-10-27T08:53:09+00:00"
+  },
+  "Family Vlogging": {
+   "seviye": "orta",
+   "pay": 0.2867865166263054,
+   "toplam": 61602802,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCc0zVNHiljE3i-B5Z06V47Q",
+     "kanal": "Family Moments",
+     "izl": 9422399
+    },
+    {
+     "kanal_id": "UCS0xIzWRjxW1pMTSTU0wAww",
+     "kanal": "Tiny Boss",
+     "izl": 2810800
+    },
+    {
+     "kanal_id": "UCp4LVkUhJT0cw7UYQD8RqdA",
+     "kanal": "rgfthyj",
+     "izl": 2050240
+    },
+    {
+     "kanal_id": "UCknOPfZeI1v_T9Z0bKCUqng",
+     "kanal": "True MomLife",
+     "izl": 836329
+    }
+   ],
+   "sorgu": "Parenting Moments",
+   "tarih": "2026-10-27T08:53:09+00:00"
+  },
+  "Animation": {
+   "seviye": "doymus",
+   "pay": 0.12899665377098515,
+   "toplam": 701946875,
+   "video": 25,
+   "buyuk": 16,
+   "yeniler": [
+    {
+     "kanal_id": "UCDh0VaU4OYiFLshEzxij1dg",
+     "kanal": "Bro Mode ON",
+     "izl": 90548798
+    }
+   ],
+   "sorgu": "Family Comedy",
+   "tarih": "2026-10-27T08:53:09+00:00"
   }
  },
  "ceviri": {
@@ -276,12 +354,7 @@
   "Celebrity News": "Ünlü Haberleri",
   "Engineering & Technology Explainer": "Mühendislik ve Teknoloji Açıklayıcısı",
   "Financial News": "Finans Haberleri",
-  "Mechanical Engineering Animation": "Makine Mühendisliği Animasyonu",
-  "Historical Engineering & Architecture": "Tarihi Mühendislik ve Mimarlık",
-  "Automotive Engineering Tutorials": "Otomotiv Mühendisliği Dersleri",
-  "Educational Engineering Animation": "Eğitim Mühendisliği Animasyonu",
   "Structural Engineering": "Yapı Mühendisliği",
-  "Ancient History": "Antik Tarih",
   "Heavy Machinery": "Ağır Makinalar",
   "Digital Art": "Dijital Sanat",
   "MLB": "",
@@ -299,12 +372,7 @@
   "Industrial Processes": "Endüstriyel Süreçler",
   "Relationship Dramas": "İlişki Dramaları",
   "Storytelling": "Hikaye Anlatımı",
-  "3D Animation": "3D Animasyon",
-  "Mechanical Design": "Mekanik Tasarım",
-  "Mechanism Design": "Mekanizma Tasarımı",
-  "Internal Combustion Engines": "İçten Yanmalı Motorlar",
   "Construction Technology": "İnşaat Teknolojisi",
-  "Science Explainer": "Bilim Açıklayıcı",
   "Civil Engineering": "İnşaat mühendisliği",
   "Human Interest Stories": "İnsani İlgi Alan Hikayeler",
   "Construction": "Yapı",
@@ -316,8 +384,6 @@
   "Civil Engineering Documentary": "İnşaat Mühendisliği Belgeseli",
   "Lifestyle Vlogging": "Yaşam Tarzı Vlogu",
   "Switzerland Travel Guide": "İsviçre Gezi Rehberi",
-  "Well Drilling": "Kuyu Sondajı",
-  "Miniature Construction Projects": "Minyatür İnşaat Projeleri",
   "Construction Machinery": "İnşaat Makinaları",
   "Backpacking": "Sırt çantasıyla seyahat",
   "Street Food": "Sokak Yemekleri",
@@ -347,11 +413,6 @@
   "Shopping": "Alışveriş",
   "Travel Guides": "Seyahat Rehberleri",
   "Sightseeing": "Manzara",
-  "Water Well Construction": "Su Kuyusu İnşaatı",
-  "Historical Engineering": "Tarihsel Mühendislik",
-  "Miniature Diorama Building": "Minyatür Diorama Binası",
-  "Toy Construction Vehicles": "Oyuncak İnşaat Araçları",
-  "Educational Science Projects": "Eğitim Bilimleri Projeleri",
   "Technology": "Teknoloji",
   "Artificial Intelligence": "Yapay Zeka",
   "Football": "Futbol",
@@ -362,8 +423,6 @@
   "Football Puzzle Challenges": "Futbol Bulmaca Mücadeleleri",
   "Artificial Intelligence Technology Reviews": "Yapay Zeka Teknolojisi İncelemeleri",
   "Comedy": "Komedi",
-  "Sports Comedy": "Spor Komedisi",
-  "AI Video Art": "Yapay Zeka Video Sanatı",
   "AI Tools": "Yapay Zeka Araçları",
   "Gadgets": "Araçlar",
   "Smartphones & Gadgets": "Akıllı Telefonlar ve Cihazlar",
@@ -388,9 +447,37 @@
   "Sports Entertainment": "Spor Eğlencesi",
   "Software Comparison": "Yazılım Karşılaştırması",
   "Sports Humor": "Spor Mizahı",
-  "K-Pop Parody": "K-Pop Parodisi",
-  "Short-Form Content": "Kısa Form İçeriği",
-  "Retro Aesthetics": "Retro Estetik",
-  "Celebrity Then and Now": "O Zaman ve Şimdiki Ünlü"
+  "Family Vlogging": "Aile Vlogu",
+  "Parenting": "Ebeveynlik",
+  "Family Comedy": "Aile Komedisi",
+  "Comedy Shorts": "Komedi Kısaları",
+  "AI-Generated Family Comedy": "Yapay Zekanın Oluşturduğu Aile Komedisi",
+  "Comedy Skits": "Komedi Skeçleri",
+  "Family-Friendly Comedy Shorts": "Aile Dostu Komedi Kısaları",
+  "Family Comedy Shorts": "Aile Komedisi Kısaları",
+  "Pranks": "Şakalar",
+  "Parenting Moments": "Ebeveynlik Anları",
+  "Child Development": "Çocuk Gelişimi",
+  "Family Humor": "Aile Mizahı",
+  "Parenting Humor": "Ebeveynlik Mizahı",
+  "Toddler Life": "Küçük Çocuk Hayatı",
+  "Baby Humor": "Bebek Mizahı",
+  "Parenting Lifestyle": "Ebeveynlik Yaşam Tarzı",
+  "Baby & Toddler Content": "Bebek ve Küçük Çocuk İçeriği",
+  "Relatable Comedy": "Bağlanabilir Komedi",
+  "Family Dynamics": "Aile Dinamikleri",
+  "Relatable Humor": "Bağlanabilir Mizah",
+  "Student Life": "Öğrenci Hayatı",
+  "Toddler Humor": "Küçük Çocuk Mizahı",
+  "Parenting Skits": "Ebeveynlik Skeçleri",
+  "Cozy Family Content": "Rahat Aile İçeriği",
+  "Cosplay Comedy": "Cosplay Komedisi",
+  "Gaming Parody": "Oyun Parodisi",
+  "Sibling Comedy": "Kardeş Komedisi",
+  "Cute Kids": "Sevimli Çocuklar",
+  "Wholesome Family Moments": "Sağlıklı Aile Anları",
+  "Military Family Life": "Askerlik Aile Hayatı",
+  "Funny Baby Moments": "Komik Bebek Anları",
+  "Toddler Reactions": "Küçük Çocuk Tepkileri"
  }
 }
