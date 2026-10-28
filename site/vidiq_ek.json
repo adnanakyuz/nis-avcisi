@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-27T08:53:09+00:00",
+ "ts": "2026-10-28T08:59:36+00:00",
  "firsat": {
   "Sports News": {
    "seviye": "bos",
@@ -342,6 +342,94 @@
    ],
    "sorgu": "Family Comedy",
    "tarih": "2026-10-27T08:53:09+00:00"
+  },
+  "Parenting": {
+   "seviye": "doymus",
+   "pay": 0.1565710700368055,
+   "toplam": 541709787,
+   "video": 25,
+   "buyuk": 9,
+   "yeniler": [
+    {
+     "kanal_id": "UC5i_nd9cLBB04ggBzMYQ3XA",
+     "kanal": "Liam Family",
+     "izl": 36646775
+    },
+    {
+     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
+     "kanal": "Jerrin K James",
+     "izl": 21813022
+    },
+    {
+     "kanal_id": "UCER7gHtq3CBk8uJq1SbnkLg",
+     "kanal": "BabyFeed TV",
+     "izl": 9684890
+    },
+    {
+     "kanal_id": "UCbcbn-nMnBsqjDmccmzYFWQ",
+     "kanal": "Peverini Herold",
+     "izl": 9324191
+    }
+   ],
+   "sorgu": "Baby Humor",
+   "tarih": "2026-10-28T08:59:36+00:00"
+  },
+  "Sports": {
+   "seviye": "bos",
+   "pay": 0.9451578978782286,
+   "toplam": 312868897,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCtjSapTgl5HdbRpVh4F9JhQ",
+     "kanal": "dazhuanhhh",
+     "izl": 69825616
+    },
+    {
+     "kanal_id": "UCHFlDa2yqvZYuYExIbd-f6A",
+     "kanal": "dazhuan",
+     "izl": 51957782
+    },
+    {
+     "kanal_id": "UCM9MAP-5HEoO0LKDVVj7d1g",
+     "kanal": "George Hillh",
+     "izl": 24682877
+    },
+    {
+     "kanal_id": "UCJEnJQdETg2RHQ0pgmHM6Pw",
+     "kanal": "Alessandro",
+     "izl": 21940162
+    }
+   ],
+   "sorgu": "Major League Baseball",
+   "tarih": "2026-10-28T08:59:36+00:00"
+  },
+  "Storytelling": {
+   "seviye": "doymus",
+   "pay": 0.1834788667614251,
+   "toplam": 14051869,
+   "video": 25,
+   "buyuk": 7,
+   "yeniler": [
+    {
+     "kanal_id": "UC6T-DSIBLY3U8TNC1seMCqw",
+     "kanal": "Tamil Express | Daily News | தமிழ் எக்ஸ்பிரஸ்",
+     "izl": 1655777
+    },
+    {
+     "kanal_id": "UCT6gso47QIthY0iknbgT1_w",
+     "kanal": "Last Lesson ",
+     "izl": 804975
+    },
+    {
+     "kanal_id": "UCxzTcHzzsv8D-dNIykRkl8w",
+     "kanal": "Jewel's Message",
+     "izl": 117469
+    }
+   ],
+   "sorgu": "Human Interest Stories",
+   "tarih": "2026-10-28T08:59:36+00:00"
   }
  },
  "ceviri": {
