@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-29T09:02:11+00:00",
+ "ts": "2026-10-30T09:02:06+00:00",
  "firsat": {
   "Sports News": {
    "seviye": "bos",
@@ -508,6 +508,84 @@
    ],
    "sorgu": "Football Highlights",
    "tarih": "2026-10-29T09:02:11+00:00"
+  },
+  "Travel": {
+   "seviye": "bos",
+   "pay": 0.5510714631185047,
+   "toplam": 172787002,
+   "video": 25,
+   "buyuk": 13,
+   "yeniler": [
+    {
+     "kanal_id": "UCxu5iNTO1Mo0v6FTqjrNF1g",
+     "kanal": "Dozora ☁️",
+     "izl": 59956322
+    },
+    {
+     "kanal_id": "UCQd1ri8GpVBHz0pm3oeuclw",
+     "kanal": "SkyVelle",
+     "izl": 24070195
+    }
+   ],
+   "sorgu": "Road Trips",
+   "tarih": "2026-10-30T09:02:06+00:00"
+  },
+  "Football Entertainment": {
+   "seviye": "doymus",
+   "pay": 0.22158665889736073,
+   "toplam": 231504163,
+   "video": 25,
+   "buyuk": 6,
+   "yeniler": [
+    {
+     "kanal_id": "UCfDotHUdFEaHrc3F9l7oWPA",
+     "kanal": "FHQFUQF",
+     "izl": 25788360
+    },
+    {
+     "kanal_id": "UCHfECPV6_mfyFMlqRJaV5Wg",
+     "kanal": "AI-Mini656",
+     "izl": 9236818
+    },
+    {
+     "kanal_id": "UCncxQbTlylBga8OaWImJXGw",
+     "kanal": "Fgg Ggg",
+     "izl": 6162387
+    },
+    {
+     "kanal_id": "UComahA4eArY633OgJoMAGNw",
+     "kanal": "Ilda Dias",
+     "izl": 4166560
+    }
+   ],
+   "sorgu": "Football Comedy",
+   "tarih": "2026-10-30T09:02:06+00:00"
+  },
+  "Comedy Shorts": {
+   "seviye": "doymus",
+   "pay": 0.12045702119429395,
+   "toplam": 18768495,
+   "video": 25,
+   "buyuk": 4,
+   "yeniler": [
+    {
+     "kanal_id": "UCX-LTVwCyONaFCoxaY1KyDQ",
+     "kanal": "Lauren Webb",
+     "izl": 1883013
+    },
+    {
+     "kanal_id": "UCP83iXHbooenGW1FKVLSu2w",
+     "kanal": "BM Vid",
+     "izl": 197802
+    },
+    {
+     "kanal_id": "UCK9pTInhd5viUV33R29iozg",
+     "kanal": "Me & Ai 777",
+     "izl": 179982
+    }
+   ],
+   "sorgu": "Family Dynamics",
+   "tarih": "2026-10-30T09:02:06+00:00"
   }
  },
  "ceviri": {
