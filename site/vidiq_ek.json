@@ -1,99 +1,6 @@
 {
- "ts": "2026-10-31T08:52:34+00:00",
+ "ts": "2026-11-01T08:56:19+00:00",
  "firsat": {
-  "Travel Vlogging": {
-   "seviye": "doymus",
-   "pay": 0.17196004229496414,
-   "toplam": 363227167,
-   "video": 25,
-   "buyuk": 9,
-   "yeniler": [
-    {
-     "kanal_id": "UCbnouOOJt-JHtrzuZBpxYOw",
-     "kanal": "SkyHug",
-     "izl": 19684790
-    },
-    {
-     "kanal_id": "UCQd1ri8GpVBHz0pm3oeuclw",
-     "kanal": "SkyVelle",
-     "izl": 15652173
-    },
-    {
-     "kanal_id": "UCSdefhQ_HVKH_DHN0-fDWAg",
-     "kanal": "RJ Manoj",
-     "izl": 8920046
-    },
-    {
-     "kanal_id": "UCSBu9tWFU22c7EeONmc4OJQ",
-     "kanal": "Kindred Notes",
-     "izl": 6856843
-    }
-   ],
-   "sorgu": "Travel",
-   "tarih": "2026-10-25T08:43:32+00:00"
-  },
-  "Engineering": {
-   "seviye": "doymus",
-   "pay": 0.21260614615315576,
-   "toplam": 27252754,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCHpufw25edFMhzPNjL6cPKw",
-     "kanal": "Smart Civil Engineer",
-     "izl": 2314936
-    },
-    {
-     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
-     "kanal": "NITROWAR ",
-     "izl": 1763758
-    },
-    {
-     "kanal_id": "UCcSvnusnyrk0d4GOTwG4MZA",
-     "kanal": "Alex Carter ",
-     "izl": 648077
-    },
-    {
-     "kanal_id": "UCjzUVlFGvMzKc40G5pROJ3g",
-     "kanal": "VK CIVIL ENGINEERING ",
-     "izl": 580259
-    }
-   ],
-   "sorgu": "Structural Engineering",
-   "tarih": "2026-10-25T08:43:32+00:00"
-  },
-  "Industrial Engineering": {
-   "seviye": "doymus",
-   "pay": 0.23189882088065392,
-   "toplam": 83684065,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [
-    {
-     "kanal_id": "UCRXB8_Gjn9TuAIMJXNI6umg",
-     "kanal": "Shagun Factory ",
-     "izl": 4468409
-    },
-    {
-     "kanal_id": "UC_DUCwybmK7W9P8oujQaz_w",
-     "kanal": "Ai Factory",
-     "izl": 3924422
-    },
-    {
-     "kanal_id": "UCrFuWYgu5DKIilsftEDDHDQ",
-     "kanal": "Secret skills ",
-     "izl": 3152580
-    },
-    {
-     "kanal_id": "UCzSDzbx5w0dysGZmWhG7pkA",
-     "kanal": "Logic Decoded",
-     "izl": 2505240
-    }
-   ],
-   "sorgu": "Manufacturing Processes",
-   "tarih": "2026-10-25T08:43:32+00:00"
-  },
   "Technology": {
    "seviye": "doymus",
    "pay": 0.05519702376596348,
@@ -591,6 +498,99 @@
    ],
    "sorgu": "Mechanical Engineering",
    "tarih": "2026-10-31T08:52:34+00:00"
+  },
+  "Travel Vlogging": {
+   "seviye": "doymus",
+   "pay": 0.16998443625580953,
+   "toplam": 400159494,
+   "video": 25,
+   "buyuk": 9,
+   "yeniler": [
+    {
+     "kanal_id": "UCQd1ri8GpVBHz0pm3oeuclw",
+     "kanal": "SkyVelle",
+     "izl": 26506367
+    },
+    {
+     "kanal_id": "UCyFbZOH6LhBRXNWA9X6Uf_A",
+     "kanal": "ColorMyPJs",
+     "izl": 19594082
+    },
+    {
+     "kanal_id": "UCPBkKgB6GrOt109APIVXfeQ",
+     "kanal": "shirum",
+     "izl": 12994425
+    },
+    {
+     "kanal_id": "UCSdefhQ_HVKH_DHN0-fDWAg",
+     "kanal": "RJ Manoj",
+     "izl": 8926012
+    }
+   ],
+   "sorgu": "Travel",
+   "tarih": "2026-11-01T08:56:19+00:00"
+  },
+  "Engineering": {
+   "seviye": "bos",
+   "pay": 0.6995940707517955,
+   "toplam": 47359731,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
+     "kanal": "NITROWAR ",
+     "izl": 22230428
+    },
+    {
+     "kanal_id": "UCRKmhJl4Pfj3c_GndjF076w",
+     "kanal": "Source of Livelihood",
+     "izl": 3629699
+    },
+    {
+     "kanal_id": "UCOjgZUmLwQ6Pb3-isF2YJww",
+     "kanal": "Fictodynamics",
+     "izl": 1263386
+    },
+    {
+     "kanal_id": "UCkBYJcqoKheh6vvLKgv1CkQ",
+     "kanal": "engineering_adda_11",
+     "izl": 907062
+    }
+   ],
+   "sorgu": "Structural Engineering",
+   "tarih": "2026-11-01T08:56:19+00:00"
+  },
+  "Industrial Engineering": {
+   "seviye": "doymus",
+   "pay": 0.11567439051838722,
+   "toplam": 142088823,
+   "video": 25,
+   "buyuk": 6,
+   "yeniler": [
+    {
+     "kanal_id": "UCRXB8_Gjn9TuAIMJXNI6umg",
+     "kanal": "Shagun Factory ",
+     "izl": 8279596
+    },
+    {
+     "kanal_id": "UCrFuWYgu5DKIilsftEDDHDQ",
+     "kanal": "Secret skills ",
+     "izl": 3945439
+    },
+    {
+     "kanal_id": "UCdvq1PfDKiRHwH9INKiuV8Q",
+     "kanal": "Ai Noha",
+     "izl": 1736720
+    },
+    {
+     "kanal_id": "UCOnt14VpysfkCfsnUWDmS4A",
+     "kanal": "How It’s Processed",
+     "izl": 1358436
+    }
+   ],
+   "sorgu": "Manufacturing Processes",
+   "tarih": "2026-11-01T08:56:19+00:00"
   }
  },
  "ceviri": {
