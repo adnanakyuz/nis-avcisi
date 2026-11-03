@@ -1,84 +1,6 @@
 {
- "ts": "2026-11-02T09:16:05+00:00",
+ "ts": "2026-11-03T09:00:28+00:00",
  "firsat": {
-  "Comedy": {
-   "seviye": "orta",
-   "pay": 0.2553005850967311,
-   "toplam": 362639353,
-   "video": 25,
-   "buyuk": 12,
-   "yeniler": [
-    {
-     "kanal_id": "UCoo5zZBf7lWwHY8U6jET5Sw",
-     "kanal": "Hibben Kusak",
-     "izl": 47038842
-    },
-    {
-     "kanal_id": "UCgT4YcfPQ5xKrYCIu82PrPw",
-     "kanal": "Shrek Team ",
-     "izl": 12664580
-    },
-    {
-     "kanal_id": "UC0YkjA9149czZA71okcTMCA",
-     "kanal": "Cozy Pod",
-     "izl": 12209573
-    },
-    {
-     "kanal_id": "UCGdUkh2VbqkqwTgd84UVvZQ",
-     "kanal": "CreepCrawler",
-     "izl": 11935906
-    }
-   ],
-   "sorgu": "Pranks",
-   "tarih": "2026-10-27T08:53:09+00:00"
-  },
-  "Family Vlogging": {
-   "seviye": "orta",
-   "pay": 0.2867865166263054,
-   "toplam": 61602802,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [
-    {
-     "kanal_id": "UCc0zVNHiljE3i-B5Z06V47Q",
-     "kanal": "Family Moments",
-     "izl": 9422399
-    },
-    {
-     "kanal_id": "UCS0xIzWRjxW1pMTSTU0wAww",
-     "kanal": "Tiny Boss",
-     "izl": 2810800
-    },
-    {
-     "kanal_id": "UCp4LVkUhJT0cw7UYQD8RqdA",
-     "kanal": "rgfthyj",
-     "izl": 2050240
-    },
-    {
-     "kanal_id": "UCknOPfZeI1v_T9Z0bKCUqng",
-     "kanal": "True MomLife",
-     "izl": 836329
-    }
-   ],
-   "sorgu": "Parenting Moments",
-   "tarih": "2026-10-27T08:53:09+00:00"
-  },
-  "Animation": {
-   "seviye": "doymus",
-   "pay": 0.12899665377098515,
-   "toplam": 701946875,
-   "video": 25,
-   "buyuk": 16,
-   "yeniler": [
-    {
-     "kanal_id": "UCDh0VaU4OYiFLshEzxij1dg",
-     "kanal": "Bro Mode ON",
-     "izl": 90548798
-    }
-   ],
-   "sorgu": "Family Comedy",
-   "tarih": "2026-10-27T08:53:09+00:00"
-  },
   "Parenting": {
    "seviye": "doymus",
    "pay": 0.1565710700368055,
@@ -591,6 +513,94 @@
    ],
    "sorgu": "Civil Engineering",
    "tarih": "2026-11-02T09:16:05+00:00"
+  },
+  "Comedy": {
+   "seviye": "doymus",
+   "pay": 0.20793428898937455,
+   "toplam": 492736905,
+   "video": 25,
+   "buyuk": 15,
+   "yeniler": [
+    {
+     "kanal_id": "UCoo5zZBf7lWwHY8U6jET5Sw",
+     "kanal": "Hibben Kusak",
+     "izl": 56238084
+    },
+    {
+     "kanal_id": "UC3caWhO0GAGk_rkwxxdseqw",
+     "kanal": "dashaz",
+     "izl": 32244419
+    },
+    {
+     "kanal_id": "UCGdUkh2VbqkqwTgd84UVvZQ",
+     "kanal": "CreepCrawler",
+     "izl": 13935050
+    },
+    {
+     "kanal_id": "UCFSVH9DdTh9fpcSaKlg90mg",
+     "kanal": "TOCO Scare Cam",
+     "izl": 39345
+    }
+   ],
+   "sorgu": "Pranks",
+   "tarih": "2026-11-03T09:00:28+00:00"
+  },
+  "Family Vlogging": {
+   "seviye": "doymus",
+   "pay": 0.05168627711008552,
+   "toplam": 328983977,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCc0zVNHiljE3i-B5Z06V47Q",
+     "kanal": "Family Moments",
+     "izl": 12252012
+    },
+    {
+     "kanal_id": "UCl-cr2c5XVfDBpPI8e2Es5A",
+     "kanal": "Kathy Cruz",
+     "izl": 1511343
+    },
+    {
+     "kanal_id": "UCq2oH4yTIYLxWbASxCRgpEw",
+     "kanal": "Little Leo Rules",
+     "izl": 754168
+    },
+    {
+     "kanal_id": "UCD9Ax4ynWfk_xFYSQLVr7Yw",
+     "kanal": "Viral Little Baby YT",
+     "izl": 657494
+    }
+   ],
+   "sorgu": "Parenting Moments",
+   "tarih": "2026-11-03T09:00:28+00:00"
+  },
+  "Animation": {
+   "seviye": "doymus",
+   "pay": 0.18651139945706383,
+   "toplam": 882043631,
+   "video": 25,
+   "buyuk": 16,
+   "yeniler": [
+    {
+     "kanal_id": "UCDh0VaU4OYiFLshEzxij1dg",
+     "kanal": "Bro Mode ON",
+     "izl": 102624136
+    },
+    {
+     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
+     "kanal": "Jerrin K James",
+     "izl": 33588670
+    },
+    {
+     "kanal_id": "UC6SuqnY76Hq6u-TC00ZlHyQ",
+     "kanal": "Tiny Boss",
+     "izl": 28298386
+    }
+   ],
+   "sorgu": "Family Comedy",
+   "tarih": "2026-11-03T09:00:28+00:00"
   }
  },
  "ceviri": {
