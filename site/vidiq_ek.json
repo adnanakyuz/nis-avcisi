@@ -1,94 +1,6 @@
 {
- "ts": "2026-11-03T09:00:28+00:00",
+ "ts": "2026-11-04T09:05:15+00:00",
  "firsat": {
-  "Parenting": {
-   "seviye": "doymus",
-   "pay": 0.1565710700368055,
-   "toplam": 541709787,
-   "video": 25,
-   "buyuk": 9,
-   "yeniler": [
-    {
-     "kanal_id": "UC5i_nd9cLBB04ggBzMYQ3XA",
-     "kanal": "Liam Family",
-     "izl": 36646775
-    },
-    {
-     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
-     "kanal": "Jerrin K James",
-     "izl": 21813022
-    },
-    {
-     "kanal_id": "UCER7gHtq3CBk8uJq1SbnkLg",
-     "kanal": "BabyFeed TV",
-     "izl": 9684890
-    },
-    {
-     "kanal_id": "UCbcbn-nMnBsqjDmccmzYFWQ",
-     "kanal": "Peverini Herold",
-     "izl": 9324191
-    }
-   ],
-   "sorgu": "Baby Humor",
-   "tarih": "2026-10-28T08:59:36+00:00"
-  },
-  "Sports": {
-   "seviye": "bos",
-   "pay": 0.9451578978782286,
-   "toplam": 312868897,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCtjSapTgl5HdbRpVh4F9JhQ",
-     "kanal": "dazhuanhhh",
-     "izl": 69825616
-    },
-    {
-     "kanal_id": "UCHFlDa2yqvZYuYExIbd-f6A",
-     "kanal": "dazhuan",
-     "izl": 51957782
-    },
-    {
-     "kanal_id": "UCM9MAP-5HEoO0LKDVVj7d1g",
-     "kanal": "George Hillh",
-     "izl": 24682877
-    },
-    {
-     "kanal_id": "UCJEnJQdETg2RHQ0pgmHM6Pw",
-     "kanal": "Alessandro",
-     "izl": 21940162
-    }
-   ],
-   "sorgu": "Major League Baseball",
-   "tarih": "2026-10-28T08:59:36+00:00"
-  },
-  "Storytelling": {
-   "seviye": "doymus",
-   "pay": 0.1834788667614251,
-   "toplam": 14051869,
-   "video": 25,
-   "buyuk": 7,
-   "yeniler": [
-    {
-     "kanal_id": "UC6T-DSIBLY3U8TNC1seMCqw",
-     "kanal": "Tamil Express | Daily News | தமிழ் எக்ஸ்பிரஸ்",
-     "izl": 1655777
-    },
-    {
-     "kanal_id": "UCT6gso47QIthY0iknbgT1_w",
-     "kanal": "Last Lesson ",
-     "izl": 804975
-    },
-    {
-     "kanal_id": "UCxzTcHzzsv8D-dNIykRkl8w",
-     "kanal": "Jewel's Message",
-     "izl": 117469
-    }
-   ],
-   "sorgu": "Human Interest Stories",
-   "tarih": "2026-10-28T08:59:36+00:00"
-  },
   "Human Interest Stories": {
    "seviye": "orta",
    "pay": 0.27195646481519586,
@@ -601,6 +513,99 @@
    ],
    "sorgu": "Family Comedy",
    "tarih": "2026-11-03T09:00:28+00:00"
+  },
+  "Parenting": {
+   "seviye": "orta",
+   "pay": 0.30075262284204074,
+   "toplam": 445496710,
+   "video": 25,
+   "buyuk": 5,
+   "yeniler": [
+    {
+     "kanal_id": "UC5i_nd9cLBB04ggBzMYQ3XA",
+     "kanal": "Liam Family",
+     "izl": 46099859
+    },
+    {
+     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
+     "kanal": "Jerrin K James",
+     "izl": 34490976
+    },
+    {
+     "kanal_id": "UCdbBQk-30MzM_rU9_lOV_nQ",
+     "kanal": "Shadow the dog",
+     "izl": 18439126
+    },
+    {
+     "kanal_id": "UCbcbn-nMnBsqjDmccmzYFWQ",
+     "kanal": "Peverini Herold",
+     "izl": 10719456
+    }
+   ],
+   "sorgu": "Baby Humor",
+   "tarih": "2026-11-04T09:05:15+00:00"
+  },
+  "Sports": {
+   "seviye": "bos",
+   "pay": 0.8201356426469613,
+   "toplam": 191457927,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCOvNjsVQemdxnIJcHMFA9dA",
+     "kanal": "Nour Newparis",
+     "izl": 27345455
+    },
+    {
+     "kanal_id": "UC6yvmDqfbR5kyOQgHbqVaRQ",
+     "kanal": "Fauls Hickok",
+     "izl": 19240915
+    },
+    {
+     "kanal_id": "UC_jwCrCySVk4sTw5X46w7kA",
+     "kanal": "AI LOL Vault",
+     "izl": 15990235
+    },
+    {
+     "kanal_id": "UChWmeXg0wX05gSzJjiO64bw",
+     "kanal": "Sthella Topalov",
+     "izl": 15739630
+    }
+   ],
+   "sorgu": "Major League Baseball",
+   "tarih": "2026-11-04T09:05:15+00:00"
+  },
+  "Storytelling": {
+   "seviye": "doymus",
+   "pay": 0.04216678743199284,
+   "toplam": 9049231,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCMInDM-r1cXJWXicgRNyTHQ",
+     "kanal": "VMEGA TV",
+     "izl": 224701
+    },
+    {
+     "kanal_id": "UCxzTcHzzsv8D-dNIykRkl8w",
+     "kanal": "Jewel's Message",
+     "izl": 117651
+    },
+    {
+     "kanal_id": "UCgxHtv1gNLYRsxoEYO8V93Q",
+     "kanal": "Front Point News",
+     "izl": 39224
+    },
+    {
+     "kanal_id": "UCA2UCu5tCTVLgmymKL6e9eA",
+     "kanal": "AustinNewsSayWhat",
+     "izl": 1
+    }
+   ],
+   "sorgu": "Human Interest Stories",
+   "tarih": "2026-11-04T09:05:15+00:00"
   }
  },
  "ceviri": {
