@@ -1,84 +1,6 @@
 {
- "ts": "2026-11-04T09:05:15+00:00",
+ "ts": "2026-11-05T09:11:34+00:00",
  "firsat": {
-  "Human Interest Stories": {
-   "seviye": "orta",
-   "pay": 0.27195646481519586,
-   "toplam": 34729794,
-   "video": 25,
-   "buyuk": 7,
-   "yeniler": [
-    {
-     "kanal_id": "UCHM9JHGXjvtMPH6_SeKl6sg",
-     "kanal": "Telling Vault ",
-     "izl": 3727528
-    },
-    {
-     "kanal_id": "UC39AzUUcO0Y-5QJvm0-2eWw",
-     "kanal": "Inspirational Videos",
-     "izl": 1575865
-    },
-    {
-     "kanal_id": "UC-sk-lIeh4ohdZlsquKRpsg",
-     "kanal": "Facts high volt",
-     "izl": 1383769
-    },
-    {
-     "kanal_id": "UCTrLa2cEspBkE70ImUT0i2g",
-     "kanal": "AI Cartoons ",
-     "izl": 818015
-    }
-   ],
-   "sorgu": "Inspirational Stories",
-   "tarih": "2026-10-29T09:02:11+00:00"
-  },
-  "Family Comedy": {
-   "seviye": "orta",
-   "pay": 0.28843474013050224,
-   "toplam": 184706537,
-   "video": 25,
-   "buyuk": 6,
-   "yeniler": [
-    {
-     "kanal_id": "UCmARPttasZCkwUIlCBGzo7w",
-     "kanal": "cetone tiny baby",
-     "izl": 11811557
-    },
-    {
-     "kanal_id": "UCc0zVNHiljE3i-B5Z06V47Q",
-     "kanal": "Family Moments",
-     "izl": 10371652
-    },
-    {
-     "kanal_id": "UC7DPN-rumdiFmimLOtAqBCg",
-     "kanal": "RandomLOL",
-     "izl": 8865266
-    },
-    {
-     "kanal_id": "UCS5PvDJCS1F2Bx74fYAOcUw",
-     "kanal": "Katil Heart & Family",
-     "izl": 6833297
-    }
-   ],
-   "sorgu": "Parenting Humor",
-   "tarih": "2026-10-29T09:02:11+00:00"
-  },
-  "Football": {
-   "seviye": "doymus",
-   "pay": 0.04602648757308101,
-   "toplam": 147556969,
-   "video": 25,
-   "buyuk": 11,
-   "yeniler": [
-    {
-     "kanal_id": "UCEXioWZn4NXstUb0GFyTUkg",
-     "kanal": "FootyCook",
-     "izl": 6791529
-    }
-   ],
-   "sorgu": "Football Highlights",
-   "tarih": "2026-10-29T09:02:11+00:00"
-  },
   "Travel": {
    "seviye": "bos",
    "pay": 0.5510714631185047,
@@ -606,6 +528,78 @@
    ],
    "sorgu": "Human Interest Stories",
    "tarih": "2026-11-04T09:05:15+00:00"
+  },
+  "Human Interest Stories": {
+   "seviye": "orta",
+   "pay": 0.3816946567582274,
+   "toplam": 58027975,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCaQDcHXSF3-Yfj3zgfZEtZg",
+     "kanal": "GK Hindi Stories 1m",
+     "izl": 8541392
+    },
+    {
+     "kanal_id": "UChfsCbZ_8DKVmK5UNCsaUMg",
+     "kanal": "StrategyLabIndia",
+     "izl": 3965679
+    },
+    {
+     "kanal_id": "UC7tp5-XqTplHE--xki2_qAg",
+     "kanal": "TanNova4",
+     "izl": 3383182
+    },
+    {
+     "kanal_id": "UCC5SELJIwSotiL6TEU5e4Wg",
+     "kanal": "Alfaaz Aur Awaaz",
+     "izl": 2674781
+    }
+   ],
+   "sorgu": "Inspirational Stories",
+   "tarih": "2026-11-05T09:11:34+00:00"
+  },
+  "Family Comedy": {
+   "seviye": "doymus",
+   "pay": 0.21985083322185375,
+   "toplam": 237846258,
+   "video": 25,
+   "buyuk": 6,
+   "yeniler": [
+    {
+     "kanal_id": "UCmARPttasZCkwUIlCBGzo7w",
+     "kanal": "cetone tiny baby",
+     "izl": 15122236
+    },
+    {
+     "kanal_id": "UCc0zVNHiljE3i-B5Z06V47Q",
+     "kanal": "Family Moments",
+     "izl": 12893844
+    },
+    {
+     "kanal_id": "UCS5PvDJCS1F2Bx74fYAOcUw",
+     "kanal": "Katil Heart & Family",
+     "izl": 9256355
+    },
+    {
+     "kanal_id": "UCdDBfzs-1BB2s1P4NEP0UqA",
+     "kanal": "Evertail",
+     "izl": 5238389
+    }
+   ],
+   "sorgu": "Parenting Humor",
+   "tarih": "2026-11-05T09:11:34+00:00"
+  },
+  "Football": {
+   "seviye": "doymus",
+   "pay": 0.0,
+   "toplam": 125051489,
+   "video": 25,
+   "buyuk": 15,
+   "yeniler": [],
+   "sorgu": "Football Highlights",
+   "tarih": "2026-11-05T09:11:34+00:00"
   }
  },
  "ceviri": {
