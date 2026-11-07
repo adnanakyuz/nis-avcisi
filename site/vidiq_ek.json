@@ -1,99 +1,6 @@
 {
- "ts": "2026-11-06T09:06:34+00:00",
+ "ts": "2026-11-07T08:58:55+00:00",
  "firsat": {
-  "Sports News": {
-   "seviye": "bos",
-   "pay": 0.5409944313516618,
-   "toplam": 112514916,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCJEnJQdETg2RHQ0pgmHM6Pw",
-     "kanal": "Alessandro",
-     "izl": 23817697
-    },
-    {
-     "kanal_id": "UCgR6FbR1mpNpsAccLAZ9dyg",
-     "kanal": "Yudell Busitzky",
-     "izl": 8883409
-    },
-    {
-     "kanal_id": "UCA0tWXf3Ca_M7LlVlFypTKw",
-     "kanal": "rgsa",
-     "izl": 6481189
-    },
-    {
-     "kanal_id": "UCuj_Mez0fixKGHaWsVm0R2A",
-     "kanal": "𝐌𝐥𝐛 𝐆𝐨𝐦𝐞𝐳🤴🏽",
-     "izl": 5745089
-    }
-   ],
-   "sorgu": "MLB",
-   "tarih": "2026-10-31T08:52:34+00:00"
-  },
-  "Mechanical Engineering": {
-   "seviye": "doymus",
-   "pay": 0.22137509209422834,
-   "toplam": 72017271,
-   "video": 25,
-   "buyuk": 7,
-   "yeniler": [
-    {
-     "kanal_id": "UCJeT-X5BBHR44wAwrlLNXgg",
-     "kanal": "지구또보기",
-     "izl": 4554748
-    },
-    {
-     "kanal_id": "UCgi51M2_xwUUd4CFMACPoiw",
-     "kanal": "Shred Yard",
-     "izl": 2631299
-    },
-    {
-     "kanal_id": "UCEMuWRlZv-3utmQ4xB6il0w",
-     "kanal": "NovaCelli",
-     "izl": 1799804
-    },
-    {
-     "kanal_id": "UC16_CvFZ90sIQ6hffgk9j5g",
-     "kanal": "CurioRush",
-     "izl": 1542617
-    }
-   ],
-   "sorgu": "Heavy Machinery",
-   "tarih": "2026-10-31T08:52:34+00:00"
-  },
-  "Engineering Education": {
-   "seviye": "doymus",
-   "pay": 0.06829001874917195,
-   "toplam": 160263611,
-   "video": 25,
-   "buyuk": 4,
-   "yeniler": [
-    {
-     "kanal_id": "UCKmh0IBF2mYoA-jI0fG72Ug",
-     "kanal": "factory world",
-     "izl": 3774158
-    },
-    {
-     "kanal_id": "UCQtEPkZ-1EcCbIic-SoVaDQ",
-     "kanal": "Adrian mechine",
-     "izl": 3228079
-    },
-    {
-     "kanal_id": "UCq1Yk1unz6IOcaO_Dzib-uQ",
-     "kanal": "Axiom Lab",
-     "izl": 1524744
-    },
-    {
-     "kanal_id": "UCBWx1z-MUF1nr9sbAcKOzOA",
-     "kanal": "Annu Facts 3D",
-     "izl": 1463885
-    }
-   ],
-   "sorgu": "Mechanical Engineering",
-   "tarih": "2026-10-31T08:52:34+00:00"
-  },
   "Travel Vlogging": {
    "seviye": "doymus",
    "pay": 0.16998443625580953,
@@ -610,6 +517,99 @@
    ],
    "sorgu": "Family Dynamics",
    "tarih": "2026-11-06T09:06:34+00:00"
+  },
+  "Sports News": {
+   "seviye": "orta",
+   "pay": 0.37691647391261357,
+   "toplam": 103645032,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCsXL8bkjh0OOyQ2m3GpTUyw",
+     "kanal": "Evelyn Martinez",
+     "izl": 8261562
+    },
+    {
+     "kanal_id": "UCcv3JEYfa-vSCbIKCiZOa2g",
+     "kanal": "Miro",
+     "izl": 8062915
+    },
+    {
+     "kanal_id": "UCLwIyxh5BULbSeZueBxyKJQ",
+     "kanal": "AI Dumb Office",
+     "izl": 6237741
+    },
+    {
+     "kanal_id": "UC3UFcn-F28hfehQh9iKZ_iQ",
+     "kanal": "Eric Lucio",
+     "izl": 4888416
+    }
+   ],
+   "sorgu": "MLB",
+   "tarih": "2026-11-07T08:58:55+00:00"
+  },
+  "Mechanical Engineering": {
+   "seviye": "orta",
+   "pay": 0.43302330473927514,
+   "toplam": 70292226,
+   "video": 25,
+   "buyuk": 5,
+   "yeniler": [
+    {
+     "kanal_id": "UCKmh0IBF2mYoA-jI0fG72Ug",
+     "kanal": "factory world",
+     "izl": 7867525
+    },
+    {
+     "kanal_id": "UCdyOtjn9b6sEKJyuhC4N_QA",
+     "kanal": "Bulldozer Masters",
+     "izl": 6996000
+    },
+    {
+     "kanal_id": "UCrd63Z6XMjjgDaVnvBQ8mwA",
+     "kanal": "Falak 4K Official ",
+     "izl": 5670095
+    },
+    {
+     "kanal_id": "UCwSDcbdE-QyEEqR1WtjhB2w",
+     "kanal": "Master Engineers",
+     "izl": 4014777
+    }
+   ],
+   "sorgu": "Heavy Machinery",
+   "tarih": "2026-11-07T08:58:55+00:00"
+  },
+  "Engineering Education": {
+   "seviye": "doymus",
+   "pay": 0.08590703561473965,
+   "toplam": 162360951,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCH2kOm0CKT4dAeD0PMxporw",
+     "kanal": "The Space Maze",
+     "izl": 5130497
+    },
+    {
+     "kanal_id": "UCQtEPkZ-1EcCbIic-SoVaDQ",
+     "kanal": "Adrian mechine",
+     "izl": 3520267
+    },
+    {
+     "kanal_id": "UCAAHG2x8tNMJU3x8KwQnLUQ",
+     "kanal": " BestHands",
+     "izl": 1672607
+    },
+    {
+     "kanal_id": "UCWzQeBUUYslxi-QOPuuvatg",
+     "kanal": "Dayaram Engineering",
+     "izl": 1608128
+    }
+   ],
+   "sorgu": "Mechanical Engineering",
+   "tarih": "2026-11-07T08:58:55+00:00"
   }
  },
  "ceviri": {
