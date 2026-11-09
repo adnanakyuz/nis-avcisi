@@ -1,89 +1,6 @@
 {
- "ts": "2026-11-08T08:58:55+00:00",
+ "ts": "2026-11-09T09:21:57+00:00",
  "firsat": {
-  "Technology": {
-   "seviye": "doymus",
-   "pay": 0.041813469608654,
-   "toplam": 51322768,
-   "video": 25,
-   "buyuk": 10,
-   "yeniler": [
-    {
-     "kanal_id": "UCOMFfkjCYrZvBWRoRRV99hQ",
-     "kanal": "Sakshi Mutha ",
-     "izl": 868568
-    },
-    {
-     "kanal_id": "UC5nqU8r0fFuxEP9smx95r0A",
-     "kanal": "Rise Mind Tube",
-     "izl": 708847
-    },
-    {
-     "kanal_id": "UCDHy_qf3CJ8azlfbJKEGIHw",
-     "kanal": "kaye.creatives",
-     "izl": 568568
-    }
-   ],
-   "sorgu": "AI Tools",
-   "tarih": "2026-11-02T09:16:05+00:00"
-  },
-  "Artificial Intelligence": {
-   "seviye": "doymus",
-   "pay": 0.042328819939485875,
-   "toplam": 50697917,
-   "video": 25,
-   "buyuk": 8,
-   "yeniler": [
-    {
-     "kanal_id": "UCOMFfkjCYrZvBWRoRRV99hQ",
-     "kanal": "Sakshi Mutha ",
-     "izl": 868568
-    },
-    {
-     "kanal_id": "UC5nqU8r0fFuxEP9smx95r0A",
-     "kanal": "Rise Mind Tube",
-     "izl": 708847
-    },
-    {
-     "kanal_id": "UCDHy_qf3CJ8azlfbJKEGIHw",
-     "kanal": "kaye.creatives",
-     "izl": 568568
-    }
-   ],
-   "sorgu": "AI Tools",
-   "tarih": "2026-11-02T09:16:05+00:00"
-  },
-  "Construction Engineering": {
-   "seviye": "orta",
-   "pay": 0.4220048364163071,
-   "toplam": 91282051,
-   "video": 25,
-   "buyuk": 2,
-   "yeniler": [
-    {
-     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
-     "kanal": "NITROWAR ",
-     "izl": 22915745
-    },
-    {
-     "kanal_id": "UCHpufw25edFMhzPNjL6cPKw",
-     "kanal": "Smart Civil Engineer",
-     "izl": 2911614
-    },
-    {
-     "kanal_id": "UCHAcyBpgz0N5H-Zr9Bfvu6Q",
-     "kanal": "Built Mysteries",
-     "izl": 2425180
-    },
-    {
-     "kanal_id": "UCtZo6jVN3C4_daH8ASBC0WA",
-     "kanal": "Construction Lab 🏗️",
-     "izl": 1939470
-    }
-   ],
-   "sorgu": "Civil Engineering",
-   "tarih": "2026-11-02T09:16:05+00:00"
-  },
   "Comedy": {
    "seviye": "doymus",
    "pay": 0.20793428898937455,
@@ -600,6 +517,89 @@
    ],
    "sorgu": "Manufacturing Processes",
    "tarih": "2026-11-08T08:58:55+00:00"
+  },
+  "Technology": {
+   "seviye": "doymus",
+   "pay": 0.06836974042043388,
+   "toplam": 26257113,
+   "video": 25,
+   "buyuk": 12,
+   "yeniler": [
+    {
+     "kanal_id": "UCOMFfkjCYrZvBWRoRRV99hQ",
+     "kanal": "Sakshi Mutha ",
+     "izl": 979766
+    },
+    {
+     "kanal_id": "UCnjQI0bJHcE8BQFz-E4uEig",
+     "kanal": "LearnX India",
+     "izl": 504726
+    },
+    {
+     "kanal_id": "UCir6kdJGoPTPCmvegeyj4OQ",
+     "kanal": "Fresher Ki Naukri",
+     "izl": 310700
+    }
+   ],
+   "sorgu": "AI Tools",
+   "tarih": "2026-11-09T09:21:57+00:00"
+  },
+  "Artificial Intelligence": {
+   "seviye": "doymus",
+   "pay": 0.07239550544180551,
+   "toplam": 24797009,
+   "video": 25,
+   "buyuk": 13,
+   "yeniler": [
+    {
+     "kanal_id": "UCOMFfkjCYrZvBWRoRRV99hQ",
+     "kanal": "Sakshi Mutha ",
+     "izl": 979766
+    },
+    {
+     "kanal_id": "UCnjQI0bJHcE8BQFz-E4uEig",
+     "kanal": "LearnX India",
+     "izl": 504726
+    },
+    {
+     "kanal_id": "UCir6kdJGoPTPCmvegeyj4OQ",
+     "kanal": "Fresher Ki Naukri",
+     "izl": 310700
+    }
+   ],
+   "sorgu": "AI Tools",
+   "tarih": "2026-11-09T09:21:57+00:00"
+  },
+  "Construction Engineering": {
+   "seviye": "bos",
+   "pay": 0.770185458448775,
+   "toplam": 79779164,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
+     "kanal": "NITROWAR ",
+     "izl": 25446474
+    },
+    {
+     "kanal_id": "UCdqRYXkInIZ3l0D5eUgYDHA",
+     "kanal": "Mystiqo",
+     "izl": 7165769
+    },
+    {
+     "kanal_id": "UCgpD90_m4KkECNMhQ-zzWFw",
+     "kanal": "Undekhi Cheezein",
+     "izl": 4398919
+    },
+    {
+     "kanal_id": "UCZxclQWik0mhrRUYFPJ3HEA",
+     "kanal": "Logibu",
+     "izl": 3770598
+    }
+   ],
+   "sorgu": "Civil Engineering",
+   "tarih": "2026-11-09T09:21:57+00:00"
   }
  },
  "ceviri": {
