@@ -1,94 +1,6 @@
 {
- "ts": "2026-11-09T09:21:57+00:00",
+ "ts": "2026-11-10T09:01:06+00:00",
  "firsat": {
-  "Comedy": {
-   "seviye": "doymus",
-   "pay": 0.20793428898937455,
-   "toplam": 492736905,
-   "video": 25,
-   "buyuk": 15,
-   "yeniler": [
-    {
-     "kanal_id": "UCoo5zZBf7lWwHY8U6jET5Sw",
-     "kanal": "Hibben Kusak",
-     "izl": 56238084
-    },
-    {
-     "kanal_id": "UC3caWhO0GAGk_rkwxxdseqw",
-     "kanal": "dashaz",
-     "izl": 32244419
-    },
-    {
-     "kanal_id": "UCGdUkh2VbqkqwTgd84UVvZQ",
-     "kanal": "CreepCrawler",
-     "izl": 13935050
-    },
-    {
-     "kanal_id": "UCFSVH9DdTh9fpcSaKlg90mg",
-     "kanal": "TOCO Scare Cam",
-     "izl": 39345
-    }
-   ],
-   "sorgu": "Pranks",
-   "tarih": "2026-11-03T09:00:28+00:00"
-  },
-  "Family Vlogging": {
-   "seviye": "doymus",
-   "pay": 0.05168627711008552,
-   "toplam": 328983977,
-   "video": 25,
-   "buyuk": 2,
-   "yeniler": [
-    {
-     "kanal_id": "UCc0zVNHiljE3i-B5Z06V47Q",
-     "kanal": "Family Moments",
-     "izl": 12252012
-    },
-    {
-     "kanal_id": "UCl-cr2c5XVfDBpPI8e2Es5A",
-     "kanal": "Kathy Cruz",
-     "izl": 1511343
-    },
-    {
-     "kanal_id": "UCq2oH4yTIYLxWbASxCRgpEw",
-     "kanal": "Little Leo Rules",
-     "izl": 754168
-    },
-    {
-     "kanal_id": "UCD9Ax4ynWfk_xFYSQLVr7Yw",
-     "kanal": "Viral Little Baby YT",
-     "izl": 657494
-    }
-   ],
-   "sorgu": "Parenting Moments",
-   "tarih": "2026-11-03T09:00:28+00:00"
-  },
-  "Animation": {
-   "seviye": "doymus",
-   "pay": 0.18651139945706383,
-   "toplam": 882043631,
-   "video": 25,
-   "buyuk": 16,
-   "yeniler": [
-    {
-     "kanal_id": "UCDh0VaU4OYiFLshEzxij1dg",
-     "kanal": "Bro Mode ON",
-     "izl": 102624136
-    },
-    {
-     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
-     "kanal": "Jerrin K James",
-     "izl": 33588670
-    },
-    {
-     "kanal_id": "UC6SuqnY76Hq6u-TC00ZlHyQ",
-     "kanal": "Tiny Boss",
-     "izl": 28298386
-    }
-   ],
-   "sorgu": "Family Comedy",
-   "tarih": "2026-11-03T09:00:28+00:00"
-  },
   "Parenting": {
    "seviye": "orta",
    "pay": 0.30075262284204074,
@@ -600,6 +512,79 @@
    ],
    "sorgu": "Civil Engineering",
    "tarih": "2026-11-09T09:21:57+00:00"
+  },
+  "Comedy": {
+   "seviye": "doymus",
+   "pay": 0.1419110682736645,
+   "toplam": 420491916,
+   "video": 25,
+   "buyuk": 17,
+   "yeniler": [
+    {
+     "kanal_id": "UCXN_5V1xmVu18hfFADbXxiQ",
+     "kanal": "RankRoyale",
+     "izl": 29487243
+    },
+    {
+     "kanal_id": "UCGdUkh2VbqkqwTgd84UVvZQ",
+     "kanal": "CreepCrawler",
+     "izl": 16520379
+    },
+    {
+     "kanal_id": "UCJOoMwKyOYH1CbrMig4yL2w",
+     "kanal": "Ai Glam Stories",
+     "izl": 13664835
+    }
+   ],
+   "sorgu": "Pranks",
+   "tarih": "2026-11-10T09:01:06+00:00"
+  },
+  "Family Vlogging": {
+   "seviye": "doymus",
+   "pay": 0.12388365240416159,
+   "toplam": 68281600,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCGLIewiligBSz9rYUbC3x4Q",
+     "kanal": "alexxroyaa",
+     "izl": 4071667
+    },
+    {
+     "kanal_id": "UCmQEvCfrfG0eAvWOYfpQEwQ",
+     "kanal": "Quick TechOn",
+     "izl": 2605942
+    },
+    {
+     "kanal_id": "UCufVrvg4IJ9TSlBEmvbY8NA",
+     "kanal": "Replay K-Pop Daily",
+     "izl": 477529
+    },
+    {
+     "kanal_id": "UCXkbz_6BoJFCSDi40hcdZbA",
+     "kanal": "Girl Unveiled",
+     "izl": 453713
+    }
+   ],
+   "sorgu": "Parenting Moments",
+   "tarih": "2026-11-10T09:01:06+00:00"
+  },
+  "Animation": {
+   "seviye": "doymus",
+   "pay": 0.05014720127624843,
+   "toplam": 794523682,
+   "video": 25,
+   "buyuk": 16,
+   "yeniler": [
+    {
+     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
+     "kanal": "Jerrin K James",
+     "izl": 39843139
+    }
+   ],
+   "sorgu": "Family Comedy",
+   "tarih": "2026-11-10T09:01:06+00:00"
   }
  },
  "ceviri": {
