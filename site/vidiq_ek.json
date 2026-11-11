@@ -1,99 +1,6 @@
 {
- "ts": "2026-11-10T09:01:06+00:00",
+ "ts": "2026-11-11T09:05:57+00:00",
  "firsat": {
-  "Parenting": {
-   "seviye": "orta",
-   "pay": 0.30075262284204074,
-   "toplam": 445496710,
-   "video": 25,
-   "buyuk": 5,
-   "yeniler": [
-    {
-     "kanal_id": "UC5i_nd9cLBB04ggBzMYQ3XA",
-     "kanal": "Liam Family",
-     "izl": 46099859
-    },
-    {
-     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
-     "kanal": "Jerrin K James",
-     "izl": 34490976
-    },
-    {
-     "kanal_id": "UCdbBQk-30MzM_rU9_lOV_nQ",
-     "kanal": "Shadow the dog",
-     "izl": 18439126
-    },
-    {
-     "kanal_id": "UCbcbn-nMnBsqjDmccmzYFWQ",
-     "kanal": "Peverini Herold",
-     "izl": 10719456
-    }
-   ],
-   "sorgu": "Baby Humor",
-   "tarih": "2026-11-04T09:05:15+00:00"
-  },
-  "Sports": {
-   "seviye": "bos",
-   "pay": 0.8201356426469613,
-   "toplam": 191457927,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCOvNjsVQemdxnIJcHMFA9dA",
-     "kanal": "Nour Newparis",
-     "izl": 27345455
-    },
-    {
-     "kanal_id": "UC6yvmDqfbR5kyOQgHbqVaRQ",
-     "kanal": "Fauls Hickok",
-     "izl": 19240915
-    },
-    {
-     "kanal_id": "UC_jwCrCySVk4sTw5X46w7kA",
-     "kanal": "AI LOL Vault",
-     "izl": 15990235
-    },
-    {
-     "kanal_id": "UChWmeXg0wX05gSzJjiO64bw",
-     "kanal": "Sthella Topalov",
-     "izl": 15739630
-    }
-   ],
-   "sorgu": "Major League Baseball",
-   "tarih": "2026-11-04T09:05:15+00:00"
-  },
-  "Storytelling": {
-   "seviye": "doymus",
-   "pay": 0.04216678743199284,
-   "toplam": 9049231,
-   "video": 25,
-   "buyuk": 2,
-   "yeniler": [
-    {
-     "kanal_id": "UCMInDM-r1cXJWXicgRNyTHQ",
-     "kanal": "VMEGA TV",
-     "izl": 224701
-    },
-    {
-     "kanal_id": "UCxzTcHzzsv8D-dNIykRkl8w",
-     "kanal": "Jewel's Message",
-     "izl": 117651
-    },
-    {
-     "kanal_id": "UCgxHtv1gNLYRsxoEYO8V93Q",
-     "kanal": "Front Point News",
-     "izl": 39224
-    },
-    {
-     "kanal_id": "UCA2UCu5tCTVLgmymKL6e9eA",
-     "kanal": "AustinNewsSayWhat",
-     "izl": 1
-    }
-   ],
-   "sorgu": "Human Interest Stories",
-   "tarih": "2026-11-04T09:05:15+00:00"
-  },
   "Human Interest Stories": {
    "seviye": "orta",
    "pay": 0.3816946567582274,
@@ -585,6 +492,89 @@
    ],
    "sorgu": "Family Comedy",
    "tarih": "2026-11-10T09:01:06+00:00"
+  },
+  "Parenting": {
+   "seviye": "doymus",
+   "pay": 0.17930523753201882,
+   "toplam": 798638478,
+   "video": 25,
+   "buyuk": 5,
+   "yeniler": [
+    {
+     "kanal_id": "UC5i_nd9cLBB04ggBzMYQ3XA",
+     "kanal": "Liam Family",
+     "izl": 48426545
+    },
+    {
+     "kanal_id": "UCq5_L-CzH6GlXEG6KyQ071w",
+     "kanal": "Baby Speaks",
+     "izl": 29986479
+    },
+    {
+     "kanal_id": "UCZP2YVKCI8GnjT6laX1AZ9Q",
+     "kanal": "Tiny Love Family",
+     "izl": 21025758
+    },
+    {
+     "kanal_id": "UCQG4yosEVEEn445cpZp4BCQ",
+     "kanal": "hikko Ranks",
+     "izl": 20540868
+    }
+   ],
+   "sorgu": "Baby Humor",
+   "tarih": "2026-11-11T09:05:57+00:00"
+  },
+  "Sports": {
+   "seviye": "bos",
+   "pay": 0.6136408075861526,
+   "toplam": 163306812,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCefHZqU2_RArzV0epXQffmg",
+     "kanal": "gvoiaje",
+     "izl": 15418413
+    },
+    {
+     "kanal_id": "UCHm5YMbv8S7i4Sqmm2yFaeA",
+     "kanal": "ไพศาล หมื่นโยชน์",
+     "izl": 12433778
+    },
+    {
+     "kanal_id": "UCDXRD43jh8_g_yu_llUe51w",
+     "kanal": "Eryihjy outrfj",
+     "izl": 9638641
+    },
+    {
+     "kanal_id": "UCWbcS6mSKM12AWrKfmFOa_A",
+     "kanal": "Mccray Margaryanftt",
+     "izl": 7119967
+    }
+   ],
+   "sorgu": "Major League Baseball",
+   "tarih": "2026-11-11T09:05:57+00:00"
+  },
+  "Storytelling": {
+   "seviye": "doymus",
+   "pay": 0.010895493896377707,
+   "toplam": 10812268,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCxzTcHzzsv8D-dNIykRkl8w",
+     "kanal": "Jewel's Message",
+     "izl": 117804
+    },
+    {
+     "kanal_id": "UCA2UCu5tCTVLgmymKL6e9eA",
+     "kanal": "AustinNewsSayWhat",
+     "izl": 1
+    }
+   ],
+   "sorgu": "Human Interest Stories",
+   "tarih": "2026-11-11T09:05:57+00:00"
   }
  },
  "ceviri": {
