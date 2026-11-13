@@ -1,94 +1,6 @@
 {
- "ts": "2026-11-12T16:49:00+00:00",
+ "ts": "2026-11-13T16:24:59+00:00",
  "firsat": {
-  "Travel": {
-   "seviye": "orta",
-   "pay": 0.48299674791688646,
-   "toplam": 142118754,
-   "video": 25,
-   "buyuk": 12,
-   "yeniler": [
-    {
-     "kanal_id": "UCxu5iNTO1Mo0v6FTqjrNF1g",
-     "kanal": "Dozora ☁️",
-     "izl": 60057624
-    },
-    {
-     "kanal_id": "UC9Bggf3TT5PrIzZcq4XOSDg",
-     "kanal": "Embitos",
-     "izl": 5311694
-    },
-    {
-     "kanal_id": "UCqyAlTxEpPVFYxFpt5Rxukg",
-     "kanal": "MYM | MY Moments ",
-     "izl": 3273578
-    }
-   ],
-   "sorgu": "Road Trips",
-   "tarih": "2026-11-06T09:06:34+00:00"
-  },
-  "Football Entertainment": {
-   "seviye": "orta",
-   "pay": 0.29311812943344195,
-   "toplam": 313537007,
-   "video": 25,
-   "buyuk": 8,
-   "yeniler": [
-    {
-     "kanal_id": "UCfDotHUdFEaHrc3F9l7oWPA",
-     "kanal": "FHQFUQF",
-     "izl": 37172904
-    },
-    {
-     "kanal_id": "UCJEnJQdETg2RHQ0pgmHM6Pw",
-     "kanal": "Alessandro",
-     "izl": 25216471
-    },
-    {
-     "kanal_id": "UCHfECPV6_mfyFMlqRJaV5Wg",
-     "kanal": "AI-Mini656",
-     "izl": 9686572
-    },
-    {
-     "kanal_id": "UCm1qJmQFD1u3BU8EowUqJzg",
-     "kanal": "cvcv",
-     "izl": 8899209
-    }
-   ],
-   "sorgu": "Football Comedy",
-   "tarih": "2026-11-06T09:06:34+00:00"
-  },
-  "Comedy Shorts": {
-   "seviye": "orta",
-   "pay": 0.26191412569166295,
-   "toplam": 12446633,
-   "video": 25,
-   "buyuk": 5,
-   "yeniler": [
-    {
-     "kanal_id": "UCX-LTVwCyONaFCoxaY1KyDQ",
-     "kanal": "Lauren Webb",
-     "izl": 1885448
-    },
-    {
-     "kanal_id": "UCVwfkI-KIb51wq6x0x0R8ag",
-     "kanal": "Hotttt007",
-     "izl": 639926
-    },
-    {
-     "kanal_id": "UCP83iXHbooenGW1FKVLSu2w",
-     "kanal": "BM Vid",
-     "izl": 197865
-    },
-    {
-     "kanal_id": "UCkCbV88L7QaKycI2kub1Bdw",
-     "kanal": "Jakab Gipsz",
-     "izl": 192973
-    }
-   ],
-   "sorgu": "Family Dynamics",
-   "tarih": "2026-11-06T09:06:34+00:00"
-  },
   "Sports News": {
    "seviye": "orta",
    "pay": 0.37691647391261357,
@@ -581,6 +493,99 @@
    ],
    "sorgu": "Football Highlights",
    "tarih": "2026-11-12T16:49:00+00:00"
+  },
+  "Travel": {
+   "seviye": "orta",
+   "pay": 0.47610717878322156,
+   "toplam": 153494745,
+   "video": 25,
+   "buyuk": 11,
+   "yeniler": [
+    {
+     "kanal_id": "UCxu5iNTO1Mo0v6FTqjrNF1g",
+     "kanal": "Dozora ☁️",
+     "izl": 60462189
+    },
+    {
+     "kanal_id": "UC9Bggf3TT5PrIzZcq4XOSDg",
+     "kanal": "Embitos",
+     "izl": 6394314
+    },
+    {
+     "kanal_id": "UCezBYD4TtMfeph3cppY5NKg",
+     "kanal": "Knootie",
+     "izl": 2302580
+    },
+    {
+     "kanal_id": "UCqyAlTxEpPVFYxFpt5Rxukg",
+     "kanal": "MYM | MY Moments ",
+     "izl": 1985385
+    }
+   ],
+   "sorgu": "Road Trips",
+   "tarih": "2026-11-13T16:24:59+00:00"
+  },
+  "Football Entertainment": {
+   "seviye": "doymus",
+   "pay": 0.2407554853843169,
+   "toplam": 304231008,
+   "video": 25,
+   "buyuk": 9,
+   "yeniler": [
+    {
+     "kanal_id": "UCfDotHUdFEaHrc3F9l7oWPA",
+     "kanal": "FHQFUQF",
+     "izl": 50636146
+    },
+    {
+     "kanal_id": "UCHfECPV6_mfyFMlqRJaV5Wg",
+     "kanal": "AI-Mini656",
+     "izl": 10791164
+    },
+    {
+     "kanal_id": "UCgas6erRmjfjKHMSrWlvzXw",
+     "kanal": "EltelwanyTV",
+     "izl": 4414999
+    },
+    {
+     "kanal_id": "UCuRfeZ-FDLMTDAm5Be-h3kg",
+     "kanal": "Bertrand Raio",
+     "izl": 3833138
+    }
+   ],
+   "sorgu": "Football Comedy",
+   "tarih": "2026-11-13T16:24:59+00:00"
+  },
+  "Comedy Shorts": {
+   "seviye": "doymus",
+   "pay": 0.08510887811279823,
+   "toplam": 28284840,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCX-LTVwCyONaFCoxaY1KyDQ",
+     "kanal": "Lauren Webb",
+     "izl": 1886138
+    },
+    {
+     "kanal_id": "UCp2M-bN6SYDvv4PzHSUGCnA",
+     "kanal": "Relatable Social Realities",
+     "izl": 174894
+    },
+    {
+     "kanal_id": "UCbtIi8eOp_5OlUbUw7CY9Ag",
+     "kanal": "Babu tussi",
+     "izl": 117819
+    },
+    {
+     "kanal_id": "UCk9ieSJ9l80dCTIvCPT9qSw",
+     "kanal": "SasiBassTv",
+     "izl": 113350
+    }
+   ],
+   "sorgu": "Family Dynamics",
+   "tarih": "2026-11-13T16:24:59+00:00"
   }
  },
  "ceviri": {
