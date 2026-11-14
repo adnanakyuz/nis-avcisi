@@ -1,99 +1,6 @@
 {
- "ts": "2026-11-13T16:24:59+00:00",
+ "ts": "2026-11-14T15:05:05+00:00",
  "firsat": {
-  "Sports News": {
-   "seviye": "orta",
-   "pay": 0.37691647391261357,
-   "toplam": 103645032,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCsXL8bkjh0OOyQ2m3GpTUyw",
-     "kanal": "Evelyn Martinez",
-     "izl": 8261562
-    },
-    {
-     "kanal_id": "UCcv3JEYfa-vSCbIKCiZOa2g",
-     "kanal": "Miro",
-     "izl": 8062915
-    },
-    {
-     "kanal_id": "UCLwIyxh5BULbSeZueBxyKJQ",
-     "kanal": "AI Dumb Office",
-     "izl": 6237741
-    },
-    {
-     "kanal_id": "UC3UFcn-F28hfehQh9iKZ_iQ",
-     "kanal": "Eric Lucio",
-     "izl": 4888416
-    }
-   ],
-   "sorgu": "MLB",
-   "tarih": "2026-11-07T08:58:55+00:00"
-  },
-  "Mechanical Engineering": {
-   "seviye": "orta",
-   "pay": 0.43302330473927514,
-   "toplam": 70292226,
-   "video": 25,
-   "buyuk": 5,
-   "yeniler": [
-    {
-     "kanal_id": "UCKmh0IBF2mYoA-jI0fG72Ug",
-     "kanal": "factory world",
-     "izl": 7867525
-    },
-    {
-     "kanal_id": "UCdyOtjn9b6sEKJyuhC4N_QA",
-     "kanal": "Bulldozer Masters",
-     "izl": 6996000
-    },
-    {
-     "kanal_id": "UCrd63Z6XMjjgDaVnvBQ8mwA",
-     "kanal": "Falak 4K Official ",
-     "izl": 5670095
-    },
-    {
-     "kanal_id": "UCwSDcbdE-QyEEqR1WtjhB2w",
-     "kanal": "Master Engineers",
-     "izl": 4014777
-    }
-   ],
-   "sorgu": "Heavy Machinery",
-   "tarih": "2026-11-07T08:58:55+00:00"
-  },
-  "Engineering Education": {
-   "seviye": "doymus",
-   "pay": 0.08590703561473965,
-   "toplam": 162360951,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCH2kOm0CKT4dAeD0PMxporw",
-     "kanal": "The Space Maze",
-     "izl": 5130497
-    },
-    {
-     "kanal_id": "UCQtEPkZ-1EcCbIic-SoVaDQ",
-     "kanal": "Adrian mechine",
-     "izl": 3520267
-    },
-    {
-     "kanal_id": "UCAAHG2x8tNMJU3x8KwQnLUQ",
-     "kanal": " BestHands",
-     "izl": 1672607
-    },
-    {
-     "kanal_id": "UCWzQeBUUYslxi-QOPuuvatg",
-     "kanal": "Dayaram Engineering",
-     "izl": 1608128
-    }
-   ],
-   "sorgu": "Mechanical Engineering",
-   "tarih": "2026-11-07T08:58:55+00:00"
-  },
   "Travel Vlogging": {
    "seviye": "doymus",
    "pay": 0.08001661047060782,
@@ -586,6 +493,99 @@
    ],
    "sorgu": "Family Dynamics",
    "tarih": "2026-11-13T16:24:59+00:00"
+  },
+  "Sports News": {
+   "seviye": "orta",
+   "pay": 0.34191093224116786,
+   "toplam": 161020780,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCDXRD43jh8_g_yu_llUe51w",
+     "kanal": "Eryihjy outrfj",
+     "izl": 11145068
+    },
+    {
+     "kanal_id": "UCWbcS6mSKM12AWrKfmFOa_A",
+     "kanal": "Mccray Margaryanftt",
+     "izl": 11031182
+    },
+    {
+     "kanal_id": "UCJEnJQdETg2RHQ0pgmHM6Pw",
+     "kanal": "Alessandro",
+     "izl": 7885292
+    },
+    {
+     "kanal_id": "UC3UFcn-F28hfehQh9iKZ_iQ",
+     "kanal": "Eric Lucio",
+     "izl": 7386902
+    }
+   ],
+   "sorgu": "MLB",
+   "tarih": "2026-11-14T15:05:05+00:00"
+  },
+  "Mechanical Engineering": {
+   "seviye": "orta",
+   "pay": 0.4419292192128745,
+   "toplam": 82402870,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCDrQ0IPduY0wCV56YlKGTIw",
+     "kanal": "Amazing Work Here",
+     "izl": 8734640
+    },
+    {
+     "kanal_id": "UCdyOtjn9b6sEKJyuhC4N_QA",
+     "kanal": "Bulldozer Masters",
+     "izl": 7758959
+    },
+    {
+     "kanal_id": "UC7Q_mzqpKNQazpcOi50bsoA",
+     "kanal": "JCB Wala",
+     "izl": 3434086
+    },
+    {
+     "kanal_id": "UCfOQ2314Kc_HP-WddbKpRhA",
+     "kanal": "Ultimate Engineers",
+     "izl": 2663471
+    }
+   ],
+   "sorgu": "Heavy Machinery",
+   "tarih": "2026-11-14T15:05:05+00:00"
+  },
+  "Gardening": {
+   "seviye": "doymus",
+   "pay": 0.21448224300099947,
+   "toplam": 32521965,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCh8pzKg8DtiVLB8slWCjz0Q",
+     "kanal": "Subreenagardens ",
+     "izl": 1370809
+    },
+    {
+     "kanal_id": "UCwT3-aYFLUw61FqWp7yTxdQ",
+     "kanal": "Shall We Grow",
+     "izl": 1298981
+    },
+    {
+     "kanal_id": "UCF8TVrjsoRI7WPzTJbNra-Q",
+     "kanal": "GreenX",
+     "izl": 1206585
+    },
+    {
+     "kanal_id": "UCLamaMh2744y7m_lENCS2Dw",
+     "kanal": "Plantalytics",
+     "izl": 1096509
+    }
+   ],
+   "sorgu": "Plant Propagation",
+   "tarih": "2026-11-14T15:05:05+00:00"
   }
  },
  "ceviri": {
@@ -596,11 +596,8 @@
   "Sports": "Spor",
   "Industrial Engineering": "Endüstri Mühendisliği",
   "Celebrity News": "Ünlü Haberleri",
-  "Engineering & Technology Explainer": "Mühendislik ve Teknoloji Açıklayıcısı",
-  "Financial News": "Finans Haberleri",
   "Structural Engineering": "Yapı Mühendisliği",
   "Heavy Machinery": "Ağır Makinalar",
-  "Digital Art": "Dijital Sanat",
   "MLB": "",
   "Philadelphia Phillies": "",
   "Baseball": "Beyzbol",
@@ -613,8 +610,6 @@
   "Pop Culture": "Popüler Kültür",
   "Entertainment Trivia": "Eğlenceyle ilgili bilgiler",
   "Luxury Lifestyle": "Lüks Yaşam Tarzı",
-  "Industrial Processes": "Endüstriyel Süreçler",
-  "Relationship Dramas": "İlişki Dramaları",
   "Storytelling": "Hikaye Anlatımı",
   "Construction Technology": "İnşaat Teknolojisi",
   "Civil Engineering": "İnşaat mühendisliği",
@@ -643,9 +638,6 @@
   "Infrastructure Development": "Altyapı Geliştirme",
   "Heavy Equipment": "Ağır Ekipman",
   "Construction Techniques": "İnşaat Teknikleri",
-  "AI Art": "Yapay Zeka Sanatı",
-  "Architecture Design": "Mimari Tasarım",
-  "Creative Construction": "Yaratıcı İnşaat",
   "Construction Fails": "İnşaat Başarısızları",
   "Tool Hacks": "Araç Hack'leri",
   "Home Repair": "Ev Onarımı",
@@ -663,7 +655,6 @@
   "Football Entertainment": "Futbol Eğlencesi",
   "Technology Analysis": "Teknoloji Analizi",
   "Animation": "Animasyon",
-  "AI Technology": "Yapay Zeka Teknolojisi",
   "Football Puzzle Challenges": "Futbol Bulmaca Mücadeleleri",
   "Artificial Intelligence Technology Reviews": "Yapay Zeka Teknolojisi İncelemeleri",
   "Comedy": "Komedi",
@@ -683,9 +674,6 @@
   "AI Chips & Infrastructure": "Yapay Zeka Çipleri ve Altyapısı",
   "AI Industry Dynamics": "Yapay Zeka Sektörü Dinamikleri",
   "Parody": "Parodi",
-  "Generative AI": "Üretken Yapay Zeka",
-  "AI Models & Tools": "Yapay Zeka Modelleri ve Araçları",
-  "AI Tools & Reviews": "Yapay Zeka Araçları ve İncelemeleri",
   "Visual Search Games": "Görsel Arama Oyunları",
   "Football Trivia": "Futbolla İlgili Bilgiler",
   "Sports Entertainment": "Spor Eğlencesi",
@@ -722,6 +710,20 @@
   "Wholesome Family Moments": "Sağlıklı Aile Anları",
   "Military Family Life": "Askerlik Aile Hayatı",
   "Funny Baby Moments": "Komik Bebek Anları",
-  "Toddler Reactions": "Küçük Çocuk Tepkileri"
+  "Toddler Reactions": "Küçük Çocuk Tepkileri",
+  "Gardening": "Bahçıvanlık",
+  "Cannabis Cultivation Tutorials": "Esrar Yetiştirme Dersleri",
+  "Home Decor & Indoor Plant Styling": "Ev Dekorasyonu ve İç Mekan Bitki Şekillendirme",
+  "Plant Grafting": "Bitki Aşılama",
+  "Plant Propagation": "Bitki Yayılımı",
+  "Plant Care": "Bitki Bakımı",
+  "DIY Gardening": "Kendin Yap Bahçecilik",
+  "Product Design": "Ürün Tasarımı",
+  "Cannabis Grow Guides": "Esrar Yetiştirme Kılavuzları",
+  "Seed Germination": "Tohum Çimlenmesi",
+  "Interior Design": "İç Tasarım",
+  "Minimalist Living": "Minimalist Yaşam",
+  "Fruit Farming": "Meyve Yetiştiriciliği",
+  "Bonsai Cultivation": "Bonsai Yetiştiriciliği"
  }
 }
