@@ -1,8 +1,8 @@
 {
  "surum": 1,
- "guncelleme": "2026-10-26T09:45:53+00:00",
- "bakiye": 85,
- "sifirlanma": "2026-11-12T00:27:18.559803Z",
+ "guncelleme": "2026-11-14T09:45:00+00:00",
+ "bakiye": 133,
+ "sifirlanma": "2026-12-12T00:27:18.559803Z",
  "nisler": [
   {
    "nis": "Sports News",
@@ -11,12 +11,12 @@
     "Philadelphia Phillies",
     "Baseball"
    ],
-   "kanal_sayisi": 11,
+   "kanal_sayisi": 10,
    "dil": "en",
    "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 11,
-   "ort_buyume30": 65.0,
-   "ort_izlenme": 2245875,
+   "yeni7": 0,
+   "ort_buyume30": 70.2,
+   "ort_izlenme": 2208278,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -56,7 +56,7 @@
    "kanal_sayisi": 8,
    "dil": "en",
    "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 8,
+   "yeni7": 0,
    "ort_buyume30": 44.8,
    "ort_izlenme": 347847,
    "ortak_konu": null,
@@ -89,18 +89,60 @@
    ]
   },
   {
+   "nis": "Gardening",
+   "alt": [
+    "Plant Propagation",
+    "Plant Care",
+    "DIY Gardening"
+   ],
+   "kanal_sayisi": 8,
+   "dil": "en",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "yeni7": 8,
+   "ort_buyume30": 17.7,
+   "ort_izlenme": 393076,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCLamaMh2744y7m_lENCS2Dw",
+     "ad": "Plantalytics",
+     "abone": 57900,
+     "buyume30": 24.52
+    },
+    {
+     "id": "UCdWn6Mi44lVoc87Zlj320aw",
+     "ad": "John clips",
+     "abone": 31000,
+     "buyume30": 23.51
+    },
+    {
+     "id": "UC6xxmX4Y-Bnq__I1G7Puagg",
+     "ad": "Daisy's Garden",
+     "abone": 29900,
+     "buyume30": 18.65
+    },
+    {
+     "id": "UCawOj7nVgnkTd4KKd-FsuVg",
+     "ad": "Gardening HOW TOs",
+     "abone": 232000,
+     "buyume30": 16.58
+    }
+   ]
+  },
+  {
    "nis": "Comedy",
    "alt": [
     "Pranks",
     "Parody",
     "Sports Humor"
    ],
-   "kanal_sayisi": 7,
+   "kanal_sayisi": 6,
    "dil": "en",
    "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 7,
-   "ort_buyume30": 46.7,
-   "ort_izlenme": 480224,
+   "yeni7": 0,
+   "ort_buyume30": 52.3,
+   "ort_izlenme": 500799,
    "ortak_konu": null,
    "ortak": true,
    "ornekler": [
@@ -131,48 +173,6 @@
    ]
   },
   {
-   "nis": "Travel Vlogging",
-   "alt": [
-    "Travel",
-    "Backpacking",
-    "Street Food"
-   ],
-   "kanal_sayisi": 6,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 6,
-   "ort_buyume30": 22.2,
-   "ort_izlenme": 7087,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
-     "ad": "TravelWithRuff",
-     "abone": 1690,
-     "buyume30": 57.94
-    },
-    {
-     "id": "UCsH6FraA_HaIC-cBhnMR7gA",
-     "ad": "I guess I'm walking",
-     "abone": 2350,
-     "buyume30": 16.92
-    },
-    {
-     "id": "UC9NZArbVX6bVa6oFy9bXN3g",
-     "ad": "Bulgarischer Nachbar",
-     "abone": 4750,
-     "buyume30": 15.85
-    },
-    {
-     "id": "UCO6YzwGrjAOKxA7247cIpgg",
-     "ad": "leoni.g.369",
-     "abone": 2490,
-     "buyume30": 15.81
-    }
-   ]
-  },
-  {
    "nis": "Family Vlogging",
    "alt": [
     "Parenting Moments",
@@ -182,7 +182,7 @@
    "kanal_sayisi": 5,
    "dil": "en",
    "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 5,
+   "yeni7": 0,
    "ort_buyume30": 129.1,
    "ort_izlenme": 1822976,
    "ortak_konu": null,
@@ -215,18 +215,102 @@
    ]
   },
   {
+   "nis": "Travel Vlogging",
+   "alt": [
+    "Travel",
+    "Backpacking",
+    "Street Food"
+   ],
+   "kanal_sayisi": 5,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 24.2,
+   "ort_izlenme": 7902,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
+     "ad": "TravelWithRuff",
+     "abone": 1690,
+     "buyume30": 57.94
+    },
+    {
+     "id": "UCsH6FraA_HaIC-cBhnMR7gA",
+     "ad": "I guess I'm walking",
+     "abone": 2350,
+     "buyume30": 16.92
+    },
+    {
+     "id": "UC9NZArbVX6bVa6oFy9bXN3g",
+     "ad": "Bulgarischer Nachbar",
+     "abone": 4750,
+     "buyume30": 15.85
+    },
+    {
+     "id": "UCO6YzwGrjAOKxA7247cIpgg",
+     "ad": "leoni.g.369",
+     "abone": 2490,
+     "buyume30": 15.81
+    }
+   ]
+  },
+  {
+   "nis": "Technology",
+   "alt": [
+    "AI Tools",
+    "Gadgets",
+    "Smartphones & Gadgets"
+   ],
+   "kanal_sayisi": 5,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 23.0,
+   "ort_izlenme": 177386,
+   "ortak_konu": "Technology",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
+     "ad": "Aigen Gadget",
+     "abone": 13500,
+     "buyume30": 46.26
+    },
+    {
+     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
+     "ad": "Tech Easy",
+     "abone": 46500,
+     "buyume30": 23.02
+    },
+    {
+     "id": "UCcTTK14g4fcyMtpXjowOnYg",
+     "ad": "New Frontier",
+     "abone": 20100,
+     "buyume30": 17.54
+    },
+    {
+     "id": "UCDGf0tG5kqoH4derBeXGWmg",
+     "ad": "InfoHubOfficially",
+     "abone": 2790,
+     "buyume30": 14.81
+    }
+   ]
+  },
+  {
    "nis": "Engineering",
    "alt": [
     "Structural Engineering",
     "Civil Engineering",
     "Physics"
    ],
-   "kanal_sayisi": 5,
+   "kanal_sayisi": 4,
    "dil": "en",
    "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 5,
-   "ort_buyume30": 53.1,
-   "ort_izlenme": 244341,
+   "yeni7": 0,
+   "ort_buyume30": 63.6,
+   "ort_izlenme": 152453,
    "ortak_konu": "Engineering",
    "ortak": true,
    "ornekler": [
@@ -257,174 +341,6 @@
    ]
   },
   {
-   "nis": "Technology",
-   "alt": [
-    "AI Tools",
-    "Gadgets",
-    "Smartphones & Gadgets"
-   ],
-   "kanal_sayisi": 5,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 5,
-   "ort_buyume30": 23.0,
-   "ort_izlenme": 177386,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
-     "ad": "Aigen Gadget",
-     "abone": 13500,
-     "buyume30": 46.26
-    },
-    {
-     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
-     "ad": "Tech Easy",
-     "abone": 46500,
-     "buyume30": 23.02
-    },
-    {
-     "id": "UCcTTK14g4fcyMtpXjowOnYg",
-     "ad": "New Frontier",
-     "abone": 20100,
-     "buyume30": 17.54
-    },
-    {
-     "id": "UCDGf0tG5kqoH4derBeXGWmg",
-     "ad": "InfoHubOfficially",
-     "abone": 2790,
-     "buyume30": 14.81
-    }
-   ]
-  },
-  {
-   "nis": "Artificial Intelligence",
-   "alt": [
-    "AI Tools",
-    "Future Technology",
-    "Technology News"
-   ],
-   "kanal_sayisi": 4,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 4,
-   "ort_buyume30": 69.0,
-   "ort_izlenme": 10099,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCT41p6cGch0U4NZgR2iYD6A",
-     "ad": "The AI Times",
-     "abone": 22700,
-     "buyume30": 198.68
-    },
-    {
-     "id": "UClSy4QiF4VA66XVx-lUWsUA",
-     "ad": "Pixel_Pulse_USA🎮",
-     "abone": 1640,
-     "buyume30": 41.38
-    },
-    {
-     "id": "UCmjZHs54VkHVW1Hi9dmelBw",
-     "ad": "Ignore All Previous Instructions",
-     "abone": 2210,
-     "buyume30": 24.16
-    },
-    {
-     "id": "UC9tpZnMLKv5vbZIGuIIPmNg",
-     "ad": "Practical AI",
-     "abone": 1630,
-     "buyume30": 11.64
-    }
-   ]
-  },
-  {
-   "nis": "Industrial Engineering",
-   "alt": [
-    "Manufacturing Processes",
-    "Mechanical Engineering",
-    "Civil Engineering"
-   ],
-   "kanal_sayisi": 4,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 4,
-   "ort_buyume30": 44.0,
-   "ort_izlenme": 306863,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCR7j6Oyp3M6cikoPK1tp6rw",
-     "ad": "Emperor Insights – Science & Curiosity",
-     "abone": 218000,
-     "buyume30": 107.62
-    },
-    {
-     "id": "UCHy7wiQpW5HgPdAP8ZFkQjg",
-     "ad": "Machine Verse",
-     "abone": 10700,
-     "buyume30": 35.1
-    },
-    {
-     "id": "UC_ZFjHOqTnSLg_uxLSNF4tA",
-     "ad": "Thomas Anderson",
-     "abone": 13000,
-     "buyume30": 20.37
-    },
-    {
-     "id": "UCYJDu2MqzWBqeOo9twYpr7w",
-     "ad": "子育て悩み相談室",
-     "abone": 19000,
-     "buyume30": 13.1
-    }
-   ]
-  },
-  {
-   "nis": "Construction Engineering",
-   "alt": [
-    "Civil Engineering",
-    "Heavy Machinery",
-    "DIY"
-   ],
-   "kanal_sayisi": 4,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 4,
-   "ort_buyume30": 33.7,
-   "ort_izlenme": 543580,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC_LqdJFCudT1HSzYA7SE83Q",
-     "ad": "Smart Work HQ",
-     "abone": 6600,
-     "buyume30": 49.32
-    },
-    {
-     "id": "UCKBteshQgFo22tDRGxMPqMg",
-     "ad": "Kharya Developers",
-     "abone": 18900,
-     "buyume30": 47.66
-    },
-    {
-     "id": "UCkrSAPXStfq4VpCzNc9_YTA",
-     "ad": "Top Smart Engineer",
-     "abone": 66900,
-     "buyume30": 25.99
-    },
-    {
-     "id": "UChJa8i2vaLbTJitQ07hO17A",
-     "ad": "Orvion",
-     "abone": 61000,
-     "buyume30": 11.72
-    }
-   ]
-  },
-  {
    "nis": "Engineering Education",
    "alt": [
     "Mechanical Engineering",
@@ -434,7 +350,7 @@
    "kanal_sayisi": 4,
    "dil": "en",
    "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 4,
+   "yeni7": 0,
    "ort_buyume30": 25.4,
    "ort_izlenme": 465630,
    "ortak_konu": null,
@@ -476,11 +392,11 @@
    "kanal_sayisi": 3,
    "dil": "en",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 3,
+   "yeni7": 0,
    "ort_buyume30": 105.3,
    "ort_izlenme": 1450811,
-   "ortak_konu": null,
-   "ortak": false,
+   "ortak_konu": "Animation",
+   "ortak": true,
    "ornekler": [
     {
      "id": "UClJs7RZ08Kzv415DAa_v_RQ",
@@ -503,6 +419,42 @@
    ]
   },
   {
+   "nis": "Artificial Intelligence",
+   "alt": [
+    "AI Tools",
+    "Future Technology",
+    "Technology News"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 88.1,
+   "ort_izlenme": 13383,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCT41p6cGch0U4NZgR2iYD6A",
+     "ad": "The AI Times",
+     "abone": 22700,
+     "buyume30": 198.68
+    },
+    {
+     "id": "UClSy4QiF4VA66XVx-lUWsUA",
+     "ad": "Pixel_Pulse_USA🎮",
+     "abone": 1640,
+     "buyume30": 41.38
+    },
+    {
+     "id": "UCmjZHs54VkHVW1Hi9dmelBw",
+     "ad": "Ignore All Previous Instructions",
+     "abone": 2210,
+     "buyume30": 24.16
+    }
+   ]
+  },
+  {
    "nis": "Parenting",
    "alt": [
     "Baby Humor",
@@ -512,7 +464,7 @@
    "kanal_sayisi": 3,
    "dil": "en",
    "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 3,
+   "yeni7": 0,
    "ort_buyume30": 58.8,
    "ort_izlenme": 1030687,
    "ortak_konu": null,
@@ -539,6 +491,78 @@
    ]
   },
   {
+   "nis": "Industrial Engineering",
+   "alt": [
+    "Manufacturing Processes",
+    "Civil Engineering",
+    "Product Design"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 54.4,
+   "ort_izlenme": 351932,
+   "ortak_konu": "Civil Engineering",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCR7j6Oyp3M6cikoPK1tp6rw",
+     "ad": "Emperor Insights – Science & Curiosity",
+     "abone": 218000,
+     "buyume30": 107.62
+    },
+    {
+     "id": "UCHy7wiQpW5HgPdAP8ZFkQjg",
+     "ad": "Machine Verse",
+     "abone": 10700,
+     "buyume30": 35.1
+    },
+    {
+     "id": "UC_ZFjHOqTnSLg_uxLSNF4tA",
+     "ad": "Thomas Anderson",
+     "abone": 13000,
+     "buyume30": 20.37
+    }
+   ]
+  },
+  {
+   "nis": "Construction Engineering",
+   "alt": [
+    "Heavy Machinery",
+    "DIY",
+    "Construction Techniques"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 41.0,
+   "ort_izlenme": 633352,
+   "ortak_konu": "DIY",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UC_LqdJFCudT1HSzYA7SE83Q",
+     "ad": "Smart Work HQ",
+     "abone": 6600,
+     "buyume30": 49.32
+    },
+    {
+     "id": "UCKBteshQgFo22tDRGxMPqMg",
+     "ad": "Kharya Developers",
+     "abone": 18900,
+     "buyume30": 47.66
+    },
+    {
+     "id": "UCkrSAPXStfq4VpCzNc9_YTA",
+     "ad": "Top Smart Engineer",
+     "abone": 66900,
+     "buyume30": 25.99
+    }
+   ]
+  },
+  {
    "nis": "Sports",
    "alt": [
     "Major League Baseball",
@@ -548,7 +572,7 @@
    "kanal_sayisi": 3,
    "dil": "en",
    "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 3,
+   "yeni7": 0,
    "ort_buyume30": 30.1,
    "ort_izlenme": 1359751,
    "ortak_konu": null,
@@ -575,42 +599,6 @@
    ]
   },
   {
-   "nis": "Storytelling",
-   "alt": [
-    "Human Interest Stories",
-    "Animal Rescue Stories",
-    "Moral Stories"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 3,
-   "ort_buyume30": 29.5,
-   "ort_izlenme": 24644,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC4lc5C4F61ZBRfqMb5wa8Pw",
-     "ad": "Untold Moments",
-     "abone": 2780,
-     "buyume30": 43.3
-    },
-    {
-     "id": "UC9vNI4SdjtwO0wElJv3FDhg",
-     "ad": "Story Nova",
-     "abone": 1260,
-     "buyume30": 32.77
-    },
-    {
-     "id": "UCs1bJj0jKmjw0QD59XiGzfg",
-     "ad": "Schwarze Akte",
-     "abone": 1060,
-     "buyume30": 12.29
-    }
-   ]
-  },
-  {
    "nis": "Human Interest Stories",
    "alt": [
     "Inspirational Stories",
@@ -620,7 +608,7 @@
    "kanal_sayisi": 3,
    "dil": "de",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 3,
+   "yeni7": 0,
    "ort_buyume30": 25.6,
    "ort_izlenme": 52038,
    "ortak_konu": null,
@@ -647,42 +635,6 @@
    ]
   },
   {
-   "nis": "Family Comedy",
-   "alt": [
-    "Parenting Humor",
-    "Baby & Toddler Content",
-    "Relatable Comedy"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 3,
-   "ort_buyume30": 16.9,
-   "ort_izlenme": 575982,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
-     "ad": "Ariel Ruiz",
-     "abone": 9950,
-     "buyume30": 19.45
-    },
-    {
-     "id": "UCHpb3QTxdK-rVHWsQQX4rBg",
-     "ad": "PetCollective66",
-     "abone": 13000,
-     "buyume30": 19.27
-    },
-    {
-     "id": "UCZqwxXQh82murAreiCs8eIw",
-     "ad": "Ai Baby World",
-     "abone": 5440,
-     "buyume30": 11.93
-    }
-   ]
-  },
-  {
    "nis": "Football",
    "alt": [
     "Football Highlights",
@@ -692,7 +644,7 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 249.7,
    "ort_izlenme": 758681,
    "ortak_konu": null,
@@ -722,7 +674,7 @@
    "kanal_sayisi": 2,
    "dil": "de",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 98.2,
    "ort_izlenme": 5047,
    "ortak_konu": null,
@@ -752,7 +704,7 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 90.6,
    "ort_izlenme": 899290,
    "ortak_konu": null,
@@ -782,7 +734,7 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 89.9,
    "ort_izlenme": 735163,
    "ortak_konu": null,
@@ -812,7 +764,7 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 63.0,
    "ort_izlenme": 13859,
    "ortak_konu": null,
@@ -842,7 +794,7 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 49.9,
    "ort_izlenme": 385093,
    "ortak_konu": null,
@@ -863,62 +815,32 @@
    ]
   },
   {
-   "nis": "AI Technology",
+   "nis": "Storytelling",
    "alt": [
-    "Generative AI",
-    "AI Models & Tools",
-    "AI Tools & Reviews"
+    "Human Interest Stories",
+    "Animal Rescue Stories",
+    "Moral Stories"
    ],
    "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 2,
-   "ort_buyume30": 35.5,
-   "ort_izlenme": 33737,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 38.0,
+   "ort_izlenme": 35537,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCoE8zxPoW-rRUtuDcng2UBw",
-     "ad": "Prince does AI",
-     "abone": 1420,
-     "buyume30": 58.66
+     "id": "UC4lc5C4F61ZBRfqMb5wa8Pw",
+     "ad": "Untold Moments",
+     "abone": 2780,
+     "buyume30": 43.3
     },
     {
-     "id": "UCRvwyww8oiO199iMPpm4zsw",
-     "ad": "AI WORLDWIDE",
-     "abone": 229000,
-     "buyume30": 12.25
-    }
-   ]
-  },
-  {
-   "nis": "Digital Art",
-   "alt": [
-    "AI Art",
-    "Architecture Design",
-    "Creative Construction"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 2,
-   "ort_buyume30": 28.1,
-   "ort_izlenme": 1287233,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCYj_Trj746XJg39CumGhAMw",
-     "ad": "Volcanic  Buildx",
-     "abone": 49800,
-     "buyume30": 44.35
-    },
-    {
-     "id": "UCIQOoUR97EcgZVliALAYxrQ",
-     "ad": "shsbe",
-     "abone": 54700,
-     "buyume30": 11.86
+     "id": "UC9vNI4SdjtwO0wElJv3FDhg",
+     "ad": "Story Nova",
+     "abone": 1260,
+     "buyume30": 32.77
     }
    ]
   },
@@ -932,7 +854,7 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 28.0,
    "ort_izlenme": 1044879,
    "ortak_konu": null,
@@ -953,6 +875,36 @@
    ]
   },
   {
+   "nis": "Family Comedy",
+   "alt": [
+    "Parenting Humor",
+    "Baby & Toddler Content",
+    "Relatable Comedy"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 19.4,
+   "ort_izlenme": 725740,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
+     "ad": "Ariel Ruiz",
+     "abone": 9950,
+     "buyume30": 19.45
+    },
+    {
+     "id": "UCHpb3QTxdK-rVHWsQQX4rBg",
+     "ad": "PetCollective66",
+     "abone": 13000,
+     "buyume30": 19.27
+    }
+   ]
+  },
+  {
    "nis": "Comedy Skits",
    "alt": [
     "Cosplay Comedy",
@@ -962,7 +914,7 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 16.9,
    "ort_izlenme": 921720,
    "ortak_konu": null,
@@ -992,11 +944,11 @@
    "kanal_sayisi": 2,
    "dil": "en",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 2,
+   "yeni7": 0,
    "ort_buyume30": 14.1,
    "ort_izlenme": 1477095,
-   "ortak_konu": null,
-   "ortak": false,
+   "ortak_konu": "Construction",
+   "ortak": true,
    "ornekler": [
     {
      "id": "UCWBDztOrqIeQ2su5IbCKTDA",
@@ -1022,7 +974,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 374.0,
    "ort_izlenme": 982578,
    "ortak_konu": null,
@@ -1045,7 +997,7 @@
    "kanal_sayisi": 1,
    "dil": "de",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 327.3,
    "ort_izlenme": 113310,
    "ortak_konu": null,
@@ -1069,7 +1021,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 326.7,
    "ort_izlenme": 506927,
    "ortak_konu": null,
@@ -1093,7 +1045,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 266.3,
    "ort_izlenme": 385871,
    "ortak_konu": null,
@@ -1108,6 +1060,30 @@
    ]
   },
   {
+   "nis": "Cannabis Cultivation Tutorials",
+   "alt": [
+    "Cannabis Grow Guides",
+    "Seed Germination",
+    "Plant Care"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 236.6,
+   "ort_izlenme": 178605,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCYvUMkJIuXF_ULgr-V7pvBQ",
+     "ad": "Marijuana Seeds Channel",
+     "abone": 1740,
+     "buyume30": 236.56
+    }
+   ]
+  },
+  {
    "nis": "Artificial Intelligence Technology Reviews",
    "alt": [
     "AI Tools",
@@ -1116,7 +1092,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 227.1,
    "ort_izlenme": 40084,
    "ortak_konu": null,
@@ -1131,6 +1107,30 @@
    ]
   },
   {
+   "nis": "Home Decor & Indoor Plant Styling",
+   "alt": [
+    "Interior Design",
+    "Plant Care",
+    "Minimalist Living"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 192.7,
+   "ort_izlenme": 140331,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCkIb-SNuews8J-5YlxWEHzQ",
+     "ad": "simran mohan",
+     "abone": 10800,
+     "buyume30": 192.68
+    }
+   ]
+  },
+  {
    "nis": "Celebrity News",
    "alt": [
     "Pop Culture",
@@ -1140,7 +1140,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 191.1,
    "ort_izlenme": 9814300,
    "ortak_konu": null,
@@ -1155,6 +1155,30 @@
    ]
   },
   {
+   "nis": "Plant Grafting",
+   "alt": [
+    "Plant Propagation",
+    "Fruit Farming",
+    "Bonsai Cultivation"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 178.0,
+   "ort_izlenme": 385233,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC80XQ10GrSF9AQmG7yWnY6g",
+     "ad": "Supar Wanto",
+     "abone": 23600,
+     "buyume30": 177.97
+    }
+   ]
+  },
+  {
    "nis": "Family-Friendly Comedy Shorts",
    "alt": [
     "Cute Kids",
@@ -1164,7 +1188,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 157.3,
    "ort_izlenme": 5876529,
    "ortak_konu": null,
@@ -1187,7 +1211,7 @@
    "kanal_sayisi": 1,
    "dil": "de",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 140.6,
    "ort_izlenme": 17590,
    "ortak_konu": null,
@@ -1211,7 +1235,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 134.2,
    "ort_izlenme": 615326,
    "ortak_konu": null,
@@ -1234,7 +1258,7 @@
    "kanal_sayisi": 1,
    "dil": "de",
    "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 128.8,
    "ort_izlenme": 16579,
    "ortak_konu": null,
@@ -1245,52 +1269,6 @@
      "ad": "Wunderbare Orte",
      "abone": 1190,
      "buyume30": 128.85
-    }
-   ]
-  },
-  {
-   "nis": "Engineering & Technology Explainer",
-   "alt": [
-    "Mechanical Engineering",
-    "Industrial Processes"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 124.3,
-   "ort_izlenme": 24207,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC86p8w_VipxatMHwH3RtAxw",
-     "ad": "Behind the Why",
-     "abone": 2490,
-     "buyume30": 124.32
-    }
-   ]
-  },
-  {
-   "nis": "Financial News",
-   "alt": [
-    "Relationship Dramas",
-    "Storytelling"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 111.4,
-   "ort_izlenme": 1879983,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCek_aDZfE2sxFVtJ6uRJ5jA",
-     "ad": "ANTELO",
-     "abone": 46300,
-     "buyume30": 111.42
     }
    ]
   }
@@ -1429,6 +1407,28 @@
    "ortak": false
   },
   {
+   "id": "UCYvUMkJIuXF_ULgr-V7pvBQ",
+   "ad": "Marijuana Seeds Channel",
+   "handle": null,
+   "abone": 1740,
+   "ort_izlenme": 178605.33333333334,
+   "buyume30": 236.56,
+   "izlenme_buyume30": 406.25,
+   "nis": "Cannabis Cultivation Tutorials, Cannabis Grow Guides, Seed Germination, Plant Care, Harvesting",
+   "dil": "en",
+   "ulke": "PH",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCdqoW7Y47SWLFdl8gNO0Yzg",
    "ad": "AI Ravixo",
    "handle": "@airavixo1",
@@ -1495,6 +1495,28 @@
    "ortak": false
   },
   {
+   "id": "UCkIb-SNuews8J-5YlxWEHzQ",
+   "ad": "simran mohan",
+   "handle": null,
+   "abone": 10800,
+   "ort_izlenme": 140330.8524590164,
+   "buyume30": 192.68,
+   "izlenme_buyume30": 357.45,
+   "nis": "Home Decor & Indoor Plant Styling, Interior Design, Plant Care, Minimalist Living",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCZ4AY9cbwuVn7DLnSd3wXdA",
    "ad": "Stuff Boss",
    "handle": null,
@@ -1536,6 +1558,28 @@
    "kaynak": "le viet kanalına benzer",
    "ilk": "2026-10-26T09:45:53+00:00",
    "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC80XQ10GrSF9AQmG7yWnY6g",
+   "ad": "Supar Wanto",
+   "handle": null,
+   "abone": 23600,
+   "ort_izlenme": 385233.1761006289,
+   "buyume30": 177.97,
+   "izlenme_buyume30": 152.22,
+   "nis": "Plant Grafting, Plant Propagation, Fruit Farming, Bonsai Cultivation, Gardening",
+   "dil": "en",
+   "ulke": "ID",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
    "ortak": false
   },
   {
@@ -1888,7 +1932,7 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
+   "ortak": true
   },
   {
    "id": "UCHBwAXxDyL8rKjkEliDiolg",
@@ -2617,6 +2661,28 @@
    "ortak": false
   },
   {
+   "id": "UCF1d4yKXEvQiZTOEIdsztCQ",
+   "ad": "EcoplanturUSA",
+   "handle": null,
+   "abone": 47200,
+   "ort_izlenme": 152819.59836065574,
+   "buyume30": 59.46,
+   "izlenme_buyume30": 295.87,
+   "nis": "Plant Care, Plant Propagation, Organic Gardening, Fruit Tree Care",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": false,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC6hzc8nkodpcuLAAo2AKEjQ",
    "ad": "Tiny Laughs",
    "handle": null,
@@ -2746,7 +2812,7 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
+   "ortak": true
   },
   {
    "id": "UCOv5jDYIEWB0ftJQhdj3buw",
@@ -3871,6 +3937,28 @@
    "ortak": false
   },
   {
+   "id": "UCwzpyWp13O2Q1w_XdjHHDPg",
+   "ad": "The memerrrr",
+   "handle": null,
+   "abone": 21200,
+   "ort_izlenme": 1004725.1071428572,
+   "buyume30": 26.95,
+   "izlenme_buyume30": 15.83,
+   "nis": "Plants, Houseplants, Plant Care, Plant Collection",
+   "dil": "en",
+   "ulke": "AE",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCcALafjeDq8QWMKl3SC_TQg",
    "ad": "Construction Hub",
    "handle": null,
@@ -4000,6 +4088,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCLamaMh2744y7m_lENCS2Dw",
+   "ad": "Plantalytics",
+   "handle": null,
+   "abone": 57900,
+   "ort_izlenme": 406544.5671641791,
+   "buyume30": 24.52,
+   "izlenme_buyume30": 26.83,
+   "nis": "Gardening, Plant Care, Rare Plants, Plant Reviews",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
    "ortak": false
   },
   {
@@ -4135,6 +4245,28 @@
    "ortak": false
   },
   {
+   "id": "UCdWn6Mi44lVoc87Zlj320aw",
+   "ad": "John clips",
+   "handle": null,
+   "abone": 31000,
+   "ort_izlenme": 218719.74731182796,
+   "buyume30": 23.51,
+   "izlenme_buyume30": 34.93,
+   "nis": "Gardening, Plant Propagation, Home Gardening, Fruit Gardening, Growth Timelapse",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCKBnL3qZ0ZESQkdpZx2L3UQ",
    "ad": "WEFUYGIU",
    "handle": null,
@@ -4176,6 +4308,28 @@
    "kaynak": "Yükselen: ai and technology (en)",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCKJmAcDFZVAgjcW6KXJ12pw",
+   "ad": "My Banana Farmer",
+   "handle": null,
+   "abone": 11900,
+   "ort_izlenme": 101162.004048583,
+   "buyume30": 22.81,
+   "izlenme_buyume30": 25.09,
+   "nis": "Agriculture, Banana Farming, Horticulture, Plant Propagation, Fertilization Techniques",
+   "dil": "en",
+   "ulke": "PH",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
    "ortak": false
   },
   {
@@ -4619,6 +4773,28 @@
    "ortak": false
   },
   {
+   "id": "UC6xxmX4Y-Bnq__I1G7Puagg",
+   "ad": "Daisy's Garden",
+   "handle": null,
+   "abone": 29900,
+   "ort_izlenme": 143991.06,
+   "buyume30": 18.65,
+   "izlenme_buyume30": 14.64,
+   "nis": "Gardening, Houseplants, Plant Care, Plant Propagation",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UChOynEM0s5pU2PYVB6fxmZA",
    "ad": "Orgovan Loconte",
    "handle": null,
@@ -4861,6 +5037,28 @@
    "ortak": false
   },
   {
+   "id": "UCawOj7nVgnkTd4KKd-FsuVg",
+   "ad": "Gardening HOW TOs",
+   "handle": null,
+   "abone": 232000,
+   "ort_izlenme": 1546529.1222222222,
+   "buyume30": 16.58,
+   "izlenme_buyume30": 15.86,
+   "nis": "Gardening, Plant Propagation, DIY Gardening, Horticulture",
+   "dil": "en",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCO3qox9W1id4O12STa8FS1g",
    "ad": "MallorcaNorden",
    "handle": "@mallorcanorden",
@@ -4993,6 +5191,28 @@
    "ortak": false
   },
   {
+   "id": "UCjFJz90eoJ9-JawYgOfkJRw",
+   "ad": "Gardening Hacks",
+   "handle": null,
+   "abone": 223000,
+   "ort_izlenme": 228461.49877149877,
+   "buyume30": 15.54,
+   "izlenme_buyume30": 18.32,
+   "nis": "Gardening, Organic Gardening, Plant Propagation & Care, DIY Gardening",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCUsiWj7VST7KPk8pgkxQNgw",
    "ad": "Rose alina",
    "handle": null,
@@ -5034,6 +5254,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC2g0t6aax6ec77gdJRL4xjA",
+   "ad": "Wanderlust Greenery🌿",
+   "handle": null,
+   "abone": 65500,
+   "ort_izlenme": 103783.06468531469,
+   "buyume30": 15.11,
+   "izlenme_buyume30": 20.14,
+   "nis": "Gardening, Aquatic Plant Cultivation, Lotus Gardening, Plant Propagation, Plant Care",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
    "ortak": false
   },
   {
@@ -5166,6 +5408,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC9C-oynZLcFSp2NmPK8hXfg",
+   "ad": "France Colinares",
+   "handle": null,
+   "abone": 31100,
+   "ort_izlenme": 230154.41860465117,
+   "buyume30": 14.34,
+   "izlenme_buyume30": 13.32,
+   "nis": "Gardening, Plant Care, Plant Propagation, Indoor Gardening",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
    "ortak": false
   },
   {
@@ -5367,6 +5631,28 @@
    "ortak": false
   },
   {
+   "id": "UCoTlid2-ekgbkOLAR4-FXdQ",
+   "ad": "Mr Yousaf",
+   "handle": null,
+   "abone": 197000,
+   "ort_izlenme": 266422.2154006243,
+   "buyume30": 13.22,
+   "izlenme_buyume30": 14.38,
+   "nis": "Gardening, Home Gardening, Plant Propagation, DIY Gardening",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": true,
+   "kaynak": "The Fluff Index kanalına benzer",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCiCDpw-viEx8sgl_xlPeJjA",
    "ad": "Fantasy Switch",
    "handle": "@fantasyswitch",
@@ -5386,314 +5672,6 @@
    "kaynak": "Yükselen: ai and technology (en)",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCYJDu2MqzWBqeOo9twYpr7w",
-   "ad": "子育て悩み相談室",
-   "handle": "@stoklasabaranoski",
-   "abone": 19000,
-   "ort_izlenme": 171658.45098039217,
-   "buyume30": 13.1,
-   "izlenme_buyume30": 19.71,
-   "nis": "Industrial Engineering, Manufacturing Processes, Mechanical Engineering",
-   "dil": "ja",
-   "ulke": "JP",
-   "kazanc": 520.22,
-   "acilis": "2026-05-18T08:11:58Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 357,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCWBS3sNCd__15F4b_O_jKMw",
-   "ad": "Kempster Valentyn",
-   "handle": null,
-   "abone": 99600,
-   "ort_izlenme": 2621844.425,
-   "buyume30": 13.05,
-   "izlenme_buyume30": 14.01,
-   "nis": "Sports News, MLB, Philadelphia Phillies",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCPF6PljiI_P0i6olaIYjn-g",
-   "ad": "Dad Thorin7",
-   "handle": null,
-   "abone": 13100,
-   "ort_izlenme": 1083141.625,
-   "buyume30": 12.93,
-   "izlenme_buyume30": 12.35,
-   "nis": "Family Entertainment, Pranks, Parenting, Family Vlogs, Comedy",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCESuTlm8ZHrf9wIDsyBgcGA",
-   "ad": "MysticStudio04",
-   "handle": null,
-   "abone": 14900,
-   "ort_izlenme": 1651488.049180328,
-   "buyume30": 12.88,
-   "izlenme_buyume30": 14.78,
-   "nis": "Entertainment, Skits, Parenting Humor, Family Comedy",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCCZcEjQ_uQPQs4MRpWMxCmQ",
-   "ad": "Schoel Hoseck",
-   "handle": null,
-   "abone": 13200,
-   "ort_izlenme": 356779.03571428574,
-   "buyume30": 12.82,
-   "izlenme_buyume30": 13.52,
-   "nis": "Comedy, Parenting Humor, Cute Animals, Pranks",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCs1bJj0jKmjw0QD59XiGzfg",
-   "ad": "Schwarze Akte",
-   "handle": "@schwarzeakte-q3e",
-   "abone": 1060,
-   "ort_izlenme": 2857.866666666667,
-   "buyume30": 12.29,
-   "izlenme_buyume30": 103.23,
-   "nis": "Storytelling, Revenge Stories, Drama",
-   "dil": "de",
-   "ulke": "DE",
-   "kazanc": null,
-   "acilis": "2026-05-21T03:58:13Z",
-   "son_video": "2026-10-10T00:00:00.000Z",
-   "video_sayisi": 45,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCRvwyww8oiO199iMPpm4zsw",
-   "ad": "AI WORLDWIDE",
-   "handle": "@aiworldwideme",
-   "abone": 229000,
-   "ort_izlenme": 66286.78048780488,
-   "buyume30": 12.25,
-   "izlenme_buyume30": 232.82,
-   "nis": "AI Technology, AI Tools & Reviews, AI for Productivity",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": 16262.14,
-   "acilis": "2026-04-09T20:21:09Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 82,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC69mrouQM2Fq8Uw7kYLHgJw",
-   "ad": "Nagi’s Log | Journeys Through Japan",
-   "handle": "@nagis-log",
-   "abone": 1500,
-   "ort_izlenme": 3011.625,
-   "buyume30": 11.94,
-   "izlenme_buyume30": 115.85,
-   "nis": "Travel Vlogging, Japan Travel, Nature Exploration",
-   "dil": "de",
-   "ulke": "JP",
-   "kazanc": null,
-   "acilis": "2026-07-11T13:47:06Z",
-   "son_video": "2026-10-17T00:00:00.000Z",
-   "video_sayisi": 16,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCZqwxXQh82murAreiCs8eIw",
-   "ad": "Ai Baby World",
-   "handle": null,
-   "abone": 5440,
-   "ort_izlenme": 276465.5051546392,
-   "buyume30": 11.93,
-   "izlenme_buyume30": 13.29,
-   "nis": "Family Comedy, Parenting Humor, Toddler Behavior, Family Vlogs",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCIQOoUR97EcgZVliALAYxrQ",
-   "ad": "shsbe",
-   "handle": null,
-   "abone": 54700,
-   "ort_izlenme": 2199427.5405405406,
-   "buyume30": 11.86,
-   "izlenme_buyume30": 13,
-   "nis": "Digital Art, Procreate, Illustration, MLB News",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UChJa8i2vaLbTJitQ07hO17A",
-   "ad": "Orvion",
-   "handle": null,
-   "abone": 61000,
-   "ort_izlenme": 274264.17711171665,
-   "buyume30": 11.72,
-   "izlenme_buyume30": 12.04,
-   "nis": "Construction Engineering, Home Renovation, Civil Engineering, Building Techniques",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": false,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC9tpZnMLKv5vbZIGuIIPmNg",
-   "ad": "Practical AI",
-   "handle": "@practicalai_show",
-   "abone": 1630,
-   "ort_izlenme": 246.5,
-   "buyume30": 11.64,
-   "izlenme_buyume30": 17.2,
-   "nis": "Artificial Intelligence, AI Agents, Machine Learning",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": "2025-12-15T15:24:26Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 114,
-   "tur": null,
-   "yuzsuz": false,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCu1L8jb9PLM9_9WjJLBS6Ig",
-   "ad": "Smart Engineering🏗",
-   "handle": null,
-   "abone": 185000,
-   "ort_izlenme": 611892.7181996086,
-   "buyume30": 11.45,
-   "izlenme_buyume30": 12.25,
-   "nis": "Engineering",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": false,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCR-zvQEfl2Qjnzmz7_uo4Ug",
-   "ad": "Beyond Moments",
-   "handle": null,
-   "abone": 12700,
-   "ort_izlenme": 550212.0163934426,
-   "buyume30": 11.4,
-   "izlenme_buyume30": 15.74,
-   "nis": "Comedy Entertainment, Couple Humor, Relatable Comedy, Family Dynamics, Pranks",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
    "ortak": false
   }
  ],
@@ -5761,6 +5739,14 @@
    "ad": "le viet",
    "gelen": 50,
    "alinan": 40
+  },
+  {
+   "tarih": "2026-11-14T09:45:00+00:00",
+   "tip": "benzer",
+   "hedef": "UCpSJ4XOdMzTjUYJIERFZaBw",
+   "ad": "The Fluff Index",
+   "gelen": 50,
+   "alinan": 15
   }
  ]
 }
