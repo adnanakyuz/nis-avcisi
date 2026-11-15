@@ -1,89 +1,6 @@
 {
- "ts": "2026-11-14T15:05:05+00:00",
+ "ts": "2026-11-15T15:40:27+00:00",
  "firsat": {
-  "Travel Vlogging": {
-   "seviye": "doymus",
-   "pay": 0.08001661047060782,
-   "toplam": 387401426,
-   "video": 25,
-   "buyuk": 10,
-   "yeniler": [
-    {
-     "kanal_id": "UCyFbZOH6LhBRXNWA9X6Uf_A",
-     "kanal": "ColorMyPJs",
-     "izl": 22209723
-    },
-    {
-     "kanal_id": "UChsmkOG139GzguXFNSOi5YA",
-     "kanal": "Aditya Rathore",
-     "izl": 8788826
-    }
-   ],
-   "sorgu": "Travel",
-   "tarih": "2026-11-08T08:58:55+00:00"
-  },
-  "Engineering": {
-   "seviye": "bos",
-   "pay": 0.7261121589296265,
-   "toplam": 55691366,
-   "video": 25,
-   "buyuk": 0,
-   "yeniler": [
-    {
-     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
-     "kanal": "NITROWAR ",
-     "izl": 25097688
-    },
-    {
-     "kanal_id": "UCRKmhJl4Pfj3c_GndjF076w",
-     "kanal": "Source of Livelihood",
-     "izl": 5523565
-    },
-    {
-     "kanal_id": "UCOjgZUmLwQ6Pb3-isF2YJww",
-     "kanal": "Fictodynamics",
-     "izl": 1909537
-    },
-    {
-     "kanal_id": "UCPSShP1AG_tjLLz7twq1_iw",
-     "kanal": "INFRATACTICS",
-     "izl": 1297674
-    }
-   ],
-   "sorgu": "Structural Engineering",
-   "tarih": "2026-11-08T08:58:55+00:00"
-  },
-  "Industrial Engineering": {
-   "seviye": "doymus",
-   "pay": 0.11878632485851436,
-   "toplam": 169070514,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [
-    {
-     "kanal_id": "UCRXB8_Gjn9TuAIMJXNI6umg",
-     "kanal": "Shagun Factory ",
-     "izl": 10198452
-    },
-    {
-     "kanal_id": "UCYJ9XuJrX-bUCwsHLAtBqsg",
-     "kanal": "SUPER AXX",
-     "izl": 3504037
-    },
-    {
-     "kanal_id": "UC837OkpwGI6BytyBPPdfQ1w",
-     "kanal": "How Made",
-     "izl": 2685893
-    },
-    {
-     "kanal_id": "UCdvq1PfDKiRHwH9INKiuV8Q",
-     "kanal": "Ai Noha",
-     "izl": 1741330
-    }
-   ],
-   "sorgu": "Manufacturing Processes",
-   "tarih": "2026-11-08T08:58:55+00:00"
-  },
   "Technology": {
    "seviye": "doymus",
    "pay": 0.06836974042043388,
@@ -586,6 +503,94 @@
    ],
    "sorgu": "Plant Propagation",
    "tarih": "2026-11-14T15:05:05+00:00"
+  },
+  "Travel Vlogging": {
+   "seviye": "doymus",
+   "pay": 0.13811960267570322,
+   "toplam": 402124716,
+   "video": 25,
+   "buyuk": 12,
+   "yeniler": [
+    {
+     "kanal_id": "UCyFbZOH6LhBRXNWA9X6Uf_A",
+     "kanal": "ColorMyPJs",
+     "izl": 32822337
+    },
+    {
+     "kanal_id": "UC1asEBpQh7sk5JNP3mdvBPg",
+     "kanal": "Lennio",
+     "izl": 13336645
+    },
+    {
+     "kanal_id": "UChsmkOG139GzguXFNSOi5YA",
+     "kanal": "Aditya Rathore",
+     "izl": 9382324
+    }
+   ],
+   "sorgu": "Travel",
+   "tarih": "2026-11-15T15:40:27+00:00"
+  },
+  "Engineering": {
+   "seviye": "bos",
+   "pay": 0.603809360030685,
+   "toplam": 77095837,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
+     "kanal": "NITROWAR ",
+     "izl": 28015618
+    },
+    {
+     "kanal_id": "UCOjgZUmLwQ6Pb3-isF2YJww",
+     "kanal": "Fictodynamics",
+     "izl": 2292565
+    },
+    {
+     "kanal_id": "UCPSShP1AG_tjLLz7twq1_iw",
+     "kanal": "INFRATACTICS",
+     "izl": 2136078
+    },
+    {
+     "kanal_id": "UCJbsdbL6AKm8oRIt3DXkj7A",
+     "kanal": "Mechanical Gyan",
+     "izl": 927283
+    }
+   ],
+   "sorgu": "Structural Engineering",
+   "tarih": "2026-11-15T15:40:27+00:00"
+  },
+  "Engineering Education": {
+   "seviye": "doymus",
+   "pay": 0.16044136987843813,
+   "toplam": 203324523,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCH2kOm0CKT4dAeD0PMxporw",
+     "kanal": "The Space Maze",
+     "izl": 7581411
+    },
+    {
+     "kanal_id": "UCFDGzcHQ42oz051Nm8zF6iw",
+     "kanal": "Discoveries Point 7.0",
+     "izl": 4452023
+    },
+    {
+     "kanal_id": "UCkDVzEoxQIb0IF8JQ5IINhQ",
+     "kanal": "Jameel Hybrid Care ",
+     "izl": 4146099
+    },
+    {
+     "kanal_id": "UC1sz2Lf3-WzHh6NSDnOzUtw",
+     "kanal": "Beyond Normal Facts",
+     "izl": 3584126
+    }
+   ],
+   "sorgu": "Mechanical Engineering",
+   "tarih": "2026-11-15T15:40:27+00:00"
   }
  },
  "ceviri": {
