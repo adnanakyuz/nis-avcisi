@@ -1,79 +1,6 @@
 {
- "ts": "2026-11-16T18:33:43+00:00",
+ "ts": "2026-11-17T17:37:49+00:00",
  "firsat": {
-  "Comedy": {
-   "seviye": "doymus",
-   "pay": 0.1419110682736645,
-   "toplam": 420491916,
-   "video": 25,
-   "buyuk": 17,
-   "yeniler": [
-    {
-     "kanal_id": "UCXN_5V1xmVu18hfFADbXxiQ",
-     "kanal": "RankRoyale",
-     "izl": 29487243
-    },
-    {
-     "kanal_id": "UCGdUkh2VbqkqwTgd84UVvZQ",
-     "kanal": "CreepCrawler",
-     "izl": 16520379
-    },
-    {
-     "kanal_id": "UCJOoMwKyOYH1CbrMig4yL2w",
-     "kanal": "Ai Glam Stories",
-     "izl": 13664835
-    }
-   ],
-   "sorgu": "Pranks",
-   "tarih": "2026-11-10T09:01:06+00:00"
-  },
-  "Family Vlogging": {
-   "seviye": "doymus",
-   "pay": 0.12388365240416159,
-   "toplam": 68281600,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [
-    {
-     "kanal_id": "UCGLIewiligBSz9rYUbC3x4Q",
-     "kanal": "alexxroyaa",
-     "izl": 4071667
-    },
-    {
-     "kanal_id": "UCmQEvCfrfG0eAvWOYfpQEwQ",
-     "kanal": "Quick TechOn",
-     "izl": 2605942
-    },
-    {
-     "kanal_id": "UCufVrvg4IJ9TSlBEmvbY8NA",
-     "kanal": "Replay K-Pop Daily",
-     "izl": 477529
-    },
-    {
-     "kanal_id": "UCXkbz_6BoJFCSDi40hcdZbA",
-     "kanal": "Girl Unveiled",
-     "izl": 453713
-    }
-   ],
-   "sorgu": "Parenting Moments",
-   "tarih": "2026-11-10T09:01:06+00:00"
-  },
-  "Animation": {
-   "seviye": "doymus",
-   "pay": 0.05014720127624843,
-   "toplam": 794523682,
-   "video": 25,
-   "buyuk": 16,
-   "yeniler": [
-    {
-     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
-     "kanal": "Jerrin K James",
-     "izl": 39843139
-    }
-   ],
-   "sorgu": "Family Comedy",
-   "tarih": "2026-11-10T09:01:06+00:00"
-  },
   "Parenting": {
    "seviye": "doymus",
    "pay": 0.17930523753201882,
@@ -581,6 +508,74 @@
    ],
    "sorgu": "Manufacturing Processes",
    "tarih": "2026-11-16T18:33:43+00:00"
+  },
+  "Comedy": {
+   "seviye": "doymus",
+   "pay": 0.06847880066104953,
+   "toplam": 463933169,
+   "video": 25,
+   "buyuk": 15,
+   "yeniler": [
+    {
+     "kanal_id": "UCXN_5V1xmVu18hfFADbXxiQ",
+     "kanal": "RankRoyale",
+     "izl": 31769587
+    }
+   ],
+   "sorgu": "Pranks",
+   "tarih": "2026-11-17T17:37:49+00:00"
+  },
+  "Family Vlogging": {
+   "seviye": "doymus",
+   "pay": 0.12144215938865341,
+   "toplam": 137683339,
+   "video": 25,
+   "buyuk": 5,
+   "yeniler": [
+    {
+     "kanal_id": "UCRpDyVWcZ4LcSUVg2UxZPEg",
+     "kanal": "BelleRanks",
+     "izl": 7534194
+    },
+    {
+     "kanal_id": "UCAwTe4PB6gV242UjxKaH36A",
+     "kanal": "Little Peddy Moments ",
+     "izl": 2634806
+    },
+    {
+     "kanal_id": "UCxgM4sTs9rS0Vpgz931_GtQ",
+     "kanal": "Reynandonouha ",
+     "izl": 2117552
+    },
+    {
+     "kanal_id": "UCYerEarBuzat6jzfnZon_cQ",
+     "kanal": "Before Too Late",
+     "izl": 1342253
+    }
+   ],
+   "sorgu": "Parenting Moments",
+   "tarih": "2026-11-17T17:37:49+00:00"
+  },
+  "Animation": {
+   "seviye": "doymus",
+   "pay": 0.08650107911613747,
+   "toplam": 910412203,
+   "video": 25,
+   "buyuk": 13,
+   "yeniler": [
+    {
+     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
+     "kanal": "Jerrin K James",
+     "izl": 45699354
+    },
+    {
+     "kanal_id": "UCXLVSygSQSBAIRCGkt14YRw",
+     "kanal": "Baby Bo",
+     "izl": 33052284
+    }
+   ],
+   "sorgu": "Family Comedy",
+   "tarih": "2026-11-17T17:37:49+00:00"
   }
  },
  "ceviri": {
