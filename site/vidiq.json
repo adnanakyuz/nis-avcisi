@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-11-14T09:45:00+00:00",
- "bakiye": 133,
+ "guncelleme": "2026-11-18T09:44:37+00:00",
+ "bakiye": 83,
  "sifirlanma": "2026-12-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -47,18 +47,60 @@
    ]
   },
   {
+   "nis": "Family Vlogging",
+   "alt": [
+    "Military Family Life",
+    "Parenting Moments",
+    "Child Development"
+   ],
+   "kanal_sayisi": 6,
+   "dil": "en",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 115.8,
+   "ort_izlenme": 1963359,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC-lnfKzU3eTXSUu8BvANqMA",
+     "ad": "Sam Family",
+     "abone": 207000,
+     "buyume30": 289.83
+    },
+    {
+     "id": "UCPjqFWMiRHVaasHG8It5QZg",
+     "ad": "Ryan Kwak",
+     "abone": 11500,
+     "buyume30": 188.22
+    },
+    {
+     "id": "UCJO9bcdKNSwNlxLfjfLk3Lg",
+     "ad": "🥈 Tiny Patriot Heroes",
+     "abone": 8990,
+     "buyume30": 120.88
+    },
+    {
+     "id": "UC8tOrlaVPyDY671ExZmNRdA",
+     "ad": "Cute USA Family",
+     "abone": 8390,
+     "buyume30": 49.55
+    }
+   ]
+  },
+  {
    "nis": "Mechanical Engineering",
    "alt": [
     "Heavy Machinery",
     "Aviation Technology",
     "Machining"
    ],
-   "kanal_sayisi": 8,
+   "kanal_sayisi": 6,
    "dil": "en",
    "ilk": "2026-10-22T08:01:01+00:00",
    "yeni7": 0,
-   "ort_buyume30": 44.8,
-   "ort_izlenme": 347847,
+   "ort_buyume30": 55.0,
+   "ort_izlenme": 389815,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -89,18 +131,60 @@
    ]
   },
   {
+   "nis": "Comedy",
+   "alt": [
+    "Pranks",
+    "Parody",
+    "Sports Humor"
+   ],
+   "kanal_sayisi": 6,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 52.3,
+   "ort_izlenme": 500799,
+   "ortak_konu": "Comedy",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
+     "ad": "AI-Mini656",
+     "abone": 9040,
+     "buyume30": 113.21
+    },
+    {
+     "id": "UCjCLQiRqQptCG3PZI_nwANQ",
+     "ad": "Two Much Trouble",
+     "abone": 21600,
+     "buyume30": 60
+    },
+    {
+     "id": "UCGwGV-LXv2k7UwA7oOk_KTg",
+     "ad": "DadTokTV",
+     "abone": 13100,
+     "buyume30": 50.4
+    },
+    {
+     "id": "UCORz3pOLJRJfoiKfiWvrk_g",
+     "ad": "JulianGonzalez",
+     "abone": 21500,
+     "buyume30": 43.33
+    }
+   ]
+  },
+  {
    "nis": "Gardening",
    "alt": [
     "Plant Propagation",
     "Plant Care",
     "DIY Gardening"
    ],
-   "kanal_sayisi": 8,
+   "kanal_sayisi": 6,
    "dil": "en",
    "ilk": "2026-11-14T09:45:00+00:00",
-   "yeni7": 8,
-   "ort_buyume30": 17.7,
-   "ort_izlenme": 393076,
+   "yeni7": 6,
+   "ort_buyume30": 19.0,
+   "ort_izlenme": 441338,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -131,170 +215,44 @@
    ]
   },
   {
-   "nis": "Comedy",
+   "nis": "DIY Crafts",
    "alt": [
-    "Pranks",
-    "Parody",
-    "Sports Humor"
+    "Paper Crafts",
+    "Slime",
+    "Squishies"
    ],
-   "kanal_sayisi": 6,
+   "kanal_sayisi": 4,
    "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 52.3,
-   "ort_izlenme": 500799,
-   "ortak_konu": null,
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
-     "ad": "AI-Mini656",
-     "abone": 9040,
-     "buyume30": 113.21
-    },
-    {
-     "id": "UCjCLQiRqQptCG3PZI_nwANQ",
-     "ad": "Two Much Trouble",
-     "abone": 21600,
-     "buyume30": 60
-    },
-    {
-     "id": "UCGwGV-LXv2k7UwA7oOk_KTg",
-     "ad": "DadTokTV",
-     "abone": 13100,
-     "buyume30": 50.4
-    },
-    {
-     "id": "UCORz3pOLJRJfoiKfiWvrk_g",
-     "ad": "JulianGonzalez",
-     "abone": 21500,
-     "buyume30": 43.33
-    }
-   ]
-  },
-  {
-   "nis": "Family Vlogging",
-   "alt": [
-    "Parenting Moments",
-    "Child Development",
-    "Family Humor"
-   ],
-   "kanal_sayisi": 5,
-   "dil": "en",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 129.1,
-   "ort_izlenme": 1822976,
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "yeni7": 4,
+   "ort_buyume30": 70.3,
+   "ort_izlenme": 862746,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UC-lnfKzU3eTXSUu8BvANqMA",
-     "ad": "Sam Family",
-     "abone": 207000,
-     "buyume30": 289.83
+     "id": "UC46otkZqYTD9TlR9_C-GMBA",
+     "ad": "Poly CRAFT",
+     "abone": 49100,
+     "buyume30": 130.52
     },
     {
-     "id": "UCPjqFWMiRHVaasHG8It5QZg",
-     "ad": "Ryan Kwak",
-     "abone": 11500,
-     "buyume30": 188.22
+     "id": "UC2Kjs-bmWyABDZgrbtOP98w",
+     "ad": "Crafty Party",
+     "abone": 203000,
+     "buyume30": 57.36
     },
     {
-     "id": "UCJO9bcdKNSwNlxLfjfLk3Lg",
-     "ad": "🥈 Tiny Patriot Heroes",
-     "abone": 8990,
-     "buyume30": 120.88
+     "id": "UCeUd3zJLP7wef0rT3Lup7Ew",
+     "ad": "Liberty Craft Studio",
+     "abone": 4920,
+     "buyume30": 52.32
     },
     {
-     "id": "UCRSHodlHBtIkx57IWoPt1Jg",
-     "ad": "StoryWaves...🌊",
-     "abone": 51900,
-     "buyume30": 29.43
-    }
-   ]
-  },
-  {
-   "nis": "Travel Vlogging",
-   "alt": [
-    "Travel",
-    "Backpacking",
-    "Street Food"
-   ],
-   "kanal_sayisi": 5,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 24.2,
-   "ort_izlenme": 7902,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
-     "ad": "TravelWithRuff",
-     "abone": 1690,
-     "buyume30": 57.94
-    },
-    {
-     "id": "UCsH6FraA_HaIC-cBhnMR7gA",
-     "ad": "I guess I'm walking",
-     "abone": 2350,
-     "buyume30": 16.92
-    },
-    {
-     "id": "UC9NZArbVX6bVa6oFy9bXN3g",
-     "ad": "Bulgarischer Nachbar",
-     "abone": 4750,
-     "buyume30": 15.85
-    },
-    {
-     "id": "UCO6YzwGrjAOKxA7247cIpgg",
-     "ad": "leoni.g.369",
-     "abone": 2490,
-     "buyume30": 15.81
-    }
-   ]
-  },
-  {
-   "nis": "Technology",
-   "alt": [
-    "AI Tools",
-    "Gadgets",
-    "Smartphones & Gadgets"
-   ],
-   "kanal_sayisi": 5,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 23.0,
-   "ort_izlenme": 177386,
-   "ortak_konu": "Technology",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
-     "ad": "Aigen Gadget",
-     "abone": 13500,
-     "buyume30": 46.26
-    },
-    {
-     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
-     "ad": "Tech Easy",
-     "abone": 46500,
-     "buyume30": 23.02
-    },
-    {
-     "id": "UCcTTK14g4fcyMtpXjowOnYg",
-     "ad": "New Frontier",
-     "abone": 20100,
-     "buyume30": 17.54
-    },
-    {
-     "id": "UCDGf0tG5kqoH4derBeXGWmg",
-     "ad": "InfoHubOfficially",
-     "abone": 2790,
-     "buyume30": 14.81
+     "id": "UCFIUntRM6pdzPYZiMLtoGHg",
+     "ad": "Pixel DIY Crafts",
+     "abone": 80700,
+     "buyume30": 40.84
     }
    ]
   },
@@ -337,6 +295,48 @@
      "ad": "ディープ・インサイト",
      "abone": 2140,
      "buyume30": 19.55
+    }
+   ]
+  },
+  {
+   "nis": "Travel Vlogging",
+   "alt": [
+    "Backpacking",
+    "Street Food",
+    "Nature Walks"
+   ],
+   "kanal_sayisi": 4,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 26.6,
+   "ort_izlenme": 7914,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
+     "ad": "TravelWithRuff",
+     "abone": 1690,
+     "buyume30": 57.94
+    },
+    {
+     "id": "UCsH6FraA_HaIC-cBhnMR7gA",
+     "ad": "I guess I'm walking",
+     "abone": 2350,
+     "buyume30": 16.92
+    },
+    {
+     "id": "UC9NZArbVX6bVa6oFy9bXN3g",
+     "ad": "Bulgarischer Nachbar",
+     "abone": 4750,
+     "buyume30": 15.85
+    },
+    {
+     "id": "UCO6YzwGrjAOKxA7247cIpgg",
+     "ad": "leoni.g.369",
+     "abone": 2490,
+     "buyume30": 15.81
     }
    ]
   },
@@ -455,6 +455,42 @@
    ]
   },
   {
+   "nis": "Kids' Educational Content",
+   "alt": [
+    "Nursery Rhymes & Kids' Songs",
+    "Early Childhood Education",
+    "Toddler Learning"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "yeni7": 3,
+   "ort_buyume30": 68.7,
+   "ort_izlenme": 1163322,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC5sPSG9CMWhuhXLn7CjX5-Q",
+     "ad": "Play Learn Replay - Kids YT",
+     "abone": 29100,
+     "buyume30": 109.35
+    },
+    {
+     "id": "UCschyvq5amdQmhrsHwwusmQ",
+     "ad": "Zippi Mini Makers Club",
+     "abone": 89800,
+     "buyume30": 67.85
+    },
+    {
+     "id": "UC80vDan71b1JnCffEPg0N2g",
+     "ad": "Nora & Lennie’s House",
+     "abone": 232000,
+     "buyume30": 28.89
+    }
+   ]
+  },
+  {
    "nis": "Parenting",
    "alt": [
     "Baby Humor",
@@ -503,8 +539,8 @@
    "yeni7": 0,
    "ort_buyume30": 54.4,
    "ort_izlenme": 351932,
-   "ortak_konu": "Civil Engineering",
-   "ortak": true,
+   "ortak_konu": null,
+   "ortak": false,
    "ornekler": [
     {
      "id": "UCR7j6Oyp3M6cikoPK1tp6rw",
@@ -539,8 +575,8 @@
    "yeni7": 0,
    "ort_buyume30": 41.0,
    "ort_izlenme": 633352,
-   "ortak_konu": "DIY",
-   "ortak": true,
+   "ortak_konu": null,
+   "ortak": false,
    "ornekler": [
     {
      "id": "UC_LqdJFCudT1HSzYA7SE83Q",
@@ -595,6 +631,42 @@
      "ad": "Macgure Laknws",
      "abone": 44700,
      "buyume30": 20.81
+    }
+   ]
+  },
+  {
+   "nis": "Technology",
+   "alt": [
+    "AI Tools",
+    "Gadgets",
+    "Smartphones & Gadgets"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 28.9,
+   "ort_izlenme": 265573,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
+     "ad": "Aigen Gadget",
+     "abone": 13500,
+     "buyume30": 46.26
+    },
+    {
+     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
+     "ad": "Tech Easy",
+     "abone": 46500,
+     "buyume30": 23.02
+    },
+    {
+     "id": "UCcTTK14g4fcyMtpXjowOnYg",
+     "ad": "New Frontier",
+     "abone": 20100,
+     "buyume30": 17.54
     }
    ]
   },
@@ -755,36 +827,6 @@
    ]
   },
   {
-   "nis": "Technology Analysis",
-   "alt": [
-    "Semiconductor Industry",
-    "AI Chips & Infrastructure",
-    "AI Industry Dynamics"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 63.0,
-   "ort_izlenme": 13859,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCIjlWscEzGTBgLza3FPH9NQ",
-     "ad": "AI Chip Insider",
-     "abone": 1720,
-     "buyume30": 112.35
-    },
-    {
-     "id": "UCTK0Dg98IH33S3GASAr_VrQ",
-     "ad": "The WNBA Reporter",
-     "abone": 5410,
-     "buyume30": 13.66
-    }
-   ]
-  },
-  {
    "nis": "Civil Engineering & Construction",
    "alt": [
     "Infrastructure Development",
@@ -887,8 +929,8 @@
    "yeni7": 0,
    "ort_buyume30": 19.4,
    "ort_izlenme": 725740,
-   "ortak_konu": null,
-   "ortak": false,
+   "ortak_konu": "Family Comedy",
+   "ortak": true,
    "ornekler": [
     {
      "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
@@ -935,32 +977,26 @@
    ]
   },
   {
-   "nis": "Construction",
+   "nis": "Funny Kids Content",
    "alt": [
-    "Construction Fails",
-    "Construction Machinery",
-    "Heavy Equipment"
+    "Parenting Humor",
+    "Toddler Pranks",
+    "Cute Baby Moments"
    ],
-   "kanal_sayisi": 2,
+   "kanal_sayisi": 1,
    "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 14.1,
-   "ort_izlenme": 1477095,
-   "ortak_konu": "Construction",
-   "ortak": true,
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 393.9,
+   "ort_izlenme": 656314,
+   "ortak_konu": null,
+   "ortak": false,
    "ornekler": [
     {
-     "id": "UCWBDztOrqIeQ2su5IbCKTDA",
-     "ad": "Mr.Twister",
-     "abone": 64500,
-     "buyume30": 14.97
-    },
-    {
-     "id": "UCR-puYkb4WVznXFVeujXkHA",
-     "ad": "Zelvora Frame",
-     "abone": 68400,
-     "buyume30": 13.25
+     "id": "UCgt_G1KzK0gXEqXfcJKN8EQ",
+     "ad": "CrownComedy",
+     "abone": 7260,
+     "buyume30": 393.88
     }
    ]
   },
@@ -1226,30 +1262,6 @@
    ]
   },
   {
-   "nis": "Family Comedy Shorts",
-   "alt": [
-    "Funny Baby Moments",
-    "Toddler Reactions",
-    "Parenting Humor"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 134.2,
-   "ort_izlenme": 615326,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC56K_5PlkMchNvVT5KfMhmg",
-     "ad": "Tiny Chaos",
-     "abone": 5270,
-     "buyume30": 134.22
-    }
-   ]
-  },
-  {
    "nis": "Switzerland Travel Guide",
    "alt": [
     "Travel Guides",
@@ -1294,6 +1306,28 @@
    "kaynak": "PROFOOTBALL kanalına benzer",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCgt_G1KzK0gXEqXfcJKN8EQ",
+   "ad": "CrownComedy",
+   "handle": null,
+   "abone": 7260,
+   "ort_izlenme": 656314.3181818182,
+   "buyume30": 393.88,
+   "izlenme_buyume30": 361.59,
+   "nis": "Funny Kids Content, Parenting Humor, Toddler Pranks, Cute Baby Moments, Family Comedy",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -1693,14 +1727,14 @@
    "ortak": false
   },
   {
-   "id": "UC56K_5PlkMchNvVT5KfMhmg",
-   "ad": "Tiny Chaos",
+   "id": "UC46otkZqYTD9TlR9_C-GMBA",
+   "ad": "Poly CRAFT",
    "handle": null,
-   "abone": 5270,
-   "ort_izlenme": 615325.625,
-   "buyume30": 134.22,
-   "izlenme_buyume30": 194.68,
-   "nis": "Family Comedy Shorts, Funny Baby Moments, Toddler Reactions, Parenting Humor",
+   "abone": 49100,
+   "ort_izlenme": 1111536.9166666667,
+   "buyume30": 130.52,
+   "izlenme_buyume30": 123.92,
+   "nis": "DIY Crafts, Slime, Squishies, Nano Tape Crafts, Kids Crafts",
    "dil": "en",
    "ulke": "US",
    "kazanc": null,
@@ -1709,9 +1743,9 @@
    "video_sayisi": null,
    "tur": null,
    "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -1957,6 +1991,28 @@
    "ortak": false
   },
   {
+   "id": "UC5sPSG9CMWhuhXLn7CjX5-Q",
+   "ad": "Play Learn Replay - Kids YT",
+   "handle": null,
+   "abone": 29100,
+   "ort_izlenme": 569705.4509803922,
+   "buyume30": 109.35,
+   "izlenme_buyume30": 177.53,
+   "nis": "Kids' Educational Content, Nursery Rhymes & Kids' Songs, Early Childhood Education, Toddler Learning",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "long",
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCyGYiDIp7NIrwTfZ20Ex7AA",
    "ad": "KnowFrame",
    "handle": null,
@@ -2020,6 +2076,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCKSZDAlfKyPqUbIXzbUFf0Q",
+   "ad": "RN PLAY",
+   "handle": null,
+   "abone": 114000,
+   "ort_izlenme": 1892867.1307692307,
+   "buyume30": 103.94,
+   "izlenme_buyume30": 100.99,
+   "nis": "Educational Entertainment for Kids, Science Experiments for Kids, DIY Kids Crafts, Children's Educational Activities, Kids Lifestyle Content",
+   "dil": "en",
+   "ulke": "CA",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -2441,6 +2519,28 @@
    "ortak": false
   },
   {
+   "id": "UCschyvq5amdQmhrsHwwusmQ",
+   "ad": "Zippi Mini Makers Club",
+   "handle": null,
+   "abone": 89800,
+   "ort_izlenme": 687542.0401234567,
+   "buyume30": 67.85,
+   "izlenme_buyume30": 107.41,
+   "nis": "Kids' Educational Content, DIY & Crafts for Kids, Kids' Science Experiments, Early Learning",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCOYy6un9E7YpvczwRSeWOGQ",
    "ad": "Boko",
    "handle": null,
@@ -2793,6 +2893,50 @@
    "ortak": false
   },
   {
+   "id": "UC2Kjs-bmWyABDZgrbtOP98w",
+   "ad": "Crafty Party",
+   "handle": null,
+   "abone": 203000,
+   "ort_izlenme": 624731.7661691542,
+   "buyume30": 57.36,
+   "izlenme_buyume30": 84.25,
+   "nis": "DIY Crafts, Paper Crafts, Origami, School Crafts",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC7NpEg3ZUCqHzTE6Dh1_chQ",
+   "ad": "ArtiscticNeha15🌷",
+   "handle": null,
+   "abone": 138000,
+   "ort_izlenme": 437412.69806763285,
+   "buyume30": 57.35,
+   "izlenme_buyume30": 65.24,
+   "nis": "Arts & Crafts, Paper Crafts, DIY Gifts, Card Making",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC_1KS-1OXJjPtIfpmyvHUag",
    "ad": "Master Adam Works!",
    "handle": null,
@@ -2815,6 +2959,50 @@
    "ortak": true
   },
   {
+   "id": "UCe2wzmZMIqF7hb7RUgKj1kg",
+   "ad": "TumTum Kids TV - Nursery Rhymes & Kids Song",
+   "handle": null,
+   "abone": 3900,
+   "ort_izlenme": 840296,
+   "buyume30": 56,
+   "izlenme_buyume30": 72.72,
+   "nis": "Children's Music, Nursery Rhymes, Educational Songs, Healthy Habits, Toddler Learning",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCeUd3zJLP7wef0rT3Lup7Ew",
+   "ad": "Liberty Craft Studio",
+   "handle": null,
+   "abone": 4920,
+   "ort_izlenme": 478780.6818181818,
+   "buyume30": 52.32,
+   "izlenme_buyume30": 82.91,
+   "nis": "DIY Crafts, Paper Crafts, Sticker Books, K-Pop Fan Art",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCOv5jDYIEWB0ftJQhdj3buw",
    "ad": "Only Meme YT",
    "handle": null,
@@ -2834,6 +3022,28 @@
    "kaynak": "PROFOOTBALL kanalına benzer",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCga6LAaMpQa3Wn_0OSJavLQ",
+   "ad": "Super Art Kids",
+   "handle": null,
+   "abone": 45400,
+   "ort_izlenme": 475848.06315789477,
+   "buyume30": 51.33,
+   "izlenme_buyume30": 55.47,
+   "nis": "Kids' Art & Craft Tutorials, Drawing for Kids, Coloring for Kids, Early Learning for Kids",
+   "dil": "en",
+   "ulke": "AZ",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -2878,6 +3088,50 @@
    "kaynak": "le viet kanalına benzer",
    "ilk": "2026-10-26T09:45:53+00:00",
    "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UChCRJloCCzXSxFTZwHGu48Q",
+   "ad": "Arya Creation",
+   "handle": null,
+   "abone": 76900,
+   "ort_izlenme": 428256.3708920188,
+   "buyume30": 50.2,
+   "izlenme_buyume30": 61.95,
+   "nis": "Kids Arts & Crafts, Drawing Tutorials for Kids, DIY Crafts for Kids",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC8tOrlaVPyDY671ExZmNRdA",
+   "ad": "Cute USA Family",
+   "handle": null,
+   "abone": 8390,
+   "ort_izlenme": 2665271.5454545454,
+   "buyume30": 49.55,
+   "izlenme_buyume30": 43.13,
+   "nis": "Family Vlogging, Toddler Moments, Funny Kids, Family Adventures, Military Family Life",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -3296,6 +3550,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCFIUntRM6pdzPYZiMLtoGHg",
+   "ad": "Pixel DIY Crafts",
+   "handle": null,
+   "abone": 80700,
+   "ort_izlenme": 1235936.6063829786,
+   "buyume30": 40.84,
+   "izlenme_buyume30": 46.89,
+   "nis": "DIY Crafts, Paper Crafts, DIY Tutorials, Pixel Art",
+   "dil": "en",
+   "ulke": "GB",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -3827,6 +4103,28 @@
    "ortak": false
   },
   {
+   "id": "UC1Bzo0wMZxvH9jKJhC2iZhA",
+   "ad": "Wonder Jump",
+   "handle": null,
+   "abone": 106000,
+   "ort_izlenme": 1095670.0275229358,
+   "buyume30": 30.38,
+   "izlenme_buyume30": 33.75,
+   "nis": "Kids' Content, Kids' Learning, Kids' Entertainment, Kids' Arts & Crafts",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCyVsvKcodJYPMABzGC-lAcg",
    "ad": "k-pop-dehunt'rs",
    "handle": null,
@@ -3934,6 +4232,72 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC80vDan71b1JnCffEPg0N2g",
+   "ad": "Nora & Lennie’s House",
+   "handle": null,
+   "abone": 232000,
+   "ort_izlenme": 2232719.7990196077,
+   "buyume30": 28.89,
+   "izlenme_buyume30": 3.38,
+   "nis": "Kids' Educational Content, Toddler/Preschool Learning, Educational Toy Play, Kids' Crafts",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCqK1T_qAMoEwLCm_B2nI4gQ",
+   "ad": "The Very Small Creatures",
+   "handle": null,
+   "abone": 12300,
+   "ort_izlenme": 842548.3440860215,
+   "buyume30": 28.66,
+   "izlenme_buyume30": 4.79,
+   "nis": "Children's Animation, Toddler Entertainment, Stop Motion Animation, Preschool Education",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC56K_5PlkMchNvVT5KfMhmg",
+   "ad": "Tiny Chaos",
+   "handle": null,
+   "abone": 5870,
+   "ort_izlenme": 732057.90625,
+   "buyume30": 28.45,
+   "izlenme_buyume30": 41.34,
+   "nis": "Family Comedy Shorts, Funny Baby Moments, Toddler Reactions, Parenting Humor",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "le viet kanalına benzer",
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -4066,6 +4430,28 @@
    "kaynak": "Trial & Eureka kanalına benzer",
    "ilk": "2026-10-22T08:01:01+00:00",
    "son": "2026-10-22T08:01:01+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCnjQObvFqAG5Lh-UJOeXlIg",
+   "ad": "yullery art",
+   "handle": null,
+   "abone": 49400,
+   "ort_izlenme": 547269.9196428572,
+   "buyume30": 24.75,
+   "izlenme_buyume30": 34.92,
+   "nis": "Art & Crafts, DIY Crafts, Squishies, Toy Crafts",
+   "dil": "en",
+   "ulke": "KR",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
    "ortak": false
   },
   {
@@ -5125,6 +5511,28 @@
    "ortak": false
   },
   {
+   "id": "UC35eOiqIEgiAY4MIOBgo8Uw",
+   "ad": "GamePals",
+   "handle": null,
+   "abone": 140000,
+   "ort_izlenme": 1110882.563063063,
+   "buyume30": 15.7,
+   "izlenme_buyume30": 29.12,
+   "nis": "DIY Games & Crafts, Paper Crafts, Pop Culture Crafts, Kids' Activities",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "LittleColor🎨 kanalına benzer",
+   "ilk": "2026-11-18T09:44:37+00:00",
+   "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCzDmjZ5IHLBaGgcsOWD5fWQ",
    "ad": "VABE HD",
    "handle": null,
@@ -5277,402 +5685,6 @@
    "ilk": "2026-11-14T09:45:00+00:00",
    "son": "2026-11-14T09:45:00+00:00",
    "ortak": false
-  },
-  {
-   "id": "UCWBDztOrqIeQ2su5IbCKTDA",
-   "ad": "Mr.Twister",
-   "handle": null,
-   "abone": 64500,
-   "ort_izlenme": 1454315.671875,
-   "buyume30": 14.97,
-   "izlenme_buyume30": 16.98,
-   "nis": "Construction, Construction Fails, Construction Machinery, Heavy Equipment, Construction Skills",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCcEE0Eeo7qL-OvOkwQLeqPw",
-   "ad": "Master Mechanism",
-   "handle": "@mastermechanism-m5s",
-   "abone": 131000,
-   "ort_izlenme": 442672.1340909091,
-   "buyume30": 14.91,
-   "izlenme_buyume30": 11.85,
-   "nis": "Mechanical Engineering, Heavy Equipment, Industrial Automation",
-   "dil": "ko, en",
-   "ulke": "KR",
-   "kazanc": 2107.04,
-   "acilis": "2026-01-01T05:20:15Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 1320,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCDGf0tG5kqoH4derBeXGWmg",
-   "ad": "InfoHubOfficially",
-   "handle": "@infohubofficially",
-   "abone": 2790,
-   "ort_izlenme": 44685.205882352944,
-   "buyume30": 14.81,
-   "izlenme_buyume30": 31.1,
-   "nis": "Technology, PC Hardware, Computer Components",
-   "dil": "en",
-   "ulke": "GB",
-   "kazanc": null,
-   "acilis": "2026-07-10T11:12:28Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 136,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCUMPemO46nJTp-0iX9JXedQ",
-   "ad": "Kalshi",
-   "handle": null,
-   "abone": 11200,
-   "ort_izlenme": 14552956.090909092,
-   "buyume30": 14.75,
-   "izlenme_buyume30": 22.85,
-   "nis": "Prediction Markets, Sports Betting, Golf",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "mixed",
-   "yuzsuz": false,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC7HH3ShwIBGac-uxdJ88KvQ",
-   "ad": "Xi Ming",
-   "handle": null,
-   "abone": 18800,
-   "ort_izlenme": 1733863.6315789474,
-   "buyume30": 14.63,
-   "izlenme_buyume30": 17.97,
-   "nis": "Prank Comedy, Couple Pranks, Family Humor",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCw-hH795UFH3DfkYnz4vvFQ",
-   "ad": "Einfach Ralle",
-   "handle": "@einfachralle",
-   "abone": 5040,
-   "ort_izlenme": 7852,
-   "buyume30": 14.55,
-   "izlenme_buyume30": 40.89,
-   "nis": "Travel Vlogging, Travel, Automotive",
-   "dil": "de",
-   "ulke": "DE",
-   "kazanc": 15.34,
-   "acilis": "2026-05-10T04:13:29Z",
-   "son_video": "2026-10-17T00:00:00.000Z",
-   "video_sayisi": 18,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC9C-oynZLcFSp2NmPK8hXfg",
-   "ad": "France Colinares",
-   "handle": null,
-   "abone": 31100,
-   "ort_izlenme": 230154.41860465117,
-   "buyume30": 14.34,
-   "izlenme_buyume30": 13.32,
-   "nis": "Gardening, Plant Care, Plant Propagation, Indoor Gardening",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC99pTVCPdZ-KdjTN7GGD1rQ",
-   "ad": "Mega Demolition",
-   "handle": null,
-   "abone": 121000,
-   "ort_izlenme": 1900460.553846154,
-   "buyume30": 14.15,
-   "izlenme_buyume30": 16.09,
-   "nis": "General Construction, Construction, Demolition, Trade Skills, DIY",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": false,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC9i0BjjuAwlzLFEtu8R_iRg",
-   "ad": "PORSHE LIFE",
-   "handle": null,
-   "abone": 6950,
-   "ort_izlenme": 310966.76201372995,
-   "buyume30": 14.12,
-   "izlenme_buyume30": 13.87,
-   "nis": "Automotive, Family Vlogs, Pranks, Parenting",
-   "dil": "en",
-   "ulke": "GB",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UChPkbWNXiJv_kZM4dD4XaiQ",
-   "ad": "Global Dub Hub ⭐",
-   "handle": "@globaldubhub1",
-   "abone": 1460,
-   "ort_izlenme": 11694.776859504133,
-   "buyume30": 14.06,
-   "izlenme_buyume30": 14.06,
-   "nis": "Mechanical Engineering Education, Automotive Mechanics, Heavy Machinery",
-   "dil": "en",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": "2026-06-15T10:46:01Z",
-   "son_video": "2026-10-19T00:00:00.000Z",
-   "video_sayisi": 121,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC3mQB0Vs5TUMH0JsV0obhIQ",
-   "ad": "Official Creative Think",
-   "handle": "@officialcreativethink",
-   "abone": 1380,
-   "ort_izlenme": 10953.658436213991,
-   "buyume30": 14.05,
-   "izlenme_buyume30": 19.86,
-   "nis": "DIY Engineering, Science Projects, Electronics",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": "2025-11-28T19:26:50Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 243,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC6jNEBYt6KbYp4w_DcucWNQ",
-   "ad": "KuBap",
-   "handle": null,
-   "abone": 36600,
-   "ort_izlenme": 561233.9245283019,
-   "buyume30": 14.02,
-   "izlenme_buyume30": 21.07,
-   "nis": "Visual Effects Comedy, CGI Monsters, Prank Videos, Creative Storytelling",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "PROFOOTBALL kanalına benzer",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCWIS9j0a5jHvyf6eIVHugsw",
-   "ad": "Amazing Build Mini",
-   "handle": null,
-   "abone": 16600,
-   "ort_izlenme": 210271.27737226276,
-   "buyume30": 13.7,
-   "izlenme_buyume30": 22.67,
-   "nis": "Miniature Engineering & Construction, Miniature Vehicle Builds, Miniature Construction Projects, Creative DIY Engineering",
-   "dil": "en",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCTK0Dg98IH33S3GASAr_VrQ",
-   "ad": "The WNBA Reporter",
-   "handle": "@the.wnba.reporter",
-   "abone": 5410,
-   "ort_izlenme": 25091.32786885246,
-   "buyume30": 13.66,
-   "izlenme_buyume30": 84.68,
-   "nis": "Technology Analysis, AI Industry Dynamics, Tech Business & Economics",
-   "dil": "en",
-   "ulke": "GB",
-   "kazanc": 2881.41,
-   "acilis": "2026-01-09T13:57:30Z",
-   "son_video": "2026-10-22T00:00:00.000Z",
-   "video_sayisi": 61,
-   "tur": "long",
-   "yuzsuz": false,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCqySyI28b3cjlDq7GbJy5Kg",
-   "ad": "Engineering With Pritam",
-   "handle": "@engineeringwithpritamnew",
-   "abone": 1340,
-   "ort_izlenme": 1214.7037037037037,
-   "buyume30": 13.56,
-   "izlenme_buyume30": 32.1,
-   "nis": "Mechanical Engineering, CAD Software, PTC Creo",
-   "dil": "en",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": "2025-12-21T20:12:58Z",
-   "son_video": "2026-10-16T00:00:00.000Z",
-   "video_sayisi": 297,
-   "tur": "long",
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCR-puYkb4WVznXFVeujXkHA",
-   "ad": "Zelvora Frame",
-   "handle": null,
-   "abone": 68400,
-   "ort_izlenme": 1499874.2857142857,
-   "buyume30": 13.25,
-   "izlenme_buyume30": 14.8,
-   "nis": "Construction, Primitive Building, Survival Shelters, Tiny House Construction, Architectural Timelapse",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": false,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCoTlid2-ekgbkOLAR4-FXdQ",
-   "ad": "Mr Yousaf",
-   "handle": null,
-   "abone": 197000,
-   "ort_izlenme": 266422.2154006243,
-   "buyume30": 13.22,
-   "izlenme_buyume30": 14.38,
-   "nis": "Gardening, Home Gardening, Plant Propagation, DIY Gardening",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": true,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCiCDpw-viEx8sgl_xlPeJjA",
-   "ad": "Fantasy Switch",
-   "handle": "@fantasyswitch",
-   "abone": 6680,
-   "ort_izlenme": 45525.70202020202,
-   "buyume30": 13.22,
-   "izlenme_buyume30": 16.49,
-   "nis": "Technology, Future Technology, Automation",
-   "dil": "en, ta",
-   "ulke": "IN",
-   "kazanc": 12.41,
-   "acilis": "2025-12-15T13:26:15Z",
-   "son_video": "2026-10-22T00:00:00.000Z",
-   "video_sayisi": 198,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
   }
  ],
  "sorgular": [
@@ -5747,6 +5759,14 @@
    "ad": "The Fluff Index",
    "gelen": 50,
    "alinan": 15
+  },
+  {
+   "tarih": "2026-11-18T09:44:37+00:00",
+   "tip": "benzer",
+   "hedef": "UCpReT7SIaFaWGhUF240aGgw",
+   "ad": "LittleColor🎨",
+   "gelen": 50,
+   "alinan": 19
   }
  ]
 }
