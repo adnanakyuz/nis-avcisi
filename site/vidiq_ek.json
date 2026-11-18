@@ -1,89 +1,6 @@
 {
- "ts": "2026-11-17T17:37:49+00:00",
+ "ts": "2026-11-18T17:15:55+00:00",
  "firsat": {
-  "Parenting": {
-   "seviye": "doymus",
-   "pay": 0.17930523753201882,
-   "toplam": 798638478,
-   "video": 25,
-   "buyuk": 5,
-   "yeniler": [
-    {
-     "kanal_id": "UC5i_nd9cLBB04ggBzMYQ3XA",
-     "kanal": "Liam Family",
-     "izl": 48426545
-    },
-    {
-     "kanal_id": "UCq5_L-CzH6GlXEG6KyQ071w",
-     "kanal": "Baby Speaks",
-     "izl": 29986479
-    },
-    {
-     "kanal_id": "UCZP2YVKCI8GnjT6laX1AZ9Q",
-     "kanal": "Tiny Love Family",
-     "izl": 21025758
-    },
-    {
-     "kanal_id": "UCQG4yosEVEEn445cpZp4BCQ",
-     "kanal": "hikko Ranks",
-     "izl": 20540868
-    }
-   ],
-   "sorgu": "Baby Humor",
-   "tarih": "2026-11-11T09:05:57+00:00"
-  },
-  "Sports": {
-   "seviye": "bos",
-   "pay": 0.6136408075861526,
-   "toplam": 163306812,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCefHZqU2_RArzV0epXQffmg",
-     "kanal": "gvoiaje",
-     "izl": 15418413
-    },
-    {
-     "kanal_id": "UCHm5YMbv8S7i4Sqmm2yFaeA",
-     "kanal": "ไพศาล หมื่นโยชน์",
-     "izl": 12433778
-    },
-    {
-     "kanal_id": "UCDXRD43jh8_g_yu_llUe51w",
-     "kanal": "Eryihjy outrfj",
-     "izl": 9638641
-    },
-    {
-     "kanal_id": "UCWbcS6mSKM12AWrKfmFOa_A",
-     "kanal": "Mccray Margaryanftt",
-     "izl": 7119967
-    }
-   ],
-   "sorgu": "Major League Baseball",
-   "tarih": "2026-11-11T09:05:57+00:00"
-  },
-  "Storytelling": {
-   "seviye": "doymus",
-   "pay": 0.010895493896377707,
-   "toplam": 10812268,
-   "video": 25,
-   "buyuk": 2,
-   "yeniler": [
-    {
-     "kanal_id": "UCxzTcHzzsv8D-dNIykRkl8w",
-     "kanal": "Jewel's Message",
-     "izl": 117804
-    },
-    {
-     "kanal_id": "UCA2UCu5tCTVLgmymKL6e9eA",
-     "kanal": "AustinNewsSayWhat",
-     "izl": 1
-    }
-   ],
-   "sorgu": "Human Interest Stories",
-   "tarih": "2026-11-11T09:05:57+00:00"
-  },
   "Human Interest Stories": {
    "seviye": "bos",
    "pay": 0.5000494346476194,
@@ -576,6 +493,94 @@
    ],
    "sorgu": "Family Comedy",
    "tarih": "2026-11-17T17:37:49+00:00"
+  },
+  "DIY Crafts": {
+   "seviye": "doymus",
+   "pay": 0.06909331632057172,
+   "toplam": 323620593,
+   "video": 25,
+   "buyuk": 7,
+   "yeniler": [
+    {
+     "kanal_id": "UC7vejz5Anp61dyCnofkx0Iw",
+     "kanal": "Samiramis",
+     "izl": 9298809
+    },
+    {
+     "kanal_id": "UChCtE69oRnuRiq8zexJZFNA",
+     "kanal": "Thomas markup",
+     "izl": 7875295
+    },
+    {
+     "kanal_id": "UCqNmmbZguYUHiiYNJsbzkmQ",
+     "kanal": "Ehsan",
+     "izl": 5185916
+    }
+   ],
+   "sorgu": "Paper Crafts",
+   "tarih": "2026-11-18T17:15:55+00:00"
+  },
+  "Kids' Educational Content": {
+   "seviye": "doymus",
+   "pay": 0.07930951472023139,
+   "toplam": 479480982,
+   "video": 25,
+   "buyuk": 11,
+   "yeniler": [
+    {
+     "kanal_id": "UCn1SrgsVonl3OUb9m5oM_vw",
+     "kanal": "Tuki Tales",
+     "izl": 14213371
+    },
+    {
+     "kanal_id": "UCrG9uqUXSZ_thFYrUHj0Grw",
+     "kanal": "Puchku Rhymes",
+     "izl": 9843976
+    },
+    {
+     "kanal_id": "UCIuPpQbHnu67qImgRgB82BQ",
+     "kanal": "Chutties Music Beats",
+     "izl": 8911631
+    },
+    {
+     "kanal_id": "UCpR1AwuIcOF1OCVr32llPeQ",
+     "kanal": "Riki TV (English)",
+     "izl": 5058426
+    }
+   ],
+   "sorgu": "Nursery Rhymes & Kids' Songs",
+   "tarih": "2026-11-18T17:15:55+00:00"
+  },
+  "Parenting": {
+   "seviye": "orta",
+   "pay": 0.3921053252128827,
+   "toplam": 934909366,
+   "video": 25,
+   "buyuk": 4,
+   "yeniler": [
+    {
+     "kanal_id": "UC1QT-eSm9iOMaUwn6wNhZ2g",
+     "kanal": "Crazy LoLo Ai",
+     "izl": 239187498
+    },
+    {
+     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
+     "kanal": "Jerrin K James",
+     "izl": 46440111
+    },
+    {
+     "kanal_id": "UCXLVSygSQSBAIRCGkt14YRw",
+     "kanal": "Baby Bo",
+     "izl": 33765016
+    },
+    {
+     "kanal_id": "UCQG4yosEVEEn445cpZp4BCQ",
+     "kanal": "hikko Ranks",
+     "izl": 24562334
+    }
+   ],
+   "sorgu": "Baby Humor",
+   "tarih": "2026-11-18T17:15:55+00:00"
   }
  },
  "ceviri": {
@@ -604,7 +609,6 @@
   "Construction Technology": "İnşaat Teknolojisi",
   "Civil Engineering": "İnşaat mühendisliği",
   "Human Interest Stories": "İnsani İlgi Alan Hikayeler",
-  "Construction": "Yapı",
   "Travel Vlogging": "Seyahat Vlogu",
   "Travel": "Seyahat",
   "Civil Engineering & Construction": "İnşaat Mühendisliği ve İnşaat",
@@ -613,7 +617,6 @@
   "Civil Engineering Documentary": "İnşaat Mühendisliği Belgeseli",
   "Lifestyle Vlogging": "Yaşam Tarzı Vlogu",
   "Switzerland Travel Guide": "İsviçre Gezi Rehberi",
-  "Construction Machinery": "İnşaat Makinaları",
   "Backpacking": "Sırt çantasıyla seyahat",
   "Street Food": "Sokak Yemekleri",
   "DIY": "Kendin Yap",
@@ -628,7 +631,6 @@
   "Infrastructure Development": "Altyapı Geliştirme",
   "Heavy Equipment": "Ağır Ekipman",
   "Construction Techniques": "İnşaat Teknikleri",
-  "Construction Fails": "İnşaat Başarısızları",
   "Tool Hacks": "Araç Hack'leri",
   "Home Repair": "Ev Onarımı",
   "Building Techniques": "İnşaat Teknikleri",
@@ -643,7 +645,6 @@
   "Artificial Intelligence": "Yapay Zeka",
   "Football": "Futbol",
   "Football Entertainment": "Futbol Eğlencesi",
-  "Technology Analysis": "Teknoloji Analizi",
   "Animation": "Animasyon",
   "Football Puzzle Challenges": "Futbol Bulmaca Mücadeleleri",
   "Artificial Intelligence Technology Reviews": "Yapay Zeka Teknolojisi İncelemeleri",
@@ -660,9 +661,6 @@
   "Football Comedy": "Futbol Komedisi",
   "Memorable Football Moments": "Unutulmaz Futbol Anları",
   "Football Parody": "Futbol Parodisi",
-  "Semiconductor Industry": "Yarı İletken Endüstrisi",
-  "AI Chips & Infrastructure": "Yapay Zeka Çipleri ve Altyapısı",
-  "AI Industry Dynamics": "Yapay Zeka Sektörü Dinamikleri",
   "Parody": "Parodi",
   "Visual Search Games": "Görsel Arama Oyunları",
   "Football Trivia": "Futbolla İlgili Bilgiler",
@@ -676,11 +674,9 @@
   "AI-Generated Family Comedy": "Yapay Zekanın Oluşturduğu Aile Komedisi",
   "Comedy Skits": "Komedi Skeçleri",
   "Family-Friendly Comedy Shorts": "Aile Dostu Komedi Kısaları",
-  "Family Comedy Shorts": "Aile Komedisi Kısaları",
   "Pranks": "Şakalar",
   "Parenting Moments": "Ebeveynlik Anları",
   "Child Development": "Çocuk Gelişimi",
-  "Family Humor": "Aile Mizahı",
   "Parenting Humor": "Ebeveynlik Mizahı",
   "Toddler Life": "Küçük Çocuk Hayatı",
   "Baby Humor": "Bebek Mizahı",
@@ -699,8 +695,6 @@
   "Cute Kids": "Sevimli Çocuklar",
   "Wholesome Family Moments": "Sağlıklı Aile Anları",
   "Military Family Life": "Askerlik Aile Hayatı",
-  "Funny Baby Moments": "Komik Bebek Anları",
-  "Toddler Reactions": "Küçük Çocuk Tepkileri",
   "Gardening": "Bahçıvanlık",
   "Cannabis Cultivation Tutorials": "Esrar Yetiştirme Dersleri",
   "Home Decor & Indoor Plant Styling": "Ev Dekorasyonu ve İç Mekan Bitki Şekillendirme",
@@ -714,6 +708,18 @@
   "Interior Design": "İç Tasarım",
   "Minimalist Living": "Minimalist Yaşam",
   "Fruit Farming": "Meyve Yetiştiriciliği",
-  "Bonsai Cultivation": "Bonsai Yetiştiriciliği"
+  "Bonsai Cultivation": "Bonsai Yetiştiriciliği",
+  "DIY Crafts": "Kendin Yap El Sanatları",
+  "Kids' Educational Content": "Çocuklara Yönelik Eğitici İçerikler",
+  "Funny Kids Content": "Komik Çocuk İçeriği",
+  "Paper Crafts": "Kağıt El Sanatları",
+  "Slime": "Balçık",
+  "Squishies": "Squishi'ler",
+  "Nature Walks": "Doğa Yürüyüşleri",
+  "Nursery Rhymes & Kids' Songs": "Tekerlemeler ve Çocuk Şarkıları",
+  "Early Childhood Education": "Erken Çocukluk Eğitimi",
+  "Toddler Learning": "Yeni yürümeye başlayan çocuk öğrenimi",
+  "Toddler Pranks": "Küçük Çocuk Şakaları",
+  "Cute Baby Moments": "Sevimli Bebek Anları"
  }
 }
