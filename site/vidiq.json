@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-11-18T09:44:37+00:00",
- "bakiye": 83,
+ "guncelleme": "2026-11-19T09:44:59+00:00",
+ "bakiye": 68,
  "sifirlanma": "2026-12-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -11,12 +11,12 @@
     "Philadelphia Phillies",
     "Baseball"
    ],
-   "kanal_sayisi": 10,
+   "kanal_sayisi": 9,
    "dil": "en",
    "ilk": "2026-10-23T22:57:44+00:00",
    "yeni7": 0,
-   "ort_buyume30": 70.2,
-   "ort_izlenme": 2208278,
+   "ort_buyume30": 76.0,
+   "ort_izlenme": 2286418,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -43,48 +43,6 @@
      "ad": "احمد محمد",
      "abone": 83600,
      "buyume30": 100.48
-    }
-   ]
-  },
-  {
-   "nis": "Family Vlogging",
-   "alt": [
-    "Military Family Life",
-    "Parenting Moments",
-    "Child Development"
-   ],
-   "kanal_sayisi": 6,
-   "dil": "en",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 115.8,
-   "ort_izlenme": 1963359,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC-lnfKzU3eTXSUu8BvANqMA",
-     "ad": "Sam Family",
-     "abone": 207000,
-     "buyume30": 289.83
-    },
-    {
-     "id": "UCPjqFWMiRHVaasHG8It5QZg",
-     "ad": "Ryan Kwak",
-     "abone": 11500,
-     "buyume30": 188.22
-    },
-    {
-     "id": "UCJO9bcdKNSwNlxLfjfLk3Lg",
-     "ad": "🥈 Tiny Patriot Heroes",
-     "abone": 8990,
-     "buyume30": 120.88
-    },
-    {
-     "id": "UC8tOrlaVPyDY671ExZmNRdA",
-     "ad": "Cute USA Family",
-     "abone": 8390,
-     "buyume30": 49.55
     }
    ]
   },
@@ -173,44 +131,44 @@
    ]
   },
   {
-   "nis": "Gardening",
+   "nis": "Family Vlogging",
    "alt": [
-    "Plant Propagation",
-    "Plant Care",
-    "DIY Gardening"
+    "Military Family Life",
+    "Parenting Moments",
+    "Child Development"
    ],
-   "kanal_sayisi": 6,
+   "kanal_sayisi": 5,
    "dil": "en",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "yeni7": 6,
-   "ort_buyume30": 19.0,
-   "ort_izlenme": 441338,
+   "ilk": "2026-10-26T09:45:53+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 135.6,
+   "ort_izlenme": 2287898,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCLamaMh2744y7m_lENCS2Dw",
-     "ad": "Plantalytics",
-     "abone": 57900,
-     "buyume30": 24.52
+     "id": "UC-lnfKzU3eTXSUu8BvANqMA",
+     "ad": "Sam Family",
+     "abone": 207000,
+     "buyume30": 289.83
     },
     {
-     "id": "UCdWn6Mi44lVoc87Zlj320aw",
-     "ad": "John clips",
-     "abone": 31000,
-     "buyume30": 23.51
+     "id": "UCPjqFWMiRHVaasHG8It5QZg",
+     "ad": "Ryan Kwak",
+     "abone": 11500,
+     "buyume30": 188.22
     },
     {
-     "id": "UC6xxmX4Y-Bnq__I1G7Puagg",
-     "ad": "Daisy's Garden",
-     "abone": 29900,
-     "buyume30": 18.65
+     "id": "UCJO9bcdKNSwNlxLfjfLk3Lg",
+     "ad": "🥈 Tiny Patriot Heroes",
+     "abone": 8990,
+     "buyume30": 120.88
     },
     {
-     "id": "UCawOj7nVgnkTd4KKd-FsuVg",
-     "ad": "Gardening HOW TOs",
-     "abone": 232000,
-     "buyume30": 16.58
+     "id": "UC8tOrlaVPyDY671ExZmNRdA",
+     "ad": "Cute USA Family",
+     "abone": 8390,
+     "buyume30": 49.55
     }
    ]
   },
@@ -295,48 +253,6 @@
      "ad": "ディープ・インサイト",
      "abone": 2140,
      "buyume30": 19.55
-    }
-   ]
-  },
-  {
-   "nis": "Travel Vlogging",
-   "alt": [
-    "Backpacking",
-    "Street Food",
-    "Nature Walks"
-   ],
-   "kanal_sayisi": 4,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 26.6,
-   "ort_izlenme": 7914,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCHUUeOlLbp-aHxK-ntTM-BQ",
-     "ad": "TravelWithRuff",
-     "abone": 1690,
-     "buyume30": 57.94
-    },
-    {
-     "id": "UCsH6FraA_HaIC-cBhnMR7gA",
-     "ad": "I guess I'm walking",
-     "abone": 2350,
-     "buyume30": 16.92
-    },
-    {
-     "id": "UC9NZArbVX6bVa6oFy9bXN3g",
-     "ad": "Bulgarischer Nachbar",
-     "abone": 4750,
-     "buyume30": 15.85
-    },
-    {
-     "id": "UCO6YzwGrjAOKxA7247cIpgg",
-     "ad": "leoni.g.369",
-     "abone": 2490,
-     "buyume30": 15.81
     }
    ]
   },
@@ -575,8 +491,8 @@
    "yeni7": 0,
    "ort_buyume30": 41.0,
    "ort_izlenme": 633352,
-   "ortak_konu": null,
-   "ortak": false,
+   "ortak_konu": "DIY",
+   "ortak": true,
    "ornekler": [
     {
      "id": "UC_LqdJFCudT1HSzYA7SE83Q",
@@ -635,42 +551,6 @@
    ]
   },
   {
-   "nis": "Technology",
-   "alt": [
-    "AI Tools",
-    "Gadgets",
-    "Smartphones & Gadgets"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 28.9,
-   "ort_izlenme": 265573,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
-     "ad": "Aigen Gadget",
-     "abone": 13500,
-     "buyume30": 46.26
-    },
-    {
-     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
-     "ad": "Tech Easy",
-     "abone": 46500,
-     "buyume30": 23.02
-    },
-    {
-     "id": "UCcTTK14g4fcyMtpXjowOnYg",
-     "ad": "New Frontier",
-     "abone": 20100,
-     "buyume30": 17.54
-    }
-   ]
-  },
-  {
    "nis": "Human Interest Stories",
    "alt": [
     "Inspirational Stories",
@@ -703,6 +583,42 @@
      "ad": "SagaVerse128",
      "abone": 1670,
      "buyume30": 18.44
+    }
+   ]
+  },
+  {
+   "nis": "Gardening",
+   "alt": [
+    "Plant Care",
+    "Plant Propagation",
+    "Rare Plants"
+   ],
+   "kanal_sayisi": 3,
+   "dil": "en",
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "yeni7": 3,
+   "ort_buyume30": 22.2,
+   "ort_izlenme": 256418,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCLamaMh2744y7m_lENCS2Dw",
+     "ad": "Plantalytics",
+     "abone": 57900,
+     "buyume30": 24.52
+    },
+    {
+     "id": "UCdWn6Mi44lVoc87Zlj320aw",
+     "ad": "John clips",
+     "abone": 31000,
+     "buyume30": 23.51
+    },
+    {
+     "id": "UC6xxmX4Y-Bnq__I1G7Puagg",
+     "ad": "Daisy's Garden",
+     "abone": 29900,
+     "buyume30": 18.65
     }
    ]
   },
@@ -827,6 +743,36 @@
    ]
   },
   {
+   "nis": "Commentary",
+   "alt": [
+    "Wholesome Content",
+    "Animal Compilation",
+    "Influencer Commentary"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 61.1,
+   "ort_izlenme": 1288194,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UClTSHg9S0ytFaVUNTJLNzSA",
+     "ad": "Freddie Void",
+     "abone": 5200,
+     "buyume30": 65.08
+    },
+    {
+     "id": "UCEMOJUKuvnQCSWGPaFBcW7Q",
+     "ad": "MADO",
+     "abone": 13800,
+     "buyume30": 57.18
+    }
+   ]
+  },
+  {
    "nis": "Civil Engineering & Construction",
    "alt": [
     "Infrastructure Development",
@@ -887,32 +833,32 @@
    ]
   },
   {
-   "nis": "AI-Generated Family Comedy",
+   "nis": "Technology",
    "alt": [
-    "Toddler Humor",
-    "Parenting Skits",
-    "Cozy Family Content"
+    "AI Tools",
+    "Gadgets",
+    "Smartphones & Gadgets"
    ],
    "kanal_sayisi": 2,
    "dil": "en",
-   "ilk": "2026-10-26T09:45:53+00:00",
+   "ilk": "2026-10-25T09:45:23+00:00",
    "yeni7": 0,
-   "ort_buyume30": 28.0,
-   "ort_izlenme": 1044879,
+   "ort_buyume30": 34.6,
+   "ort_izlenme": 224211,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCW2cc9LgRhp9Whs9JV-1mvg",
-     "ad": "BabyBliss Family",
-     "abone": 107000,
-     "buyume30": 40.42
+     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
+     "ad": "Aigen Gadget",
+     "abone": 13500,
+     "buyume30": 46.26
     },
     {
-     "id": "UCqzLWOhmVAh8jcXswNeagLg",
-     "ad": "HYDER",
-     "abone": 20000,
-     "buyume30": 15.61
+     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
+     "ad": "Tech Easy",
+     "abone": 46500,
+     "buyume30": 23.02
     }
    ]
   },
@@ -943,36 +889,6 @@
      "ad": "PetCollective66",
      "abone": 13000,
      "buyume30": 19.27
-    }
-   ]
-  },
-  {
-   "nis": "Comedy Skits",
-   "alt": [
-    "Cosplay Comedy",
-    "Gaming Parody",
-    "Sibling Comedy"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 16.9,
-   "ort_izlenme": 921720,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCGR2cKNfKLnmzik1I9zsPbw",
-     "ad": "SHO TAM MARIO",
-     "abone": 8600,
-     "buyume30": 18.46
-    },
-    {
-     "id": "UCUsiWj7VST7KPk8pgkxQNgw",
-     "ad": "Rose alina",
-     "abone": 14300,
-     "buyume30": 15.32
     }
    ]
   },
@@ -1215,6 +1131,30 @@
    ]
   },
   {
+   "nis": "Reaction Commentary",
+   "alt": [
+    "Football",
+    "Pop Culture",
+    "Viral Trends"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 161.9,
+   "ort_izlenme": 664984,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCxDN-RnFn8nn8JAPLRpaymg",
+     "ad": "Rua React",
+     "abone": 7490,
+     "buyume30": 161.89
+    }
+   ]
+  },
+  {
    "nis": "Family-Friendly Comedy Shorts",
    "alt": [
     "Cute Kids",
@@ -1235,6 +1175,30 @@
      "ad": "Tiny Heroes USA",
      "abone": 9470,
      "buyume30": 157.34
+    }
+   ]
+  },
+  {
+   "nis": "Tax Preparation & Dance Vlogging",
+   "alt": [
+    "Tax Advice",
+    "Dance Performances",
+    "Personal Vlogging"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 141.1,
+   "ort_izlenme": 808553,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCD_wXD3VIZA0RJUZQid0T6g",
+     "ad": "Sharon Mason",
+     "abone": 3810,
+     "buyume30": 141.14
     }
    ]
   },
@@ -1262,25 +1226,26 @@
    ]
   },
   {
-   "nis": "Switzerland Travel Guide",
+   "nis": "Viral Entertainment",
    "alt": [
-    "Travel Guides",
-    "Sightseeing"
+    "Extreme Sports",
+    "Senior Citizens",
+    "Short-form Video"
    ],
    "kanal_sayisi": 1,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 128.8,
-   "ort_izlenme": 16579,
+   "dil": "en",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 137.0,
+   "ort_izlenme": 657629,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCvIhpqYant2JzyPBwOW3Mpw",
-     "ad": "Wunderbare Orte",
-     "abone": 1190,
-     "buyume30": 128.85
+     "id": "UCAlcAnDBy3IPDriwq4jGntg",
+     "ad": "Sassy Seniors",
+     "abone": 21000,
+     "buyume30": 137.02
     }
    ]
   }
@@ -1661,6 +1626,28 @@
    "ortak": false
   },
   {
+   "id": "UCxDN-RnFn8nn8JAPLRpaymg",
+   "ad": "Rua React",
+   "handle": null,
+   "abone": 7490,
+   "ort_izlenme": 664984.5,
+   "buyume30": 161.89,
+   "izlenme_buyume30": 325.02,
+   "nis": "Reaction Commentary, Football, Pop Culture, Viral Trends, Parody",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC7JDMWZgV9NAq0qxtXaJDpg",
    "ad": "Tiny Heroes USA",
    "handle": null,
@@ -1705,6 +1692,28 @@
    "ortak": false
   },
   {
+   "id": "UCD_wXD3VIZA0RJUZQid0T6g",
+   "ad": "Sharon Mason",
+   "handle": null,
+   "abone": 3810,
+   "ort_izlenme": 808552.7058823529,
+   "buyume30": 141.14,
+   "izlenme_buyume30": 203.53,
+   "nis": "Tax Preparation & Dance Vlogging, Tax Advice, Dance Performances, Personal Vlogging, Business Updates",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCgrarthmf9T4A52p4Ij34Jg",
    "ad": "Svandyboys Vlogs",
    "handle": "@svandyboysvlogs",
@@ -1724,6 +1733,28 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCAlcAnDBy3IPDriwq4jGntg",
+   "ad": "Sassy Seniors",
+   "handle": null,
+   "abone": 21000,
+   "ort_izlenme": 657629.1558441558,
+   "buyume30": 137.02,
+   "izlenme_buyume30": 194.91,
+   "nis": "Viral Entertainment, Extreme Sports, Senior Citizens, Short-form Video, Comedy",
+   "dil": "en",
+   "ulke": "ES",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
    "ortak": false
   },
   {
@@ -2299,6 +2330,50 @@
    "ortak": false
   },
   {
+   "id": "UCLfLJuCx7xniVBH_sk-ccTg",
+   "ad": "Lena Carver",
+   "handle": null,
+   "abone": 81000,
+   "ort_izlenme": 1284750.4166666667,
+   "buyume30": 87.07,
+   "izlenme_buyume30": 169.73,
+   "nis": "Women's Wellness & Healthy Aging Vlogging, Skincare & Beauty, Fitness & Exercise, Personal Development, Lifestyle Advice",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC9Sii1lSHgrhFQnLb-XMGbw",
+   "ad": "Mrmeowzer",
+   "handle": null,
+   "abone": 27700,
+   "ort_izlenme": 1711634.8048780488,
+   "buyume30": 82.24,
+   "izlenme_buyume30": 134.3,
+   "nis": "Internet Culture Commentary, Stream Highlights, Reaction Content, Influencer Updates",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCKGDU89WySSspEkT5xG9lSA",
    "ad": "Mini Build Depot",
    "handle": null,
@@ -2362,6 +2437,28 @@
    "kaynak": "le viet kanalına benzer",
    "ilk": "2026-10-26T09:45:53+00:00",
    "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC4l4eoAJHLG4KKGQo-rfLog",
+   "ad": "wizardroy",
+   "handle": null,
+   "abone": 292000,
+   "ort_izlenme": 1990365.3885350318,
+   "buyume30": 76.97,
+   "izlenme_buyume30": 40.45,
+   "nis": "Social Media Commentary, TikTok Commentary, Meme Reactions, Gaming Commentary, Humor",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
    "ortak": false
   },
   {
@@ -2519,6 +2616,28 @@
    "ortak": false
   },
   {
+   "id": "UChDrE0vcE-hH3hqmtq8142g",
+   "ad": "BloxSquar3d",
+   "handle": null,
+   "abone": 10200,
+   "ort_izlenme": 719355.2307692308,
+   "buyume30": 69.15,
+   "izlenme_buyume30": 24.4,
+   "nis": "Social Experiments, Public Reactions, Human Behavior, Street Experiments",
+   "dil": "en",
+   "ulke": "NO",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCschyvq5amdQmhrsHwwusmQ",
    "ad": "Zippi Mini Makers Club",
    "handle": null,
@@ -2648,6 +2767,28 @@
    "kaynak": "PROFOOTBALL kanalına benzer",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UClTSHg9S0ytFaVUNTJLNzSA",
+   "ad": "Freddie Void",
+   "handle": null,
+   "abone": 5200,
+   "ort_izlenme": 1742420.4285714286,
+   "buyume30": 65.08,
+   "izlenme_buyume30": 35.35,
+   "nis": "Commentary, Wholesome Content, Animal Compilation",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
    "ortak": false
   },
   {
@@ -2937,6 +3078,28 @@
    "ortak": false
   },
   {
+   "id": "UCEMOJUKuvnQCSWGPaFBcW7Q",
+   "ad": "MADO",
+   "handle": null,
+   "abone": 13800,
+   "ort_izlenme": 833966.9166666666,
+   "buyume30": 57.18,
+   "izlenme_buyume30": 56.67,
+   "nis": "Commentary, Influencer Commentary, Video Editing, Short-form Entertainment",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC_1KS-1OXJjPtIfpmyvHUag",
    "ad": "Master Adam Works!",
    "handle": null,
@@ -3000,6 +3163,28 @@
    "kaynak": "LittleColor🎨 kanalına benzer",
    "ilk": "2026-11-18T09:44:37+00:00",
    "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCRsVL3nc-29Hlrgbj_Mc8xA",
+   "ad": "OriginaI Ranker",
+   "handle": null,
+   "abone": 20100,
+   "ort_izlenme": 709242.1702127659,
+   "buyume30": 52.27,
+   "izlenme_buyume30": 27.13,
+   "nis": "Social Commentary, Viral Clips, Listicle Content, Social Experiments, Public Interaction",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
    "ortak": false
   },
   {
@@ -3465,6 +3650,28 @@
    "ortak": false
   },
   {
+   "id": "UCbiB1ynkjSNkT4TAEBv-7GQ",
+   "ad": "Easy Africa",
+   "handle": null,
+   "abone": 24400,
+   "ort_izlenme": 981714.5,
+   "buyume30": 42.69,
+   "izlenme_buyume30": 50.81,
+   "nis": "Inspirational Content, Family Values, Moral Lessons, Parenting Advice",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCycbQZ8NbC9JbIhUcjH72lA",
    "ad": "NITROWAR",
    "handle": "@nitrowar",
@@ -3572,6 +3779,28 @@
    "kaynak": "LittleColor🎨 kanalına benzer",
    "ilk": "2026-11-18T09:44:37+00:00",
    "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC7EXko8jCf6Rsuj-tchsM1w",
+   "ad": "The Wedding Collective",
+   "handle": null,
+   "abone": 7810,
+   "ort_izlenme": 863458.1923076923,
+   "buyume30": 40.72,
+   "izlenme_buyume30": 38.8,
+   "nis": "Bridal Fashion, Wedding Dress Care, Bridal Boutique, Wedding Advice",
+   "dil": "en",
+   "ulke": "ZA",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
    "ortak": false
   },
   {
@@ -3704,6 +3933,28 @@
    "kaynak": "PROFOOTBALL kanalına benzer",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCK0R3MaAqI2zsAwV59mqFiA",
+   "ad": "Legacy Room",
+   "handle": null,
+   "abone": 9450,
+   "ort_izlenme": 892270.08,
+   "buyume30": 37.16,
+   "izlenme_buyume30": 54.97,
+   "nis": "Association Football News & Analysis, Match Updates, Football History, Transfer News, Player Comparisons",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
    "ortak": false
   },
   {
@@ -4301,6 +4552,50 @@
    "ortak": false
   },
   {
+   "id": "UCwYUjoktRKDDW5aqRietd_g",
+   "ad": "Maci McKerchie",
+   "handle": null,
+   "abone": 14000,
+   "ort_izlenme": 696287.0547945206,
+   "buyume30": 28.44,
+   "izlenme_buyume30": 39.92,
+   "nis": "Lifestyle, Personal Vlogs, Beauty and Skincare, Fashion and Styling, Relationship Advice, Routine and Wellness",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC0Is-VTfIxxnQ3u1RxVFCYw",
+   "ad": "Exposr Scan",
+   "handle": null,
+   "abone": 96200,
+   "ort_izlenme": 969902.6774193548,
+   "buyume30": 28.27,
+   "izlenme_buyume30": 21.92,
+   "nis": "Food Investigation, Food Safety, Ingredient Analysis, Consumer Advocacy, Food Industry Exposés",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCwzpyWp13O2Q1w_XdjHHDPg",
    "ad": "The memerrrr",
    "handle": null,
@@ -4408,6 +4703,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCb_LydsW36aOCjXQavdkePQ",
+   "ad": "Vibes Club Hub",
+   "handle": null,
+   "abone": 17300,
+   "ort_izlenme": 818111.1924528301,
+   "buyume30": 25.36,
+   "izlenme_buyume30": 9.06,
+   "nis": "Celebrity Commentary, Zendaya, Tom Holland, Marvel, Celebrity News",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
    "ortak": false
   },
   {
@@ -5027,6 +5344,28 @@
    "ortak": false
   },
   {
+   "id": "UCXtWCeXLosdFwrvIPq5ZVpg",
+   "ad": "Eddie Lou",
+   "handle": null,
+   "abone": 1340,
+   "ort_izlenme": 1583690.4444444445,
+   "buyume30": 19.64,
+   "izlenme_buyume30": 32.85,
+   "nis": "Personal Development & Productivity Commentary, Harvard Student Life, AI Tools, Dating Advice, Self-Improvement",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "World In A Box kanalına benzer",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCxmQkfBALmEpLmkKiE4AOtg",
    "ad": "Funny puppy time",
    "handle": null,
@@ -5311,380 +5650,6 @@
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
    "ortak": false
-  },
-  {
-   "id": "UCaMaEzEi3fsGNdAEOf8u8NA",
-   "ad": "Mylo Cheah",
-   "handle": null,
-   "abone": 47500,
-   "ort_izlenme": 1505016.786885246,
-   "buyume30": 17.87,
-   "izlenme_buyume30": 17.53,
-   "nis": "Sports News, MLB, Baseball Highlights",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCcTTK14g4fcyMtpXjowOnYg",
-   "ad": "New Frontier",
-   "handle": "@newfrontiershow",
-   "abone": 20100,
-   "ort_izlenme": 348298.14285714284,
-   "buyume30": 17.54,
-   "izlenme_buyume30": 25.84,
-   "nis": "Technology, AI, Robotics",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": 2740.78,
-   "acilis": "2026-05-11T23:28:18Z",
-   "son_video": "2026-10-16T00:00:00.000Z",
-   "video_sayisi": 7,
-   "tur": null,
-   "yuzsuz": false,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCIT-yvZzCbAPGtKH82xn6Ow",
-   "ad": "Aura AI",
-   "handle": "@auraainz",
-   "abone": 1890,
-   "ort_izlenme": 10665.788235294118,
-   "buyume30": 17.39,
-   "izlenme_buyume30": 47.86,
-   "nis": "Artificial Intelligence Commentary, Humanoid Robotics, Future Technology Trends",
-   "dil": "en",
-   "ulke": "NZ",
-   "kazanc": null,
-   "acilis": "2026-01-02T08:07:16Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 85,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCfxcO8GztN5zX69iPTysiAg",
-   "ad": "Arwenture",
-   "handle": null,
-   "abone": 13800,
-   "ort_izlenme": 340662.8304347826,
-   "buyume30": 16.95,
-   "izlenme_buyume30": 19.62,
-   "nis": "Family Vlogging, Toddler Vlogging, Childhood Milestones, Family Travel",
-   "dil": "en",
-   "ulke": "CA",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": false,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCsH6FraA_HaIC-cBhnMR7gA",
-   "ad": "I guess I'm walking",
-   "handle": "@iguessiamwalking",
-   "abone": 2350,
-   "ort_izlenme": 7074.565789473684,
-   "buyume30": 16.92,
-   "izlenme_buyume30": 99.82,
-   "nis": "Travel Vlogging, Nature Walks, Atmospheric Travel",
-   "dil": "en, de",
-   "ulke": "DE",
-   "kazanc": null,
-   "acilis": "2026-04-24T13:26:53Z",
-   "son_video": "2026-10-11T00:00:00.000Z",
-   "video_sayisi": 76,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCawOj7nVgnkTd4KKd-FsuVg",
-   "ad": "Gardening HOW TOs",
-   "handle": null,
-   "abone": 232000,
-   "ort_izlenme": 1546529.1222222222,
-   "buyume30": 16.58,
-   "izlenme_buyume30": 15.86,
-   "nis": "Gardening, Plant Propagation, DIY Gardening, Horticulture",
-   "dil": "en",
-   "ulke": "DE",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCO3qox9W1id4O12STa8FS1g",
-   "ad": "MallorcaNorden",
-   "handle": "@mallorcanorden",
-   "abone": 2760,
-   "ort_izlenme": 3238.6216216216217,
-   "buyume30": 16.46,
-   "izlenme_buyume30": 33.19,
-   "nis": "Travel Vlogs, Mallorca Travel, Destination Guides",
-   "dil": "de",
-   "ulke": "DE",
-   "kazanc": null,
-   "acilis": "2026-04-07T17:21:08Z",
-   "son_video": "2026-10-18T00:00:00.000Z",
-   "video_sayisi": 37,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC9NZArbVX6bVa6oFy9bXN3g",
-   "ad": "Bulgarischer Nachbar",
-   "handle": "@bulgarischernachbar",
-   "abone": 4750,
-   "ort_izlenme": 8498.870967741936,
-   "buyume30": 15.85,
-   "izlenme_buyume30": 23.79,
-   "nis": "Travel Vlogging, Solo Travel, Urban Exploration",
-   "dil": "de",
-   "ulke": "AT",
-   "kazanc": null,
-   "acilis": "2025-12-05T03:35:06Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 62,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCO6YzwGrjAOKxA7247cIpgg",
-   "ad": "leoni.g.369",
-   "handle": "@leoni.g.369",
-   "abone": 2490,
-   "ort_izlenme": 14491.148148148148,
-   "buyume30": 15.81,
-   "izlenme_buyume30": 13.14,
-   "nis": "Travel Vlogging, Travel, Couples",
-   "dil": "de, en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": "2026-05-10T18:51:40Z",
-   "son_video": "2026-10-16T00:00:00.000Z",
-   "video_sayisi": 243,
-   "tur": null,
-   "yuzsuz": false,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC35eOiqIEgiAY4MIOBgo8Uw",
-   "ad": "GamePals",
-   "handle": null,
-   "abone": 140000,
-   "ort_izlenme": 1110882.563063063,
-   "buyume30": 15.7,
-   "izlenme_buyume30": 29.12,
-   "nis": "DIY Games & Crafts, Paper Crafts, Pop Culture Crafts, Kids' Activities",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "LittleColor🎨 kanalına benzer",
-   "ilk": "2026-11-18T09:44:37+00:00",
-   "son": "2026-11-18T09:44:37+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCzDmjZ5IHLBaGgcsOWD5fWQ",
-   "ad": "VABE HD",
-   "handle": null,
-   "abone": 104000,
-   "ort_izlenme": 769985.2824427481,
-   "buyume30": 15.68,
-   "izlenme_buyume30": 11.27,
-   "nis": "Football Highlights & Moments, Football Player Moments, Football Viral Clips, Football Fan Reactions",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": true,
-   "kaynak": "PROFOOTBALL kanalına benzer",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCXX5rhHi64oJt9-ZMdUTJfw",
-   "ad": "GoalTitan",
-   "handle": null,
-   "abone": 7610,
-   "ort_izlenme": 369648.8484848485,
-   "buyume30": 15.65,
-   "izlenme_buyume30": 25.84,
-   "nis": "AI Football Comedy, AI Animation, Football Parody, Short-Form Comedy",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "PROFOOTBALL kanalına benzer",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCqzLWOhmVAh8jcXswNeagLg",
-   "ad": "HYDER",
-   "handle": null,
-   "abone": 20000,
-   "ort_izlenme": 876917.5172413794,
-   "buyume30": 15.61,
-   "izlenme_buyume30": 21.74,
-   "nis": "AI-Generated Family Comedy, Wholesome Family Stories, Military-Themed Humor",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCjFJz90eoJ9-JawYgOfkJRw",
-   "ad": "Gardening Hacks",
-   "handle": null,
-   "abone": 223000,
-   "ort_izlenme": 228461.49877149877,
-   "buyume30": 15.54,
-   "izlenme_buyume30": 18.32,
-   "nis": "Gardening, Organic Gardening, Plant Propagation & Care, DIY Gardening",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCUsiWj7VST7KPk8pgkxQNgw",
-   "ad": "Rose alina",
-   "handle": null,
-   "abone": 14300,
-   "ort_izlenme": 435865.55263157893,
-   "buyume30": 15.32,
-   "izlenme_buyume30": 14.93,
-   "nis": "Comedy Skits, Couples Comedy, Family Humor",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": false,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCH5o3fpX-PPXLS0m9gwHyeQ",
-   "ad": "n n nbekhg",
-   "handle": null,
-   "abone": 38100,
-   "ort_izlenme": 3081102.625,
-   "buyume30": 15.11,
-   "izlenme_buyume30": 11.78,
-   "nis": "Celebrity Meme Content, Memes, MLB, Celebrity Humor",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC2g0t6aax6ec77gdJRL4xjA",
-   "ad": "Wanderlust Greenery🌿",
-   "handle": null,
-   "abone": 65500,
-   "ort_izlenme": 103783.06468531469,
-   "buyume30": 15.11,
-   "izlenme_buyume30": 20.14,
-   "nis": "Gardening, Aquatic Plant Cultivation, Lotus Gardening, Plant Propagation, Plant Care",
-   "dil": "en",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
   }
  ],
  "sorgular": [
@@ -5767,6 +5732,14 @@
    "ad": "LittleColor🎨",
    "gelen": 50,
    "alinan": 19
+  },
+  {
+   "tarih": "2026-11-19T09:44:59+00:00",
+   "tip": "benzer",
+   "hedef": "UCtBBl0iusvCzReT0qGe035g",
+   "ad": "World In A Box",
+   "gelen": 50,
+   "alinan": 18
   }
  ]
 }
