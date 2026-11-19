@@ -1,84 +1,6 @@
 {
- "ts": "2026-11-18T17:15:55+00:00",
+ "ts": "2026-11-19T17:23:12+00:00",
  "firsat": {
-  "Human Interest Stories": {
-   "seviye": "bos",
-   "pay": 0.5000494346476194,
-   "toplam": 60392865,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [
-    {
-     "kanal_id": "UCaQDcHXSF3-Yfj3zgfZEtZg",
-     "kanal": "GK Hindi Stories 1m",
-     "izl": 10300625
-    },
-    {
-     "kanal_id": "UCuw4rUMedBFu5EDWNkeXE0g",
-     "kanal": "Animated Aryu ",
-     "izl": 5476705
-    },
-    {
-     "kanal_id": "UC7tp5-XqTplHE--xki2_qAg",
-     "kanal": "TanNova4",
-     "izl": 3938354
-    },
-    {
-     "kanal_id": "UCC5SELJIwSotiL6TEU5e4Wg",
-     "kanal": "Alfaaz Aur Awaaz",
-     "izl": 2742393
-    }
-   ],
-   "sorgu": "Inspirational Stories",
-   "tarih": "2026-11-12T16:49:00+00:00"
-  },
-  "Family Comedy": {
-   "seviye": "doymus",
-   "pay": 0.16474385510605857,
-   "toplam": 130605102,
-   "video": 25,
-   "buyuk": 7,
-   "yeniler": [
-    {
-     "kanal_id": "UCnQhF8panCXJ2IvQ6kdzf3A",
-     "kanal": "PromptPlay",
-     "izl": 5587323
-    },
-    {
-     "kanal_id": "UCRExHzUeTSkAntWc9ZPLnIg",
-     "kanal": "awucomedian",
-     "izl": 3522947
-    },
-    {
-     "kanal_id": "UC0A09aBu9R-BY2NetxpdjBA",
-     "kanal": "Levy family",
-     "izl": 3097031
-    },
-    {
-     "kanal_id": "UCsEJceHG6GH5Simav_JvSWg",
-     "kanal": "LoLo LaLa Ai",
-     "izl": 2698650
-    }
-   ],
-   "sorgu": "Parenting Humor",
-   "tarih": "2026-11-12T16:49:00+00:00"
-  },
-  "Football": {
-   "seviye": "doymus",
-   "pay": 0.04638022689061162,
-   "toplam": 116453915,
-   "video": 25,
-   "buyuk": 11,
-   "yeniler": [
-    {
-     "kanal_id": "UChq4UmjEEl17of0DSxgxKTA",
-     "kanal": "96FOOTBOL",
-     "izl": 5401159
-    }
-   ],
-   "sorgu": "Football Highlights",
-   "tarih": "2026-11-12T16:49:00+00:00"
-  },
   "Travel": {
    "seviye": "orta",
    "pay": 0.47610717878322156,
@@ -581,6 +503,99 @@
    ],
    "sorgu": "Baby Humor",
    "tarih": "2026-11-18T17:15:55+00:00"
+  },
+  "Construction Engineering": {
+   "seviye": "bos",
+   "pay": 0.6952115631075129,
+   "toplam": 75709821,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCDrQ0IPduY0wCV56YlKGTIw",
+     "kanal": "Amazing Work Here",
+     "izl": 11511208
+    },
+    {
+     "kanal_id": "UCdyOtjn9b6sEKJyuhC4N_QA",
+     "kanal": "Bulldozer Masters",
+     "izl": 8463605
+    },
+    {
+     "kanal_id": "UC2-xEhhZe2t9qo2gNAD0NvA",
+     "kanal": "Pawan farmers life",
+     "izl": 7713882
+    },
+    {
+     "kanal_id": "UC396S4Wy_MBnIaoprBRNQOg",
+     "kanal": "Faktivo",
+     "izl": 5587541
+    }
+   ],
+   "sorgu": "Heavy Machinery",
+   "tarih": "2026-11-19T17:23:12+00:00"
+  },
+  "Sports": {
+   "seviye": "bos",
+   "pay": 0.6704431287009285,
+   "toplam": 300149008,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCZ7Am8bY7Aqilv6JN9dmd8Q",
+     "kanal": "Gugennnb",
+     "izl": 124917610
+    },
+    {
+     "kanal_id": "UCh04WdIGt8vQupyf9F-XKjw",
+     "kanal": "PupKitty Studio",
+     "izl": 12922779
+    },
+    {
+     "kanal_id": "UCXj9LFkkP5pNawhbzZ1BQnA",
+     "kanal": "GoadPaws 🐾",
+     "izl": 10841708
+    },
+    {
+     "kanal_id": "UC57TxtqAX_x6RpSARwz_V7w",
+     "kanal": "Koscinski Georgettajj",
+     "izl": 8612934
+    }
+   ],
+   "sorgu": "Major League Baseball",
+   "tarih": "2026-11-19T17:23:12+00:00"
+  },
+  "Human Interest Stories": {
+   "seviye": "orta",
+   "pay": 0.33220024932584635,
+   "toplam": 76850436,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCaQDcHXSF3-Yfj3zgfZEtZg",
+     "kanal": "GK Hindi Stories 1m",
+     "izl": 12304836
+    },
+    {
+     "kanal_id": "UCuw4rUMedBFu5EDWNkeXE0g",
+     "kanal": "Animated Aryu ",
+     "izl": 6088505
+    },
+    {
+     "kanal_id": "UC8I1gILJe8XR-M79GUz34Xg",
+     "kanal": "Grow With Anand",
+     "izl": 2770903
+    },
+    {
+     "kanal_id": "UCksNdiyawzpjRWRbyQKyo0w",
+     "kanal": "Frr.Ruksar",
+     "izl": 2029481
+    }
+   ],
+   "sorgu": "Inspirational Stories",
+   "tarih": "2026-11-19T17:23:12+00:00"
   }
  },
  "ceviri": {
@@ -609,16 +624,12 @@
   "Construction Technology": "İnşaat Teknolojisi",
   "Civil Engineering": "İnşaat mühendisliği",
   "Human Interest Stories": "İnsani İlgi Alan Hikayeler",
-  "Travel Vlogging": "Seyahat Vlogu",
   "Travel": "Seyahat",
   "Civil Engineering & Construction": "İnşaat Mühendisliği ve İnşaat",
   "Construction & DIY": "İnşaat ve Kendin Yap",
   "Aviation Drama Storytelling": "Havacılık Draması Hikaye Anlatımı",
   "Civil Engineering Documentary": "İnşaat Mühendisliği Belgeseli",
   "Lifestyle Vlogging": "Yaşam Tarzı Vlogu",
-  "Switzerland Travel Guide": "İsviçre Gezi Rehberi",
-  "Backpacking": "Sırt çantasıyla seyahat",
-  "Street Food": "Sokak Yemekleri",
   "DIY": "Kendin Yap",
   "Animal Rescue Stories": "Hayvan Kurtarma Hikayeleri",
   "Moral Stories": "Ahlaki Hikayeler",
@@ -639,8 +650,6 @@
   "Architectural History": "Mimarlık Tarihi",
   "Infrastructure Analysis": "Altyapı Analizi",
   "Shopping": "Alışveriş",
-  "Travel Guides": "Seyahat Rehberleri",
-  "Sightseeing": "Manzara",
   "Technology": "Teknoloji",
   "Artificial Intelligence": "Yapay Zeka",
   "Football": "Futbol",
@@ -671,8 +680,6 @@
   "Parenting": "Ebeveynlik",
   "Family Comedy": "Aile Komedisi",
   "Comedy Shorts": "Komedi Kısaları",
-  "AI-Generated Family Comedy": "Yapay Zekanın Oluşturduğu Aile Komedisi",
-  "Comedy Skits": "Komedi Skeçleri",
   "Family-Friendly Comedy Shorts": "Aile Dostu Komedi Kısaları",
   "Pranks": "Şakalar",
   "Parenting Moments": "Ebeveynlik Anları",
@@ -686,12 +693,6 @@
   "Family Dynamics": "Aile Dinamikleri",
   "Relatable Humor": "Bağlanabilir Mizah",
   "Student Life": "Öğrenci Hayatı",
-  "Toddler Humor": "Küçük Çocuk Mizahı",
-  "Parenting Skits": "Ebeveynlik Skeçleri",
-  "Cozy Family Content": "Rahat Aile İçeriği",
-  "Cosplay Comedy": "Cosplay Komedisi",
-  "Gaming Parody": "Oyun Parodisi",
-  "Sibling Comedy": "Kardeş Komedisi",
   "Cute Kids": "Sevimli Çocuklar",
   "Wholesome Family Moments": "Sağlıklı Aile Anları",
   "Military Family Life": "Askerlik Aile Hayatı",
@@ -701,7 +702,6 @@
   "Plant Grafting": "Bitki Aşılama",
   "Plant Propagation": "Bitki Yayılımı",
   "Plant Care": "Bitki Bakımı",
-  "DIY Gardening": "Kendin Yap Bahçecilik",
   "Product Design": "Ürün Tasarımı",
   "Cannabis Grow Guides": "Esrar Yetiştirme Kılavuzları",
   "Seed Germination": "Tohum Çimlenmesi",
@@ -715,11 +715,25 @@
   "Paper Crafts": "Kağıt El Sanatları",
   "Slime": "Balçık",
   "Squishies": "Squishi'ler",
-  "Nature Walks": "Doğa Yürüyüşleri",
   "Nursery Rhymes & Kids' Songs": "Tekerlemeler ve Çocuk Şarkıları",
   "Early Childhood Education": "Erken Çocukluk Eğitimi",
   "Toddler Learning": "Yeni yürümeye başlayan çocuk öğrenimi",
   "Toddler Pranks": "Küçük Çocuk Şakaları",
-  "Cute Baby Moments": "Sevimli Bebek Anları"
+  "Cute Baby Moments": "Sevimli Bebek Anları",
+  "Commentary": "",
+  "Reaction Commentary": "",
+  "Tax Preparation & Dance Vlogging": "",
+  "Viral Entertainment": "",
+  "Rare Plants": "",
+  "Wholesome Content": "",
+  "Animal Compilation": "",
+  "Influencer Commentary": "",
+  "Viral Trends": "",
+  "Tax Advice": "",
+  "Dance Performances": "",
+  "Personal Vlogging": "",
+  "Extreme Sports": "",
+  "Senior Citizens": "",
+  "Short-form Video": ""
  }
 }
