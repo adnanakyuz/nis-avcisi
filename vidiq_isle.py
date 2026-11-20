@@ -36,11 +36,9 @@ YUKSEK_ULKELER = set("US GB CA AU NZ DE CH AT NO SE DK FI NL BE IE LU IS SG JP A
                      "FR IT KR PL".split())
 # Yükselen kanal araması: geniş alanlar sırayla ve dönüşümlü dillerle aranır. Önceki vidIQ sonuçlarından konu
 # türetmek aramaları tek alana kilitliyordu (4 günde hep mühendislik).
-ARAMA_NISLERI = ("personal finance", "true crime stories", "history documentary", "science explainers",
-                 "space and astronomy", "wildlife and animals", "restoration", "how it's made", "geography what if",
-                 "health and fitness", "cooking and recipes", "home improvement and diy", "cars and automotive",
-                 "travel stories", "ai and technology", "business case studies", "psychology explained",
-                 "military history", "gaming", "pets")
+# 20 Kas 2026 (Adnan): sadece MÜHENDİSLİK ve FİNANS nişleri (vidIQ kredisi az; genel alanlar çıkarıldı).
+ARAMA_NISLERI = ("engineering explained", "civil engineering", "how it's built", "megaprojects construction",
+                 "personal finance", "how money works", "investing explained", "economics explained")
 ARAMA_DILLERI = ("en", "de", "en", "ja", "en", "fr", "en", "nl")
 
 

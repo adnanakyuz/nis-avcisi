@@ -11,8 +11,8 @@ Elle çalıştırmak için (Python 3.8+, ek paket gerekmez; YT_API_KEY ortam de�
   python nis_avcisi.py --kanal "https://youtube.com/@kanal"   # tek kanal incelemesi → site/kanal/<id>.html (~210 birim)
 
 Kota (15 Ekim 2026'dan beri): arama (search.list) ayrı kotada, günde 100 çağrı; diğer istekler 10.000 birim.
-Genel tarama ~55 arama (12 kategori × 2 zaman dilimi global + 12 kategori × günün yüksek gelirli pazarı
-+ 3 kategori Türkiye (sırayla) + Finans 3 + 5 konunun fırsat ölçümü + en güçlü 3 kanalın İngilizce ve Türkiye
+20 Kas 2026'dan beri sadece mühendislik + finans: genel tarama ~25 arama (Eğitim + Bilim & Teknoloji × 2 zaman
+dilimi global + 2 kategori × günün yüksek gelirli pazarı + 2 kategori Türkiye + Mühendislik 3 + Finans 3 + 5 konunun fırsat ölçümü + en güçlü 3 kanalın İngilizce ve Türkiye
 pazar ölçümü + vidIQ nişlerinden en fazla 3'ünün fırsat ölçümü). Haftada bir +12 (evergreen). Global konulu
 tarama konu başına ~17 arama; kanal incelemesi 2. (Fikir Kutusu 24 Ekim'de durduruldu.) Çeviriler kota harcamaz.
 Sayfa altında ikisi ayrı gösterilir: "48/100 arama · 210 birim".
@@ -22,11 +22,10 @@ import urllib.error, urllib.parse, urllib.request
 
 API = "https://www.googleapis.com/youtube/v3/"
 # Müzik ve Haber bilerek yok: plak şirketleri / büyük haber kanalları niş sinyali vermiyor.
-KATEGORILER = {
-    "1": "Film & Animasyon", "2": "Otomobil", "15": "Hayvanlar", "17": "Spor",
-    "19": "Seyahat", "20": "Oyun", "22": "Kişiler & Bloglar", "23": "Komedi",
-    "24": "Eğlence", "26": "Nasıl Yapılır & Stil", "27": "Eğitim", "28": "Bilim & Teknoloji",
-}
+# 20 Kas 2026 (Adnan): sadece mühendislik + finans aranır. Eski kategoriler geri açmak için yorumda duruyor:
+# "1": "Film & Animasyon", "2": "Otomobil", "15": "Hayvanlar", "17": "Spor", "19": "Seyahat", "20": "Oyun",
+# "22": "Kişiler & Bloglar", "23": "Komedi", "24": "Eğlence", "26": "Nasıl Yapılır & Stil",
+KATEGORILER = {"27": "Eğitim", "28": "Bilim & Teknoloji"}
 STOP = set("""
 ve ile bir bu şu o da de mi mu mü mı için gibi çok en ne ki ama veya hem daha her
 nasıl neden niye kadar sonra önce olan oldu olur ben sen biz siz onlar benim senin
@@ -50,13 +49,16 @@ komik aşk bebek oyun aile çocuk eğlenceli hikaye hayat dünya kedi köpek tep
 # YouTube kategorisi olmayan ama genel taramada her gün aranan konular: ad → (global sorgu, Türkçe sorgu).
 # "|" YouTube aramasında "veya" demektir (resmi doküman). Her konu günde 3 arama harcar.
 SABIT_KONULAR = {
-    "Finans": ("personal finance|investing|stock market|money tips|crypto", "finans|borsa|yatırım|ekonomi|kripto"),
+    "Mühendislik": ("how it's built|engineering explained|how it works|construction|bridge|skyscraper|civil engineering",
+                    "mühendislik|nasıl yapılır|inşaat|köprü|gökdelen"),
+    "Finans": ("financial literacy|how money works|interest rates|inflation|investing explained|personal finance|banking explained",
+               "finans|borsa|yatırım|ekonomi|enflasyon|faiz"),
 }
 # Amaç yüksek gelirli dillerde niş bulmak: genel taramaya her gün sırayla bir yüksek gelirli pazar eklenir
-# (12 kategori × 1 pazar = 12 arama). Türkiye her gün 12 yerine sırayla 3 kategoriyle taranır (4 günde tur).
+# (2 kategori × 1 pazar = 2 arama). Türkiye her gün iki kategoriyle de taranır.
 YUKSEK_PAZARLAR = [("US", "en"), ("GB", "en"), ("DE", "de"), ("CA", "en"), ("AU", "en"), ("JP", "ja"),
                    ("NL", "nl"), ("SE", "sv")]
-TR_GUNLUK_KATEGORI = 3
+TR_GUNLUK_KATEGORI = min(3, len(KATEGORILER))  # kategori sayısından fazlası aynı aramayı tekrarlar
 # Gelire göre puan eki: aynı güçteki iki adaydan yüksek gelirli dildeki öne geçer.
 KAZANC_PUAN = {"yuksek": 0.6, "orta": 0.3, "dusuk": 0, "cok_dusuk": -0.3}
 TARA_LINKI = "https://github.com/adnanakyuz/nis-avcisi/actions/workflows/tara.yml"
@@ -377,7 +379,7 @@ def sira_disi(sonuc, esik=3, adet=10):
 # ---------- evergreen (kalıcı içerik) ----------
 def evergreen_tara(yt, a, adet=30):
     """Haftada bir: 6 ay – 2 yıl önce yüklenmiş ama hâlâ çok izlenen, küçük kanallara ait videolar.
-    12 kategori × 100 birim ≈ 1.250 birim. Kanal yaşı sınırı yok (video eski, kanal da eski olabilir)."""
+    Kategori başına ~100 birim (2 kategori ≈ 210 birim). Kanal yaşı sınırı yok (video eski, kanal da eski olabilir)."""
     simdi = dt.datetime.now(dt.timezone.utc)
     bas, bit = tarih_str(simdi - dt.timedelta(days=730)), tarih_str(simdi - dt.timedelta(days=180))
     kaynak = {}
@@ -583,7 +585,7 @@ def tara(yt, a):
             ulke, pdil = YUKSEK_PAZARLAR[gun % len(YUKSEK_PAZARLAR)]
             aramalar += [(ad, f"{ad} ({ULKE_AD.get(ulke, ulke)})", dict(videoCategoryId=kid, bolge=ulke, dil=pdil))
                          for kid, ad in KATEGORILER.items()]
-            # Türkiye: her gün sırayla 3 kategori (4 günde tüm kategoriler döner).
+            # Türkiye: her gün sırayla TR_GUNLUK_KATEGORI kategori (şu an ikisi de her gün).
             kats = list(KATEGORILER.items())
             aramalar += [(ad, f"{ad} (Türkiye)", dict(videoCategoryId=kid, bolge="TR", dil="tr"))
                          for kid, ad in (kats[(gun * TR_GUNLUK_KATEGORI + i) % len(kats)]

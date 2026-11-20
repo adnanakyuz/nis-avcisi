@@ -613,11 +613,11 @@ class YuksekGelirTaramaTestleri(unittest.TestCase):
     def test_turkiye_gunde_3_kategori_ve_bir_yuksek_gelirli_pazar(self):
         c = self._aramalar(0)
         tr = [p for p in c if p.get("regionCode") == "TR"]
-        self.assertEqual(len(tr), na.TR_GUNLUK_KATEGORI + 1)     # 3 kategori + Finans
+        self.assertEqual(len(tr), na.TR_GUNLUK_KATEGORI + len(na.SABIT_KONULAR))  # kategoriler + sabit konular
         pazar = [p for p in c if p.get("regionCode") not in (None, "TR")]
         self.assertEqual(len(pazar), len(na.KATEGORILER))
         self.assertEqual(len({p["regionCode"] for p in pazar}), 1)
-        # 4 günde Türkiye'nin 12 kategorisinin hepsi döner
+        # 4 günde Türkiye'nin bütün kategorileri döner
         kat = set()
         for g in range(4):
             kat |= {p.get("videoCategoryId") for p in self._aramalar(g) if p.get("regionCode") == "TR"}
