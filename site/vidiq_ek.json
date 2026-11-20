@@ -1,99 +1,6 @@
 {
- "ts": "2026-11-19T17:23:12+00:00",
+ "ts": "2026-11-20T16:58:14+00:00",
  "firsat": {
-  "Travel": {
-   "seviye": "orta",
-   "pay": 0.47610717878322156,
-   "toplam": 153494745,
-   "video": 25,
-   "buyuk": 11,
-   "yeniler": [
-    {
-     "kanal_id": "UCxu5iNTO1Mo0v6FTqjrNF1g",
-     "kanal": "Dozora ☁️",
-     "izl": 60462189
-    },
-    {
-     "kanal_id": "UC9Bggf3TT5PrIzZcq4XOSDg",
-     "kanal": "Embitos",
-     "izl": 6394314
-    },
-    {
-     "kanal_id": "UCezBYD4TtMfeph3cppY5NKg",
-     "kanal": "Knootie",
-     "izl": 2302580
-    },
-    {
-     "kanal_id": "UCqyAlTxEpPVFYxFpt5Rxukg",
-     "kanal": "MYM | MY Moments ",
-     "izl": 1985385
-    }
-   ],
-   "sorgu": "Road Trips",
-   "tarih": "2026-11-13T16:24:59+00:00"
-  },
-  "Football Entertainment": {
-   "seviye": "doymus",
-   "pay": 0.2407554853843169,
-   "toplam": 304231008,
-   "video": 25,
-   "buyuk": 9,
-   "yeniler": [
-    {
-     "kanal_id": "UCfDotHUdFEaHrc3F9l7oWPA",
-     "kanal": "FHQFUQF",
-     "izl": 50636146
-    },
-    {
-     "kanal_id": "UCHfECPV6_mfyFMlqRJaV5Wg",
-     "kanal": "AI-Mini656",
-     "izl": 10791164
-    },
-    {
-     "kanal_id": "UCgas6erRmjfjKHMSrWlvzXw",
-     "kanal": "EltelwanyTV",
-     "izl": 4414999
-    },
-    {
-     "kanal_id": "UCuRfeZ-FDLMTDAm5Be-h3kg",
-     "kanal": "Bertrand Raio",
-     "izl": 3833138
-    }
-   ],
-   "sorgu": "Football Comedy",
-   "tarih": "2026-11-13T16:24:59+00:00"
-  },
-  "Comedy Shorts": {
-   "seviye": "doymus",
-   "pay": 0.08510887811279823,
-   "toplam": 28284840,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [
-    {
-     "kanal_id": "UCX-LTVwCyONaFCoxaY1KyDQ",
-     "kanal": "Lauren Webb",
-     "izl": 1886138
-    },
-    {
-     "kanal_id": "UCp2M-bN6SYDvv4PzHSUGCnA",
-     "kanal": "Relatable Social Realities",
-     "izl": 174894
-    },
-    {
-     "kanal_id": "UCbtIi8eOp_5OlUbUw7CY9Ag",
-     "kanal": "Babu tussi",
-     "izl": 117819
-    },
-    {
-     "kanal_id": "UCk9ieSJ9l80dCTIvCPT9qSw",
-     "kanal": "SasiBassTv",
-     "izl": 113350
-    }
-   ],
-   "sorgu": "Family Dynamics",
-   "tarih": "2026-11-13T16:24:59+00:00"
-  },
   "Sports News": {
    "seviye": "orta",
    "pay": 0.34191093224116786,
@@ -596,6 +503,84 @@
    ],
    "sorgu": "Inspirational Stories",
    "tarih": "2026-11-19T17:23:12+00:00"
+  },
+  "Football": {
+   "seviye": "doymus",
+   "pay": 0.04797466567076433,
+   "toplam": 123405675,
+   "video": 25,
+   "buyuk": 11,
+   "yeniler": [
+    {
+     "kanal_id": "UChq4UmjEEl17of0DSxgxKTA",
+     "kanal": "96FOOTBOL",
+     "izl": 5920346
+    }
+   ],
+   "sorgu": "Football Highlights",
+   "tarih": "2026-11-20T16:58:14+00:00"
+  },
+  "Travel": {
+   "seviye": "doymus",
+   "pay": 0.17418377315621592,
+   "toplam": 107205124,
+   "video": 25,
+   "buyuk": 15,
+   "yeniler": [
+    {
+     "kanal_id": "UC9Bggf3TT5PrIzZcq4XOSDg",
+     "kanal": "Embitos",
+     "izl": 11847321
+    },
+    {
+     "kanal_id": "UCezBYD4TtMfeph3cppY5NKg",
+     "kanal": "Knootie",
+     "izl": 2851345
+    },
+    {
+     "kanal_id": "UCeiAHzkJ9IXgyI4qT7AHUkg",
+     "kanal": "Pragya & Ankur | Middle Class Travellers",
+     "izl": 2232400
+    },
+    {
+     "kanal_id": "UCotK8j1J4135nBTI1ukXGvg",
+     "kanal": "SoftCineMoments",
+     "izl": 1742327
+    }
+   ],
+   "sorgu": "Road Trips",
+   "tarih": "2026-11-20T16:58:14+00:00"
+  },
+  "Comedy Shorts": {
+   "seviye": "doymus",
+   "pay": 0.09847326231047988,
+   "toplam": 7280098,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCp2M-bN6SYDvv4PzHSUGCnA",
+     "kanal": "Relatable Social Realities",
+     "izl": 304415
+    },
+    {
+     "kanal_id": "UC6zBVfC1BGqwE1FxbnsnIMg",
+     "kanal": "Sara ",
+     "izl": 278191
+    },
+    {
+     "kanal_id": "UCV1uVjPUadAb4at1lSiFeYQ",
+     "kanal": "kote.",
+     "izl": 69372
+    },
+    {
+     "kanal_id": "UCw_QA7HlAMgH3WExg5up8Ig",
+     "kanal": "Epoch Podcast™",
+     "izl": 64917
+    }
+   ],
+   "sorgu": "Family Dynamics",
+   "tarih": "2026-11-20T16:58:14+00:00"
   }
  },
  "ceviri": {
@@ -669,7 +654,6 @@
   "Funny Football Moments": "Komik Futbol Anları",
   "Football Comedy": "Futbol Komedisi",
   "Memorable Football Moments": "Unutulmaz Futbol Anları",
-  "Football Parody": "Futbol Parodisi",
   "Parody": "Parodi",
   "Visual Search Games": "Görsel Arama Oyunları",
   "Football Trivia": "Futbolla İlgili Bilgiler",
@@ -723,7 +707,6 @@
   "Commentary": "",
   "Reaction Commentary": "",
   "Tax Preparation & Dance Vlogging": "",
-  "Viral Entertainment": "",
   "Rare Plants": "",
   "Wholesome Content": "",
   "Animal Compilation": "",
@@ -732,8 +715,10 @@
   "Tax Advice": "",
   "Dance Performances": "",
   "Personal Vlogging": "",
-  "Extreme Sports": "",
-  "Senior Citizens": "",
-  "Short-form Video": ""
+  "AI Animation": "Yapay Zeka Animasyonu",
+  "3D Printing": "3D Baskı",
+  "Studio Ghibli Style": "Stüdyo Ghibli Tarzı",
+  "Slice of Life": "Hayat Dilim",
+  "Cozy Cooking": "Rahat Yemek Pişirme"
  }
 }
