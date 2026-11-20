@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-11-19T09:44:59+00:00",
- "bakiye": 68,
+ "guncelleme": "2026-11-20T09:45:11+00:00",
+ "bakiye": 63,
  "sifirlanma": "2026-12-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -43,48 +43,6 @@
      "ad": "احمد محمد",
      "abone": 83600,
      "buyume30": 100.48
-    }
-   ]
-  },
-  {
-   "nis": "Mechanical Engineering",
-   "alt": [
-    "Heavy Machinery",
-    "Aviation Technology",
-    "Machining"
-   ],
-   "kanal_sayisi": 6,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 55.0,
-   "ort_izlenme": 389815,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCnWQRJh3WfocunOqE6dEzmQ",
-     "ad": "Deep signal",
-     "abone": 5530,
-     "buyume30": 113.51
-    },
-    {
-     "id": "UCxwlBH9Y-pNXxq8mfwoh5lg",
-     "ad": "Alfa Groups Shorts",
-     "abone": 2960,
-     "buyume30": 71.1
-    },
-    {
-     "id": "UCve7NwAvcJP3vu6yku-sXKA",
-     "ad": "MechanicalLabs",
-     "abone": 9770,
-     "buyume30": 63.93
-    },
-    {
-     "id": "UCx52EZrPHER03BbNbYwoTdg",
-     "ad": "CAD COMPANY",
-     "abone": 58100,
-     "buyume30": 38
     }
    ]
   },
@@ -173,6 +131,90 @@
    ]
   },
   {
+   "nis": "Mechanical Engineering",
+   "alt": [
+    "Heavy Machinery",
+    "Aviation Technology",
+    "Machining"
+   ],
+   "kanal_sayisi": 5,
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 62.3,
+   "ort_izlenme": 458690,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCnWQRJh3WfocunOqE6dEzmQ",
+     "ad": "Deep signal",
+     "abone": 5530,
+     "buyume30": 113.51
+    },
+    {
+     "id": "UCxwlBH9Y-pNXxq8mfwoh5lg",
+     "ad": "Alfa Groups Shorts",
+     "abone": 2960,
+     "buyume30": 71.1
+    },
+    {
+     "id": "UCve7NwAvcJP3vu6yku-sXKA",
+     "ad": "MechanicalLabs",
+     "abone": 9770,
+     "buyume30": 63.93
+    },
+    {
+     "id": "UCx52EZrPHER03BbNbYwoTdg",
+     "ad": "CAD COMPANY",
+     "abone": 58100,
+     "buyume30": 38
+    }
+   ]
+  },
+  {
+   "nis": "Animation",
+   "alt": [
+    "Family Comedy",
+    "Parenting Humor",
+    "Toddler Life"
+   ],
+   "kanal_sayisi": 4,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 103.8,
+   "ort_izlenme": 1575102,
+   "ortak_konu": "Animation",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UClJs7RZ08Kzv415DAa_v_RQ",
+     "ad": "MiniBaby",
+     "abone": 37600,
+     "buyume30": 221.37
+    },
+    {
+     "id": "UCe-FRVDPmt6dKEIMMt3v83g",
+     "ad": "Cartoon Snacks",
+     "abone": 87600,
+     "buyume30": 99.54
+    },
+    {
+     "id": "UCQ5qCffH2bDX7JajsdCmjAA",
+     "ad": "ZBNDUHUR",
+     "abone": 5710,
+     "buyume30": 58.17
+    },
+    {
+     "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
+     "ad": "Rj Vireon",
+     "abone": 122000,
+     "buyume30": 36.31
+    }
+   ]
+  },
+  {
    "nis": "DIY Crafts",
    "alt": [
     "Paper Crafts",
@@ -253,84 +295,6 @@
      "ad": "ディープ・インサイト",
      "abone": 2140,
      "buyume30": 19.55
-    }
-   ]
-  },
-  {
-   "nis": "Engineering Education",
-   "alt": [
-    "Mechanical Engineering",
-    "Heavy Machinery",
-    "Construction Engineering"
-   ],
-   "kanal_sayisi": 4,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 25.4,
-   "ort_izlenme": 465630,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC00iFBtXh2VkEP4sXGCj-yA",
-     "ad": "Forge of Facts",
-     "abone": 6210,
-     "buyume30": 39.55
-    },
-    {
-     "id": "UCqT6NBFBsEpJlzMzV-CjcZw",
-     "ad": "bluprint labs",
-     "abone": 29100,
-     "buyume30": 22.78
-    },
-    {
-     "id": "UCL3X3z8-qR8BCJHRecKN5VA",
-     "ad": "TrueTech Academy",
-     "abone": 3680,
-     "buyume30": 21.05
-    },
-    {
-     "id": "UChWMTjgRTx4plb2IIfECiUQ",
-     "ad": "Projekt Morski Przekrój",
-     "abone": 3380,
-     "buyume30": 18.18
-    }
-   ]
-  },
-  {
-   "nis": "Animation",
-   "alt": [
-    "Family Comedy",
-    "Parenting Humor",
-    "Toddler Life"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 105.3,
-   "ort_izlenme": 1450811,
-   "ortak_konu": "Animation",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UClJs7RZ08Kzv415DAa_v_RQ",
-     "ad": "MiniBaby",
-     "abone": 37600,
-     "buyume30": 221.37
-    },
-    {
-     "id": "UCQ5qCffH2bDX7JajsdCmjAA",
-     "ad": "ZBNDUHUR",
-     "abone": 5710,
-     "buyume30": 58.17
-    },
-    {
-     "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
-     "ad": "Rj Vireon",
-     "abone": 122000,
-     "buyume30": 36.31
     }
    ]
   },
@@ -551,38 +515,38 @@
    ]
   },
   {
-   "nis": "Human Interest Stories",
+   "nis": "Engineering Education",
    "alt": [
-    "Inspirational Stories",
-    "Acts of Kindness & Heroism",
-    "True Crime"
+    "Heavy Machinery",
+    "Construction Engineering",
+    "3D Printing"
    ],
    "kanal_sayisi": 3,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
+   "dil": "en",
+   "ilk": "2026-10-22T08:01:01+00:00",
    "yeni7": 0,
-   "ort_buyume30": 25.6,
-   "ort_izlenme": 52038,
+   "ort_buyume30": 27.8,
+   "ort_izlenme": 593220,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCF9k3jbxw4-vvM-m6OLBsPQ",
-     "ad": "Gutes geschieht",
-     "abone": 5280,
-     "buyume30": 34.69
+     "id": "UC00iFBtXh2VkEP4sXGCj-yA",
+     "ad": "Forge of Facts",
+     "abone": 6210,
+     "buyume30": 39.55
     },
     {
-     "id": "UC5r0HZLUsWrBCnYkVx5GlHw",
-     "ad": "ROTES DREIECK",
-     "abone": 1670,
-     "buyume30": 23.7
+     "id": "UCqT6NBFBsEpJlzMzV-CjcZw",
+     "ad": "bluprint labs",
+     "abone": 29100,
+     "buyume30": 22.78
     },
     {
-     "id": "UCY2IsFiRTs_lvYgLDqkKVug",
-     "ad": "SagaVerse128",
-     "abone": 1670,
-     "buyume30": 18.44
+     "id": "UCL3X3z8-qR8BCJHRecKN5VA",
+     "ad": "TrueTech Academy",
+     "abone": 3680,
+     "buyume30": 21.05
     }
    ]
   },
@@ -683,36 +647,6 @@
    ]
   },
   {
-   "nis": "Football Entertainment",
-   "alt": [
-    "Football Comedy",
-    "Memorable Football Moments",
-    "Football Parody"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 90.6,
-   "ort_izlenme": 899290,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCXu7ilasTyUfJxAeANeoa4w",
-     "ad": "soccerFunnyMots",
-     "abone": 51800,
-     "buyume30": 162.94
-    },
-    {
-     "id": "UC24KHw9kMrnbd9qGuh24Zaw",
-     "ad": "Cappyedits",
-     "abone": 18700,
-     "buyume30": 18.35
-    }
-   ]
-  },
-  {
    "nis": "Comedy Shorts",
    "alt": [
     "Family Dynamics",
@@ -803,6 +737,36 @@
    ]
   },
   {
+   "nis": "AI Animation",
+   "alt": [
+    "Studio Ghibli Style",
+    "Slice of Life",
+    "Cozy Cooking"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 44.2,
+   "ort_izlenme": 362733,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC2UIo_LPCgTTEh2VdUjQwUA",
+     "ad": "AI Ghibli stories",
+     "abone": 55400,
+     "buyume30": 58.29
+    },
+    {
+     "id": "UCyVsvKcodJYPMABzGC-lAcg",
+     "ad": "k-pop-dehunt'rs",
+     "abone": 20700,
+     "buyume30": 30.19
+    }
+   ]
+  },
+  {
    "nis": "Storytelling",
    "alt": [
     "Human Interest Stories",
@@ -863,6 +827,36 @@
    ]
   },
   {
+   "nis": "Human Interest Stories",
+   "alt": [
+    "Inspirational Stories",
+    "Acts of Kindness & Heroism",
+    "True Crime"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "de",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 29.2,
+   "ort_izlenme": 62100,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCF9k3jbxw4-vvM-m6OLBsPQ",
+     "ad": "Gutes geschieht",
+     "abone": 5280,
+     "buyume30": 34.69
+    },
+    {
+     "id": "UC5r0HZLUsWrBCnYkVx5GlHw",
+     "ad": "ROTES DREIECK",
+     "abone": 1670,
+     "buyume30": 23.7
+    }
+   ]
+  },
+  {
    "nis": "Family Comedy",
    "alt": [
     "Parenting Humor",
@@ -875,8 +869,8 @@
    "yeni7": 0,
    "ort_buyume30": 19.4,
    "ort_izlenme": 725740,
-   "ortak_konu": "Family Comedy",
-   "ortak": true,
+   "ortak_konu": null,
+   "ortak": false,
    "ornekler": [
     {
      "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
@@ -1131,6 +1125,29 @@
    ]
   },
   {
+   "nis": "Football Entertainment",
+   "alt": [
+    "Football Comedy",
+    "Memorable Football Moments"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 162.9,
+   "ort_izlenme": 1270294,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCXu7ilasTyUfJxAeANeoa4w",
+     "ad": "soccerFunnyMots",
+     "abone": 51800,
+     "buyume30": 162.94
+    }
+   ]
+  },
+  {
    "nis": "Reaction Commentary",
    "alt": [
     "Football",
@@ -1222,30 +1239,6 @@
      "ad": "Svandyboys Vlogs",
      "abone": 1980,
      "buyume30": 140.58
-    }
-   ]
-  },
-  {
-   "nis": "Viral Entertainment",
-   "alt": [
-    "Extreme Sports",
-    "Senior Citizens",
-    "Short-form Video"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-11-19T09:44:59+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 137.0,
-   "ort_izlenme": 657629,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCAlcAnDBy3IPDriwq4jGntg",
-     "ad": "Sassy Seniors",
-     "abone": 21000,
-     "buyume30": 137.02
     }
    ]
   }
@@ -1736,6 +1729,28 @@
    "ortak": false
   },
   {
+   "id": "UCf_1SVdE_Yp8gD4_gzSeVbQ",
+   "ad": "°floral°",
+   "handle": null,
+   "abone": 17500,
+   "ort_izlenme": 299139.02898550726,
+   "buyume30": 138.42,
+   "izlenme_buyume30": 169.11,
+   "nis": "Aesthetic POV Shorts, Student Life, Personal Opinions, Aesthetic Edits, POV Skits",
+   "dil": "en, hi",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "GHIBLI_FAMILY9 kanalına benzer",
+   "ilk": "2026-11-20T09:45:11+00:00",
+   "son": "2026-11-20T09:45:11+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCAlcAnDBy3IPDriwq4jGntg",
    "ad": "Sassy Seniors",
    "handle": null,
@@ -2173,6 +2188,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCe-FRVDPmt6dKEIMMt3v83g",
+   "ad": "Cartoon Snacks",
+   "handle": null,
+   "abone": 87600,
+   "ort_izlenme": 1947976.7142857143,
+   "buyume30": 99.54,
+   "izlenme_buyume30": 164.69,
+   "nis": "Animation, Animation Process, 90s Nostalgia, Indian Cultural Comedy",
+   "dil": "en, hi",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "GHIBLI_FAMILY9 kanalına benzer",
+   "ilk": "2026-11-20T09:45:11+00:00",
+   "son": "2026-11-20T09:45:11+00:00",
    "ortak": false
   },
   {
@@ -2968,6 +3005,28 @@
    "ortak": false
   },
   {
+   "id": "UC2UIo_LPCgTTEh2VdUjQwUA",
+   "ad": "AI Ghibli stories",
+   "handle": null,
+   "abone": 55400,
+   "ort_izlenme": 371440.15942028986,
+   "buyume30": 58.29,
+   "izlenme_buyume30": 43.55,
+   "nis": "AI Animation, Studio Ghibli Style, Slice of Life, Cozy Cooking, Romantic Fiction",
+   "dil": "en, hi, gu",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "GHIBLI_FAMILY9 kanalına benzer",
+   "ilk": "2026-11-20T09:45:11+00:00",
+   "son": "2026-11-20T09:45:11+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCQ5qCffH2bDX7JajsdCmjAA",
    "ad": "ZBNDUHUR",
    "handle": null,
@@ -2987,6 +3046,28 @@
    "kaynak": "PROFOOTBALL kanalına benzer",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCl86kGZhvqKujp1gvaZZX6Q",
+   "ad": "Mitti ki khushboo",
+   "handle": null,
+   "abone": 151000,
+   "ort_izlenme": 891786.6363636364,
+   "buyume30": 58.12,
+   "izlenme_buyume30": 59.73,
+   "nis": "Culinary Animation, Indian Village Cooking, Cozy Animation, Ghibli Inspired Art, 90s Nostalgia",
+   "dil": "en, hi",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "GHIBLI_FAMILY9 kanalına benzer",
+   "ilk": "2026-11-20T09:45:11+00:00",
+   "son": "2026-11-20T09:45:11+00:00",
    "ortak": false
   },
   {
@@ -4596,6 +4677,28 @@
    "ortak": false
   },
   {
+   "id": "UCMuZZQaO0WOajwn0hutWf2A",
+   "ad": "Ghibli Home",
+   "handle": null,
+   "abone": 29100,
+   "ort_izlenme": 582608.2459016393,
+   "buyume30": 27.07,
+   "izlenme_buyume30": 36.72,
+   "nis": "Cozy Animation & Lifestyle Shorts, Ghibli-Inspired Animation, Village Life, Nostalgia, Relaxing Visuals, Slow Living",
+   "dil": "en, hi",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "GHIBLI_FAMILY9 kanalına benzer",
+   "ilk": "2026-11-20T09:45:11+00:00",
+   "son": "2026-11-20T09:45:11+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCwzpyWp13O2Q1w_XdjHHDPg",
    "ad": "The memerrrr",
    "handle": null,
@@ -5540,116 +5643,6 @@
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
    "ortak": false
-  },
-  {
-   "id": "UCGR2cKNfKLnmzik1I9zsPbw",
-   "ad": "SHO TAM MARIO",
-   "handle": null,
-   "abone": 8600,
-   "ort_izlenme": 1407575.2592592593,
-   "buyume30": 18.46,
-   "izlenme_buyume30": 23.51,
-   "nis": "Comedy Skits, Cosplay Comedy, Gaming Parody, Sibling Comedy",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "PROFOOTBALL kanalına benzer",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCY2IsFiRTs_lvYgLDqkKVug",
-   "ad": "SagaVerse128",
-   "handle": "@sagaverse128",
-   "abone": 1670,
-   "ort_izlenme": 31913.357868020306,
-   "buyume30": 18.44,
-   "izlenme_buyume30": 11.58,
-   "nis": "Human Interest Stories, Animal Rescue, Heartwarming Content",
-   "dil": "de",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": "2026-08-13T03:35:32Z",
-   "son_video": "2026-10-10T00:00:00.000Z",
-   "video_sayisi": 394,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCaQCgb6TJafadwcG7IF3-kw",
-   "ad": "슈슈티비",
-   "handle": "@슈슈티비-3",
-   "abone": 3280,
-   "ort_izlenme": 45442.32997987927,
-   "buyume30": 18.41,
-   "izlenme_buyume30": -0.45,
-   "nis": "Mechanical Engineering, Mechanical Principles, Physics",
-   "dil": "ko",
-   "ulke": "KR",
-   "kazanc": null,
-   "acilis": "2025-11-15T04:40:49Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 497,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC24KHw9kMrnbd9qGuh24Zaw",
-   "ad": "Cappyedits",
-   "handle": null,
-   "abone": 18700,
-   "ort_izlenme": 528285.109375,
-   "buyume30": 18.35,
-   "izlenme_buyume30": 54.43,
-   "nis": "Football Entertainment, Football Parody, Football Memes, Short-form Content",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "PROFOOTBALL kanalına benzer",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UChWMTjgRTx4plb2IIfECiUQ",
-   "ad": "Projekt Morski Przekrój",
-   "handle": "@jaktodzialaaaa",
-   "abone": 3380,
-   "ort_izlenme": 82861.2072072072,
-   "buyume30": 18.18,
-   "izlenme_buyume30": 15.8,
-   "nis": "Engineering Education, Mechanical Engineering, Maritime Technology",
-   "dil": "pl",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": "2026-06-24T19:56:44Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 111,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
   }
  ],
  "sorgular": [
@@ -5740,6 +5733,14 @@
    "ad": "World In A Box",
    "gelen": 50,
    "alinan": 18
+  },
+  {
+   "tarih": "2026-11-20T09:45:11+00:00",
+   "tip": "benzer",
+   "hedef": "UClJnSVtjZN-ijexN4N8-wuQ",
+   "ad": "GHIBLI_FAMILY9",
+   "gelen": 50,
+   "alinan": 6
   }
  ]
 }
