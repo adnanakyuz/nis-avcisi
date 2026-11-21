@@ -1,99 +1,6 @@
 {
- "ts": "2026-11-20T20:49:38+00:00",
+ "ts": "2026-11-21T16:09:02+00:00",
  "firsat": {
-  "Sports News": {
-   "seviye": "orta",
-   "pay": 0.34191093224116786,
-   "toplam": 161020780,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCDXRD43jh8_g_yu_llUe51w",
-     "kanal": "Eryihjy outrfj",
-     "izl": 11145068
-    },
-    {
-     "kanal_id": "UCWbcS6mSKM12AWrKfmFOa_A",
-     "kanal": "Mccray Margaryanftt",
-     "izl": 11031182
-    },
-    {
-     "kanal_id": "UCJEnJQdETg2RHQ0pgmHM6Pw",
-     "kanal": "Alessandro",
-     "izl": 7885292
-    },
-    {
-     "kanal_id": "UC3UFcn-F28hfehQh9iKZ_iQ",
-     "kanal": "Eric Lucio",
-     "izl": 7386902
-    }
-   ],
-   "sorgu": "MLB",
-   "tarih": "2026-11-14T15:05:05+00:00"
-  },
-  "Mechanical Engineering": {
-   "seviye": "orta",
-   "pay": 0.4419292192128745,
-   "toplam": 82402870,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCDrQ0IPduY0wCV56YlKGTIw",
-     "kanal": "Amazing Work Here",
-     "izl": 8734640
-    },
-    {
-     "kanal_id": "UCdyOtjn9b6sEKJyuhC4N_QA",
-     "kanal": "Bulldozer Masters",
-     "izl": 7758959
-    },
-    {
-     "kanal_id": "UC7Q_mzqpKNQazpcOi50bsoA",
-     "kanal": "JCB Wala",
-     "izl": 3434086
-    },
-    {
-     "kanal_id": "UCfOQ2314Kc_HP-WddbKpRhA",
-     "kanal": "Ultimate Engineers",
-     "izl": 2663471
-    }
-   ],
-   "sorgu": "Heavy Machinery",
-   "tarih": "2026-11-14T15:05:05+00:00"
-  },
-  "Gardening": {
-   "seviye": "doymus",
-   "pay": 0.21448224300099947,
-   "toplam": 32521965,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCh8pzKg8DtiVLB8slWCjz0Q",
-     "kanal": "Subreenagardens ",
-     "izl": 1370809
-    },
-    {
-     "kanal_id": "UCwT3-aYFLUw61FqWp7yTxdQ",
-     "kanal": "Shall We Grow",
-     "izl": 1298981
-    },
-    {
-     "kanal_id": "UCF8TVrjsoRI7WPzTJbNra-Q",
-     "kanal": "GreenX",
-     "izl": 1206585
-    },
-    {
-     "kanal_id": "UCLamaMh2744y7m_lENCS2Dw",
-     "kanal": "Plantalytics",
-     "izl": 1096509
-    }
-   ],
-   "sorgu": "Plant Propagation",
-   "tarih": "2026-11-14T15:05:05+00:00"
-  },
   "Travel Vlogging": {
    "seviye": "doymus",
    "pay": 0.13811960267570322,
@@ -674,12 +581,83 @@
    ],
    "sorgu": "Studio Ghibli Style",
    "tarih": "2026-11-20T20:49:38+00:00"
+  },
+  "Sports News": {
+   "seviye": "orta",
+   "pay": 0.35502003498841345,
+   "toplam": 183612784,
+   "video": 25,
+   "buyuk": 1,
+   "yeniler": [
+    {
+     "kanal_id": "UCalHLorzoYcNUOfoqFfyllw",
+     "kanal": "mtzbzbznb",
+     "izl": 19154835
+    },
+    {
+     "kanal_id": "UCh04WdIGt8vQupyf9F-XKjw",
+     "kanal": "PupKitty Studio",
+     "izl": 16445132
+    },
+    {
+     "kanal_id": "UCpkk8H47Be3xmy6Av5xvYxw",
+     "kanal": "Clift Liskovec01",
+     "izl": 7014011
+    },
+    {
+     "kanal_id": "UCMEjCyiwrFMnWUm3sBchE2g",
+     "kanal": "basernks",
+     "izl": 6466342
+    }
+   ],
+   "sorgu": "MLB",
+   "tarih": "2026-11-21T16:09:02+00:00"
+  },
+  "Mechanical Engineering": {
+   "seviye": "doymus",
+   "pay": 0.08623078591083677,
+   "toplam": 63853274,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCZxclQWik0mhrRUYFPJ3HEA",
+     "kanal": "Logibu",
+     "izl": 1422575
+    },
+    {
+     "kanal_id": "UCiLvTtqGjfnB3GuWrycaU8w",
+     "kanal": "TheAircraftFiles",
+     "izl": 877813
+    },
+    {
+     "kanal_id": "UCrffjcmk2RSXofb4BvoqwbA",
+     "kanal": "World explained",
+     "izl": 477047
+    },
+    {
+     "kanal_id": "UC7507euaapOnmgTsYBvYgpA",
+     "kanal": "Poetry Stories",
+     "izl": 472944
+    }
+   ],
+   "sorgu": "Aviation Technology",
+   "tarih": "2026-11-21T16:09:02+00:00"
+  },
+  "Storytelling": {
+   "seviye": "doymus",
+   "pay": 0.0,
+   "toplam": 15385960,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [],
+   "sorgu": "Human Interest Stories",
+   "tarih": "2026-11-21T16:09:02+00:00"
   }
  },
  "ceviri": {
   "Sports News": "Spor Haberleri",
   "Mechanical Engineering": "Makine Mühendisliği",
-  "Engineering Education": "Mühendislik Eğitimi",
   "Engineering": "Mühendislik",
   "Sports": "Spor",
   "Industrial Engineering": "Endüstri Mühendisliği",
@@ -693,7 +671,6 @@
   "Machining": "İşleme",
   "Construction Engineering": "İnşaat Mühendisliği",
   "Physics": "Fizik",
-  "Major League Baseball": "",
   "Manufacturing Processes": "Üretim Süreçleri",
   "Pop Culture": "Popüler Kültür",
   "Entertainment Trivia": "Eğlenceyle ilgili bilgiler",
@@ -707,7 +684,6 @@
   "Construction & DIY": "İnşaat ve Kendin Yap",
   "Aviation Drama Storytelling": "Havacılık Draması Hikaye Anlatımı",
   "Civil Engineering Documentary": "İnşaat Mühendisliği Belgeseli",
-  "Lifestyle Vlogging": "Yaşam Tarzı Vlogu",
   "DIY": "Kendin Yap",
   "Animal Rescue Stories": "Hayvan Kurtarma Hikayeleri",
   "Moral Stories": "Ahlaki Hikayeler",
@@ -727,11 +703,9 @@
   "Passenger Stories": "Yolcu Hikayeleri",
   "Architectural History": "Mimarlık Tarihi",
   "Infrastructure Analysis": "Altyapı Analizi",
-  "Shopping": "Alışveriş",
   "Technology": "Teknoloji",
   "Artificial Intelligence": "Yapay Zeka",
   "Football": "Futbol",
-  "Football Entertainment": "Futbol Eğlencesi",
   "Animation": "Animasyon",
   "Football Puzzle Challenges": "Futbol Bulmaca Mücadeleleri",
   "Artificial Intelligence Technology Reviews": "Yapay Zeka Teknolojisi İncelemeleri",
@@ -745,8 +719,6 @@
   "Football Highlights": "Futbolun Önemli Noktaları",
   "Football Rankings": "Futbol Sıralaması",
   "Funny Football Moments": "Komik Futbol Anları",
-  "Football Comedy": "Futbol Komedisi",
-  "Memorable Football Moments": "Unutulmaz Futbol Anları",
   "Parody": "Parodi",
   "Visual Search Games": "Görsel Arama Oyunları",
   "Football Trivia": "Futbolla İlgili Bilgiler",
@@ -757,21 +729,15 @@
   "Parenting": "Ebeveynlik",
   "Family Comedy": "Aile Komedisi",
   "Comedy Shorts": "Komedi Kısaları",
-  "Family-Friendly Comedy Shorts": "Aile Dostu Komedi Kısaları",
   "Pranks": "Şakalar",
   "Parenting Moments": "Ebeveynlik Anları",
   "Child Development": "Çocuk Gelişimi",
   "Parenting Humor": "Ebeveynlik Mizahı",
-  "Toddler Life": "Küçük Çocuk Hayatı",
   "Baby Humor": "Bebek Mizahı",
   "Parenting Lifestyle": "Ebeveynlik Yaşam Tarzı",
-  "Baby & Toddler Content": "Bebek ve Küçük Çocuk İçeriği",
-  "Relatable Comedy": "Bağlanabilir Komedi",
   "Family Dynamics": "Aile Dinamikleri",
   "Relatable Humor": "Bağlanabilir Mizah",
   "Student Life": "Öğrenci Hayatı",
-  "Cute Kids": "Sevimli Çocuklar",
-  "Wholesome Family Moments": "Sağlıklı Aile Anları",
   "Military Family Life": "Askerlik Aile Hayatı",
   "Gardening": "Bahçıvanlık",
   "Cannabis Cultivation Tutorials": "Esrar Yetiştirme Dersleri",
@@ -798,20 +764,40 @@
   "Toddler Pranks": "Küçük Çocuk Şakaları",
   "Cute Baby Moments": "Sevimli Bebek Anları",
   "Commentary": "",
-  "Reaction Commentary": "",
-  "Tax Preparation & Dance Vlogging": "",
   "Rare Plants": "",
   "Wholesome Content": "",
   "Animal Compilation": "",
   "Influencer Commentary": "",
-  "Viral Trends": "",
-  "Tax Advice": "",
-  "Dance Performances": "",
-  "Personal Vlogging": "",
   "AI Animation": "Yapay Zeka Animasyonu",
-  "3D Printing": "3D Baskı",
   "Studio Ghibli Style": "Stüdyo Ghibli Tarzı",
   "Slice of Life": "Hayat Dilim",
-  "Cozy Cooking": "Rahat Yemek Pişirme"
+  "Cozy Cooking": "Rahat Yemek Pişirme",
+  "Educational Animation": "",
+  "Children's 3D Animal Animation": "",
+  "Science Education": "",
+  "Roblox Animation Shorts": "",
+  "3D Satisfying Animation": "",
+  "Historical City Development Documentaries": "",
+  "Kids Education": "",
+  "3D Animation": "",
+  "Football Player Highlights": "",
+  "Sports Editing": "",
+  "History": "",
+  "Ancient Engineering": "",
+  "Plant Reviews": "",
+  "Educational Animal Content": "",
+  "Human Anatomy": "",
+  "Biology": "",
+  "Drama Stories": "",
+  "Gaming": "",
+  "ASMR": "",
+  "3D Simulation": "",
+  "Blender Animation": "",
+  "Urban History": "",
+  "3D Modeling": "",
+  "Historical Geography": "",
+  "Alphabet Learning": "",
+  "Phonics": "",
+  "Nursery Rhymes": ""
  }
 }

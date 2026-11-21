@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "ts": "2026-11-20T20:49:45+00:00",
+ "ts": "2026-11-21T16:09:11+00:00",
  "videolar": [
   {
    "id": "q1Cc9TK05ao",
@@ -9,22 +9,22 @@
    "kanal_id": "UCvg4QufAmhWmSeejuRqU2BA",
    "ulke": "US",
    "dil": "en",
-   "izlenme": 11982178,
-   "abone": 1910,
-   "video_sayisi": 6,
-   "kanal_izlenme": 9228955,
+   "izlenme": 14506865,
+   "abone": 2370,
+   "video_sayisi": 7,
+   "kanal_izlenme": 14053215,
    "yayin_ts": "2026-11-15T14:45:08Z",
    "sure": 61,
    "etiketler": [],
    "kaynak": "Eğitim",
-   "puan": 19.5795059661016,
+   "puan": 19.704003873752505,
    "kapak": "https://i.ytimg.com/vi/q1Cc9TK05ao/mqdefault.jpg",
-   "kanal_yasi": 7,
+   "kanal_yasi": 8,
    "yt_konular": [
+    "vehicle",
     "lifestyle",
     "knowledge",
-    "technology",
-    "vehicle"
+    "technology"
    ]
   },
   {
@@ -34,10 +34,10 @@
    "kanal_id": "UCA5WfmIwF0-Y2GE1iG5ZwdA",
    "ulke": "SN",
    "dil": "en",
-   "izlenme": 5105789,
-   "abone": 11100,
+   "izlenme": 5421539,
+   "abone": 11700,
    "video_sayisi": 9,
-   "kanal_izlenme": 4720916,
+   "kanal_izlenme": 5247983,
    "yayin_ts": "2026-11-12T19:31:59Z",
    "sure": 123,
    "etiketler": [
@@ -55,15 +55,52 @@
     "knowthis"
    ],
    "kaynak": "Bilim & Teknoloji",
-   "puan": 16.69551888256747,
+   "puan": 16.737402969460874,
    "kapak": "https://i.ytimg.com/vi/G4j22uaJlRE/mqdefault.jpg",
-   "kanal_yasi": 13,
+   "kanal_yasi": 14,
    "yt_konular": [
     "entertainment",
-    "lifestyle",
-    "food",
     "film",
+    "food",
+    "lifestyle",
     "hobby"
+   ]
+  },
+  {
+   "id": "zGBXybjLAY8",
+   "baslik": "Nuclear flash? Don't stop to film it",
+   "kanal": "Cutting Plane",
+   "kanal_id": "UCj033PPWDLIJC-OuDILAhDg",
+   "ulke": "",
+   "dil": "en",
+   "izlenme": 5247276,
+   "abone": 9770,
+   "video_sayisi": 17,
+   "kanal_izlenme": 7497997,
+   "yayin_ts": "2026-11-13T22:00:37Z",
+   "sure": 88,
+   "etiketler": [
+    "animation",
+    "duck and cover",
+    "emergency preparedness",
+    "explained",
+    "fallout",
+    "how to survive a nuclear bomb",
+    "nuclear attack",
+    "nuclear blast",
+    "nuclear bomb",
+    "nuclear flash",
+    "nuclear war",
+    "what to do in a nuclear attack"
+   ],
+   "kaynak": "Eğitim",
+   "puan": 16.565219856134043,
+   "kapak": "https://i.ytimg.com/vi/zGBXybjLAY8/mqdefault.jpg",
+   "kanal_yasi": 26,
+   "yt_konular": [
+    "technology",
+    "knowledge",
+    "lifestyle"
    ]
   },
   {
@@ -73,10 +110,10 @@
    "kanal_id": "UCDy2l6KHlSMWpP1l8gUQshA",
    "ulke": "DE",
    "dil": "en",
-   "izlenme": 6401212,
-   "abone": 19700,
-   "video_sayisi": 12,
-   "kanal_izlenme": 12356172,
+   "izlenme": 6479494,
+   "abone": 20100,
+   "video_sayisi": 13,
+   "kanal_izlenme": 12686179,
    "yayin_ts": "2026-11-09T14:09:32Z",
    "sure": 67,
    "etiketler": [
@@ -96,13 +133,13 @@
     "science"
    ],
    "kaynak": "Eğitim",
-   "puan": 16.325912128910478,
+   "puan": 16.251438499485044,
    "kapak": "https://i.ytimg.com/vi/itHC5eV4_cU/mqdefault.jpg",
    "kanal_yasi": 158,
    "yt_konular": [
-    "lifestyle",
+    "knowledge",
     "health",
-    "knowledge"
+    "lifestyle"
    ]
   },
   {
@@ -112,44 +149,21 @@
    "kanal_id": "UClkZONbzXnT5yDp0R7h-7RQ",
    "ulke": "GB",
    "dil": "en",
-   "izlenme": 9738072,
-   "abone": 19400,
-   "video_sayisi": 35,
-   "kanal_izlenme": 16795325,
+   "izlenme": 9802548,
+   "abone": 19700,
+   "video_sayisi": 36,
+   "kanal_izlenme": 17207745,
    "yayin_ts": "2026-11-08T10:19:24Z",
    "sure": 82,
    "etiketler": [],
    "kaynak": "Bilim & Teknoloji",
-   "puan": 16.28752875492021,
+   "puan": 16.236022883465253,
    "kapak": "https://i.ytimg.com/vi/kGK2NBlRdkI/mqdefault.jpg",
-   "kanal_yasi": 41,
+   "kanal_yasi": 42,
    "yt_konular": [
-    "lifestyle",
+    "knowledge",
     "technology",
-    "knowledge"
-   ]
-  },
-  {
-   "id": "8stQPJEkTmQ",
-   "baslik": "忍者屋敷の作り方",
-   "kanal": "0秒博士",
-   "kanal_id": "UC1LUuCJvmDW-zEpaVyOJJfA",
-   "ulke": "JP",
-   "dil": "ja",
-   "izlenme": 8402446,
-   "abone": 30700,
-   "video_sayisi": 22,
-   "kanal_izlenme": 24542522,
-   "yayin_ts": "2026-11-15T06:39:31Z",
-   "sure": 64,
-   "etiketler": [],
-   "kaynak": "Bilim & Teknoloji",
-   "puan": 16.12346298383962,
-   "kapak": "https://i.ytimg.com/vi/8stQPJEkTmQ/mqdefault.jpg",
-   "kanal_yasi": 300,
-   "yt_konular": [
-    "lifestyle",
-    "video game culture"
+    "lifestyle"
    ]
   },
   {
@@ -159,10 +173,10 @@
    "kanal_id": "UCHyRPJnO8IucBwl7CCJCeuQ",
    "ulke": "US",
    "dil": "en",
-   "izlenme": 4008249,
-   "abone": 5560,
+   "izlenme": 4287361,
+   "abone": 6020,
    "video_sayisi": 20,
-   "kanal_izlenme": 5184265,
+   "kanal_izlenme": 5764038,
    "yayin_ts": "2026-11-07T18:00:10Z",
    "sure": 69,
    "etiketler": [
@@ -182,15 +196,124 @@
     "shorts"
    ],
    "kaynak": "Bilim & Teknoloji",
-   "puan": 16.054336033263453,
+   "puan": 16.102290115400912,
    "kapak": "https://i.ytimg.com/vi/6Tdn27AaGb4/mqdefault.jpg",
-   "kanal_yasi": 37,
+   "kanal_yasi": 38,
    "yt_konular": [
-    "entertainment",
-    "film",
-    "video game culture",
     "lifestyle",
+    "video game culture",
+    "film",
+    "knowledge",
+    "entertainment"
+   ]
+  },
+  {
+   "id": "8stQPJEkTmQ",
+   "baslik": "忍者屋敷の作り方",
+   "kanal": "0秒博士",
+   "kanal_id": "UC1LUuCJvmDW-zEpaVyOJJfA",
+   "ulke": "JP",
+   "dil": "ja",
+   "izlenme": 9030597,
+   "abone": 34000,
+   "video_sayisi": 24,
+   "kanal_izlenme": 29188220,
+   "yayin_ts": "2026-11-15T06:39:31Z",
+   "sure": 64,
+   "etiketler": [],
+   "kaynak": "Bilim & Teknoloji",
+   "puan": 16.085792688320197,
+   "kapak": "https://i.ytimg.com/vi/8stQPJEkTmQ/mqdefault.jpg",
+   "kanal_yasi": 301,
+   "yt_konular": [
+    "video game culture",
+    "lifestyle"
+   ]
+  },
+  {
+   "id": "yPhu-2Jp1JU",
+   "baslik": "India Tried to Stamp Its Emblem on the Moon. The Moon Said No.",
+   "kanal": "Space Unmasked",
+   "kanal_id": "UCJotcwhDAuH4PK_-BD41tlA",
+   "ulke": "IN",
+   "dil": "en",
+   "izlenme": 4002853,
+   "abone": 3110,
+   "video_sayisi": 21,
+   "kanal_izlenme": 9180059,
+   "yayin_ts": "2026-11-18T05:49:14Z",
+   "sure": 72,
+   "etiketler": [],
+   "kaynak": "Bilim & Teknoloji",
+   "puan": 16.048596549713608,
+   "kapak": "https://i.ytimg.com/vi/yPhu-2Jp1JU/mqdefault.jpg",
+   "kanal_yasi": 154,
+   "yt_konular": [
     "knowledge"
+   ]
+  },
+  {
+   "id": "s9XO5mZBE-g",
+   "baslik": "Why the F-47 Has No Tail | Boeing F-47 #shorts",
+   "kanal": "Influx Picture",
+   "kanal_id": "UCk05pZ8CBMirhenQbrGlZDA",
+   "ulke": "",
+   "dil": "en-US",
+   "izlenme": 3381693,
+   "abone": 5180,
+   "video_sayisi": 23,
+   "kanal_izlenme": 7774926,
+   "yayin_ts": "2026-11-10T01:31:41Z",
+   "sure": 100,
+   "etiketler": [
+    "6th gen fighter",
+    "aviation",
+    "b-2 bomber",
+    "b-2 spirit",
+    "boeing f-47",
+    "canards",
+    "collaborative combat aircraft",
+    "drone wingman",
+    "engineering",
+    "f-47",
+    "f-47 fighter",
+    "f47",
+    "fighter jet",
+    "fighter jets",
+    "flying wing"
+   ],
+   "kaynak": "Bilim & Teknoloji",
+   "puan": 15.999890061041137,
+   "kapak": "https://i.ytimg.com/vi/s9XO5mZBE-g/mqdefault.jpg",
+   "kanal_yasi": 58,
+   "yt_konular": [
+    "vehicle",
+    "knowledge",
+    "lifestyle"
+   ]
+  },
+  {
+   "id": "eDGuJBdIdco",
+   "baslik": "B-2 Spirit Neden Radara Yakalanması Bu Kadar Zor Bir Uçak?",
+   "kanal": "İçindeki Fizik",
+   "kanal_id": "UCqBnPB8h8o1STc57SxFRhpg",
+   "ulke": "",
+   "dil": "en-US",
+   "izlenme": 2791193,
+   "abone": 4230,
+   "video_sayisi": 15,
+   "kanal_izlenme": 5419478,
+   "yayin_ts": "2026-11-08T07:15:43Z",
+   "sure": 95,
+   "etiketler": [],
+   "kaynak": "Bilim & Teknoloji",
+   "puan": 15.884983040943212,
+   "kapak": "https://i.ytimg.com/vi/eDGuJBdIdco/mqdefault.jpg",
+   "kanal_yasi": 111,
+   "yt_konular": [
+    "lifestyle",
+    "knowledge",
+    "vehicle"
    ]
   },
   {
@@ -200,10 +323,10 @@
    "kanal_id": "UCDy2l6KHlSMWpP1l8gUQshA",
    "ulke": "DE",
    "dil": "en",
-   "izlenme": 4308050,
-   "abone": 19700,
-   "video_sayisi": 12,
-   "kanal_izlenme": 12356172,
+   "izlenme": 4378686,
+   "abone": 20100,
+   "video_sayisi": 13,
+   "kanal_izlenme": 12686179,
    "yayin_ts": "2026-11-08T12:01:36Z",
    "sure": 69,
    "etiketler": [
@@ -221,13 +344,37 @@
     "tendons"
    ],
    "kaynak": "Eğitim",
-   "puan": 15.856912570512112,
+   "puan": 15.789450732241066,
    "kapak": "https://i.ytimg.com/vi/N-jEHvYqodc/mqdefault.jpg",
    "kanal_yasi": 158,
    "yt_konular": [
-    "lifestyle",
+    "knowledge",
     "health",
-    "knowledge"
+    "lifestyle"
+   ]
+  },
+  {
+   "id": "FF3tUeMpGNw",
+   "baslik": "Starship Flight 15: how SpaceX plans to catch the ship with the tower for the first time",
+   "kanal": "Algo Picks",
+   "kanal_id": "UCTR8M_VZC83Q3kOBJjdch9Q",
+   "ulke": "US",
+   "dil": "en",
+   "izlenme": 1045085,
+   "abone": 1190,
+   "video_sayisi": 12,
+   "kanal_izlenme": 2016907,
+   "yayin_ts": "2026-11-10T20:00:44Z",
+   "sure": 42,
+   "etiketler": [],
+   "kaynak": "Mühendislik",
+   "puan": 15.652462965137383,
+   "kapak": "https://i.ytimg.com/vi/FF3tUeMpGNw/mqdefault.jpg",
+   "kanal_yasi": 14,
+   "yt_konular": [
+    "entertainment",
+    "knowledge",
+    "film"
    ]
   },
   {
@@ -237,19 +384,54 @@
    "kanal_id": "UC8JEFhzLcagJzaiQqqGHBqQ",
    "ulke": "",
    "dil": "vi",
-   "izlenme": 5370407,
-   "abone": 3520,
-   "video_sayisi": 25,
-   "kanal_izlenme": 5137378,
+   "izlenme": 5583061,
+   "abone": 3680,
+   "video_sayisi": 26,
+   "kanal_izlenme": 6101674,
    "yayin_ts": "2026-11-08T06:58:23Z",
    "sure": 79,
    "etiketler": [],
    "kaynak": "Bilim & Teknoloji",
-   "puan": 15.574972316770802,
+   "puan": 15.61103472998877,
    "kapak": "https://i.ytimg.com/vi/Mj0PPBhZpkY/mqdefault.jpg",
-   "kanal_yasi": 40,
+   "kanal_yasi": 41,
    "yt_konular": [
     "technology",
+    "lifestyle"
+   ]
+  },
+  {
+   "id": "mfutHzI778w",
+   "baslik": "How an Electric Car Just Broke the 500 km/h Barrier ⚡",
+   "kanal": "The Cross Section",
+   "kanal_id": "UCMBLiOwxcBvInT0sP2bL9xQ",
+   "ulke": "",
+   "dil": "en",
+   "izlenme": 2569209,
+   "abone": 4710,
+   "video_sayisi": 19,
+   "kanal_izlenme": 3429612,
+   "yayin_ts": "2026-11-07T18:04:05Z",
+   "sure": 107,
+   "etiketler": [
+    "3d cutaway",
+    "500 kmh electric car",
+    "automotive engineering",
+    "blade battery",
+    "byd",
+    "disus x suspension",
+    "electric motor how it works",
+    "fastest electric car",
+    "how it works",
+    "yangwang u9 xtreme"
+   ],
+   "kaynak": "Bilim & Teknoloji",
+   "puan": 15.520480610610155,
+   "kapak": "https://i.ytimg.com/vi/mfutHzI778w/mqdefault.jpg",
+   "kanal_yasi": 23,
+   "yt_konular": [
+    "vehicle",
+    "knowledge",
     "lifestyle"
    ]
   },
@@ -260,21 +442,21 @@
    "kanal_id": "UCXVIDGATKJQIEmC00DW4ulA",
    "ulke": "IN",
    "dil": "te",
-   "izlenme": 4287563,
-   "abone": 35100,
-   "video_sayisi": 14,
-   "kanal_izlenme": 7570331,
+   "izlenme": 4486180,
+   "abone": 36900,
+   "video_sayisi": 15,
+   "kanal_izlenme": 8905509,
    "yayin_ts": "2026-11-17T10:30:30Z",
    "sure": 95,
    "etiketler": [],
    "kaynak": "Eğitim",
-   "puan": 15.152082730363997,
+   "puan": 15.106408428465041,
    "kapak": "https://i.ytimg.com/vi/Q6fR8onOaWw/mqdefault.jpg",
-   "kanal_yasi": 17,
+   "kanal_yasi": 18,
    "yt_konular": [
-    "food",
+    "knowledge",
     "lifestyle",
-    "knowledge"
+    "food"
    ]
   },
   {
@@ -284,15 +466,15 @@
    "kanal_id": "UCPHYLJ0gdwUx6b0-Aj67YIA",
    "ulke": "IN",
    "dil": "hi",
-   "izlenme": 9237194,
-   "abone": 36100,
-   "video_sayisi": 39,
-   "kanal_izlenme": 26935124,
+   "izlenme": 9536265,
+   "abone": 37000,
+   "video_sayisi": 40,
+   "kanal_izlenme": 28537344,
    "yayin_ts": "2026-11-10T14:21:26Z",
    "sure": 76,
    "etiketler": [],
    "kaynak": "Eğitim",
-   "puan": 15.048230400744986,
+   "puan": 15.034238580141208,
    "kapak": "https://i.ytimg.com/vi/eA5e62QJInA/mqdefault.jpg",
    "kanal_yasi": 72,
    "yt_konular": [
@@ -306,20 +488,20 @@
    "kanal_id": "UC1LUuCJvmDW-zEpaVyOJJfA",
    "ulke": "JP",
    "dil": "ja",
-   "izlenme": 2992675,
-   "abone": 30700,
-   "video_sayisi": 22,
-   "kanal_izlenme": 24542522,
+   "izlenme": 3315058,
+   "abone": 34000,
+   "video_sayisi": 24,
+   "kanal_izlenme": 29188220,
    "yayin_ts": "2026-11-15T11:31:16Z",
    "sure": 68,
    "etiketler": [],
    "kaynak": "Bilim & Teknoloji",
-   "puan": 15.022914582956187,
+   "puan": 15.015921809165405,
    "kapak": "https://i.ytimg.com/vi/czKdbU8p3dQ/mqdefault.jpg",
-   "kanal_yasi": 300,
+   "kanal_yasi": 301,
    "yt_konular": [
-    "lifestyle",
-    "video game culture"
+    "video game culture",
+    "lifestyle"
    ]
   },
   {
@@ -329,10 +511,10 @@
    "kanal_id": "UCuMRFSSOF6kx0ZYN-gF6-Aw",
    "ulke": "IN",
    "dil": "hi",
-   "izlenme": 8824761,
-   "abone": 97400,
-   "video_sayisi": 32,
-   "kanal_izlenme": 38054813,
+   "izlenme": 8958319,
+   "abone": 99700,
+   "video_sayisi": 33,
+   "kanal_izlenme": 39832908,
    "yayin_ts": "2026-11-13T11:36:40Z",
    "sure": 132,
    "etiketler": [
@@ -353,15 +535,15 @@
     "charcoal heater for room"
    ],
    "kaynak": "Eğitim",
-   "puan": 15.001172871236987,
+   "puan": 14.945746410094753,
    "kapak": "https://i.ytimg.com/vi/bvPhAzbTDfI/mqdefault.jpg",
-   "kanal_yasi": 35,
+   "kanal_yasi": 36,
    "yt_konular": [
-    "entertainment",
     "knowledge",
     "health",
     "film",
-    "lifestyle"
+    "lifestyle",
+    "entertainment"
    ]
   },
   {
@@ -371,66 +553,20 @@
    "kanal_id": "UC8yR5vk-PT2hHsk0BRwbDgg",
    "ulke": "TR",
    "dil": "tr",
-   "izlenme": 4238431,
-   "abone": 17100,
-   "video_sayisi": 34,
-   "kanal_izlenme": 14275769,
+   "izlenme": 4311339,
+   "abone": 17400,
+   "video_sayisi": 35,
+   "kanal_izlenme": 14834877,
    "yayin_ts": "2026-11-10T15:46:35Z",
    "sure": 70,
    "etiketler": [],
    "kaynak": "Eğitim",
-   "puan": 14.952722715238455,
+   "puan": 14.915197714400216,
    "kapak": "https://i.ytimg.com/vi/1RsHAUNAj74/mqdefault.jpg",
    "kanal_yasi": 22,
    "yt_konular": [
     "technology",
     "lifestyle"
-   ]
-  },
-  {
-   "id": "PMbRbJR_Wyk",
-   "baslik": "How Did Ancient Humans Make the First Clay Pots? 😱 |#shorts",
-   "kanal": "MadeMind🧠🏭",
-   "kanal_id": "UCPHYLJ0gdwUx6b0-Aj67YIA",
-   "ulke": "IN",
-   "dil": "hi",
-   "izlenme": 9183272,
-   "abone": 36100,
-   "video_sayisi": 39,
-   "kanal_izlenme": 26935124,
-   "yayin_ts": "2026-11-07T14:03:44Z",
-   "sure": 75,
-   "etiketler": [],
-   "kaynak": "Eğitim",
-   "puan": 14.930184118178829,
-   "kapak": "https://i.ytimg.com/vi/PMbRbJR_Wyk/mqdefault.jpg",
-   "kanal_yasi": 72,
-   "yt_konular": [
-    "knowledge"
-   ]
-  },
-  {
-   "id": "_3sZhmpBK54",
-   "baslik": "Zengin Neden Hep Daha Zengin? Cevap Bir Kümeste 🐔 #shorts",
-   "kanal": "Çubuk adam",
-   "kanal_id": "UCMp8xsg9eDYTXiiuK4qTvoQ",
-   "ulke": "",
-   "dil": "tr",
-   "izlenme": 1476537,
-   "abone": 3840,
-   "video_sayisi": 17,
-   "kanal_izlenme": 4357525,
-   "yayin_ts": "2026-11-12T10:31:08Z",
-   "sure": 118,
-   "etiketler": [],
-   "kaynak": "Finans",
-   "puan": 14.903002575481946,
-   "kapak": "https://i.ytimg.com/vi/_3sZhmpBK54/mqdefault.jpg",
-   "kanal_yasi": 17,
-   "yt_konular": [
-    "knowledge",
-    "entertainment",
-    "film"
    ]
   },
   {
@@ -440,52 +576,22 @@
    "kanal_id": "UC21aiAw6k5YZ4O_uDCluMNg",
    "ulke": "",
    "dil": "tr",
-   "izlenme": 1170233,
-   "abone": 1750,
+   "izlenme": 1189634,
+   "abone": 1840,
    "video_sayisi": 18,
-   "kanal_izlenme": 2453667,
+   "kanal_izlenme": 2655227,
    "yayin_ts": "2026-11-13T11:20:32Z",
    "sure": 110,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 14.886589800194558,
+   "puan": 14.865332904624518,
    "kapak": "https://i.ytimg.com/vi/VdeoOv2sBbQ/mqdefault.jpg",
-   "kanal_yasi": 12,
+   "kanal_yasi": 13,
    "yt_konular": [
-    "hobby",
-    "lifestyle",
+    "entertainment",
     "film",
-    "entertainment"
-   ]
-  },
-  {
-   "id": "VH9Jqo2odeo",
-   "baslik": "Stadion, Kok Nggak Becek? 🌧️ Rahasia di Bawah Rumput!",
-   "kanal": "Kalau Boleh Tau",
-   "kanal_id": "UC67-cZbh755ZRIPZ5CoZb8A",
-   "ulke": "",
-   "dil": "id",
-   "izlenme": 2713656,
-   "abone": 50400,
-   "video_sayisi": 19,
-   "kanal_izlenme": 22015410,
-   "yayin_ts": "2026-11-18T04:29:30Z",
-   "sure": 144,
-   "etiketler": [
-    "Stadion",
-    "Drainase",
-    "Tribun",
-    "Roboh",
-    "Carakerja",
-    "sains",
-    "teknologi"
-   ],
-   "kaynak": "Bilim & Teknoloji",
-   "puan": 14.814464251832634,
-   "kapak": "https://i.ytimg.com/vi/VH9Jqo2odeo/mqdefault.jpg",
-   "kanal_yasi": 29,
-   "yt_konular": [
-    "knowledge"
+    "lifestyle",
+    "hobby"
    ]
   },
   {
@@ -495,10 +601,10 @@
    "kanal_id": "UCNZIj4N2LR9LmCHgoOXH2Dw",
    "ulke": "US",
    "dil": "en-US",
-   "izlenme": 4391304,
-   "abone": 14500,
-   "video_sayisi": 35,
-   "kanal_izlenme": 4734051,
+   "izlenme": 4605217,
+   "abone": 15400,
+   "video_sayisi": 34,
+   "kanal_izlenme": 6013073,
    "yayin_ts": "2026-11-13T18:40:40Z",
    "sure": 98,
    "etiketler": [
@@ -514,13 +620,100 @@
     "deep tech"
    ],
    "kaynak": "Bilim & Teknoloji",
-   "puan": 14.715323304396454,
+   "puan": 14.834716430192108,
    "kapak": "https://i.ytimg.com/vi/iw0-qAx6Y00/mqdefault.jpg",
-   "kanal_yasi": 217,
+   "kanal_yasi": 218,
+   "yt_konular": [
+    "lifestyle",
+    "knowledge",
+    "technology"
+   ]
+  },
+  {
+   "id": "_3sZhmpBK54",
+   "baslik": "Zengin Neden Hep Daha Zengin? Cevap Bir Kümeste 🐔 #shorts",
+   "kanal": "Çubuk adam",
+   "kanal_id": "UCMp8xsg9eDYTXiiuK4qTvoQ",
+   "ulke": "",
+   "dil": "tr",
+   "izlenme": 1484825,
+   "abone": 3920,
+   "video_sayisi": 18,
+   "kanal_izlenme": 4567492,
+   "yayin_ts": "2026-11-12T10:31:08Z",
+   "sure": 118,
+   "etiketler": [],
+   "kaynak": "Finans",
+   "puan": 14.831390962620485,
+   "kapak": "https://i.ytimg.com/vi/_3sZhmpBK54/mqdefault.jpg",
+   "kanal_yasi": 18,
+   "yt_konular": [
+    "knowledge",
+    "entertainment",
+    "film"
+   ]
+  },
+  {
+   "id": "QCM2H3T4ooA",
+   "baslik": "What Happens When Lightning Strikes a Wind Turbine? ⚡",
+   "kanal": "shirusekaii",
+   "kanal_id": "UCDGIg0AJYKkdB_VVZzkverw",
+   "ulke": "US",
+   "dil": "en",
+   "izlenme": 3015733,
+   "abone": 24800,
+   "video_sayisi": 35,
+   "kanal_izlenme": 10252552,
+   "yayin_ts": "2026-11-12T20:58:28Z",
+   "sure": 128,
+   "etiketler": [
+    "science",
+    "engineering",
+    "how things work",
+    "everyday science",
+    "hidden engineering",
+    "science explained",
+    "3d animation",
+    "educational shorts"
+   ],
+   "kaynak": "Bilim & Teknoloji",
+   "puan": 14.81500404494291,
+   "kapak": "https://i.ytimg.com/vi/QCM2H3T4ooA/mqdefault.jpg",
+   "kanal_yasi": 18,
    "yt_konular": [
     "technology",
     "knowledge",
     "lifestyle"
+   ]
+  },
+  {
+   "id": "VH9Jqo2odeo",
+   "baslik": "Stadion, Kok Nggak Becek? 🌧️ Rahasia di Bawah Rumput!",
+   "kanal": "Kalau Boleh Tau",
+   "kanal_id": "UC67-cZbh755ZRIPZ5CoZb8A",
+   "ulke": "",
+   "dil": "id",
+   "izlenme": 3149040,
+   "abone": 53500,
+   "video_sayisi": 20,
+   "kanal_izlenme": 22746145,
+   "yayin_ts": "2026-11-18T04:29:30Z",
+   "sure": 144,
+   "etiketler": [
+    "Stadion",
+    "Drainase",
+    "Tribun",
+    "Roboh",
+    "Carakerja",
+    "sains",
+    "teknologi"
+   ],
+   "kaynak": "Bilim & Teknoloji",
+   "puan": 14.792938642731297,
+   "kapak": "https://i.ytimg.com/vi/VH9Jqo2odeo/mqdefault.jpg",
+   "kanal_yasi": 30,
+   "yt_konular": [
+    "knowledge"
    ]
   },
   {
@@ -530,42 +723,18 @@
    "kanal_id": "UCx3KViLkU-zmNRFMLLOTAQg",
    "ulke": "",
    "dil": "tr",
-   "izlenme": 322004,
-   "abone": 525,
+   "izlenme": 338016,
+   "abone": 537,
    "video_sayisi": 3,
-   "kanal_izlenme": 440075,
+   "kanal_izlenme": 463389,
    "yayin_ts": "2026-11-11T19:29:46Z",
    "sure": 80,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 14.475947169287647,
+   "puan": 14.501068332357297,
    "kapak": "https://i.ytimg.com/vi/S1--8wmhzn4/mqdefault.jpg",
-   "kanal_yasi": 10,
+   "kanal_yasi": 11,
    "yt_konular": []
-  },
-  {
-   "id": "iynC7_zElAI",
-   "baslik": "Tum Sa Koi Pyara ❣️ Marvelous Duet Voice #faiz#arunitakanjilal#hindisong#shorts",
-   "kanal": "Jovan Music",
-   "kanal_id": "UCZg01u4f_z3_PerYn7DbMeQ",
-   "ulke": "",
-   "dil": "en",
-   "izlenme": 253304,
-   "abone": 2870,
-   "video_sayisi": 10,
-   "kanal_izlenme": 1771617,
-   "yayin_ts": "2026-11-17T15:14:07Z",
-   "sure": 20,
-   "etiketler": [],
-   "kaynak": "Finans",
-   "puan": 14.146682440885941,
-   "kapak": "https://i.ytimg.com/vi/iynC7_zElAI/mqdefault.jpg",
-   "kanal_yasi": 9,
-   "yt_konular": [
-    "music of asia",
-    "music",
-    "pop music"
-   ]
   },
   {
    "id": "F40797pAZa4",
@@ -574,10 +743,10 @@
    "kanal_id": "UCc8hYFD7pjSpkVVZ7gKtHdg",
    "ulke": "US",
    "dil": "te",
-   "izlenme": 1457540,
-   "abone": 51800,
+   "izlenme": 1481153,
+   "abone": 53600,
    "video_sayisi": 22,
-   "kanal_izlenme": 10764869,
+   "kanal_izlenme": 12374728,
    "yayin_ts": "2026-11-11T00:30:05Z",
    "sure": 172,
    "etiketler": [
@@ -593,9 +762,9 @@
     "telugu engineering explainer"
    ],
    "kaynak": "Mühendislik",
-   "puan": 13.970998168074813,
+   "puan": 14.002365744041567,
    "kapak": "https://i.ytimg.com/vi/F40797pAZa4/mqdefault.jpg",
-   "kanal_yasi": 28,
+   "kanal_yasi": 29,
    "yt_konular": [
     "knowledge",
     "society"
@@ -608,41 +777,41 @@
    "kanal_id": "UCx3KViLkU-zmNRFMLLOTAQg",
    "ulke": "",
    "dil": "tr",
-   "izlenme": 129373,
-   "abone": 525,
+   "izlenme": 129512,
+   "abone": 537,
    "video_sayisi": 3,
-   "kanal_izlenme": 440075,
+   "kanal_izlenme": 463389,
    "yayin_ts": "2026-11-10T22:21:36Z",
    "sure": 86,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 13.447679361951787,
+   "puan": 13.42456829005922,
    "kapak": "https://i.ytimg.com/vi/D-8VYadMyIc/mqdefault.jpg",
-   "kanal_yasi": 10,
+   "kanal_yasi": 11,
    "yt_konular": []
   },
   {
-   "id": "ueMt80EfiOY",
-   "baslik": "Bu Sefer Jane Senin Peşinde.    #patrickjane #dizidenanaliz",
-   "kanal": "Zihin Testi",
-   "kanal_id": "UCexGtVTEKrRUBnegbkx4FLg",
-   "ulke": "TR",
-   "dil": "tr",
-   "izlenme": 723321,
-   "abone": 20300,
-   "video_sayisi": 40,
-   "kanal_izlenme": 12180700,
-   "yayin_ts": "2026-11-13T17:28:45Z",
-   "sure": 66,
+   "id": "iynC7_zElAI",
+   "baslik": "Tum Sa Koi Pyara ❣️ Marvelous Duet Voice #faiz#arunitakanjilal#hindisong#shorts",
+   "kanal": "Jovan Music",
+   "kanal_id": "UCZg01u4f_z3_PerYn7DbMeQ",
+   "ulke": "",
+   "dil": "hi",
+   "izlenme": 253323,
+   "abone": 2890,
+   "video_sayisi": 11,
+   "kanal_izlenme": 1880878,
+   "yayin_ts": "2026-11-17T15:14:07Z",
+   "sure": 20,
    "etiketler": [],
    "kaynak": "Finans",
-   "puan": 12.83296297537577,
-   "kapak": "https://i.ytimg.com/vi/ueMt80EfiOY/mqdefault.jpg",
-   "kanal_yasi": 19,
+   "puan": 13.10785569713708,
+   "kapak": "https://i.ytimg.com/vi/iynC7_zElAI/mqdefault.jpg",
+   "kanal_yasi": 10,
    "yt_konular": [
-    "television program",
-    "entertainment",
-    "film"
+    "music of asia",
+    "music",
+    "pop music"
    ]
   },
   {
@@ -652,10 +821,10 @@
    "kanal_id": "UCTcmbQ3DAspkJq-4BysN01A",
    "ulke": "BR",
    "dil": "en",
-   "izlenme": 290976,
-   "abone": 1270,
-   "video_sayisi": 20,
-   "kanal_izlenme": 497783,
+   "izlenme": 310683,
+   "abone": 1390,
+   "video_sayisi": 21,
+   "kanal_izlenme": 563909,
    "yayin_ts": "2026-11-14T12:53:14Z",
    "sure": 154,
    "etiketler": [
@@ -667,14 +836,14 @@
     "nuclear power"
    ],
    "kaynak": "Mühendislik",
-   "puan": 12.720664487218754,
+   "puan": 12.70125686430522,
    "kapak": "https://i.ytimg.com/vi/juza34aDI5s/mqdefault.jpg",
-   "kanal_yasi": 17,
+   "kanal_yasi": 18,
    "yt_konular": [
     "entertainment",
-    "film",
-    "video game culture",
     "knowledge",
+    "video game culture",
+    "film",
     "technology",
     "lifestyle"
    ]
@@ -686,15 +855,15 @@
    "kanal_id": "UC09aa9zarH1cEl_RXqLydcg",
    "ulke": "",
    "dil": "tr",
-   "izlenme": 314996,
-   "abone": 7970,
+   "izlenme": 316653,
+   "abone": 8030,
    "video_sayisi": 16,
-   "kanal_izlenme": 3722116,
+   "kanal_izlenme": 3776062,
    "yayin_ts": "2026-11-12T21:19:00Z",
    "sure": 136,
    "etiketler": [],
    "kaynak": "Finans",
-   "puan": 12.716340785966564,
+   "puan": 12.682963636838561,
    "kapak": "https://i.ytimg.com/vi/_1MHmwozDIg/mqdefault.jpg",
    "kanal_yasi": 31,
    "yt_konular": [
@@ -709,15 +878,15 @@
    "kanal_id": "UCVOcbXu2eHO1aoQeuiSDmTQ",
    "ulke": "TR",
    "dil": "tr",
-   "izlenme": 276351,
-   "abone": 4540,
-   "video_sayisi": 37,
-   "kanal_izlenme": 4249951,
+   "izlenme": 281669,
+   "abone": 4590,
+   "video_sayisi": 38,
+   "kanal_izlenme": 4347093,
    "yayin_ts": "2026-11-14T09:38:21Z",
    "sure": 53,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 12.322404019083443,
+   "puan": 12.266150835834871,
    "kapak": "https://i.ytimg.com/vi/spPxvQiu_cE/mqdefault.jpg",
    "kanal_yasi": 26,
    "yt_konular": []
@@ -729,10 +898,10 @@
    "kanal_id": "UCJ2vswRPxtGre8-IBSLcDYA",
    "ulke": "",
    "dil": "en",
-   "izlenme": 172099,
-   "abone": 918,
-   "video_sayisi": 21,
-   "kanal_izlenme": 416255,
+   "izlenme": 176815,
+   "abone": 1280,
+   "video_sayisi": 22,
+   "kanal_izlenme": 892793,
    "yayin_ts": "2026-11-13T12:25:01Z",
    "sure": 63,
    "etiketler": [
@@ -753,39 +922,15 @@
     "form4tion"
    ],
    "kaynak": "Mühendislik",
-   "puan": 12.088624656394558,
+   "puan": 12.211558071977318,
    "kapak": "https://i.ytimg.com/vi/O_6JvL0tCrM/mqdefault.jpg",
-   "kanal_yasi": 263,
+   "kanal_yasi": 264,
    "yt_konular": [
-    "technology",
-    "entertainment",
-    "knowledge",
     "film",
-    "lifestyle"
-   ]
-  },
-  {
-   "id": "_W2xwhOCIWI",
-   "baslik": "Kaç Tanesine kandın? #dizidenanaliz #patrickjane",
-   "kanal": "Zihin Testi",
-   "kanal_id": "UCexGtVTEKrRUBnegbkx4FLg",
-   "ulke": "TR",
-   "dil": "tr",
-   "izlenme": 282226,
-   "abone": 20300,
-   "video_sayisi": 40,
-   "kanal_izlenme": 12180700,
-   "yayin_ts": "2026-11-13T07:47:51Z",
-   "sure": 58,
-   "etiketler": [],
-   "kaynak": "Finans",
-   "puan": 11.814649890381618,
-   "kapak": "https://i.ytimg.com/vi/_W2xwhOCIWI/mqdefault.jpg",
-   "kanal_yasi": 19,
-   "yt_konular": [
-    "television program",
+    "knowledge",
     "entertainment",
-    "film"
+    "lifestyle",
+    "technology"
    ]
   },
   {
@@ -795,20 +940,55 @@
    "kanal_id": "UCsvkSURkGYABMXsg1K42hXw",
    "ulke": "",
    "dil": "tr",
-   "izlenme": 180706,
-   "abone": 510,
+   "izlenme": 185058,
+   "abone": 522,
    "video_sayisi": 13,
-   "kanal_izlenme": 198298,
+   "kanal_izlenme": 203535,
    "yayin_ts": "2026-11-08T10:21:34Z",
    "sure": 139,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 11.743661357519205,
+   "puan": 11.740716194856832,
    "kapak": "https://i.ytimg.com/vi/0rXjt8g076A/mqdefault.jpg",
    "kanal_yasi": 244,
    "yt_konular": [
     "vehicle",
     "technology",
+    "lifestyle"
+   ]
+  },
+  {
+   "id": "K149791xcg8",
+   "baslik": "How They Rolled a Cruise Ship Upright",
+   "kanal": "Blueprint Ink",
+   "kanal_id": "UC7rbnwGeptVij8y0dwhq0xA",
+   "ulke": "SI",
+   "dil": "en",
+   "izlenme": 54136,
+   "abone": 163,
+   "video_sayisi": 35,
+   "kanal_izlenme": 345034,
+   "yayin_ts": "2026-11-14T16:00:28Z",
+   "sure": 51,
+   "etiketler": [
+    "Blueprint Ink",
+    "Costa Concordia",
+    "parbuckling",
+    "shipwreck salvage",
+    "Giglio",
+    "strand jacks",
+    "sponsons",
+    "marine salvage",
+    "engineering explained",
+    "YouTube Shorts"
+   ],
+   "kaynak": "Mühendislik",
+   "puan": 11.717412209797466,
+   "kapak": "https://i.ytimg.com/vi/K149791xcg8/mqdefault.jpg",
+   "kanal_yasi": 31,
+   "yt_konular": [
+    "technology",
+    "knowledge",
     "lifestyle"
    ]
   },
@@ -819,15 +999,15 @@
    "kanal_id": "UC8yR5vk-PT2hHsk0BRwbDgg",
    "ulke": "TR",
    "dil": "tr",
-   "izlenme": 154361,
-   "abone": 17100,
-   "video_sayisi": 34,
-   "kanal_izlenme": 14275769,
+   "izlenme": 159555,
+   "abone": 17400,
+   "video_sayisi": 35,
+   "kanal_izlenme": 14834877,
    "yayin_ts": "2026-11-15T12:57:47Z",
    "sure": 70,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 11.704720691174114,
+   "puan": 11.655475333856248,
    "kapak": "https://i.ytimg.com/vi/FNawqjhhhfc/mqdefault.jpg",
    "kanal_yasi": 22,
    "yt_konular": [
@@ -836,45 +1016,48 @@
    ]
   },
   {
-   "id": "evmucfSzN_E",
-   "baslik": "Koca apartman yanındakine dokunmadan nasıl yıkılır? 🏗️",
-   "kanal": "Nasıl Oluyor?",
-   "kanal_id": "UCVOcbXu2eHO1aoQeuiSDmTQ",
-   "ulke": "TR",
-   "dil": "tr",
-   "izlenme": 155167,
-   "abone": 4540,
-   "video_sayisi": 37,
-   "kanal_izlenme": 4249951,
-   "yayin_ts": "2026-11-12T09:07:57Z",
-   "sure": 56,
-   "etiketler": [],
-   "kaynak": "Mühendislik",
-   "puan": 11.58612338431812,
-   "kapak": "https://i.ytimg.com/vi/evmucfSzN_E/mqdefault.jpg",
-   "kanal_yasi": 26,
-   "yt_konular": []
-  },
-  {
    "id": "4dLBucIDVPk",
    "baslik": "How Is Cement Made? Inside the 1,500°C Kiln That Builds Every City",
    "kanal": "Shunyosthan",
    "kanal_id": "UChqisPCwcuJ4wA9SwywWTwA",
    "ulke": "",
    "dil": "bn",
-   "izlenme": 123120,
-   "abone": 2290,
-   "video_sayisi": 16,
-   "kanal_izlenme": 1123499,
+   "izlenme": 124821,
+   "abone": 2330,
+   "video_sayisi": 17,
+   "kanal_izlenme": 1159068,
    "yayin_ts": "2026-11-10T12:30:20Z",
    "sure": 113,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 11.503709787015223,
+   "puan": 11.440122643788937,
    "kapak": "https://i.ytimg.com/vi/4dLBucIDVPk/mqdefault.jpg",
-   "kanal_yasi": 18,
+   "kanal_yasi": 19,
    "yt_konular": [
     "knowledge"
+   ]
+  },
+  {
+   "id": "7WWykBXtHOM",
+   "baslik": "Bir köprü nasıl inşa edersin?  #mühendislik #3danimasyon #muhendislik #brigde",
+   "kanal": "Sen Yapardın",
+   "kanal_id": "UCf0MnZAc2BmKftLmNlP0T-w",
+   "ulke": "TR",
+   "dil": "tr",
+   "izlenme": 127507,
+   "abone": 17000,
+   "video_sayisi": 36,
+   "kanal_izlenme": 10238820,
+   "yayin_ts": "2026-11-18T10:47:08Z",
+   "sure": 92,
+   "etiketler": [],
+   "kaynak": "Mühendislik",
+   "puan": 11.241105942155125,
+   "kapak": "https://i.ytimg.com/vi/7WWykBXtHOM/mqdefault.jpg",
+   "kanal_yasi": 115,
+   "yt_konular": [
+    "lifestyle",
+    "technology"
    ]
   },
   {
@@ -884,17 +1067,17 @@
    "kanal_id": "UCD2uEQ4MXbXiRhBZQtobPyA",
    "ulke": "IN",
    "dil": "en",
-   "izlenme": 77836,
-   "abone": 193,
-   "video_sayisi": 14,
-   "kanal_izlenme": 87345,
+   "izlenme": 78508,
+   "abone": 226,
+   "video_sayisi": 16,
+   "kanal_izlenme": 89169,
    "yayin_ts": "2026-11-09T06:09:05Z",
    "sure": 91,
    "etiketler": [],
    "kaynak": "Mühendislik",
-   "puan": 11.340213501791562,
+   "puan": 11.12307460013949,
    "kapak": "https://i.ytimg.com/vi/HrgDHkpf36M/mqdefault.jpg",
-   "kanal_yasi": 14,
+   "kanal_yasi": 15,
    "yt_konular": [
     "knowledge"
    ]
@@ -903,41 +1086,45 @@
  "konular": [
   {
    "terim": "engineering",
-   "kanal_sayisi": 5,
-   "toplam": 10320168,
+   "kanal_sayisi": 9,
+   "toplam": 19882000,
    "kanal_idler": [
     "UCHyRPJnO8IucBwl7CCJCeuQ",
+    "UCk05pZ8CBMirhenQbrGlZDA",
+    "UCMBLiOwxcBvInT0sP2bL9xQ",
     "UCNZIj4N2LR9LmCHgoOXH2Dw",
+    "UCDGIg0AJYKkdB_VVZzkverw",
     "UCc8hYFD7pjSpkVVZ7gKtHdg",
     "UCTcmbQ3DAspkJq-4BysN01A",
-    "UCJ2vswRPxtGre8-IBSLcDYA"
+    "UCJ2vswRPxtGre8-IBSLcDYA",
+    "UC7rbnwGeptVij8y0dwhq0xA"
    ],
    "firsat": {
     "seviye": "doymus",
-    "pay": 0.20314952148943413,
-    "toplam": 307236894,
+    "pay": 0.16902970584953067,
+    "toplam": 291579239,
     "video": 25,
     "buyuk": 5,
     "yeniler": [
      {
-      "kanal_id": "UCtBBl0iusvCzReT0qGe035g",
-      "kanal": "World In A Box",
-      "izl": 13964214
-     },
-     {
       "kanal_id": "UCl5OZ89TBZ6T47-ZxoQbvQw",
       "kanal": "Low Poly Films",
-      "izl": 11661937
+      "izl": 11795854
      },
      {
       "kanal_id": "UClkZONbzXnT5yDp0R7h-7RQ",
       "kanal": "SizedUnderstood",
-      "izl": 9738072
+      "izl": 9802548
+     },
+     {
+      "kanal_id": "UCvWnNV5_7TfqYmfE7c5mulw",
+      "kanal": "The CarMakers",
+      "izl": 8236356
      },
      {
       "kanal_id": "UCH2kOm0CKT4dAeD0PMxporw",
       "kanal": "The Space Maze",
-      "izl": 8007865
+      "izl": 8066728
      }
     ]
    }
@@ -945,37 +1132,37 @@
   {
    "terim": "human body",
    "kanal_sayisi": 2,
-   "toplam": 19534023,
+   "toplam": 19816499,
    "kanal_idler": [
     "UCDy2l6KHlSMWpP1l8gUQshA",
     "UCuMRFSSOF6kx0ZYN-gF6-Aw"
    ],
    "firsat": {
     "seviye": "orta",
-    "pay": 0.4055798394983042,
-    "toplam": 133378030,
+    "pay": 0.4266621551001638,
+    "toplam": 104744106,
     "video": 25,
-    "buyuk": 7,
+    "buyuk": 8,
     "yeniler": [
      {
       "kanal_id": "UC-H-N0xqMmumlEwfsh_QDsQ",
       "kanal": "Ashzfilms",
-      "izl": 12770788
-     },
-     {
-      "kanal_id": "UChW4G1me58bv4zWnRlgqimQ",
-      "kanal": "Body Science Lab",
-      "izl": 9385810
+      "izl": 12849589
      },
      {
       "kanal_id": "UCqOQZgRICOKhF8MO0_8nlXA",
       "kanal": "Facto Nerd",
-      "izl": 4530370
+      "izl": 4532988
      },
      {
       "kanal_id": "UCDy2l6KHlSMWpP1l8gUQshA",
       "kanal": "Bodyology",
-      "izl": 4308050
+      "izl": 4378686
+     },
+     {
+      "kanal_id": "UCY0VMCLKF6FiYFYGSQmUuNw",
+      "kanal": "KekLol Films",
+      "izl": 3505722
      }
     ]
    }
