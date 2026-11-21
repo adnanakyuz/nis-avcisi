@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-11-20T09:45:11+00:00",
- "bakiye": 63,
+ "guncelleme": "2026-11-21T09:44:45+00:00",
+ "bakiye": 33,
  "sifirlanma": "2026-12-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -11,12 +11,12 @@
     "Philadelphia Phillies",
     "Baseball"
    ],
-   "kanal_sayisi": 9,
+   "kanal_sayisi": 8,
    "dil": "en",
    "ilk": "2026-10-23T22:57:44+00:00",
    "yeni7": 0,
-   "ort_buyume30": 76.0,
-   "ort_izlenme": 2286418,
+   "ort_buyume30": 83.2,
+   "ort_izlenme": 2237105,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -47,44 +47,44 @@
    ]
   },
   {
-   "nis": "Comedy",
+   "nis": "Animation",
    "alt": [
-    "Pranks",
-    "Parody",
-    "Sports Humor"
+    "3D Animation",
+    "Family Comedy",
+    "Parenting Humor"
    ],
-   "kanal_sayisi": 6,
+   "kanal_sayisi": 7,
    "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 52.3,
-   "ort_izlenme": 500799,
-   "ortak_konu": "Comedy",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 4,
+   "ort_buyume30": 86.5,
+   "ort_izlenme": 1162049,
+   "ortak_konu": "Animation",
    "ortak": true,
    "ornekler": [
     {
-     "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
-     "ad": "AI-Mini656",
-     "abone": 9040,
-     "buyume30": 113.21
+     "id": "UClJs7RZ08Kzv415DAa_v_RQ",
+     "ad": "MiniBaby",
+     "abone": 37600,
+     "buyume30": 221.37
     },
     {
-     "id": "UCjCLQiRqQptCG3PZI_nwANQ",
-     "ad": "Two Much Trouble",
-     "abone": 21600,
-     "buyume30": 60
+     "id": "UCQCgzwyvpIeWKzNh0-zvpgQ",
+     "ad": "KorsaGhost",
+     "abone": 25200,
+     "buyume30": 117.24
     },
     {
-     "id": "UCGwGV-LXv2k7UwA7oOk_KTg",
-     "ad": "DadTokTV",
-     "abone": 13100,
-     "buyume30": 50.4
+     "id": "UCe-FRVDPmt6dKEIMMt3v83g",
+     "ad": "Cartoon Snacks",
+     "abone": 87600,
+     "buyume30": 99.54
     },
     {
-     "id": "UCORz3pOLJRJfoiKfiWvrk_g",
-     "ad": "JulianGonzalez",
-     "abone": 21500,
-     "buyume30": 43.33
+     "id": "UCQ5qCffH2bDX7JajsdCmjAA",
+     "ad": "ZBNDUHUR",
+     "abone": 5710,
+     "buyume30": 58.17
     }
    ]
   },
@@ -131,18 +131,60 @@
    ]
   },
   {
-   "nis": "Mechanical Engineering",
+   "nis": "Comedy",
    "alt": [
-    "Heavy Machinery",
-    "Aviation Technology",
-    "Machining"
+    "Pranks",
+    "Parody",
+    "Sports Humor"
    ],
    "kanal_sayisi": 5,
    "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
+   "ilk": "2026-10-25T09:45:23+00:00",
    "yeni7": 0,
-   "ort_buyume30": 62.3,
-   "ort_izlenme": 458690,
+   "ort_buyume30": 58.6,
+   "ort_izlenme": 479853,
+   "ortak_konu": null,
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCHfECPV6_mfyFMlqRJaV5Wg",
+     "ad": "AI-Mini656",
+     "abone": 9040,
+     "buyume30": 113.21
+    },
+    {
+     "id": "UCjCLQiRqQptCG3PZI_nwANQ",
+     "ad": "Two Much Trouble",
+     "abone": 21600,
+     "buyume30": 60
+    },
+    {
+     "id": "UCGwGV-LXv2k7UwA7oOk_KTg",
+     "ad": "DadTokTV",
+     "abone": 13100,
+     "buyume30": 50.4
+    },
+    {
+     "id": "UCORz3pOLJRJfoiKfiWvrk_g",
+     "ad": "JulianGonzalez",
+     "abone": 21500,
+     "buyume30": 43.33
+    }
+   ]
+  },
+  {
+   "nis": "Mechanical Engineering",
+   "alt": [
+    "Aviation Technology",
+    "Heavy Machinery",
+    "Machining"
+   ],
+   "kanal_sayisi": 4,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 71.6,
+   "ort_izlenme": 413939,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
@@ -169,48 +211,6 @@
      "ad": "CAD COMPANY",
      "abone": 58100,
      "buyume30": 38
-    }
-   ]
-  },
-  {
-   "nis": "Animation",
-   "alt": [
-    "Family Comedy",
-    "Parenting Humor",
-    "Toddler Life"
-   ],
-   "kanal_sayisi": 4,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 103.8,
-   "ort_izlenme": 1575102,
-   "ortak_konu": "Animation",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UClJs7RZ08Kzv415DAa_v_RQ",
-     "ad": "MiniBaby",
-     "abone": 37600,
-     "buyume30": 221.37
-    },
-    {
-     "id": "UCe-FRVDPmt6dKEIMMt3v83g",
-     "ad": "Cartoon Snacks",
-     "abone": 87600,
-     "buyume30": 99.54
-    },
-    {
-     "id": "UCQ5qCffH2bDX7JajsdCmjAA",
-     "ad": "ZBNDUHUR",
-     "abone": 5710,
-     "buyume30": 58.17
-    },
-    {
-     "id": "UCTPXuPmQaqrYWKt1PrgeD8A",
-     "ad": "Rj Vireon",
-     "abone": 122000,
-     "buyume30": 36.31
     }
    ]
   },
@@ -253,48 +253,6 @@
      "ad": "Pixel DIY Crafts",
      "abone": 80700,
      "buyume30": 40.84
-    }
-   ]
-  },
-  {
-   "nis": "Engineering",
-   "alt": [
-    "Structural Engineering",
-    "Civil Engineering",
-    "Physics"
-   ],
-   "kanal_sayisi": 4,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 63.6,
-   "ort_izlenme": 152453,
-   "ortak_konu": "Engineering",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCPA7Ua1WosnBHBq3NKlDvwA",
-     "ad": "Extreme Mechanics",
-     "abone": 1060,
-     "buyume30": 118.11
-    },
-    {
-     "id": "UCNcBjlaxddAVmS4zywNi8Sw",
-     "ad": "こういうことか",
-     "abone": 2300,
-     "buyume30": 96.58
-    },
-    {
-     "id": "UCsilmM7_rXt6OuoBlOSKjzg",
-     "ad": "Fact Mine 3D",
-     "abone": 44300,
-     "buyume30": 20.05
-    },
-    {
-     "id": "UCDAzSxjnxj9Jw2cOW0ZMaow",
-     "ad": "ディープ・インサイト",
-     "abone": 2140,
-     "buyume30": 19.55
     }
    ]
   },
@@ -407,42 +365,6 @@
    ]
   },
   {
-   "nis": "Industrial Engineering",
-   "alt": [
-    "Manufacturing Processes",
-    "Civil Engineering",
-    "Product Design"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 54.4,
-   "ort_izlenme": 351932,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCR7j6Oyp3M6cikoPK1tp6rw",
-     "ad": "Emperor Insights – Science & Curiosity",
-     "abone": 218000,
-     "buyume30": 107.62
-    },
-    {
-     "id": "UCHy7wiQpW5HgPdAP8ZFkQjg",
-     "ad": "Machine Verse",
-     "abone": 10700,
-     "buyume30": 35.1
-    },
-    {
-     "id": "UC_ZFjHOqTnSLg_uxLSNF4tA",
-     "ad": "Thomas Anderson",
-     "abone": 13000,
-     "buyume30": 20.37
-    }
-   ]
-  },
-  {
    "nis": "Construction Engineering",
    "alt": [
     "Heavy Machinery",
@@ -455,8 +377,8 @@
    "yeni7": 0,
    "ort_buyume30": 41.0,
    "ort_izlenme": 633352,
-   "ortak_konu": "DIY",
-   "ortak": true,
+   "ortak_konu": null,
+   "ortak": false,
    "ornekler": [
     {
      "id": "UC_LqdJFCudT1HSzYA7SE83Q",
@@ -475,114 +397,6 @@
      "ad": "Top Smart Engineer",
      "abone": 66900,
      "buyume30": 25.99
-    }
-   ]
-  },
-  {
-   "nis": "Sports",
-   "alt": [
-    "Major League Baseball",
-    "Philadelphia Phillies",
-    "Football (Soccer)"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 30.1,
-   "ort_izlenme": 1359751,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC_bCJyLD42BN1bd6_85v0dQ",
-     "ad": "Lilipopv",
-     "abone": 11300,
-     "buyume30": 37.3
-    },
-    {
-     "id": "UCd6iuGex6auD5dWM8PwJvUw",
-     "ad": "Rueben Geise",
-     "abone": 31300,
-     "buyume30": 32.07
-    },
-    {
-     "id": "UCCs5fUaBNshhe0CWaImTs4A",
-     "ad": "Macgure Laknws",
-     "abone": 44700,
-     "buyume30": 20.81
-    }
-   ]
-  },
-  {
-   "nis": "Engineering Education",
-   "alt": [
-    "Heavy Machinery",
-    "Construction Engineering",
-    "3D Printing"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 27.8,
-   "ort_izlenme": 593220,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC00iFBtXh2VkEP4sXGCj-yA",
-     "ad": "Forge of Facts",
-     "abone": 6210,
-     "buyume30": 39.55
-    },
-    {
-     "id": "UCqT6NBFBsEpJlzMzV-CjcZw",
-     "ad": "bluprint labs",
-     "abone": 29100,
-     "buyume30": 22.78
-    },
-    {
-     "id": "UCL3X3z8-qR8BCJHRecKN5VA",
-     "ad": "TrueTech Academy",
-     "abone": 3680,
-     "buyume30": 21.05
-    }
-   ]
-  },
-  {
-   "nis": "Gardening",
-   "alt": [
-    "Plant Care",
-    "Plant Propagation",
-    "Rare Plants"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "yeni7": 3,
-   "ort_buyume30": 22.2,
-   "ort_izlenme": 256418,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCLamaMh2744y7m_lENCS2Dw",
-     "ad": "Plantalytics",
-     "abone": 57900,
-     "buyume30": 24.52
-    },
-    {
-     "id": "UCdWn6Mi44lVoc87Zlj320aw",
-     "ad": "John clips",
-     "abone": 31000,
-     "buyume30": 23.51
-    },
-    {
-     "id": "UC6xxmX4Y-Bnq__I1G7Puagg",
-     "ad": "Daisy's Garden",
-     "abone": 29900,
-     "buyume30": 18.65
     }
    ]
   },
@@ -613,6 +427,36 @@
      "ad": "CR7IUM",
      "abone": 61700,
      "buyume30": 60.68
+    }
+   ]
+  },
+  {
+   "nis": "Engineering",
+   "alt": [
+    "Physics",
+    "Mechanical Engineering",
+    "Structural Engineering"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 107.3,
+   "ort_izlenme": 18119,
+   "ortak_konu": "Engineering",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCPA7Ua1WosnBHBq3NKlDvwA",
+     "ad": "Extreme Mechanics",
+     "abone": 1060,
+     "buyume30": 118.11
+    },
+    {
+     "id": "UCNcBjlaxddAVmS4zywNi8Sw",
+     "ad": "こういうことか",
+     "abone": 2300,
+     "buyume30": 96.58
     }
    ]
   },
@@ -673,6 +517,36 @@
      "ad": "RP",
      "abone": 2440,
      "buyume30": 57.42
+    }
+   ]
+  },
+  {
+   "nis": "Industrial Engineering",
+   "alt": [
+    "Manufacturing Processes",
+    "Civil Engineering",
+    "Product Design"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 71.4,
+   "ort_izlenme": 451758,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCR7j6Oyp3M6cikoPK1tp6rw",
+     "ad": "Emperor Insights – Science & Curiosity",
+     "abone": 218000,
+     "buyume30": 107.62
+    },
+    {
+     "id": "UCHy7wiQpW5HgPdAP8ZFkQjg",
+     "ad": "Machine Verse",
+     "abone": 10700,
+     "buyume30": 35.1
     }
    ]
   },
@@ -797,6 +671,36 @@
    ]
   },
   {
+   "nis": "Sports",
+   "alt": [
+    "Football (Soccer)",
+    "Football Player Highlights",
+    "Sports Editing"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-23T22:57:44+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 34.7,
+   "ort_izlenme": 1279161,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC_bCJyLD42BN1bd6_85v0dQ",
+     "ad": "Lilipopv",
+     "abone": 11300,
+     "buyume30": 37.3
+    },
+    {
+     "id": "UCd6iuGex6auD5dWM8PwJvUw",
+     "ad": "Rueben Geise",
+     "abone": 31300,
+     "buyume30": 32.07
+    }
+   ]
+  },
+  {
    "nis": "Technology",
    "alt": [
     "AI Tools",
@@ -823,6 +727,36 @@
      "ad": "Tech Easy",
      "abone": 46500,
      "buyume30": 23.02
+    }
+   ]
+  },
+  {
+   "nis": "Educational Animation",
+   "alt": [
+    "History",
+    "3D Animation",
+    "Ancient Engineering"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 33.1,
+   "ort_izlenme": 511359,
+   "ortak_konu": "3D Animation",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCmj6PDhLSwQgJHCvple8jmA",
+     "ad": "Spark Feeder 3D",
+     "abone": 7230,
+     "buyume30": 40.94
+    },
+    {
+     "id": "UCxW3Vdnyxre0ok8yPHzvscg",
+     "ad": "Ctrl z films",
+     "abone": 17300,
+     "buyume30": 25.36
     }
    ]
   },
@@ -857,32 +791,32 @@
    ]
   },
   {
-   "nis": "Family Comedy",
+   "nis": "Gardening",
    "alt": [
-    "Parenting Humor",
-    "Baby & Toddler Content",
-    "Relatable Comedy"
+    "Plant Care",
+    "Rare Plants",
+    "Plant Reviews"
    ],
    "kanal_sayisi": 2,
    "dil": "en",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 19.4,
-   "ort_izlenme": 725740,
+   "ilk": "2026-11-14T09:45:00+00:00",
+   "yeni7": 2,
+   "ort_buyume30": 24.0,
+   "ort_izlenme": 312632,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
-     "ad": "Ariel Ruiz",
-     "abone": 9950,
-     "buyume30": 19.45
+     "id": "UCLamaMh2744y7m_lENCS2Dw",
+     "ad": "Plantalytics",
+     "abone": 57900,
+     "buyume30": 24.52
     },
     {
-     "id": "UCHpb3QTxdK-rVHWsQQX4rBg",
-     "ad": "PetCollective66",
-     "abone": 13000,
-     "buyume30": 19.27
+     "id": "UCdWn6Mi44lVoc87Zlj320aw",
+     "ad": "John clips",
+     "abone": 31000,
+     "buyume30": 23.51
     }
    ]
   },
@@ -982,6 +916,29 @@
    ]
   },
   {
+   "nis": "Children's 3D Animal Animation",
+   "alt": [
+    "Educational Animal Content",
+    "3D Animation"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 282.1,
+   "ort_izlenme": 410600,
+   "ortak_konu": "3D Animation",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCKpJhvkVU-drAzpb5QK7dHA",
+     "ad": "Mr Zoo Tv",
+     "abone": 9590,
+     "buyume30": 282.07
+    }
+   ]
+  },
+  {
    "nis": "Football Puzzle Challenges",
    "alt": [
     "Visual Search Games",
@@ -1049,6 +1006,78 @@
      "ad": "AI Ravixo",
      "abone": 57900,
      "buyume30": 227.12
+    }
+   ]
+  },
+  {
+   "nis": "Science Education",
+   "alt": [
+    "Human Anatomy",
+    "Physics",
+    "Biology"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 213.4,
+   "ort_izlenme": 209031,
+   "ortak_konu": null,
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCqOQZgRICOKhF8MO0_8nlXA",
+     "ad": "Facto Nerd",
+     "abone": 13100,
+     "buyume30": 213.4
+    }
+   ]
+  },
+  {
+   "nis": "Roblox Animation Shorts",
+   "alt": [
+    "Drama Stories",
+    "3D Animation",
+    "Gaming"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 203.1,
+   "ort_izlenme": 288150,
+   "ortak_konu": "3D Animation",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UC50h-J3hfA2KM7FRgcEu7LA",
+     "ad": "King Huff",
+     "abone": 16400,
+     "buyume30": 203.14
+    }
+   ]
+  },
+  {
+   "nis": "3D Satisfying Animation",
+   "alt": [
+    "ASMR",
+    "3D Simulation",
+    "Blender Animation"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 194.1,
+   "ort_izlenme": 392153,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC0NyFsKHsHnDH1PN8XkudsQ",
+     "ad": "3Demon",
+     "abone": 7440,
+     "buyume30": 194.07
     }
    ]
   },
@@ -1125,120 +1154,50 @@
    ]
   },
   {
-   "nis": "Football Entertainment",
+   "nis": "Historical City Development Documentaries",
    "alt": [
-    "Football Comedy",
-    "Memorable Football Moments"
+    "Urban History",
+    "3D Modeling",
+    "Historical Geography"
    ],
    "kanal_sayisi": 1,
    "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 162.9,
-   "ort_izlenme": 1270294,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCXu7ilasTyUfJxAeANeoa4w",
-     "ad": "soccerFunnyMots",
-     "abone": 51800,
-     "buyume30": 162.94
-    }
-   ]
-  },
-  {
-   "nis": "Reaction Commentary",
-   "alt": [
-    "Football",
-    "Pop Culture",
-    "Viral Trends"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-11-19T09:44:59+00:00",
+   "ilk": "2026-11-21T09:44:45+00:00",
    "yeni7": 1,
-   "ort_buyume30": 161.9,
-   "ort_izlenme": 664984,
+   "ort_buyume30": 176.7,
+   "ort_izlenme": 708595,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCxDN-RnFn8nn8JAPLRpaymg",
-     "ad": "Rua React",
-     "abone": 7490,
-     "buyume30": 161.89
+     "id": "UCi216jUuIATe6cfr_pNRdvQ",
+     "ad": "CityEons",
+     "abone": 10100,
+     "buyume30": 176.71
     }
    ]
   },
   {
-   "nis": "Family-Friendly Comedy Shorts",
+   "nis": "Kids Education",
    "alt": [
-    "Cute Kids",
-    "Wholesome Family Moments",
-    "Military Family Life"
+    "Alphabet Learning",
+    "Phonics",
+    "Nursery Rhymes"
    ],
    "kanal_sayisi": 1,
    "dil": "en",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 157.3,
-   "ort_izlenme": 5876529,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UC7JDMWZgV9NAq0qxtXaJDpg",
-     "ad": "Tiny Heroes USA",
-     "abone": 9470,
-     "buyume30": 157.34
-    }
-   ]
-  },
-  {
-   "nis": "Tax Preparation & Dance Vlogging",
-   "alt": [
-    "Tax Advice",
-    "Dance Performances",
-    "Personal Vlogging"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "en",
-   "ilk": "2026-11-19T09:44:59+00:00",
+   "ilk": "2026-11-21T09:44:45+00:00",
    "yeni7": 1,
-   "ort_buyume30": 141.1,
-   "ort_izlenme": 808553,
+   "ort_buyume30": 169.1,
+   "ort_izlenme": 301912,
    "ortak_konu": null,
    "ortak": false,
    "ornekler": [
     {
-     "id": "UCD_wXD3VIZA0RJUZQid0T6g",
-     "ad": "Sharon Mason",
-     "abone": 3810,
-     "buyume30": 141.14
-    }
-   ]
-  },
-  {
-   "nis": "Lifestyle Vlogging",
-   "alt": [
-    "Travel",
-    "Shopping"
-   ],
-   "kanal_sayisi": 1,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 140.6,
-   "ort_izlenme": 17590,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCgrarthmf9T4A52p4Ij34Jg",
-     "ad": "Svandyboys Vlogs",
-     "abone": 1980,
-     "buyume30": 140.58
+     "id": "UCjxNXG4G2WkeFawaj2M8uxw",
+     "ad": "ABC Bloom",
+     "abone": 23200,
+     "buyume30": 169.14
     }
    ]
   }
@@ -1377,6 +1336,28 @@
    "ortak": false
   },
   {
+   "id": "UCKpJhvkVU-drAzpb5QK7dHA",
+   "ad": "Mr Zoo Tv",
+   "handle": null,
+   "abone": 9590,
+   "ort_izlenme": 410600.32,
+   "buyume30": 282.07,
+   "izlenme_buyume30": 365.37,
+   "nis": "Children's 3D Animal Animation, Educational Animal Content, 3D Animation",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCsFRU8e7kzpSTocU2edFKzA",
    "ad": "Mexy.20k",
    "handle": null,
@@ -1465,6 +1446,50 @@
    "ortak": false
   },
   {
+   "id": "UCqOQZgRICOKhF8MO0_8nlXA",
+   "ad": "Facto Nerd",
+   "handle": null,
+   "abone": 13100,
+   "ort_izlenme": 209031.3125,
+   "buyume30": 213.4,
+   "izlenme_buyume30": 232.18,
+   "nis": "Science Education, Human Anatomy, Physics, Biology, 3D Animation, General Science",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": true
+  },
+  {
+   "id": "UC50h-J3hfA2KM7FRgcEu7LA",
+   "ad": "King Huff",
+   "handle": null,
+   "abone": 16400,
+   "ort_izlenme": 288150.5,
+   "buyume30": 203.14,
+   "izlenme_buyume30": 475.89,
+   "nis": "Roblox Animation Shorts, Drama Stories, 3D Animation, Gaming",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCT41p6cGch0U4NZgR2iYD6A",
    "ad": "The AI Times",
    "handle": "@theaitimes.official",
@@ -1484,6 +1509,28 @@
    "kaynak": "Yükselen: ai and technology (en)",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC0NyFsKHsHnDH1PN8XkudsQ",
+   "ad": "3Demon",
+   "handle": null,
+   "abone": 7440,
+   "ort_izlenme": 392153.25675675675,
+   "buyume30": 194.07,
+   "izlenme_buyume30": 214.23,
+   "nis": "3D Satisfying Animation, ASMR, 3D Simulation, Blender Animation",
+   "dil": "en",
+   "ulke": "BD",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -1575,6 +1622,28 @@
    "ortak": false
   },
   {
+   "id": "UCi216jUuIATe6cfr_pNRdvQ",
+   "ad": "CityEons",
+   "handle": null,
+   "abone": 10100,
+   "ort_izlenme": 708595.375,
+   "buyume30": 176.71,
+   "izlenme_buyume30": 256.87,
+   "nis": "Historical City Development Documentaries, Urban History, 3D Modeling, Historical Geography, Timelapse Animation",
+   "dil": "en",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCXIRoXy9jx1nptTqjrHqjxA",
    "ad": "09890ن5حد6ن8هي مواقع رائع سلطان",
    "handle": null,
@@ -1594,6 +1663,28 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCjxNXG4G2WkeFawaj2M8uxw",
+   "ad": "ABC Bloom",
+   "handle": null,
+   "abone": 23200,
+   "ort_izlenme": 301911.8736842105,
+   "buyume30": 169.14,
+   "izlenme_buyume30": 124.16,
+   "nis": "Kids Education, Alphabet Learning, Phonics, Nursery Rhymes, Preschool Education, 3D Animation",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -1660,6 +1751,28 @@
    "kaynak": "le viet kanalına benzer",
    "ilk": "2026-10-26T09:45:53+00:00",
    "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCRfJ4M5o6DLjfYL87loYPyA",
+   "ad": "Loaf",
+   "handle": null,
+   "abone": 189000,
+   "ort_izlenme": 1068777.8054054054,
+   "buyume30": 155.41,
+   "izlenme_buyume30": 166.66,
+   "nis": "Roblox Animations, Roblox, 3D Animation",
+   "dil": "en",
+   "ulke": "PL",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -1773,6 +1886,28 @@
    "ortak": false
   },
   {
+   "id": "UCWmSGv_vA2yQpVqm1hPyi_A",
+   "ad": "AUGEN | 3D ART",
+   "handle": null,
+   "abone": 5360,
+   "ort_izlenme": 312021.07692307694,
+   "buyume30": 131.03,
+   "izlenme_buyume30": 243.37,
+   "nis": "3D Animation Tutorials & Showcases, Blender 3D, Surreal Digital Art, Character Animation, Visual Development",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC46otkZqYTD9TlR9_C-GMBA",
    "ad": "Poly CRAFT",
    "handle": null,
@@ -1817,6 +1952,28 @@
    "ortak": false
   },
   {
+   "id": "UCJNHVvq7ei8M061zgBb1cmQ",
+   "ad": "AO3DP Motion",
+   "handle": null,
+   "abone": 20000,
+   "ort_izlenme": 372750.0988372093,
+   "buyume30": 125.48,
+   "izlenme_buyume30": 195.33,
+   "nis": "3D Printing Art & Kinetic Sculpture, Kinetic Art, Timelapse Animation, 3D Design, Fidget Toys",
+   "dil": "en",
+   "ulke": "JP",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC86p8w_VipxatMHwH3RtAxw",
    "ad": "Behind the Why",
    "handle": "@behind_the_whyyy",
@@ -1836,6 +1993,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCS52tSSAobdlAh4tcuHZZ0g",
+   "ad": "Kaizen-Minecraft Animations",
+   "handle": null,
+   "abone": 11600,
+   "ort_izlenme": 637141.1,
+   "buyume30": 123.94,
+   "izlenme_buyume30": 235.45,
+   "nis": "Minecraft Animation, 3D Animation",
+   "dil": "en",
+   "ulke": "JP",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -1924,6 +2103,50 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCQCgzwyvpIeWKzNh0-zvpgQ",
+   "ad": "KorsaGhost",
+   "handle": null,
+   "abone": 25200,
+   "ort_izlenme": 812782.9090909091,
+   "buyume30": 117.24,
+   "izlenme_buyume30": 155.71,
+   "nis": "Animation, 3D Animation, Character Animation, Fan Art",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCiV9z140pYrHQIZt3Qi8CAg",
+   "ad": "3dinsidegr",
+   "handle": null,
+   "abone": 20200,
+   "ort_izlenme": 222090.79824561405,
+   "buyume30": 114.44,
+   "izlenme_buyume30": 178.09,
+   "nis": "3D Printing, 3D Printing Projects, 3D Design",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": true,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -2037,6 +2260,28 @@
    "ortak": false
   },
   {
+   "id": "UCPsSd9lajCOaE-IX7jXaQEA",
+   "ad": "ShreeBlox 3D ⭐",
+   "handle": null,
+   "abone": 11800,
+   "ort_izlenme": 283199.0759493671,
+   "buyume30": 109.59,
+   "izlenme_buyume30": 68.83,
+   "nis": "Roblox Animation & Gameplay, 3D Animation, Roblox Challenges, Comedy",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC5sPSG9CMWhuhXLn7CjX5-Q",
    "ad": "Play Learn Replay - Kids YT",
    "handle": null,
@@ -2056,28 +2301,6 @@
    "kaynak": "LittleColor🎨 kanalına benzer",
    "ilk": "2026-11-18T09:44:37+00:00",
    "son": "2026-11-18T09:44:37+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCyGYiDIp7NIrwTfZ20Ex7AA",
-   "ad": "KnowFrame",
-   "handle": null,
-   "abone": 8980,
-   "ort_izlenme": 1440617,
-   "buyume30": 108.84,
-   "izlenme_buyume30": 70.05,
-   "nis": "Mechanical Engineering Animation, 3D Animation, Mechanical Design, Mechanism Design, Blender, SolidWorks",
-   "dil": "en",
-   "ulke": "NL",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Trial & Eureka kanalına benzer",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "son": "2026-10-22T08:01:01+00:00",
    "ortak": false
   },
   {
@@ -2521,6 +2744,28 @@
    "ortak": false
   },
   {
+   "id": "UCmyvGCfJeeMFAhxqtq8R7rA",
+   "ad": "ARUmotion",
+   "handle": null,
+   "abone": 13800,
+   "ort_izlenme": 841360.4827586206,
+   "buyume30": 76.7,
+   "izlenme_buyume30": 93.06,
+   "nis": "3D Animation, Comedy Animation, Short-form Animation, Character-driven Animation",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": true,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCMfuk2eumh7ka3WjLa4ekew",
    "ad": "Little Giggle Club",
    "handle": null,
@@ -2606,28 +2851,6 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCmj6PDhLSwQgJHCvple8jmA",
-   "ad": "Spark Feeder 3D",
-   "handle": null,
-   "abone": 5180,
-   "ort_izlenme": 342658.2962962963,
-   "buyume30": 70.96,
-   "izlenme_buyume30": 89.56,
-   "nis": "Educational Animation, Ancient Engineering, History, Invention, 3D Animation",
-   "dil": "en",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
   },
   {
@@ -2848,6 +3071,28 @@
    "kaynak": "Yükselen: mechanical engineering animation",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC_eFzpbIYtQfrd76SQkfKsA",
+   "ad": "yulhfx",
+   "handle": null,
+   "abone": 5010,
+   "ort_izlenme": 1469761,
+   "buyume30": 63.73,
+   "izlenme_buyume30": 108.7,
+   "nis": "3D Art & Compositing, 3D Lighting, 3D Animation, Compositing",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -3731,6 +3976,28 @@
    "ortak": false
   },
   {
+   "id": "UCR3i416eGJ4PpxW6amABdmQ",
+   "ad": "Wealthx 3D",
+   "handle": null,
+   "abone": 6970,
+   "ort_izlenme": 859643,
+   "buyume30": 43.12,
+   "izlenme_buyume30": 54.25,
+   "nis": "Gaming 3D Animation, 3D Animation, Gaming",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCbiB1ynkjSNkT4TAEBv-7GQ",
    "ad": "Easy Africa",
    "handle": null,
@@ -3841,6 +4108,28 @@
    "ortak": false
   },
   {
+   "id": "UCmj6PDhLSwQgJHCvple8jmA",
+   "ad": "Spark Feeder 3D",
+   "handle": null,
+   "abone": 7230,
+   "ort_izlenme": 455524.5483870968,
+   "buyume30": 40.94,
+   "izlenme_buyume30": 53.76,
+   "nis": "Educational Animation, Ancient Engineering, History, Invention, 3D Animation",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Giant Feats kanalına benzer",
+   "ilk": "2026-10-24T09:45:17+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCFIUntRM6pdzPYZiMLtoGHg",
    "ad": "Pixel DIY Crafts",
    "handle": null,
@@ -3907,6 +4196,28 @@
    "ortak": false
   },
   {
+   "id": "UCQ5eV6FMBNKNZ3QbUF3yBcA",
+   "ad": "Editsdenyx",
+   "handle": null,
+   "abone": 14000,
+   "ort_izlenme": 670303.4285714285,
+   "buyume30": 40.42,
+   "izlenme_buyume30": 68.75,
+   "nis": "Animation, Fan Animation, Miraculous Ladybug Fandom, 3D Animation",
+   "dil": "en",
+   "ulke": "BG",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCgDeGS47FdklCo9DwMAwb4g",
    "ad": "Carol Yu | Inside China Tech",
    "handle": "@yuying_carol",
@@ -3970,6 +4281,50 @@
    "kaynak": "AI Dumb Office kanalına benzer",
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-23T22:57:44+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC5Tp6hyJtU7nYnuH3kFRA0g",
+   "ad": "GoalForTheCup",
+   "handle": null,
+   "abone": 27900,
+   "ort_izlenme": 252180.69014084508,
+   "buyume30": 38.12,
+   "izlenme_buyume30": 104.81,
+   "nis": "Football Animation & Parody, Football Animation, 3D Modeling & Simulation, Sports Comedy",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCb4s0YqCALJxUcUFQHBDRRw",
+   "ad": "Dr Sohaib Ali | Omnicor Health",
+   "handle": null,
+   "abone": 9250,
+   "ort_izlenme": 295127.78125,
+   "buyume30": 38.06,
+   "izlenme_buyume30": 50.59,
+   "nis": "Medical Education Animations, Human Anatomy, Surgical Procedures, Physiology, Medical Science Explainer",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -4171,6 +4526,28 @@
    "ortak": false
   },
   {
+   "id": "UC3irRpRKGqQxDZggyQkosFA",
+   "ad": "In Plain Motion",
+   "handle": null,
+   "abone": 20800,
+   "ort_izlenme": 549816.1688311688,
+   "buyume30": 33.33,
+   "izlenme_buyume30": 93.21,
+   "nis": "Educational Animation Tutorials, First Aid & Safety, Biological Processes, Physical Phenomena, How-To Guides",
+   "dil": "en",
+   "ulke": "CA",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": true
+  },
+  {
    "id": "UC4zNmJcp0rLZgiFG0PXu6xg",
    "ad": "sapyiyi Mia",
    "handle": null,
@@ -4303,6 +4680,28 @@
    "ortak": false
   },
   {
+   "id": "UCVLTzy7iiBOjRuy2b-mKKLQ",
+   "ad": "BoséAnim",
+   "handle": null,
+   "abone": 15900,
+   "ort_izlenme": 350849.5789473684,
+   "buyume30": 32.5,
+   "izlenme_buyume30": 55.89,
+   "nis": "Animation, 3D Animation, Blender Animation, Game Animation",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCtl77-OPSVeF6PpCDqjDXrQ",
    "ad": "BN PRESENTS",
    "handle": null,
@@ -4366,6 +4765,28 @@
    "kaynak": "PROFOOTBALL kanalına benzer",
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC4qlhgTzulAqRD1cwz3G0LA",
+   "ad": "SyncNexis Anatomy",
+   "handle": null,
+   "abone": 46900,
+   "ort_izlenme": 404212.1111111111,
+   "buyume30": 31.01,
+   "izlenme_buyume30": 52.23,
+   "nis": "Medical Animation, Human Anatomy, Biological Processes, Digestive Health, Physiology",
+   "dil": "en",
+   "ulke": "NG",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -4501,28 +4922,6 @@
    "ortak": false
   },
   {
-   "id": "UCZMXnFWl30pVv4qelzQFRyQ",
-   "ad": "Ancient Engineering",
-   "handle": null,
-   "abone": 11300,
-   "ort_izlenme": 870588,
-   "buyume30": 30.03,
-   "izlenme_buyume30": 23.01,
-   "nis": "Ancient History, Ancient Engineering, Roman History, Ancient Military History",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Trial & Eureka kanalına benzer",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "son": "2026-10-22T08:01:01+00:00",
-   "ortak": false
-  },
-  {
    "id": "UCRSHodlHBtIkx57IWoPt1Jg",
    "ad": "StoryWaves...🌊",
    "handle": null,
@@ -4542,6 +4941,28 @@
    "kaynak": "le viet kanalına benzer",
    "ilk": "2026-10-26T09:45:53+00:00",
    "son": "2026-10-26T09:45:53+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCoDqMVm8THCLnRWfsfXNTDA",
+   "ad": "Jay's Lab 3D",
+   "handle": null,
+   "abone": 5420,
+   "ort_izlenme": 406535.5,
+   "buyume30": 29.36,
+   "izlenme_buyume30": 44.11,
+   "nis": "Science & Nature Educational Tutorials, Animal Behavior, Physics Explanations, Biological Mechanisms, 3D Simulations",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -4831,14 +5252,14 @@
    "ortak": false
   },
   {
-   "id": "UCmWVC-yKjnedzY0RKeexCRg",
-   "ad": "Heavy Gear TV",
+   "id": "UCxW3Vdnyxre0ok8yPHzvscg",
+   "ad": "Ctrl z films",
    "handle": null,
-   "abone": 24400,
-   "ort_izlenme": 637692,
-   "buyume30": 25.13,
-   "izlenme_buyume30": 11.75,
-   "nis": "Mechanical Engineering, Heavy Machinery, Automotive Repair, Mechanical Restoration, Satisfying Content",
+   "abone": 17300,
+   "ort_izlenme": 567192.8305084746,
+   "buyume30": 25.36,
+   "izlenme_buyume30": 36.5,
+   "nis": "Educational Animation, Science, History, Trivia, Thought Experiments, 3D Animation",
    "dil": "en",
    "ulke": "US",
    "kazanc": null,
@@ -4846,10 +5267,10 @@
    "son_video": null,
    "video_sayisi": null,
    "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Trial & Eureka kanalına benzer",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "son": "2026-10-22T08:01:01+00:00",
+   "yuzsuz": null,
+   "kaynak": "Bodyology kanalına benzer",
+   "ilk": "2026-11-21T09:44:45+00:00",
+   "son": "2026-11-21T09:44:45+00:00",
    "ortak": false
   },
   {
@@ -4938,28 +5359,6 @@
    "kaynak": "Yükselen: travel stories (de)",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCHeT7mGXT7kUuuxtCukVEiw",
-   "ad": "Rotor Studios",
-   "handle": null,
-   "abone": 12800,
-   "ort_izlenme": 821361,
-   "buyume30": 24.27,
-   "izlenme_buyume30": 37.42,
-   "nis": "Engineering Explainers, Mechanical Engineering, Applied Physics, 3D Animation, Safety Engineering, History of Technology",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Trial & Eureka kanalına benzer",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "son": "2026-10-22T08:01:01+00:00",
    "ortak": false
   },
   {
@@ -5139,28 +5538,6 @@
    "ortak": false
   },
   {
-   "id": "UCqT6NBFBsEpJlzMzV-CjcZw",
-   "ad": "bluprint labs",
-   "handle": null,
-   "abone": 29100,
-   "ort_izlenme": 1683075,
-   "buyume30": 22.78,
-   "izlenme_buyume30": 30.37,
-   "nis": "Engineering Education, 3D Printing, STEM Projects, Mechanical Design, DIY Robotics",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Trial & Eureka kanalına benzer",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "son": "2026-10-22T08:01:01+00:00",
-   "ortak": false
-  },
-  {
    "id": "UCF1ISwPjmw1rPjECn1pfUKg",
    "ad": "Gengu AI",
    "handle": "@genguai",
@@ -5225,435 +5602,9 @@
    "ilk": "2026-10-25T09:45:23+00:00",
    "son": "2026-10-25T09:45:23+00:00",
    "ortak": false
-  },
-  {
-   "id": "UCL3X3z8-qR8BCJHRecKN5VA",
-   "ad": "TrueTech Academy",
-   "handle": "@truetechacademy",
-   "abone": 3680,
-   "ort_izlenme": 1470.5463258785942,
-   "buyume30": 21.05,
-   "izlenme_buyume30": 33.88,
-   "nis": "Engineering Education, Engineering Exam Preparation, Mechanical Engineering",
-   "dil": "en, te",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": "2025-11-16T03:22:16Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 313,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCCs5fUaBNshhe0CWaImTs4A",
-   "ad": "Macgure Laknws",
-   "handle": null,
-   "abone": 44700,
-   "ort_izlenme": 1520931.1929824562,
-   "buyume30": 20.81,
-   "izlenme_buyume30": 22.95,
-   "nis": "Sports, Major League Baseball, Philadelphia Phillies",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC-T4ewrJabQPiNCdi-dc9uQ",
-   "ad": "EarthObservationDiary",
-   "handle": null,
-   "abone": 8480,
-   "ort_izlenme": 605528.6811594203,
-   "buyume30": 20.8,
-   "izlenme_buyume30": 31.07,
-   "nis": "Comedy, Pranks, Viral Trends, Fail Compilation, Family Humor",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCCBmTrGcX65GRxqSOG_t0ww",
-   "ad": "Building Systems Academy",
-   "handle": "@buildingsystemsacademy",
-   "abone": 2270,
-   "ort_izlenme": 2590.096153846154,
-   "buyume30": 20.74,
-   "izlenme_buyume30": 32.59,
-   "nis": "HVAC Engineering, Building Systems, Mechanical Engineering",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": "2026-07-17T15:35:09Z",
-   "son_video": "2026-10-15T00:00:00.000Z",
-   "video_sayisi": 52,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC_ZFjHOqTnSLg_uxLSNF4tA",
-   "ad": "Thomas Anderson",
-   "handle": "@thomasanderson-f9w",
-   "abone": 13000,
-   "ort_izlenme": 152278.4014084507,
-   "buyume30": 20.37,
-   "izlenme_buyume30": 27.72,
-   "nis": "Industrial Engineering, Mechanical Engineering, Machining",
-   "dil": "en, id",
-   "ulke": "US",
-   "kazanc": 392.9,
-   "acilis": "2026-06-28T10:08:42Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 284,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCxcyKQZTZaMf9Zu3rqX0Wgw",
-   "ad": "Engineering Marvels",
-   "handle": null,
-   "abone": 56800,
-   "ort_izlenme": 230784.64393939395,
-   "buyume30": 20.34,
-   "izlenme_buyume30": 29.34,
-   "nis": "Civil Engineering, Construction Technology, Structural Engineering, Architectural History",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC5syKwTLNRTnDfZz1AGWMUA",
-   "ad": "IshowSpeed Daily Shorts",
-   "handle": null,
-   "abone": 84700,
-   "ort_izlenme": 1168831.9076923076,
-   "buyume30": 20.14,
-   "izlenme_buyume30": 31.54,
-   "nis": "Football Content, Football Highlights, Football Skills, Player Comparisons, Fan Reactions",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "PROFOOTBALL kanalına benzer",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCsilmM7_rXt6OuoBlOSKjzg",
-   "ad": "Fact Mine 3D",
-   "handle": null,
-   "abone": 44300,
-   "ort_izlenme": 564929.421875,
-   "buyume30": 20.05,
-   "izlenme_buyume30": 17.35,
-   "nis": "Engineering, Civil Engineering, Structural Engineering, Bridge Engineering",
-   "dil": "en",
-   "ulke": "IN",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC8No9haiCtOEfikdvjTwqSw",
-   "ad": "Vexor",
-   "handle": null,
-   "abone": 27800,
-   "ort_izlenme": 817033,
-   "buyume30": 19.83,
-   "izlenme_buyume30": 23.98,
-   "nis": "Automotive Engineering & History, Automotive Technology, Vehicle Design & History",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": null,
-   "kaynak": "Trial & Eureka kanalına benzer",
-   "ilk": "2026-10-22T08:01:01+00:00",
-   "son": "2026-10-22T08:01:01+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCTYhzNJRvym98F1SgaouGng",
-   "ad": "Accelerating AI",
-   "handle": "@acceleratingaiconference",
-   "abone": 1460,
-   "ort_izlenme": 400.427807486631,
-   "buyume30": 19.67,
-   "izlenme_buyume30": 39.66,
-   "nis": "Artificial Intelligence & Business Strategy Conference, AI Adoption, Business Operations",
-   "dil": "en",
-   "ulke": "GB",
-   "kazanc": null,
-   "acilis": "2026-06-02T17:16:32Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 187,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCXtWCeXLosdFwrvIPq5ZVpg",
-   "ad": "Eddie Lou",
-   "handle": null,
-   "abone": 1340,
-   "ort_izlenme": 1583690.4444444445,
-   "buyume30": 19.64,
-   "izlenme_buyume30": 32.85,
-   "nis": "Personal Development & Productivity Commentary, Harvard Student Life, AI Tools, Dating Advice, Self-Improvement",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "World In A Box kanalına benzer",
-   "ilk": "2026-11-19T09:44:59+00:00",
-   "son": "2026-11-19T09:44:59+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCxmQkfBALmEpLmkKiE4AOtg",
-   "ad": "Funny puppy time",
-   "handle": null,
-   "abone": 53800,
-   "ort_izlenme": 330506.26872246695,
-   "buyume30": 19.56,
-   "izlenme_buyume30": 33.96,
-   "nis": "Family & Parenting, Baby Humor, Parenting Humor, Toddler Life",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCDAzSxjnxj9Jw2cOW0ZMaow",
-   "ad": "ディープ・インサイト",
-   "handle": "@deepinsightscience",
-   "abone": 2140,
-   "ort_izlenme": 8642.2,
-   "buyume30": 19.55,
-   "izlenme_buyume30": 18.26,
-   "nis": "Engineering, Aviation Engineering, Aerospace",
-   "dil": "ja",
-   "ulke": "JP",
-   "kazanc": null,
-   "acilis": "2026-05-19T07:21:55Z",
-   "son_video": "2026-10-21T00:00:00.000Z",
-   "video_sayisi": 65,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: mechanical engineering animation",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCMfAwg3HaBX_BVt7-TiLiRA",
-   "ad": "Ariel Ruiz",
-   "handle": null,
-   "abone": 9950,
-   "ort_izlenme": 1191576.7222222222,
-   "buyume30": 19.45,
-   "izlenme_buyume30": 19.14,
-   "nis": "Family Comedy, Parenting Humor, Baby & Toddler Content, Relatable Comedy",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCffrX_6rER7v_krexkpbdNg",
-   "ad": "Andrey Synth",
-   "handle": "@andrey.future",
-   "abone": 3260,
-   "ort_izlenme": 12770.95145631068,
-   "buyume30": 19.41,
-   "izlenme_buyume30": 14.48,
-   "nis": "Technology News, Artificial Intelligence, AI Tools",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": "2026-06-28T00:57:15Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 206,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCHpb3QTxdK-rVHWsQQX4rBg",
-   "ad": "PetCollective66",
-   "handle": null,
-   "abone": 13000,
-   "ort_izlenme": 259903.92783505155,
-   "buyume30": 19.27,
-   "izlenme_buyume30": 16.18,
-   "nis": "Family Comedy, Parenting Humor, Viral Challenges, Reaction Videos",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCiwSvRQECP3YW1TCUu5MS6A",
-   "ad": "FixIt Master",
-   "handle": null,
-   "abone": 7780,
-   "ort_izlenme": 671497.3,
-   "buyume30": 19.14,
-   "izlenme_buyume30": 21.04,
-   "nis": "Construction & DIY Building, Masonry & Brickwork, Construction Formwork & Shuttering, Construction Hacks, Wall Repair Techniques",
-   "dil": "en",
-   "ulke": "PK",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC6xxmX4Y-Bnq__I1G7Puagg",
-   "ad": "Daisy's Garden",
-   "handle": null,
-   "abone": 29900,
-   "ort_izlenme": 143991.06,
-   "buyume30": 18.65,
-   "izlenme_buyume30": 14.64,
-   "nis": "Gardening, Houseplants, Plant Care, Plant Propagation",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UChOynEM0s5pU2PYVB6fxmZA",
-   "ad": "Orgovan Loconte",
-   "handle": null,
-   "abone": 141000,
-   "ort_izlenme": 2680925.6279069767,
-   "buyume30": 18.49,
-   "izlenme_buyume30": 25.17,
-   "nis": "Sports News, MLB, Philadelphia Phillies, Baseball",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
   }
  ],
  "sorgular": [
-  {
-   "tarih": "2026-10-22T08:01:01+00:00",
-   "tip": "benzer",
-   "hedef": "UCP8wHrwU79SSJUxu1PBmiNQ",
-   "ad": "Trial & Eureka",
-   "gelen": 20,
-   "alinan": 8
-  },
   {
    "tarih": "2026-10-23T22:57:44+00:00",
    "tip": "benzer",
@@ -5741,6 +5692,14 @@
    "ad": "GHIBLI_FAMILY9",
    "gelen": 50,
    "alinan": 6
+  },
+  {
+   "tarih": "2026-11-21T09:44:45+00:00",
+   "tip": "benzer",
+   "hedef": "UCDy2l6KHlSMWpP1l8gUQshA",
+   "ad": "Bodyology",
+   "gelen": 50,
+   "alinan": 29
   }
  ]
 }
