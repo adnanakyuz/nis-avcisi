@@ -1,94 +1,6 @@
 {
- "ts": "2026-11-21T16:09:02+00:00",
+ "ts": "2026-11-22T16:17:00+00:00",
  "firsat": {
-  "Travel Vlogging": {
-   "seviye": "doymus",
-   "pay": 0.13811960267570322,
-   "toplam": 402124716,
-   "video": 25,
-   "buyuk": 12,
-   "yeniler": [
-    {
-     "kanal_id": "UCyFbZOH6LhBRXNWA9X6Uf_A",
-     "kanal": "ColorMyPJs",
-     "izl": 32822337
-    },
-    {
-     "kanal_id": "UC1asEBpQh7sk5JNP3mdvBPg",
-     "kanal": "Lennio",
-     "izl": 13336645
-    },
-    {
-     "kanal_id": "UChsmkOG139GzguXFNSOi5YA",
-     "kanal": "Aditya Rathore",
-     "izl": 9382324
-    }
-   ],
-   "sorgu": "Travel",
-   "tarih": "2026-11-15T15:40:27+00:00"
-  },
-  "Engineering": {
-   "seviye": "bos",
-   "pay": 0.603809360030685,
-   "toplam": 77095837,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCycbQZ8NbC9JbIhUcjH72lA",
-     "kanal": "NITROWAR ",
-     "izl": 28015618
-    },
-    {
-     "kanal_id": "UCOjgZUmLwQ6Pb3-isF2YJww",
-     "kanal": "Fictodynamics",
-     "izl": 2292565
-    },
-    {
-     "kanal_id": "UCPSShP1AG_tjLLz7twq1_iw",
-     "kanal": "INFRATACTICS",
-     "izl": 2136078
-    },
-    {
-     "kanal_id": "UCJbsdbL6AKm8oRIt3DXkj7A",
-     "kanal": "Mechanical Gyan",
-     "izl": 927283
-    }
-   ],
-   "sorgu": "Structural Engineering",
-   "tarih": "2026-11-15T15:40:27+00:00"
-  },
-  "Engineering Education": {
-   "seviye": "doymus",
-   "pay": 0.16044136987843813,
-   "toplam": 203324523,
-   "video": 25,
-   "buyuk": 2,
-   "yeniler": [
-    {
-     "kanal_id": "UCH2kOm0CKT4dAeD0PMxporw",
-     "kanal": "The Space Maze",
-     "izl": 7581411
-    },
-    {
-     "kanal_id": "UCFDGzcHQ42oz051Nm8zF6iw",
-     "kanal": "Discoveries Point 7.0",
-     "izl": 4452023
-    },
-    {
-     "kanal_id": "UCkDVzEoxQIb0IF8JQ5IINhQ",
-     "kanal": "Jameel Hybrid Care ",
-     "izl": 4146099
-    },
-    {
-     "kanal_id": "UC1sz2Lf3-WzHh6NSDnOzUtw",
-     "kanal": "Beyond Normal Facts",
-     "izl": 3584126
-    }
-   ],
-   "sorgu": "Mechanical Engineering",
-   "tarih": "2026-11-15T15:40:27+00:00"
-  },
   "Technology": {
    "seviye": "doymus",
    "pay": 0.021194376503612368,
@@ -653,6 +565,99 @@
    "yeniler": [],
    "sorgu": "Human Interest Stories",
    "tarih": "2026-11-21T16:09:02+00:00"
+  },
+  "Industrial Manufacturing": {
+   "seviye": "orta",
+   "pay": 0.26762404456348476,
+   "toplam": 210910795,
+   "video": 25,
+   "buyuk": 7,
+   "yeniler": [
+    {
+     "kanal_id": "UCU_R9AFA6myrGsn7q5r54LA",
+     "kanal": "GENESIS AI-K",
+     "izl": 19719707
+    },
+    {
+     "kanal_id": "UC_wBJE89U8RF2sJpnyVVo2Q",
+     "kanal": "Viral Process",
+     "izl": 11521686
+    },
+    {
+     "kanal_id": "UC8mrWcG0aS7v5wL02aapGcA",
+     "kanal": "Bablo Ki Rasoi",
+     "izl": 7100306
+    },
+    {
+     "kanal_id": "UCeBwzFjKG4aEvVvfBQ_YUlQ",
+     "kanal": "Taste Buddy",
+     "izl": 5747008
+    }
+   ],
+   "sorgu": "Food Processing",
+   "tarih": "2026-11-22T16:17:00+00:00"
+  },
+  "Engineering": {
+   "seviye": "orta",
+   "pay": 0.33667208259406206,
+   "toplam": 155225493,
+   "video": 25,
+   "buyuk": 5,
+   "yeniler": [
+    {
+     "kanal_id": "UCUzsKOln1gQYkcuPFxpN5MA",
+     "kanal": "UltraMinds",
+     "izl": 10074918
+    },
+    {
+     "kanal_id": "UCfM0RwKxj7egEj3_vV1e7ng",
+     "kanal": "OutwardAnimates",
+     "izl": 9035266
+    },
+    {
+     "kanal_id": "UC53xrLGiGydT1g_XJDsKe0A",
+     "kanal": "MR INDIAN YOUTUBER",
+     "izl": 7642025
+    },
+    {
+     "kanal_id": "UC1PIYruijr5jk5k6uyRZ_Lw",
+     "kanal": "Deep Rest Meditation ",
+     "izl": 7207672
+    }
+   ],
+   "sorgu": "Physics",
+   "tarih": "2026-11-22T16:17:00+00:00"
+  },
+  "Funny Kids Content": {
+   "seviye": "doymus",
+   "pay": 0.16458774730543416,
+   "toplam": 210100822,
+   "video": 25,
+   "buyuk": 9,
+   "yeniler": [
+    {
+     "kanal_id": "UCrhniNve1JOB-wgTBvbDi8w",
+     "kanal": "Tiny Giggles USA",
+     "izl": 10057475
+    },
+    {
+     "kanal_id": "UCJjBQtoMUd_OT_0ngv-pvUw",
+     "kanal": "hongyundangtou",
+     "izl": 5937410
+    },
+    {
+     "kanal_id": "UC0A09aBu9R-BY2NetxpdjBA",
+     "kanal": "Levy family",
+     "izl": 5331328
+    },
+    {
+     "kanal_id": "UCaKlhnJGVu1cRLGFNMiu6hg",
+     "kanal": "Related Baby",
+     "izl": 4026624
+    }
+   ],
+   "sorgu": "Parenting Humor",
+   "tarih": "2026-11-22T16:17:00+00:00"
   }
  },
  "ceviri": {
@@ -680,21 +685,15 @@
   "Civil Engineering": "İnşaat mühendisliği",
   "Human Interest Stories": "İnsani İlgi Alan Hikayeler",
   "Travel": "Seyahat",
-  "Civil Engineering & Construction": "İnşaat Mühendisliği ve İnşaat",
   "Construction & DIY": "İnşaat ve Kendin Yap",
   "Aviation Drama Storytelling": "Havacılık Draması Hikaye Anlatımı",
   "Civil Engineering Documentary": "İnşaat Mühendisliği Belgeseli",
   "DIY": "Kendin Yap",
   "Animal Rescue Stories": "Hayvan Kurtarma Hikayeleri",
   "Moral Stories": "Ahlaki Hikayeler",
-  "Inspirational Stories": "İlham Verici Hikayeler",
-  "Acts of Kindness & Heroism": "İyilik ve Kahramanlık Eylemleri",
-  "True Crime": "Gerçek Suç",
   "Road Trips": "Yol Gezileri",
   "Van Life": "Hayattan",
   "Accessible Travel": "Erişilebilir Seyahat",
-  "Infrastructure Development": "Altyapı Geliştirme",
-  "Heavy Equipment": "Ağır Ekipman",
   "Construction Techniques": "İnşaat Teknikleri",
   "Tool Hacks": "Araç Hack'leri",
   "Home Repair": "Ev Onarımı",
@@ -703,7 +702,6 @@
   "Passenger Stories": "Yolcu Hikayeleri",
   "Architectural History": "Mimarlık Tarihi",
   "Infrastructure Analysis": "Altyapı Analizi",
-  "Technology": "Teknoloji",
   "Artificial Intelligence": "Yapay Zeka",
   "Football": "Futbol",
   "Animation": "Animasyon",
@@ -711,8 +709,6 @@
   "Artificial Intelligence Technology Reviews": "Yapay Zeka Teknolojisi İncelemeleri",
   "Comedy": "Komedi",
   "AI Tools": "Yapay Zeka Araçları",
-  "Gadgets": "Araçlar",
-  "Smartphones & Gadgets": "Akıllı Telefonlar ve Cihazlar",
   "Future Technology": "Geleceğin Teknolojisi",
   "Technology News": "Teknoloji Haberleri",
   "Football (Soccer)": "Futbol (Futbol)",
@@ -739,7 +735,6 @@
   "Relatable Humor": "Bağlanabilir Mizah",
   "Student Life": "Öğrenci Hayatı",
   "Military Family Life": "Askerlik Aile Hayatı",
-  "Gardening": "Bahçıvanlık",
   "Cannabis Cultivation Tutorials": "Esrar Yetiştirme Dersleri",
   "Home Decor & Indoor Plant Styling": "Ev Dekorasyonu ve İç Mekan Bitki Şekillendirme",
   "Plant Grafting": "Bitki Aşılama",
@@ -764,7 +759,6 @@
   "Toddler Pranks": "Küçük Çocuk Şakaları",
   "Cute Baby Moments": "Sevimli Bebek Anları",
   "Commentary": "",
-  "Rare Plants": "",
   "Wholesome Content": "",
   "Animal Compilation": "",
   "Influencer Commentary": "",
@@ -772,7 +766,6 @@
   "Studio Ghibli Style": "Stüdyo Ghibli Tarzı",
   "Slice of Life": "Hayat Dilim",
   "Cozy Cooking": "Rahat Yemek Pişirme",
-  "Educational Animation": "",
   "Children's 3D Animal Animation": "",
   "Science Education": "",
   "Roblox Animation Shorts": "",
@@ -782,9 +775,6 @@
   "3D Animation": "",
   "Football Player Highlights": "",
   "Sports Editing": "",
-  "History": "",
-  "Ancient Engineering": "",
-  "Plant Reviews": "",
   "Educational Animal Content": "",
   "Human Anatomy": "",
   "Biology": "",
@@ -798,6 +788,22 @@
   "Historical Geography": "",
   "Alphabet Learning": "",
   "Phonics": "",
-  "Nursery Rhymes": ""
+  "Nursery Rhymes": "",
+  "Industrial Manufacturing": "",
+  "Manufacturing": "",
+  "Football Entertainment": "",
+  "Reaction Commentary": "",
+  "Manufacturing & Industrial Processes Documentary": "",
+  "Food Processing": "",
+  "Product Assembly": "",
+  "Industrial Process": "",
+  "Factory Production": "",
+  "Pipe Manufacturing": "",
+  "Football Comedy": "",
+  "Memorable Football Moments": "",
+  "Viral Trends": "",
+  "Factory Tours": "",
+  "Industrial Machinery": "",
+  "Product Manufacturing": ""
  }
 }
