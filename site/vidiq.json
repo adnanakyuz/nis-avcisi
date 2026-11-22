@@ -1,7 +1,7 @@
 {
  "surum": 1,
- "guncelleme": "2026-11-21T09:44:45+00:00",
- "bakiye": 33,
+ "guncelleme": "2026-11-22T09:45:14+00:00",
+ "bakiye": 28,
  "sifirlanma": "2026-12-12T00:27:18.559803Z",
  "nisler": [
   {
@@ -85,6 +85,48 @@
      "ad": "ZBNDUHUR",
      "abone": 5710,
      "buyume30": 58.17
+    }
+   ]
+  },
+  {
+   "nis": "Industrial Manufacturing",
+   "alt": [
+    "Food Processing",
+    "Heavy Machinery",
+    "Product Assembly"
+   ],
+   "kanal_sayisi": 6,
+   "dil": "en",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "yeni7": 6,
+   "ort_buyume30": 189.9,
+   "ort_izlenme": 160972,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UC_3J9xr7d9jfhwPQsS7P_-Q",
+     "ad": "Factory Craze",
+     "abone": 18900,
+     "buyume30": 446.24
+    },
+    {
+     "id": "UCsQhkQja1NMIPxpzF-XQ46Q",
+     "ad": "Prodexa",
+     "abone": 9080,
+     "buyume30": 328.3
+    },
+    {
+     "id": "UCq-1iSVI_4Cw1Hw7bzknsUw",
+     "ad": "TITAN Industry",
+     "abone": 31200,
+     "buyume30": 160
+    },
+    {
+     "id": "UCuoDn6r8ZXI7LbcB34gW7Og",
+     "ad": "Factory Atlas Studio",
+     "abone": 1820,
+     "buyume30": 100
     }
    ]
   },
@@ -257,42 +299,6 @@
    ]
   },
   {
-   "nis": "Artificial Intelligence",
-   "alt": [
-    "AI Tools",
-    "Future Technology",
-    "Technology News"
-   ],
-   "kanal_sayisi": 3,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 88.1,
-   "ort_izlenme": 13383,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCT41p6cGch0U4NZgR2iYD6A",
-     "ad": "The AI Times",
-     "abone": 22700,
-     "buyume30": 198.68
-    },
-    {
-     "id": "UClSy4QiF4VA66XVx-lUWsUA",
-     "ad": "Pixel_Pulse_USA🎮",
-     "abone": 1640,
-     "buyume30": 41.38
-    },
-    {
-     "id": "UCmjZHs54VkHVW1Hi9dmelBw",
-     "ad": "Ignore All Previous Instructions",
-     "abone": 2210,
-     "buyume30": 24.16
-    }
-   ]
-  },
-  {
    "nis": "Kids' Educational Content",
    "alt": [
     "Nursery Rhymes & Kids' Songs",
@@ -427,6 +433,36 @@
      "ad": "CR7IUM",
      "abone": 61700,
      "buyume30": 60.68
+    }
+   ]
+  },
+  {
+   "nis": "Artificial Intelligence",
+   "alt": [
+    "AI Tools",
+    "Future Technology",
+    "Technology News"
+   ],
+   "kanal_sayisi": 2,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 120.0,
+   "ort_izlenme": 15171,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCT41p6cGch0U4NZgR2iYD6A",
+     "ad": "The AI Times",
+     "abone": 22700,
+     "buyume30": 198.68
+    },
+    {
+     "id": "UClSy4QiF4VA66XVx-lUWsUA",
+     "ad": "Pixel_Pulse_USA🎮",
+     "abone": 1640,
+     "buyume30": 41.38
     }
    ]
   },
@@ -581,36 +617,6 @@
    ]
   },
   {
-   "nis": "Civil Engineering & Construction",
-   "alt": [
-    "Infrastructure Development",
-    "Heavy Equipment",
-    "Construction Techniques"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 49.9,
-   "ort_izlenme": 385093,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCZxacyYpWyXA9_PycbNaTqw",
-     "ad": "GLOBAL BUILD & DESIGN",
-     "abone": 28100,
-     "buyume30": 75.63
-    },
-    {
-     "id": "UCkUitC3L9-PdjqMAhpQXB1A",
-     "ad": "Yang Development & Design",
-     "abone": 25200,
-     "buyume30": 24.14
-    }
-   ]
-  },
-  {
    "nis": "AI Animation",
    "alt": [
     "Studio Ghibli Style",
@@ -697,126 +703,6 @@
      "ad": "Rueben Geise",
      "abone": 31300,
      "buyume30": 32.07
-    }
-   ]
-  },
-  {
-   "nis": "Technology",
-   "alt": [
-    "AI Tools",
-    "Gadgets",
-    "Smartphones & Gadgets"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 34.6,
-   "ort_izlenme": 224211,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCAdtNCdeFsIs-DcK71-rDLA",
-     "ad": "Aigen Gadget",
-     "abone": 13500,
-     "buyume30": 46.26
-    },
-    {
-     "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
-     "ad": "Tech Easy",
-     "abone": 46500,
-     "buyume30": 23.02
-    }
-   ]
-  },
-  {
-   "nis": "Educational Animation",
-   "alt": [
-    "History",
-    "3D Animation",
-    "Ancient Engineering"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 1,
-   "ort_buyume30": 33.1,
-   "ort_izlenme": 511359,
-   "ortak_konu": "3D Animation",
-   "ortak": true,
-   "ornekler": [
-    {
-     "id": "UCmj6PDhLSwQgJHCvple8jmA",
-     "ad": "Spark Feeder 3D",
-     "abone": 7230,
-     "buyume30": 40.94
-    },
-    {
-     "id": "UCxW3Vdnyxre0ok8yPHzvscg",
-     "ad": "Ctrl z films",
-     "abone": 17300,
-     "buyume30": 25.36
-    }
-   ]
-  },
-  {
-   "nis": "Human Interest Stories",
-   "alt": [
-    "Inspirational Stories",
-    "Acts of Kindness & Heroism",
-    "True Crime"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "de",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "yeni7": 0,
-   "ort_buyume30": 29.2,
-   "ort_izlenme": 62100,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCF9k3jbxw4-vvM-m6OLBsPQ",
-     "ad": "Gutes geschieht",
-     "abone": 5280,
-     "buyume30": 34.69
-    },
-    {
-     "id": "UC5r0HZLUsWrBCnYkVx5GlHw",
-     "ad": "ROTES DREIECK",
-     "abone": 1670,
-     "buyume30": 23.7
-    }
-   ]
-  },
-  {
-   "nis": "Gardening",
-   "alt": [
-    "Plant Care",
-    "Rare Plants",
-    "Plant Reviews"
-   ],
-   "kanal_sayisi": 2,
-   "dil": "en",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "yeni7": 2,
-   "ort_buyume30": 24.0,
-   "ort_izlenme": 312632,
-   "ortak_konu": null,
-   "ortak": false,
-   "ornekler": [
-    {
-     "id": "UCLamaMh2744y7m_lENCS2Dw",
-     "ad": "Plantalytics",
-     "abone": 57900,
-     "buyume30": 24.52
-    },
-    {
-     "id": "UCdWn6Mi44lVoc87Zlj320aw",
-     "ad": "John clips",
-     "abone": 31000,
-     "buyume30": 23.51
     }
    ]
   },
@@ -972,7 +858,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-11-14T09:45:00+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 236.6,
    "ort_izlenme": 178605,
    "ortak_konu": null,
@@ -1034,6 +920,30 @@
    ]
   },
   {
+   "nis": "Manufacturing",
+   "alt": [
+    "Industrial Process",
+    "Factory Production",
+    "Pipe Manufacturing"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 206.8,
+   "ort_izlenme": 139368,
+   "ortak_konu": "Manufacturing",
+   "ortak": true,
+   "ornekler": [
+    {
+     "id": "UCr9WT6wCvx7RvT2Yb9v9BJA",
+     "ad": "Popular Lahore Pipes",
+     "abone": 15400,
+     "buyume30": 206.77
+    }
+   ]
+  },
+  {
    "nis": "Roblox Animation Shorts",
    "alt": [
     "Drama Stories",
@@ -1091,7 +1001,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-11-14T09:45:00+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 192.7,
    "ort_izlenme": 140331,
    "ortak_konu": null,
@@ -1139,7 +1049,7 @@
    "kanal_sayisi": 1,
    "dil": "en",
    "ilk": "2026-11-14T09:45:00+00:00",
-   "yeni7": 1,
+   "yeni7": 0,
    "ort_buyume30": 178.0,
    "ort_izlenme": 385233,
    "ortak_konu": null,
@@ -1200,9 +1110,102 @@
      "buyume30": 169.14
     }
    ]
+  },
+  {
+   "nis": "Football Entertainment",
+   "alt": [
+    "Football Comedy",
+    "Memorable Football Moments"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-10-25T09:45:23+00:00",
+   "yeni7": 0,
+   "ort_buyume30": 162.9,
+   "ort_izlenme": 1270294,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCXu7ilasTyUfJxAeANeoa4w",
+     "ad": "soccerFunnyMots",
+     "abone": 51800,
+     "buyume30": 162.94
+    }
+   ]
+  },
+  {
+   "nis": "Reaction Commentary",
+   "alt": [
+    "Football",
+    "Pop Culture",
+    "Viral Trends"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-19T09:44:59+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 161.9,
+   "ort_izlenme": 664984,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UCxDN-RnFn8nn8JAPLRpaymg",
+     "ad": "Rua React",
+     "abone": 7490,
+     "buyume30": 161.89
+    }
+   ]
+  },
+  {
+   "nis": "Manufacturing & Industrial Processes Documentary",
+   "alt": [
+    "Factory Tours",
+    "Industrial Machinery",
+    "Product Manufacturing"
+   ],
+   "kanal_sayisi": 1,
+   "dil": "en",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "yeni7": 1,
+   "ort_buyume30": 157.8,
+   "ort_izlenme": 932581,
+   "ortak_konu": null,
+   "ortak": false,
+   "ornekler": [
+    {
+     "id": "UClrSiqwRgcVKRRKfmGhMALA",
+     "ad": "Spark Skills",
+     "abone": 26300,
+     "buyume30": 157.84
+    }
+   ]
   }
  ],
  "kanallar": [
+  {
+   "id": "UC_3J9xr7d9jfhwPQsS7P_-Q",
+   "ad": "Factory Craze",
+   "handle": null,
+   "abone": 18900,
+   "ort_izlenme": 135697.72727272726,
+   "buyume30": 446.24,
+   "izlenme_buyume30": 415.85,
+   "nis": "Industrial Manufacturing, Food Production, Heavy Machinery, Product Assembly, Factory Processes, Agricultural Processing",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
   {
    "id": "UCUAo-xdNaLUpPHFS5GkMcBQ",
    "ad": "FoStazz",
@@ -1267,6 +1270,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCsQhkQja1NMIPxpzF-XQ46Q",
+   "ad": "Prodexa",
+   "handle": null,
+   "abone": 9080,
+   "ort_izlenme": 198206.25242718446,
+   "buyume30": 328.3,
+   "izlenme_buyume30": 426.13,
+   "nis": "Industrial Manufacturing, Leather Goods Production, Horn Crafting, Luxury Goods Manufacturing, Factory Process Documentation",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
    "ortak": false
   },
   {
@@ -1466,6 +1491,28 @@
    "ilk": "2026-11-21T09:44:45+00:00",
    "son": "2026-11-21T09:44:45+00:00",
    "ortak": true
+  },
+  {
+   "id": "UCr9WT6wCvx7RvT2Yb9v9BJA",
+   "ad": "Popular Lahore Pipes",
+   "handle": null,
+   "abone": 15400,
+   "ort_izlenme": 139368.4243902439,
+   "buyume30": 206.77,
+   "izlenme_buyume30": 290.85,
+   "nis": "Manufacturing, Industrial Process, Factory Production, Pipe Manufacturing",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
   },
   {
    "id": "UC50h-J3hfA2KM7FRgcEu7LA",
@@ -1732,6 +1779,50 @@
    "ortak": false
   },
   {
+   "id": "UCq-1iSVI_4Cw1Hw7bzknsUw",
+   "ad": "TITAN Industry",
+   "handle": null,
+   "abone": 31200,
+   "ort_izlenme": 116588.13043478261,
+   "buyume30": 160,
+   "izlenme_buyume30": 124.55,
+   "nis": "Industrial Manufacturing, Food Processing, Recycling Processes, Material Transformation, Factory Automation, Production Line",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UClrSiqwRgcVKRRKfmGhMALA",
+   "ad": "Spark Skills",
+   "handle": null,
+   "abone": 26300,
+   "ort_izlenme": 932581.1632653062,
+   "buyume30": 157.84,
+   "izlenme_buyume30": 191.98,
+   "nis": "Manufacturing & Industrial Processes Documentary, Factory Tours, Industrial Machinery, Product Manufacturing, Recycling Processes, Craftsmanship",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
    "id": "UC7JDMWZgV9NAq0qxtXaJDpg",
    "ad": "Tiny Heroes USA",
    "handle": null,
@@ -1773,6 +1864,28 @@
    "kaynak": "Bodyology kanalına benzer",
    "ilk": "2026-11-21T09:44:45+00:00",
    "son": "2026-11-21T09:44:45+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCrFuWYgu5DKIilsftEDDHDQ",
+   "ad": "Secret skills",
+   "handle": null,
+   "abone": 3190,
+   "ort_izlenme": 534861.7,
+   "buyume30": 153.17,
+   "izlenme_buyume30": 103.61,
+   "nis": "Industrial Manufacturing & Repair Tutorials, Metalworking, Mechanical Engineering, Factory Processes, Automotive Repair, Industrial Craftsmanship",
+   "dil": "en",
+   "ulke": "DE",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
    "ortak": false
   },
   {
@@ -2260,6 +2373,28 @@
    "ortak": false
   },
   {
+   "id": "UC_wBJE89U8RF2sJpnyVVo2Q",
+   "ad": "Viral Process",
+   "handle": null,
+   "abone": 52700,
+   "ort_izlenme": 314174.8181818182,
+   "buyume30": 109.96,
+   "izlenme_buyume30": 130.74,
+   "nis": "Industrial Manufacturing Processes, Food Production, Product Assembly & Manufacturing, Sustainable Material Recycling",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCPsSd9lajCOaE-IX7jXaQEA",
    "ad": "ShreeBlox 3D ⭐",
    "handle": null,
@@ -2414,6 +2549,28 @@
    "ortak": false
   },
   {
+   "id": "UCuoDn6r8ZXI7LbcB34gW7Og",
+   "ad": "Factory Atlas Studio",
+   "handle": null,
+   "abone": 1820,
+   "ort_izlenme": 111967.125,
+   "buyume30": 100,
+   "izlenme_buyume30": null,
+   "nis": "Industrial Manufacturing, Heavy Machinery, Industrial Engineering, Production Processes, Factory Tours",
+   "dil": "en",
+   "ulke": null,
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCe-FRVDPmt6dKEIMMt3v83g",
    "ad": "Cartoon Snacks",
    "handle": null,
@@ -2433,6 +2590,28 @@
    "kaynak": "GHIBLI_FAMILY9 kanalına benzer",
    "ilk": "2026-11-20T09:45:11+00:00",
    "son": "2026-11-20T09:45:11+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCtxZok3jXEYidir1U-RQD_Q",
+   "ad": "Hello Raw",
+   "handle": null,
+   "abone": 11200,
+   "ort_izlenme": 385842.6034482759,
+   "buyume30": 98.93,
+   "izlenme_buyume30": 161.33,
+   "nis": "Manufacturing & DIY Process Tutorials, Plastic Manufacturing, Woodworking, Industrial Processes, Recycling",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": false,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
    "ortak": false
   },
   {
@@ -2609,6 +2788,28 @@
    "kaynak": "World In A Box kanalına benzer",
    "ilk": "2026-11-19T09:44:59+00:00",
    "son": "2026-11-19T09:44:59+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCuyokLDYq4WJelBnUAKCKSg",
+   "ad": "Factory Production",
+   "handle": null,
+   "abone": 1100,
+   "ort_izlenme": 126679.875,
+   "buyume30": 82.42,
+   "izlenme_buyume30": 129.05,
+   "nis": "Manufacturing & Industrial Processes, Industrial Automation, Heavy Machinery, Production Line Technology, Product Manufacturing",
+   "dil": "en",
+   "ulke": "PK",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
    "ortak": false
   },
   {
@@ -3052,6 +3253,28 @@
    "ortak": false
   },
   {
+   "id": "UCPdpZjMwDCdzhE1sKM7bvRw",
+   "ad": "Made From Scratch",
+   "handle": null,
+   "abone": 6850,
+   "ort_izlenme": 181156.5806451613,
+   "buyume30": 64.27,
+   "izlenme_buyume30": 96.1,
+   "nis": "Industrial Manufacturing, Factory Tours, Food Processing, Product Assembly, Recycling Processes, Raw Material Transformation",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCve7NwAvcJP3vu6yku-sXKA",
    "ad": "MechanicalLabs",
    "handle": "@mechanicallabss",
@@ -3203,6 +3426,28 @@
    "kaynak": "The Fluff Index kanalına benzer",
    "ilk": "2026-11-14T09:45:00+00:00",
    "son": "2026-11-14T09:45:00+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UC8NhbyG9kVtTHfhzzbxAMPA",
+   "ad": "Suman's World",
+   "handle": null,
+   "abone": 24700,
+   "ort_izlenme": 147798.23776223775,
+   "buyume30": 59.35,
+   "izlenme_buyume30": 47.8,
+   "nis": "Food Production & Industrial Processes, Indian Street Food Vlogs, Factory & Manufacturing Tours",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": "short",
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
    "ortak": false
   },
   {
@@ -3690,6 +3935,50 @@
    "ortak": false
   },
   {
+   "id": "UCa2GJdG9CQ8oErgYmZ-tXJQ",
+   "ad": "THE PROCESS LINE",
+   "handle": null,
+   "abone": 16500,
+   "ort_izlenme": 201099.81818181818,
+   "buyume30": 48.65,
+   "izlenme_buyume30": 85.64,
+   "nis": "Manufacturing Process Documentation, Industrial Factory Tours, Product Manufacturing, Synthetic Documentary, How It's Made",
+   "dil": "en",
+   "ulke": "GH",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCVpMhw_vuMIbCTKjNpTu5qA",
+   "ad": "How It's Manufactured",
+   "handle": null,
+   "abone": 19000,
+   "ort_izlenme": 173921.1769230769,
+   "buyume30": 48.44,
+   "izlenme_buyume30": 42.73,
+   "nis": "Manufacturing Process, Factory Tour, Industrial Documentary, Food Processing, Recycling Process",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCKBteshQgFo22tDRGxMPqMg",
    "ad": "Kharya Developers",
    "handle": null,
@@ -3819,6 +4108,28 @@
    "kaynak": "Giant Feats kanalına benzer",
    "ilk": "2026-10-24T09:45:17+00:00",
    "son": "2026-10-24T09:45:17+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCR1p6wj-IYFiZ77D5zPy0jA",
+   "ad": "Captain Factory",
+   "handle": null,
+   "abone": 19600,
+   "ort_izlenme": 131649.75757575757,
+   "buyume30": 44.12,
+   "izlenme_buyume30": 66.46,
+   "nis": "Manufacturing Documentary, Industrial Engineering, Production Processes, Automation Technology, Heavy Machinery",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
    "ortak": false
   },
   {
@@ -4149,6 +4460,28 @@
    "kaynak": "LittleColor🎨 kanalına benzer",
    "ilk": "2026-11-18T09:44:37+00:00",
    "son": "2026-11-18T09:44:37+00:00",
+   "ortak": false
+  },
+  {
+   "id": "UCPZkcy_PCyzST1CTfztb_yw",
+   "ad": "Factory Pulse",
+   "handle": null,
+   "abone": 13900,
+   "ort_izlenme": 222216.27722772278,
+   "buyume30": 40.83,
+   "izlenme_buyume30": 36.29,
+   "nis": "Industrial Manufacturing, Food Processing, Production Lines, Luxury Goods Manufacturing, Industrial Automation, Raw Material Processing",
+   "dil": "en",
+   "ulke": "US",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
    "ortak": false
   },
   {
@@ -4545,7 +4878,7 @@
    "kaynak": "Bodyology kanalına benzer",
    "ilk": "2026-11-21T09:44:45+00:00",
    "son": "2026-11-21T09:44:45+00:00",
-   "ortak": true
+   "ortak": false
   },
   {
    "id": "UC4zNmJcp0rLZgiFG0PXu6xg",
@@ -5120,6 +5453,28 @@
    "ortak": false
   },
   {
+   "id": "UCqhTOUPuZAmwOs05t4ZZOsQ",
+   "ad": "HIXON",
+   "handle": null,
+   "abone": 5120,
+   "ort_izlenme": 287662.7889908257,
+   "buyume30": 27.05,
+   "izlenme_buyume30": 42.23,
+   "nis": "Industrial Processes, Manufacturing, Heavy Machinery, Factory Automation, Industrial Engineering",
+   "dil": "en",
+   "ulke": "IN",
+   "kazanc": null,
+   "acilis": null,
+   "son_video": null,
+   "video_sayisi": null,
+   "tur": null,
+   "yuzsuz": null,
+   "kaynak": "MatièraX kanalına benzer",
+   "ilk": "2026-11-22T09:45:14+00:00",
+   "son": "2026-11-22T09:45:14+00:00",
+   "ortak": false
+  },
+  {
    "id": "UCwzpyWp13O2Q1w_XdjHHDPg",
    "ad": "The memerrrr",
    "handle": null,
@@ -5228,380 +5583,6 @@
    "ilk": "2026-10-23T22:57:44+00:00",
    "son": "2026-10-24T09:45:17+00:00",
    "ortak": false
-  },
-  {
-   "id": "UCb_LydsW36aOCjXQavdkePQ",
-   "ad": "Vibes Club Hub",
-   "handle": null,
-   "abone": 17300,
-   "ort_izlenme": 818111.1924528301,
-   "buyume30": 25.36,
-   "izlenme_buyume30": 9.06,
-   "nis": "Celebrity Commentary, Zendaya, Tom Holland, Marvel, Celebrity News",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "World In A Box kanalına benzer",
-   "ilk": "2026-11-19T09:44:59+00:00",
-   "son": "2026-11-19T09:44:59+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCxW3Vdnyxre0ok8yPHzvscg",
-   "ad": "Ctrl z films",
-   "handle": null,
-   "abone": 17300,
-   "ort_izlenme": 567192.8305084746,
-   "buyume30": 25.36,
-   "izlenme_buyume30": 36.5,
-   "nis": "Educational Animation, Science, History, Trivia, Thought Experiments, 3D Animation",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Bodyology kanalına benzer",
-   "ilk": "2026-11-21T09:44:45+00:00",
-   "son": "2026-11-21T09:44:45+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCnjQObvFqAG5Lh-UJOeXlIg",
-   "ad": "yullery art",
-   "handle": null,
-   "abone": 49400,
-   "ort_izlenme": 547269.9196428572,
-   "buyume30": 24.75,
-   "izlenme_buyume30": 34.92,
-   "nis": "Art & Crafts, DIY Crafts, Squishies, Toy Crafts",
-   "dil": "en",
-   "ulke": "KR",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": null,
-   "kaynak": "LittleColor🎨 kanalına benzer",
-   "ilk": "2026-11-18T09:44:37+00:00",
-   "son": "2026-11-18T09:44:37+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC0037HB4JmOjz--cFP9NK9w",
-   "ad": "Elena und Ben BUSLIFE",
-   "handle": "@elenaundbenbuslife",
-   "abone": 11500,
-   "ort_izlenme": 316078.24324324325,
-   "buyume30": 24.59,
-   "izlenme_buyume30": 62.65,
-   "nis": "Vehicle Conversion & Travel, School Bus Conversion, Van Life",
-   "dil": "de",
-   "ulke": null,
-   "kazanc": 152.79,
-   "acilis": "2026-06-17T07:57:48Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 37,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCLamaMh2744y7m_lENCS2Dw",
-   "ad": "Plantalytics",
-   "handle": null,
-   "abone": 57900,
-   "ort_izlenme": 406544.5671641791,
-   "buyume30": 24.52,
-   "izlenme_buyume30": 26.83,
-   "nis": "Gardening, Plant Care, Rare Plants, Plant Reviews",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCJOdiOL14psCxZOEgYFDGpA",
-   "ad": "LachLernLand",
-   "handle": "@lachlernland",
-   "abone": 1480,
-   "ort_izlenme": 1126.4565217391305,
-   "buyume30": 24.37,
-   "izlenme_buyume30": 7.19,
-   "nis": "Children's Music & Educational Stories, Children's Songs, Educational Content",
-   "dil": "de",
-   "ulke": "DE",
-   "kazanc": null,
-   "acilis": "2026-01-18T22:20:34Z",
-   "son_video": "2026-10-19T00:00:00.000Z",
-   "video_sayisi": 138,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCmjZHs54VkHVW1Hi9dmelBw",
-   "ad": "Ignore All Previous Instructions",
-   "handle": "@ignoreallofficial",
-   "abone": 2210,
-   "ort_izlenme": 9805.57142857143,
-   "buyume30": 24.16,
-   "izlenme_buyume30": 216.56,
-   "nis": "Artificial Intelligence, AI Policy, AI Ethics",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": "2026-06-23T17:19:58Z",
-   "son_video": "2026-10-16T00:00:00.000Z",
-   "video_sayisi": 14,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCkUitC3L9-PdjqMAhpQXB1A",
-   "ad": "Yang Development & Design",
-   "handle": null,
-   "abone": 25200,
-   "ort_izlenme": 534979.6489361703,
-   "buyume30": 24.14,
-   "izlenme_buyume30": -9.71,
-   "nis": "Civil Engineering & Construction, Road Construction, Infrastructure Development, Civil Engineering, Transformation Projects",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": "short",
-   "yuzsuz": true,
-   "kaynak": "Giant Feats kanalına benzer",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UC5r0HZLUsWrBCnYkVx5GlHw",
-   "ad": "ROTES DREIECK",
-   "handle": "@rotes_dreieck",
-   "abone": 1670,
-   "ort_izlenme": 44774.14552238806,
-   "buyume30": 23.7,
-   "izlenme_buyume30": 12.29,
-   "nis": "Human Interest Stories, True Crime, Biographies",
-   "dil": "de",
-   "ulke": "DE",
-   "kazanc": null,
-   "acilis": "2025-11-08T11:28:50Z",
-   "son_video": "2026-10-20T00:00:00.000Z",
-   "video_sayisi": 268,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: travel stories (de)",
-   "ilk": "2026-10-24T09:45:17+00:00",
-   "son": "2026-10-24T09:45:17+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCoFYy05BYTncMuzJZpJyrvg",
-   "ad": "Little Kindness",
-   "handle": null,
-   "abone": 86200,
-   "ort_izlenme": 1823811.5625,
-   "buyume30": 23.67,
-   "izlenme_buyume30": 27.76,
-   "nis": "Hip-Hop Music, Human Interest Stories, MLB Highlights",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCdWn6Mi44lVoc87Zlj320aw",
-   "ad": "John clips",
-   "handle": null,
-   "abone": 31000,
-   "ort_izlenme": 218719.74731182796,
-   "buyume30": 23.51,
-   "izlenme_buyume30": 34.93,
-   "nis": "Gardening, Plant Propagation, Home Gardening, Fruit Gardening, Growth Timelapse",
-   "dil": "en",
-   "ulke": "GB",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCKBnL3qZ0ZESQkdpZx2L3UQ",
-   "ad": "WEFUYGIU",
-   "handle": null,
-   "abone": 31000,
-   "ort_izlenme": 1451820.3333333333,
-   "buyume30": 23.02,
-   "izlenme_buyume30": 22.85,
-   "nis": "Art and Sports Commentary, Digital Art, MLB News",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "AI Dumb Office kanalına benzer",
-   "ilk": "2026-10-23T22:57:44+00:00",
-   "son": "2026-10-23T22:57:44+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCxrnc4Wuz4xyg24Z50PRJhw",
-   "ad": "Tech Easy",
-   "handle": "@techeasy.9",
-   "abone": 46500,
-   "ort_izlenme": 440720.91791044775,
-   "buyume30": 23.02,
-   "izlenme_buyume30": 26.82,
-   "nis": "Technology, Smartphones & Gadgets, AI & Digital Tools",
-   "dil": "en, hi",
-   "ulke": "IN",
-   "kazanc": 151.7,
-   "acilis": "2026-01-01T10:04:22Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 134,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCKJmAcDFZVAgjcW6KXJ12pw",
-   "ad": "My Banana Farmer",
-   "handle": null,
-   "abone": 11900,
-   "ort_izlenme": 101162.004048583,
-   "buyume30": 22.81,
-   "izlenme_buyume30": 25.09,
-   "nis": "Agriculture, Banana Farming, Horticulture, Plant Propagation, Fertilization Techniques",
-   "dil": "en",
-   "ulke": "PH",
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "The Fluff Index kanalına benzer",
-   "ilk": "2026-11-14T09:45:00+00:00",
-   "son": "2026-11-14T09:45:00+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCF1ISwPjmw1rPjECn1pfUKg",
-   "ad": "Gengu AI",
-   "handle": "@genguai",
-   "abone": 19100,
-   "ort_izlenme": 48050.29230769231,
-   "buyume30": 22.44,
-   "izlenme_buyume30": 43.3,
-   "nis": "AI Generated Media, AI Art, AI Films",
-   "dil": "en",
-   "ulke": "US",
-   "kazanc": 1442.04,
-   "acilis": "2026-04-13T03:41:12Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 65,
-   "tur": null,
-   "yuzsuz": true,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCgDJ_q3JiAR_Ug_45w6N9CQ",
-   "ad": "Orgest Agolli",
-   "handle": null,
-   "abone": 31300,
-   "ort_izlenme": 818552.8513513514,
-   "buyume30": 22.27,
-   "izlenme_buyume30": 27.94,
-   "nis": "Parenting Comedy, Toddler Life, Family Humor, Childhood Pranks",
-   "dil": "en",
-   "ulke": null,
-   "kazanc": null,
-   "acilis": null,
-   "son_video": null,
-   "video_sayisi": null,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "le viet kanalına benzer",
-   "ilk": "2026-10-26T09:45:53+00:00",
-   "son": "2026-10-26T09:45:53+00:00",
-   "ortak": false
-  },
-  {
-   "id": "UCA7QNQ3OU0AUC9QiDAMSAkA",
-   "ad": "AIOrbitX",
-   "handle": "@aiorbitxofficial",
-   "abone": 7760,
-   "ort_izlenme": 9962.696092619391,
-   "buyume30": 21.25,
-   "izlenme_buyume30": 33.77,
-   "nis": "Educational Technology, AI Tutorials, Content Creation",
-   "dil": "en, hi",
-   "ulke": "IN",
-   "kazanc": 8.92,
-   "acilis": "2026-03-28T03:33:18Z",
-   "son_video": "2026-10-23T00:00:00.000Z",
-   "video_sayisi": 691,
-   "tur": null,
-   "yuzsuz": null,
-   "kaynak": "Yükselen: ai and technology (en)",
-   "ilk": "2026-10-25T09:45:23+00:00",
-   "son": "2026-10-25T09:45:23+00:00",
-   "ortak": false
   }
  ],
  "sorgular": [
@@ -5700,6 +5681,14 @@
    "ad": "Bodyology",
    "gelen": 50,
    "alinan": 29
+  },
+  {
+   "tarih": "2026-11-22T09:45:14+00:00",
+   "tip": "benzer",
+   "hedef": "UCA5WfmIwF0-Y2GE1iG5ZwdA",
+   "ad": "MatièraX",
+   "gelen": 50,
+   "alinan": 23
   }
  ]
 }
