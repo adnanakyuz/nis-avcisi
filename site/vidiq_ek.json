@@ -1,79 +1,6 @@
 {
- "ts": "2026-11-22T16:17:00+00:00",
+ "ts": "2026-11-23T20:14:13+00:00",
  "firsat": {
-  "Technology": {
-   "seviye": "doymus",
-   "pay": 0.021194376503612368,
-   "toplam": 45946433,
-   "video": 25,
-   "buyuk": 16,
-   "yeniler": [
-    {
-     "kanal_id": "UCir6kdJGoPTPCmvegeyj4OQ",
-     "kanal": "Fresher Ki Naukri",
-     "izl": 692956
-    },
-    {
-     "kanal_id": "UCFSmFW6_xLJgdsw3dKpsWuw",
-     "kanal": "Tania Photo Lab",
-     "izl": 280850
-    }
-   ],
-   "sorgu": "AI Tools",
-   "tarih": "2026-11-16T18:33:43+00:00"
-  },
-  "Artificial Intelligence": {
-   "seviye": "doymus",
-   "pay": 0.022076648026470233,
-   "toplam": 44110229,
-   "video": 25,
-   "buyuk": 16,
-   "yeniler": [
-    {
-     "kanal_id": "UCir6kdJGoPTPCmvegeyj4OQ",
-     "kanal": "Fresher Ki Naukri",
-     "izl": 692956
-    },
-    {
-     "kanal_id": "UCFSmFW6_xLJgdsw3dKpsWuw",
-     "kanal": "Tania Photo Lab",
-     "izl": 280850
-    }
-   ],
-   "sorgu": "AI Tools",
-   "tarih": "2026-11-16T18:33:43+00:00"
-  },
-  "Industrial Engineering": {
-   "seviye": "doymus",
-   "pay": 0.17922222374465868,
-   "toplam": 191578875,
-   "video": 25,
-   "buyuk": 4,
-   "yeniler": [
-    {
-     "kanal_id": "UCU_R9AFA6myrGsn7q5r54LA",
-     "kanal": "GENESIS AI-K",
-     "izl": 18120814
-    },
-    {
-     "kanal_id": "UC837OkpwGI6BytyBPPdfQ1w",
-     "kanal": "How Made",
-     "izl": 9992844
-    },
-    {
-     "kanal_id": "UCYJ9XuJrX-bUCwsHLAtBqsg",
-     "kanal": "SUPER AXX",
-     "izl": 4222917
-    },
-    {
-     "kanal_id": "UCAOjz8K5pmJg-peAjiiW0rw",
-     "kanal": "Fact Factory",
-     "izl": 1998617
-    }
-   ],
-   "sorgu": "Manufacturing Processes",
-   "tarih": "2026-11-16T18:33:43+00:00"
-  },
   "Comedy": {
    "seviye": "doymus",
    "pay": 0.06847880066104953,
@@ -658,6 +585,74 @@
    ],
    "sorgu": "Parenting Humor",
    "tarih": "2026-11-22T16:17:00+00:00"
+  },
+  "Artificial Intelligence": {
+   "seviye": "doymus",
+   "pay": 0.0455430494802443,
+   "toplam": 119811191,
+   "video": 25,
+   "buyuk": 14,
+   "yeniler": [
+    {
+     "kanal_id": "UCV9J3QYXajxttjw5_-gS9Wg",
+     "kanal": "Callam Ingram",
+     "izl": 3501188
+    },
+    {
+     "kanal_id": "UCEwMzUhlJPxzjdNNHb8HeeQ",
+     "kanal": "Unpacking Bits | Nihal Jain",
+     "izl": 1955379
+    }
+   ],
+   "sorgu": "AI Tools",
+   "tarih": "2026-11-23T20:14:13+00:00"
+  },
+  "Industrial Engineering": {
+   "seviye": "doymus",
+   "pay": 0.1839001965645029,
+   "toplam": 193337553,
+   "video": 25,
+   "buyuk": 4,
+   "yeniler": [
+    {
+     "kanal_id": "UCU_R9AFA6myrGsn7q5r54LA",
+     "kanal": "GENESIS AI-K",
+     "izl": 20076785
+    },
+    {
+     "kanal_id": "UCA5WfmIwF0-Y2GE1iG5ZwdA",
+     "kanal": "MatièraX",
+     "izl": 6267296
+    },
+    {
+     "kanal_id": "UCYJ9XuJrX-bUCwsHLAtBqsg",
+     "kanal": "SUPER AXX",
+     "izl": 4446778
+    },
+    {
+     "kanal_id": "UCAOjz8K5pmJg-peAjiiW0rw",
+     "kanal": "Fact Factory",
+     "izl": 2486521
+    }
+   ],
+   "sorgu": "Manufacturing Processes",
+   "tarih": "2026-11-23T20:14:13+00:00"
+  },
+  "Construction & DIY": {
+   "seviye": "doymus",
+   "pay": 0.016521686783373176,
+   "toplam": 224604609,
+   "video": 25,
+   "buyuk": 10,
+   "yeniler": [
+    {
+     "kanal_id": "UCVWpqeYXJsy-kKWMCp8xOBA",
+     "kanal": "Diy creation Tips",
+     "izl": 3710847
+    }
+   ],
+   "sorgu": "Tool Hacks",
+   "tarih": "2026-11-23T20:14:13+00:00"
   }
  },
  "ceviri": {
