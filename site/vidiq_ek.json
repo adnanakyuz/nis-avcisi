@@ -1,74 +1,6 @@
 {
- "ts": "2026-11-23T20:14:13+00:00",
+ "ts": "2026-11-24T19:30:20+00:00",
  "firsat": {
-  "Comedy": {
-   "seviye": "doymus",
-   "pay": 0.06847880066104953,
-   "toplam": 463933169,
-   "video": 25,
-   "buyuk": 15,
-   "yeniler": [
-    {
-     "kanal_id": "UCXN_5V1xmVu18hfFADbXxiQ",
-     "kanal": "RankRoyale",
-     "izl": 31769587
-    }
-   ],
-   "sorgu": "Pranks",
-   "tarih": "2026-11-17T17:37:49+00:00"
-  },
-  "Family Vlogging": {
-   "seviye": "doymus",
-   "pay": 0.12144215938865341,
-   "toplam": 137683339,
-   "video": 25,
-   "buyuk": 5,
-   "yeniler": [
-    {
-     "kanal_id": "UCRpDyVWcZ4LcSUVg2UxZPEg",
-     "kanal": "BelleRanks",
-     "izl": 7534194
-    },
-    {
-     "kanal_id": "UCAwTe4PB6gV242UjxKaH36A",
-     "kanal": "Little Peddy Moments ",
-     "izl": 2634806
-    },
-    {
-     "kanal_id": "UCxgM4sTs9rS0Vpgz931_GtQ",
-     "kanal": "Reynandonouha ",
-     "izl": 2117552
-    },
-    {
-     "kanal_id": "UCYerEarBuzat6jzfnZon_cQ",
-     "kanal": "Before Too Late",
-     "izl": 1342253
-    }
-   ],
-   "sorgu": "Parenting Moments",
-   "tarih": "2026-11-17T17:37:49+00:00"
-  },
-  "Animation": {
-   "seviye": "doymus",
-   "pay": 0.08650107911613747,
-   "toplam": 910412203,
-   "video": 25,
-   "buyuk": 13,
-   "yeniler": [
-    {
-     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
-     "kanal": "Jerrin K James",
-     "izl": 45699354
-    },
-    {
-     "kanal_id": "UCXLVSygSQSBAIRCGkt14YRw",
-     "kanal": "Baby Bo",
-     "izl": 33052284
-    }
-   ],
-   "sorgu": "Family Comedy",
-   "tarih": "2026-11-17T17:37:49+00:00"
-  },
   "DIY Crafts": {
    "seviye": "doymus",
    "pay": 0.06909331632057172,
@@ -653,6 +585,89 @@
    ],
    "sorgu": "Tool Hacks",
    "tarih": "2026-11-23T20:14:13+00:00"
+  },
+  "Animation": {
+   "seviye": "doymus",
+   "pay": 0.24022768465917935,
+   "toplam": 227932089,
+   "video": 25,
+   "buyuk": 4,
+   "yeniler": [
+    {
+     "kanal_id": "UCFbPsPjAKiEgTbl11fDSiKQ",
+     "kanal": "CoreMine 3D",
+     "izl": 11705927
+    },
+    {
+     "kanal_id": "UC1Rwrv5_K1Epm9KVYvWpXiw",
+     "kanal": "hole story 3d",
+     "izl": 10572846
+    },
+    {
+     "kanal_id": "UCPoixtuFOW-QMQNHkR_OX4w",
+     "kanal": "FTM ",
+     "izl": 6853285
+    },
+    {
+     "kanal_id": "UCfM0RwKxj7egEj3_vV1e7ng",
+     "kanal": "OutwardAnimates",
+     "izl": 6493084
+    }
+   ],
+   "sorgu": "3D Animation",
+   "tarih": "2026-11-24T19:30:20+00:00"
+  },
+  "Family Vlogging": {
+   "seviye": "orta",
+   "pay": 0.4360138401129006,
+   "toplam": 5130883,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCMfB3Rk0HV3bxSupL8tfkjQ",
+     "kanal": "Tiny Bravo Co.",
+     "izl": 759582
+    },
+    {
+     "kanal_id": "UCC0aCInCbWyhpeUOqYXtDVA",
+     "kanal": "Until Home",
+     "izl": 428804
+    },
+    {
+     "kanal_id": "UCKXOqCapY8F3bCb5HhHQWbQ",
+     "kanal": "Little Base Adventures",
+     "izl": 306914
+    },
+    {
+     "kanal_id": "UCNCeaZzLIg_oAqeozLGb8dQ",
+     "kanal": "USA Family Moments",
+     "izl": 211760
+    }
+   ],
+   "sorgu": "Military Family Life",
+   "tarih": "2026-11-24T19:30:20+00:00"
+  },
+  "Comedy": {
+   "seviye": "doymus",
+   "pay": 0.07438515435269206,
+   "toplam": 634268335,
+   "video": 25,
+   "buyuk": 13,
+   "yeniler": [
+    {
+     "kanal_id": "UCXN_5V1xmVu18hfFADbXxiQ",
+     "kanal": "RankRoyale",
+     "izl": 33055584
+    },
+    {
+     "kanal_id": "UChR2HfBOF4iPCNS7tKNrOlA",
+     "kanal": "ACTION HERO",
+     "izl": 14124564
+    }
+   ],
+   "sorgu": "Pranks",
+   "tarih": "2026-11-24T19:30:20+00:00"
   }
  },
  "ceviri": {
