@@ -1,94 +1,6 @@
 {
- "ts": "2026-11-24T19:30:20+00:00",
+ "ts": "2026-11-25T18:39:06+00:00",
  "firsat": {
-  "DIY Crafts": {
-   "seviye": "doymus",
-   "pay": 0.06909331632057172,
-   "toplam": 323620593,
-   "video": 25,
-   "buyuk": 7,
-   "yeniler": [
-    {
-     "kanal_id": "UC7vejz5Anp61dyCnofkx0Iw",
-     "kanal": "Samiramis",
-     "izl": 9298809
-    },
-    {
-     "kanal_id": "UChCtE69oRnuRiq8zexJZFNA",
-     "kanal": "Thomas markup",
-     "izl": 7875295
-    },
-    {
-     "kanal_id": "UCqNmmbZguYUHiiYNJsbzkmQ",
-     "kanal": "Ehsan",
-     "izl": 5185916
-    }
-   ],
-   "sorgu": "Paper Crafts",
-   "tarih": "2026-11-18T17:15:55+00:00"
-  },
-  "Kids' Educational Content": {
-   "seviye": "doymus",
-   "pay": 0.07930951472023139,
-   "toplam": 479480982,
-   "video": 25,
-   "buyuk": 11,
-   "yeniler": [
-    {
-     "kanal_id": "UCn1SrgsVonl3OUb9m5oM_vw",
-     "kanal": "Tuki Tales",
-     "izl": 14213371
-    },
-    {
-     "kanal_id": "UCrG9uqUXSZ_thFYrUHj0Grw",
-     "kanal": "Puchku Rhymes",
-     "izl": 9843976
-    },
-    {
-     "kanal_id": "UCIuPpQbHnu67qImgRgB82BQ",
-     "kanal": "Chutties Music Beats",
-     "izl": 8911631
-    },
-    {
-     "kanal_id": "UCpR1AwuIcOF1OCVr32llPeQ",
-     "kanal": "Riki TV (English)",
-     "izl": 5058426
-    }
-   ],
-   "sorgu": "Nursery Rhymes & Kids' Songs",
-   "tarih": "2026-11-18T17:15:55+00:00"
-  },
-  "Parenting": {
-   "seviye": "orta",
-   "pay": 0.3921053252128827,
-   "toplam": 934909366,
-   "video": 25,
-   "buyuk": 4,
-   "yeniler": [
-    {
-     "kanal_id": "UC1QT-eSm9iOMaUwn6wNhZ2g",
-     "kanal": "Crazy LoLo Ai",
-     "izl": 239187498
-    },
-    {
-     "kanal_id": "UCWt-ShD6WhFrDmr8CciS07A",
-     "kanal": "Jerrin K James",
-     "izl": 46440111
-    },
-    {
-     "kanal_id": "UCXLVSygSQSBAIRCGkt14YRw",
-     "kanal": "Baby Bo",
-     "izl": 33765016
-    },
-    {
-     "kanal_id": "UCQG4yosEVEEn445cpZp4BCQ",
-     "kanal": "hikko Ranks",
-     "izl": 24562334
-    }
-   ],
-   "sorgu": "Baby Humor",
-   "tarih": "2026-11-18T17:15:55+00:00"
-  },
   "Construction Engineering": {
    "seviye": "bos",
    "pay": 0.6952115631075129,
@@ -668,6 +580,99 @@
    ],
    "sorgu": "Pranks",
    "tarih": "2026-11-24T19:30:20+00:00"
+  },
+  "DIY Crafts": {
+   "seviye": "doymus",
+   "pay": 0.12480787373192552,
+   "toplam": 322265277,
+   "video": 25,
+   "buyuk": 7,
+   "yeniler": [
+    {
+     "kanal_id": "UC9eF8k5i14nT0y_D9U-Utiw",
+     "kanal": "Lala DIY",
+     "izl": 10477587
+    },
+    {
+     "kanal_id": "UChCtE69oRnuRiq8zexJZFNA",
+     "kanal": "Thomas markup",
+     "izl": 8131728
+    },
+    {
+     "kanal_id": "UCK-vvNdTrgLNCflHvC8oReQ",
+     "kanal": "Folded Moments",
+     "izl": 6592151
+    },
+    {
+     "kanal_id": "UCqNmmbZguYUHiiYNJsbzkmQ",
+     "kanal": "Ehsan",
+     "izl": 5732467
+    }
+   ],
+   "sorgu": "Paper Crafts",
+   "tarih": "2026-11-25T18:39:06+00:00"
+  },
+  "Kids' Educational Content": {
+   "seviye": "orta",
+   "pay": 0.3139792135892981,
+   "toplam": 393510362,
+   "video": 25,
+   "buyuk": 12,
+   "yeniler": [
+    {
+     "kanal_id": "UCd-l1ST91BJMCB2RxXwmAFA",
+     "kanal": "Golu Tv Rhymes ",
+     "izl": 71512138
+    },
+    {
+     "kanal_id": "UCn1SrgsVonl3OUb9m5oM_vw",
+     "kanal": "Tuki Tales",
+     "izl": 20406023
+    },
+    {
+     "kanal_id": "UC74jk3TGrnHfeI2fh5ITU_g",
+     "kanal": "Milo Kids TV",
+     "izl": 18259630
+    },
+    {
+     "kanal_id": "UC47PkO0afe-9miJwQhIDzPA",
+     "kanal": "Toby - Song & Stories",
+     "izl": 6891253
+    }
+   ],
+   "sorgu": "Nursery Rhymes & Kids' Songs",
+   "tarih": "2026-11-25T18:39:06+00:00"
+  },
+  "Parenting": {
+   "seviye": "bos",
+   "pay": 0.5353085578590832,
+   "toplam": 714431827,
+   "video": 25,
+   "buyuk": 7,
+   "yeniler": [
+    {
+     "kanal_id": "UC1QT-eSm9iOMaUwn6wNhZ2g",
+     "kanal": "Crazy LoLo Ai",
+     "izl": 280002921
+    },
+    {
+     "kanal_id": "UCXLVSygSQSBAIRCGkt14YRw",
+     "kanal": "Baby Bo",
+     "izl": 37811151
+    },
+    {
+     "kanal_id": "UCJXk9wSHSRV50xpKbRRmPcw",
+     "kanal": "Gramps & Giggles",
+     "izl": 16939338
+    },
+    {
+     "kanal_id": "UCnrXhawys1imsdtf0XGxlLA",
+     "kanal": "Baby Boss Leo",
+     "izl": 16222945
+    }
+   ],
+   "sorgu": "Baby Humor",
+   "tarih": "2026-11-25T18:39:06+00:00"
   }
  },
  "ceviri": {
