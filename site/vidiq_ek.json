@@ -1,99 +1,6 @@
 {
- "ts": "2026-11-25T18:39:06+00:00",
+ "ts": "2026-11-26T18:25:53+00:00",
  "firsat": {
-  "Construction Engineering": {
-   "seviye": "bos",
-   "pay": 0.6952115631075129,
-   "toplam": 75709821,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCDrQ0IPduY0wCV56YlKGTIw",
-     "kanal": "Amazing Work Here",
-     "izl": 11511208
-    },
-    {
-     "kanal_id": "UCdyOtjn9b6sEKJyuhC4N_QA",
-     "kanal": "Bulldozer Masters",
-     "izl": 8463605
-    },
-    {
-     "kanal_id": "UC2-xEhhZe2t9qo2gNAD0NvA",
-     "kanal": "Pawan farmers life",
-     "izl": 7713882
-    },
-    {
-     "kanal_id": "UC396S4Wy_MBnIaoprBRNQOg",
-     "kanal": "Faktivo",
-     "izl": 5587541
-    }
-   ],
-   "sorgu": "Heavy Machinery",
-   "tarih": "2026-11-19T17:23:12+00:00"
-  },
-  "Sports": {
-   "seviye": "bos",
-   "pay": 0.6704431287009285,
-   "toplam": 300149008,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCZ7Am8bY7Aqilv6JN9dmd8Q",
-     "kanal": "Gugennnb",
-     "izl": 124917610
-    },
-    {
-     "kanal_id": "UCh04WdIGt8vQupyf9F-XKjw",
-     "kanal": "PupKitty Studio",
-     "izl": 12922779
-    },
-    {
-     "kanal_id": "UCXj9LFkkP5pNawhbzZ1BQnA",
-     "kanal": "GoadPaws 🐾",
-     "izl": 10841708
-    },
-    {
-     "kanal_id": "UC57TxtqAX_x6RpSARwz_V7w",
-     "kanal": "Koscinski Georgettajj",
-     "izl": 8612934
-    }
-   ],
-   "sorgu": "Major League Baseball",
-   "tarih": "2026-11-19T17:23:12+00:00"
-  },
-  "Human Interest Stories": {
-   "seviye": "orta",
-   "pay": 0.33220024932584635,
-   "toplam": 76850436,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCaQDcHXSF3-Yfj3zgfZEtZg",
-     "kanal": "GK Hindi Stories 1m",
-     "izl": 12304836
-    },
-    {
-     "kanal_id": "UCuw4rUMedBFu5EDWNkeXE0g",
-     "kanal": "Animated Aryu ",
-     "izl": 6088505
-    },
-    {
-     "kanal_id": "UC8I1gILJe8XR-M79GUz34Xg",
-     "kanal": "Grow With Anand",
-     "izl": 2770903
-    },
-    {
-     "kanal_id": "UCksNdiyawzpjRWRbyQKyo0w",
-     "kanal": "Frr.Ruksar",
-     "izl": 2029481
-    }
-   ],
-   "sorgu": "Inspirational Stories",
-   "tarih": "2026-11-19T17:23:12+00:00"
-  },
   "Football": {
    "seviye": "doymus",
    "pay": 0.04797466567076433,
@@ -673,6 +580,84 @@
    ],
    "sorgu": "Baby Humor",
    "tarih": "2026-11-25T18:39:06+00:00"
+  },
+  "Construction Engineering": {
+   "seviye": "orta",
+   "pay": 0.4745352673170385,
+   "toplam": 77392448,
+   "video": 25,
+   "buyuk": 2,
+   "yeniler": [
+    {
+     "kanal_id": "UCpmr5Fyh79PCJjycQO8UKlQ",
+     "kanal": "Construx",
+     "izl": 5199197
+    },
+    {
+     "kanal_id": "UCDrQ0IPduY0wCV56YlKGTIw",
+     "kanal": "Amazing Work Here",
+     "izl": 4650101
+    },
+    {
+     "kanal_id": "UC7Q_mzqpKNQazpcOi50bsoA",
+     "kanal": "JCB Wala",
+     "izl": 3764301
+    },
+    {
+     "kanal_id": "UClSOk4bzG9pjQZ11vh9GJbw",
+     "kanal": "Engineers Fun",
+     "izl": 3749530
+    }
+   ],
+   "sorgu": "Heavy Machinery",
+   "tarih": "2026-11-26T18:25:53+00:00"
+  },
+  "Sports": {
+   "seviye": "doymus",
+   "pay": 0.03748324597733946,
+   "toplam": 256179521,
+   "video": 25,
+   "buyuk": 8,
+   "yeniler": [
+    {
+     "kanal_id": "UCs3F60CAbxUN_nncFJOHTNA",
+     "kanal": "Collabifyshorts",
+     "izl": 9602440
+    }
+   ],
+   "sorgu": "Football (Soccer)",
+   "tarih": "2026-11-26T18:25:53+00:00"
+  },
+  "Aviation Drama Storytelling": {
+   "seviye": "doymus",
+   "pay": 0.1592453617657168,
+   "toplam": 21017912,
+   "video": 25,
+   "buyuk": 6,
+   "yeniler": [
+    {
+     "kanal_id": "UCvCWxA2glg0dU3X2r17UAZA",
+     "kanal": "Ashes & Steel",
+     "izl": 900580
+    },
+    {
+     "kanal_id": "UC7ZwUBEIjALEihmCYpEjD1Q",
+     "kanal": "WWI Workbench",
+     "izl": 678231
+    },
+    {
+     "kanal_id": "UC_BY_ojDmUIjiLw364D7vWQ",
+     "kanal": "The Hidden Histories",
+     "izl": 455327
+    },
+    {
+     "kanal_id": "UCyPiSXH-U28pWRmk89Ovnng",
+     "kanal": "Visual Mission",
+     "izl": 318309
+    }
+   ],
+   "sorgu": "Air Travel Conflicts",
+   "tarih": "2026-11-26T18:25:53+00:00"
   }
  },
  "ceviri": {
