@@ -1,84 +1,6 @@
 {
- "ts": "2026-11-26T18:25:53+00:00",
+ "ts": "2026-11-27T18:11:39+00:00",
  "firsat": {
-  "Football": {
-   "seviye": "doymus",
-   "pay": 0.04797466567076433,
-   "toplam": 123405675,
-   "video": 25,
-   "buyuk": 11,
-   "yeniler": [
-    {
-     "kanal_id": "UChq4UmjEEl17of0DSxgxKTA",
-     "kanal": "96FOOTBOL",
-     "izl": 5920346
-    }
-   ],
-   "sorgu": "Football Highlights",
-   "tarih": "2026-11-20T16:58:14+00:00"
-  },
-  "Travel": {
-   "seviye": "doymus",
-   "pay": 0.17418377315621592,
-   "toplam": 107205124,
-   "video": 25,
-   "buyuk": 15,
-   "yeniler": [
-    {
-     "kanal_id": "UC9Bggf3TT5PrIzZcq4XOSDg",
-     "kanal": "Embitos",
-     "izl": 11847321
-    },
-    {
-     "kanal_id": "UCezBYD4TtMfeph3cppY5NKg",
-     "kanal": "Knootie",
-     "izl": 2851345
-    },
-    {
-     "kanal_id": "UCeiAHzkJ9IXgyI4qT7AHUkg",
-     "kanal": "Pragya & Ankur | Middle Class Travellers",
-     "izl": 2232400
-    },
-    {
-     "kanal_id": "UCotK8j1J4135nBTI1ukXGvg",
-     "kanal": "SoftCineMoments",
-     "izl": 1742327
-    }
-   ],
-   "sorgu": "Road Trips",
-   "tarih": "2026-11-20T16:58:14+00:00"
-  },
-  "Comedy Shorts": {
-   "seviye": "doymus",
-   "pay": 0.09847326231047988,
-   "toplam": 7280098,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [
-    {
-     "kanal_id": "UCp2M-bN6SYDvv4PzHSUGCnA",
-     "kanal": "Relatable Social Realities",
-     "izl": 304415
-    },
-    {
-     "kanal_id": "UC6zBVfC1BGqwE1FxbnsnIMg",
-     "kanal": "Sara ",
-     "izl": 278191
-    },
-    {
-     "kanal_id": "UCV1uVjPUadAb4at1lSiFeYQ",
-     "kanal": "kote.",
-     "izl": 69372
-    },
-    {
-     "kanal_id": "UCw_QA7HlAMgH3WExg5up8Ig",
-     "kanal": "Epoch Podcast™",
-     "izl": 64917
-    }
-   ],
-   "sorgu": "Family Dynamics",
-   "tarih": "2026-11-20T16:58:14+00:00"
-  },
   "Commentary": {
    "seviye": "bos",
    "pay": 0.8070075292617971,
@@ -658,6 +580,73 @@
    ],
    "sorgu": "Air Travel Conflicts",
    "tarih": "2026-11-26T18:25:53+00:00"
+  },
+  "Football": {
+   "seviye": "doymus",
+   "pay": 0.0,
+   "toplam": 126182266,
+   "video": 25,
+   "buyuk": 10,
+   "yeniler": [],
+   "sorgu": "Football Highlights",
+   "tarih": "2026-11-27T18:11:39+00:00"
+  },
+  "Travel": {
+   "seviye": "doymus",
+   "pay": 0.17454323676526096,
+   "toplam": 116029205,
+   "video": 25,
+   "buyuk": 12,
+   "yeniler": [
+    {
+     "kanal_id": "UC9Bggf3TT5PrIzZcq4XOSDg",
+     "kanal": "Embitos",
+     "izl": 12706368
+    },
+    {
+     "kanal_id": "UCFUYW-MVthXtUZsmH7Ux6uA",
+     "kanal": "liziyin",
+     "izl": 2919637
+    },
+    {
+     "kanal_id": "UCezBYD4TtMfeph3cppY5NKg",
+     "kanal": "Knootie",
+     "izl": 2874282
+    },
+    {
+     "kanal_id": "UCotK8j1J4135nBTI1ukXGvg",
+     "kanal": "SoftCineMoments",
+     "izl": 1751826
+    }
+   ],
+   "sorgu": "Road Trips",
+   "tarih": "2026-11-27T18:11:39+00:00"
+  },
+  "Comedy Shorts": {
+   "seviye": "doymus",
+   "pay": 0.10942539246523676,
+   "toplam": 11241760,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCKBjvzT0OzgdLUGgQM7VnWw",
+     "kanal": "Reel Obsession Films",
+     "izl": 690935
+    },
+    {
+     "kanal_id": "UC9BDuA2BBcQHg6Rkm_1Jxsg",
+     "kanal": "Brahma UnCut",
+     "izl": 390387
+    },
+    {
+     "kanal_id": "UCbtIi8eOp_5OlUbUw7CY9Ag",
+     "kanal": "Babu tussi",
+     "izl": 148812
+    }
+   ],
+   "sorgu": "Family Dynamics",
+   "tarih": "2026-11-27T18:11:39+00:00"
   }
  },
  "ceviri": {
