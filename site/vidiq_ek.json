@@ -1,171 +1,6 @@
 {
- "ts": "2026-11-27T18:11:39+00:00",
+ "ts": "2026-11-28T16:53:33+00:00",
  "firsat": {
-  "Commentary": {
-   "seviye": "bos",
-   "pay": 0.8070075292617971,
-   "toplam": 3006138,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCKSRz0GevsN30HDaz-ExKtw",
-     "kanal": "Kryptonian",
-     "izl": 952217
-    },
-    {
-     "kanal_id": "UCOROw1lKu6iQv366TTCp0Ww",
-     "kanal": "Donna Emerson",
-     "izl": 113233
-    },
-    {
-     "kanal_id": "UCEaXPYNwXr9EfN6-pFzl5gg",
-     "kanal": "Our Mom Life",
-     "izl": 86208
-    },
-    {
-     "kanal_id": "UC1TX-BzjX79nzpeMYr14QuA",
-     "kanal": "Rao Sahabaple",
-     "izl": 84582
-    }
-   ],
-   "sorgu": "Wholesome Content",
-   "tarih": "2026-11-20T20:49:38+00:00"
-  },
-  "Civil Engineering & Construction": {
-   "seviye": "doymus",
-   "pay": 0.0881210481278278,
-   "toplam": 28107564,
-   "video": 25,
-   "buyuk": 4,
-   "yeniler": [
-    {
-     "kanal_id": "UCVPwS_PQVjYNVBsdhtHcvXg",
-     "kanal": "civil thamudu",
-     "izl": 742689
-    },
-    {
-     "kanal_id": "UClfNkMg1d58vZao2Qiv7R4A",
-     "kanal": "The Indian Origin",
-     "izl": 727546
-    },
-    {
-     "kanal_id": "UCUd1cMvkcMVhhFTexZ0Sbww",
-     "kanal": "Egemen Mustafa Şener",
-     "izl": 239117
-    },
-    {
-     "kanal_id": "UC1a9VQEzIAs6nsEJwI1MreA",
-     "kanal": "aayustour",
-     "izl": 200355
-    }
-   ],
-   "sorgu": "Infrastructure Development",
-   "tarih": "2026-11-20T20:49:38+00:00"
-  },
-  "AI Animation": {
-   "seviye": "bos",
-   "pay": 0.5421241799035863,
-   "toplam": 154723119,
-   "video": 25,
-   "buyuk": 2,
-   "yeniler": [
-    {
-     "kanal_id": "UCFROpk6lf3ljDYVGWhhMw2w",
-     "kanal": "GHIBL01",
-     "izl": 16952778
-    },
-    {
-     "kanal_id": "UCHuTGUPTwh-kvksjdtE7Zrw",
-     "kanal": "KhataNovo AI",
-     "izl": 14343439
-    },
-    {
-     "kanal_id": "UCWBShiNCgiUBYlFj9mZS2TA",
-     "kanal": "Slow Cozy Tales 29",
-     "izl": 13874686
-    },
-    {
-     "kanal_id": "UCDvbCZ1aHqpaG4_h6yB6UNw",
-     "kanal": "Ghibli Village Story",
-     "izl": 11125236
-    }
-   ],
-   "sorgu": "Studio Ghibli Style",
-   "tarih": "2026-11-20T20:49:38+00:00"
-  },
-  "Sports News": {
-   "seviye": "orta",
-   "pay": 0.35502003498841345,
-   "toplam": 183612784,
-   "video": 25,
-   "buyuk": 1,
-   "yeniler": [
-    {
-     "kanal_id": "UCalHLorzoYcNUOfoqFfyllw",
-     "kanal": "mtzbzbznb",
-     "izl": 19154835
-    },
-    {
-     "kanal_id": "UCh04WdIGt8vQupyf9F-XKjw",
-     "kanal": "PupKitty Studio",
-     "izl": 16445132
-    },
-    {
-     "kanal_id": "UCpkk8H47Be3xmy6Av5xvYxw",
-     "kanal": "Clift Liskovec01",
-     "izl": 7014011
-    },
-    {
-     "kanal_id": "UCMEjCyiwrFMnWUm3sBchE2g",
-     "kanal": "basernks",
-     "izl": 6466342
-    }
-   ],
-   "sorgu": "MLB",
-   "tarih": "2026-11-21T16:09:02+00:00"
-  },
-  "Mechanical Engineering": {
-   "seviye": "doymus",
-   "pay": 0.08623078591083677,
-   "toplam": 63853274,
-   "video": 25,
-   "buyuk": 2,
-   "yeniler": [
-    {
-     "kanal_id": "UCZxclQWik0mhrRUYFPJ3HEA",
-     "kanal": "Logibu",
-     "izl": 1422575
-    },
-    {
-     "kanal_id": "UCiLvTtqGjfnB3GuWrycaU8w",
-     "kanal": "TheAircraftFiles",
-     "izl": 877813
-    },
-    {
-     "kanal_id": "UCrffjcmk2RSXofb4BvoqwbA",
-     "kanal": "World explained",
-     "izl": 477047
-    },
-    {
-     "kanal_id": "UC7507euaapOnmgTsYBvYgpA",
-     "kanal": "Poetry Stories",
-     "izl": 472944
-    }
-   ],
-   "sorgu": "Aviation Technology",
-   "tarih": "2026-11-21T16:09:02+00:00"
-  },
-  "Storytelling": {
-   "seviye": "doymus",
-   "pay": 0.0,
-   "toplam": 15385960,
-   "video": 25,
-   "buyuk": 3,
-   "yeniler": [],
-   "sorgu": "Human Interest Stories",
-   "tarih": "2026-11-21T16:09:02+00:00"
-  },
   "Industrial Manufacturing": {
    "seviye": "orta",
    "pay": 0.26762404456348476,
@@ -647,6 +482,99 @@
    ],
    "sorgu": "Family Dynamics",
    "tarih": "2026-11-27T18:11:39+00:00"
+  },
+  "Sports News": {
+   "seviye": "orta",
+   "pay": 0.2838298505586988,
+   "toplam": 165160366,
+   "video": 25,
+   "buyuk": 0,
+   "yeniler": [
+    {
+     "kanal_id": "UC2M6QwamyZsvyO5iUnCCIdw",
+     "kanal": "xieyunzhou",
+     "izl": 14345039
+    },
+    {
+     "kanal_id": "UCfrP4KS2Nd5cTgqxOMcSzSw",
+     "kanal": "ainimeijieguo",
+     "izl": 7134211
+    },
+    {
+     "kanal_id": "UC594HTzbjj_LJEa_qrfUZlQ",
+     "kanal": "tehgeh",
+     "izl": 5790707
+    },
+    {
+     "kanal_id": "UCoVfrO9sMkH7ecU4QXZmSVQ",
+     "kanal": "vnnnnn",
+     "izl": 4586668
+    }
+   ],
+   "sorgu": "MLB",
+   "tarih": "2026-11-28T16:53:33+00:00"
+  },
+  "Mechanical Engineering": {
+   "seviye": "doymus",
+   "pay": 0.10781611674645353,
+   "toplam": 35049630,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCZxclQWik0mhrRUYFPJ3HEA",
+     "kanal": "Logibu",
+     "izl": 1436700
+    },
+    {
+     "kanal_id": "UCp9FomzQF3XuJ7Z2f8tLR5Q",
+     "kanal": "B2 MC RAFT",
+     "izl": 900717
+    },
+    {
+     "kanal_id": "UCrffjcmk2RSXofb4BvoqwbA",
+     "kanal": "World explained",
+     "izl": 542587
+    },
+    {
+     "kanal_id": "UC8jC63EeMs8BgN1mkClWCQQ",
+     "kanal": "Nitesh Upadhyay",
+     "izl": 465906
+    }
+   ],
+   "sorgu": "Aviation Technology",
+   "tarih": "2026-11-28T16:53:33+00:00"
+  },
+  "Commentary": {
+   "seviye": "bos",
+   "pay": 0.5128397616417469,
+   "toplam": 2828012,
+   "video": 25,
+   "buyuk": 3,
+   "yeniler": [
+    {
+     "kanal_id": "UCKSRz0GevsN30HDaz-ExKtw",
+     "kanal": "Kryptonian",
+     "izl": 607553
+    },
+    {
+     "kanal_id": "UCOROw1lKu6iQv366TTCp0Ww",
+     "kanal": "Donna Emerson",
+     "izl": 122762
+    },
+    {
+     "kanal_id": "UC1TX-BzjX79nzpeMYr14QuA",
+     "kanal": "Rao Sahabaple",
+     "izl": 85021
+    },
+    {
+     "kanal_id": "UCfCbn3a-ecqWHQ2cygLSBcw",
+     "kanal": "SnapWorld",
+     "izl": 26361
+    }
+   ],
+   "sorgu": "Wholesome Content",
+   "tarih": "2026-11-28T16:53:33+00:00"
   }
  },
  "ceviri": {
